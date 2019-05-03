@@ -1,7 +1,10 @@
   
+
 https://github.com/Tridu33/Plant_Simulation​github.com
 
 上述仓库是我这段时间的Plant Simulation入门到进阶学习分享，看完就能找对需要的教程并且能够看懂，学什么到时候就有基础用什么了。
+
+```
 
 ├─games
 │  ├─2048
@@ -31,6 +34,8 @@ https://github.com/Tridu33/Plant_Simulation​github.com
 └─靠谱搜索
     ├─网站
     └─论坛
+    
+```
 
 教程资料分享如上述
 
@@ -43,6 +48,8 @@ ReadMe有我的部分笔记整理
 我的根目录库是这个：
 
 D:\\Program Files\\Siemens\\Tecnomatix Plant Simulation 13
+```
+
 
  Plant13软件安装根目录:.
 ├─3D # *.jt,*.s3d模型库
@@ -113,7 +120,8 @@ D:\\Program Files\\Siemens\\Tecnomatix Plant Simulation 13
 ├─wrltojt
 └─xt2jt
     └─Schema
-
+    
+```
 建议入门路线先跟着官方视频过一下，然后看上述中文教材随便一个，推荐“物流***”那个。
 
 然后就是用到什么学什么，找Demo，跟着做一遍，确定理解细节之后，用起来吧。
