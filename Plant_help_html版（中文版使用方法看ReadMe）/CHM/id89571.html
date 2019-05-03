@@ -1,0 +1,344 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>drawRectangle</title>
+      
+      <meta name="MS-HKWD" content="drawRectangle">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">drawRectangle</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id22028.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:drawLine"></a><a class="link" href="id61387.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:drawText"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id90254.html">Frame</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id33060.html">Methods of the Frame</a></span> &gt; <span class="simpleHTMLminitoc">drawRectangle</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6547"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.drawRectangle(Layer:integer, X:integer, Y:integer, Width:integer, Height:integer, RGB:integer, LineWidth:integer [,Gradient:integer])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>drawRectangle</em> draws a rectangle on the <b class="uiTerm">background</b> of the <em>Frame</em> designated by Path. 
+         </p>
+         <p class="para_topic">To draw the rectangle in the <b class="uiTerm">foreground</b>, i.e., in front of the objects in the <em>Frame</em>, enter a negative number for the layer, designated by the parameter <em>integer</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">The parameter of data type integer</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Designates the</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>Layer</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">layer.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>X</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">position of the rectangle on the x-axis.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>Y</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">position of the rectangle on the y-axis.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>Width</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">width of the rectangle.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>Height</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">height of the rectangle.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>RGB</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">line color of the rectangle.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>LineWidth</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">line width of the outline of the rectangle in pixels. Enter <code>-1</code> to draw a filled rectangle. 
+                     </p>
+                     
+                     <p class="para_td_last">If you do not want to zoom the outline of the rectangle, enter a <em>LineWidth</em> of <code>0</code> instead of <code>1</code> .
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>Gradient</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">color gradient for filled rectangles:</p>
+                     
+                     <p class="para_td"><code>0</code> stands for <b class="uiTerm">None</b></p>
+                     
+                     <p class="para_td"><code>1</code> stands for <b class="uiTerm">Top To Bottom</b></p>
+                     
+                     <p class="para_td"><code>2</code> stands for <b class="uiTerm">Bottom To Top</b></p>
+                     
+                     <p class="para_td"><code>3</code> stands for <b class="uiTerm">Left To Right</b></p>
+                     
+                     <p class="para_td_last"><code>4</code> stands for <b class="uiTerm">Right To Left</b></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.Models.Frame.drawRectangle(3,30,30,80,40,133,1)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id91814.html">Vector Graphics Ribbon Tab</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id91740.html">eraseLayer</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id59087.html">Draw Vector Graphics or Text onto the Background of the Frame</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id32648.html#id62953">Reverse Order Vertically</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id72247.html">eraseAllLayers</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id37525.html">makeRGBValue</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id22028.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:drawLine"></a><a class="link" href="id61387.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:drawText"></a></span></div>
+   </body>
+</html>

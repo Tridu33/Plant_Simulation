@@ -1,0 +1,82 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Place Parts into Stock on Demand, Remove Parts from Stock Automatically</title>
+      
+      <meta name="MS-HKWD" content="Place Parts into Stock on Demand Remove Parts from Stock Automatically">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Place Parts into Stock on Demand, Remove Parts from Stock Automatically</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id70283.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Automatically Place Parts into Stock, Remove Parts from Stock on Demand"></a><a class="link" href="id38810.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Place Parts into Stock on Demand, Remove Parts from Stock on Demand"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64826.html">Model a Facility Using a Storage Crane</a></span> &gt; <span class="simpleHTMLminitoc">Place Parts into Stock on Demand, Remove Parts from Stock Automatically</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1036"></span><p class="para_topic">To model a portal crane, which places parts into stock on demand and which automatically removes parts from stock, proceed like this:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert the StorageCrane
+    <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/portalCrIconSm.gif" border="0"> into your simulation model. Connect it with its successor.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/pcMethInAutoOut.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Double-click the <em>StorageCrane</em> to open its dialog window. Define its properties, such as its size, the number of storage places, etc.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The predecessor has to ask the crane to place the parts into stock. For this you will employ the method storePart. The instruction below moves the part (<code>@</code>) onto the entry place of the crane. The entry place of the crane then enters an order to move the part into its order list. It fulfills the order with the priority you enter, in our example priority <code>1</code>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/pcMethInAutoOutsp.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the check box <b class="uiTerm">Remove after this time</b> on the tab <b class="uiTerm">Removal</b>. Then, enter the <b class="uiTerm"> time</b> after which the part is to be removed from stock. Note that this check box activates automatic stocking! When you select it, the removal orders have the highest priority (100). 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/pcautoremoval.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert an <em>EventController</em> into the <em>Frame</em>, start the simulation and watch the crane place parts into stock and remove them from stock.
+               </p>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click the tab <b class="uiTerm">Statistics</b> and check how many parts the crane placed into storage and how many it removed from storage.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id64826.html">Model a Facility Using a Storage Crane</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id70283.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Automatically Place Parts into Stock, Remove Parts from Stock on Demand"></a><a class="link" href="id38810.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Place Parts into Stock on Demand, Remove Parts from Stock on Demand"></a></span></div>
+   </body>
+</html>

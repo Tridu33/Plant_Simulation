@@ -1,0 +1,398 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The Structure UF_Value</title>
+      
+      <meta name="MS-HKWD" content="The Structure UF_Value">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">The Structure UF_Value</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1201607.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Structure of the C Program"></a><a class="link" href="id33155.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Accessing Plant Simulation Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id78707.html">Inter-Process Communication Interfaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id30952.html">C</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1201607.html">Structure of the C Program</a></span> &gt; <span class="simpleHTMLminitoc">The Structure UF_Value</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15832"></span><p class="para_topic">The structure <em>UF_Value</em> is defined as follows in <em>cwinfunc.h</em>:
+         </p><pre class="indent">typedef struct
+{
+UF_DataType type 
+UF_ValueUnion value
+} UF_Value</pre><p class="para_topic">The field <em>type</em> tells which field of the compound <em>value</em> is valid. <em>value</em> has the data type <em>UF_ValueUnion</em>, and defined as follows:
+         </p><pre class="indent">typedef union
+{
+int integer 
+double real 
+char *string 
+objID object 
+int error 
+} UF_ValueUnion</pre><p class="para_topic">Valid values of <em>type</em> are: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">UF_NONE</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_VOID</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_INTEGER</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_REAL</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_BOOLEAN</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_STRING</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_LENGTH</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_WEIGHT</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_SPEED</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_TIME</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_DATE</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_DATETIME</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_OBJECT</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_ERROR</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Also compare the definition of <em>UF_DataType</em> in the Header file <em>cwinfunc.h</em>, which is part of your program package.
+         </p>
+         <p class="para_topic">Let&lsquo;s say that <em>type</em> is UF_INTEGER, then only <em>value.integer</em> contains a valid value. In this case <em>value.real</em> or <em> value.char</em> would take an undefined value. 
+         </p>
+         <p class="para_topic">When <em>Plant Simulation</em> calls a C-function, the <em>Plant Simulation</em> data types of the parameters will be converted to the following C data types:
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Plant Simulation data type</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Data type in C </p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>boolean</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> int</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>integer</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> int</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>real</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> double</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>time</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> double</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>date</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> double</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>dateTime</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> double</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>money</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> double</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>length</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> double</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>weight</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> double</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>speed</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> double</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><em>string</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> char *</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">When passing a <em>Plant Simulation</em>
+            <em>real</em> value for example, the item <em>type</em> of the parameter <em>*arg</em> is automatically set to UF_REAL. You can then query the <em>real</em> value with <code>arg-&gt;real</code>.
+         </p>
+         <p class="para_topic">The data type of the return value of the function to <em>Plant Simulation</em> has to be set according to the corresponding data type. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When a <em>string</em> data type is passed to the function, the pointer to the <em>string</em> is valid only during the function, as memory can be released after returning from the function.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> For a C function intended to compute the sine of a real value, enter this source code into the C program.</p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">void uf_sin(UF_Value *ret, UF_Value *arg)
+{
+ret-&gt;type=UF_REAL
+ret-&gt;value.real=sin(arg[0].value.real)
+}</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The more complex <em>Plant Simulation</em> data types <em>object</em>, <em>table</em>, <em>list</em>, <em>stack</em> and <em>queue</em> do not have a direct counterpart as basic data type in the programming language C. When calling a function that is passed a complex data type as parameter, <em>type</em> is assigned the value UF_OBJECT. The parameter is then represented by the item <em>object</em> of the corresponding union. The item <em>object</em> has the data type <em>SimpleObjID</em>, which is defined in the header file <em> cwinfunc.h</em>.
+         </p>
+         <p class="para_topic">This value allows direct access to the <em>Plant Simulation</em> objects passed within your function. The value of <em>object</em>, called <b class="uiTerm">object ID</b> hereafter, is generated automatically and is not to be changed. 
+         </p>
+         <p class="para_topic">If you would like to pass a <em>Plant Simulation</em> object as a parameter to the C function it also will be represented by an object ID in the C program.
+         </p>
+         <p class="para_topic">The required access functions are described under <a class="links" href="id33155.html">Accessing Plant Simulation Objects</a>. For detailed examples compare the files <em>cwinfunc.h</em> and <em>cinterf.cpp</em> in the <em>Plant Simulation</em> installation folder in the sub-folder <b class="uiTerm">Plant Simulation\C-Interface</b>.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1201607.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Structure of the C Program"></a><a class="link" href="id33155.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Accessing Plant Simulation Objects"></a></span></div>
+   </body>
+</html>

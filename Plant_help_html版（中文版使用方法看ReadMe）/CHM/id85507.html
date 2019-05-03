@@ -1,0 +1,198 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>MoveToFolderCtrl</title>
+      
+      <meta name="MS-HKWD" content="MoveToFolderCtrl">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">MoveToFolderCtrl</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id45245.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:MoveInFrameCtrl"></a><a class="link" href="id96891.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:NotAvailableCtrl"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id16415.html">Attributes of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17950.html">Attributes for Controls of All Objects</a></span> &gt; <span class="simpleHTMLminitoc">MoveToFolderCtrl</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4409"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.MoveToFolderCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>MoveToFolderCtrl</em> designates a <em>Method</em> object. <em>Plant Simulation</em> calls it when you move the object from a folder or a <em>Frame</em> to a different folder. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <p class="para_topic">The program passes three parameters to the <em>Method</em> that is called:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>PreviousLocation</em> of data type <em>string</em> designates the previous location (<em>Frame</em> or folder) of the object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>NewLocation</em> of data type <em>string</em> designates the new location of the object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>ManuallyMoved</em> of data type <em>boolean</em> shows the user if the object is manually moved to a folder (true) or with a <em>Method</em> (false).
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Within the <em>Method </em> you can access the moved object with the anonymous identifier question mark (?) and the new location with the anonymous identifier @.
+         </p>
+         <p class="para_topic">A <b class="uiTerm">move-to-folder control</b> might look like this:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param PreviousLocation, NewLocation: string, ManuallyMoved: boolean
+-- @: new folder
+-- ?: moved object
+-- ?: the object for which the control was called </pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>method</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MySource.MoveToFolderCtrl := &amp;MoveToFolderCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id35466.html">Move-to-folder control</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id45245.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:MoveInFrameCtrl"></a><a class="link" href="id96891.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:NotAvailableCtrl"></a></span></div>
+   </body>
+</html>

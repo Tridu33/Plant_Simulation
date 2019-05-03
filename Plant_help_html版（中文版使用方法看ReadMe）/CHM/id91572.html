@@ -1,0 +1,174 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Run an Analysis of Variance (ANOVA)</title>
+      
+      <meta name="MS-HKWD" content="Run an Analysis of Variance (ANOVA)">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">Run an Analysis of Variance (ANOVA)</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id61104.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Find the Parameters of Truncated Distributions"></a><a class="link" href="id35663.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Run an Independence Test"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70398.html">Statistics Tools</a></span> &gt; <span class="simpleHTMLminitoc">Run an Analysis of Variance (ANOVA)</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_18363"></span><p class="para_topic"> The application object ANOVA (ANalysis Of VAriance) <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ANOVASma.gif" border="0"> performs a one way analysis of variance.
+         </p>
+         <p class="para_topic"> Given are k groups of data. We want to investigate the hypothesis whether the k mean values,..., <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfvar1.gif" border="0"> are equal. The j-th group contains <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfvar2.gif" border="0"> items <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfvar3.gif" border="0">,...,. The j-th group must be contained in the j-th row of the table DataX. To insert the data, drag the table onto the object <em> ANOVA</em> and drop it there.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/ANOVA_Input.gif"></p>
+         <p class="para_topic"> Input data</p>
+         <p class="para_topic"> Our sample young men of different religious denominations are examined. The measured value is the age, at which a man leaves home. We are interested in the hypothesis that this age depends on the religious denomination, contained in: R.D. Mason, D.A. Lind, W.G. Marchal: Statistics An Introduction, 1988, p.355 ff. Harcourt Brace Jovanovich, Publishers</p>
+         <p class="para_topic"> Let <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfvar4.gif" border="0">. The grand mean (of all values) is µ. The total sum of mean squares is <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfvar5.gif" border="0"> .
+         </p>
+         <p class="para_topic"> This sum is partitioned into two addend TSS = SST + SSE, where <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfvar6.gif" border="0"> is the sum of squares between the mean values of the groups (sum of squares of treatments; traditionally, a group develops by distinct treatments of individuals of a whole population) and <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfvar7.gif" border="0"> is the sum of squares in a group (error sum of squares). SSE measures the variability within the groups. SST measures the variability between the groups.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/ANOVA_DLG.gif"></p>
+         <p class="para_topic"> Dialog of the object ANOVA</p>
+         <p class="para_topic"> The test determines at the given level of significance whether the hypothesis <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit-126.gif" border="0"> = <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit-127.gif" border="0"> =...= <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit-128.gif" border="0"> holds true. The test executes these steps:
+         </p>
+         <p class="para_topic"> It determines the test statistic: F statistic <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit-129.gif" border="0"></p>
+         <p class="para_topic"> It computes the critical value F value using the level of significance.</p>
+         <p class="para_topic"> It accepts the hypothesis if F statistic  F value.</p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> --</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> Degree of freedom</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> Sum of squares</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> Mean squares</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> between groups</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> k-1</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> SST</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit-130.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> within groups</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> n-k</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> SSE</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"></p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit-131.gif"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> total</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> n-1</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> TSS</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> Explanation of the results table of ANOVA</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/ANOVA_Results.gif"></p>
+         <p class="para_topic"> The table file containing the results for the test data</p>
+         <p class="para_topic"> You can compare the confidence intervals with the same level of significance of all groups in a diagram. An assumption about the decision of the test can be found. In the following diagram the red bars on top show the confidence intervals of the four groups. Since the intersection of these confidence intervals is empty, the hypothesis that the mean values are equal will certainly be rejected.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/ANOVA_Compare.gif"></p>
+         <p class="para_topic"> Comparison of the confidence intervals of the groups</p>
+         <p class="para_topic"> The hypothesis is rejected. With a probability of 95 percent we must thus assume that a connection between the age, at which a man leaves home, and the religious denomination exists. Click Open to open the input data table . Delete the group of the catholic men. Now the hypothesis that the mean values are equal, is accepted with a probability of 95 percent (confidence level = 5 percent).</p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id61104.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Find the Parameters of Truncated Distributions"></a><a class="link" href="id35663.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Run an Independence Test"></a></span></div>
+   </body>
+</html>

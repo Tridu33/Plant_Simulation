@@ -1,0 +1,351 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ResWorking</title>
+      
+      <meta name="MS-HKWD" content="ResWorking">
+      <meta name="MS-HKWD" content="ResWorking,material flow object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">ResWorking</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id90540a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ResWaiting"></a><a class="link" href="id18350_dup1.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:TimeUntilEntranceOpen"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1375028.html">Read-Only Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1390659.html">Read-Only Attributes for the State of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">ResWorking</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4645"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.ResWorking &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The read-only attribute <em>ResWorking</em> returns if the object designated by Path is <a class="links" href="id47522.html">Working</a> (<code>true</code>) or not (<code>false</code>).
+         </p>
+         <p class="para_topic"><em>Plant Simulation</em> can observe the read-only attribute <em>ResWorking</em>, i.e., you can use it in <em>waituntil-constructs</em> or the object <em>TimeSequence</em> may record it in <em>watch/observe </em> mode. 
+         </p>
+         <p class="para_topic">The definition of working depends on the object doing the processing:</p>
+         <table border="1" cellpadding="1" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">The object</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Is working when </p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id18003.html">Station</a>, <a class="links" href="id29026.html">ParallelStation</a>, <a class="links" href="id95185.html">AssemblyStation</a>, <a class="links" href="id85371.html">DismantleStation</a>, <a class="links" href="id21426.html">PlaceBuffer</a>, <a class="links" href="id15363.html">Drain</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> it processes at least one <em> MU</em></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id37562.html">Track</a>, <a class="links" href="id73650.html">TwoLaneTrack</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> at least one <em> MU</em> is moving on it
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id60466.html">Conveyor</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> its current speed is not 0. It can also be <em> working</em> when it is moving and when it does not transport any part
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id46256.html">Turnplate</a>, <a class="links" href="id63264.html">Turntable</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> it has a speed or when it is rotating, no matter if it moves a part or not</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id41205.html">Converter</a>, <a class="links" href="id74072.html">AngularConverter</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> has a speed or when the moving time is running</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id61965.html">PickAndPlace Robot</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> it is rotating, no matter if it moves a part or not</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id65865.html">Source</a>, <a class="links" href="id54257.html">Store</a>, <a class="links" href="id47519.html">Buffer</a>, <a class="links" href="id42793.html">Transporter</a>, <a class="links" href="id44788.html">Container</a>, <a class="links" href="id47279.html">Tank</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> --</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id24372.html">Sorter</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"> --</p>
+                     
+                     <p class="para_td_last">The processing time is identical with the sorting time, i.e., it is always zero. This means the sorting takes place instantaneously. Even though the processing time is zero, each sorting action counts as a processing procedure.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id40724.html">FluidDrain</a>, <a class="links" href="id71012.html">FluidSource</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> material flows between stations</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id16225.html">Mixer</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> when materials are mixed</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id77602.html">Portioner</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> when the is transformed into an MU</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id39276.html">DePortioner</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> when the MU is transformed into a material</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">print MyStation.ResWorking</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id64297.html">Failure relates to</a> &gt; <a class="links" href="id64297.html#id44393">The processing time</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="xid1484798.html">ResCurrentState</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id90540a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ResWaiting"></a><a class="link" href="id18350_dup1.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:TimeUntilEntranceOpen"></a></span></div>
+   </body>
+</html>

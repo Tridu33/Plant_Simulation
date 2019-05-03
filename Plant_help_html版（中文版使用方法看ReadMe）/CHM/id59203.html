@@ -1,0 +1,144 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>setBreakpointCondition</title>
+      
+      <meta name="MS-HKWD" content="setBreakpointCondition">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">setBreakpointCondition</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id50225.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:reset"></a><a class="link" href="id60715.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setBreakpointReceiver"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48621.html">EventController</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14896.html">Methods of the EventController</a></span> &gt; <span class="simpleHTMLminitoc">setBreakpointCondition</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6038"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.setBreakpointCondition(LineInBreakpointList:integer, Condition:string) &rarr; string</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>setBreakpointCondition</em> sets the <a class="links" href="id42147.html">Condition</a>, which you would like to apply to the definition of the breakpoint of the <em> EventController</em> designated by Path.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em> LineInBreakpointList</em> of data type <em>integer</em> designates the line of the breakpoint in the breakpoint list. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em> Condition</em> of data type <em>string</em> designates the condition of the breakpoint. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Before an event is released for execution, the <em>Event Debugger</em> checks the expression you entered as the parameter of data type <em>string</em>. 
+         </p>
+         <p class="para_topic">This expression may be a global variable (<em>Variable</em>), an <em>attribute</em> or a <em>method</em> that returns a boolean value. When the expression returns true, the <em>Event Debugger</em> stops the simulation. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>string</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">print EventController.setBreakpointCondition(2,&quot;@.length&lt;100&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id86130.html">getBreakpointCondition</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id50225.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:reset"></a><a class="link" href="id60715.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setBreakpointReceiver"></a></span></div>
+   </body>
+</html>

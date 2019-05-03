@@ -1,0 +1,135 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Finished</title>
+      
+      <meta name="MS-HKWD" content="Finished">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">Finished</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id94414.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:EntryTime"></a><a class="link" href="id35559.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:FinishedTime"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1388975.html">Read-Only Attributes of All Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1388963.html">Read-Only Attributes for the State of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc">Finished</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_9216"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.Finished</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The read-only attribute <em>Finished</em> returns if the processing time of the <em>MU</em> designated by MU-path has completely elapsed. This applies when the MU is located on a point-oriented object. When it is located on a length-oriented object, the MU must have arrived at its exit. In addition it must attempt to move at the moment or must have already attempted to move.
+         </p>
+         
+         <p class="para_topicComponent">If both conditions are met, the return value is true. In addition the point-oriented object or the length-oriented object, on which the MU is located, must neither be failed, nor paused, nor stopped.</p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Return Value</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>boolean</em>. 
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if MyTrack.Cont.Finished 
+   MyTrack.Cont.move(MyTrack.succ(2))
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id94414.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:EntryTime"></a><a class="link" href="id35559.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:FinishedTime"></a></span></div>
+   </body>
+</html>

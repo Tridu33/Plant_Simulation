@@ -1,0 +1,157 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>setDim</title>
+      
+      <meta name="MS-HKWD" content="setDim">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">setDim</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id45586.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ResSetUp"></a><a class="link" href="id31285.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:startFailure"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id10051.html">Methods for the State of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">setDim</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4465"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.setDim(XDim:integer,YDim:integer) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>setDim</em> sets the dimension, i.e., the number of storage places of the material flow object designated by Path. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>XDim</em> of data type <em>integer</em> designates the dimension on the x-axis.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>YDim</em> of data type <em>integer</em> designates the dimension on the y-axis. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> When you only enter the x-dimension, <em>Plant Simulation</em> automatically enters 1 for the Y-dimension.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Only the <em>ParallelStation</em>, the <em>Store</em>, and the <em>Transporter</em> provide this method. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>. 
+         </p>
+         <p class="para_topic">The <em>method</em> returns false, when the dimension could not be changed. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">ParallelStation.setDim(20,20)
+Store.setDim(1000,1200)
+.mus.transporter.setdim(50,30)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id45586.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ResSetUp"></a><a class="link" href="id31285.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:startFailure"></a></span></div>
+   </body>
+</html>

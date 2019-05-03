@@ -1,0 +1,51 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Introducing Classes</title>
+      
+      <meta name="MS-HKWD" content="Introducing Classes">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Introducing Classes</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id18155.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:View the Results of the Simulation Run"></a><a class="link" href="id56719.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Classes, Subclasses, and Instances"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id81197.html">Introducing Classes</a></span> &gt; <span class="simpleHTMLminitoc">Introducing Classes</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_370"></span><p class="para_topic">Imagine that, for example, you have to find the optimum type of store for a production plant. First, you have to come up with different types or stores that might work for the specific plant, such as fully automated high bay warehouse, manually operated shelving system, etc. To be able to compare the different types of stores, you are going to build several simulation models, execute simulation runs and suggest the type of store with the best cost/gain relation. </p>
+         <p class="para_topic">Your simulation models are going to be variants of a single basic model, i.e., you are going to use the same production plant and are going to modify the store. </p>
+         <p class="para_topic">When creating the model variants you are going to build the basic model first. In conventional systems you would then copy this basic model until you arrive at the number of variants you need. In <em>Plant Simulation</em>, on the other hand, you will inherit this basic model, which we call the parent model, and arrive at child models. The main difference between a copied and an inherited model is that a child model recognizes which parent it is derived from while a copied model knows nothing about its origin. 
+         </p>
+         <p class="para_topic">Now you are going to insert the different types of stores into the model variants you created. If you now find a modeling error while modeling the basic model or if a specification changed, a conventional system requires changing all copies, which is time-consuming and error prone. </p>
+         <p class="para_topic">In <em>Plant Simulation</em>, on the other hand, you make the change once in the parent model. It then immediately propagates all of your changes to all of its children, provided you did not change the setting in the child model. This saves a considerable amount of time and the hassle of manually updating a number of sub-models. 
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id56719.html">Classes, Subclasses, and Instances</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id33441.html">Using Inheritance</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id98418.html">Working with Classes in the Class Library</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id69419.html">Creating a Simulation Model</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id18155.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:View the Results of the Simulation Run"></a><a class="link" href="id56719.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Classes, Subclasses, and Instances"></a></span></div>
+   </body>
+</html>

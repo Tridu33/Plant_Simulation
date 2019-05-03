@@ -1,0 +1,50 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>How the Worker Carries Parts</title>
+      
+      <meta name="MS-HKWD" content="How the Worker Carries Parts">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">How the Worker Carries Parts</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id90740.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:How the Worker Finds the Shortest Route"></a><a class="link" href="id11093.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Worker"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67192.html">Worker</a></span> &gt; <span class="simpleHTMLminitoc">How the Worker Carries Parts</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8692"></span><p class="para_topic">The <em>Worker</em> can carry parts from one station to another station. For this to work you have to attach a <em>Workplace</em> to the work station at which the <em>Worker</em> picks the part up. Also attach a <em>Workplace</em> to the target station at which he puts down the part. Then, connect the <em>Workplaces</em> with a <em>Footpath</em>. Finally, connect the <a class="links" href="id13713.html">WorkerPool</a> and the <em>Workplace</em> at the work station at which the <em>Worker</em> picks up the part with a <em>FootPath</em>. 
+         </p>
+         <p class="para_topic">Select the exit strategy <a class="links" href="id29219.html">Carry part away</a> on the tab <b class="uiTerm">Exit Strategy</b> in the dialog of the material flow object, which is ready to send the part on. The part then requests a <em>Worker</em>. The parts wait at the station until the <em>Worker</em> arrives and picks them up.
+         </p>
+         <p class="para_topic">If a <em>Worker</em> can carry several parts, he will wait for parts until his capacity is reached. To prevent the <em>Worker</em> from waiting too long for additional parts to arrive, you have to enter the <a class="links" href="id69751.html">Maximum dwell time</a>. After it has passed, he moves to the target station, the <a class="links" href="id21749.html"> MU target</a>, and puts the part down. 
+         </p>
+         <p class="para_topic">The <em>Worker</em> evaluates the <a class="links" href="id21749.html">MU target</a>s and moves to the closest one first. At the target station, he places all parts destined for this station. If he carries additional parts, he evaluates the next target and moves on to the closest one.
+         </p>
+         <p class="para_topic">If your plant works in shifts, the <em>Worker</em> walks back to his <em>WorkerPool</em> at the end of his shift. He then deposits the parts he could not deliver into the <a class="links" href="id84966.html">Parts buffer</a>, which you assigned to the <em>WorkerPool</em>. The parts buffer can be any one of the material flow objects, which accepts parts. When you did not assign a parts buffer to the <em>WorkerPool</em>, <em> Plant Simulation</em> shows a warning and stops the simulation. When the next shift starts, <em> Plant Simulation</em> treats the parts in the parts buffer according to the exit strategy you selected for the parts buffer. When you select <b class="uiTerm">Carry part away</b>, the carrying <em>Worker</em> requests the service, which you entered.
+         </p>
+         <p class="para_topic">To send a <em>Worker</em> to a specific station or to a <em>WorkerPool</em>, you can use the methods <a class="links" href="id89628.html">goTo</a> or <a class="links" href="id20827.html">goToPool</a>. To change the services for an available <em>Worker</em>, you can use the method <a class="links" href="id53428.html">services</a>.
+         </p>
+         <p class="para_topic"> Compare the video <b class="uiTerm">Worker Carrying Parts between Workplaces</b>, which you can open under <b class="uiTerm">Window</b> ribbon tab &gt;
+   <b class="uiTerm">Start Page</b> &gt; <b class="uiTerm">Getting Started</b> &gt;
+  <b class="uiTerm">Videos</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id46415.html">Model a Worker Who Carries Parts Between Workplaces</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id90740.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:How the Worker Finds the Shortest Route"></a><a class="link" href="id11093.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Worker"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Executing Distributed Simulations</title>
+      
+      <meta name="MS-HKWD" content="Executing Distributed Simulations">
+      <meta name="MS-HKWD" content="RemoteMachinesVisible">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Executing Distributed Simulations</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1206522.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Entering the Parameters of a Simulation Run into Your Simulation Model"></a><a class="link" href="id52086.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Defining Rule-based Settings"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54344.html">Tools</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53178.html">ExperimentManager</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53974.html">Advanced Settings</a></span> &gt; <span class="simpleHTMLminitoc">Executing Distributed Simulations</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12942"></span><span id="ndxgenid_PlantSimulationENU_12943"></span><p class="para_topic"> If your computer has a multi-core processor, you can significantly shorten the time it takes to run a study by executing the simulation runs in parallel. The <em> ExperimentManager</em> recognizes the number of cores and starts several <em> Plant Simulation</em> processes on your computer. You can configure distributed simulations under <b class="uiTerm">Tools &gt; Advanced Settings &gt; Distribution</b>.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/tabDefinitionDistr.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/expDistr.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">As for a distributed simulation, without using rule-based settings, the simulations for all experiments can be executed in parallel, the <em>ExperimentManager</em> then only shows the number of simulations that have already been executed in its dialog.
+         </p>
+         <p class="para_topic"> If you have several <em> Plant Simulation</em> licenses of the same type and if you would like to run time-consuming and extensive simulation studies, the <em> ExperimentManager</em> can execute the simulation runs on several computers within your local network (LAN). 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> You can also execute an optimization with the <a class="links" href="id78919.html"> GAWizard</a> using the distributed simulation. It provides the same functionalities as the <em> ExperimentManager</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> Executing the simulation runs in parallel on several computers can significantly reduce the time the simulation study takes. The <em> ExperimentManager</em> on the control computer starts <em> Plant Simulation</em> processes on other computers, on the so-called <em> simulation machines</em> , loads the model, which was saved last, on the <em> simulation machines</em> and manages the simulation results, which the individual <em> simulation machines</em> arrived at. You will define the experiments in the <em> ExperimentManager</em> on the control computer. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> If you want to run distributed simulations, you have to configure the control computer and all other computers to enable them to do so, compare <a class="links" href="id63496.html"> Configuring DCOM for Remote Access</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> The entire simulation model is transmitted to the simulation computers within your LAN when you start an experiment study. If this process takes a very long time, we recommend to not employ distributed simulations. Be aware that the simulation model should not access external files. </p>
+         <p class="para_topic"> If a multi-processor computer is available for distributed simulations, you can use this computer multiple times as your simulation computer. The <em> ExperimentManager</em> recognizes a computer with several cores. Select the check boxes Distributed simulation in both dialogs as shown below to use distributed simulations. If you did not enter any simulation computers yet and you then select the check box, the <em> ExperimentManager</em> executes distributed simulations according to the number of cores. In this case the table of the simulation computers shows localhost(n). Then number n, designating the number of cores, does not show the actual number of used cores though. This ensures that distributed simulations with this model on another computer uses then number of available cores.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/DistributedSimulation.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/DistributedSimulationTab.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">In this case the simulation machines are not visible. When the attribute <em>RemoteMachinesVisible</em> of the <em>ExperimentManager</em> has the value <code>true</code>, the simulation machines will be visible. You can view and change the attribute in the dialog <b class="userinput">Show Attributes and Methods</b>.
+         </p>
+         <p class="para_topic">Click <b class="uiTerm">Insert</b> and <b class="uiTerm">Remove</b> to designate specific computers within your LAN as simulation machines. Instead, you can also double-click an entry in the list. Click <b class="uiTerm">Test</b> to check if the selected remote computer is able to run a remote simulation or not. 
+         </p>
+         <p class="para_topic"> After the simulation study is finished, you can track the execution of the simulation runs for all simulation machines. When errors occurred on the simulation machine, you can analyze the cause of the error by clicking the button Protocol. This opens the table <em>MachinesTable</em> containing information about all used simulation machines. Column 8 of this table recorded the communication of the controlling computers with the respective simulation machine.
+         </p>
+         <p class="para_topic"> At the start of the simulation study, the <em> ExperimentManager</em> starts <em> Plant Simulation</em> processes on all simulation machines with the license you selected under Remote license, compare <a class="links" href="id87901.html"> Execute Experiments with the ExperimentManager</a>. These <em> Plant Simulation</em> processes execute simulation runs one after the other. 
+         </p>
+         <p class="para_topic"> Enter the CPU time into the text box <b class="uiTerm">Terminate after</b> after which the <em> ExperimentManager</em> terminates a simulation run on a simulation machine. 
+         </p>
+         <p class="para_topic"> When no additional simulation runs have to be executed for the simulation study, all <em> Plant Simulation</em>-processes on the simulation machines will be terminated.
+         </p>
+         <p class="para_topic"> To start the <em> Plant Simulation</em> process on the simulation machine with a lower priority, select the check box Lower priority. Then you can work better on the simulation machine at the same time.
+         </p>
+         <p class="para_topic"> After the simulation study has been finished, you can open an overview over the simulation machines, which the simulation experiment used, by selecting Evaluate Simulation Machines on the context menu. Analyzing the number of simulation runs on the simulation machines and their mean run times enables you can to better organize future distributed simulation studies. For a small number of parallelizable simulation runs it might be better to not use a slow simulation machine, as this computer might cause faster computers to wait for it. </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/evaluateSimulationMachines.gif"></p>
+         <p class="para_topic" align="center"> Evaluating the simulation runs</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/JobsTable_E.gif"></p>
+         <p class="para_topic" align="center">Evaluating the simulation machines</p>
+         <p class="para_topic"> During the simulation study you can observe how parallelizable simulation runs are executed. Select Show Distributed Simulation on the context menu to do so.</p>
+         <p class="para_topic"> When employing distributed simulation, you cannot handle data within your LAN the way you are used to do. We recommend to not read data from files, but to first save them to your model. Note that you cannot save the active model while distributed simulations are running.</p>
+         <p class="para_topic"> When you would like to log special events or system states in the <em> Report</em> of the <em> ExperimentManager</em>, the <em> Frame</em> containing the simulation model has to contain corresponding <em> Methods</em> with prompt messages.
+         </p>
+         <p class="para_topic"> You can designate the number of the simulation run, which belongs to the row in the <em> JobsTable</em> , on the associated simulation computer with the attribute <em> currentTaskNo</em> of the <em> ExperimentManager</em>.
+         </p><pre class="indent">promptMessage(to_str(&quot;Emptywarehouseinsimulationrun&quot;,Experimentmanager.currentTaskNo,&quot;at time&quot;,EventController.SimTime))</pre><div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When you use rules, all observations for an experiment have to be finished before the next experiment can start. For this reason only the observations of a single experiment can be executed in parallel when you employ distributed simulation. </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1206522.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Entering the Parameters of a Simulation Run into Your Simulation Model"></a><a class="link" href="id52086.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Defining Rule-based Settings"></a></span></div>
+   </body>
+</html>

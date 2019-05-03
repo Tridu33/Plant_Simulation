@@ -1,0 +1,204 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>XDim</title>
+      
+      <meta name="MS-HKWD" content="XDim">
+      <meta name="MS-HKWD" content="XDim,Transporter">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">XDim</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id23655.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:TargetPosition"></a><a class="link" href="id53901.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:YDim"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id98543.html">Attributes of the Transporter</a></span> &gt; <span class="simpleHTMLminitoc">XDim</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9954"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.XDim</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>XDim</em> sets the number of places along the x-axis (<a class="links" href="id66667.html">X-dimension</a>) of the loading space. The loading <a class="links" href="id57015.html">capacity</a> is the product of <em>XDim</em> times <a class="links" href="id23467.html">YDim</a> times <a class="links" href="xid1404379.html">ZDim</a>. The greatest allowed value is one million.
+         </p>
+         <p class="para_topic">When you decrease the dimension of the <em>Transporter</em>, make sure that no <em>MUs</em> are located on the storage places that will be deleted by this action! Either delete these <em>MUs</em> or move them to another storage place on the smaller loading space. 
+         </p>
+         <p class="para_topic">For loaded <em>Transporters </em> for which you activated the <b class="uiTerm">loading space</b>
+            <a class="links" href="id89093.html">Type</a> &gt; <b class="uiTerm">Store</b>, 
+         </p>
+         <p class="para_topic">For loaded <em>Containers</em>, <em>Plant Simulation</em> calculates the distance between the animation points as follows:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Distance in the <b class="uiTerm">x-direction</b> (horizontal) is the length in pixels of the loaded object divided by the <b class="uiTerm">x-dimension</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Distance in the <b class="uiTerm">y-direction</b> (vertical) is the width in pixels of the loaded object divided by the <b class="uiTerm">y-dimension</b>.
+               </p>
+               
+            </li>
+         </ul>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For determining the size in pixels, compare the <a class="links" href="id85960.html">Scaling Factor</a>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">If either the distance in the <b class="uiTerm">x-direction</b> or in the <b class="uiTerm">y-direction</b> is smaller than 4 pixels, <em>Plant Simulation</em> does not show any MUs at all but draws a pattern to signify that the object is not empty. 
+         </p>
+         <p class="para_topic">As long as the loading space is half empty, <em>Plant Simulation</em> shows a hatch pattern. If the loading space is more than half full, <em>Plant Simulation</em> shows a checker pattern.
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Half empty loading space</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">More than half full loading space</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/vectorGraphicsHatch.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/vectorGraphicsCheck.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>integer</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.MUs.Transporter.XDim := 3</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id57015.html">capacity</a></p>
+         <p class="para_topic"><a class="links" href="id53901.html">YDim</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id23655.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:TargetPosition"></a><a class="link" href="id53901.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:YDim"></a></span></div>
+   </body>
+</html>

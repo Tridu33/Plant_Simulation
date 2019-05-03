@@ -1,0 +1,259 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The Waituntil-Statement and the Stopuntil-Statement</title>
+      
+      <meta name="MS-HKWD" content="Waituntil-Statement and the Stopuntil-Statement">
+      <meta name="MS-HKWD" content="Stopuntil-Statement">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">The Waituntil-Statement and the Stopuntil-Statement</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Suspending_Methods.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Suspending Methods"></a><a class="link" href="id90495.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Condition"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Control_Flow_Statements_1.html">Control Flow Statements</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Suspending_Methods.html">Suspending Methods</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id71748.html">The Waituntil-Statement and the Stopuntil-Statement</a></span> &gt; <span class="simpleHTMLminitoc">The Waituntil-Statement and the Stopuntil-Statement</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13835"></span><span id="ndxgenid_PlantSimulationENU_13836"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">waituntil condition [prio number] [wait timespan:time]
+stopuntil condition [prio number] [wait timespan:time]</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The <em>waituntil/stopuntil-statement</em> suspend method execution until the condition set in the statement evaluates to true. This means that the simulation continues running and that other methods can be executed during this time. As soon as the condition is met, the suspended method will be woken up immediately and its execution will be continued. If methods are being executed at the point in time at which the condition is met, their execution will be interrupted and will only then be continued after the method, that has been woken up, has been executed all the way.
+         </p>
+         <p class="para_topic">The statements consists of:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The keyword <a class="links" href="id47439.html">waituntil</a> or <a class="links" href="id39936.html">stopuntil</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">A condition (a <em>boolean</em> expression)
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional keyword <a class="links" href="id17999.html">prio</a>, and an <em>integer</em> expression used to analyze the priority.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The keyword <a class="links" href="id54796.html">wait</a> if you want to set a time limit after which the statement will be woken up although the condition has not been met yet. You can use the keyword <a class="links" href="xid1395694.html">waitExpired</a> to query if the timespan has elapsed.
+               </p>
+               
+            </li>
+            <li>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Do not use these statements within a formula or a DDE-call. There the interpreter cancels the execution of the <em>Method</em> with an error message.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When several suspended methods are to be woken up simultaneously, it might happen, that after the <em>Method</em> with the highest priority has been executed, the condition for the other <em>Methods</em> takes on the value false again.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">For methods that were suspended with <code>waituntil</code> a new evaluation of the condition and the priorities for each additional Method to be woken up takes place after processing each <em>Method</em> that has been woken up. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">For methods that were suspended with <code>stopuntil</code> these will be woken up in any case when the condition has been met once. This means that no new evaluation of the condition takes place. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><em>Plant Simulation</em> always evaluates logical connections from left to right. The evaluation terminates as soon as the value of the expression are certain.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">waituntil Station.Cont /= void AND Station.Cont.Finished</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">As long as <code>Station.Cont</code> has the value void, <code>Station.Cont.Finished</code> will not be evaluated and thus does not provoke a runtime error.
+         </p>
+         <p class="para_topic">When you reset your simulation model, <em>Plant Simulation</em> deletes suspensions of <em>methods</em>, which are located in the same <em>Frame</em> as the <em>EventController</em> or in a <em>sub-Frame</em> of this <em> Frame</em>. It also deletes suspensions of <em>methods</em>, whose caller (the anonymous identifier <em>?</em>) is located in the same <em>Frame</em> as the <em>EventController</em> or in a <em>sub-Frame</em> of this <em>Frame</em>. This means that when you reset an <em>EventController</em>, <em>Plant Simulation</em> no longer deletes suspensions of methods of other simulation models within the model file.
+         </p>
+         <p class="para_topic">The <em>waituntil/stopuntil-statement</em> are not event-based, so no <em>EventController</em> is required, as compared to the <a class="links" href="id54796.html">wait</a>-statement, which does require one.
+         </p>
+         <p class="para_topic">Note that the method <a class="links" href="id49575.html">deleteSuspendedMethods</a> deletes all suspensions of all methods.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id90495.html">Condition</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id61393.html">Simultaneously Reactivating Several Methods with waituntil</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id55940.html">Priority</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id31254.html">Simultaneously Reactivating Several Methods Using stopuntil</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id36605.html">Reactivating Methods</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id42574.html">Maximum number of suspended methods</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id98496.html">Simultaneously Reactivating Several Methods</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Suspending_Methods.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Suspending Methods"></a><a class="link" href="id90495.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Condition"></a></span></div>
+   </body>
+</html>

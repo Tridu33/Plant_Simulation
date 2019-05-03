@@ -1,0 +1,44 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Use a Stop Processing Control</title>
+      
+      <meta name="MS-HKWD" content="Use a Stop Processing Control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Use a Stop Processing Control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id90517.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stop the Associated Stations When the Repair Service Arrives"></a><a class="link" href="id65763.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Use a Resume Processing Control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id90688.html">Modeling a Lockout Zone</a></span> &gt; <span class="simpleHTMLminitoc">Use a Stop Processing Control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_851"></span><p class="para_topic">If you want to use your own logic when one of the stations assigned to the <em>LockoutZone</em> fails, you have to program a <a class="links" href="id25687.html">Stop control</a>. 
+         </p>
+         <p class="para_topic">In our example we write the following information into the table <b class="uiTerm">ReportStopping</b>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/LockoutZoneStopTable1.gif"></p>
+         <p class="para_topic">Within the control method the anonymous identifier @ designates the triggering station, while the anonymous identifier ? designates the <em>LockoutZone</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/lockoutZoneControls.gif"></p>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">var row:integer := ReportStopping.ydim + 1
+ReportStopping[&quot;First Failed Station&quot;,row] := @.name
+ReportStopping[&quot;Start Stopping&quot;,row] := eventcontroller.simTime</pre><p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id90688.html">Modeling a Lockout Zone</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id90517.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stop the Associated Stations When the Repair Service Arrives"></a><a class="link" href="id65763.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Use a Resume Processing Control"></a></span></div>
+   </body>
+</html>

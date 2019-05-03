@@ -1,0 +1,142 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pull control</title>
+      
+      <meta name="MS-HKWD" content="Pull control">
+      <meta name="MS-HKWD" content="Pull control,general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Pull control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id35719.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set-up control"></a><a class="link" href="id55428.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Shift calendar"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id33317.html">Tab Controls</a></span> &gt; <span class="simpleHTMLminitoc">Pull control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3488"></span><p class="para_topic">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object into which you entered the source code of the <b class="uiTerm">pull control</b>. <em>Plant Simulation</em> activates it, whenever the object is ready to accept a new <em>part</em> or when it is ready, when a new <em>part</em> is <a class="links" href="id84863.html">Waiting</a> at its entrance. In the <b class="uiTerm">pull control</b> you can determine which of the <em>MUs</em>, which intend to move onto the object, the object will actually accept. For this you have to get the forward blocking list of the object with the method <a class="links" href="id47949.html">fwBlockList</a> and unblock a <em>part</em> in that list with the method <a class="links" href="id62334.html">unblock</a>. 
+         </p>
+         <p class="para_topic">Let us assume that red parts are especially important and thus have to priority for being processed. Then you can always pull red parts first from the predecessors and only then pull parts in other colors.</p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <b class="uiTerm">pull control</b> does not determine if an MU is to be moved to this or to another successor. Instead it selects one of the parts which have already determined to move on to this successor. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The <b class="uiTerm">standard pull control</b> looks like this: 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/OnPull.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For the objects <em>Conveyor</em>, <em>Track</em>, and <em>TwoLaneTrack</em> the <b class="uiTerm">pull control</b> only applies to <em>MUs</em>moving in the forward direction, i.e., to objects, which move onto them at their <b class="uiTerm">entrance</b> and exit them at their <b class="uiTerm">exit</b>. It does not apply to <em>MUs</em> moving onto them <b class="uiTerm">backwards</b> at their <b class="uiTerm">exit!</b></p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For the <em>Converter</em> the <b class="uiTerm">pull control</b> also applies for parts that move onto it <b class="uiTerm">backwards</b> at its <b class="uiTerm">exit</b>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Or you can select the <em>Method</em> in a <em>Frame</em>, drag it to the text box and drop it there.
+         </p>
+         <p class="para_topic">Instead, you can also right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>, such as <code>self.SetUpControlEnginePlant</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnBuilt_in_name_of_the_control</code>, such as <code>self.OnPull</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, click in the text box, and press the <b class="uiTerm">F2</b> key. 
+                           </p>
+                           
+                           <p class="para_note_body">Enter the <code>name_of_the_Method</code>, to call a <em>Method</em> in the <em>Frame</em> into which you inserted the object. Enter <a class="links" href="id43255.html">self</a><code>.name_of_the_Method</code> to call a user-defined attribute of data type <em>method</em>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <em>AssemblyStation</em> does not provide the <b class="uiTerm">Pull</b> control.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id90439.html">PullCtrl</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id35719.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set-up control"></a><a class="link" href="id55428.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Shift calendar"></a></span></div>
+   </body>
+</html>

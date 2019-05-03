@@ -1,0 +1,175 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Working in the Method Window</title>
+      
+      <meta name="MS-HKWD" content="Working in the Method Window">
+      <meta name="MS-HKWD" content="Comment">
+      <meta name="MS-HKWD" content="Comment,in source code">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Working in the Method Window</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id97533.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Programming a Method"></a><a class="link" href="id16952.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Calling a Method"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id25909.html">Method</a></span> &gt; <span class="simpleHTMLminitoc">Working in the Method Window</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11093"></span><span id="ndxgenid_PlantSimulationENU_11094"></span><p class="para_topic">Double-click the icon of the <b class="uiTerm">Method</b>, which you inserted into a <em>Frame</em>, to open its dialog window. To change the properties of the <a class="links" href="id23901.html#id75750">Class</a> of the object, double-click it in the <em>Class Library</em> or on the tab <b class="uiTerm">Information Flow</b> in the <em>Toolbox</em>. It provides access to the <em>method</em>
+            <em>editor</em> and to the <a class="links" href="xid1185214.html">Method Debugger</a>. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Debug</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SmallDebug1.png" border="0"> on the <b class="uiTerm">Extras</b> ribbon tab or press <b class="uiTerm">F11</b> to change from the <em>method editor</em> to the <em>method debugger</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click any of the <b class="uiTerm">Step</b> buttons <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/stepButtons1.png" border="0"> on the <em>debugger toolbar</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/debuggerToolb75Sm1.png" border="0"> repeatedly or once to return to the <em>editor</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To select a single word, double-click it. To select an entire line, triple-click anywhere in the line. </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To select all text in the window, press <b class="uiTerm">Ctrl+A</b> or click the mouse button four times. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To copy the selected text, press <b class="uiTerm">Ctrl+C</b>, to paste text from the clipboard, press <b class="uiTerm">Ctrl+V</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the selected text, drag the mouse to a different location, and drop it. </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To undo the last changes you made to the source code, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/undoSm1.png" border="0"> or press <b class="uiTerm">Ctrl+Z </b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To restore (redo) the source code to the text it had before an undo action, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/redoSm1.png" border="0"> or press <b class="uiTerm">Ctrl+Y</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To insert a line break, enter a backslash \ if the source code is too long to fit on one line. This makes it easier to read the source code in the method window while <em>Plant Simulation</em> still interprets the source code as a single entity.
+               </p>
+               <pre class="indent">priority:= &quot;Urgent&quot;
+very_long_text := &quot;Frank Jones\
+                   Halford Lane 9\
+                   Cedar Rapids, IA 52409&quot;
+Text := &quot;It is \&quot;very\&quot; urgent.&quot; -- outputs It is &quot;very&quot; urgent.</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">To scroll horizontally in the <em>Method Editor</em>, hold down the <b class="uiTerm">Shift</b> key and roll the mouse wheel.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To enter a comment explaining the intention of your source code, enter two hyphens -- at the beginning of the line and then type in the comment. The <em>Method</em> displays comments in green. The only exception are strings in which you cannot enter a comment within the quotation marks. Instead of two hyphens (--) you can also start a comment with two forward slashes (//). 
+               </p>
+               
+               <p class="para_item">Comments improve the legibility of a <em>Method</em> and help to understand the intentions behind your programming. A comment is especially helpful in a long <em>Method</em>, when you or a colleague look at it again at a later point in time to extend its functionality or to debug it. We encourage you to make extensive use of comments. Comments do not affect the simulation speed at all! 
+               </p>
+               
+               <p class="para_item">You can insert a comment anywhere, except within a string value of your program. This means that you cannot enter a comment within the quotation marks that designate a string. </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">To start a one-lined comment, enter two hyphens --, and type in your remarks. This comment ends at the end of the line. </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">To start a comment that spans several lines, enter a forward slash and an asterisk /*, and type in your remarks. To end the comment, enter an asterisk and a forward slash */. </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/comments1.png"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To execute the source code of the <em>Method</em>, click <a class="links" href="id29361.html">Run Method</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SmallRunMeth.gif" border="0"> or press <b class="uiTerm">F5</b> or click <a class="links" href="id18314.html">Debug Method</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SmallDebug1.png" border="0"> or press <b class="uiTerm">F11</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To increase or decrease the font size in the window of the <em>Method Editor</em> or the <em>Method Debugger</em>, hold down the <b class="uiTerm">Ctrl</b> key and roll the mouse wheel forward and backward. 
+               </p>
+               
+               <p class="para_item">To decrease the font size, hold down the <b class="uiTerm">Ctrl</b> key and roll the mouse wheel backward. When you change the font size with the mouse wheel, <em>Plant Simulation</em> uses the changed font size until you change it the next time or until the end of the <em>Plant Simulation</em> session for all <em>Methods</em> which you open afterwards. <em>Plant Simulation</em> uses the changed font size in all open <em>Method</em> windows, not just in the one in which you rolled the mouse wheel.
+               </p>
+               
+               <p class="para_item">Instead of rolling the mouse wheel, you can also use these key combinations:</p>
+               
+               <p class="para_item"><b class="uiTerm">Ctrl</b> plus + increases the font size
+               </p>
+               
+               <p class="para_item"><b class="uiTerm">Ctrl</b> plus 0 resets the font size to the standard size of 10 points
+               </p>
+               
+               <p class="para_item"><b class="uiTerm">Ctrl</b> plus - decreases the font size
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select if you want to show line numbers, if you want to highlight keywords and what kind of indentation you want to use on the <a class="links" href="id99788.html">Edit Ribbon Tab</a> and on the <a class="links" href="id87246.html">Tools Ribbon Tab</a> in the present instance of the <em>Method</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select how <em>Plant Simulation</em> shows <em>SimTalk</em> code in all <em>Method</em> objects under <b class="uiTerm">File &gt; Preferences &gt;</b>
+                  <a class="links" href="id24472.html">Editor</a> in the <em>Plant Simulation</em> window. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">An asterisk ( *) in the title bar of the <em>Method</em> window shows that the <em>Method</em> contains changes that have not been applied yet. To do so, click <a class="links" href="idApply_Changes.html">Apply changes</a>
+            <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/editApplyChanges.gif" border="0"> on the <a class="links" href="id99788.html">Edit Ribbon Tab</a>.
+         </p>
+         <p class="para_topic">The <a class="links" href="id59930.html">Context Menu of the Method</a> also provides the commands <a class="links" href="id39705.html">Toggle Class Breakpoint</a>, <a class="links" href="id56972.html">Toggle Instance Breakpoint</a>, <a class="links" href="id69883.html">Run to Cursor</a>, <a class="links" href="id78202.html">Set Next Statement</a>, and <a class="links" href="id80033.html">Open Object</a>.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id97533.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Programming a Method"></a><a class="link" href="id16952.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Calling a Method"></a></span></div>
+   </body>
+</html>

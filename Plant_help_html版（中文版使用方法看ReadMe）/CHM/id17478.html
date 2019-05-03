@@ -1,0 +1,127 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>DefaultSuccessor</title>
+      
+      <meta name="MS-HKWD" content="DefaultSuccessor">
+      <meta name="MS-HKWD" content="DefaultSuccessor,material flow objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">DefaultSuccessor</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id28439.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:AttributeType"></a><a class="link" href="id32430.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ExitStrategy"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id31164.html">Attributes for Setting the Exit Strategy of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">DefaultSuccessor</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5055"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.DefaultSuccessor</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>DefaultSuccessor</em> sets the number of the <a class="links" href="id55175.html#id41761">default successor</a> to which the object designated by Path moves the part, when you set the attribute <a class="links" href="id32430.html">ExitStrategy</a> to <code>MU Attribute</code>. This is the successor to which the material flow object moves the <em>MU</em>, when this <em>MU</em> does not have an attribute with the <b class="uiTerm">Value</b> you entered into the <em>TableFile</em>. 
+         </p>
+         <p class="para_topic">To not move a part, which does not meet one of the conditions on the table, enter 0. </p>
+         <p class="para_topic">To show a message, when a part is to be moved which does not meet any of the conditions in the <em>TableFile</em>, enter a negative number.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>integer</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">ParallelStation.DefaultSuccessor := 1</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id28439.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:AttributeType"></a><a class="link" href="id32430.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ExitStrategy"></a></span></div>
+   </body>
+</html>

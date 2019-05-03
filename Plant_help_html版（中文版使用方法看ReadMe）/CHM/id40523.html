@@ -1,0 +1,138 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Percentage</title>
+      
+      <meta name="MS-HKWD" content="Percentage">
+      <meta name="MS-HKWD" content="Percentage,FlowControl exit">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Percentage</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id55175.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:MU Name"></a><a class="link" href="id50195.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Random"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id94577.html">FlowControl</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47525.html">Dialog Window of the FlowControl</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id35044.html">Tab Exit Strategy</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70074.html">Strategy</a></span> &gt; <span class="simpleHTMLminitoc">Percentage</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6146"></span><p class="para_topic">To move the <em> MUs</em> on to a successor according to a percentage distribution, select <b class="uiTerm">Percentage</b> from the drop-down list. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/fcexitpercentage.gif"></p>
+         <p class="para_topic">Click <b class="uiTerm">Open List</b> to open a table and enter the percentages. The n-th row on the table defines the n-th successor&rsquo;s portion. The <em>FlowControl</em> moves an <em> MU</em> to that successor, for which the difference between the desired value and the actual value is greatest. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you enter 0 into the table, the predecessor of the <em>FlowControl</em> will not receive an MU.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <ul>
+            <li>
+               
+               <p class="para_item">When you select <b class="uiTerm">Blocking</b>
+                  <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/blockingOn.gif" border="0">, the <em>FlowControl</em> blocks the <em>MU</em> until the successor determined by the distribution can receive the <em>MU</em></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you clear <b class="uiTerm">Blocking</b>
+                  <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/blockingOff.gif" border="0">, the <em>FlowControl</em> moves the <em>MU</em> on to the successor with the second largest difference between the desired value and the actual value, etc.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id77345.html"> getExitList</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id84324.html"> ExitBlocking</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id38675.html"> setExitList</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id23124.html"> Show Successors</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id34696.html"> ExitBehavior</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id36180.html"> Context Menu of Embedded Lists</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1402399.html">Data Held in Tabular Form in Attributes</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id55175.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:MU Name"></a><a class="link" href="id50195.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Random"></a></span></div>
+   </body>
+</html>

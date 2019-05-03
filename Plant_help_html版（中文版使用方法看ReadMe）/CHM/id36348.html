@@ -1,0 +1,63 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Export Data to the Database</title>
+      
+      <meta name="MS-HKWD" content="Export Data to the Database">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Export Data to the Database</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id56114.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import Data into Your Simulation Model"></a><a class="link" href="id84466.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Import Data from an Oracle Database"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48998.html">Importing and Exporting Data</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id24466.html">Import Data from a Database</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id37636.html">Import Data from an ODBC Database</a></span> &gt; <span class="simpleHTMLminitoc">Export Data to the Database</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1661"></span><p class="para_topic">You can also export selected results of your simulation runs back to the ODBC database. For this, you use the method.<a class="links" href="id41032.html">sql</a> and a number of SQL instructions.
+         </p>
+         <p class="para_topic">In our example we add a new row to our Access table <em>Orders2</em> using the SQL instruction <code>insert into</code>.
+         </p>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">ODBC.login(&quot;TestDB&quot;,&quot;&quot;,&quot;&quot;)
+ODBC.sql(&quot;insert into Orders2 values ('15:00:00.0000', '.MUs.NewPart', '150', 'NewPart', 'abc')&quot;)
+ODBC.logout</pre><p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/writeDb11.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">As SQL does not provide a single statement for adding the contents of a row or of the entire table to the database, you have to type the contents of each cell into the <em>Method</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">To add data to an existing data set, thus updating the database, we use the SQL instruction <code>update</code>:
+         </p>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">ODBC.login(&quot;TestDB&quot;,&quot;&quot;,&quot;&quot;)
+ODBC.sql(&quot;update Orders2 set Attribute = 'xyz' where Name = 'rod'&quot;)
+ODBC.logout</pre><p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/writeDb2.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id91507.html">Set the Data Source Up</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id56114.html">Import Data into Your Simulation Model</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id37636.html">Import Data from an ODBC Database</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id56114.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import Data into Your Simulation Model"></a><a class="link" href="id84466.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Import Data from an Oracle Database"></a></span></div>
+   </body>
+</html>

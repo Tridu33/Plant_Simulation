@@ -1,0 +1,128 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Fine-tune Our Station</title>
+      
+      <meta name="MS-HKWD" content="Fine-tune a station">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Fine-tune Our Station</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id62683.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Test Our Station in the Simulation Model"></a><a class="link" href="id41457.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Modeling a Complex Receiving Department"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58193.html">Modeling in 3D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id20438.html">Creating an Animatable Object</a></span> &gt; <span class="simpleHTMLminitoc">Fine-tune Our Station</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1312"></span><p class="para_topic">While running the simulation, you&rsquo;ll notice that the pallet is not located at the bottom of the <em>Screwdriver</em> station, but at the top. Proceed as follows to fix this:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Open the class of the <em>Screwdriver</em> in a new 3D window. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Then, open the dialog <b class="uiTerm">Edit 3D Properties</b> of the <b class="uiTerm">PartCarrierStation</b>, change to the tab <b class="uiTerm">MU Animation</b>, and <b class="uiTerm">show</b> the <b class="uiTerm">Default</b> path. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the path marker, i, e., the red wedge pointing downwards, hold down the <b class="uiTerm">Ctrl</b> key, and move it down with the down arrow key until it is located flush on the <b class="uiTerm">PartCarrierStation</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverAdjustAnimationPoint.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You&rsquo;ll also notice that the screw is not attached to the tip of the arm. Proceed as follows to fix this:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Open the class of the <em>Screwdriver</em> in a new 3D window. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open the <b class="uiTerm">Trestle</b> of the <em>Screwdriver</em> in a new 3D window.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open the dialog <b class="uiTerm">Edit 3D Properties</b> of the <b class="uiTerm">Arm</b>, change to the tab <b class="uiTerm">MU Animation</b>, and visualize the <b class="uiTerm">Default</b> path. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the path marker, hold down the <b class="uiTerm">Ctrl</b> key, and move it down with the down arrow key until it was located flush at the tip of the <b class="uiTerm">Arm</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverArmAnimationp.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You&rsquo;ll finally notice that the wrong side of the screw is attached to the tip of the <em>Screwdriver</em> arm. Proceed as follows to fix this:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Open the class of the <em>Screwdriver</em> in a new 3D window. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open the <b class="uiTerm">Trestle</b> of the <em>Screwdriver</em> in a new 3D window. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open the dialog <b class="uiTerm">Edit 3D Properties</b> of the <b class="uiTerm">Trestle</b>, change to the tab <b class="uiTerm">MU Animation</b>, and <b class="uiTerm">visualize</b> the <b class="uiTerm">Default</b> path. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Top</b> as the <b class="uiTerm">side</b> to which the <b class="uiTerm">MU</b> is to be <b class="uiTerm">attached</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverMUSideTop.gif"></p>
+               
+               <p class="para_item">Run the simulation again. Now our <em>Screwdriver</em> station does exactly what we designed it to do.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverScrewing.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id84876.html">Create the Required Simulation Object</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id34781.html">Add Animations and Interactions to the Simulation Objects</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id62683.html">Test Our Station in the Simulation Model</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id20438.html">Creating an Animatable Object</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id62683.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Test Our Station in the Simulation Model"></a><a class="link" href="id41457.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Modeling a Complex Receiving Department"></a></span></div>
+   </body>
+</html>

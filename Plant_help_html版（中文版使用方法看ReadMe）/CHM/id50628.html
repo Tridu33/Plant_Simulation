@@ -1,0 +1,209 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>outIn</title>
+      
+      <meta name="MS-HKWD" content="outIn">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">outIn</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id77725.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:creationTime"></a><a class="link" href="id11406.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Accessing the Load of Container and Transporter"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id38692.html">Methods of All Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27872.html">Methods for the State of the Mobile Object</a></span> &gt; <span class="simpleHTMLminitoc">outIn</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_9161"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.outIn(SecondsTillOut:time[, WorkOnFinishedPartAgain:boolean:=false])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>outIn</em> causes the <em>MU</em> designated by MU-path to exit the object on which it is located after the <em>time</em> you specify.
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameter</b></p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>SecondsTillOut</em> of data type <em>time</em> designates the number of seconds. <em>Plant Simulation</em> creates an <b class="uiTerm">Out</b> event for the <em>MU</em> in the number of seconds starting at the current point in time of the simulation run. The time you enter has to be equal to or greater than 0. For a fully processed part you can also enter <code>-1</code> to start processing again. Here the parameter <em>WorkOnFinishedPartAgain</em> has to have the value <code>true</code>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">On length-oriented material flow objects you can only use the <em>method</em> for <em>MUs</em>, which are ready to exit.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>WorkOnFinishedPartAgain</em> of data type <em>boolean</em> sets if an already processed part will be processed again on point-oriented objects. When the parameter has the value <code>true</code> or the part has not been processed all the way yet, the time counts as <b class="uiTerm">processing</b> for statistical purposes. When the parameter has the value <code>false</code> and the part has already been processed all the way, the time counts as <b class="uiTerm">waiting</b> for statistical purposes.
+               </p>
+               
+               <p class="para_item">For parts that are processed all the way and for the setting <code>WorkOnFinishedPartAgain(true)</code>, you can also specify <code>-1</code> for the parameter <em>SecondsTillOut</em>. The value <code>-1</code> signifies that <em>Plant Simulation</em> determines the processing time according to the attribute <a class="links" href="id96819.html">ProcTime</a> of the material flow object, meaning that it either determines a random number or that it sets a constant processing time.
+               </p>
+               
+               <p class="para_item">This setting is particularly useful when an MU is created on a station. Then it is full processed and ready to exit. If it is to be processed still, you can enter <code>outIn(-1, true)</code> directly after <a class="links" href="id63269.html">create</a> to start processing.
+               </p>
+               
+            </li>
+         </ul>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Station.Cont.outIn(10)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var p : object
+p := .MUs.part.create(Station)
+p.outin(-1, true)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id77725.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:creationTime"></a><a class="link" href="id11406.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Accessing the Load of Container and Transporter"></a></span></div>
+   </body>
+</html>

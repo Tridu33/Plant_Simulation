@@ -1,0 +1,88 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>FlowGrade</title>
+      
+      <meta name="MS-HKWD" content="FlowGrade">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">FlowGrade</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1203899.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Statistics"></a><a class="link" href="xid1203896.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ProcessAnalyzer"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58670.html">Value Stream Mapping Tools</a></span> &gt; <span class="simpleHTMLminitoc">FlowGrade</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_18270"></span><p class="para_topic"></p>
+         <p class="para_topic"> You can use the object <em> FlowGrade</em> to compute and to show the flow grade between two objects, which you define. The flow grade is a key figure for determining how inert a production is. High inventory on stations identifies barrages within the production flow. (Erlach: Wertstromdesign).
+         </p>
+         <p class="para_topic"> The <b class="uiTerm">flow grade (value-added time portion)</b> shows to which extent the flow/stream principle (few interruptions and waiting times, low inventory) and the reduction of waste on all levels of the value stream chain has already been realized. The <b class="uiTerm">value-added time portion</b> establishes the direct connection to the time span between placing the orders and the delivery of the finished products. 
+         </p>
+         <p class="para_topic"> The <b class="uiTerm">flow grade (value-added time portion)</b> is calculated as follows:
+         </p><pre class="indent">Value-adding time = processing time
+Throughput time = (value-added time + transportation time + delay time)
+Value-adding time portion = value-added time / throughput time
+</pre><p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/flowGrade_Dialog.gif"></p>
+         <p class="para_topic"> To open the dialog of the object, double-click its icon.</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> Drag the object at which you would like to start your analysis to the text box <b class="uiTerm">Calculate from</b> of the object <em> FlowGrade</em> and drop it there.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Drag the object at which you would like to end your analysis to the text box <b class="uiTerm">Calculate to</b> of the object <em> FlowGrade</em> and drop it there.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> To show the products which move between these two objects, click <b class="uiTerm">Read Products</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Select a product from of the drop-down list <b class="uiTerm">Products</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Select one of the <b class="uiTerm">variants of the throughput time</b> for this product. This shows the route through the production line and enters the values on the right hand side of the dialog.
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/flowgrade_Path.gif"></p>
+         <p class="para_topic"> The FlowGrade computes the <b class="uiTerm">value-adding time portion</b> by summing up the individual processing times.
+         </p>
+         <p class="para_topic"> The <b class="uiTerm">waiting time</b> results from the current inventory multiplied by the cycle time of the succeeding process.
+         </p>
+         <p class="para_topic"> The <b class="uiTerm">transportation time</b> results from the times which the product spent on objects of type <em> Transport</em>, <em> TransportExternal</em>, and <em> FIFO</em>.
+         </p>
+         <p class="para_topic"> The <b class="uiTerm">throughput time</b> is the sum of value-adding time plus waiting time plus transportation time.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/flowGrade_Results.gif"></p>
+         <p class="para_topic"> Click the button <b class="uiTerm">Show Chart</b> to show the <b class="uiTerm">value-adding time</b>, the <b class="uiTerm">transportation time</b>, and the <b class="uiTerm">waiting time</b> in a Chart.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/flowGrade_Graph.gif"></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1203899.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Statistics"></a><a class="link" href="xid1203896.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ProcessAnalyzer"></a></span></div>
+   </body>
+</html>

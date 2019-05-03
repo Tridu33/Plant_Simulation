@@ -1,0 +1,164 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>schedule</title>
+      
+      <meta name="MS-HKWD" content="schedule">
+      <meta name="MS-HKWD" content="schedule,ShiftCalendar">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">schedule</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id17303.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:calculateWorkingDuration"></a><a class="link" href="xid1388313.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Read-Only Attributes of the ShiftCalendar"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61534.html">ShiftCalendar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56527.html">Methods of the ShiftCalendar</a></span> &gt; <span class="simpleHTMLminitoc">schedule</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8665"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.schedule(StartTime/Endtime:dateTime, Duration:time, Direction:string) &rarr; dateTime</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>schedule</em> schedules the date and time to start or to finish the production process for the <em>ShiftCalendar</em> designated by Path. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>StartTime/EndTime</em> of data type <em> ateTime</em> is the start or end date and time from which on the <em>ShiftCalendar</em> schedules the production date. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Duration</em> of data type <em>time</em> is the duration of the production process. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Direction</em> of data type <em>string</em> designates if the <em> method</em> computes <code>forward</code> or <code>backward</code> in time.
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">For <code>forward</code> scheduling, the production order requires a defined production time for manufacturing the product. Beginning at the start date, which normally is the active date, the method <em>schedule </em> computes the date on which the product has to be finished. It takes production time, shift times, weekends and holidays into consideration. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">For <code>backward</code> scheduling, where you know the date on which the product has to available, as well as the production time, the method <em>schedule </em> computes the start date on which production has to start. It takes production time, shift times, weekends and holidays into consideration. 
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">The return value has the data type <em>dateTime</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">startDateAndTime := str_to_dateTime(&quot;4.1.2003 9:00&quot;)-- Friday 9:00
+Duration := str_to_time(&quot;10:00:00.0&quot;) -- 10 hours
+endDateAndTime := MyShiftCalendar.schedule(startDateAndTime,Duration, &quot;forward&quot;) -- Monday 12:00</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id65980.html">Tab Shift Times</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id17303.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:calculateWorkingDuration"></a><a class="link" href="xid1388313.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Read-Only Attributes of the ShiftCalendar"></a></span></div>
+   </body>
+</html>

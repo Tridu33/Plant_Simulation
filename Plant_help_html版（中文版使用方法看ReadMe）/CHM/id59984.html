@@ -1,0 +1,304 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Add a Text Box</title>
+      
+      <meta name="MS-HKWD" content="Add a Text Box">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Add a Text Box</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id33452.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Add a Static Text Box"></a><a class="link" href="id45356.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Add a Drop-down List"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18086.html">Setting Parameters in the Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47691.html">Set Parameters for Objects in Your Own Dialog</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id45562.html">Design a Simple Dialog</a></span> &gt; <span class="simpleHTMLminitoc">Add a Text Box</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1750"></span><p class="para_topic">A text box is a field into, which the user can enter text or edit text it already contains. To add it to your dialog:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Right-click on the tab <b class="uiTerm">Elements</b> and select <a class="links" href="id49132.html">New Edit Text Box</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the <a class="links" href="id56339.html">Name</a> of the text box. A <em>Method</em> object can call this dialog item using the <b class="uiTerm">Name</b> you entered.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the <a class="links" href="id71567.html">Callback argument</a>, which will be passed to the <em>callback method</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select what kind of data the user can enter from the drop-down list <b class="uiTerm">Data type</b>.
+               </p>
+               
+               <table border="1" cellpadding="10" width="100%" align="center">
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">Selection</p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">The user can enter</p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Any Character</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">any character, which includes special characters, lower and upper case letters and numbers.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Alphanumeric Characters</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">a blank space, lower and upper case letters, and numbers. </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Letters</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">lower and upper case letters.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Decimal Numbers</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">0123456789</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Signed Decimal Numbers</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">decimal numbers with a negative or a positive sign:-0123456789 or +0123456789, for example.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Hexadecimal Numbers</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">ADbf09, for example. </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Octal Numbers</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">01234567, but not 18 for example. </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Binary Numbers</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">0 or 1 </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Floating Point Numbers</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">12.3E-43, for example. </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the <a class="links" href="id75139.html">X</a>-coordinate and the <a class="links" href="id79769.html">Y</a>-coordinate of the text box in the <em>Dialog</em>.
+               </p>
+               
+               <p class="para_item">The position and the width correspond to the average width of characters of your system font, not to pixels. Changing the font size under <b class="uiTerm">Start</b>
+    &gt; <b class="uiTerm">Settings</b> &gt; <b class="uiTerm">Control Panel</b> &gt; <b class="uiTerm">Display</b> &gt;
+     <b class="uiTerm">Settings</b>&gt; <b class="uiTerm">Advanced</b>&gt; <b class="uiTerm">General</b>&gt;
+     <b class="uiTerm">Font Size</b>, affects this setting.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the <b class="uiTerm"> width</b> of the text box in the average width of characters of your system font. The default value of 0 sets the width to the values defined by us. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select if you want to <a class="links" href="id56272.html">Enable</a> the text box or not. The user can only enter text, when the text box is enabled.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To show text that the user enters into the text box with superscripted lower case x-es  <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/password2.gif" border="0">, instead of as clear text <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/password1.gif" border="0">, select <b class="uiTerm">Password</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To insert the dialog item into your dialog, click <b class="uiTerm">OK</b>. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/sdTextbox.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/sdTextboxStat.gif" border="0"></p>
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/sdTextboxStatOnline.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id62613.html">Program Actions which the Dialog Items Execute</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id49132.html">New Edit Text Box</a> in the Plant Simulation Reference
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id45562.html">Design a Simple Dialog</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id33452.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Add a Static Text Box"></a><a class="link" href="id45356.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Add a Drop-down List"></a></span></div>
+   </body>
+</html>

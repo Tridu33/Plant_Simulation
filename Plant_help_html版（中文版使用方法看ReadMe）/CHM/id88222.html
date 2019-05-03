@@ -1,0 +1,111 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Create Your Own Classes</title>
+      
+      <meta name="MS-HKWD" content="Create Your Own Classes">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Create Your Own Classes</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id45081.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set the Root Folder for Your Simulation Model"></a><a class="link" href="id30608.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Work with Folders, Frames and Objects in the Class Library"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id98418.html">Working with Classes in the Class Library</a></span> &gt; <span class="simpleHTMLminitoc">Create Your Own Classes</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_401"></span><p class="para_topic">To create your own <b class="uiTerm">customized classes</b>, you can either derive one of the built-in classes in the <em>Class Library</em> and modify its features, or you can built a class of your own from scratch, for example in a <em>Frame</em> in the <em>Class Library</em>.
+         </p>
+         <p class="para_topic">To create a <b class="uiTerm">class</b> that shares all of its features with the parent class:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Do not change anything in the class object you want to derive an instance from. Then, right-click that object in its folder in the <em>Class Library</em> and select <b class="uiTerm">Derive</b>. This adds the derived class to the bottom of that folder, below the icon <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/toolbarIcon.gif" border="0"> for the toolbar and adds a number to its name, for example <em>Station1</em>. Then, rename the new class. 
+               </p>
+               
+               <p class="para_item">Or</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select multiple objects in the <em>Frame</em> and drag-and-drop them onto the respective folder in the structure in the <em>Class Library</em> to create classes of these objects.
+               </p>
+               
+               <p class="para_item">Or</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Hold down <b class="uiTerm">Ctrl</b> and <b class="uiTerm">Shift</b>, and click the object with the left mouse button. While holding the mouse button down, drag the object into another folder in the <em>Class Library</em>, and release both keys and the mouse button. Be aware that the class object keeps its previous name, when you proceed like this. Then, you can rename the new class. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To create a <b class="uiTerm">subclass</b> that shares some, but not all, of its features with the parent class:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Deactivate inheritance in the class object for the features you want to modify in each of the instances separately. Remember that a button that looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/toggleNotSelected_dup3.gif" border="0"> designates that. The features with active inheritance will be passed on unchanged to the instances of the class object. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Right-click the class in its folder in the <em>Class Library</em> that has the features you would like to use and select <b class="uiTerm">Derive</b>. This adds the derived class to the bottom of the folder, below the icon <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/toolbarIcon.gif" border="0"> for the toolbar and adds a number to its name, for example <em>Station1</em>. Then, rename the new class. 
+               </p>
+               
+               <p class="para_item">Or</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Hold down <b class="uiTerm">Ctrl</b> and <b class="uiTerm">Shift</b>, and click the object with the left mouse button. While holding the mouse button down, drag the object into another folder in the <em>Class Library</em>, and release both keys and the mouse button. Be aware that here the class object keeps its previous name. Then, you can rename the new class. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To create a <b class="uiTerm">class of its own</b>, which originally shares the settings of the original class, but does not keep an inheritance relation with it:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Right-click the class in its folder in the <em>Class Library</em> that has the features you would like to use and select <b class="uiTerm">Duplicate</b>. This copies the selected object or model and creates a new class from it, severing all inheritance relations. Changes you make to the original class object are not passed on to the copy you create. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Hold down <b class="uiTerm">Ctrl</b>, and click the object you wish to duplicate with the left mouse button. While holding the mouse button down, drag the copy to another folder in the <em>Class Library</em>, and release Ctrl and the mouse button. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm">Compare the video Creating a Class under Window ribbon tab &gt; Start Page &gt; Getting Started &gt; Videos.</b></p>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id56719.html">Classes, Subclasses, and Instances</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id33441.html">Using Inheritance</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id98418.html">Working with Classes in the Class Library</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id45081.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set the Root Folder for Your Simulation Model"></a><a class="link" href="id30608.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Work with Folders, Frames and Objects in the Class Library"></a></span></div>
+   </body>
+</html>

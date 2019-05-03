@@ -1,0 +1,169 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>TargetPosition</title>
+      
+      <meta name="MS-HKWD" content="TargetPosition">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">TargetPosition</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1334103.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:TargetDistance"></a><a class="link" href="id75769.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:XDim"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id98543.html">Attributes of the Transporter</a></span> &gt; <span class="simpleHTMLminitoc">TargetPosition</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9952"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.TargetPosition</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>TargetPosition</em> sets the target position of the <em>Transporter</em> designated by Path on a <em>Track</em>. The default value is -1.
+         </p>
+         <p class="para_topic">This only applies when the <em>Transporter</em> is located all the way on a <em>Track</em> and when it is not a part of a <em>tugger train</em>. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">If you do not specify a value for the <code>acceleration</code>, the <em>Transporter</em> drives to this position and stops there. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If you do enter a value for the acceleration, the <em>Transporter</em> accelerates to the target speed, drives on which a constant speed and decelerates in time so that the <em>Transporter</em> stops a the target position. When the distance to the target position is too small to reach the target speed and to decelerate, <em>Plant Simulation</em> uses the highest possible speed.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The <em>Transporter</em> automatically turns around when a change of direction is required to reach the target position. When you stopped the <em>Transporter</em> before setting the target position, it also starts automatically.
+         </p>
+         <p class="para_topic">The attribute is observable. When reaching the target position, <em>Plant Simulation</em> calls the <a class="links" href="id78168.html">Destination control</a>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If you want to stop a possible driving towards the target position, you can set the attribute <a class="links" href="id46170.html">Stopped</a> to <code>true</code>. Then <em>Plant Simulation</em> stops the <em>Transporter</em> without it reaching the target position. <em>Plant Simulation</em> does not call the <a class="links" href="id78168.html">Destination control</a> and sets the value of the attribute <a class="links" href="id23655.html">TargetPosition</a> to the default value -1.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Setting this attribute influences other attributes, such as <a class="links" href="id46170.html">Stopped</a> and <a class="links" href="id63478.html">Backwards</a>. It then also deactivates inheritance.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>real</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.MUs.Transporter:1.TargetPosition := 8</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1334103.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:TargetDistance"></a><a class="link" href="id75769.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:XDim"></a></span></div>
+   </body>
+</html>

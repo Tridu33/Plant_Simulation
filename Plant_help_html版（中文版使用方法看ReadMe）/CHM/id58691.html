@@ -1,0 +1,149 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>MaxDwellTime</title>
+      
+      <meta name="MS-HKWD" content="MaxDwellTime">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">MaxDwellTime</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id87269.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ExitStrategySequence"></a><a class="link" href="id86389.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:MUTarget"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id31164.html">Attributes for Setting the Exit Strategy of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">MaxDwellTime</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5067"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.MaxDwellTime</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>MaxDwellTime</em> sets the time during which the <em>Worker</em> waits for the parts, which he is to carry to the target station (<a class="links" href="id21749.html">MU target</a>). This applies to the exit strategy <a class="links" href="id29219.html">carry part away</a>. Once the <a class="links" href="id69751.html">maximum dwell time</a> has passed, he walks to the target station, no matter if his carrying capacity is met or not. You can use the anonymous identifier @ to access the <em> Worker</em> for whom the <b class="uiTerm">maximum dwell time</b> applies. The <em>Worker</em> picks up the parts which the station finished processing within the <b class="uiTerm">maximum dwelling time</b>. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If you want the <em>Worker</em> to wait until he can pick up all parts up to his carrying capacity, enter a very long time.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <em>maximum dwell time</em> only applies to the objects, which provide a <em>transport-importer</em>, i.e., for the <a class="links" href="id18003.html">Station</a>, the <a class="links" href="id29026.html">ParallelStation</a>, the <a class="links" href="id95185.html">AssemblyStation</a>, the <a class="links" href="id85371.html">DismantleStation</a>, the <a class="links" href="id24372.html">Sorter</a>, the <a class="links" href="id47519.html">Buffer</a> and the <a class="links" href="id21426.html">PlaceBuffer</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>time</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.MaxDwellTime := 3.000</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id87269.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ExitStrategySequence"></a><a class="link" href="id86389.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:MUTarget"></a></span></div>
+   </body>
+</html>

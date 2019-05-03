@@ -1,0 +1,126 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Strategy</title>
+      
+      <meta name="MS-HKWD" content="Strategy">
+      <meta name="MS-HKWD" content="Strategy,FlowControl exit">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Strategy</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id29315a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Blocking"></a><a class="link" href="id45955.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Assignment"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id94577.html">FlowControl</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47525.html">Dialog Window of the FlowControl</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id35044.html">Tab Exit Strategy</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70074.html">Strategy</a></span> &gt; <span class="simpleHTMLminitoc">Strategy</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6128"></span><p class="para_topic">Select the strategy according to which the <em>FlowControl</em> distributes the <em>MUs</em> among its successors. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/fcStrategy.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The strategy <a class="links" href="id45955.html">Assignment</a> does not determine the successor to which the <em>FlowControl</em> moves the <em> part</em> on. Instead, you can change the values of the attributes of the <em>part</em>, when it moves to the one and only successor of the <em>FlowControl</em>. As soon as the <em>part</em> is moved on to the successor, <em>Plant Simulation</em> calls the <em>method</em>, whose name you entered into the text box <b class="uiTerm">Method</b>. Define the assignments to be made in this <em>method</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> cyclically on to all successors, select <a class="links" href="id42246.html">Cyclic</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To cyclically move the <em>MUs</em> on to the successor according to the sequence of successors, which you entered into a list, select <a class="links" href="id69354.html">Cyclic sequence</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> on to the successor, which has been <a class="links" href="id84863.html">Waiting</a> the longest for a <em> part</em>, select <a class="links" href="id83671.html">Least recently used</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> on to a successor according to the return value of a <em>Method</em>, select <a class="links" href="id30216.html">Method</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> on to the successor, which has <a class="links" href="id84863.html">Waiting</a> the shortest time for an <em>MU</em>, select <a class="links" href="id15324.html">Most recently used</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> on to a successor according to the values of attributes of the <em>MUs</em>, select <a class="links" href="id97030.html">MU Attribute</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> on to a successor according to their names, select <a class="links" href="id55175.html">MU Name</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> on to a successor according to a percentage distribution, select <a class="links" href="id59912.html">Percentage</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> on to a randomly selected successor, select <a class="links" href="id50195.html">Random</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> on to the successor meeting a certain <b class="uiTerm">Property</b>, select <a class="links" href="id29077.html">Selection</a> from the drop-down list. Then, select a <b class="uiTerm">Property</b> from the drop-down list <b class="uiTerm">Property</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move the <em>MUs</em> on to the first available successor, select <a class="links" href="id34663.html">Start at successor 1</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To copy the <em>MUs</em> that enter, and move a copy each to each of the successors, select <a class="links" href="id28959.html">To all successors</a>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Depending on what you select, the <em>FlowControl</em> shows additional check boxes, text boxes and buttons.
+         </p>
+         <p class="para_topic">Click <b class="uiTerm">Open List</b> and enter the data into the list, which the exit strategies <a class="links" href="id69354.html">Cyclic sequence</a>, <a class="links" href="id97030.html">MU Attribute</a>, <a class="links" href="id55175.html">MU Name</a>, and <a class="links" href="id40523.html">Percentage</a> require. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id34696.html">ExitBehavior</a></p>
+         <p class="para_topic"><a class="links" href="id77345.html">getExitList</a></p>
+         <p class="para_topic"><a class="links" href="id38675.html">setExitList</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="xid1402399.html">Data Held in Tabular Form in Attributes</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id29315a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Blocking"></a><a class="link" href="id45955.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Assignment"></a></span></div>
+   </body>
+</html>

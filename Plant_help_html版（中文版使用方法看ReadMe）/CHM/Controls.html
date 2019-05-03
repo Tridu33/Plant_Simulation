@@ -1,0 +1,73 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Controls</title>
+      
+      <meta name="MS-HKWD" content="Controls">
+      <meta name="MS-HKWD" content="Controls,tugger train">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Controls</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Failures_and_Pauses.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Failures and Pauses"></a><a class="link" href="id87822.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Transporter"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id10304.html">Tugger Trains</a></span> &gt; <span class="simpleHTMLminitoc">Controls</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9559"></span><p class="para_topic">Each <em>trailer</em> of the <em>tugger train</em> activates all <b class="uiTerm">sensor controls</b> of the <em>Track</em>/<em>TwoLaneTrack</em>. The material flow considers a <em>tugger train</em> as a single unit. The <em>tractor</em> can pull or push the <em>trailers</em>. The front of the train is the front of the first <em>Transporter</em> in the direction in which the <em>Track</em> points. The same is true for the rear of the train. The <b class="uiTerm">front</b> or the <b class="uiTerm">rear</b> of the train activates the <b class="uiTerm">entrance</b> and <b class="uiTerm">exit controls</b> as well as the <b class="uiTerm">destination</b> and the <b class="uiTerm">routing controls</b>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <b class="uiTerm">Front</b> of the <em>Transporter</em> always moves towards the end of the <em>Track</em>/<em>TwoLaneTrack</em> into the direction with which you inserted it along the direction of motion of the material flow. When you insert a /<em>TwoLaneTrack</em> from left to right, the <b class="uiTerm">Front</b> of the <em>Transporter</em> is located on the right-hand side and moves towards the right. When you insert a<em>Track</em>/<em>TwoLaneTrack</em> from right to left, the <b class="uiTerm">Front</b> of the <em>Transporter</em> is located on the left-hand side and moves towards the left. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/ForderrichtungBugFzg.gif"></p>
+                     
+                     <p class="para_note_body">This also applies to <em>Transporters</em> which drive <b class="uiTerm">backwards</b> when you select the check box <a class="links" href="id18697.html">Backwards</a> of the <em>Transporter</em>! The <b class="uiTerm">Front</b> of the <em>Transporter</em> keeps on pointing towards the end of the <em>Track</em> into the direction with which you inserted it along the direction of motion of the material flow.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <ul>
+            <li>
+               
+               <p class="para_item">When a <em>Track</em>/<em>TwoLaneTrack</em> is connected with a <em>Conveyor</em> or a point-oriented object with a <em>Connector</em>, the train stops, when the front or the rear of the train reaches the <em>Track</em>/<em>TwoLaneTrack</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you select <b class="uiTerm">Entrance locked</b> or <b class="uiTerm">Exit locked</b> before the train has completely left the <em>Track</em>/<em>TwoLaneTrack</em>, the train can still pass its entrance or exit. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When a <em>tugger train</em> collides, the <b class="uiTerm">collision control</b> of the <em>tractor</em> will always be triggered. Within the <em>control method</em> the anonymous identifier @ is the <em>Transporter</em>, which actually collides, while the anonymous identifier ? designates the <em>tractor</em> of the train.
+               </p>
+               
+            </li>
+         </ul>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Failures_and_Pauses.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Failures and Pauses"></a><a class="link" href="id87822.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Transporter"></a></span></div>
+   </body>
+</html>

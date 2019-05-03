@@ -1,0 +1,130 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Model with the Library CrossSlidingCar</title>
+      
+      <meta name="MS-HKWD" content="Model with the Library CrossSlidingCar">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Model with the Library CrossSlidingCar</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id76730.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling a Transport System with Passive Objects of Type Track"></a><a class="link" href="id62449.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Simple Cross-sliding Car"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29644.html">Model with the Library CrossSlidingCar</a></span> &gt; <span class="simpleHTMLminitoc">Model with the Library CrossSlidingCar</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1020"></span><p class="para_topic">The cross-sliding car facilitates quick, easy and cost-effective cross transport if other materials handling equipment obstructs the way. It is mainly used for moving the conveyed parts from one conveyor onto another one. </p>
+         <p class="para_topic">We modeled the <a class="links" href="id98718.html">CrossSlidingCar</a> based on the <em>Track</em> is an application object to be able to fully use the <b class="uiTerm">curve</b> property of the <em>Track</em>. The <em>Transporter</em>, which transports the parts, is part of the <em>Cross Sliding Car</em> (CSC). It makes extensive use of the loading space of type <b class="uiTerm">Line</b>. It is an <b class="uiTerm">active length-oriented loading space</b> similar to a conveyor being part of the loading space, which transports the loaded parts forwards or backwards. We use <em>sensors</em> in the <em>cross-sliding car</em> to determine the position onto which the parts are placed on the loading space of the <em>cross-sliding car</em>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">We modeled the <em>cross-sliding car</em> in <em>Frames</em> and with the object <em>Dialog</em>. For this reason it do not use the Siemens PLM standard design, but the Windows design.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">When building your simulation model, we recommend to proceed as follows:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">First, insert the materials handling equipment into your model, such as the <em>Source</em> producing the parts, the <em>feeding conveyors</em>, the <em>cross-sliding car</em>, the <em>conveyors</em> for conveying the parts, and the <em>Drain</em> removing the parts from the factory.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Drag the <em>feeding belt</em> into the <em>cross-sliding car</em> and drop it there. It then creates the sensors on the <em>cross-sliding car</em>. To view the positions, click <b class="uiTerm">Track Attributes</b>
+    &gt; <b class="uiTerm">Open List of Attached Conveyors</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/qvwBranchLines.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Then, you have to make the <em>Source</em> produces parts that have the user-defined attribute <code>Destination</code>. This attribute of data type <em>string</em> contains the target object to which the part is to be transported, in our example the <em>Conveyor</em>
+                  <b class="uiTerm">AA</b>.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/qsvQuelleE.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/qvwQuelleE.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <p class="para_topic">These sample applications show some possible fields of application of the <em>cross-sliding car</em>. You can:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id62449.html">Model a Simple Cross-sliding Car</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id19895.html">Model a Cross-sliding Car that Distributes and Brings Together Parts</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id42460.html">Model a Cross-sliding Car with an Application-specific Strategy</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id21553.html">Create Sensors</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id76730.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling a Transport System with Passive Objects of Type Track"></a><a class="link" href="id62449.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Simple Cross-sliding Car"></a></span></div>
+   </body>
+</html>

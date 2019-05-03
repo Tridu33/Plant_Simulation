@@ -1,0 +1,188 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Branching with if-else-end</title>
+      
+      <meta name="MS-HKWD" content="Branching with if-else-end">
+      <meta name="MS-HKWD" content="if-else-end">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Branching with if-else-end</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Control_Flow_Statements_1.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Control Flow Statements"></a><a class="link" href="id28987.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Multiple Branching with if-elseif-end"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Control_Flow_Statements_1.html">Control Flow Statements</a></span> &gt; <span class="simpleHTMLminitoc">Branching with if-else-end</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13806"></span><span id="ndxgenid_PlantSimulationENU_13807"></span><p class="para_topic">The <code>if</code>-statement uses the given condition to decide where to continue: with the following statements or with the statements in the <a class="links" href="id81529.html">else</a> branch. Branching is terminated with the keyword <code>end</code>. <em>Plant Simulation</em> executes the <code>statement_list1</code> if the condition is true, otherwise it executes <code>statement_list2</code> after <code>else</code>. If you did not program the else branch because you do not need it, <em>Plant Simulation</em> continues the execution with the first statement after branching. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if condition 
+   statement_list1 
+[else
+   statement_list2]
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">A statement_list consists of assignments, method calls, loops or additional branches. There is no nesting limit.</p>
+         <p class="para_topic">Compare this example with an else branch:</p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- Is this delivery destined for us?
+if @.destination = current  -- yes, then unload
+   @.Cont.move(workstation)
+else                        -- if not, then move on
+    @.move(current.succ(1))
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Within the <code>condition</code>
+            <em>Plant Simulation</em> checks if the <em>Transporter</em> has reached its destination (<code>@.destination = current</code>). If the condition is <em>true</em> , the control transfers an <em>MU</em> to the workstation. If the condition is <em>false</em>, the transporter moves on.
+         </p>
+         <p class="para_topic">Compare this example without an else branch:</p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if @.NumMU &gt; 0 -- parts here? 
+   @.Cont.move(workstation)
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The <code>condition</code> of the branching returns <em>true</em>, when <em>MUs</em> are located on the <em>Transporter</em>. In this case one <em>MU</em> is going to be moved from the <em>Transporter</em> to the workstation. If the <em>Transporter</em> is empty, nothing happens. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><b class="uiTerm">Edit</b> ribbon tab of the <em>Method</em> &gt;
+   <b class="uiTerm">Select Template</b> &gt; <a class="links" href="id51853.html">if-else</a></p>
+         <p class="para_topic"><b class="uiTerm">Edit</b> ribbon tab of the <em>Method</em> &gt;
+   <b class="uiTerm">Select Template</b> &gt; <a class="links" href="id96043.html">if-else-end</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Control_Flow_Statements_1.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Control Flow Statements"></a><a class="link" href="id28987.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Multiple Branching with if-elseif-end"></a></span></div>
+   </body>
+</html>

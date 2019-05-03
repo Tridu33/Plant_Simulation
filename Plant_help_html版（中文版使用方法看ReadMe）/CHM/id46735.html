@@ -1,0 +1,230 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Material Flow Properties</title>
+      
+      <meta name="MS-HKWD" content="Material Flow Properties">
+      <meta name="MS-HKWD" content="Material Flow Properties,moving objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Material Flow Properties</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id47446.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Resource Statistics of Moving Resources"></a><a class="link" href="xid1181860.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Empty Time"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id23074.html">Statistics of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id37822.html">Statistics Report</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47446.html">Resource Statistics of Moving Resources</a></span> &gt; <span class="simpleHTMLminitoc">Material Flow Properties</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3942"></span><p class="para_topic">The topic material flow properties shows the following values, which are of interest:</p>
+         <table border="1" cellpadding="1" width="100%" align="center">
+            
+            <col span="1" width="25%">
+            
+            <col span="1" width="50%">
+            
+            <col span="1" width="25%">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">The column</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Shows the</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Read-only attribute</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Number of Entries</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">number of <em>MUs</em> that entered the object. When an <em>MU</em> enters the object, the object only counts the <em>MU</em> itself, not its contents: When a <em>Transporter/Container</em> transporting several parts enters the object, the number of entries increases by 1, not by the number of parts located on the <em>Transporter/Container</em>!
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id40354.html">StatNumIn</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Number of Exits</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">number of<em>MUs</em> that exited the object. The rules described under <b class="uiTerm">Number of Entries</b> apply.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id11215.html">StatNumOut</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm"> Minimum Contents</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">minimum number of<em>MUs</em> that was located on the object The rules described under <b class="uiTerm">Number of Entries</b> apply.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id28855.html">StatMinNumMU</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Maximum Contents</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">maximum number of<em>MUs</em> that was located on the object. The rules described under <b class="uiTerm">Number of Entries </b>apply.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id79058.html">StatMaxNumMUs</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Empty Time</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">portion of the statistics collection period during which the object was <a class="links" href="id43296.html">Empty</a>.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id34177.html">StatEmptyPortion</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Relative Occupation without Interruptions</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">the sum of all dwelling times of all<em>MUs</em> during the statistics collection period during which the object was not <em>paused</em> and not <em>failed</em>. This sum is then divided by the capacity and the entire statistics collection period without <em>pauses</em> and <em> failures</em>.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id23524.html">StatRelativeOccupation</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Relative Occupation with Interruptions</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">time during which the object was <em>occupied</em> and <em>paused</em> and <em>failed</em> divided by the capacity and the statistics collection period.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43108.html">StatRelativeOccupationIR</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id47446.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Resource Statistics of Moving Resources"></a><a class="link" href="xid1181860.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Empty Time"></a></span></div>
+   </body>
+</html>

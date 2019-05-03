@@ -1,0 +1,150 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>pred</title>
+      
+      <meta name="MS-HKWD" content="pred">
+      <meta name="MS-HKWD" content="pred,general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">pred</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id76450.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:NumSucc"></a><a class="link" href="id67010.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:predConnector"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18479.html">Methods of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id71830.html">Methods and Read-Only Attributes for the Location, Predecessor, and Successor of All Objects</a></span> &gt; <span class="simpleHTMLminitoc">pred</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4261"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.pred &rarr; object
+Path.pred([PredecessorNumber:integer]) &rarr; object</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>pred</em> returns the n-th predecessor of the object designated by Path. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The optional parameter <em>PredecessorNumber</em> of data type <em>integer</em> designates the number of the predecessor.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>object</em>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When the <em>n-th</em> predecessor of the object is an <em>Interface</em>, the <em>method</em> does not return the <em>Interface</em> itself, but the predecessor of the <em>Interface</em>. If this successor in turn is another <em>Interface</em>, <em>Plant Simulation</em> follows it until it reaches a material flow object, which can receive <em>MUs</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">When the <em>n-th</em> predecessor of the object is a <em>Frame</em>, <em>Plant Simulation</em> does not return the <em>Frame</em> itself, but the predecessor of the <em>Interface</em> inserted into this <em>Frame</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if model.pred(3).name = &quot;press&quot; \
+  ...
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id38033.html">Show Predecessors</a></p>
+         <p class="para_topic"><a class="links" href="id22791.html">pred</a> of the <em> TwoLaneTrack</em></p>
+         <p class="para_topic"><a class="links" href="id67010.html">predConnector</a></p>
+         <p class="para_topic"><a class="links" href="id49766.html">NumPred</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id76450.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:NumSucc"></a><a class="link" href="id67010.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:predConnector"></a></span></div>
+   </body>
+</html>

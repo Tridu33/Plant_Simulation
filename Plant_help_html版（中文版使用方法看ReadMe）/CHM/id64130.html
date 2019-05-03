@@ -1,0 +1,182 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Entering a Range of Cells</title>
+      
+      <meta name="MS-HKWD" content="Entering a Range of Cells">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Entering a Range of Cells</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id13475.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Entering the Identifier of a Cell"></a><a class="link" href="id20840.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:User-defined Index"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id49511.html">Accessing a Range of Cells with a Method</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70429.html">Ranges in Tables with Several Columns</a></span> &gt; <span class="simpleHTMLminitoc">Entering a Range of Cells</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10153"></span><p class="para_topic">The from-to statement consists of two cells located in two columns, separated by two periods. The first identifier designates the top left cell identified by the number of the column and the number of the row, the second the bottom right cell identified by the number of the column and the number of the row. When the second identifier is <code>{*,*}</code>, <em>Plant Simulation</em> processes the table up to the highest valid column index and row index.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">{2,2}..{3,3}
+{&quot;front&quot;,&quot;door&quot;}..{&quot;rear&quot;,&quot;door&quot;}
+{3,1}..{*,*}</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">To access</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Enter</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">The cells starting with column 1, row 2 to column 3, row 5</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>{1,2}..{3,5}</code></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">All rows in columns 1 to 4</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>{1,*}..{4,*}</code></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">All columns in row 3 starting with column 2</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>{2,3}..{*,3}</code></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">All columns starting with column 2, row 3 to the highest valid cell</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>{2,3}..{*,*}</code></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">All columns up to column 3 and all rows until row 5</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>{*,*}..{3,5}</code></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id13475.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Entering the Identifier of a Cell"></a><a class="link" href="id20840.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:User-defined Index"></a></span></div>
+   </body>
+</html>

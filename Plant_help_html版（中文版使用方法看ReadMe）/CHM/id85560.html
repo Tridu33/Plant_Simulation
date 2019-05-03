@@ -1,0 +1,133 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Interval</title>
+      
+      <meta name="MS-HKWD" content="Interval">
+      <meta name="MS-HKWD" content="Interval,Source attribute">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Interval</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1192648.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:GenerateAsBatch"></a><a class="link" href="id53588.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:MuSelection"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id65865.html">Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53319.html">Attributes of the Source</a></span> &gt; <span class="simpleHTMLminitoc">Interval</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7088"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.Interval</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>Interval</em> sets the time between the creation events. The attribute <a class="links" href="id63406.html">Start</a> sets the simulation time at which the <em>Source</em> starts producing <em>MUs</em>, when you set the <a class="links" href="id88975.html">TimeOfGeneration</a> to <a class="links" href="id19075.html">Interval adjustable</a>.
+         </p>
+         <p class="para_topic">The attribute <a class="links" href="id57833.html">Stop</a> sets the simulation time at which the <em>Source</em> stops producing <em>MUs</em>. A <em>Stop</em> time of zero indicates that the <em>Source</em> will keep producing <em>MUs</em> infinitely.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>time</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MySource.MuSelection := &quot;Interval adjustable&quot;
+MySource.Start := 3600
+MySource.Stop := str_to_time(&quot;1:00:00:00.00&quot;)
+MySource.Interval.setParam(&quot;Normal&quot;,1,500,100,200,900)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id40100.html">Interval</a></p>
+         <p class="para_topic"><a class="links" href="id63406.html">Start</a></p>
+         <p class="para_topic"><a class="links" href="id57833.html">Stop</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1192648.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:GenerateAsBatch"></a><a class="link" href="id53588.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:MuSelection"></a></span></div>
+   </body>
+</html>

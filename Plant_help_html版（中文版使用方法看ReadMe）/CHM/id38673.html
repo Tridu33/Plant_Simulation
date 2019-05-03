@@ -1,0 +1,158 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>importExporter</title>
+      
+      <meta name="MS-HKWD" content="importExporter">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">importExporter</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id25816.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:import"></a><a class="link" href="id20824.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:releaseExporters"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48315.html">Methods of the Importer</a></span> &gt; <span class="simpleHTMLminitoc">importExporter</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4560"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.imp.importExporter(Worker:object/&lt;Workers:array[, MU:object]) &rarr; boolean
+Path.failImp.importExporter(Worker:object/&lt;Workers:array[, MU:object]) &rarr; boolean
+Path.setupImp.importExporter(Worker:object/&lt;Workers:array[, MU:object]) &rarr; boolean
+Path.transportImp.importExporter(Worker:object/&lt;Workers:array[, MU:object]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> You can use the method <em> importExporter</em> in the <a class="links" href="id70494.html"> Request control</a> of the <em> importer</em>. It returns if the <em> Workers/Exporters</em> were successfully brokered (true) or not (false). 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> The <em> Broker</em> does not save a failed mediation. You thus have to check beforehand if the <em> Workers</em> can be brokered and you yourself have to start another attempt to broker the <em> Workers</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> The parameter <em> Worker</em> of data type <em> object</em> designates a specific <em> Worker/Exporter</em>. 
+               </p>
+               
+               <p class="para_item"> The parameter <em> Workers</em> of data type <em> array</em> designates several <em> Workers/Exporters</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em> MU</em> of data type <em> object</em> designates the <em> MU</em> for which the <em> Worker/Exporter</em> was requested. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic"> The return value has the data type <em> boolean</em>. It returns if the <em> Workers/Exporters</em> were successfully brokered or not.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.failImp.importExporter(MyWorker:1)
+ParallelStation.imp.importExporter([MyWorker:1, MyWorker:2])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id25816.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:import"></a><a class="link" href="id20824.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:releaseExporters"></a></span></div>
+   </body>
+</html>

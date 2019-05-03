@@ -1,0 +1,165 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ReleaseCtrl</title>
+      
+      <meta name="MS-HKWD" content="ReleaseCtrl">
+      <meta name="MS-HKWD" content="ReleaseCtrl,Worker">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">ReleaseCtrl</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id50320.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Priority"></a><a class="link" href="id45479.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Shift"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67192.html">Worker</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18387.html">Attributes of the Worker</a></span> &gt; <span class="simpleHTMLminitoc">ReleaseCtrl</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8844"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.ReleaseCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>ReleaseCtrl</em> designates a <em>Method</em> object, the <a class="links" href="id19244.html">Release control</a>, which the <em>Worker</em> calls as soon as an <em>importer</em> releases it. 
+         </p>
+         <p class="para_topic">The <a class="links" href="id34346a.html">request control</a>, the <a class="links" href="id49298a.html">receive control</a>, and the <b class="uiTerm">release control</b> are not called when you <a class="links" href="id16826.html">reset the simulation</a>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <p class="para_topic">Each <em>Method</em> you enter here is defined by two parameters that characterize the <em>importer</em>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Importer</em> of data type <em>object</em> designates the <em>importer</em> proper. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Type</em> of data type <em>integer</em> designates its type: <code>0</code> designates the <em>failure/remove failure-importer</em>, <code>1</code> the <em>set-up-importer</em>, <code>2</code> the <em>processing-importer</em>, and <code>3</code> the <em>transport-importer</em>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The <em>Method</em> will be formatted automatically.
+         </p>
+         <p class="para_topic">Enter the source code of the release control , which defines how the <em>Worker</em> releases an order. The <em>Worker</em> calls the control as soon as an <em>importer</em> releases the <em>Worker</em>. When the control is called, the <em>Worker</em> has already left its <em>importer</em>. When you did enter a <em>Method</em>, the <em>Worker</em> will not be mediated for already waiting <em>importers</em>. If you would like to broker the <em>Worker</em> to already waiting <em>importers</em> nonetheless, you have to employ the <em>method</em>
+            <a class="links" href="id42462.html">findNewImporter</a>. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em> calls the <a class="links" href="id19244.html">Release control</a>, which you entered into the <em>Worker</em> for the <em>transport-importer</em>, when the <em>Worker</em> starts to carry parts away. This is then the case, when either the <a class="links" href="id69751.html">Maximum dwell time</a> has passed or when the <em>Worker</em> cannot pick up any more parts because his Capacity is used up.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Reformatting the Method:</b> When you manually enter an order control and click <b class="uiTerm">Apply</b> or <b class="uiTerm">OK</b>, <em>Plant Simulation</em> automatically checks if the <em>Method</em> expects the correct parameters. If this is not the case, <em>Plant Simulation</em> shows a message asking if the <em>Method</em> shall be reformatted or not. Empty methods are reformatted automatically. Note that you cannot suppress the checking of the format of the <em>Method</em>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>method</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.Resources.MyWorker:2.ReleaseCtrl := &amp;myWorkerReleaseCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id19244.html">Release control</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id50320.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Priority"></a><a class="link" href="id45479.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Shift"></a></span></div>
+   </body>
+</html>

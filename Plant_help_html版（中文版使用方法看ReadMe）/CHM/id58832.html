@@ -1,0 +1,195 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>checkForLicense</title>
+      
+      <meta name="MS-HKWD" content="checkForLicense">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">checkForLicense</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id61950.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:callEvery"></a><a class="link" href="id17098.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:checkID"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Predefined_Functions_1.html">Predefined Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id86615.html">Miscellaneous Global Functions</a></span> &gt; <span class="simpleHTMLminitoc">checkForLicense</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14076"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">checkForLicense(Feature:string, Version:string, PasswordHash:string) &rarr; integer</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The function <em>checkForLicense</em> checks if a user-defined license is available or not.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Feature</em> of data type <em>string</em> designates the name of the license feature.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Version</em> of data type <em>string</em> designates the requested version number of the license.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>PasswordHash</em> of data type <em>string</em> designates the SHA-1-Hash of the password of the license.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>integer</em>.
+         </p>
+         <p class="para_topic">The individual values have this meaning:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">0: The license feature is registered and valid.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">1: The license feature is not registered.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">2: The file has an invalid registry data format.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">3: The SHA-1-Hash is wrong.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">4: The Host-ID is wrong.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">5: The registered version of the feature is too old.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">6: The license has expired.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">7: The feature does not permit the use with the license type of Plant Simulation (Professional / Standard / Runtime /...).</p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if checkForLicense(&quot;MyFeature&quot;, &quot;1&quot;, &quot;686483805ac47ca14e03514f7481a7973b401762&quot;) = 0 
+-- The license is available, you can proceed ...
+else
+closeModel
+messageBox(&quot;The license 'MyFeature' is unavailable. The model was closed.\n&quot;, 1, 1)
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id40194.html">createLicenseFile</a></p>
+         <p class="para_topic"><a class="links" href="id19779.html">setRequiredLicense</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id61950.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:callEvery"></a><a class="link" href="id17098.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:checkID"></a></span></div>
+   </body>
+</html>

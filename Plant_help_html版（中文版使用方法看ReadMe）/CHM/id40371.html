@@ -1,0 +1,71 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Availability</title>
+      
+      <meta name="MS-HKWD" content="Availability">
+      <meta name="MS-HKWD" content="Availability,failure">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Availability</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id57503.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Duration"></a><a class="link" href="id45006.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Availability"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14973.html">Tab Failures</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id80954.html">New</a></span> &gt; <span class="simpleHTMLminitoc">Availability</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3456"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/availabilityCheckbox.gif" border="0"></p>
+         <p class="para_topic">To activate the text boxes <a class="links" href="id45006.html">Availability</a> and <a class="links" href="id64296.html">MTTR</a>, select this. Then, enter the availability and the mean time to repair of the station instead of the <a class="links" href="id57503.html">Duration</a> and the <a class="links" href="id34057.html">Interval</a> of the failure. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/tabFailures1.gif"></p>
+         <p class="para_topic">Using <b class="uiTerm">Availability</b> in percent and <b class="uiTerm">MTTR</b> is just another kind of displaying the values for the <b class="uiTerm">Duration</b> and the <b class="uiTerm">Interval</b> of a failure. When you enter values for <b class="uiTerm">Availability</b> and <b class="uiTerm">MTTR</b> and click <b class="uiTerm">Apply</b>, <em>Plant Simulation</em> computes the values for the <b class="uiTerm">Duration</b> and the <b class="uiTerm">Interval</b> and enters them into the text boxes. It also selects the <b class="uiTerm">Erlang</b>-distribution for the <b class="uiTerm">Duration</b> and the <b class="uiTerm">NegExp</b>-distribution for the <b class="uiTerm">Interval</b>, <em>Plant Simulation</em> shows them in the dialog, when you clear the check box <b class="uiTerm">Availability</b>. 
+         </p>
+         <p class="para_topic">An availability of 100 percent has an MTTR of 0, as the machine is available and does not have to be repaired. <em>Plant Simulation</em> uses the values in that view of the dialog where you clicked <b class="uiTerm">Apply</b>. The object only inherits the values for the <b class="uiTerm">Availability</b> (%) and the <b class="uiTerm">MTTR</b>, when it also inherits the <b class="uiTerm">Availability</b> as such from the parent dialog, i.e., when the inheritance button next to the check box looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/toggleSelected.gif" border="0">!
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you set an availability of 100 percent, meaning that the station will never fail, and subsequently change the availability to a more realistic value, say 50 percent, <em>Plant Simulation</em> will not apply this new setting unless you clear the check box <b class="uiTerm">Active</b>, click <b class="uiTerm">Apply</b>, and then select <b class="uiTerm">Active</b> again. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you change failure settings, we recommend to first clear the check box <b class="uiTerm">Active</b> and to then click <b class="uiTerm">Apply</b>. Then, change your settings, apply them, and select the check box <b class="uiTerm">Active</b> again. This ensures that the next <b class="uiTerm">failure event</b> (<a class="links" href="id60343.html#id80865">DisruptionBegin</a>/<a class="links" href="id60343.html#id65221">DisruptionEnd</a>) will be calculated with a complete valid set of parameters.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic">Failures.NameOfFailureProfile.<a class="links" href="id43997.html">AvailabilityOn</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id57503.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Duration"></a><a class="link" href="id45006.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Availability"></a></span></div>
+   </body>
+</html>

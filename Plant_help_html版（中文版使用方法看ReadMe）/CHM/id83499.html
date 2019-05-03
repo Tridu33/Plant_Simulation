@@ -1,0 +1,192 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Rotation Time</title>
+      
+      <meta name="MS-HKWD" content="Rotation Time">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Rotation Time</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id15441.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Empty Time"></a><a class="link" href="id27357.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Moving Time"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id23074.html">Statistics of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id37822.html">Statistics Report</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id71915.html">Resource Statistics of Stationary Resources</a></span> &gt; <span class="simpleHTMLminitoc">Rotation Time</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3933"></span><p class="para_topic">This topic provides details about the <b class="uiTerm">rotation time</b> of the <a class="links" href="id61965.html">PickAndPlace Robot</a>, the <a class="links" href="id46256.html">Turnplate</a>, and the <a class="links" href="id63264.html">Turntable</a>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/rotationTimes.gif"></p>
+         <table border="1" cellpadding="1" width="100%" align="center">
+            
+            <col span="1" width="25%">
+            
+            <col span="1" width="50%">
+            
+            <col span="1" width="25%">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">The column</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Shows</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Read-only attribute</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Rotation empty portion</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">the portion of the statistics collection period during which the <em>Turntable</em> was rotating and no part was located on the table (<a class="links" href="id43296.html">Empty</a>)
+                     </p>
+                     
+                     <p class="para_td_last">the portion of the statistics collection period during which the <em>pick-and-place robot</em> was rotating without moving a part
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"><a class="links" href="id38769.html">StatRotationEmptyPortion</a></p>
+                     
+                     <p class="para_td_last"><a class="links" href="id95101.html">StatRotationEmptyPortion</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Rotation empty sum</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">the total time during which the <em>Turntable</em> was rotating and no part was located on the table
+                     </p>
+                     
+                     <p class="para_td_last">the total time during which the <em>pick-and-place robot</em> was rotating without moving a part
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"><a class="links" href="id39721.html">StatRotationEmptyTime</a></p>
+                     
+                     <p class="para_td_last"><a class="links" href="id91382.html">StatRotationEmptyTime</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Rotation loaded portion</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">the portion of the statistics collection period during which the <em>Turnplate</em> was rotating and a part was located on the plate
+                     </p>
+                     
+                     <p class="para_td">the portion of the statistics collection period during which the <em>Turntable</em> was rotating and a part was located on the table
+                     </p>
+                     
+                     <p class="para_td_last">the portion of the statistics collection period during which the <em>pick-and-place robot</em> was rotating while moving a part
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"><a class="links" href="id51140.html">StatRotationLoadedPortion</a></p>
+                     
+                     <p class="para_td"><a class="links" href="id41155.html">StatRotationLoadedPortion</a></p>
+                     
+                     <p class="para_td_last"><a class="links" href="id76262.html">StatRotationLoadedPortion</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Rotation loaded sum</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">the total time during which the <em>Turnplate</em> was rotating and a part was located on the plate
+                     </p>
+                     
+                     <p class="para_td">the total time during which the <em>Turntable</em> was rotating and a part was located on the table
+                     </p>
+                     
+                     <p class="para_td_last">the total time during which the <em>pick-and-place robot</em> was rotating while moving a part
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"><a class="links" href="id39853.html">StatRotationLoadedTime</a></p>
+                     
+                     <p class="para_td"><a class="links" href="id61168.html">StatRotationLoadedTime</a></p>
+                     
+                     <p class="para_td_last"><a class="links" href="id52450.html">StatRotationLoadedTime</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id15441.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Empty Time"></a><a class="link" href="id27357.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Moving Time"></a></span></div>
+   </body>
+</html>

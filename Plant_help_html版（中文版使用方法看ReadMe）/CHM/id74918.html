@@ -1,0 +1,544 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Entering Start Options</title>
+      
+      <meta name="MS-HKWD" content="Entering Start Options">
+      <meta name="MS-HKWD" content="Start Options">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">Entering Start Options</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Starting_Plant_Simulation.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Starting Plant Simulation"></a><a class="link" href="id63159.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Setting Default Values in the Windows Registry"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id39091.html">Setting-Up and Starting</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Starting_Plant_Simulation.html">Starting Plant Simulation</a></span> &gt; <span class="simpleHTMLminitoc">Entering Start Options</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_214"></span><span id="ndxgenid_PlantSimulationENU_215"></span><p class="para_topic">Proceed as follows to enter arguments, which <em>Plant Simulation</em> uses when you start it:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Create a shortcut for <em>Plant Simulation</em> on the desktop <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/shortcutIconSm.gif" border="0">.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open the dialog <b class="uiTerm">Properties</b> of the shortcut. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Setting-Up_and_Starting/startOptionsEnglish.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Setting-Up_and_Starting/startOptionsGerman.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Extend the path to <em>Plant Simulation</em> in the text box <b class="uiTerm">Target</b> with one or several of these start options. 
+               </p>
+               
+               <table border="1" cellpadding="10" width="100%" align="center">
+                  
+                  <tbody>
+                     
+                     <tr align="left">
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">To do this </p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">Enter </p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Automatically save the model every <code>t</code> minutes.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td"><code>/a &lt;t&gt;</code>, for example <code>/a 10</code></p>
+                           
+                           <p class="para_td_last"><em>Plant Simulation</em> adds - AutoSave to the name of the simulation model
+                           </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Set the affinity mask which defines on which CPU cores <em>Plant Simulation</em> is allowed to run. The affinity mask is a number in which each bit represents a core on which the threads of the <em>Plant Simulation</em> process are allowed to run.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/CPU mask</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Set the current working directory.</p>
+                           
+                           <p class="para_td_last">Compare <a class="links" href="id36186.html">getCurrentDirectory</a> and <a class="links" href="id29566.html">setCurrentDirectory</a>.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/cwd dir</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Execute the source code of the text file named <code>file</code>.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/e file</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Start <em>Plant Simulation</em> and open the file named <code>model file</code>.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/f model file</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Start <em>Plant Simulation</em>, open the file <code>model file</code>, and start the simulation in the <em>Frame</em> designated by <code>Frame</code>.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/f model &lt;file /m Frame&gt;</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Hide <em>Plant Simulation</em> after starting it, i.e., minimize it into the system tray.
+                           </p>
+                           
+                           <p class="para_td_last">Compare <a class="links" href="id50938.html">hideBBL</a>.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/hideBBL</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Start <em>Plant Simulation</em> with the license name which you enter. The name of the license is case insensitive, the default is PROFESSIONAL.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/L PROFESSIONAL</code>, or <code>SIMULATION</code>, <code>APPLICATION</code>, <code>STANDARD</code>, <code>RUNTIME</code>, <code>STUDENT</code>, <code>RESEARCH</code>, <code>EDUCATIONAL</code>, <code>VIEWER</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Write all messages which are output to the <em>Console</em> to the file designated by <code>file name</code> into the folder into which you installed the program.
+                           </p>
+                           
+                           <p class="para_td_last">Compare <a class="links" href="id98141.html">clearLogFile</a> and <a class="links" href="id49923.html">getLogFile</a>.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/logfile file name</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Use the previous, no longer supported Excel interface for reading and writing files using the xls-format. This allows you to use the Excel interface without Excel having to be installed on your computer.</p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/NativeExcel</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Prevent <em>Plant Simulation</em> from creating a backup file ( *.bak) when saving the model.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/NoBakFile</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Prevent <em>Plant Simulation</em> from opening any message boxes. If the message box shows a question with <b class="uiTerm">Yes</b> and <b class="uiTerm">No</b> buttons, the question will be answered with <b class="uiTerm">No</b>. This is especially useful when you execute batch runs, as it prevents them from stopping, when a message box opens. 
+                           </p>
+                           
+                           <p class="para_td_last">When a runtime error occurs in a <em>Method</em> and when this error is not caught by an ErrorHandler, <em>Plant Simulation</em> normally opens the <em>Method debugger</em>. If you set the start option <b class="uiTerm">/NoMessageBox</b>, <em>Plant Simulation</em> opens a message box instead telling you that it will automatically terminate in 5 seconds if you do not click <b class="uiTerm">OK</b> in the message box window. 
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/NoMessageBox</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Prevent <em>Plant Simulation</em> from writing any of the info and debug messages, such as warnings, to the <em>Console</em>. 
+                           </p>
+                           
+                           <p class="para_td_last">Compare setConsoleFilter.</p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/NoWarning</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Register the file extension .spp in the <em>Registry</em>.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/RegisterFileExtension</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Start <em>Plant Simulation</em>with the user interface language <b class="uiTerm">English</b>, <b class="uiTerm">German</b>, <b class="uiTerm">Japanese</b>, <b class="uiTerm">Chinese</b>, <b class="uiTerm">Russian</b>, or <b class="uiTerm">Hungarian</b>.
+                           </p>
+                           
+                           <p class="para_td_last">Compare <a class="links" href="id68471.html">userInterfaceLanguage</a>.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td"><code>/UILanguage:ENU</code></p>
+                           
+                           <p class="para_td"><code>/UILanguage:DEU</code></p>
+                           
+                           <p class="para_td"><code>/UILanguage:JPN</code></p>
+                           
+                           <p class="para_td"><code>/UILanguage:CHS</code></p>
+                           
+                           <p class="para_td"><code>/UILanguage:RUS</code></p>
+                           
+                           <p class="para_td_last"><code>/UILanguage:HUN</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Set the code page for correctly displaying the contents of tables in models that were created in foreign languages on a computer with an English or a German operating system. The code pages are: Japanese: <code>932</code>, Chinese: <code>936</code>, Hungarian: <code>1250</code>, Russian: <code>1251</code>, English or German: <code>1252</code>.
+                           </p>
+                           
+                           <p class="para_td_last">Compare <a class="links" href="id96731.html">setCodePage</a>.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td"><code>/Codepage:932</code></p>
+                           
+                           <p class="para_td"><code>/Codepage:936</code></p>
+                           
+                           <p class="para_td"><code>/Codepage:1250</code></p>
+                           
+                           <p class="para_td"><code>/Codepage:1251</code></p>
+                           
+                           <p class="para_td_last"><code>/Codepage:1252</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Start <em>Plant Simulation</em>, load the model designated by <code>file_1</code>, and compare it with the model designated by <code>file_2</code>. As a rule this only makes sense for automated use in source code version control tools.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/compare &lt;file_2 file_1&gt;</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Start the internal Web server</p>
+                           
+                           <p class="para_td_last">Start the internal Web server with the specified port number</p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td"><code>/WebServer</code></p>
+                           
+                           <p class="para_td_last"><code>/WebServer:Port number</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Treat models, which you receive from others as if they were your own models, i.e., models with your trust ID. When you open a model that your received from somebody else, for which the <b class="uiTerm">Model setting </b>&gt; <a class="links" href="xid1399379.html">Prohibit access to the computer</a> is deactivated, <em>Plant Simulation</em> does not notify you about this.
+                           </p>
+                           
+                           <p class="para_td_last">Models, which were saved with a version older than 14, do not receive a trust ID and thus are always considered to be models from other people. Normally access to the computer is denied when loading an old model into version 14. If you entered the start option <code>/TrustModels</code>, the old model automatically has access to the computer.
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/TrustModels</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Execute the method of the model loaded with /f specified by &lt;path&gt; </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>/E &lt;path&gt;</code></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Instead of a  <code>/</code> ( forward slash) you can also type in a <code>-</code> (minus). You can, for example, type <code>/f MyAssemblyModel.spp</code> or <code>-f MyAssemblyModel.spp</code>, both execute the same command.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">You can also pass any other command-line arguments which you can then query with the function <a class="links" href="id80397.html">getCommandConveyorArg</a>. <em>Plant Simulation</em> itself will ignore them.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The start options are case-sensitive.</p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p class="para_item">You might, for example, enter:</p>
+               <pre class="indent">&quot;C:\Program Files\Siemens\Tecnomatix Plant Simulation 14.1\PlantSimulation14_1.exe&quot; /UILanguage:ENU /f MyAssemblyModel.spp</pre>
+               <p class="para_item">into the text box <b class="uiTerm">Target</b>of a shortcut. 
+               </p>
+               
+               <p class="para_item">Or you might enter the information from the screenshots below to start <em>Plant Simulation</em> with an <b class="uiTerm">English</b> or with a <b class="uiTerm">German</b> user interface.
+               </p>
+               
+            </li>
+         </ul>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Starting_Plant_Simulation.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Starting Plant Simulation"></a><a class="link" href="id63159.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Setting Default Values in the Windows Registry"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>shGetFolderPath</title>
+      
+      <meta name="MS-HKWD" content="shGetFolderPath">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">shGetFolderPath</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id54701.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setEnv"></a><a class="link" href="id66674.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:sleep"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Predefined_Functions_1.html">Predefined Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67899.html">Operating System Functions</a></span> &gt; <span class="simpleHTMLminitoc">shGetFolderPath</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13902"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">shGetFolderPath(Path:integer) &rarr; string</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The function <em>shGetFolderPath</em> returns the path of a folder.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The parameter <em>Path</em> of data type <em>integer</em> designates the path.
+         </p>
+         <p class="para_topic">You can use this function if you need the temporary path of a user or if you need a path which all users can access.</p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Different versions of Microsoft Windows return different folder names and folder paths.</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>string</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">/*
+return values of the function shgetfolderpath for Windows 7
+0  C:\Users\MyLoginName\Desktop
+2  C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
+5  C:\Users\MyLoginName\Documents
+6  C:\Users\MyLoginName\Favorites
+7  C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+8  C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\Recent
+9  C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\SendTo
+11 C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\Start Menu
+13 C:\Users\MyLoginName\Music
+14 C:\Users\MyLoginName\Videos
+19 C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\Network Shortcuts
+20 C:\Windows\Fonts
+21 C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\Templates
+22 C:\ProgramData\Microsoft\Windows\Start Menu
+23 C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+24 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
+25 C:\Users\Public\Desktop
+26 C:\Users\MyLoginName\AppData\Roaming
+27 C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\Printer Shortcuts
+28 C:\Users\MyLoginName\AppData\Local
+32 C:\Users\MyLoginName\AppData\Local\Microsoft\Windows\Temporary Internet Files
+33 C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\Cookies
+34 C:\Users\MyLoginName\AppData\Local\Microsoft\Windows\History
+35 C:\ProgramData
+36 C:\Windows
+37 C:\Windows\system32
+38 C:\Program Files (x86)
+39 C:\Users\MyLoginName\Pictures
+40 C:\Users\MyLoginName
+41 C:\Windows\SysWOW64
+43 C:\Program Files (x86)\Common Files
+45 C:\ProgramData\Microsoft\Windows\Templates
+46 C:\Users\Public\Documents
+47 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+48 C:\Users\MyLoginName\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+53 C:\Users\Public\Music
+54 C:\Users\Public\Pictures
+55 C:\Users\Public\Videos
+56 C:\Windows\resources
+59 C:\Users\MyLoginName\AppData\Local\Microsoft\Windows\Burn\Burn
+*/
+
+var k: integer, s: string
+TableFile.delete
+TableFile.setDataType(1,&quot;integer&quot;)
+for var j := 0 to 1024 
+   s := shgetfolderpath(j)
+   if strLen(s)&gt;1 
+   TableFile.setCursor(2,1)
+   if not TableFile.find({2,1}..{2,*},s) 
+   k += 1
+   TableFile.writeRow(1,k, j,s)
+   end
+end
+next</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id54701.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setEnv"></a><a class="link" href="id66674.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:sleep"></a></span></div>
+   </body>
+</html>

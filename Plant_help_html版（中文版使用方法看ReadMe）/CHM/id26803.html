@@ -1,0 +1,56 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Program the Exit Control</title>
+      
+      <meta name="MS-HKWD" content="Program the Exit Control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Program the Exit Control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id40768.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Produce the Parts with a Source Using a Sequence Table"></a><a class="link" href="id21972.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Removing Parts from the Installation with the Drain"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id49128.html">Producing and Processing Parts with a Work Plan</a></span> &gt; <span class="simpleHTMLminitoc">Program the Exit Control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_533"></span><p class="para_topic">As we want all stations and the <em>Source</em> to be able to access the source code for finding the next station in the sequence of operations after each processing step and for moving the part on to this station, we program an <b class="uiTerm">exit control</b>.
+         </p>
+         <p class="para_topic">If just the stations were going to use this control, we could have programmed it in a user-defined attribute of data type <em>method</em> of the class of the station.
+         </p>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">-- This is the exit control for all stations and for the source.
+-- This control can be called several times until the move command is successful.
+
+var WorkPlan := root.MyWorkPlan[&quot;Operations&quot;,@.PartType]
+if @.PositionInWorkPlan = WorkPlan.ydim
+   @.Move(root.Shipping) -- end of production
+else
+   var NextStation := WorkPlan[&quot;Operation&quot;, @.PositionInWorkPlan + 1]
+   if @.Move(NextStation)
+      @.PositionInWorkPlan := @.PositionInWorkPlan + 1
+   end
+end</pre><p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplanExitcontrol.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id81873.html">Create the Work Plan</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id40768.html">Produce the Parts with a Source Using a Sequence Table</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id45128.html">Create the Processing Stations</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id49128.html">Producing and Processing Parts with a Work Plan</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id40768.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Produce the Parts with a Source Using a Sequence Table"></a><a class="link" href="id21972.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Removing Parts from the Installation with the Drain"></a></span></div>
+   </body>
+</html>

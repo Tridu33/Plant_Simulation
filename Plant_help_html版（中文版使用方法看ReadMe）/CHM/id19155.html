@@ -1,0 +1,49 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Discrete Empirical (dEmp)</title>
+      
+      <meta name="MS-HKWD" content="Discrete Empirical (dEmp)">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Discrete Empirical (dEmp)</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id41967.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Primitive Empirical (Emp)"></a><a class="link" href="id57385.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Continuous Empirical (cEmp)"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64129.html">Times and Distributions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id65040.html">Empirical Distributions</a></span> &gt; <span class="simpleHTMLminitoc">Discrete Empirical (dEmp)</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4057"></span><p class="para_topic"> If the random numbers are real or integer numbers, you need to use a table with two columns. Column 1 contains the <b class="uiTerm">Time</b>, column 2 contains the respective <b class="uiTerm">Frequency</b>. You can enter values of data type <em> time</em> and of data type <em> real</em>.
+         </p>
+         <p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/dEmpDistDrop.gif" border="0"></p>
+         <p class="para_topic"> The relative frequency will be used as an empirical estimate for the probability of the respective value to appear. </p>
+         <p class="para_topic"> Clicking <b class="uiTerm">Apply</b> in the dialog of the object automatically formats the table so that the data types of the columns match the parameters.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/dEmpDistribution.gif"></p>
+         <p class="para_topic"> You can also create the <em>discrete empirical distribution</em> with this <em>SimTalk</em> function:
+         </p><pre class="indent">z_dEmp(Stream:integer,Table:table)</pre><p class="para_topic">The parameter <b class="uiTerm">Stream</b> (<em>integer</em>) designates the random number stream. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The parameter <code>Table</code> designates the frequency table.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id26000.html">Attributes of the Distributions</a></p>
+         <p class="para_topic"><a class="links" href="id29080.html">Methods of the Distributions</a></p>
+         <p class="para_topic"><a class="links" href="id31886.html">Distribution Functions</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id41967.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Primitive Empirical (Emp)"></a><a class="link" href="id57385.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Continuous Empirical (cEmp)"></a></span></div>
+   </body>
+</html>

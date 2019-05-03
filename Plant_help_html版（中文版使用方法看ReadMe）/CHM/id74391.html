@@ -1,0 +1,105 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>MU distance</title>
+      
+      <meta name="MS-HKWD" content="MU distance">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">MU distance</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id86568.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:MU distance type"></a><a class="link" href="id53626.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Automatic stop"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id60466.html">Conveyor</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57769.html">Dialog Window of the Conveyor</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id23757.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc">MU distance</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5583"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/mudistanceType.gif" border="0"></p>
+         <p class="para_topic">Select the <a class="links" href="id86568.html">MU distance type</a> and then enter the desired distance of the current part to the preceding part which the <em>Conveyor</em> enforces, when the next part enters. Depending on the setting for the <b class="uiTerm">MU distance type</b> the <b class="uiTerm">MU distance</b> determines for:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/mudistanceTypeListOpen.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Gap</b> the distance between the rear of the preceding part and the front of the succeeding part. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/gapOnline.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Pitch</b> the distance between the front of the preceding part and the front of the succeeding part. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/pitchOnline.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When no further parts arrive, the <em>Conveyor</em> stops once the distance has been reached. As soon as the next part arrives, it starts to transport parts again.
+         </p>
+         <p class="para_topic">The default value <b class="uiTerm">-1</b> means that the <em>Conveyor</em> does not use the <b class="uiTerm">MU distance</b> and parts can enter at any time as the predecessor provides them.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When the preceding <em>Conveyor</em> transports parts faster/slower than the conveyor, which uses a <b class="uiTerm">MU distance</b>, the distance itself can become greater/smaller. This is because the entering part moves with a higher/slower speed until its booking point is located on the conveyor using an <em>MU</em> distance.
+                     </p>
+                     
+                     <p class="para_note_body">When the succeeding <em>Conveyor</em> transports parts faster/slower than the conveyor, which uses a <b class="uiTerm">MU distance</b>, the distance itself can become greater/smaller. This is because the booking point of the leaving part is located on the succeeding conveyor, which transports parts with a higher/slower speed.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em> only runs the distance check when a part enters. If you selected <a class="links" href="id10965.html">Accumulating</a> for example the distance can be undercut the parts accumulate.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> The <em>Conveyor</em> only uses the <b class="uiTerm">MU distance</b> when it transports parts in the forward direction.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">
+            <b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id96038.html">MUDistance</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id70543.html">Model a Fixed Gap or a No Gap Conveyor</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id86568.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:MU distance type"></a><a class="link" href="id53626.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Automatic stop"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Failed</title>
+      
+      <meta name="MS-HKWD" content="Failed">
+      <meta name="MS-HKWD" content="Failed,material flow objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Failed</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id35763.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ExitLocked"></a><a class="link" href="id95361.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Pause"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id80690.html">Attributes for the State of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">Failed</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4866"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.Failed</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The attribute <em>Failed</em> sets if the object designated by Path is failed (<code>true</code>) or not (<code>false</code>).
+         </p>
+         <p class="para_topic"> You can also fail the object or remove the failure with the check box <a class="links" href="id34032.html">Failed</a>.
+         </p>
+         <p class="para_topic"> When you manually fail a station, it remains failed while any of the <em>failure profiles</em> you defined is active. It will change to not failed once the last failure (<a class="links" href="id60343.html#id65221">DisruptionEnd</a>) of the last <em>failure profile</em> ends or when you assign <code>false</code> to this attribute.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic"> You can assign a value of data type <em>boolean</em>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> During the <em>reset</em> phase of the simulation <em>Plant Simulation</em> resets all failures. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if MyStation.Failed 
+   MyStation.Failed := false
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When you set the failed state of a material flow object with the attribute <em>Failed</em>, and you would like to import a <b class="uiTerm">Service</b> for removing the failure, you have to use the method <em>name of station.failImp.</em><a class="links" href="id25816.html">import</a>. 
+                     </p>
+                     
+                     <p class="para_note_body"> When you requested the service for removing the failure with the method <em>name of station.failImp.import</em>, you have to release the imported service, after the failure has been removed, with the method <em>name of station.failImp.</em><a class="links" href="id20824.html">releaseExporters</a>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id35763.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ExitLocked"></a><a class="link" href="id95361.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Pause"></a></span></div>
+   </body>
+</html>

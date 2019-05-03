@@ -1,0 +1,239 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Dialog Window of the Event Debugger</title>
+      
+      <meta name="MS-HKWD" content="Dialog Window of the Event Debugger">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Dialog Window of the Event Debugger</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id49902.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Show summary report"></a><a class="link" href="id70536.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Breakpoints active"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48621.html">EventController</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id35468.html">Dialog Window of the EventController</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id39578.html">Dialog Window of the Event Debugger</a></span> &gt; <span class="simpleHTMLminitoc">Dialog Window of the Event Debugger</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5945"></span><p class="para_topic">The <em>Event Debugger</em> lets you accurately control the execution of simulation events, when you click <a class="links" href="id42207.html">Start/Stop Simulation</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/evStart.gif" border="0"> or <a class="links" href="id95470.html"> Single Step Simulation</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/evStep.gif" border="0">. As opposed to clicking <b class="uiTerm">Start/Stop Simulation</b>, you can, for example, enter a condition when the <em>Event Debugger</em> is to <b class="uiTerm">Start/Stop the Simulation</b>. Then, you can follow the execution of the events in the <em>Event Debugger</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/Eventcontroller1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/eventDebugger.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <ul>
+            <li>
+               
+               <p class="para_item">The column <b class="uiTerm">Breakpoint</b> shows an <b class="uiTerm">S</b>, for a breakpoint you inserted, by double-clicking a cell in the row. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Double-click a cell in the row where you would like to insert a single breakpoint. Then the <em>Event Debugger</em> stops the simulation immediately before the <em>EventController</em> processes that event. Double-click again to remove the breakpoint.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The column <b class="uiTerm">Type</b> shows the type of event. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The column <b class="uiTerm">Time</b> shows the point in time the event is going to be executed. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The column <b class="uiTerm">Receiver</b> shows the receiving object. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The column <b class="uiTerm">Sender</b> shows the sending object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The column <b class="uiTerm">Insertion Time</b> shows the point in time at which the event was inserted into the <em>EventController</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The column <b class="uiTerm">Parameters</b> shows additional information for certain event types, for example the <b class="uiTerm">sensor ID (SensorStart)</b>, the name of the <em>failure profile</em> (<b class="uiTerm">DisruptionBegin</b>) or the parameters passed to a <em>Method</em> (<b class="uiTerm">MethCall</b>).
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To open the list of scheduled events, click <a class="links" href="id60343.html">List</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/evList.gif" border="0"> on the tab <b class="uiTerm">Controls</b> in the <em>EventController</em>. You can also hold down <b class="uiTerm">Shift</b> and double-click the icon <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/EventControllerIconLarge.gif" border="0"> of the <em>EventController</em> in the <em>Frame</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id54464.html"> Working with the Event Debugger</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id60343.html"> List</a> of scheduled events
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id70536.html"> Breakpoints active</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id70684.html"> Reset Simulation</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id53957.html"> Trace File</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id42207.html"> Start/Stop Simulation</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id94958.html"> Trace active</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id53908.html"> Start without Animation</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id54541.html"> Breakpoints</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id95470.html"> Single Step Simulation</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id45838.html#id89690"> Stop at Event</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id52517.html"> Debug Next Simulation Step</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id45838.html#id20985"> Open Receiver</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id27148.html"> Close</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id49902.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Show summary report"></a><a class="link" href="id70536.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Breakpoints active"></a></span></div>
+   </body>
+</html>

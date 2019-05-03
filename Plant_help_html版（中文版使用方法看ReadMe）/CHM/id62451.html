@@ -1,0 +1,264 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>StrategyCtrl</title>
+      
+      <meta name="MS-HKWD" content="StrategyCtrl">
+      <meta name="MS-HKWD" content="StrategyCtrl,Converter">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">StrategyCtrl</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id62022.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Strategy"></a><a class="link" href="id64080.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Width"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id41205.html">Converter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79603.html">Attributes of the Converter</a></span> &gt; <span class="simpleHTMLminitoc">StrategyCtrl</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5546"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.StrategyCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>StrategyCtrl</em> designates a <em>Method</em> object, the <a class="links" href="id25111.html">Strategy method</a>, in which you determine the side of the <em>Converter</em> at which the part will exit the <em> Converter</em>. 
+         </p>
+         <p class="para_topic">The numbers designate the side of the <em>Converter</em> at which the part exits. The figures below illustrate the sides depending on the direction in which you inserted the <em>Converter</em> into your simulation model.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/ConverterSidesOnline.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/converterTopBottomOnline.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The <em>Converter</em> calls the control as soon as the part wants to enter it. You have to set the side with the attribute <a class="links" href="id96558.html">ExitForMU</a>. 
+         </p>
+         <p class="para_topic">The <b class="uiTerm">default strategy</b> method looks like this:
+         </p>
+         <p class="para_topic">You can assign a value of data type <em>object</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param entranceNo: integer
+if @.name = &quot;C&quot; 
+    ?.ExitForMU := 0 /* number of the exit of the converter*/
+elseif @.name = &quot;A&quot; 
+    if entranceNo = 2 
+        ?.ExitForMU := 3
+    else
+        ?.ExitForMU := 0
+    end
+else
+    if entranceNo = 2 
+        ?.ExitForMU := 1
+    else
+        ?.ExitForMU := 0
+    end
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param entranceNo: integer
+?.ExitForMU := 0 /* number of exit */</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyConverter.StrategyCtrl := &amp;myStrategyCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id25111.html">Strategy method</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id62022.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Strategy"></a><a class="link" href="id64080.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Width"></a></span></div>
+   </body>
+</html>

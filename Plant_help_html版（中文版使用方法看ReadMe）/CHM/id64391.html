@@ -1,0 +1,104 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Object Reference</title>
+      
+      <meta name="MS-HKWD" content="Object Reference">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Object Reference</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id57258.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The Relative Path"></a><a class="link" href="id55817.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Name Space"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Names_1.html">Names</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Paths.html">Paths</a></span> &gt; <span class="simpleHTMLminitoc">Object Reference</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13618"></span><p class="para_topic">A variable of data type <em>object</em> can accept a path as well as an object reference. This also applies to global variables, local variables, formal parameters and values in tables which have the data type <em> object</em>. 
+         </p>
+         <p class="para_topic">Let&rsquo;s suppose we insert a global <em>Variable</em> of data type <em>object</em> into the object <em>Frame</em> and name this <em>Variable</em>
+            <code>TestVarRel</code>.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/objectref11.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/objectref1.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">When we enter <code>Station</code> as the value, the <em>Variable</em> interprets this as a relative path, which points to the object <em>Station</em> in the same <em>Frame</em>. The corresponding <em>SimTalk</em> instruction is <code>TestVarRel := &quot;Station&quot;</code></p>
+         <p class="para_topic">When we duplicate or derive the <em>Frame</em>, the respective <em>Variable</em>
+            <code>TestVarRel</code> still points to the <em>Station</em> in the <em>Frame</em> in which the <em>Station</em> is located.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/objectref2.gif"></p>
+         <p class="para_topic">Then, we insert a <em>Variable</em> of data type <em>object</em> in the object <em>Frame</em> and name this <em>Variable</em>
+            <code>TestVarAbs</code>.
+         </p>
+         <p class="para_topic">When we drag the <em>Station</em> onto the text box value, the <em>Variable</em> interprets this as an absolute path. This path always points to the <em>Station</em> in the object <em>Frame</em>. The corresponding <em>SimTalk</em> instruction is <code>TestVarAbs := &quot;.Models.Frame.Station&quot;</code></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/objectref21.gif"></p>
+         <p class="para_topic">When we now rename the <em>Station</em> to which the <em>Variables</em>
+            <code>TestVarRel</code> and <code>TestVarAbs</code> point, <em>Plant Simulation</em> does not recognize the <em>Station</em> any more, shown by the question mark (?) after the name of the <em>Station</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/objectref4.gif"></p>
+         <p class="para_topic">To enter a reference to the <em>Station</em> into our new <em>Variable</em>
+            <code>TestRef</code>, we can enter <code>*.Models.Frame.Station</code> as the value into the text box. The <code>*</code> (asterisk) in front of the path designates the reference as such. The corresponding <em>SimTalk</em> instruction is <code>TestRef := Station</code></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/objectref31.gif"></p>
+         <p class="para_topic">When we rename the <em>Station</em> to <em>Station1</em>, the <em>Variable</em>
+            <code>TestRef</code> still points to our renamed <em>Station</em>, while the <em>Variables</em> using an absolute or a relative path do not recognize the object any more. When duplicating the <em>Frame</em>, i.e., when duplicating the <em> Variable</em> as well as the object to which the <em>Variable</em> points, <em>Plant Simulation</em> supposes that the duplicated <code>TestRef</code> is to reference the duplicated <em>Station</em>, and it adjusts the reference accordingly in case the value is not inherited. This means that it <b class="uiTerm"> does not</b> implicitly <b class="uiTerm"> deactivate inheritance</b>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/objectref32.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">We advise caution when using an object reference. As a rule you can always use an object reference instead of an absolute path. If you need a relative addressing, use a relative path instead.</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The main advantages of an object reference as compared to a path are a higher access speed and its tolerance towards renaming objects.</p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic">Data type <a class="links" href="id28247.html">Object</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id57258.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The Relative Path"></a><a class="link" href="id55817.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Name Space"></a></span></div>
+   </body>
+</html>

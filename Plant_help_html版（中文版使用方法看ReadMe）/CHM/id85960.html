@@ -1,0 +1,135 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Scaling Factor</title>
+      
+      <meta name="MS-HKWD" content="Scaling Factor">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Scaling Factor</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id27068.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Zoom Out"></a><a class="link" href="id95062.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Representation"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id90254.html">Frame</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id93007.html">The Frame Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id63115a.html">General Ribbon Tab</a></span> &gt; <span class="simpleHTMLminitoc">Scaling Factor</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6265"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/generalScalingFactor.gif" border="0"></p>
+         <p class="para_topic">The command <b class="uiTerm">Scaling Factor</b> sets the scaling factor sets the scaling factor for displaying the objects in the <em>Frame</em>. <em>Plant Simulation</em> uses the scaling factor for converting the pixel coordinates to length coordinates. 
+         </p>
+         <p class="para_topic">The command opens the dialog <b class="uiTerm">Scaling Factor</b>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you change the <b class="uiTerm">scaling factor</b>, <em>Plant Simulation</em> keeps the lengths of the length-oriented objects and the 3D coordinates and changes the dimension or the representation of the pixels respectively. <em>Plant Simulation</em> moves the axes origin if your change would create negative pixel coordinates.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the scaling factor. The program uses it to compute the length of polygon Conveyors that you create. The scaling factor is the length of one pixel in length units.</p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Select length units under <b class="uiTerm">File</b> &gt;
+       <b class="uiTerm">Model Settings/Preferences</b> &gt; <b class="uiTerm">Units</b> &gt; <a class="links" href="id64571.html">Length</a>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Enter grid settings under <b class="uiTerm">File </b>&gt; <b class="uiTerm">Preferences</b> &gt;
+       <b class="uiTerm">Modeling</b> &gt; <a class="links" href="id40964.html">Frame grid spacing</a>.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <b class="uiTerm">Horizontal grid spacing</b> shows the distance between two grid points on the x-axis using the <b class="uiTerm">Scaling Factor</b> you entered.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <b class="uiTerm">Vertical grid spacing</b> shows the distance between two grid points on the y-axis. 
+               </p>
+               
+               <p class="para_item">The default settings <b class="uiTerm">Frame grid spacing 20 x 20</b> pixels, <b class="uiTerm">Length units m</b> (meters) and a <b class="uiTerm">Scaling factor</b> of <b class="uiTerm">0.05</b> result in a horizontal and vertical grid spacing of 1 meter each.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When you change the scaling factor, the program shows the new horizontal and vertical grid spacing in the dialog.</p>
+         <p class="para_topic">The settings <b class="uiTerm">Frame grid spacing 20 x 20</b> pixels, <b class="uiTerm">Length unit m</b> (meters) and a <b class="uiTerm">Scaling factor</b> of <b class="uiTerm">0.5</b> result in a horizontal and vertical grid spacing of 10 meters each.
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Default setting</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> User-defined setting</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/Scalfac.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/Scalfac1.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id70494.html">ScalingFactor</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id71730.html">Edit How 2D Maps 3D Coordinates</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id27068.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Zoom Out"></a><a class="link" href="id95062.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Representation"></a></span></div>
+   </body>
+</html>

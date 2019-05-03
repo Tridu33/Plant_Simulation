@@ -1,0 +1,33 @@
+/*	吉林大学校歌，随便复制进去一个Method就能运行！，具体完整版本可以参考简谱进行改编 	*/
+	--var integer:do
+	--var integer:ban
+	--ban=200
+
+
+	bell(523,200)	--do
+	bell(578,200)	--re
+	bell(659,200)	--mi
+	bell(698,200)
+	sleep(1)
+	bell(784,200)
+	bell(880,200)
+	bell(988,200)
+
+
+
+/*	integer pai=400
+	integer do=523
+	integer re=578
+	integer mi=659
+	integer fa=698
+	integer so=784
+	integer la=880
+	integer si=988
+			
+			bell(re,ban)
+			bell(mi,ban)
+			bell(fa,ban)
+			bell(so,ban)
+			bell(la,ban)
+			bell(si,ban)
+*/

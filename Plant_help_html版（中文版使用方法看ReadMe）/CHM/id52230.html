@@ -1,0 +1,78 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Duration control</title>
+      
+      <meta name="MS-HKWD" content="Duration control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Duration control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id13320.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Interval control"></a><a class="link" href="id96403.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab User-defined Attributes"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97006.html">Generator</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88941.html">Dialog Window of the Generator</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id73042.html">Tab Controls</a></span> &gt; <span class="simpleHTMLminitoc">Duration control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11057"></span><p class="para_topic">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object in the dialog <a class="links" href="id17045.html">Select Object</a>. Enter the source code of the <b class="uiTerm">duration control</b>. The <em>Generator</em> calls it after the time span, which you entered for the <a class="links" href="id22927.html">Duration</a> (depending on the <a class="links" href="id83446.html">Interval</a>), has elapsed. It calls the <b class="uiTerm">duration control</b> after the interval control. The <b class="uiTerm">duration control</b> may be activated for the last time even after the time you entered for <a class="links" href="id31568.html">Stop</a>. 
+         </p>
+         <p class="para_topic">Instead, you can also right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>, such as <code>self.DurationControlEnginePlant</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts<code>self.OnDuration</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Drag the <em>Method</em> to the text box and drop it there.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, press the <b class="uiTerm">F2</b> key.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic">
+            <a class="links" href="id74643.html">DurationCtrl</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id13320.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Interval control"></a><a class="link" href="id96403.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab User-defined Attributes"></a></span></div>
+   </body>
+</html>

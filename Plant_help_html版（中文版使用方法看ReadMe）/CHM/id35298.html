@@ -1,0 +1,89 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Load the Train</title>
+      
+      <meta name="MS-HKWD" content="Load the Train">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic8" id="xps10_pagetitle">Load the Train</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id79846.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create the Train"></a><a class="link" href="id72760.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Unload the Train"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64826.html">Model a Facility Using a Storage Crane</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64681.html">Load a Train with the Storage Crane</a></span> &gt; <span class="simpleHTMLminitoc">Load the Train</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1060"></span><p class="para_topic">We model the track of the train with the object <em>Track</em>. For this we have to make sure that a piece of track runs underneath the crane so that the crane can load the parts onto the train. We thus define a sensor on the far right side of the crane area. The exact position depends on the way we model our track. As <b class="uiTerm">sensor control</b> we enter the method <em>load</em> in which we program how the train is to be loaded.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/portalcraneLoadFrame.gif"></p>
+         <p class="para_topic">The method <em>load</em> is to be executed only, when the <em>engine</em> of the train triggered the sensor. Thus we first have to check if the respective car of the train is the <em>engine, </em> i.e., if the attribute <em>isTractor</em> is <em>true</em>. If so, the train stops and we retrieve the contents table of the crane. For safety purposes we wait until the store contains 10 containers at least.
+         </p>
+         <p class="para_topic">The first <em>boxcar</em> is hitched directly to the rear of the <em>engine</em> (<code>engine.rearMU</code>). The loading position refers to the <b class="uiTerm">X-Position</b> of the crane at which the first <em>boxcar</em> is located. 
+         </p>
+         <p class="para_topic">Then we create the loading orders for the crane. For this we always take the last entry in its contents list. We utilize the method getPartFromPositionToObject to instruct the crane to load the part from the specified position in the contents list with the priority <code>20</code> to the <b class="uiTerm">X-Position</b>
+            <code>loadPos</code>, and the <b class="uiTerm">Y-Position</b><code>10</code> into the <em>boxcar</em>. As the <em>boxcar</em> can only hold a single container, we also enter the loading position (<code>1,1</code>). The priority <code>20</code> insures that the loading orders have a higher priority than the storage orders.
+         </p>
+         <p class="para_topic">Then we proceed to the next <em>boxcar</em> and adjust its loading position accordingly. This we repeat until we have given the loading orders for all <em>boxcars</em>. Note that until now we only have issued the orders, but that the <em>boxcars</em> have not necessarily been loaded yet! To ensure this, we pass over all <em>boxcars</em> again and wait until all <em>boxcars</em> are loaded. Only then can the <em>engine</em> start and pull the train away.
+         </p>
+         <p class="para_topic">The complete source code of the method <em>load</em> in <b class="uiTerm">SimTalk 2.0 notation</b> looks like this:
+         </p><pre class="indent">var content: table[integer, integer, integer, integer, object]
+var i, row: integer
+var boxcar: object
+var engine: object
+var loadPos: integer 
+var outcome: boolean
+if @.isTractor 
+   engine := @
+   engine.stop
+   content.create
+   repeat
+      -- 10 containers at least need to be in the store
+      PortalCrane.getStoreTable(content)
+      if content.ydim  10 
+         wait( 300 )
+      end
+   until content.ydim &gt;= 10
+
+   boxcar := engine.rearMu
+   loadPos := 18
+
+   -- generate all loading orders for the crane
+   while boxcar /= void 
+      row := content.ydim;
+      outcome := PortalCrane.getPartFromPositionToObject(content[1,row],
+      content[2,row], content[3,row], 20, loadPos, 10, boxcar, 1, 1 )
+
+      boxcar := boxcar.rearMU
+      loadPos -= 2
+
+      content.cutRow( row )
+   end
+
+   -- wait until the train is completely loaded
+   boxcar := engine.rearMu
+   while boxcar /= void 
+
+      waituntil boxcar.full 
+      boxcar := boxcar.rearMU
+   end
+   engine.continue
+end </pre><p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id64680.html">Load a Train with the Storage Crane</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id79846.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create the Train"></a><a class="link" href="id72760.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Unload the Train"></a></span></div>
+   </body>
+</html>

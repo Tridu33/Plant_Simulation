@@ -1,0 +1,195 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Display the Times for Picking-up and for Depositing Parts</title>
+      
+      <meta name="MS-HKWD" content="Display the Times for Picking-up and for Depositing Parts">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Display the Times for Picking-up and for Depositing Parts</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id29948.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Program Controls Recording Times for Picking-up and Depositing Parts"></a><a class="link" href="id86904.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model Workers with Importer, Broker and Exporter"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18156.html">Modeling Workers and the Jobs They Do</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id46415.html">Model a Worker Who Carries Parts Between Workplaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id83251.html">Model and Record Times for Picking-up and for Depositing Parts</a></span> &gt; <span class="simpleHTMLminitoc">Display the Times for Picking-up and for Depositing Parts</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_809"></span><p class="para_topic">You can show the recorded values for the times for picking-up and depositing the parts in a number of ways.</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To show the values in a <em>Display Panel</em>, proceed as follows:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Click the object <em>Workplace1</em> with the right mouse button and select <b class="uiTerm">Edit Display Panel</b>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <b class="uiTerm">New</b> and create the <b class="uiTerm">static text box</b> with the label <code>PartsIn</code> and the settings below.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplaceDisplayPanel1.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Repeat this for the <b class="uiTerm">static text box</b>
+                        <code>PartsOut</code>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <b class="uiTerm">New</b> and create a new display panel element of type <b class="uiTerm">text</b>. Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the user-defined attribute of <em>Workplace1</em>
+                        <code>PartsIn</code> or <code>PartsOut</code> respectively.
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="50%">
+                           
+                           <col span="1" width="50%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplaceDisplayPanel2.gif" border="0"></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplaceUserdefined.gif" border="0"></p>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">To reset the shown values to 0 when you reset the model, create a user-defined attribute of data type <em>method</em>, name it <em>reset</em>, and enter the following source code:
+                     </p>
+                     <pre class="indent">self.~.PartsIn := 0
+self.~.PartsOut := 0</pre>
+                     </li>
+                  <li>
+                     
+                     <p class="para_item">Repeat this for the object <em>Workplace2</em>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">The code snippet below of our <b class="uiTerm">exit controls</b>, <em>workerLeaves1</em> and <em>workerLeaves2</em>, then increments the values for each arriving and leaving part.
+                     </p>
+                     <pre class="indent">--  increment the parts exiting the 'Workplace' to be shown in the display panel
+Workplace1.PartsOut := Workplace1.PartsOut + 1</pre>
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplaceDisplayPanelFrame.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">How to write the values with the methods <em>workerLeaves1</em>, <em>workerArrives2</em>, <em>workerLeaves2</em>, and <em>writeWorkersTimes</em> into a <em>TableFile</em> is described under <a class="links" href="id29948.html">Program Controls Recording Times for Picking-up and Depositing Parts</a>. The result looks like this:
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplaceWorkersTimesTableFull.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">To show the values in a <em>Worker Chart</em>, insert the object <a class="links" href="id21473.html">WorkerChart</a> into your simulation model.
+                     </p>
+                     
+                     <ul>
+                        <li>
+                           
+                           <p class="para_item">Drag the <em>WorkerPool</em> to the <em>WorkerChart</em> and drop it there. Then configure it so that it matches the screenshots below.
+                           </p>
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <colgroup span="1">
+                                 
+                                 <col span="1" width="50%">
+                                 
+                                 <col span="1" width="50%">
+                                 
+                              </colgroup>
+                              
+                              <tbody>
+                                 
+                                 <tr>
+                                    
+                                    <td colspan="1" rowspan="1">
+                                       
+                                       <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplaceWorkerChart1.gif" border="0"></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1">
+                                       
+                                       <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplaceWorkerChart2.gif" border="0"></p>
+                                       
+                                    </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <b class="uiTerm">Show Chart</b> to show the values in the <em>WorkerChart</em>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplaceWorkerChartDisplay.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id90677.html">Model the Stations Which Process and Transport the Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id29948.html">Program Controls Recording Times for Picking-up and Depositing Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id83251.html">Model and Record Times for Picking-up and for Depositing Parts</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id29948.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Program Controls Recording Times for Picking-up and Depositing Parts"></a><a class="link" href="id86904.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model Workers with Importer, Broker and Exporter"></a></span></div>
+   </body>
+</html>

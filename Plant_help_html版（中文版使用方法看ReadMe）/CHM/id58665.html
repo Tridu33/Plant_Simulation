@@ -1,0 +1,101 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Built-in Methods and Read-Only Attributes for Animations in 3D</title>
+      
+      <meta name="MS-HKWD" content="Functions for animations in 3D">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Built-in Methods and Read-Only Attributes for Animations in 3D</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id35031.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.PointCloudRotationAngle"></a><a class="link" href="id94896.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.TypeOfAnimations.Count"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58665.html">Built-in Methods and Read-Only Attributes for Animations in 3D</a></span> &gt; <span class="simpleHTMLminitoc">Built-in Methods and Read-Only Attributes for Animations in 3D</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14453"></span><p class="para_topic"><em>Plant Simulation</em> provides a set of functions for each of the following three animation types:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">All object, which accept <em>MUs</em> or <em>Workers</em> provide MU animations:
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">All <em>material flow objects</em> except for <em>Connectors</em> and <em>Interfaces</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>Objects</em> , i.e., the objects, which you can address with the method <a class="links" href="id48058.html">_3D.getObject</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>Frames</em>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">All objects provide self animations, except for <em>Basis</em>, <em>Connectors</em>, <em>Interfaces</em> and <em>MUs</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Only <em> Frames</em> provide camera animations
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can cache the entirety of all animations of an animation type in a value of data type <em>any</em>. You will, for example, enter:
+         </p><pre class="indent">var a : any := .MaterialFlow.PickAndPlace._3D.SelfAnimations</pre><p class="para_topic">The three animation types share a common set of functions of data. They also provide a number of functions specific to a certain type. All of the functions can handle saved animations though.</p>
+         <p class="para_topic"><em>Plant Simulation</em> provides these attributes and methods for animation paths in <em>3D</em>:
+         </p>
+         <p class="para_topic"><a class="links" href="id94896.html">_3D.TypeOfAnimations.Count</a>, <a class="links" href="id34561.html">_3D.TypeOfAnimations.createAnimationCurve</a>, <a class="links" href="id70922.html">_3D.TypeOfAnimations.createAnimationLine</a>, <a class="links" href="id52796.html">_3D.MUAnimations.createAnimationPoint</a>, <a class="links" href="id55226.html">_3D.TypeOfAnimations.createAnimationSpline</a>, <a class="links" href="id23084.html">_3D.TypeOfAnimations.getAnimation</a>, <a class="links" href="id45845.html">_3D.TypeOfAnimations.AnimationPathName.getTable</a>, <a class="links" href="id66549.html">_3D.TypeOfAnimations.AnimationPathName.setTable</a>, <a class="links" href="id23084.html">_3D.TypeOfAnimations.getAnimation</a>, <a class="links" href="id45721.html">_3D.TypeOfAnimations.getTable</a>, <a class="links" href="id57582.html">_3D.TypeOfAnimations.setTable</a>, <a class="links" href="xid1314866.html">_3D.RobotArmAnimations.getTable</a>, and <a class="links" href="xid1314867.html">_3D.RobotArmAnimations.setTable</a>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The animation types <b class="uiTerm">self animations</b> and <b class="uiTerm">camera animations</b> have saved and temporary animation paths.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The animation type <b class="uiTerm">MU animations</b> only has saved animation paths. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id59120.html">Edit 3D Properties</a> &gt; <a class="links" href="id52643.html">Tab MU Animation</a></p>
+         <p class="para_topic"><a class="links" href="id59120.html">Edit 3D Properties</a> &gt; <a class="links" href="id74705.html">Tab Self Animation</a></p>
+         <p class="para_topic"><a class="links" href="id59120.html">Edit 3D Properties</a> &gt; <a class="links" href="id41051a.html">Tab Camera Animation</a></p>
+         <p class="para_topic"><a class="links" href="id59120.html">Edit 3D Properties</a> &gt; <a class="links" href="xid1314864.html">Tab Robot Arm Animation</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id35031.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.PointCloudRotationAngle"></a><a class="link" href="id94896.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.TypeOfAnimations.Count"></a></span></div>
+   </body>
+</html>

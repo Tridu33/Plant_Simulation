@@ -1,0 +1,199 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>getSatisfiedImporters</title>
+      
+      <meta name="MS-HKWD" content="getSatisfiedImporters">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">getSatisfiedImporters</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id72101.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getOpenImporters"></a><a class="link" href="id40958.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:globalOpenRequestsFor"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id19366.html">Broker</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id74171.html">Methods of the Broker</a></span> &gt; <span class="simpleHTMLminitoc">getSatisfiedImporters</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_8247"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.getSatisfiedImporters([Importers:table]) &rarr; table</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>getSatisfiedImporters</em> returns all <em>importers</em> , whose request for an <em>Exporter</em> which the <em>Broker</em> designated by Path fulfilled, and writes them into a table. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameter</b></p>
+         
+         <p class="para_topicComponent">The optional parameter <em>Importers</em> of data type <em>table</em> designates the name of the table.
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">Column 1 (<em>object</em>) of the table contains all objects whose <em>importer</em> registered a request with the <em>Broker</em> and who were assigned an <em>Exporter</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Column 2 (<em>integer</em>) designates its type: 0 designates the <em>failure-importer</em>, 1 the <em>set-up-importer</em>, 2 the <em>processing-importer</em>, and 3 the <em>transport-importer</em>.
+               </p>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>table</em>. 
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyBroker.getSatisfiedImporters(MySatisfiedImporterTable) -- Writes the satisfied importers to the table MySatisfiedImporterTable.</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyBroker.getSatisfiedImporters -- Writes the satisfied importers to a table which is the return value.</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topic</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id31509.html">Satisfied Importers</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id72101.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getOpenImporters"></a><a class="link" href="id40958.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:globalOpenRequestsFor"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Model a Cross-sliding Car with an Application-specific Strategy</title>
+      
+      <meta name="MS-HKWD" content="Model a Cross-sliding Car with an Application-specific Strategy">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Model a Cross-sliding Car with an Application-specific Strategy</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id19895.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model a Cross-sliding Car that Distributes and Brings Together Parts"></a><a class="link" href="id64826.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Plant Using a Storage Crane"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29644.html">Model with the Library CrossSlidingCar</a></span> &gt; <span class="simpleHTMLminitoc">Model a Cross-sliding Car with an Application-specific Strategy</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1026"></span><p class="para_topic">This sample model uses a similar layout as the model shown in <a class="links" href="id19895.html">Model a Cross-sliding Car that Distributes and Brings Together Parts</a>. The main difference is that the <a class="links" href="id98718.html">CrossSlidingCar</a>
+            <b class="uiTerm">CSC1</b> is controlled by an application-specific strategy.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/qvwStrategie.gif"></p>
+         <p class="para_topic">This strategy, which we programmed in the method <em>myStrategy</em>, ensures that the <em>cross-sliding car</em>
+            <b class="uiTerm">CSC1</b> first unloads the arriving parts from the <em>Conveyor</em>
+            <b class="uiTerm">AA</b>, then from the <em>Conveyor</em>
+            <b class="uiTerm">BB</b> and finally from the <em>Conveyor</em>
+            <b class="uiTerm">CC</b>. To do so, we use the internal <b class="uiTerm">order list</b> of the <em>cross-sliding car</em>, which is shown below. The order list is a user-defined attribute of the object <em>cross-sliding car</em>.
+         </p>
+         <p class="para_topic">It contains the <b class="uiTerm">order date</b> and <b class="uiTerm">time</b>, the <b class="uiTerm">source</b>, i.e., the <em>Conveyor</em> at which the <em>cross-sliding car</em> picks up the part, the <b class="uiTerm">destination</b>, i.e., the <em>Conveyor</em> st which it is to deliver the part, the <b class="uiTerm">priority</b> of the order, which we do not use yet, and the <b class="uiTerm"> part</b> to be transported.
+         </p>
+         <p class="para_topic">The method <em>myStrategy</em> dorts this table ascending according to column 2 ( <b class="uiTerm">source</b>) and returns the row with the number 1. Therefore the first order on the table will be executed.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/qvwMyStrategyE1.gif"></p>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">-&gt; integer
+var tab: table
+-- get the order list of the cross-sliding car
+tab := CSC1.OrderList
+if tab.YDim=1 
+   return
+else
+   -- sort the order list for the source objects
+   tab.sort(2, &quot;up&quot;)
+   -- now the order list is sorted so that AA, BB, CC use the first entry
+   -- so we first serve conveyor AA, then conveyor BB, and finally CC
+   return 1
+end </pre><p class="para_topic">Creating a 3D model from our 2D model allows us to visualize the flow of parts even better. To do so:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Activate 3D</b> on the <b class="uiTerm">Window</b> ribbon tab.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/qvwStart3D.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click the tab <b class="uiTerm">Class Library</b>, open the folder <b class="uiTerm">Models</b>, and click our model <b class="uiTerm">CSC_Demo_3</b> with the right mouse button. Select <b class="uiTerm">Open in 3D Window</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">This opens the model in a new 3D window.</p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/qvwStrategieE3d.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id62449.html">Model a Simple Cross-sliding Car</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b><a class="links" href="id19895.html">Model a Cross-sliding Car that Distributes and Brings Together Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id29644.html">Model with the Library CrossSlidingCar</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id19895.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model a Cross-sliding Car that Distributes and Brings Together Parts"></a><a class="link" href="id64826.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Plant Using a Storage Crane"></a></span></div>
+   </body>
+</html>

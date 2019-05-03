@@ -1,0 +1,228 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.setGraphicRotation</title>
+      
+      <meta name="MS-HKWD" content="_3D.setGraphicRotation">
+      <meta name="MS-HKWD" content="setGraphicRotation">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.setGraphicRotation</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id90956.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.setGraphicPosition"></a><a class="link" href="id42670.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.setGraphicScale"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id85031.html">Built-in Methods for Detailed Access To Graphics</a></span> &gt; <span class="simpleHTMLminitoc">_3D.setGraphicRotation</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14758"></span><span id="ndxgenid_PlantSimulationENU_14759"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path._3D.setGraphicRotation(GraphicPath:any, RotationAngle:real, RotationAxis:real[3] [,RotationCenter:length[3], GraphicGroupName:string])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.setGraphicRotation</em> sets the rotation of the designated graphic of the object designated by Path. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The method deactivates graphic inheritance.</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm"> Parameter</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>GraphicPath</em> of data type <em>any</em> sets the path to the graphic. The parameter is described under <a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>RotationAngle</em> of data type <em>real</em> sets the rotation angle of the graphic.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>RotationAxis</em> is an <em>array</em> of data type <em>real</em>, which sets the rotation axis of the graphic.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>RotationCenter</em> is an <em>array</em> of data type <em>length</em>, which sets the rotation center of the graphic.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body"><em>3D</em> does not save the rotation center as a separate value, but converts it into another position among others.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>GraphicGroupName</em> of data type <em>string</em> designates the name of the graphic group you are working with. The parameter is described under <a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">obj._3D.setGraphicRotation([1,7],45, [0,1,0])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">obj._3D.setGraphicRotation([1,7],45, [0,1,0], &quot;deco&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a></p>
+         <p class="para_topic"><a class="links" href="id44223.html">_3D.Rotation</a></p>
+         <p class="para_topic"><a class="links" href="id25337.html">_3D.concatenateRotations</a></p>
+         <p class="para_topic"><a class="links" href="id11977.html">_3D.getGraphicRotation</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id90956.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.setGraphicPosition"></a><a class="link" href="id42670.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.setGraphicScale"></a></span></div>
+   </body>
+</html>

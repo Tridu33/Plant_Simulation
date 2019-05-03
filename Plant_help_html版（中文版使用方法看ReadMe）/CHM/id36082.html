@@ -1,0 +1,252 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Create the Graphics of the Components in 3D</title>
+      
+      <meta name="MS-HKWD" content="Create the Graphics of the Components in 3D">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Create the Graphics of the Components in 3D</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id80836.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create a New MU Class Representing the Airplane"></a><a class="link" href="id78224.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Show the Progress of the Airplane Assembly"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58193.html">Modeling in 3D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id83093.html">Working with Graphics</a></span> &gt; <span class="simpleHTMLminitoc">Create the Graphics of the Components in 3D</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1283"></span><p class="para_topic">After creating the MU class <em>Airplane</em> for our model, we will create the graphics of the different components of the airplane. For demonstration purposes we will content ourselves with the shapes that <em>3D</em> provides. In a real situation, we would naturally use the CAD drawings we received from the engineering department.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Start <em>3D</em> by clicking <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/homeOpen2D3D.gif" border="0"> on the <b class="uiTerm">Home</b> ribbon tab. This opens the <em>Frame</em> containing our simulation model in <em>3D</em>, <code>MyAirplaneAssembly</code> in our case. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Now we can edit the MU class <em>Airplane</em> in <em>3D</em>. Click it in the <em>Class Library</em> with the right mouse button and select <b class="uiTerm">Open in 3D</b>. Click into the background of the <em>Frame</em>
+                  <b class="uiTerm">.MUs.Airplane</b> with the right mouse button and select <b class="uiTerm">Edit 3D Properties</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlane3D.gif"></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">As we do not need the default graphic of our airplane, the pallet with the name <b class="uiTerm">default</b>, we delete this graphic by selecting it in the 3D window <b class="uiTerm">.MU.Airplane</b> and pressing the <b class="uiTerm">Del</b> key.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Add</b> to add a new <b class="uiTerm">graphic group</b>. We first want to add the graphic group for the <b class="uiTerm">fuselage</b> of the airplane. Type <code>Fuselage</code> into the text box <b class="uiTerm">Name</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneAddFuselage.gif"></p>
+               
+               <p class="para_item">Once you clicked <b class="uiTerm">OK</b> in the dialog above and <b class="uiTerm">Apply</b> in the dialog <b class="uiTerm">Edit 3D Properties</b>, the dialog <b class="uiTerm">Show Graphic Structure</b> shows our new graphic group as well.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneShowGraphicGroup.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Now we can <b class="uiTerm">create</b> the <b class="uiTerm">actual graphic</b> that represents the <b class="uiTerm">fuselage</b>. Change to the <b class="uiTerm">Edit</b> ribbon tab and select <b class="uiTerm">Insert Cylinder</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneInsertCylinder.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the graphic group to which you want to add the newly created graphic, <b class="uiTerm">Fuselage</b> in our case. Enter the dimension of the cylinder and click <b class="uiTerm">Create</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneCreateCylinder.gif"></p>
+               
+               <p class="para_item"><em>Plant Simulation</em> attaches the cylinder to the cursor in the 3D window <b class="uiTerm">.MUs.Airplane</b>. Drag it to the position of your choice and click the left mouse button to insert it into the scene window. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>3D</em> inserts the cylinder in the upright position. This is not what we want though. We need our fuselage to be in the horizontal position. To rotate it by <code>90</code> degrees, click it with the right mouse button and select <b class="uiTerm">Edit 3D Properties</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneCylinderInserted.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the settings from the screenshot below and click <b class="uiTerm">Apply</b> to rotate the fuselage by an <code>angle</code> of <code>90</code> degrees.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneRotated.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">In the next step, we are going to <b class="uiTerm">add</b> the <b class="uiTerm">graphic group</b> for the <b class="uiTerm">cockpit</b> of our airplane. Click with the right mouse button in the <em>Frame</em>
+                  <b class="uiTerm">.MUs.Airplane</b> and select <b class="uiTerm">Edit 3D Properties</b>. Change to the tab <b class="uiTerm">Graphics</b> and click <b class="uiTerm">Add</b>. Type <code>Cockpit</code> into the text box <b class="uiTerm">Name</b> and click <b class="uiTerm">OK</b> in the dialog. Then click <b class="uiTerm">Apply</b> in the dialog <b class="uiTerm">Edit 3D Properties</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneAddConeCockpit.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Then, <b class="uiTerm">create</b> the <b class="uiTerm">actual graphic</b> that represents the <b class="uiTerm">cockpit</b>. Change to the <b class="uiTerm">Edit</b> ribbon tab and select <b class="uiTerm">Insert Cone Frustum</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/3DEditCone.gif" border="0">.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the graphic group to which you want to add the newly created graphic, <b class="uiTerm">Cockpit</b> in our case. Enter the dimension of the cone and click <b class="uiTerm">Create</b>. <em>Plant Simulation</em> attaches the cone to the cursor in the 3D window <b class="uiTerm">.MUs.Airplane</b>. Drag it to the position of your choice and click the left mouse button to insert it into the scene window. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneCreateCone.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Rotate the cockpit by <code>90</code> degrees and place it at the right-hand side of the fuselage. We used the settings shown the screenshot below.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneCockpitRotated.gif"></p>
+               
+               <p class="para_item">While you&rsquo;re at it, you might also assign the cockpit a color on the tab <b class="uiTerm">Material</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">As our airplane also needs a <b class="uiTerm">right wing</b> and a <b class="uiTerm">left wing</b>, we create these next. Repeat the steps described above.
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">
+                        <b class="uiTerm">Add</b> the <b class="uiTerm">graphic group</b> for the <b class="uiTerm">right wing</b>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneAddRightW.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Select the graphic group <b class="uiTerm">RightWing</b> to which the graphic will be added. <b class="uiTerm">Create</b> the <b class="uiTerm">actual graphic</b> for the <b class="uiTerm">right wing</b>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneCreateConeWings.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Place the right wing at the appropriate position on the fuselage. We used the settings below.</p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneRightWingAttached.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Repeat these steps for the <b class="uiTerm">left wing</b>. We used the settings below to place the left wing at the appropriate position on the fuselage.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneLeftWingAttached.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">In our last step we are going to create the <b class="uiTerm">tail assembly</b> (empennage) consisting of the <b class="uiTerm">vertical stabilizer</b> and the <b class="uiTerm">horizontal stabilizer</b> (tail plane). Repeat the steps described above.
+                     </p>
+                     
+                     <ul>
+                        <li>
+                           
+                           <p class="para_item">Add the <b class="uiTerm">graphic group</b> for the <b class="uiTerm">tail assembly</b>.
+                           </p>
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneAddTailAssembly.gif"></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item">Select the graphic group <b class="uiTerm">TailAssembly</b> to which the graphic will be added. <b class="uiTerm">Create</b> the <b class="uiTerm">actual graphics</b> representing the <b class="uiTerm">tail assembly</b>. We used a <b class="uiTerm">Cone</b> for the <b class="uiTerm">vertical stabilizer</b> and a <b class="uiTerm">Sphere</b> for the <b class="uiTerm">horizontal stabilizer</b>. 
+                           </p>
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneCreateSphere.gif"></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item">Place the <b class="uiTerm">horizontal stabilizer</b> at the appropriate position on the fuselage. We used the settings below. Note that we also <b class="uiTerm">scaled</b> the sphere in all three dimensions to stretch and to flatten it. 
+                           </p>
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneHorizStabAttached.gif"></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item">Select the graphic group <b class="uiTerm">TailAssembly</b> to which the graphic will be added. <b class="uiTerm">Create</b> the <b class="uiTerm">graphic</b> representing the <b class="uiTerm">vertical stabilizer</b>. 
+                           </p>
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneCreateConeVertStab.gif"></p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item">Place the <b class="uiTerm">vertical stabilizer</b> at the appropriate position on the fuselage. We used the settings below. Note that we also <b class="uiTerm">scaled</b> the cone in the y-dimension. 
+                           </p>
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneVertStabAttached.gif"></p>
+                           
+                           <p class="para_item">The dialog <b class="uiTerm">Graphic Structure</b> also shows that our tail assembly consists of two graphics.
+                           </p>
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/MUPlaneGraphicStructureFinished.gif"></p>
+                           
+                           <p class="para_item">Instead of using shapes which we create in <em>3D</em> itself, we can also <a class="links" href="id70558.html">Import JT Graphics Representing an Object</a>. 
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id78224.html">Show the Progress of the Airplane Assembly</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id80836.html">Create a New MU Class Representing the Airplane</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id83093.html">Working with Graphics</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id80836.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create a New MU Class Representing the Airplane"></a><a class="link" href="id78224.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Show the Progress of the Airplane Assembly"></a></span></div>
+   </body>
+</html>

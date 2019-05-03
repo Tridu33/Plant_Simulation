@@ -1,0 +1,145 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>omit</title>
+      
+      <meta name="MS-HKWD" content="omit">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">omit</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id41284.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:incl"></a><a class="link" href="id23056.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:pos"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Predefined_Functions_1.html">Predefined Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id99198.html">Functions for Manipulating Strings</a></span> &gt; <span class="simpleHTMLminitoc">omit</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14011"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">omit(SourceText:string, Position:integer, NumberOfCharacters:integer) &rarr; string</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The function <em>omit</em> copies a <em> string</em> and deletes a succession of characters from it. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>SourceText</em> of data type <em>string</em> designates the string, which you want to copy.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Position</em> of data type <em>integer</em> designates the position within the <em>string</em> from which on <em>Plant Simulation</em> deletes characters.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>NumberOfCharacters </em> of data type <em>integer</em> designates number of characters which <em>Plant Simulation</em> deletes.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>string</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">print omit(&quot;abcdef&quot;,3,2) -- returns &quot;abef&quot;
+print omit(&quot;abcdef&quot;,0,3) -- returns &quot;cdef&quot; (0 letter is counted)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id41284.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:incl"></a><a class="link" href="id23056.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:pos"></a></span></div>
+   </body>
+</html>

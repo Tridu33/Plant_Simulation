@@ -1,0 +1,148 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Create Entrance and Exit Controls</title>
+      
+      <meta name="MS-HKWD" content="Create Entrance and Exit Controls">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Create Entrance and Exit Controls</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id26257.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling the Flow of Materials Advanced"></a><a class="link" href="id58530.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Define Controls for Point-Oriented Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id26257.html">Modeling the Flow of Materials, Advanced</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id91863.html">Create Entrance and Exit Controls</a></span> &gt; <span class="simpleHTMLminitoc">Create Entrance and Exit Controls</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_676"></span><p class="para_topic">You can modify the built-in transfer behavior of the material flow objects by programming an <a class="links" href="id35448.html">Entrance control</a> and an <a class="links" href="id86906.html">Exit control</a>. The object calls the <em>Method</em>, whose name you entered, as soon as an <em>MU</em> intends to enter or exit the respective object. Be aware that these controls override the standard transfer behavior, meaning that you yourself have to make sure that the <em>MU</em> moves to the correct station!
+         </p>
+         <p class="para_topic">You can use <em>control methods</em> in a number of ways. You might, for example, count the number of incoming <em>MUs</em> and then, after a specified number has been reached, move the following <em>MUs</em> to a different successor. 
+         </p>
+         <p class="para_topic">You will program the controls in a <em>Method</em>. This can either be:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">A <b class="uiTerm">Method </b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/methodIconSm_dup.gif" border="0"> object which can be located in a folder in the <em>Class Library</em> or in a <em>Frame</em>. When you want a number of objects, which are located in the same <em>Frame</em>, to call the same <em>Method</em>, you typically use a <em>Method</em> object, which you insert into that <em>Frame</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">A <b class="uiTerm">user-defined attribute of data type method</b>, which only the object to which you added it, can use. When you want all instances of a class to provide the same control, you typically create that control as a user-defined attribute in the class. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To tell <em>Plant Simulation</em> which <em>Method</em> to use, do one of the following. The process is the same for <b class="uiTerm">entrance</b> and <b class="uiTerm">exit</b> and <b class="uiTerm">backward entrance</b> and <em>backward exit controls</em>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To select a <em>Method</em> in a <em>Frame</em>: Click the button <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select a <em>Method</em> in the dialog <b class="uiTerm">Select Object</b>. By default <em>Plant Simulation</em> enters the <b class="uiTerm">relative path</b> into the text box. 
+               </p>
+               
+               <p class="para_item">To activate the entrance control of the <b class="uiTerm">point-oriented objects</b>
+                  <b class="uiTerm">before</b> the standard actions are started, when a part enters the object, select <b class="uiTerm">Before actions</b>. Standard actions are, for example, starting the <b class="uiTerm">processing time</b> or the <b class="uiTerm">set-up time</b>, requesting <b class="uiTerm">services</b> through the <em>importer</em>, or changing the <b class="uiTerm">assembly table</b> of the <em>AssemblyStation</em>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/controlsSP1.gif"></p>
+               
+               <p class="para_item">Select the <em>Method</em> in a <em>Frame</em>, drag it to the text box and drop it there. Here <em>Plant Simulation</em> enters the <b class="uiTerm">absolute path</b> into the text box. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/controlsSP3.gif"></p>
+               
+               <p class="para_item">To open the dialog of the object, whose name you entered into the text box, either press <b class="uiTerm">F2</b> or right-click the text box and select <b class="uiTerm">Open Object</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To create a <em>control method</em>, which <b class="uiTerm">belongs to this object</b>: Right-click into the text box and select <b class="uiTerm">Create Control</b> on the context menu: 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>, such as <code>self.ExitControlEnginePlant</code>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnBuilt_in_name_of_the_control</code>, such as <code>self.OnEntrance</code>. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/controlsSP4.gif"></p>
+                     
+                     <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+                     </p>
+                     
+                     <p class="para_item">Be aware that a control you create with <b class="uiTerm">Create Control</b> is a user-defined attribute of the respective object, not a <em>Method</em> object, which you can open in the <em>Frame</em>. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/controlsSP5.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+                     
+                     <div class="attention attention_note">
+                        <table border="0">
+                           <tr>
+                              <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                              <td valign="bottom" align="left" width="100%">
+                                 
+                                 <p class="para_note_body">The <b class="uiTerm">exit control</b> can have an optional parameter of data type <em> object</em>. When the <em>Method</em> has this parameter, then the successor object, which pulls the <em>MU</em> because the <em>MU</em> has contained in the blocking list of the object, will be assigned to this parameter. The <em>MU</em> will be pulled, for example, when the successor becomes available again or when its entrance is opened.
+                                 </p>
+                                 
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id58530.html">Define Controls for Point-Oriented Objects</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id98419A.html">Define Controls for Length-Oriented Objects</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id92136.html">Transferring Parts from Station to Station</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id21553.html">Create Sensors</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id37355.html">Customize the Behavior of Objects</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id26257.html">Modeling the Flow of Materials, Advanced</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id26257.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling the Flow of Materials Advanced"></a><a class="link" href="id58530.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Define Controls for Point-Oriented Objects"></a></span></div>
+   </body>
+</html>

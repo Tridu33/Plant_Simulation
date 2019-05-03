@@ -1,0 +1,138 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Create the Required Simulation Object</title>
+      
+      <meta name="MS-HKWD" content="Create the Required Simulation Object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Create the Required Simulation Object</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id20438.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Creating an Animatable Object"></a><a class="link" href="id34781.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Add Animations and Interactions to the Simulation Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58193.html">Modeling in 3D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id20438.html">Creating an Animatable Object</a></span> &gt; <span class="simpleHTMLminitoc">Create the Required Simulation Object</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1306"></span><p class="para_topic">To create the simulation object that is required for our animatable object:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Create a new <em>Frame</em> and <b class="uiTerm">open</b> it <b class="uiTerm"> in 3D</b>. Open the dialog <b class="uiTerm">Edit 3D Properties</b>. Change to the tab <b class="uiTerm">Graphics</b>. Select the check box <b class="uiTerm">Show content</b> to show the objects contained within it.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriver1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Show External Graphics</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/3DViewShowExternal.gif" border="0"> on the <b class="uiTerm">View</b> ribbon tab to show the <b class="uiTerm">default</b> graphic of the <em>Frame</em>. Delete the graphic named <b class="uiTerm">default</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Import Graphics</b> on the <b class="uiTerm">Edit</b> ribbon tab to import an appropriate JT file into the graphic of the <em>Frame</em>. Our file is called <em>Screwdriver.jt</em>. We received it from a colleague.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverInsertGraphic.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverFrame.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Extract the first simulation object: Click the floor plate of the station by pressing the <b class="uiTerm">+</b> key on your keyboard until only the floor plate, and nothing else, is marked as selected. <em>3D</em> then shows the floor plate in a yellowish green.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverFloor.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click the graphic with the right mouse button and select <a class="links" href="id84501.html">Make Simulation Object</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">.MaterialFlow.Station</b> is the <b class="uiTerm">class. Name</b> the object <code>PartCarrierStation</code> and select the following coordinates as the <b class="uiTerm">object position</b>: <b class="uiTerm">X</b> is to be <b class="uiTerm">0.01</b>, <b class="uiTerm">Y</b> is to be <b class="uiTerm">0</b>, and <b class="uiTerm">Z</b> is to be <b class="uiTerm">0</b> is well. Watch how the white cross lines change their position in the scene window as you change the position of the object in the dialog.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverMakeSimulation.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the trestle that holds the actual screwdriver of our screwdriver station. Notice that when you select <b class="uiTerm">PartCarrierStation</b>, <em>3D</em> show it in a darker green while it shows the other graphics in a light yellowish green. <b class="uiTerm">Dark green</b> denotes that an <b class="uiTerm">object</b> is <b class="uiTerm">selected</b>. <b class="uiTerm">Yellowish green</b> [denotes that a <b class="uiTerm">graphic</b> is <b class="uiTerm">selected</b>, meaning that you can use the + key to contract the selection along the graphic structure.
+               </p>
+               
+               <p class="para_item">Create a second simulation object. Select <b class="uiTerm">.MaterialFlow.Station</b> is the <b class="uiTerm">class</b>. <b class="uiTerm">Name</b> the object <code>Trestle</code> and select the following coordinates as the <b class="uiTerm">object position</b>: <b class="uiTerm">X</b> is to be <b class="uiTerm">0</b>,<b class="uiTerm">Y</b> is to be <b class="uiTerm">0</b>, and <b class="uiTerm">Z</b> is to be <b class="uiTerm">0.1</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverMakePortal.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert three <em>Interface</em> objects that enable our station to connect to other objects when we insert it into a simulation model. Name them <code>InPalette</code>, <code>InScrew</code> and <code>Out</code>. Connect <em>InScrew</em> with <em>Trestle</em>, <em>InPalette</em> with <em>PartCarrierStation</em>, and <em>PartCarrierStation</em> with <em>Out</em>. Move the <em>Interfaces</em> is far as possible to the inside of the <em>Stations</em> and hide their <b class="uiTerm">default</b> graphic on the tab <b class="uiTerm">Graphics</b>, as we probably won&rsquo;t need their graphics anymore. If you have trouble discerning the individual parts of the station, move them around a bit and then move them back to their original position after you moved the <em>Interfaces</em>. Also hide the <em>Connectors</em> by clicking <b class="uiTerm">Show Connections</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ConnectionsOffIcon.gif" border="0"> in the <b class="uiTerm">View</b> ribbon tab.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverInterfaces1.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id34781.html">Add Animations and Interactions to the Simulation Objects</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id62683.html">Test Our Station in the Simulation Model</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id11988.html">Fine-Tune Our Station</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id20438.html">Creating an Animatable Object</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id20438.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Creating an Animatable Object"></a><a class="link" href="id34781.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Add Animations and Interactions to the Simulation Objects"></a></span></div>
+   </body>
+</html>

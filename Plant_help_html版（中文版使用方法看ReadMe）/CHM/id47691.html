@@ -1,0 +1,105 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Set Parameters for Objects in Your Own Dialog</title>
+      
+      <meta name="MS-HKWD" content="Set Parameters for Objects in Your Own Dialog">
+      <meta name="MS-HKWD" content="Dialog">
+      <meta name="MS-HKWD" content="Dialog,example">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Set Parameters for Objects in Your Own Dialog</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id18086.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Setting Parameters in the Model"></a><a class="link" href="id35348.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Plan the Layout and the Structure of Your Dialog"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18086.html">Setting Parameters in the Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47691.html">Set Parameters for Objects in Your Own Dialog</a></span> &gt; <span class="simpleHTMLminitoc">Set Parameters for Objects in Your Own Dialog</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1738"></span><span id="ndxgenid_PlantSimulationENU_1739"></span><p class="para_topic">When you want to get information from the user of your simulation model, be it you yourself, a colleague in another department or one of your suppliers, you can create dialog windows, which look like the built-in <em>Plant Simulation</em> dialog windows and which work in the same way, too.
+         </p>
+         <p class="para_topic">With the object <a class="links" href="id87122.html">Dialog</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/dialogSm.gif" border="0"> you can:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Provide the user of your simulation model with a simple user interface for complex simulation models. This way you can ask the user to select or to enter information, which <em>Plant Simulation</em> needs to carry out a task.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Prevent the user from manipulating a <em>Frame</em> in which you modeled a complex machine, etc. To accomplish this, enter a <em>Method</em> object as an <b class="uiTerm">open control</b> for the <em>Frame</em> and insert a user-defined dialog with simulation settings into the <em>Frame</em>. When the user double-clicks the <em>Frame</em>, <em>Plant Simulation</em> will not open the <em>Frame</em> is such, but call the <em>Method</em> whose name you entered. The <em>Method</em> in turn executes the <b class="uiTerm">open control</b>, i.e., it opens a user-defined dialog, where the user can then select the settings for the simulation run. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can insert the <em>Dialog</em> into your simulation model from the folder <b class="uiTerm">UserInterface</b> in the <em>Class Library</em> or from the toolbar <b class="uiTerm">User Interface</b> in the <em>Toolbox</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/insDialog.gif"></p>
+         <p class="para_topic">Each <em>Dialog</em> object manages a single dialog window. If you need more than one user-defined dialog window in your simulation model, insert as many <em>Dialog</em> objects as you need <em>Dialogs</em>.
+         </p>
+         <p class="para_topic">You will:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id35348.html">Plan the Layout and the Structure of Your Dialog</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id45562.html">Design a Simple Dialog</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id86289.html">Design a Tabbed Dialog</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id62613.html">Program Actions which the Dialog Items Execute</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id26869.html">Program Actions for Interacting with the Dialog</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">In which order you go about creating the user-defined dialog is up to you and depends on your personal work habits. You can first design the layout and then do your programming. You have to program the actions, which the individual dialog items execute, and the actions, which <em>Plant Simulation</em> executes, when the user opens the user-defined dialog, when he clicks <b class="uiTerm">Apply</b>, and when he closes it. Or you can start programming and then design the layout. Or you can mix both techniques to achieve the best result. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <b class="uiTerm"> display window</b> of the object <em>Dialog</em> does not use the standard Siemens PLM theme, but your Windows theme.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/ContShowDialog2.gif"></p>
+         <p class="para_topic">The <b class="uiTerm"> dialog window</b> of the object <em>Dialog</em> uses the standard Siemens PLM theme.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/DialogDialogWindow.gif"></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id18086.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Setting Parameters in the Model"></a><a class="link" href="id35348.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Plan the Layout and the Structure of Your Dialog"></a></span></div>
+   </body>
+</html>

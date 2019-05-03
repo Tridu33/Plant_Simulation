@@ -1,0 +1,185 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Load Object</title>
+      
+      <meta name="MS-HKWD" content="Load Object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Load Object</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id38066.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Save Library As"></a><a class="link" href="id68974.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Load Object into Folder"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96990.html">Class Library</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54271.html">Context Menu of the Selected Object in the Class Library</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87355.html">Save/Load</a></span> &gt; <span class="simpleHTMLminitoc">Load Object</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_3040"></span>
+         
+         <p class="para_topicComponent">The context menu command <b class="uiTerm">Load Object</b> loads an object or a <em>Frame</em> (which you saved as an object file ( .obj) with the command <a class="links" href="id62073.html">Save Object As</a>) into the simulation model. 
+         </p>
+         
+         <p class="para_topicComponent">It also loads a library, which you saved as a library file ( .lib) with the command <a class="links" href="id87745.html">Make Library</a>, into the simulation model.
+         </p>
+         
+         <p class="para_topicComponent"><em>Plant Simulation</em>loads the object, with all of its existing paths and the folders, sub-folder and classes the objects inherit values from, into the <em>Class Library</em> at the <b class="uiTerm">Basis</b>level. It does not matter on which of the built-in folders, such as <b class="uiTerm">MaterialFlow</b>, <b class="uiTerm">MUs</b>, etc. you clicked, when you selected <b class="uiTerm">Load Object</b>. 
+         </p>
+         
+         <p class="para_topicComponent">The loaded object may contain classes, which already exist in the <em>Class Library</em>. To preserve the existing objects in your simulation model, and to discard duplicate objects that are contained in the model you load, you will use <b class="uiTerm">Load Object</b>, and then select to <b class="uiTerm">Replace the loaded class with the one in the class library</b>. 
+         </p>
+         
+         <p class="para_topicComponent">To port a lower version of a simulation model or of an application object library to a higher version with modified and improved classes, you will use <a class="links" href="id27053.html">Update Class Library</a>. 
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">Click any folder in the <em>Class Library</em> with the right mouse button. Select <b class="uiTerm">Load Object</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the object in the dialog <b class="uiTerm">Open</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If an object or a <em>Frame</em> with the same name as the object to be loaded already exists in your simulation model, <em>Plant Simulation</em> opens the dialog <b class="uiTerm">Replace or Rename Class</b>. 
+               </p>
+               
+            </li>
+         </ul>
+         
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/duplicateObject12.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/duplicateObject11.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">To <b class="uiTerm">Replace the new object with the one in the class library</b>, select this. Then, the program does not load the new object, but replaces it with the existing object and merges all inheritance hierarchies into one.
+         </p>
+         
+         <p class="para_topicComponent">To replace all duplicate objects, click <b class="uiTerm">Replace All</b>. 
+         </p>
+         
+         <p class="para_topicComponent">To <b class="uiTerm">Rename and keep the duplicate class</b>, select this. Then, enter a new name for the duplicate class object into the text box.
+         </p>
+         
+         <p class="para_topicComponent">Enter a new name for the duplicate object class into the text box.</p>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When the object to be replaced is a <em>Frame</em>, select <b class="uiTerm">General</b>
+    &gt; <a class="links" href="id92774.html">Replacement Mode</a> and then, if you want to <a class="links" href="id27599.html">Merge</a> the contents of the new <em>Frame</em> with the existing one or if you want to <a class="links" href="id22748.html">Exchange</a> the existing <em>Frame</em>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent">Repeat this until all duplicate objects are renamed or replaced. </p>
+         
+         <p class="para_topicComponent">If you are unsure if both classes are identical, we recommend that you enter a new name and compare the classes.</p>
+         
+         <p class="para_topicComponent">To <b class="uiTerm">Update the class library with the loaded object</b>, select this.
+         </p>
+         
+         <p class="para_topicComponent">You can still replace the objects at a later point in time:</p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">Hold down the <b class="uiTerm">Alt</b> key, click the replacing object and drag it over the object to be replaced while holding the left mouse button down. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When replacing and merging is possible, a dialog opens where you can confirm that you want to replace the object.</p>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent">Instead of using <b class="uiTerm">Load Object</b>, you can also drag an <em>obj</em> file from the Windows Explorer to the <em>Class Library</em>, and drop it there. 
+         </p>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If the loaded object does not contain existing 3D data, <em>3D</em> was not running when you saved the object. To also export 3D data, save the object again while <em>3D</em> is running. <em>3D</em> also has to be active in the model into which you load the object.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk:</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id65236.html">loadObjectAs</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id27510.html">autoexecLoadObj</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id99507.html">replace</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id99915.html">ReplacementMode</a></p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topics</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id62073.html">Save Object As</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id92774.html">Replacement Mode</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id38066.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Save Library As"></a><a class="link" href="id68974.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Load Object into Folder"></a></span></div>
+   </body>
+</html>

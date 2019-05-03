@@ -1,0 +1,101 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Using Inheritance</title>
+      
+      <meta name="MS-HKWD" content="Using Inheritance">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Using Inheritance</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Replacing_and_Merging_Objects_with_DragandDrop.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Replacing and Merging Objects with Drag-and-Drop"></a><a class="link" href="id24691.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Show Inheritance Relations in the Class Library"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id81197.html">Introducing Classes</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id33441.html">Using Inheritance</a></span> &gt; <span class="simpleHTMLminitoc">Using Inheritance</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_377"></span><p class="para_topic">Inheritance allows one class or object to incorporate data or behavior of another class or object. </p>
+         <p class="para_topic">Inheritance has a number of applications, among them:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Specialization</b> of existing classes or objects. Here, the new class or object has data or behavior aspects, which are not part of the inherited class. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Extension</b> to provide additional data or behavior features. In contrast to the case of specialization, with extension the new data or behaviors could have been provided in the inherited class because they are generally applicable to all instances of the class. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Code re-use</b> to allow a new class to re-use code, in our case any of the settings you selected, which already exists in another class. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The toggle button to the right of a dialog item activates or deactivates inheritance <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/inheritance.gif" border="0"> for that item in the dialogs of the <em>Plant Simulation</em> objects. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">A button that looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/toggleSelected_dup.gif" border="0"> means that inheritance is active. Then the object inherits, i.e., uses, the value from the origin object from which you derived it. When you modify the value of the origin object, <em>Plant Simulation</em> also modifies the value of the derived object.
+               </p>
+               
+               <p class="para_item">Let us illustrate this with an example. We derive the <em>Station</em> in the <em>Class Library</em> and insert it from the <em>Class Library</em> into the <em>Frame</em><em>Model1</em>. Then, we derive <em>Model2</em> from <em>Model1</em>. The origin of the <em>Station</em> in <em>Model2</em> is the <em>Station</em> in <em>Model1</em>. When we now change the value of an attribute that inherits its value in the <em>Station</em> in <em>Model1</em>, the <em>Station</em> in <em>Model2</em> also applies this value.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">A that looks like this button  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/toggleNotSelected_dup3.gif" border="0"> means that inheritance is not active. The values you enter only apply to the current object.
+               </p>
+               
+            </li>
+         </ul>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The object might display the current value only after you click <b class="uiTerm">Apply</b>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id24691.html">Show Inheritance Relations in the Class Library</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id91436.html">Show the Origin of an Object in the Class Library</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id56719.html">Classes, Subclasses, and Instances</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id98418.html">Working with Classes in the Class Library</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id81197.html">Introducing Classes</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Replacing_and_Merging_Objects_with_DragandDrop.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Replacing and Merging Objects with Drag-and-Drop"></a><a class="link" href="id24691.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Show Inheritance Relations in the Class Library"></a></span></div>
+   </body>
+</html>

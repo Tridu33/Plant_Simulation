@@ -1,0 +1,142 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Destination</title>
+      
+      <meta name="MS-HKWD" content="Destination">
+      <meta name="MS-HKWD" content="Destination,Transporter text box">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Destination</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id90919.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Automatic routing"></a><a class="link" href="id20085.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Route weighting attribute"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87822.html">Dialog Window of the Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48701.html">Tab Routing</a></span> &gt; <span class="simpleHTMLminitoc">Destination</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_9639"></span>
+         
+         <p class="para_topicComponent"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/destinationtextMU.gif" border="0"></p>
+         
+         <p class="para_topicComponent">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select the <b class="uiTerm">destination object</b> to which the <em>Transporter</em> drives. For the <em>Part</em> and the <em>Container</em> the destination object is the object to which the <em>Worker</em> carries the part. 
+         </p>
+         
+         <p class="para_topicComponent">The <em>Transporter</em> automatically finds the destination object which you entered, using the destination lists of the objects of type <em>Track</em>or <em>TwoLaneTrack</em>. When you activate <a class="links" href="id90919.html">Automatic routing</a>
+            <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/automaticRoutingcheckb.gif" border="0">, you do not need to define <b class="uiTerm">destination lists</b> at all. The <em>Transporter</em> will automatically find its <b class="uiTerm">destination</b> object. When a sensor, into which you entered this target object is the <a class="links" href="id44316.html#id65180">Destination</a>, can be reached on a shorter route than the destination object itself, then automatic routing directs the <em>Transporter</em> to this <em>sensor</em>. 
+         </p>
+         
+         <p class="para_topicComponent">When the <b class="uiTerm">destination</b> is a <em>TwoLaneTrack</em>, you can also select the <b class="uiTerm">destination lane</b>, <b class="uiTerm">A</b> or <b class="uiTerm">B</b>. 
+         </p>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For <em>tugger trains</em>
+                        <b class="uiTerm">automatic routing</b> only works, when you enter the <b class="uiTerm">Destination</b> into the <em>tractor</em>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <b class="uiTerm">destination</b> can also be an <em>Interface</em> or a <em>Frame</em>. When it is a <em>Frame</em>, the <em>Transporter</em> drives to the <em>Interface</em>, which can be reached on the shortest route.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent">You can also enter a table or a list as the <b class="uiTerm">Destination</b>. This list or table can be a <em>CardFile</em>, a <em>QueueFile</em>, a <em>StackFile</em>, or a <em>TableFile</em>, which you inserted into a <em>Frame</em>. It can also be a user-defined attribute or a <em>Variable</em> of data type <em>table</em>, <em>list</em>, <em>queue</em>, or <em>stack</em>. The list or table has to have the column type <em>object</em>. The <em>Transporter</em> then covers all <b class="uiTerm">destination objects</b> in the list or table one after the other.
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item"><em>TableFile</em> (<em>table</em>): <em>Plant Simulation</em> cyclically processes the <em>TableFile</em>. The <em>Transporter</em> always heads for the <b class="uiTerm">destination object</b>, which is located on the table row to which the attribute <a class="links" href="id24796.html">DestinationListRow</a> of the <em>Transporter</em> points.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">In most cases the <em>TableFile</em> will only have a single column. You can also enter any data into additional columns though.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>CardFile</em> (<em>list</em>): <em>Plant Simulation</em> treats the <em>CardFile</em> as a <em>TableFile</em> with one column.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>QueueFile</em> or <em>StackFile</em> (<em>queue</em> or <em>stack</em>): The <em>Transporter</em> always drives to the first object in the <em>QueueFile</em> or the <em>StackFile</em>. As soon as the <b class="uiTerm">destination</b> is reached, <em>Plant Simulation</em> removes the first object from the list. The <em>Transporter</em> then drives to the new first object in the list. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When the <em>Transporter</em> has reached its <b class="uiTerm">destination</b>, it immediately picks the next destination from the list or table. When the <b class="uiTerm">destination</b> was a <em>sensor</em>, <em>Plant Simulation</em> already determines the next <b class="uiTerm">destination</b> before the <b class="uiTerm">sensor</b>
+                              <a class="links" href="id44316.html#id66322">Control</a> is called. If you would like to set the <b class="uiTerm">immediate next destination</b> in the control, it does not suffice to change the list or table respectively, but you also have to reassign the attribute <em>Destination</em> of the <em>Transporter</em> afterwards.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk:</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id65518.html">Destination</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id24796.html">DestinationListRow</a></p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topics</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id21553.html">Create Sensors</a> in the <em>Step-by-Step Help</em></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id31061.html">Sensors</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id90919.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Automatic routing"></a><a class="link" href="id20085.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Route weighting attribute"></a></span></div>
+   </body>
+</html>

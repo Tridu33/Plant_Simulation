@@ -1,0 +1,223 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Shared Properties of the Material Flow Objects</title>
+      
+      <meta name="MS-HKWD" content="Shared Properties of the Material Flow Objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Shared Properties of the Material Flow Objects</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id42286.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Material Flow Objects"></a><a class="link" href="id43215.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Time Consumption"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">Shared Properties of the Material Flow Objects</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3347"></span><p class="para_topic"> All material flow objects share a number of the properties, which we describe here. You will find the object-specific properties in the sub-chapters of the corresponding objects. </p>
+         <p class="para_topic"> Moving and stationary material flow objects are the basic items you use, when you create a simulation model.</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> The <b class="uiTerm">moving material flow objects</b>
+                  <a class="links" href="id56005.html">Part</a>, <a class="links" href="id44788.html">Container</a>, and <a class="links" href="id42793.html">Transporter</a> represent the physical or logical parts moving through the model. These mobile objects (<em> MUs</em>) require active and passive material flow objects to process and transport them.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The <a class="links" href="id65865.html">Source</a> creates mobile objects at the beginning of the flow of materials and the <a class="links" href="id15363.html">Drain</a> removes them from the plant after the material flow objects have processed them. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The <b class="uiTerm">active material flow objects</b>
+                  <a class="links" href="id65865.html">Source</a>, <a class="links" href="id15363.html">Drain</a>, <a class="links" href="id18003.html">Station</a>, <a class="links" href="id29026.html">ParallelStation</a>, <a class="links" href="id95185.html">AssemblyStation</a>, <a class="links" href="id85371.html">DismantleStation</a>, <a class="links" href="id24372.html">Sorter</a>, <a class="links" href="id21426.html">PlaceBuffer</a>, and <a class="links" href="id47519.html">Buffer</a> receive <em> MUs</em>, process them for a certain time and then move them on to the next object along material flow connections. They represent work stations in a factory, such as a lathe or a drilling station, etc. They only differ in the number of <em>MUs</em> they can process, a single one or several, and in the way they process them, in series or in parallel. 
+               </p>
+               
+               <p class="para_item"> The <b class="uiTerm">active length-oriented objects</b>
+                  <a class="links" href="id74072.html">AngularConverter</a>, <a class="links" href="id41205.html">Converter</a>, <a class="links" href="id60466.html">Conveyor</a>, <a class="links" href="id63264.html">Turntable</a>, and <a class="links" href="id46256.html">Turnplate</a> are used for transporting systems moving <em>MUs</em> at a given speed over a given distance.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The <b class="uiTerm">passive material flow objects</b>
+                  <a class="links" href="id54257.html">Store</a>, <a class="links" href="id37562.html">Track</a>, <a class="links" href="id73650.html">TwoLaneTrack</a> do not automatically move <em>MUs</em> on to their successor. An <em>MU</em> remains in the <em> Store</em> until it is removed, for example by employing a <a class="links" href="id25909.html">Method</a> object. You can only use the <em>Track</em> and <em>TwoLaneTrack</em> in a meaningful way together with the <a class="links" href="id42793.html">Transporter</a>, which moves along the <em> Track/TwoLaneTrack</em> with the speed you set. You can model diverging and converging strategies with the <a class="links" href="id94577.html">FlowControl</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <em>Plant Simulation</em> uses the <b class="uiTerm">push-block principle</b> when moving goods from station to station, either along the connections you established with the <a class="links" href="id29001.html">Connector</a> or by employing a <em> method</em>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> Suppose <em>Station1</em> is the first station in the sequence of stations in your model, <em>Station2</em> is the second station, <em>MU1</em> is the first mobile object that entered the flow of materials, <em>MU2 </em> is the second mobile object. Suppose <em>MU1</em> is located on <em>Station2</em>, and <em> MU2</em> is located on <em> tation1</em> and wants to move to <em> Station2</em>. 
+         </p>
+         <p class="para_topic"> Once <em>MU2</em> is completely processed by <em>Station1</em>, <em>MU2</em> notifies <em>Station2</em> that it intends to move to it. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> When <em>Station2</em> can receive <em>MU2</em>, it notifies <em>MU2</em>, and <em>MU2</em> moves from <em>Station1</em> to <em>Station2</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> When <em> Station2</em> cannot receive <em> MU2</em> because it is busy, its entrance is locked, etc., <em>MU2 </em> enters itself into the <a class="links" href="id69726.html">Forward Blocking List</a> of <em> Station2</em> and of all other stations it intends to move to. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> When <em> MU1</em> exits <em> Station2</em>, <em> Station2</em> schedules an <b class="uiTerm">Out</b> event for all entries, i.e., <em>MUs</em>, in the <b class="uiTerm">forward blocking list</b>, including <em> MU2</em>. Afterwards <em> Station2</em> deletes all entries from its <b class="uiTerm">forward blocking list</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Provided <em>Station2</em> can receive <em>MU2</em>, <em>MU2</em> deletes all references to itself from all blocking lists of all stations it entered itself into, and then moves to <em>Station2</em>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm"> Related Topics</b>
+            
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43215.html"> Time Consumption</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id23074.html"> Statistics of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id73857.html"> Controls</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id64129.html"> Times and Distributions</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id53612.html"> Capacity</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id18479.html"> Methods of All Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43007.html"> Behavior of Blocked Objects</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id16415.html"> Attributes of All Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id31506.html"> Standard Transfer Behavior</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id97171.html"> Methods of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id12533.html"> Dialog Items of the Objects</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id15305.html"> Attributes of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id46055.html"> States and Icons of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id42286.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Material Flow Objects"></a><a class="link" href="id43215.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Time Consumption"></a></span></div>
+   </body>
+</html>

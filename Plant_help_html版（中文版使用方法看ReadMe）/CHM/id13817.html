@@ -1,0 +1,162 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>writeElement</title>
+      
+      <meta name="MS-HKWD" content="writeElement">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">writeElement</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id45371.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:write"></a><a class="link" href="xid1389027.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Read-Only Attributes of the XMLInterface"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id33154.html">XMLInterface</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id28214.html">Methods of the XML Interface</a></span> &gt; <span class="simpleHTMLminitoc">writeElement</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11716"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.writeElement(Name:string,Value:string) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>writeElement</em> writes the item and closes it at the same time. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Name</em> of data type <em>string</em> designates the name of the item.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Value</em> of data type <em>string</em> designates the value of the item.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">It applies when you sequentially access data. </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- demonstrate how to sequentially write an XML file
+MyXMLInterface.filename := &quot;D:\MSXML 4.0\writeSequ.xml&quot;
+-- open the XML document for sequential writing
+MyXMLInterface.openWrite
+MyXMLInterface.startElement(&quot;catalog&quot;)
+     MyXMLInterface.startElement(&quot;book&quot;)
+     -- add attributes to the 'book' item'
+     MyXMLInterface.addAttribute(&quot;id&quot;, &quot;bk01&quot;)
+     MyXMLInterface.addAttribute(&quot;xmlns&quot;, &quot;myBooks&quot;)
+     MyXMLInterface.addAttribute(&quot;xmlns:aa&quot;, &quot;specAth&quot;)
+-- these are the children of the 'book' item
+     MyXMLInterface.writeElement(&quot;aa:author&quot;, &quot;Gambardella, Matthew&quot;)
+           -- add an attribute to the 'author' item
+       MyXMLInterface.addAttribute(&quot;age&quot;, &quot;16&quot;)
+       MyXMLInterface.writeElement(&quot;title&quot;, &quot;XML Developer's Guide&quot;)
+       MyXMLInterface.writeElement(&quot;genre&quot;, &quot;Computer&quot;)
+           MyXMLInterface.writeElement(&quot;price&quot;, &quot;44.95&quot;)
+           MyXMLInterface.writeElement(&quot;publish_date&quot;, &quot;2000-10-01&quot;)
+           MyXMLInterface.writeElement(&quot;description&quot;, &quot;An in-depth ...&quot;)
+      -- terminate the item 'book'
+      MyXMLInterface.endElement
+-- terminate the item 'catalog
+MyXMLInterface.endElement
+MyXMLInterface.close</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id45371.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:write"></a><a class="link" href="xid1389027.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Read-Only Attributes of the XMLInterface"></a></span></div>
+   </body>
+</html>

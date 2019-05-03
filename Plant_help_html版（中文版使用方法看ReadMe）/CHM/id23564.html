@@ -1,0 +1,228 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ChangePathCtrl</title>
+      
+      <meta name="MS-HKWD" content="ChangePathCtrl">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">ChangePathCtrl</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id40774.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:AvailableCtrl"></a><a class="link" href="id30077.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:CloseCtrl"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id16415.html">Attributes of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17950.html">Attributes for Controls of All Objects</a></span> &gt; <span class="simpleHTMLminitoc">ChangePathCtrl</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4391"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.ChangePathCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>ChangePathCtrl</em> designates a <em>Method</em> object, which <em>Plant Simulation</em> calls:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When the name of a <em>Folder</em> or a <em>Frame </em> changes. The control is called for all objects contained in the <em>Folder</em> or <em>Frame</em>. The anonymous identifier @ points to the renamed object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you move a <em>Folder</em> or a <em>Frame</em>. The control is called for all objects contained in the <em>Folder</em> or <em>Frame</em>.
+               </p>
+               
+               <p class="para_item">Within the <em>Method </em> you can access the moved object with the anonymous identifier question mark (?). 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Not each <em>Move</em> action actually moves the object. When you move an object from one <em>Frame</em> to another, <em>Plant Simulation</em> deletes the object from its source <em>Frame</em> and creates a new object in the target <em>Frame</em>. When you enter an empty string (&quot;&quot;) as location, <em>Plant Simulation</em> interprets this as the top level in the hierarchy of objects, as the object <b class="uiTerm">basis</b>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <p class="para_topic">The program passes three parameters to the <em>Method</em> that is called:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>PreviousLocation</em> of data type <em>string</em> designates the previous location of the object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>NewLocation</em> of data type <em>string</em> designates the new location of the object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>ManualChange</em> of data type <em>boolean</em> indicates if you change the path of the object manually (<code>true</code>) or with a <em>Method</em> (<code>false</code>).
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">A <b class="uiTerm">change path control</b> might look like this:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param oldPath,newPath: string, manually: boolean
+
+print oldPath
+print newPath
+print manually</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>method</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">ParallelStation.ChangePathCtrl := &amp;myChangePathCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id13190.html">Change path control MyPlantAnytown.spp</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id40774.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:AvailableCtrl"></a><a class="link" href="id30077.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:CloseCtrl"></a></span></div>
+   </body>
+</html>

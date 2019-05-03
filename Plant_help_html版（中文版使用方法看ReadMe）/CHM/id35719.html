@@ -1,0 +1,92 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Set-up control</title>
+      
+      <meta name="MS-HKWD" content="Set-up control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Set-up control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id64481.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Backward exit control"></a><a class="link" href="id88489.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Pull control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id33317.html">Tab Controls</a></span> &gt; <span class="simpleHTMLminitoc">Set-up control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3486"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/setupcontrol.gif" border="0"></p>
+         <p class="para_topic">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object into which you entered the source code of the <b class="uiTerm">set-up control</b>. <em>Plant Simulation</em> activates it, whenever a set-up process starts or ends. The control will also be called, when set up is interrupted.
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm">Parameter</b>
+            
+         </p>
+         <p class="para_topic">The optional parameter <em>SetupStart</em> of data type <em>boolean</em> shows the user if setting-up starts or ends. 
+         </p>
+         <p class="para_topic">The <b class="uiTerm">standard set-up control</b> looks like this:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/OnSetup.gif"></p>
+         <p class="para_topic">Or you can select the <em>Method</em> in a <em>Frame</em>, drag it to the text box and drop it there.
+         </p>
+         <p class="para_topic">Instead, you can also right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>, such as <code>self.SetUpControlEnginePlant</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts<code>self.OnBuilt_in_name_of_the_control</code>, such as <code>self.OnSetUp</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, click in the text box, and press the <b class="uiTerm">F2</b> key. 
+                           </p>
+                           
+                           <p class="para_note_body">Enter the <code>name_of_the_Method</code>, to call a <em>Method</em> in the <em>Frame</em> into which you inserted the object. Enter <a class="links" href="id43255.html">self</a>
+                              <code>.name_of_the_Method</code>, to call a user-defined attribute of data type <em>method</em>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id85330.html">SetupCtrl</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id64481.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Backward exit control"></a><a class="link" href="id88489.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Pull control"></a></span></div>
+   </body>
+</html>

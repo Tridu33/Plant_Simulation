@@ -1,0 +1,135 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Produce the Number of Parts You Need</title>
+      
+      <meta name="MS-HKWD" content="Produce the Number of Parts You Need">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Produce the Number of Parts You Need</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id36890.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Produce Parts According to a Percentage Entered into a Table"></a><a class="link" href="id90117.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Produce Parts Using a Trigger Object"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id55614.html">Producing Parts with the Source</a></span> &gt; <span class="simpleHTMLminitoc">Produce the Number of Parts You Need</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_513"></span><p class="para_topic">To produce a certain number of <em>MUs</em> during the interval you define:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Time of creation</b> &gt; <b class="uiTerm">Number Adjustable</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the <b class="uiTerm">Amount</b>, i.e., the number of <em>MUs</em> to be created. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When you enter a very large <b class="uiTerm">Amount</b> of <em>MUs</em>, the list of <em>MUs</em> to be created, including the time of generation, is very long also, which might result in a large consumption of memory. The <em>Source</em> creates the amount of <em>MUs</em> at the different times, which the random number generator generated at the beginning of the simulation. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the <b class="uiTerm">Creation times</b>, which determine the points in time at which the <em>Source</em> creates the <em>MUs</em>. 
+               </p>
+               
+               <p class="para_item">Select a distribution from the drop-down list <b class="uiTerm">Creation times</b> and enter the values that the distribution requires into the text box.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">As opposed to <b class="uiTerm">Interval Adjustable</b>, here the <b class="uiTerm">Creation times</b> are a range, within which the <em>Source</em> creates <em>MUs</em>, and not a repeating interval. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When you select the <b class="uiTerm">Constant</b> distribution, the <em>Source</em> creates the number of <em>MUs</em> all at one point in time, as here the <b class="uiTerm">Creation times</b> are a point in time, not a range! 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">For this setting you cannot select <b class="uiTerm">Sequence</b> from the drop-down list MU selection .
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">OK</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/source3.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When you select <b class="uiTerm">Time of creation</b> &gt; <b class="uiTerm">Interval Adjustable</b> or <b class="uiTerm">Time of creation</b> &gt; <b class="uiTerm">Number Adjustable</b> you can also select how the <em>Source</em> produces which types of <em>MUs</em>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id30372.html">Produce a Single Part Type Only</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id35470.html">Produce Parts in a Fixed Sequence Over and Over Again</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id67238.html">Produce Parts in a Fixed Sequence One Time Only</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id41202.html">Produce Parts According to a Random Frequency Entered into a Table</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id67622.html">Enter Times</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id55614.html">Producing Parts with the Source</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id36890.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Produce Parts According to a Percentage Entered into a Table"></a><a class="link" href="id90117.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Produce Parts Using a Trigger Object"></a></span></div>
+   </body>
+</html>

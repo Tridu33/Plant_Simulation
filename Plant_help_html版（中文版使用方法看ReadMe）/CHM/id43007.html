@@ -1,0 +1,58 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Behavior of Blocked Objects</title>
+      
+      <meta name="MS-HKWD" content="Behavior of Blocked Objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Behavior of Blocked Objects</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id53612.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Capacity"></a><a class="link" href="id31506.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Standard Transfer Behavior"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">Behavior of Blocked Objects</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3357"></span><p class="para_topic">A material flow object, whose capacity is exhausted, will reject any <em>MUs</em> attempting to move onto it. It then enters these <em>MUs</em> into its <a class="links" href="id69726.html">Forward Blocking List</a>, its <a class="links" href="id12649.html">Backward Blocking List</a>, or its <a class="links" href="id74394.html">Exit Blocking List</a>. The first <em>MU</em> entered in the list will also be the first to be processed after the blockage is removed. The <em>EventController</em> informs the first <em>MU</em> in the list, when a processed <em>MU</em> exits a material flow object and it thus is ready to receive the next one.
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id97121.html">bwBlockList</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id57288.html">exitBlockList</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id47949.html">fwBlockList</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id95684.html">Entrance locked</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id63624.html">Exit locked</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id53612.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Capacity"></a><a class="link" href="id31506.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Standard Transfer Behavior"></a></span></div>
+   </body>
+</html>

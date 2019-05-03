@@ -1,0 +1,75 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Relative Occupation</title>
+      
+      <meta name="MS-HKWD" content="Relative Occupation">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Relative Occupation</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id43296.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Empty"></a><a class="link" href="id37822.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Statistics Report"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id23074.html">Statistics of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id34504.html">Resource Statistics</a></span> &gt; <span class="simpleHTMLminitoc">Relative Occupation</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3903"></span><p class="para_topic">The <em>relative occupancy</em> is determined by the sum of all dwelling times of all <em>MUs</em> during the statistics collection period during which the object was not <a class="links" href="id85942.html">Paused</a> and not <a class="links" href="id29588.html">Failed</a>, divided by the capacity and the entire statistics collection period without counting pauses and failures. The return value 0 stands for 0 percent, the return value 1 stands for 100 percent.
+         </p>
+         <p class="para_topic">Take a <em>ParallelStation</em> for example with four processing stations that processes a single <em>MU</em> during the entire statistics collection period. It has a relative occupancy of 25 percent. 
+         </p>
+         <p class="para_topic">You can also use this method to compute the average waiting time of an MU: </p><pre class="indent">EventController.SimTime * Buffer.StatRelativeOccupation * Buffer.Capacity / Buffer.StatNumIn </pre><p class="para_topic"><b class="uiTerm">Relative Occupation with Interruptions</b></p>
+         <p class="para_topic">The <em>relative occupancy with interruptions</em> is the sum of all dwelling times of all <em>MUs</em> on the object during the statistics collection period, divided by the capacity and the entire statistics collection period.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id16207.html">Tab Statistics</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43108.html">StatRelativeOccupationIR</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id23524.html">StatRelativeOccupation</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id43296.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Empty"></a><a class="link" href="id37822.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Statistics Report"></a></span></div>
+   </body>
+</html>

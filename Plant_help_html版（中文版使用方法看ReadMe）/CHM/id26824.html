@@ -1,0 +1,258 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The for-loop</title>
+      
+      <meta name="MS-HKWD" content="for-loop">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">The for-loop</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id96140.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The repeat-loop"></a><a class="link" href="id13554.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Exit a Loop with exitLoop"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Control_Flow_Statements_1.html">Control Flow Statements</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id32519.html">Loops</a></span> &gt; <span class="simpleHTMLminitoc">The for-loop</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13825"></span><p class="para_topic">You can use the <code>for</code>-loop to comfortably iterate a range between a start value and an end value. The loop declares a loop variable of data type <em>integer</em>. The loop variable is initialized with a start value. At the end of the loop the loop variable is automatically increased by 1. The loop is executed as long as the loop variable is less than or equal to the end value. When the end value is less than the start value, <em>Plant Simulation</em> does not execute the loop at all. 
+         </p>
+         <p class="para_topic">The loop variable is only visible within the loop. After the loop you cannot access the loop variable any more.</p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For performance reasons <em>Plant Simulation</em> evaluates the start value and end value only once!
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">for var y := 1 to table.yDim 
+   print table[1,y]
+next</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">You can use the keyword <code>downto</code> instead of the keyword <code>to</code> to iterate a range backwards. <em>Plant Simulation</em> reduces the loop variable by 1 each time. <em>Plant Simulation</em> executes the loop as long as the loop variable is greater than or equal to the end value. When the end value is greater than the start value, <em>Plant Simulation</em> does not execute the loop at all.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">for var y := table.yDim downto 1 
+   print table[1,y]
+next </pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The loop variable is only visible within the loop. Outside of the loop the identifier instead points to an object with this name if this object exists, for example to a <em>global variable</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- the loop variable 'i' is only visible inside of the loop
+for var i := 1 to ParallelStation.NumMU 
+   print ParallelStation.MU(i)
+next
+
+print i -- the loop variable is not visible here, so 'i' must be the name of an object
+
+-- another loop with its own loop variable 'i'
+for local i := ParallelStation.NumMU downto 1 
+   print ParallelStation.MU(i)
+next
+
+-- the local variable 'i' is visible from here to the end of the source code
+var i := 1.234
+print i -- prints 1.234
+
+for var i := 1 to 10  -- does not compile, because 'i' is already declared
+next</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> If you want to, you can also use a local variable of data type <em>integer</em> as loop variable. Then omit the keyword <code>var</code> or local respectively.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var y: integer
+for y := Table.yDim downto 1 
+   if Table[1,y] &gt; 100
+      exitloop
+   end
+next
+print y -- outputs the index of the first table value greater than 100</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><b class="uiTerm">Edit</b> ribbon tab of the <em>Method</em> &gt;
+   <b class="uiTerm">Select Template</b> &gt; <a class="links" href="id39835.html">for-next</a></p>
+         <p class="para_topic"><a class="links" href="id13554.html">Exit a Loop with ExitLoop</a></p>
+         <p class="para_topic"><a class="links" href="xid1188064.html">continue</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id96140.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The repeat-loop"></a><a class="link" href="id13554.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Exit a Loop with exitLoop"></a></span></div>
+   </body>
+</html>

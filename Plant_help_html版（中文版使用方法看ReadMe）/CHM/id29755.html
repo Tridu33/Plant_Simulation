@@ -1,0 +1,288 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Model Processing and Set-up Jobs</title>
+      
+      <meta name="MS-HKWD" content="Model Processing and Set-up Jobs">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Model Processing and Set-up Jobs</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id60503.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model Processing Jobs"></a><a class="link" href="id85153.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Modeling a Shift System"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18156.html">Modeling Workers and the Jobs They Do</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id86904.html">Model Workers with Importer, Broker and Exporter</a></span> &gt; <span class="simpleHTMLminitoc">Model Processing and Set-up Jobs</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_816"></span><p class="para_topic">In our example we will demonstrate how to model jobs, which process parts and which set the station up to process these different types of parts. </p>
+         <p class="para_topic">The <a class="links" href="id93899.html">Exporter</a> provides the services, while the <a class="links" href="id19366.html">Broker</a> assigns the <em>Exporter</em> to the station, which we here model with the object <a class="links" href="id18003.html">Station</a>. All stations need the service <code> Setup</code>, which <em>Exporter3</em> provides, for setting the station up for a new part type. <em>Station1</em> and <em>Station3</em> both require the <em>Exporter</em> named <em>Exporter1</em>, which provides the services <code>Job1</code> and <code>Job1</code>. The station <em>Station2</em> requires the service <code>Job2</code>, which <em>Exporter2</em> provides. 
+         </p>
+         <p class="para_topic">To model this, we proceed like this:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert a <em>Source</em>, three <em>Stations</em> , and a <em>Drain</em>. Connect them. Then, insert three <em>Exporters</em>, a <em>Broker</em>, a table, which contains the products, and an <em>EventController</em>. Finally, insert a <em>Method</em>, name it <code>Reset</code> and enter <code> deleteMovables;</code> as source code. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPS1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">First we have to tell the <em>Source</em> which type of part and how many of them we want it to create. Open the <em>Source</em> and select <b class="uiTerm">MU selection</b>
+    &gt; <b class="uiTerm">Sequence Cyclical</b>. Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> next to <b class="uiTerm">Table</b> and select the name of the table, which contains the products. This is the table, which we inserted above.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPSS1.gif"></p>
+               
+               <p class="para_item">Double-click the table, <code> Products</code> in our example, and enter the name of the <em>MU</em> class into the column <b class="uiTerm">MU</b>. Enter the amount of parts to be created into the column <b class="uiTerm">Number</b>, and the name of the part into the column <b class="uiTerm">Name</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPSS2.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open <em>Station1</em> and click the tab <b class="uiTerm">Importer</b>. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Select the check box <b class="uiTerm">Active</b> on the <a class="links" href="id67770.html"> Sub-tab Processing</a>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click the toggle button to the right of <b class="uiTerm">Services</b>, so that it looks like this <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ServicesButtNoInherit.gif" border="0">.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <b class="uiTerm">Services</b> and enter <code>Job1</code> into the column <b class="uiTerm">Service</b>. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPS12.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the <em>Broker</em>, which procures the services, <em>MyBroker</em> in our example.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click the <a class="links" href="id20536.html">Sub-tab Set-up</a>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Clear the check box <a class="links" href="id99727.html">Common resources</a>. Deactivate inheritance for the resources: Click the toggle button to the right of Services , so that it looks like this <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ServicesButtNoInherit.gif" border="0"></p>
+                     
+                     <p class="para_item">Click Services and enter <code>Setup</code> into the column Service.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerps12Setup.gif"></p>
+                     
+                     <p class="para_item">The name of the service is not case-sensitive, just like the names of <em>attributes</em> and <em>methods</em> of the objects are not case-sensitive.
+                     </p>
+                     
+                     <p class="para_item">To save memory and improve access speed, all places which are using such an case-insensitive string are pointing to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing.</p>
+                     
+                     <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the <em>Broker</em>, which procures the services, <em>MyBroker</em> in our example.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open <em>Station2</em> and click the tab <b class="uiTerm">Importer</b>. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Select the check box <b class="uiTerm">Active</b> on the <a class="links" href="id67770.html">Sub-tab Processing</a>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click the toggle button to the right of <b class="uiTerm">Services</b>, so that it looks like this <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ServicesButtNoInherit.gif" border="0"> .
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <b class="uiTerm">Services</b> and enter <code>Job2</code> into the column <b class="uiTerm">Service</b>. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPS2.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the <em>Broker</em>, which procures the services, <em>MyBroker</em> in our example.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click the <a class="links" href="id20536.html">Sub-tab Set-up</a>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Clear the check box <a class="links" href="id99727.html">Common resources</a>. Deactivate inheritance for the resources: Click the toggle button to the right of <b class="uiTerm">Services</b>, so that it looks like this <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ServicesButtNoInherit.gif" border="0"></p>
+                     
+                     <p class="para_item">Click <b class="uiTerm">Services</b> and enter <code>Setup</code> into the column <b class="uiTerm">Service</b>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPS2Setup.gif"></p>
+                     
+                     <p class="para_item">The name of the service is not case-sensitive, just like the names of <em>attributes</em> and <em>methods</em> of the objects are not case-sensitive.
+                     </p>
+                     
+                     <p class="para_item">To save memory and improve access speed, all places which are using such an case-insensitive string are pointing to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing.</p>
+                     
+                     <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the <em>Broker</em>, which procures the services, <em>MyBroker</em> in our example.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Open <em>Station3</em> and click the tab <b class="uiTerm">Importer</b>. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item"> Select the check box <b class="uiTerm">Active</b>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click the toggle button to the right of <b class="uiTerm">Services</b>, so that it looks like this <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ServicesButtNoInherit.gif" border="0">.
+                     </p>
+                     
+                     <p class="para_item">Click <b class="uiTerm">Services</b> and enter <code>Job3</code> into the column <b class="uiTerm">Service</b>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPS3.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the <em>Broker</em>, which procures the services, <em>MyBroker</em> in our example.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click the <a class="links" href="id20536.html">Sub-tab Set-up</a>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Clear the check box <a class="links" href="id99727.html">Common resources</a>. Deactivate inheritance for the resources: Click the toggle button to the right of <b class="uiTerm">Services</b>, so that it looks like this <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ServicesButtNoInherit.gif" border="0"></p>
+                     
+                     <p class="para_item">Click <b class="uiTerm">Services</b> and enter <code>Setup</code> into the column <b class="uiTerm">Service</b>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPS3Setup.gif"></p>
+                     
+                     <p class="para_item"> The name of the service is not case-sensitive, just like the names of <em>attributes</em> and <em>methods</em> of the objects are not case-sensitive.
+                     </p>
+                     
+                     <p class="para_item"> To save memory and improve access speed, all places which are using such an case-insensitive string are pointing to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing.</p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the <em>Broker</em>, which procures the services, <em>MyBroker</em> in our example.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Next, we have tell the <em>Exporters</em>, which services they have to provide and which <em>Broker</em> procures the services. Open <em>Exporter1</em>. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item"> Deactivate inheritance for the services: Click the toggle button to the right of <b class="uiTerm">Services</b>, so that it looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/toggleNotSelected_dup3.gif" border="0">. Click <b class="uiTerm">Services</b> and enter <code>Job1</code> and <code>Job3</code> into the column <b class="uiTerm">Services</b> of the service list.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the <em>Broker</em> , which procures the services, <em>MyBroker</em> in our example.
+                     </p>
+                     
+                     <p class="para_item">The name of the service is not case-sensitive, just like the names of <em>attributes</em> and <em>methods</em> of the objects are not case-sensitive.
+                     </p>
+                     
+                     <p class="para_item">To save memory and improve access speed, all places which are using such an case-insensitive string are pointing to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing.</p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPSExp1.gif"></p>
+                     
+                     <p class="para_item">Repeat this for <em>Exporter2. </em> Enter <code>Job2</code> into the column Services of the service list.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPSExp2.gif"></p>
+                     
+                     <p class="para_item">Repeat this for <em>Exporter3. </em> Enter <code> Setup</code> into the column Services of the service list.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/brokerPSExp3.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Finally, open the <em>EventController</em> and click <b class="uiTerm">Start</b>. As the <em>Exporter</em> can only work at one station at a time, and because the stations <em>Station1</em> and <em>Station3</em> share <em>Exporter1</em>, short standstills occur. <em>Station1</em> has to wait until <em>Station3</em> releases <em>ExporterJob1</em>, and thus is blocked. <em>Station3</em> in turn has to wait until <em>Station1</em> releases <em>Exporter1</em>, and thus is <a class="links" href="id84863.html">Waiting</a>. All stations receive the service <code>Setup</code> from <em>Exporter3</em>, which does not cause a problem as it is needed once only for each station. 
+               </p>
+               
+               <p class="para_item">You can also click the tab <b class="uiTerm">Statistics</b> and view the most important data, which the object collected.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id60503.html"> Model Processing Jobs</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id86904.html"> Model Workers with Importer, Broker and Exporter</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id60503.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model Processing Jobs"></a><a class="link" href="id85153.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Modeling a Shift System"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ResStatOn</title>
+      
+      <meta name="MS-HKWD" content="ResStatOn">
+      <meta name="MS-HKWD" content="ResStatOn,material flow objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">ResStatOn</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id13020.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ResourceType"></a><a class="link" href="id25257.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Attributes for Controls of the Material Flow Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id34354.html">Attributes for Statistics Values of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">ResStatOn</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5011"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.ResStatOn</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The attribute <em>ResStatOn</em> activates statistics collection of the object designated by Path (<code>true</code>) or deactivates it (<code>false</code>). The attribute is inherited, so if you want to turn statistics collection on or off for all instances of a class, assign <code>true</code> or <code>false</code> to <em>ResStatOn</em>.
+         </p>
+         <p class="para_topic"> As opposed to the method <a class="links" href="id65659.html">InitStat</a> the attribute does not set the point in time at which statistics collection starts.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic"> You can assign a value of data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if MyStation.ResStatOn = true 
+   print MyStation.waitingPortion
+end
+.ParallelStation.ResStatOn := false -- also deactivates statistics collection for all instances that inherit values</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="idResource_Statistics.html">Resource statistics</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id13020.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ResourceType"></a><a class="link" href="id25257.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Attributes for Controls of the Material Flow Objects"></a></span></div>
+   </body>
+</html>

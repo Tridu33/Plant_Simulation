@@ -1,0 +1,170 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Stop</title>
+      
+      <meta name="MS-HKWD" content="Stop">
+      <meta name="MS-HKWD" content="Stop,failure">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Stop</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id80430.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Start"></a><a class="link" href="id34057.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Interval"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14973.html">Tab Failures</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id80954.html">New</a></span> &gt; <span class="simpleHTMLminitoc">Stop</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3450"></span><p class="para_topic">Select a distribution for the time at which the <b class="uiTerm">last failure</b> of this <em>failure profile</em> will take place. Enter the values, which that distribution requires, into the text box. <em>Plant Simulation</em> shows these values above the list of distributions which you can select.
+         </p>
+         <p class="para_topic">You can also enter a <a class="links" href="id90935.html">Formula</a> in which you can access the anonymous identifier @. When the object is still failed when the program reaches the <b class="uiTerm">Stop</b> time, the failure will last for the <a class="links" href="id57503.html">Duration</a> you selected. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you enter <code>0</code>, <em>Plant Simulation</em> creates new failures infinitely. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you change failure settings, we recommend to first clear the check box <b class="uiTerm">Active</b> and to then click <b class="uiTerm">Apply</b>. Then, change your settings, apply them, and select the check box <b class="uiTerm">Active</b> again. This ensures that the next <b class="uiTerm">failure event</b> (<a class="links" href="id60343.html#id80865">DisruptionBegin</a>/<a class="links" href="id60343.html#id65221">DisruptionEnd</a>) will be calculated with a complete valid set of parameters.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/tabFailures2.gif"></p>
+         <p class="para_topic">
+            <b class="uiTerm">Data Type of the Value You Can Assign</b>
+            
+         </p>
+         <p class="para_topic">You can assign a value of data type <em>time</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic">Failures.NameOfFailureProfile.<a class="links" href="id44176a.html">Stop</a>
+            
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <a class="links" href="id37256.html">Format of Time and Date</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <a class="links" href="id65040.html">Empirical Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <a class="links" href="id64129.html">Times and Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <a class="links" href="id24449.html">User-defined Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <a class="links" href="id32650.html">Probability Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <a class="links" href="id29794.html">Bounding Probability Distribution Functions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <a class="links" href="id31886.html">Distribution Functions</a> in <em>SimTalk</em>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id80430.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Start"></a><a class="link" href="id34057.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Interval"></a></span></div>
+   </body>
+</html>

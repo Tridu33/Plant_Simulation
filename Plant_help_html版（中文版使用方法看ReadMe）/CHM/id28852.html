@@ -1,0 +1,175 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>findAttr</title>
+      
+      <meta name="MS-HKWD" content="findAttr">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">findAttr</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id53732.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:asString"></a><a class="link" href="id12375.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:maxAttr"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42077.html">Methods of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69974.html">Methods for Indirectly Accessing Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc">findAttr</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10300"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.findAttr([Range:listrange,] AttributeName:string, Value:any) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>findAttr</em> searches for an object, which contains the attribute with the passed name and passed attribute value, in a <em>List/Table</em>. 
+         </p>
+         <p class="para_topic">The method <em>findAttr </em> only searches in columns of data type <em>object</em>, i.e, it ignores columns with other data types. The method finds built-in attributes as well as user-defined attributes. If you just want to search for an object, which has this attribute, independent of the attribute value, then enter VOID as the value to be searched for. 
+         </p>
+         <p class="para_topic">The method starts its search at the position of the internal pointer of the <em>List/Table</em>. When the method finds such an object, then the method sets the internal pointer to the respective cell and returns true. When the method does not find such an object starting at the position of the internal pointer, it returns false.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>Range</em> of data type <em>listrange</em> designates the range which you would like to search. If you do not pass this parameter, <em>Plant Simulation</em> searches the entire <em>Table</em>. You can also specify several list ranges, all of which the method then searches.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>AttributeName</em> of data type <em>string</em> designates the name of the attribute to be searched for. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Value</em> of data type <em>any</em> designates the value of the attribute for which you are searching. When <em>Plant Simulation</em> finds this value, it terminates the search. When you enter VOID as value, the search ends when an attribute with the name of the parameter <em>string</em> is found. The method sets the internal pointer to the entry of the object and returns true. When the value does not match, the method continues searching. When it does not find a matching entry, it returns false.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The search for attribute names and attribute values is not case sensitive.</p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var wanted: object,
+var row,column: integer 
+MyCardFile.Cursor := 1
+if MyCardFile.findAttr(&quot;color&quot;, &quot;red&quot;) 
+   wanted := MyCardFile.read(MyCardFile.Cursor)
+end
+table.CursorX := 1 table.CursorY := 1
+if table.findAttr({1,1}..{4,4},&quot;order&quot;,VOID) 
+   column := table.CursorX 
+   row := table.CursorY print table[column,row].order
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id29006.html">CursorX</a></p>
+         <p class="para_topic"><a class="links" href="id67770.html">CursorY</a></p>
+         <p class="para_topic"><a class="links" href="id48503.html">Cursor</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id53732.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:asString"></a><a class="link" href="id12375.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:maxAttr"></a></span></div>
+   </body>
+</html>

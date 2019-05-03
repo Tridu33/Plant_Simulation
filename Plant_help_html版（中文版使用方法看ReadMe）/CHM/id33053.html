@@ -1,0 +1,125 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Distance control</title>
+      
+      <meta name="MS-HKWD" content="Distance control">
+      <meta name="MS-HKWD" content="Distance">
+      <meta name="MS-HKWD" content="Distance,text box">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Distance control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id58498.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Collision control"></a><a class="link" href="id79461.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Speed control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87822.html">Dialog Window of the Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id74342.html">Tab Controls</a></span> &gt; <span class="simpleHTMLminitoc">Distance control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_9656"></span>
+         
+         <p class="para_topicComponent"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/abstandssteuerungE.gif" border="0"></p>
+         
+         <p class="para_topicComponent">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object in the dialog <a class="links" href="id17045.html">Select Object</a>. Enter the source code of the <b class="uiTerm">distance control</b>. The <em>Transporter</em>, for which you entered the <b class="uiTerm">distance control</b>, calls it when it gets closer to any other <em>MU</em> than the <a class="links" href="id33053.html#id48718">Distance</a> you enter. <em>Plant Simulation</em>calls the control when the distance becomes too small <b class="uiTerm">and</b> when it becomes too great. 
+         </p>
+         
+         <p class="para_topicComponent">Instead, you can also right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>, such as <code>self.DistanceControl</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnDistance</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, press the <b class="uiTerm">F2</b> key.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameter</b></p>
+         
+         <p class="para_topicComponent">The parameter <em>distanceIsBelowLimit</em> is true when the distance becomes too small. It is false when the distance becomes too great.
+         </p>
+         
+         <p class="para_topicComponent">The standard <b class="uiTerm">distance control</b> looks like this:
+         </p>
+         
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/onDistance.gif"></p>
+         
+         <p class="para_topicComponent">The anonymous identifier <em>?</em> designates the part (MU) for which you entered the <b class="uiTerm">distance control</b> and the <b class="uiTerm">distance</b>. The anonymous identifier <em>@</em> designates the part (MU) for which the distance became too great or too small. At the point in time at which the <b class="uiTerm">distance control</b> is called <em>@</em> is located in front of <em>?</em> in the direction of motion of <em>?</em>.
+         </p>
+         
+         <p class="para_topicComponent">For <em>tugger trains</em> you have to enter the control into the tractor. When a <em>tugger train</em> falls below the <a class="links" href="id33053.html#id48718">Distance</a> you entered, the <b class="uiTerm">distance control</b> of the tractor will be triggered. Within the <em>control method</em> the anonymous identifier @ is the <em>MU</em> to which the distance is too small, while the anonymous identifier ? designates the tractor of the train. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk:</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id79055.html">DistanceCtrl</a>
+            
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topic</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id27440.html">Create and Work with a Distance Control</a></p>
+         <a name="id48718" id="id48718"></a><p class="para_topicComponent" id="id48718"><b class="uiTerm">Distance</b></p>
+         <span id="ndxgenid_PlantSimulationENU_9657"></span>
+         
+         <p class="para_topicComponent"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/abstandssteuerungE.gif" border="0"></p>
+         
+         <p class="para_topicComponent">Enter the <b class="uiTerm">distance</b> from which on the <em>Transporter</em> calls the <a class="links" href="id33053.html">Distance control</a> to prevent the <em>MUs</em> from getting too close to each other or from moving away too far from each other. You can enter a value greater than 0.
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk:</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id99421.html">Distance</a>
+            
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topic</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id27440.html">Create and Work with a Distance Control</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id58498.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Collision control"></a><a class="link" href="id79461.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Speed control"></a></span></div>
+   </body>
+</html>

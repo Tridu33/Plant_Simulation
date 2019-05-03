@@ -1,0 +1,331 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>createFailure</title>
+      
+      <meta name="MS-HKWD" content="createFailure">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">createFailure</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id89680.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Defining Failures of the Material Flow Objects"></a><a class="link" href="id51472.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:count"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id89680.html">Methods for Defining Failures of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">createFailure</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4498"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.Failures.createFailure(Name:string)
+Path.Failures.createFailure(Name:string [,Availability/Interval:real/string, MTTR/Duration:any, Mode:string, Start:any, Stop:any, Active:boolean])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The method <em>createFailure</em> creates a new <em>failure profile</em> for the object designated by Path. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> The parameter <em> Name</em> of data type <em>string </em> designates the name of <em> failure profile</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em>Availability</em>/<em>Interval</em> designates the availability or the failure interval: 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item"> To set the availability, pass a numerical value of data type <em> real</em> or <em>integer</em>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"> To set the type and the parameters of the distribution function for the failure interval, pass a <em>string</em>, for example <code> (&quot;Uniform, 1:00, 2:30&quot;)</code>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"> To set the failure interval to a constant value, pass a value of data type <em>time</em>.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em>MTTR</em>/<em>Duration</em> designates the MTTR or the failure duration: 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item"> When you set the availability with the parameter <em>Availability</em> above, this parameter sets the MTTR. If not, it designates the failure duration. You can enter the MTTR as a numerical value or as a <em> string</em>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"> When you designated the MTTR as a <em>string</em>, you can also enter the bounds, for example <code>(&quot;1:00, 0:05, 20:00&quot;)</code>. You can enter the failure duration as a numerical value or as a <em> string</em>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"> A numerical value sets a constant failure duration, a <em> string</em> sets the type and the parameters of the distribution function.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em>Mode</em> of data type <em> string</em> sets the <b class="uiTerm">failure mode</b> of the <em>failure profile</em>. If you do not enter this parameter, the failure relates to the <b class="uiTerm">simulation time</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em>Start</em> of data type <em>any</em> sets the point in time of the first failure. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item"> To set a constant point in time, enter a numerical value. 0 designates that the point in time of the first failure is determined by the failure interval. </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"> To set the type and the parameters of the distribution function, enter a <em>string</em>.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em>Stop</em> of data type <em>any</em> sets the point in time from with on no more failures will be created for this failure profile. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item"> To set a constant point in time, enter a numerical value. 0 designates that <em>Plant Simulation</em> creates failures infinitely. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"> To set the type and the parameters of the distribution function, enter a <em>string</em>.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em> Active</em> of data type <em>boolean</em> sets if the failure profile is active (<code>true</code>) or not active (<code>false</code>).
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyPlaceBuffer.Failures.createFailure(&quot;NameOfNewFailure&quot;)
+MyPlaceBuffer.Failures.NameOfNewFailure.Start := str_to_time(&quot;1:00:00&quot;) 
+-- no failures during the first hour</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.Failures.createFailure(&quot;MyProfile1&quot;, 80, 60, &quot;ProcessingTime&quot;) 
+-- Availability 80%, MTTR 60 seconds</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyAssembly.createFailure(&quot;MyProfile2&quot;, &quot;Uniform, 1:00, 2:00&quot;, &quot;Normal, 5:00, 30, 0, 30:00&quot;, &quot;OperatingTime&quot;, &quot;Uniform, 0:00, 5:00&quot;, 0, false)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id97445.html"> deleteFailure</a></p>
+         <p class="para_topic"><a class="links" href="id80954.html"> New</a> failure
+         </p>
+         <p class="para_topic"><a class="links" href="id92694.html"> List of Failure Profiles</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id89680.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Defining Failures of the Material Flow Objects"></a><a class="link" href="id51472.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:count"></a></span></div>
+   </body>
+</html>

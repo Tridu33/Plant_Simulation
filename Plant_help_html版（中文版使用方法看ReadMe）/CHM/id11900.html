@@ -1,0 +1,163 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Kanban</title>
+      
+      <meta name="MS-HKWD" content="Kanban">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Kanban</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id64792.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Settings"></a><a class="link" href="id62268.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Object Kanban"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1203830.html">Value Stream Mapping Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id11900.html">Kanban</a></span> &gt; <span class="simpleHTMLminitoc">Kanban</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_17857"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/KANBANIcon.gif" border="0"></p>
+         <p class="para_topic"> You can use the object <em> Kanban</em> to model <em> Kanban</em><em> lines</em>. You can use one or more <em> Kanban</em> objects in the same model. Typically you will insert two <em> Kanban Connectors</em>. The first one connects a <em> Supermarket</em> with the <em> Kanban</em> control and the second one connects the <em> Kanban</em> object with any production process.
+         </p>
+         <p class="para_topic"> In a <em> Kanban</em> model, you will typically connect two <em> Process</em> objects with a  FIFO object. In a standard material flow model <em> Inventories</em> are typically located between two objects of type <em> Process</em>.
+         </p>
+         <p class="para_topic"> Here you can use both, <em> FIFO</em> objects and/or <em> Inventories</em>. If you use <em> Inventories</em>, we recommend to set the initial value for each product to zero. The defined number of products defined by the initial value will not be taken into account when working with <em> Kanban</em> cards. The <em> Kanban boxes</em> will be directly moved on by the <em> Inventory</em>, comparable to a  FIFO object or a <a class="links" href="id21448.html"> Transport</a> object.
+         </p>
+         <p class="para_topic"> The <b class="uiTerm"> possible Kanban predecessor</b> is the
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <col span="1" width="80%">
+            
+            <col span="1" width="20%">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id25533.html"> Supermarket</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SupermarketIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> Possible Kanban successors</b> are:
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <col span="1" width="80%">
+            
+            <col span="1" width="20%">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id21872.html"> Process</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ProcessIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id99504.html"> Process_assembly</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/processAssemblyIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id73041.html"> Process_indexed</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/processIndexedIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id11376.html"> Process_multiple</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ProcessMultipleIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id67990.html"> Supplier</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/supplierIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id62268.html"> Dialog Window of the Object Kanban</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id64792.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Settings"></a><a class="link" href="id62268.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Object Kanban"></a></span></div>
+   </body>
+</html>

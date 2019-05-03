@@ -1,0 +1,173 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>LoadBayType</title>
+      
+      <meta name="MS-HKWD" content="LoadBayType">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">LoadBayType</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id99452.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:LoadBaySpeedCtrl"></a><a class="link" href="id52721.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Pause"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id98543.html">Attributes of the Transporter</a></span> &gt; <span class="simpleHTMLminitoc">LoadBayType</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9934"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.LoadBaytype</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>LoadBayType</em> sets the type of loading space of the <em>Transporter</em>. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Store</b> provides a <b class="uiTerm">loading space </b> consisting of loading places along the x-axis and the y-axis onto which the <em>Transporter</em> places the parts it loads. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/matrixLoadBayStore.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Track</b> provides a <b class="uiTerm">passive length-oriented loading space</b> onto which the <em>Transporter</em> loads and unloads parts. This is especially handy for modeling a cross-sliding car and other types of materials handling equipment
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The animation on the length-oriented loading space requires an animation line. As <em>Plant Simulation</em> does not create the animation line automatically, you have to create it in the icon of the object. For vector graphics we defined the animation line, you cannot change it. The <a class="links" href="id81514.html">Length</a> of the loading space is independent of the <a class="links" href="id42681.html">MU length</a> of the <em>Transporter</em> proper. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can also define <em>Sensors</em>. Note that the animation on the length-oriented loading space requires an animation line. As <em>Plant Simulation</em> does not create the animation line automatically, you have to create it in the icon of the object. The length of the length-oriented loading space is independent of the length of the <em>Transporter</em> itself. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/activeLoadbay.gif"></p>
+         <p class="para_topic">In addition, you can select the <a class="links" href="id31647.html">Direction of the animation line</a>. The orientation of the MU depends on the orientation of the animation line in 2D and in 3D.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Line</b> provides an <b class="uiTerm">active length-oriented loading space</b> similar to a conveyor which transports the loaded parts forwards or backwards. 
+               </p>
+               
+               <p class="para_item">You can also define <em>Sensors</em>. Note that the animation on the length-oriented loading space requires an animation line. As <em>Plant Simulation</em> does not create the animation line automatically, you have to create it in the icon of the object. The length of the length-oriented loading space is independent of the length of the <em>Transporter</em> itself. The orientation of the MU depends on the orientation of the animation line in 2D and in 3D.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/lineorientedLoadbay.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>string</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.MUs.Transporter:1.LoadBaytype := &quot;Track&quot;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id89093.html">Type</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id99452.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:LoadBaySpeedCtrl"></a><a class="link" href="id52721.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Pause"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Formula</title>
+      
+      <meta name="MS-HKWD" content="Formula">
+      <meta name="MS-HKWD" content="Formula,distribution">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Formula</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id24449.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:User-defined Distributions"></a><a class="link" href="id14486.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:List (Type)"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64129.html">Times and Distributions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id24449.html">User-defined Distributions</a></span> &gt; <span class="simpleHTMLminitoc">Formula</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4065"></span><p class="para_topic">You can use the <em>formula distribution</em> to define the time generator yourself. 
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/formulaDistDrop1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/formulaDistDrop2.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">You can enter any <em>SimTalk</em> expression into a formula: You can use the basic arithmetic operations and all functions, which <em>Plant Simulation</em> supports. You can also enter a <em>Method</em> which would then call the <em>Method</em> and use its result. 
+         </p>
+         <p class="para_topic">You can use the anonymous identifier <em>?</em> to access the object that initiated the calculation. When calculating the <b class="uiTerm">Set-up time</b> and the <b class="uiTerm">Processing Time</b>, you can also use the anonymous identifier @ to access the <em>MU</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">notation of a formula for the processing time
+-&gt;time
+var PartType: string := @.PartType
+var Station: object := ?
+var WorkPlan: table := root.myWorkPlan[&quot;Operations&quot;, PartType]
+return WorkPlan[&quot;Processing time&quot;, Station]</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When using a formula, you may not use any actions, which interfere with the material flow, i.e., you may not transfer MUs, delete objects, etc. You may only use read-only access, you cannot change any simulation-relevant parameters of the model. </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Below we demonstrate how to set a formula via <em>SimTalk</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.setSubAttribute(&quot;ProcTime&quot;, &quot;Type&quot;, &quot;Formula&quot;)
+MyStation.procTime.Formula := &quot;x+2&quot;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id35323.html">Define Times in the Class of the Processing Stations</a></p>
+         <p class="para_topic"><a class="links" href="id26000.html">Attributes of the Distributions</a></p>
+         <p class="para_topic"><a class="links" href="id29080.html">Methods of the Distributions</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id24449.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:User-defined Distributions"></a><a class="link" href="id14486.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:List (Type)"></a></span></div>
+   </body>
+</html>

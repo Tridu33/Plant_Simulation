@@ -1,0 +1,115 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>PlaceBuffer</title>
+      
+      <meta name="MS-HKWD" content="PlaceBuffer">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">PlaceBuffer</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1351440.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:UnloadingTime"></a><a class="link" href="id77235.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the PlaceBuffer"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id21426.html">PlaceBuffer</a></span> &gt; <span class="simpleHTMLminitoc">PlaceBuffer</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6891"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/03BufferIcon.gif" border="0"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">By default the <em>PlaceBuffer</em> is not part of the built-in objects that the <em>Toolbox</em> provides. You can add it at any time to your simulation model by clicking <a class="links" href="id95750.html">Manage Class Library</a> on the <b class="uiTerm">Home</b> ribbon tab.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> The <em>PlaceBuffer</em> has a number of stations, which are arranged in a row, one behind the other. The <em>MUs</em> it processes have to advance from station to station and can only leave the <em>PlaceBuffer</em> after they passed the last station. This way, you can call and access each and every station individually. 
+         </p>
+         <p class="para_topic">A <em>part</em> can move directly to an idle station in the <em>PlaceBuffer</em>. After the <em>part</em> has passed this and all succeeding stations, it can exit the <em>PlaceBuffer</em>. When you create a <em>part</em> on an idle station, it does not have to pass this station, but may move on to the next station or the next object. 
+         </p>
+         <p class="para_topic">In case the first <em>part</em> cannot leave the <em>PlaceBuffer</em>, you can determine what happens next:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To make the <em>MUs</em> accumulate on the <em>PlaceBuffer</em>, select the check box <a class="links" href="id80234.html">Accumulating</a>. This allows the <em>MUs</em> to move front to end to each other, when the exit of the <em>PlaceBuffer</em> is <a class="links" href="id30665.html">Blocked</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To make the <em>MUs</em> retain their distance to each other, i.e., make all succeeding <em>MUs</em> stop moving when the preceding <em>part</em> cannot exit, clear <b class="uiTerm">Accumulating</b>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can only define the <a class="links" href="id18678.html">Processing time</a> for the <em>PlaceBuffer</em> as whole, not for each individual station. It divides the processing time equally among its stations, i.e., when you set a processing time of 60 seconds for 3 stations, each station processes the <em>part</em> for 20 seconds. 
+         </p>
+         <p class="para_topic">If you want to model a buffer with a large capacity that has to be fast, you can use the <a class="links" href="id47519.html">Buffer</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/PufferBeschnitten.gif" border="0">. 
+         </p>
+         <p class="para_topic">To add the <em>PlaceBuffer</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; MaterialFlow &gt; PlaceBuffer</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id77235.html"> Dialog Window of the PlaceBuffer</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id50695.html"> Attributes of the PlaceBuffer</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id84457.html"> Methods of the PlaceBuffer</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43953.html"> Shared Properties of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1351440.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:UnloadingTime"></a><a class="link" href="id77235.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the PlaceBuffer"></a></span></div>
+   </body>
+</html>

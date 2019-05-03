@@ -1,0 +1,119 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Importer request control</title>
+      
+      <meta name="MS-HKWD" content="Importer request control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Importer request control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id54729.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Controls"></a><a class="link" href="id50841.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Exporter request control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id19366.html">Broker</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15080.html">Dialog Window of the Broker</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54729.html">Tab Controls</a></span> &gt; <span class="simpleHTMLminitoc">Importer request control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_8198"></span>
+         
+         <p class="para_topicComponent"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/importerrequest.gif" border="0"></p>
+         
+         <p class="para_topicComponent">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em>object in the dialog <a class="links" href="id17045.html">Select Object</a>. Enter the source code of the importer request control in which you programmed how the <em>Broker</em> requests <em> importers</em>. The program calls the control, whenever the <em>Broker </em> receives a request or when it would handle the request again, for example, when an <em>Exporter</em> registers as being available. In the source code of the <em>Method</em> you yourself have to make sure that the request is taken care of, e.g. with the method <a class="links" href="id31483.html"> engage</a>. With this control <em></em> you can model your own assignment strategies. 
+         </p>
+         
+         <p class="para_topicComponent"> When you defined <b class="uiTerm">Exporter and Importer request controls</b>, the <b class="uiTerm">Exporter request controls</b> will be executed first. This way you can make the <em>Worker</em> follow the part when the part moves to the next station. This causes changed behavior as compared to modeling without controls. Without controls, the <em>Worker</em> is brokered for the new station in the <em>Workerpool</em>.
+         </p>
+         
+         <p class="para_topicComponent">When several <b class="uiTerm">Importer request controls</b> are executed at the same time, for example because an <em>Exporter</em> is released and when several open <em>Importers</em> exist, the sequence of the controls matches the sequence of the <em>Importers</em> in the list <b class="uiTerm">Open Importers</b>. This way brokering of <em>Exporters</em> behaves identical when you model with our without controls.
+         </p>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For <em>Broker</em> hierarchies <em>Plant Simulation</em> does not call the controls of the sub <em>Brokers</em>, i.e., of several <em>Brokers</em> that are connected with <em>Connectors</em> in addition. <em>Plant Simulation</em> only calls the control of the <em>Broker</em> which you entered into the object.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent">The <b class="uiTerm"> standard</b><b class="uiTerm"> importer request control</b> looks like this:
+         </p>
+         
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/OnImportRequest.gif"></p>
+         
+         <p class="para_topicComponent">Or you can select the <em>Method</em> in a <em>Frame</em> , drag it to the text box and drop it there.
+         </p>
+         
+         <p class="para_topicComponent">Or you can right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em> method</em> of this object: 
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnBuilt_in_name_of_the_control</code>, such as <code>self.OnEntrance</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, click in the text box, and press the <b class="uiTerm">F2</b> key.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk:</b></p>
+         
+         <p class="para_topicComponent">
+            <a class="links" href="id55894.html">ImpRequestCtrl</a>, 
+         </p>
+         
+         <p class="para_topicComponent">
+            <a class="links" href="id24000.html">doStandardExport</a>
+            
+         </p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id54729.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Controls"></a><a class="link" href="id50841.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Exporter request control"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Fail control</title>
+      
+      <meta name="MS-HKWD" content="Fail control">
+      <meta name="MS-HKWD" content="Fail control,Transporter">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Fail control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id59501.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The Tools Menu"></a><a class="link" href="id49989.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Init control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87822.html">Dialog Window of the Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59501.html">The Tools Menu</a></span> &gt; <span class="simpleHTMLminitoc">Fail control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_9709"></span>
+         
+         <p class="para_topicComponent"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/failCtrl.gif" border="0"></p>
+         
+         <p class="para_topicComponent">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object in the dialog <a class="links" href="id17045.html">Select Object</a>. Enter the source code of the <b class="uiTerm">fail control</b>. The <em>Transporter</em> calls it, whenever its <a class="links" href="id13049.html">Failed</a>
+            <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/failedCheckbox.gif" border="0"> state changes. To accomplish this, either select the check box <b class="uiTerm">Failed</b> or assign <code>true</code> to the attribute <em>Failed</em>. 
+         </p>
+         
+         <p class="para_topicComponent">The standard <b class="uiTerm">fail control</b> looks like this:
+         </p>
+         
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/transporterOnFail.gif"></p>
+         
+         <p class="para_topicComponent">Within the control, you can access the object calling the control using the anonymous identifier ?.</p>
+         
+         <p class="para_topicComponent">The program passes two optional parameters to the <em>Method</em> that is called:
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>FailureIsStarting</em> of data type <em>boolean</em> indicates if the failure starts (true) or ends (false).
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>ProfileName</em>of data type <em>string</em> indicates the name of the <em>failure profile</em> that caused the failure.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Provided the <b class="uiTerm">fail control</b> declares both parameters, it will not only be called when the object changes to the <b class="uiTerm">failed</b>-state or when the <b class="uiTerm">failed</b>-state ends, but also each time when a <em>failure profile</em> is <a class="links" href="id88096.html">Failed</a> or when the failure is removed. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p class="para_item">Let&rsquo;s say <em>failure profile</em>1 is already failed and then you also fail <em>failure profile</em>2 in addition, then the <b class="uiTerm">fail control</b> will still be called although the object remains in the <b class="uiTerm">failed</b>-state.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, press the <b class="uiTerm">F2</b> key. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk:</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id83042.html">FailCtrl</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id59501.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The Tools Menu"></a><a class="link" href="id49989.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Init control"></a></span></div>
+   </body>
+</html>

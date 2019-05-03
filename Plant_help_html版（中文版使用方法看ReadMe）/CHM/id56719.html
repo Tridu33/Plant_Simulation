@@ -1,0 +1,206 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Classes, Subclasses, and Instances</title>
+      
+      <meta name="MS-HKWD" content="Classes Subclasses and Instances">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Classes, Subclasses, and Instances</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id81197.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Introducing Classes"></a><a class="link" href="Replacing_and_Merging_Objects_with_DragandDrop.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Replacing and Merging Objects with Drag-and-Drop"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id81197.html">Introducing Classes</a></span> &gt; <span class="simpleHTMLminitoc">Classes, Subclasses, and Instances</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_372"></span><p class="para_topic">When creating your simulation model, keep in mind that:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">A <b class="uiTerm">class</b> is the template for an <em>instance</em>, which you insert into a <em>Frame</em>. All objects in the <a class="links" href="id96990.html">Class Library</a>, those we built-in as well as those you yourself define, are <em>class</em> objects. You can add more detail to these classes and thus create new classes that inherit properties from the master classes.
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ClassInstance.gif"></p>
+         <p class="para_topic">By changing a property in the class object, you change that property for all objects you derived from this class. This is much less error-prone than having to change the same property for each and every individual object over and over again. </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">We recommend to not change the default settings of the built-in objects if at all possible. When you customize these objects and when you merge models or update the <em>Class Library</em> at a later point in time, <em>Plant Simulation</em> discards your changes and restores the default settings. For this reason you have to customize the objects anew.
+                     </p>
+                     
+                     <p class="para_note_body">If you need objects with customized settings, we recommend to derive the respective object/objects in the <em>Class Library</em> and then continue working with this class. You can then place these objects into the folder <b class="uiTerm">User Objects</b> and add them to the tab <b class="uiTerm">User Objects</b> in the <b class="uiTerm">Toolbox</b>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <ul>
+            <li>
+               
+               <p class="para_item">A <em>class</em> passes all of its properties on to an instance you derive from it. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">A <em>class</em> passes those of its properties on to a <em>subclass</em> you derive from it, for which you do not deactivate inheritance. Remember that a button that looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/toggleSelected_dup.gif" border="0"> means that inheritance is active. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Inheritance only works from <em>class</em> to <em>subclass</em>/<em>instance</em>, not the other way around!
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">A <b class="uiTerm">subclass</b> is an object in the <em>Class Library</em>, which inherits some, but not all, of its properties from another <em>class</em>. By deactivating inheritance for certain dialog items, you can define properties that only apply to this subclass. An example of subclasses could be several lines that only differ in their length. 
+               </p>
+               
+               <p class="para_item">To <b class="uiTerm">create a subclass</b> from a class, right-click the class in the <em>Class Library</em> and select <b class="uiTerm">Derive</b>. When you open the dialog of the derived object, you will notice that inheritance is active for all dialog items, denoted by a button that looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/toggleSelected_dup.gif" border="0">. Then, change the identifying property of the subclass. In our example below we derived the object <em>Conveyor</em> to create the subclass. We renamed it to <code>Conveyor_5m</code> and changed its length to <code>5</code> meters. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/Subclass.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/Subclass1.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+               <p class="para_item">Instead, you can hold down <b class="uiTerm">Ctrl</b> and <b class="uiTerm">Shift</b>, and click the object you wish to derive an instance from with the left mouse button. Then, hold down the mouse button, drag the object to the location of your choice, for example into another folder in the <em>Class Library</em>, and release both keys and the mouse button. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm"> create a copy</b> from a class, right-click the class in the <em>Class Library</em> and select <b class="uiTerm">Duplicate</b>. When you open the dialog of the duplicated object, you will notice that inheritance is deactivated for all dialog items, denoted by a button that looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/toggleNotSelected_dup3.gif" border="0">.
+               </p>
+               
+               <p class="para_item">Instead, you can hold down <b class="uiTerm">Ctrl</b>, and click the object you wish to duplicate with the left mouse button. Then, hold down the mouse button, drag the copy to the location of your choice in the <em>Class Library</em>, and release <b class="uiTerm">Ctrl</b> and the mouse button. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">An <b class="uiTerm"> instance</b> is an object, which you insert into your simulation model from the <em>Class Library</em> or the <em>Toolbox</em> by dragging a class object to a <em>Frame</em> and dropping it there.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The objects use class relations and origin relations to inherit their properties from other objects:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The object inherits all of its basic properties from its <b class="uiTerm">class</b> object. This includes settings it has by default, built-in <em>Methods</em>, basic functionalities, etc. The <em>class</em> is the object in the <em>Class Library</em> you instantiated the selected object from. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The object inherits its settings from the <b class="uiTerm">origin</b> object, provided you did not change them locally within the object. The <em>origin</em> of the selected object is the object you derived it from. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/showOrigin1.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/showOrigin2.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Making full use of the potentials of inheritance saves a considerable amount of time and effort during modeling. </p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="Replacing_and_Merging_Objects_with_DragandDrop.html">Replacing and Merging Objects with Drag-and-Drop</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id33441.html">Using Inheritance</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id98418.html">Working with Classes in the Class Library</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id81197.html">Introducing Classes</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id81197.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Introducing Classes"></a><a class="link" href="Replacing_and_Merging_Objects_with_DragandDrop.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Replacing and Merging Objects with Drag-and-Drop"></a></span></div>
+   </body>
+</html>

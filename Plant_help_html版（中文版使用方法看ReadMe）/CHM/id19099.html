@@ -1,0 +1,279 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>execute</title>
+      
+      <meta name="MS-HKWD" content="execute">
+      <meta name="MS-HKWD" content="execute,function">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">execute</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1485104.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:enableFullScreenMode"></a><a class="link" href="id84292.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:executeSilent"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Predefined_Functions_1.html">Predefined Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id86615.html">Miscellaneous Global Functions</a></span> &gt; <span class="simpleHTMLminitoc">execute</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14108"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">execute(SourceCode:string [,Parameter:parameter, ...])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The function <em>execute</em> receives a <em>string</em> and interprets it as though it were the source code of a method. 
+         </p>
+         <p class="para_topic">The function <em>execute</em> accepts all statements. The anonymous identifier ? refers to the <em>Method</em> object that called the <em>execute</em> function. The anonymous identifier @ is received by the calling method. 
+         </p>
+         <p class="para_topic">The semantics of <em>execute</em> is as follows:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When a runtime error occurs while the string method is being executed, there are two possibilities:</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When the setting <a class="links" href="id22083.html#id91929">Ignore Errors in Formulas</a> is deactivated, <em>Plant Simulation</em> opens the <em>Debugger</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When the setting <a class="links" href="id22083.html#id91929">Ignore Errors in Formulas</a> is activated, the function <em>execute</em> acts like the function <a class="links" href="id84292.html">executeSilent</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When no runtime error occurs:</p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">If the string method does not have a return value, <em>execute</em> returns VOID.
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="100%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                                    
+                                    <tbody>
+                                       
+                                       <tr valign="top">
+                                          
+                                          <td colspan="1" rowspan="1" width="85">
+                                             
+                                             <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                             
+                                          </td>
+                                          
+                                          <td colspan="1" rowspan="1" width="500">
+                                             <pre class="indent">var objPath : string := &quot;Track&quot;
+var attrName: string := &quot;Length&quot;
+var attrVal : length := 3.5
+execute(to_str(objPath, &quot;.&quot;, attrName, &quot;:=&quot;, attrVal))</pre>
+                                             </td>
+                                          
+                                       </tr>
+                                       
+                                    </tbody>
+                                    
+                                 </table>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">In all other cases, <em>execute</em> will return the return value of the <em>string method</em>.
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="100%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                                    
+                                    <tbody>
+                                       
+                                       <tr valign="top">
+                                          
+                                          <td colspan="1" rowspan="1" width="85">
+                                             
+                                             <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                             
+                                          </td>
+                                          
+                                          <td colspan="1" rowspan="1" width="500">
+                                             <pre class="indent">execute(&quot;-&gt; integer; return 42&quot;) -- returns 42 </pre>
+                                             </td>
+                                          
+                                       </tr>
+                                       
+                                    </tbody>
+                                    
+                                 </table>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">You can also pass parameters to the <em>execute statement</em>.
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="100%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                                    
+                                    <tbody>
+                                       
+                                       <tr valign="top">
+                                          
+                                          <td colspan="1" rowspan="1" width="85">
+                                             
+                                             <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                             
+                                          </td>
+                                          
+                                          <td colspan="1" rowspan="1" width="500">
+                                             <pre class="indent">execute(&quot;param x, y: integer; print x+y&quot;, 1, 2) -- outputs 3 </pre>
+                                             </td>
+                                          
+                                       </tr>
+                                       
+                                    </tbody>
+                                    
+                                 </table>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The function <em>execute</em> executes the referenced <em>Method</em>. Use the function <em>execute </em> to execute methods that you referenced via variables. Let us say you save a method to a variable <em>obj</em> of data type <em>object</em>, you can then call this method using <em>obj.execute</em>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The syntax which is used in the argument for the <em>execute</em> function has to be the same as the <em>Method</em> syntax which calls the <em>execute</em> function.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id84292.html">executeSilent</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1485104.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:enableFullScreenMode"></a><a class="link" href="id84292.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:executeSilent"></a></span></div>
+   </body>
+</html>

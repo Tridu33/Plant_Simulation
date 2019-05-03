@@ -1,0 +1,180 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>import</title>
+      
+      <meta name="MS-HKWD" content="import">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">import</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1185316.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getUnavailableServices"></a><a class="link" href="id38673.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:importExporter"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48315.html">Methods of the Importer</a></span> &gt; <span class="simpleHTMLminitoc">import</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4558"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.imp.import([MU:object [,Exporters:any]]) &rarr; boolean
+Path.failImp.import([MU:object [,Exporters:any])]) &rarr; boolean
+Path.setupImp.import([MU:object [,Exporters:any]]) &rarr; boolean
+Path.transportImp.import([MU:object [,Exporters:any])]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The method <em> import</em> starts a query with the <em> Broker</em> you entered under <a class="links" href="id30210.html"> Broker</a> for the <em> importer</em> of the object designated by Path. The return value shows if <em> Exporters</em> were assigned to the <em> importer</em> or not.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When you set the failed state of a material flow object with the attribute <a class="links" href="id25802.html"> Failed</a>, and you would like to import a <b class="uiTerm">Service</b> for fixing the failure, you have to employ the method <em>name of station.failImp.import</em>.
+                     </p>
+                     
+                     <p class="para_note_body"> When you requested the service for removing the failure with the method <em>name of station.failImp.import</em>, you have to release the imported service, after the failure has been removed, with the method <em>name of station.failImp</em>.<a class="links" href="id20824.html">releaseExporters</a>. 
+                     </p>
+                     
+                     <p class="para_note_body"> When the <em>importer</em> requests several services at the same time, all of these services have to be available at the same time, before the <em> Broker</em> assigns them to the station. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When you select the check box <a class="links" href="id99727.html"> Common resources</a>, and you enter a <a class="links" href="id54251.html">Set-up time</a>, the station does not know, which of these services to request: set-up or processing, when the method <em> import</em> does not pass an <em> MU</em> as parameter. For this reason the anonymous identifier @ will be passed automatically. When @ is void, the <em> method debugger</em> opens and shows an error message. In this case<code>.imp.import</code> will automatically be replaced with <code>.imp.import(@)</code>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> Only the <a class="links" href="id18003.html"> Station</a>, the <a class="links" href="id29026.html"> ParallelStation</a>, the <a class="links" href="id95185.html"> AssemblyStation</a>, and the <a class="links" href="id85371.html"> DismantleStation</a>, the <a class="links" href="id16225.html"> Mixer</a>, the <a class="links" href="id77602.html"> Portioner</a>, and the <a class="links" href="id47279.html"> Tank</a>, can import services, which you define on the <a class="links" href="id88367.html"> Tab Importer</a>.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <p class="para_topic"> You can also enter optional parameters: </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em> MU</em> of data type <em> object</em> designates the <em> MU</em> for which the <em> Exporter</em> was requested. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em>Exporters</em> of data type <em> table</em> designates a table. When the request was successful (return value true), the table will contain all <em>Exporters</em> assigned to the <em>importer</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic"> The return value has the data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.failImp.import(container, tab15)
+ParallelStation.imp.import(transporter, tabTrans)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id20824.html"> releaseExporters</a></p>
+         <p class="para_topic"><a class="links" href="id25985.html"> startProcessing</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1185316.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getUnavailableServices"></a><a class="link" href="id38673.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:importExporter"></a></span></div>
+   </body>
+</html>

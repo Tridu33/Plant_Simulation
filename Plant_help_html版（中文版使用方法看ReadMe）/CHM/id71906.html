@@ -1,0 +1,237 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Set the Animation Area of an Object in 3D</title>
+      
+      <meta name="MS-HKWD" content="Set the Animation Area of an Object in 3D">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Set the Animation Area of an Object in 3D</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id53112.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set the Capacity of a Material Flow Object in 2D"></a><a class="link" href="id88732.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Use Identical Lengths and Positions"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58193.html">Modeling in 3D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id22845.html">Working with Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id49627.html">Set the Capacity of a Material Flow Object</a></span> &gt; <span class="simpleHTMLminitoc">Set the Animation Area of an Object in 3D</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1246"></span><p class="para_topic">Whereas you define the capacity of the objects in <b class="uiTerm">2D</b> in <b class="uiTerm">two dimensions</b>, you set the animation of the <em>simulation object</em> in <b class="uiTerm">3D</b> in <b class="uiTerm">three dimensions</b> on the <b class="uiTerm">animation area</b>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/locationsGraphic.gif"></p>
+         <p class="para_topic">To set the animation area of an object with matrix loading space (<em>ParallelStation</em>, <em>Sorter</em>, <em>Store</em>, <em>Transporter</em>, <em>Container</em>) in 3D, proceed as follows:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click the object with the right mouse button to select it.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Edit 3D Properties &gt; MU Animation &gt;</b>
+                  <a class="links" href="xid1395699.html">Animation area</a>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">In our example we demonstrate how to place cylinder-shaped <em>containers</em> in a <em>storage box</em>. 
+         </p>
+         <p class="para_topic">Our finished model looks like this:</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/animationareaMod1.gif"></p>
+         <p class="para_topic">A <em>Source</em> each produces the <em>storage boxes</em> and cylinder-shaped <em>containers</em>. The <em>AssemblyStation</em> places the <em>containers</em> in the <em>storage boxes</em> and then moves them on across a <em>Conveyor</em> and a <em>Station</em> to the <em>Drain</em>. 
+         </p>
+         <p class="para_topic">Proceed as follows to create the simulation model:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert two <em>Sources</em>. We named them <em>SourceStorageBoxes</em> and <em>SourceCylinders</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert an <em>AssemblyStation</em>. We selected the settings below:
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/animationareaMod8.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert a <em>Conveyor</em>. We used a <em>Conveyor</em> of type <b class="uiTerm">Guide-railed belt conveyor</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert a <em>Station</em> and a <em>Drain</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Make sure that all objects are connected with <em>Connectors</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">As we need customized MU types for the <em>storage boxes</em> and the <em>cylinder-shaped </em><em>containers</em>, we duplicate the <em>Part</em> and the <em>Container</em> in the folder <em>MUs</em> in the <em>Class Library</em>.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Press the <b class="uiTerm">F2</b> key and rename the duplicated <em>container</em> from <em>Container</em> to <code>StorageBox</code>. 
+               </p>
+               
+               <p class="para_item">To configure the <em>storage box</em>:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Click the <em>storage box</em> with the right mouse button and open it in 3D.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click with the right mouse button into the background of the 3D window and select <b class="uiTerm">Exchange Graphics</b>. We selected the <em>storage box</em> below.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/animationareaMod2.gif"></p>
+                     
+                     <p class="para_item">Click <b class="uiTerm">Yes</b> in the message dialog that <em>Plant Simulation</em> shows. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/animationareaMod3.gif"></p>
+                     
+                     <p class="para_item">As you certainly remember the <em>s3D</em> files do not only contain the graphic of the object but also information about its dimensions and animation data.
+                     </p>
+                     
+                     <p class="para_item">If you click <b class="uiTerm">No</b>, <em>Plant Simulation</em> does not apply the adjustments of the dimensions of the <em>storage box</em> and scales it to the current size of the MU named <em>Container</em>, as the check box <b class="uiTerm">Scale automatically</b> on the tab <b class="uiTerm">Transformation</b> is selected by default.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Press the <b class="uiTerm">F2</b> key and rename the duplicated part from <em>Part1</em> to <code>Container</code>. To configure our <em>container</em>:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Click den <em>container</em> with the right mouse button and open it in 3D.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click the default graphic of the <em>Part</em> and delete it. We are going to create our own graphic for our <em>container</em>. 
+                     </p>
+                     
+                     <p class="para_item">Click the <b class="uiTerm">Edit</b> ribbon tab and click <em>Cylinder</em>. Type in the values below. Click <b class="uiTerm">Create</b>. Make sure that our <em>container</em> is placed on the origin of the grid.
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" border="0" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="50%">
+                           
+                           <col span="1" width="50%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/animationareaMod4.gif" border="0"></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td"></p>
+                                 
+                                 <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/animationareaMod5.gif"></p>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Now we have to define the <b class="uiTerm">length</b>, the <b class="uiTerm">width</b>, and the <b class="uiTerm">height</b> of our <em>container</em>. Double-click it in the <em>Class Library</em>. Type in these values:
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/animationareaMod6.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Run the simulation and watch how the <em>AssemblyStation</em> places 12 <em>containers</em> each in a <em>storage box</em> and then moves the full <em>storage box</em> on.
+         </p>
+         <p class="para_topic">The <b class="uiTerm">animation area</b> of the <em>storage box</em>, which is activated by default, makes sure that the <em>containers</em> are distributed evenly across the bottom of the <em>storage box</em>. In doing so, <em>Plant Simulation</em> automatically uses these settings:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/animationareaMod7.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click <a class="links" href="xid1395702.html">Show/Hide</a>, to show the <b class="uiTerm">animation area</b> in the 3D window to see what it looks like. <em>Plant Simulation</em> shows the animation area proper in red with a red orientation indicator in the center.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/animationareaMod9.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="xid1395696.html">orientation</a> &gt;
+     <b class="uiTerm">XY plane</b> evenly distributes the <em>containers</em> in the x-y-direction.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">For the <a class="links" href="xid1395697.html">length</a>
+                  <em>Plant Simulation</em> only uses 94 % of the <b class="uiTerm">length</b> of the graphic of the <em>storage box</em> of 80 cm and for the <a class="links" href="xid1395698.html">width</a> only 92 % of the <b class="uiTerm">width</b> of 60 cm. <em>Plant Simulation</em> automatically subtracted the <b class="uiTerm">wall thickness</b> of the <em>storage box</em> from the dimensions of the <b class="uiTerm">animation area</b>. <em>Plant Simulation</em> takes the area settings from the s3D graphic.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">For the <b class="uiTerm">z-position</b> of the <a class="links" href="xid1395700.html">center</a>
+                  <em>Plant Simulation</em> automatically entered 0.05 m as the floor of the <em>storage box</em> has a height of 5 cm.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id53112.html">Define the Capacity of a Material Flow Object in Simulation 2D</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id53112.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set the Capacity of a Material Flow Object in 2D"></a><a class="link" href="id88732.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Use Identical Lengths and Positions"></a></span></div>
+   </body>
+</html>

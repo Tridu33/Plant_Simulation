@@ -1,0 +1,157 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Display Panel</title>
+      
+      <meta name="MS-HKWD" content="Display Panel">
+      <meta name="MS-HKWD" content="Display Panel,object described">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Display Panel</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id17026.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Drag-and-Drop in the Icon Editor"></a><a class="link" href="id92861.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Display Panel"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id16948.html">Display Panel</a></span> &gt; <span class="simpleHTMLminitoc">Display Panel</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3257"></span><p class="para_topic">Most of the objects in <em>Plant Simulation</em> allow you to create a <em>display panel</em>, which shows values of attributes of the respective object directly in the <em>Frame</em>. You might, for example, define in the class of an object which statistics values you want to show. Once you insert an instance of that class into your simulation model, it will show the defined values. You can define a single <em>display panel</em> for an object, not one for each of its icons. Naturally you can set the size and the position of the <em>display panel</em> in the <em>Frame</em>. Rotating, mirroring or zooming the icon of the object does not affect the size and the position of the <em>display panel</em>. It can contain any number of items and passes all of these items on to its derivatives, i.e., you can only deactivate inheritance for all items and not for individual items. If, on the other hand, items are not inherited, you can change, add or delete as many of them as you like.
+         </p>
+         <p class="para_topic">To create a <em>display panel</em>, click the object in the <em>Frame</em> and either select <b class="uiTerm">Edit Display Panel</b> on the context menu or click <a class="links" href="id15831.html">Edit Display Panel</a> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">To create a <em>display panel</em> for the <em>Frame</em>, click <a class="links" href="id51432.html">Edit Display Panel</a> on the <a class="links" href="id75300.html">Home Ribbon Tab</a></p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/dpExample1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/dpExample11.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">By default the <em>display panel</em> is deactivated for all objects. When you activate it <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/dpActive.gif" border="0">, <em>Plant Simulation</em> shows it on the same level as the icon of the object in the <em>Frame</em>. In the <em>Frame</em>, <em>Plant Simulation</em> shows the <em>display panels</em> by default. You can hide them by deselecting <b class="uiTerm">Options</b>
+  &gt; <a class="links" href="id86781.html">Show Display Panels</a> on the <b class="uiTerm">General</b> ribbon tab to increase the simulation speed if you activated the animation and to increase clarity if the <em>display panels</em> show a large number of values.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/dpExample.gif"></p>
+         <p class="para_topic">Under <b class="uiTerm">File</b> &gt; <a class="links" href="id47898.html">Preferences</a> &gt; <a class="links" href="id34872.html">Simulation</a> &gt; <a class="links" href="id17484.html">Display panel frame rate</a> you can select the refresh rate of the displayed values.
+         </p>
+         <p class="para_topic">When you deactivate <a class="links" href="id71682.html">Icon Animation</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/iconanimationButt.gif" border="0"> it shows the <em>display panel</em>, but does not update its values and continues showing the previous values. It does not update the values either, when no simulation is running. To still show current values, <em>Plant Simulation</em> updates them:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When the simulation stops, either because you stopped it or because the <a class="links" href="id67916.html">End</a> time has been reached.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you click <b class="uiTerm">OK</b> or <b class="uiTerm">Apply</b> in the dialog of an object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you select <b class="uiTerm">View</b> &gt;
+    <b class="uiTerm">Refresh</b> in the dialog of an object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you press <b class="uiTerm">F5</b> in the <em>Frame</em> window.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you call the method <a class="links" href="id76315.html">redraw</a> of an object. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">These objects do not provide the <em>display panel</em>: The <em>Comment</em>, the <em>Variable</em>, and the <em>Connector</em>, the mobile objects <em>Container</em>, <em>Part</em>, <em>Transporter</em>, and <em>Worker</em>, the <em>Folder</em>, the <em>Class Library</em>, and the <em>Toolbar</em>.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id76178.html">Showing Statistics with Display Panels in the Model</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id55509.html">Methods of the Display Panel</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id92861.html">Dialog Window of the Display Panel</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id24308.html">Attributes of the Display Panel</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id17026.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Drag-and-Drop in the Icon Editor"></a><a class="link" href="id92861.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Display Panel"></a></span></div>
+   </body>
+</html>

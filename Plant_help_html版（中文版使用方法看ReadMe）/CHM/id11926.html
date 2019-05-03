@@ -1,0 +1,146 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>execute</title>
+      
+      <meta name="MS-HKWD" content="execute">
+      <meta name="MS-HKWD" content="execute,Method">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">execute</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id90982a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:encrypt"></a><a class="link" href="id59112.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:load"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id25909.html">Method</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id10814.html">Methods of the Method</a></span> &gt; <span class="simpleHTMLminitoc">execute</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11398"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">&amp;Method.execute([Argument1:any, ... [,@:object=@, ?:object=self]])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>execute</em> executes the referenced <em>Method</em> as a subroutine. The execution of the calling <em>Method</em> will be interrupted until the called <em>Method</em> is finished. 
+         </p>
+         <p class="para_topic">The method <em>execute</em> is especially handy, when you use a <em>Variable</em> object that designates a <em>Method</em> object. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The parameters <em>Argument</em> of data type <em>any</em> designate the arguments which are to be executed.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">You can also enter two additional parameters of data type <em>object</em>. In this case the last two parameters are assigned to the anonymous identifiers @ and ?. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Variable := &amp;MyMethod1      -- variable is of data type object
+Variable.execute            -- executes method1 
+&amp;MyMethod2.execute(&quot;abc&quot;)   -- executes myMethod2 
+                            -- that expects 1 parameter
+                            -- of data type string
+self.execute(n+1)           -- calls a method recursively </pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id29361.html">Run Method</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id90982a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:encrypt"></a><a class="link" href="id59112.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:load"></a></span></div>
+   </body>
+</html>

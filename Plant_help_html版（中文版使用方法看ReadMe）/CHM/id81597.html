@@ -1,0 +1,129 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Random</title>
+      
+      <meta name="MS-HKWD" content="Random">
+      <meta name="MS-HKWD" content="Random,Source">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Random</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id88114.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Sequence"></a><a class="link" href="id56324a.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Percentage"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id65865.html">Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88314.html">Dialog Window of the Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57223.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70029.html">MU selection</a></span> &gt; <span class="simpleHTMLminitoc">Random</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7045"></span><p class="para_topic">The <em>Source</em> produces <em>MUs</em> according to the values which you entered into the frequency table. Enter the path to this table into the text box next to <b class="uiTerm">Table</b>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourceMUselRandom.gif"></p>
+         <p class="para_topic">Or you can click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select the name of the table in the dialog <a class="links" href="id17045.html">Select Object</a>. <em>Plant Simulation</em> automatically formats the table.
+         </p>
+         <p class="para_topic">Define a frequency number for each type of <em>MU</em> in the frequency table. It has five columns with the data types <em>object, real, integer, string</em>, and <em>table</em>. Each row in the frequency table refers to a production order. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the MU class into the column <b class="uiTerm">MU</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the frequency of the respective production order into the column <b class="uiTerm">Frequency</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the number of <em>MUs </em> to be produced into the column <b class="uiTerm">Number</b>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can, but you do not have to enter a <b class="uiTerm">Name</b> and <b class="uiTerm">Attributes</b> into the table. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the name of the produced <em>MUs</em> into the column <b class="uiTerm">Name</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the name of the attribute sub-table of the produced <em>MUs</em> into the column <b class="uiTerm">Attributes</b>. 
+               </p>
+               
+               <p class="para_item">When the <em>Source</em> produces the <em>MUs</em>, <em>Plant Simulation</em> selects and processes a random production order according to the frequency distribution given in column 2 of the frequency table. 
+               </p>
+               
+               <p class="para_item"></p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourceRandomTab.gif"></p>
+         <p class="para_topic">To make the <em>Source</em> produce the number of <em>MUs</em>, which you entered into the cell <b class="uiTerm">Number</b> of the <b class="uiTerm">Table</b> in a single lot, select <a class="links" href="id98417.html"> Generate as batch</a>
+            <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/generateAsBatch.gif" border="0">. When you select <a class="links" href="id87183.html">Number adjustable</a> as the <b class="uiTerm">time of creation</b>, the <b class="uiTerm">amount</b> does not designate the number of <em> parts</em>, but the number of <em> batches</em> that the <em>Source</em> produces. Then the <em>Source</em> produces the entire set of parts all at once at the given start time and attempts to move all of the parts on to the next object in a single lot. 
+         </p>
+         <p class="para_topic">To make the <em>Source</em> produce the <em>MUs</em> as a sequence of individual <em>MUs</em>, clear the check box. 
+         </p>
+         <p class="para_topic">To check which part types were produced at which point in time, you can activate the check box <a class="links" href="id22325.html">Creation table</a> on the tab <b class="uiTerm">Statistics</b> and then open the table.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id53588.html"> MuSelection</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1192648.html">GenerateAsBatch</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id50961.html"> CreationTableActive</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id41202.html"> Produce Parts According to a Random Frequency Entered into a Table</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id88114.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Sequence"></a><a class="link" href="id56324a.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Percentage"></a></span></div>
+   </body>
+</html>

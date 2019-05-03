@@ -1,0 +1,144 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>NumMUParts</title>
+      
+      <meta name="MS-HKWD" content="NumMUParts">
+      <meta name="MS-HKWD" content="NumMUParts,material flow object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">NumMUParts</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id85025.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:NumMU"></a><a class="link" href="id49766_dup1.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:NumPred"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1375028.html">Read-Only Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1375029.html">Miscellaneous read-only attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">NumMUParts</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4608"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.NumMUParts</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The read-only attribute <em> NumMUParts </em> returns the number of <em> MUs</em> located on the object designated by Path as a whole or in part.
+         </p>
+         <p class="para_topic"> Note that for length-oriented objects an <em> MU</em> may have exited the object with its front part while the rear is still located on the object. In this case <em> NumMUParts</em> counts both occupied lengths separately, although they form part of a single <em> MU</em>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> The read-only attribute <a class="links" href="id85025.html"> NumMU</a> returns the number of <em> MUs</em> whose booking point is located on the object. On point-oriented objects <em> NumMUParts </em> and <em> NumMU </em> always return the same value. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic"> The return value has the data type <em> integer</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if conveyor.NumMUParts  3 
+   @.move(conveyor)
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id24555.html"> Contents</a></p>
+         <p class="para_topic"><a class="links" href="id85025.html"> NumMU</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id85025.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:NumMU"></a><a class="link" href="id49766_dup1.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:NumPred"></a></span></div>
+   </body>
+</html>

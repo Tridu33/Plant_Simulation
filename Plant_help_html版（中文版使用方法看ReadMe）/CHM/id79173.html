@@ -1,0 +1,200 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.optimizeByVisibilityFilter</title>
+      
+      <meta name="MS-HKWD" content="_3D.optimizeByVisibilityFilter">
+      <meta name="MS-HKWD" content="optimizeByVisibilityFilter">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.optimizeByVisibilityFilter</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id72307.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.optimizeByStructureFlattening"></a><a class="link" href="id38572.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.ShowContent"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36349.html">Built-in Attributes and Methods for Accessing Graphics</a></span> &gt; <span class="simpleHTMLminitoc">_3D.optimizeByVisibilityFilter</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14704"></span><span id="ndxgenid_PlantSimulationENU_14705"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">_3D.optimizeByVisibilityFilter(GraphicPath:any[], CullGranularity:integer, ReductionLevel:integer[, GraphicGroupName:string])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.optimizeByVisibilityFilter</em> optimizes the graphic designated by Path i.e., it removes graphic components which are not visible from outside. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameter</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>GraphicPath</em> is an <em>array</em> of data type <em>any</em> which sets the path to the graphic. The parameter is described under <a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>CullGranularity</em> of data type <em>integer</em> sets the granularity for deleting graphics. 0 is very fine granular, 3 is very coarse granular.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>ReductionLevel</em> of data type <em>integer</em> sets how close the procedure looks at the graphic. 0 stands for a rather coarse look which causes a lot of graphics to be deleted very quickly, 3 stands for a very close look which takes a lot longer.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>postProcessing</em> of data type <em>boolean</em> sets if post-processing of the simplified graphic takes place (<code>true</code>) or not (<code>false</code>). Among others post-processing removes isolated triangles. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>GraphicGroupName</em> of data type <em>string</em> designates the name of the graphic group you are working with. The parameter is described under <a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.Models.Frame._3D.optimizeByVisibilityFilter([2], 0, 1)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.Models.Frame._3D.optimizeByVisibilityFilter([2], 0, 1, &quot;deco&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id76304.html">Optimize Selected Graphic</a></p>
+         <p class="para_topic"><a class="links" href="id53835.html">Step 2: Visibility filter</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id72307.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.optimizeByStructureFlattening"></a><a class="link" href="id38572.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.ShowContent"></a></span></div>
+   </body>
+</html>

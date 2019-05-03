@@ -1,0 +1,256 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Assembling Parts with the AssemblyStation</title>
+      
+      <meta name="MS-HKWD" content="Assembling Parts with the AssemblyStation">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">Assembling Parts with the AssemblyStation</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1160833.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stopped Material Flow Objects and Stopped Frames"></a><a class="link" href="id77774.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Removing Parts with the Dismantle Station"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc">Assembling Parts with the AssemblyStation</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_857"></span><p class="para_topic">The <a class="links" href="id95185.html">AssemblyStation</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/assemblySm.gif" border="0"> adds mounting parts to a main part, for example doors to a car body, or legs to a table top as in our example. It moves the mounting parts either to the main <em>MU</em>--according to the value you enter into the <em>Assembly Table</em>--or it deletes them.
+         </p>
+         <p class="para_topic">You can insert the <em>AssemblyStation</em> into your simulation model from the folder <b class="uiTerm">Materialflow</b> in the <em>Class Library</em> or from the toolbar <b class="uiTerm">Materialflow</b> in the <em>Toolbox</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insAssembly.gif"></p>
+         <p class="para_topic">In this basic sample model we demonstrate how to produce two different types of tables and show how to attach the table legs to the table tops. </p>
+         <p class="para_topic">The <em>Source</em>
+            <em>TableTopsIn</em> produces two brown table tops and two white table tops. The <em>Source</em>
+            <em>TableLegsIn</em> produces 4 table legs with different colors. The sources send the table tops and table legs on to the <em>AssemblyStation</em> which in turn attaches the respective legs to the matching table tops. It then sends the assembled tables on to shipping station, which we modeled with a <em>Drain</em>.
+         </p>
+         <p class="para_topic">To create the simulation model, insert the objects so that they match the screenshot below. </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyFinished.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert and configure the <em>Sources</em>, which are to produce the parts, the table tops and table legs in our case:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Select the type of part which the source <em>TableTopsIn</em> is to produce. We selected the <b class="uiTerm">MU selection</b>
+      &gt;
+       <b class="uiTerm">Sequence Cyclical</b> and then selected the name of the <b class="uiTerm">sequence table</b>, which we inserted before, namely the <em>TableFile</em>
+                        <em>TableTops</em>. Selecting the table automatically applied the correct format. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyTableTopsInSource.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Enter the required data into the <b class="uiTerm">sequence table</b>. 
+                     </p>
+                     
+                     <p class="para_item">We dragged the <b class="uiTerm">MU</b> named <code>TableTop</code>, which we created and stored in the folder <b class="uiTerm">Models</b>, to the cell <b class="uiTerm">MU</b> and dropped it there. 
+                     </p>
+                     
+                     <p class="para_item">As we want to create two brown table tops, we entered <code>2</code> as the <b class="uiTerm">Number</b>. We then entered the name of the part, namely <code>TableTop_A</code>, which also is the name of the icon of the brown table top into the <b class="uiTerm">Attributes</b> sub-table, which we named <code>a1</code>.
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" border="1" cellpadding="1" cellspacing="1" align="center">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="50%">
+                           
+                           <col span="1" width="50%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyClassLibraryParts.gif" border="0"></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyTableTopsInSourceTable.gif" border="0"></p>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                     <p class="para_item">We repeated this for our white table top.</p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Select the type of part which the source <em>TableLegsIn</em> is to produce. We selected the <b class="uiTerm">MU selection </b>
+      &gt;
+       <b class="uiTerm">Sequence Cyclical</b> and then selected the name of the <b class="uiTerm">sequence table</b>, which we inserted before, namely the <em>TableFile</em>
+                        <em>TableLegs</em>. Selecting the table automatically applied the correct format. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyTableLegsSource.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Enter the required data into the <b class="uiTerm">sequence table</b>. 
+                     </p>
+                     
+                     <p class="para_item">We dragged the <b class="uiTerm">MU</b>named <code>TableLeg</code>, which we created and stored in the folder <b class="uiTerm">Models</b>, to the cell <b class="uiTerm">MU</b> and dropped it there. 
+                     </p>
+                     
+                     <p class="para_item">As we want to create two sets of legs for our brown table tops, we entered <code>8</code> as the <b class="uiTerm">Number</b>. We then entered the name of the part, namely <code>Leg_A</code>, which also is the name of the icon of the table leg into the <b class="uiTerm">Attributes</b> sub-table, which we named <code>a1</code>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyTableLegsSourceTable.gif"></p>
+                     
+                     <p class="para_item">We repeated this for the legs that go with our white table top.</p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Insert and configure the <em>AssemblyStation</em>, which is going to attach the matching table legs to the table tops.
+                     </p>
+                     
+                     <ul>
+                        <li>
+                           
+                           <p class="para_item">As we want to attach the table legs to the table tops, we selected <b class="uiTerm">assembly table</b>
+        &gt; <b class="uiTerm">predecessors</b>. 
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item">We then clicked <b class="uiTerm">Open</b> and entered the number of the <b class="uiTerm">predecessor</b> from which the legs arrive, <code>2</code> in our case, and the number of parts want to attach, <code>4</code> in our case.
+                           </p>
+                           
+                           <table bgcolor="#FFFFFF" border="1" cellpadding="1" cellspacing="1" align="center">
+                              
+                              <colgroup span="1">
+                                 
+                                 <col span="1" width="50%">
+                                 
+                                 <col span="1" width="50%">
+                                 
+                              </colgroup>
+                              
+                              <tbody>
+                                 
+                                 <tr>
+                                    
+                                    <td colspan="1" rowspan="1">
+                                       
+                                       <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyAssemblyStation.gif" border="0"></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1">
+                                       
+                                       <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyPredecessors.gif" border="0"></p>
+                                       
+                                    </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item">As the <b class="uiTerm">assembly mode</b> we selected <b class="uiTerm">attach MUs</b>. 
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item">As the part that the <em>AssemblyStation</em> is going to pass on is the finished table, we selected <b class="uiTerm">Main MU</b>, which arrived <b class="uiTerm">from predecessor</b>
+                              <code>1</code>.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Start the simulation and watch how the <em>AssemblyStation</em> attaches the 4 blue legs to the brown table top, passes the assembled table on to the shipping station, and repeats this once. It then attaches 4 orange legs to the white table top, passes the assembled table on to the shipping station, and does the same again, and then repeats the sequence, namely two brown table tops, followed by two white table tops, and so on.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="33%">
+               
+               <col span="1" width="33%">
+               
+               <col span="1" width="33%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyBrown.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyBrownWhite.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/assemblyWhite.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b>, and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b>in the dialog <b class="uiTerm">Examples Collection</b>and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id76040.html">Change the Assembly List in the Entrance Control</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id29319.html">Modeling in 2D</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1160833.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stopped Material Flow Objects and Stopped Frames"></a><a class="link" href="id77774.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Removing Parts with the Dismantle Station"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>insert</title>
+      
+      <meta name="MS-HKWD" content="insert">
+      <meta name="MS-HKWD" content="insert,MUs">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">insert</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1309311.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getStoragePlace"></a><a class="link" href="id40032.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:move"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id38692.html">Methods of All Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66973.html">Methods for Creating and Locating Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc">insert</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_9144"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.insert(Target:any, Position:length) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>insert</em> places the <em>MU</em> designated by MU-path entirely onto the destination object designated by the parameter <em>any</em>.
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">For point-oriented objects the behavior is the same as for the methods <a class="links" href="id40032.html">move</a> and <a class="links" href="id69037.html">transfer</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> For length-oriented objects the MU also moves onto the designated target object, provided it provides enough room. If the designated target object does not provide enough room, <em>Plant Simulation</em> attempts to place the remainder of the MU onto the first predecessor. If there still is not enough room, <em>Plant Simulation</em> again uses the first predecessor, and so on.
+               </p>
+               
+            </li>
+         </ul>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When inserting with the commands <code>MU-path.insert(TargetObject:any)</code> or <code>MU-path.insert(Position:integer)</code> failed, then <em>Plant Simulation</em> enters the <em>MU</em> into the <a class="links" href="id69726.html">Forward Blocking List</a> of the target object onto which it intended to move. Once the target object is ready to accept the next <em>MU</em>, the target object enters an <b class="uiTerm">Out</b> event for all entries, i.e., for all <em>MUs</em> in the <b class="uiTerm">Forward Blocking List</b>. Then the target object deletes all entries from its <b class="uiTerm">Forward Blocking List</b>. 
+                     </p>
+                     
+                     <p class="para_note_body">If you enter a certain position on the target object using the parameter <code>length</code>, it does not enter the <em>MU</em> into the <b class="uiTerm">Forward Blocking List</b>, as <em>Plant Simulation</em> cannot watch/observe at which point in time this position is available again.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If you moved an MU before an <b class="uiTerm">Out</b>-event was processed for this MU, for example in a sensor control, and if the MU could not be moved and was thus entered into the <b class="uiTerm">blocking list</b> of the target object, the MU will not be removed from the <b class="uiTerm">blocking list</b> of the target object, when the object, on which the blocked MU is located, is failed/paused/stopped.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameters</b></p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Target</em> of data type <em>any</em> designates the destination object. 
+               </p>
+               
+               <p class="para_item">Instead, you can also enter the number of the <em>Connector</em>, which is located in the direction of movement. If the <em>MU</em> moves backwards, the instruction <code>insert(1)</code> moves the <em>MU</em> to the predecessor with the number 1. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">For the <em>Converter</em> you cannot specify an index. Use the method <em>insert</em> without a parameter instead. Then <em>Plant Simulation</em> moves the <em>MU</em> onto the target object designated in the <b class="uiTerm">target control</b>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Position</em> of data type <em>length</em> is the position on a length-oriented object. 
+               </p>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Return Value</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>boolean</em>.
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">@.insert(Track,3.3)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topics</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id40032.html">move</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id69037.html">transfer</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1309311.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getStoragePlace"></a><a class="link" href="id40032.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:move"></a></span></div>
+   </body>
+</html>

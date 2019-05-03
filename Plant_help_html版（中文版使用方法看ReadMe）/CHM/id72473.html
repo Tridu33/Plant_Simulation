@@ -1,0 +1,242 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Attributes of the Importer</title>
+      
+      <meta name="MS-HKWD" content="Attributes of the Importer">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Attributes of the Importer</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id86389.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:MUTarget"></a><a class="link" href="id62220.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Active"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id72473.html">Attributes of the Importer</a></span> &gt; <span class="simpleHTMLminitoc">Attributes of the Importer</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5072"></span><p class="para_topic"> The <em>importer</em> provides the <em>attributes</em>
+            <a class="links" href="id62220.html">Active</a>, <a class="links" href="id46474.html">BrokerPath</a>, <a class="links" href="id99347.html">Common</a>, <a class="links" href="id24618.html">Interruptible</a>, <a class="links" href="id27627.html">Priority</a>, <a class="links" href="id79004.html">ReleaseAllServices</a>, <a class="links" href="id96931.html">ReceiveCtrl</a>, <a class="links" href="id55608.html">ReleaseCtrl</a>, and <a class="links" href="id65786.html">RequestCtrl</a>. 
+         </p>
+         <p class="para_topic"> Only the <a class="links" href="id18003.html">Station</a>, the <a class="links" href="id29026.html">ParallelStation</a>, the <a class="links" href="id95185.html">AssemblyStation</a>, and the <a class="links" href="id85371.html">DismantleStation</a>, the <a class="links" href="id16225.html">Mixer</a>, the <a class="links" href="id77602.html">Portioner</a>, the <a class="links" href="id39276.html">DePortioner</a>, and the <a class="links" href="id47279.html">Tank</a> can import services, which you define on the <a class="links" href="id88367.html">Tab Importer</a>.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><em>Plant Simulation</em> addresses all <em>failure-importer</em> attributes as sub-attributes of <code>failImp</code> in attributes. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">MyStation.failImp.Priority := 60</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>Plant Simulation</em> addresses all <em>importer</em> attributes as sub-attributes of <code>imp</code> in attributes. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">ParallelStation.imp.Priority := 10</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>Plant Simulation</em> addresses all <em>setup-importer</em> attributes as sub-attributes of <code>setupImp</code> in attributes.
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">MyStation.setupImp.Priority := 40</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>Plant Simulation</em> addresses all <em>transport-importer</em> attributes as sub-attributes of <code>transportImp</code> in attributes.
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">MyStation.transportImp.Priority := 20</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id88367.html">Tab Importer</a></p>
+         <p class="para_topic"><a class="links" href="id48315.html">Methods of the Importer</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id86389.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:MUTarget"></a><a class="link" href="id62220.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Active"></a></span></div>
+   </body>
+</html>

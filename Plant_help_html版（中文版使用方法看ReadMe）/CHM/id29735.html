@@ -1,0 +1,153 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ServerURL</title>
+      
+      <meta name="MS-HKWD" content="ServerURL">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">ServerURL</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id51222.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:RetrieveJTFiles"></a><a class="link" href="xid1202351.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:StyleSheet"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id78707.html">Inter-Process Communication Interfaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id86926.html">Teamcenter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id13832.html">Attributes of the Teamcenter Interface</a></span> &gt; <span class="simpleHTMLminitoc">ServerURL</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_16379"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.ServerURL</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>ServerURL</em> sets the <a class="links" href="id66397.html">Server URL</a> of the <em>Teamcenter</em> server. The default server URL is <code>http://localhost:7001/tc</code>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The connection string that you enter depends on your <em>Teamcenter</em> provider, for example the IT department of the customer. Consult your <em>Teamcenter</em> provider for more information.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When the connection with the server is established via HTTPS in encrypted mode, the respective certificate has to exist in the <em>Windows Certificate Store</em>. (<b class="uiTerm">Control Panel</b>
+   &gt; <b class="uiTerm">Internet Options</b> &gt; <b class="uiTerm">Content</b> &gt;
+    <b class="uiTerm">Certificates</b>.)
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic"> You can assign a value of data type <em>string</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Teamcenter.ServerURL := &quot;http://MyCompany:7001/tc&quot;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id66397.html">Server URL</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id51222.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:RetrieveJTFiles"></a><a class="link" href="xid1202351.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:StyleSheet"></a></span></div>
+   </body>
+</html>

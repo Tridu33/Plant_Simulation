@@ -1,0 +1,220 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.importGraphics</title>
+      
+      <meta name="MS-HKWD" content="_3D.importGraphics">
+      <meta name="MS-HKWD" content="importGraphics">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.importGraphics</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id48058.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.getObject"></a><a class="link" href="id64958.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.InheritGraphics"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36349.html">Built-in Attributes and Methods for Accessing Graphics</a></span> &gt; <span class="simpleHTMLminitoc">_3D.importGraphics</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14689"></span><span id="ndxgenid_PlantSimulationENU_14690"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path._3D.importGraphics(BasePoint:real[3], FilePath:string, YUpToZUp:boolean, MoveContentToZeroY:boolean [, GraphicGroupName:string]) &rarr; integer</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.importGraphics</em> imports a graphic from the file designated by Path and adds it to the existing graphic. 
+         </p>
+         <p class="para_topic"><em>3D</em> can import files of these types:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/import3Dgeometry.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>3D</em> uses the file name of the graphic as the name of the graphic node.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>BasePoint</em> of data type <em>array</em> of data type <em>real</em> which sets the base point at which the graphic will be inserted.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>FilePath</em> of data type <em>string</em> sets path to the graphic to be imported.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>YUpToZUp</em> of data type <em>boolean</em> sets if up-direction, i.e., the y-direction of the imported graphic, will be converted from the y-direction to the z-direction.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>MoveContentToZero</em> of data type <em>boolean</em> sets if the visible center of the imported graphic is to be moved to the center of the scene defined by the coordinates 0,0,0 (true) or not (false).
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>GraphicGroupName</em> of data type <em>string</em> designates the name of the graphic group you are working with. The parameter is described under <a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>integer</em> and specifies the numerical index of the imported graphic, compare <a class="links" href="id72302.html">_3D.getGraphicIndex</a>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var i := MyFrame._3D.importGraphics([0,0,0], &quot;C:\Program Files\Siemens\Tecnomatix Plant Simulation 14.0\3D\jt-graphics\RobotKuka.jt&quot;, false, true)
+MyFrame._3D.setGraphicName([i])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var i := MyFrame._3D.importGraphics([0,0,0], &quot;C:\Program Files\Siemens\Tecnomatix Plant Simulation 14.0\3D\jt-graphics\RobotKuka.jt&quot;, false, true], &quot;deco&quot;) 
+MyFrame._3D.setGraphicName([i], &quot;RobotKuka&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id21436.html">Import Graphics</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id48058.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.getObject"></a><a class="link" href="id64958.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.InheritGraphics"></a></span></div>
+   </body>
+</html>

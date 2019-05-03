@@ -1,0 +1,204 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Working with Length-oriented Objects in 2D</title>
+      
+      <meta name="MS-HKWD" content="Working with Curved Objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Working with Length-oriented Objects in 2D</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id14255.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling Transport Systems"></a><a class="link" href="id28805.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Insert Curved and Straight Segments"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id60549.html">Working with Curved Objects</a></span> &gt; <span class="simpleHTMLminitoc">Working with Length-oriented Objects in 2D</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_991"></span><p class="para_topic">By inserting <em>Track</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/trackSm_dup.gif" border="0">, <em>TwoLaneTrack</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/twoLaneTrackSm_dup.gif" border="0">, <em>Conveyor</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/lineSm_dup1.gif" border="0">, and <em>FootPath</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/footpathSM.gif" border="0"> is a sequence of <a class="links" href="id93381.html">curved</a> segments and/or straight segments, you can realistically model the conveyor systems and tracks of your plant. The <em>mobile objects</em>
+            <em>Part</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/entitySmSm_dup3.gif" border="0">, <em>Container</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/containerSm_dup.gif" border="0">, <em>Transporter</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/transporterSmSm_dup.gif" border="0"> and <em>Worker</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/workerSm.gif" border="0"> move to their destination on them, either to the <em>Workplace</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/workplaceSm.gif" border="0">attached to or directly to the designated material flow object. 
+         </p>
+         <p class="para_topic"><em>Plant Simulation</em> uses the length of the polygonal and curved objects during the simulation. The <a class="links" href="id85960.html">Scaling Factor</a> you select in the <em>Frame</em> controls how <em>Plant Simulation</em> computes the length. <em>Plant Simulation</em> automatically animates and aligns mobile objects along the polygon or the curve.
+         </p>
+         <p class="para_topic">The illustration shows the most important items of the curve which you can define in 2D:</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/tabCurveItems.gif"></p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/tabCurve.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/tabCurve1.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <ul>
+            <li>
+               
+               <p class="para_item">To turn the <em>MU</em> in the direction of motion of the flow of materials, when it turns a curve, select <b class="uiTerm">Rotate movables</b>. 
+               </p>
+               
+               <table border="1" cellpadding="10" width="100%" align="center">
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/rotateMUsact.gif" border="0">
+                              
+                           </p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/rotateMUsNotact.gif" border="0">
+                              
+                           </p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/rotMUs.gif" border="0">
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/rotMusNo.gif" border="0">
+                              
+                           </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To use the length of the curve in the layout within the <em>Frame</em> is the actual length of the <em>Track</em>, the <em>Conveyor</em> or the <em>FootPath</em>, select <b class="uiTerm">Transfer length</b>
+                  <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/curveTransferL.gif" border="0">. When the dialog is open, <em>Plant Simulation</em> enters this value into the textbox <b class="uiTerm">Length</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/transferLength.gif"></p>
+               
+               <p class="para_item">To be able to edit the length, clear the check box <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/transferLengthOff.gif" border="0">. Then you can type in a new length or make slight adjustments to the length of the inserted object.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/transferLengthEnter.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To create a class from a <em>Conveyor</em>, <em>Turntable</em>, <em>Track</em>, <em>TwoLaneTrack</em> or <em>FootPath</em>, model this class in the <em>Frame</em>, and then drag this object from the <em>Frame</em> to the <em>Class Library</em>. You can then insert this class into the active and into any other simulation model.
+         </p>
+         <p class="para_topic">You can:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id28805.html">Insert Curved and Straight Segments</a>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id63586.html">Draw Straight and Curved Segments with a 90&deg; Angle (Fixed Values)</a>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id69127.html">Draw Straight and Curved Segments without Fixed Values</a>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id41547.html">Change the Shape of a Segment</a>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id92345.html">Create a Curved Object with SimTalk Commands</a>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id94061.html">Import Settings of a Curved Object from Another Simulation Model</a>
+                  
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id57105.html">Modeling a Transport System with Active Objects of Type Conveyor</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="xid1487533.html">Working with Length-oriented Objects in 3D</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id14255.html">Modeling Transport Systems</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id14255.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling Transport Systems"></a><a class="link" href="id28805.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Insert Curved and Straight Segments"></a></span></div>
+   </body>
+</html>

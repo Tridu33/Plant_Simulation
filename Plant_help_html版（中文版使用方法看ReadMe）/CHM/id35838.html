@@ -1,0 +1,168 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>infoBox</title>
+      
+      <meta name="MS-HKWD" content="infoBox">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">infoBox</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id68794.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getUnit"></a><a class="link" href="id87867.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:print"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Predefined_Functions_1.html">Predefined Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id77332.html">Output Functions</a></span> &gt; <span class="simpleHTMLminitoc">infoBox</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14287"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">infoBox(Text:string, Modal:boolean)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The function <em>infoBox</em> opens a message box, which shows the designated text.
+         </p>
+         <p class="para_topic">Close the message box by calling the function <em>infoBox</em> a second time and by passing an empty string (&quot;&quot;). 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Open a modal <em>Infobox</em> when you would like to prevent the user from modifying a simulation model during a simulation run.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">When the <em>Debugger</em> is opened, any open message box will be closed. Otherwise an open modal message box would prevent you from continuing your work. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you inadvertently opened a modal message box without closing it, hold down the <b class="uiTerm">Shift+Ctrl+Alt keys</b> down for 5 seconds. This closes the message box and opens a dialog you can close by clicking <b class="uiTerm">No</b>. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/infoString.gif"></p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Text</em> of data type <em>string</em> designates the text, which the message box shows.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Modal</em> of data type <em>boolean</em> sets if the dialog is modal, i.e., that you cannot access any other <em>Plant Simulation</em> window (<code>true</code>) or not (<code>false</code>).
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">infoBox(&quot;info string&quot;,false) -- shows the &quot;info string&quot; 
+infoBox(&quot;&quot;,false)            -- closes the info box</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id68794.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getUnit"></a><a class="link" href="id87867.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:print"></a></span></div>
+   </body>
+</html>

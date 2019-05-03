@@ -1,0 +1,136 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>getNo</title>
+      
+      <meta name="MS-HKWD" content="getNo">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">getNo</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id93694.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:delete"></a><a class="link" href="xid1309311.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getStoragePlace"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id38692.html">Methods of All Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66973.html">Methods for Creating and Locating Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc">getNo</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_9140"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.getNo &rarr; integer</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>getNo</em> returns the number of the <em>MU</em> in the sequence in which the instances were inserted into the model. This unique number, assigned by <em>Plant Simulation</em> at the time it inserted the <em>MU</em>, allows accessing each instance. The number is displayed in the name, separated by a colon. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Return Value</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>integer</em> and greater than 0.
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">print .MUs.Transporter:1.getNo = 1 -- always returns true
+print @.getNo &gt; 10</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topic</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id53725.html">Number</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id93694.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:delete"></a><a class="link" href="xid1309311.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getStoragePlace"></a></span></div>
+   </body>
+</html>

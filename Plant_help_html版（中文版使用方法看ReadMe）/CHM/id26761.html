@@ -1,0 +1,248 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Create and Delete an Observer</title>
+      
+      <meta name="MS-HKWD" content="Create and Delete an Observer">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Create and Delete an Observer</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id21553.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create Sensors"></a><a class="link" href="id27440.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create and Work with a Distance Control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id26257.html">Modeling the Flow of Materials, Advanced</a></span> &gt; <span class="simpleHTMLminitoc">Create and Delete an Observer</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_693"></span><p class="para_topic">When you create your simulation model, it will often become necessary to trigger certain actions, when the observable values of <em>attributes</em> or <em>methods</em> of objects change. To accomplish this, you can create <a class="links" href="id42286.html">observers</a> for most of the built-in objects. 
+         </p>
+         <p class="para_topic">This observer observes the value of an <em>attribute</em> or of a <em>method</em> and then executes one or several <em>methods</em> then the value changes. This <b class="uiTerm">method</b> can either be a <em>Method</em> object, which you insert into a <em>Frame</em>, or a user-defined attribute of data type <em>method</em>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">This only works, if the <em>attribute</em> or the <em>method</em> of the object is observable.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">As a rule <em>observer methods</em> are called after all other controls. If you want to react to state changes before other controls, you have to use the <em>stopuntil instruction</em> or the <em>waituntil instruction</em> instead of an <em>observer</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">You can use observers for a wide range of applications. In our example, we show how to move the contents of <em>Station1</em> to <em>Station2</em>, when the value of the <em>Method</em> of <em>Station1</em> changes.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/observer1.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Open the dialog of <em>Station1</em>. Select <b class="uiTerm">Tools</b> &gt; <b class="uiTerm">Edit Observers</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/observer2.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To create the observer, click <b class="uiTerm">New</b> in the dialog <b class="uiTerm">Observers</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/observer3.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To select the <em>attribute</em> or <em>method</em> whose value you want to watch, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> next to <b class="uiTerm">Attribute</b> in the dialog <b class="uiTerm">Select Observed Value and Method to be Executed</b>. Then, select the attribute in the dialog <b class="uiTerm">Select Object</b>. We selected <a class="links" href="id10802.html">occupied</a>.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/observer4.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/observer5.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To select the <em>Method</em> that will be executed, when the value of the <em>attribute</em> or <em>method</em> changes, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> next to <b class="uiTerm">Method</b>. Then, select the <em>Method</em> in the dialog <b class="uiTerm">Select Object</b>. We selected the <em>Method</em> object <em>occupiedObserver</em> in which we programmed our transfer behavior.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/observer6.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/observer7.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The dialog <b class="uiTerm">Observers</b> then shows that our observer consists of the observed method <em>numMU</em> and of the method <em>occupiedObserver</em>. The asterisk shows that we created the observer in <em>Station1</em>, meaning that it is not inherited from its origin.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/observer8.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/observer9.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The source code of our method <em>occupiedObserver</em> looks like this:
+               </p>
+               <pre class="indent">param attribute: string, oldValue: any
+if ?.occupied
+   ?.cont.move(Station2)
+end</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">First, we declare the two parameters, which are passed to the <em>Method</em>:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">The name of the <em>attribute</em> or the <em>method</em>, whose observable value changed. This allows you to use a single <em>Method</em> is the method to be called for several attributes.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">The previous value of the <em>attribute</em> or the <em>method</em>. This way you can still access the previous value after the executed method changed it to the new value.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Then, we tell <em>Plant Simulation</em> to check if <em>Station1</em> is occupied, i.e., if it contains a part. If that is the case, we want it to move the part to <em>Station2</em>. Within the called <em>Method</em>, we can use the anonymous identifiers <b class="uiTerm">?</b> and @ to address the object, whose <em>Method</em> changed, <em>Station1</em> in our case.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete the observer, you can either click <b class="uiTerm">Remove</b> in the dialog or program a method. 
+               </p>
+               
+               <p class="para_item">For our example above we entered the following source code:</p>
+               <pre class="indent">Station1.removeObserver(&quot;Occupied&quot;,&quot;OccupiedObserver&quot;) -- &quot;Occupied&quot; is the
+name of the observer, &quot;OccupiedObserver&quot; is the name of the method</pre>
+               </li>
+         </ul>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id26257.html">Modeling the Flow of Materials, Advanced</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id21553.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create Sensors"></a><a class="link" href="id27440.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create and Work with a Distance Control"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Result of the Function Value of a Method</title>
+      
+      <meta name="MS-HKWD" content="Result of function value">
+      <meta name="MS-HKWD" content="Function value">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Result of the Function Value of a Method</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Declaring_Parameters.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Declaring Parameters"></a><a class="link" href="id25118.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Global Variables"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Constants_and_Variables_1.html">Constants and Variables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id74099.html">Parameters</a></span> &gt; <span class="simpleHTMLminitoc">Result of the Function Value of a Method</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13656"></span><span id="ndxgenid_PlantSimulationENU_13657"></span><p class="para_topic">Mathematical functions return a result. A <em>Method</em> may also return a result. To make a method work like a function, add a colon and a data type before the keyword <code>is</code>. Also enter additional parameters in front of the colon. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">A function only returns <b class="uiTerm">one</b> result.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Within the function you have to assign the result to the return value <em>result</em>. After the function has been executed, <em>Plant Simulation</em> returns the contents of this variable to the caller.
+         </p>
+         <p class="para_topic">Compare these examples: </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">A function without a parameter, calculating a <em>real</em> value, looks like this:
+               </p>
+               <pre class="indent">-&gt; real</pre>
+               </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">A function with a parameter, returning a <em>string</em> value, looks like this:
+               </p>
+               <pre class="indent">param CustomerNo:integer
+-&gt; string</pre>
+               </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">A function with several parameters, returning a <em>table</em> , looks like this:
+               </p>
+               <pre class="indent">param orders,deliveries: list, delivery_date: time
+-&gt; table</pre>
+               </li>
+         </ul>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Instead of using <em>result</em>, you can also terminate the method using <em>return</em>, compare <a class="links" href="id73016.html">Exiting Methods Using Return</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The data types <em>stack</em>, <em>queue</em>, <em>list</em>, and <em>table</em> things behave different. At the beginning, the local variable <em>result</em> is empty. Before accessing <em>result</em> you either assign a value to <em>result</em> or use the method <a class="links" href="id40739.html">create</a>. 
+         </p><pre class="indent">-- returns a list that contains the value added tax amount
+-- added to the prices of the price list that was passed
+param pricelist: queue, VAT: real -&gt; list[real]
+var i: integer -- loop index
+result.create -- instantiates the results list
+i := 1
+while not pricelist.empty loop -- stop condition
+   result[i] := pricelist.pop * (1 + VAT)
+   i := i + 1 -- increases the index
+end -- end of functionn</pre><p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="Declaring_Parameters.html">Declaring Parameters</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Declaring_Parameters.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Declaring Parameters"></a><a class="link" href="id25118.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Global Variables"></a></span></div>
+   </body>
+</html>

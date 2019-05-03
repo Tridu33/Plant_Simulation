@@ -1,0 +1,135 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>initStat</title>
+      
+      <meta name="MS-HKWD" content="initStat">
+      <meta name="MS-HKWD" content="initStat,MUs">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">initStat</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id91615.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Accessing Statistics of the Mobile Objects"></a><a class="link" href="id85081.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:statistics"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id38692.html">Methods of All Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id91615.html">Methods for Accessing Statistics of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc">initStat</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_9183"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.initStat([Reset:boolean])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>initStat</em> resets the statistics of the <em>MU</em>, i.e., resets all entries to 0 and statistics collection starts anew. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameter</b></p>
+         
+         <p class="para_topicComponent">When you enter <code>true</code> as the optional parameter of data type <em>boolean</em>, <em>Plant Simulation</em> resets the <code>Average Lifespan</code> to 0. When you enter <code>false</code> or do not specify a parameter, <em>Plant Simulation</em> resets all statistics values, except for <code>Average Lifespan</code>.
+         </p>
+         
+         <p class="para_topicComponent">If you do not want to include the statistics of the beginning of the simulation run, you can reset the statistics at a later point in time. Then <em>Plant Simulation</em> will collect the statistics from that point in time on.
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.MUs.Part.initStat</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id91615.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Accessing Statistics of the Mobile Objects"></a><a class="link" href="id85081.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:statistics"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>WorkerPool</title>
+      
+      <meta name="MS-HKWD" content="WorkerPool">
+      <meta name="MS-HKWD" content="WorkerPool,object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">WorkerPool</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1484923.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ZDim"></a><a class="link" href="id75007.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the WorkerPool"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id13713.html">WorkerPool</a></span> &gt; <span class="simpleHTMLminitoc">WorkerPool</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8859"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/WorkerPoolIcon.gif" border="0"></p>
+         <p class="para_topic">The <a class="links" href="id67192.html">Worker</a>-<em>WorkerPool</em>-<a class="links" href="id27173.html">Workplace</a>-<a class="links" href="id30049.html">FootPath</a>-concept refines the <a class="links" href="id19366.html">Broker</a>-<em>Importer</em>-<a class="links" href="id93899.html">Exporter</a>-concept. The <em>WorkerPool</em> represents the lounge or the staff room of your plant.
+         </p>
+         <p class="para_topic">You can assign a <em>Workplace</em> to the material flow objects that support an <em>Importer</em>, for example to the <a class="links" href="id18003.html">Station</a>, the <a class="links" href="id29026.html">ParallelStation</a>, the <a class="links" href="id95185.html">AssemblyStation</a>, and the <a class="links" href="id85371.html">DismantleStation</a>.
+         </p>
+         <p class="para_topic">The <em>Workers</em> are created in the <a class="links" href="id13713.html">WorkerPool</a> and they stay there when they do not work and are waiting for an order. As a rule you enter the <em>Workers</em>, which you want to use in your simulation model, into the <a class="links" href="id78500.html">Creation Table</a>. You can also drag the <b class="uiTerm">Creation table</b> from the <em>Class Library</em> onto the icon of the <em>WorkerPool</em> and drop it there. The <em>WorkerPool</em> appends a line to the creation table for this <em>Worker</em>. When it already contains a line for this <em>Worker</em>, the <em>WorkerPool</em> increments the amount by 1. 
+         </p>
+         <p class="para_topic"> You can also create individual <em>Workers</em>, which you do not want to generate via the <b class="uiTerm">Creation table</b>, with the method <a class="links" href="id63269.html">create</a> for a single simulation run. This only works in the <em>WorkerPool</em> though. Be aware that <em>Plant Simulation</em> deletes this <em>Worker</em> when you reset the model and then only creates the <em>Workers</em> from the <b class="uiTerm">Creation table</b> at the next <b class="uiTerm">Init</b> event that takes place. 
+         </p>
+         <p class="para_topic">You can select the <a class="links" href="id10075.html">Travel mode</a> with which the <em>Worker</em> gets to his work station:
+         </p>
+         <p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ResourceObjects/TravelMode.gif" border="0"></p>
+         <p class="para_topic">The <a class="links" href="id19366.html">Broker</a> procures the <em>Worker</em> for the individual work stations. As soon as a <em>Worker</em> can provide a service, the <em>Broker</em> sends him from his <em>WorkerPool</em> to the work station that ordered him:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When you modeled the work station using one of the material flow objects and the <em>Workplace</em> and connected the <em>WorkerPool</em> and the <em>Workplace</em> with a <em>FootPath</em>, <em>Plant Simulation</em> animates the <em>Worker</em>, while he moves on the <em>FootPath</em> and while he works on the <em>Workplace</em>. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <em>Worker</em> only consumes time, when he moves on the <em>FootPath</em>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you inserted a <em>Workplace</em>, and the <em>Worker</em>, who is supposed to work there, cannot reach it via a <em>FootPath</em>, <em>Plant Simulation</em> transports the <em>Worker</em> directly to the <em>Workplace</em> and animates him there. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you do not insert a <em>Workplace</em>, when no <em>Workplace</em> is present that supports this service, or when all <em>Workplace</em> s that support this service are occupied, <em>Plant Simulation</em> transports the <em>Worker</em> to the <em>work station</em> itself, where he will perform his task. Then, the material flow object only shows with an LED in the LED area of its icon that a <em>Worker</em> is working. It does not animate him there, but continues to animate him in the <em>WorkerPool</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">If your plant works in shifts, the <em>Worker</em> walks back to his <em>WorkerPool</em> at the end of his shift. He then deposits the parts he could not deliver into the <a class="links" href="id84966.html">Parts buffer</a>, which you assigned to the <em>WorkerPool</em>. The parts buffer can be any one of the material flow objects, which accepts parts. When you did not assign a parts buffer to the <em>WorkerPool</em>, <em>Plant Simulation</em> shows a warning and stops the simulation. When the next shift starts, <em>Plant Simulation</em> treats the parts in the parts buffer according to the exit strategy you selected for the parts buffer. When you select <b class="uiTerm">Carry part away</b>, the carrying <em>Worker</em> requests the service, which you entered.
+         </p>
+         <p class="para_topic">The <em>WorkerPool</em> in 3D looks like this:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/werkerpool3DGrafik.gif"></p>
+         <p class="para_topic">As opposed to 2D the <em>WorkerPool</em> initially does not show any <em>Worker</em> at all in 3D. If you would like to see the <em>Workers</em>, select the check box <b class="uiTerm">Show content</b> on the tab <b class="uiTerm">Graphics</b> of the <em>WorkerPool</em></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/werkerpool3DGrafik1.gif"></p>
+         <p class="para_topic"> If you would like to see the <em>Workers</em> are staying in the <em>WorkerPool</em>, open it in a new 3D window.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/werkerpool3DGrafik2.gif"></p>
+         <p class="para_topic">To add the <em>WorkerPool</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; Resources &gt; WorkerPool</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id18156.html"> Modeling Workers and the Jobs They Do</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1388956.html">Read-Only Attributes of the WorkerPool</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id75007.html"> Dialog Window of the WorkerPool</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id15269.html"> Attributes of the WorkerPool</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id51863.html"> Methods of the WorkerPool</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43953.html"> Shared Properties of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1484923.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ZDim"></a><a class="link" href="id75007.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the WorkerPool"></a></span></div>
+   </body>
+</html>

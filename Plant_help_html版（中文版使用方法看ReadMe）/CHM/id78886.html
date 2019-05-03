@@ -1,0 +1,61 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Binomial</title>
+      
+      <meta name="MS-HKWD" content="Binomial">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Binomial</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id44338.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Beta"></a><a class="link" href="id26821.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Constant"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64129.html">Times and Distributions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id32650a.html">Probability Distributions</a></span> &gt; <span class="simpleHTMLminitoc">Binomial</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4015"></span><p class="para_topic">The <em>binomial distribution</em> is a discrete distribution. The realizations are natural numbers. The parameter <code>n</code> (<em>real</em>) designates the number of trials. The parameter <code>p</code> (<em>real</em>) designates the probability of the event of interest to occur.
+         </p>
+         <p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/binomialDistDrop.gif" border="0"></p>
+         <p class="para_topic">The parameters of the distribution are described under <a class="links" href="id26000.html">Attributes of the Distributions</a>.
+         </p>
+         <p class="para_topic">You can use it when you run the same experiment several times one after the other and when the results of the experiment are independent of each other. </p>
+         <p class="para_topic">An event of interest will occur during the simulation with a probability of <code>p</code>. If you repeat this test <code>n</code> times, the probability of an event of interest to occur k times is: 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/binomial1.gif"></p>
+         <p class="para_topic">The formula <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/binomial2.gif" border="0"> stands for the binomial coefficient for n &ge; k &ge; 0.
+         </p>
+         <p class="para_topic">The <em> binomial distribution</em> is realized by values ranging from 0, 1, &hellip;, n.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/Binomial_n12_p0.35.gif"></p>
+         <p class="para_topic">Probabilities of the binomial distribution with the parameters n=12 and p=0.35</p>
+         <p class="para_topic">You can also create the <em>binomial distribution</em> with this <em>SimTalk</em> function:
+         </p><pre class="indent">z_binomial(Stream:integer,n:integer,p:real)</pre><p class="para_topic">The parameter <b class="uiTerm">Stream</b> (<em>integer</em>) designates the random number stream. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <p class="para_topic">The parameter <code>n</code> (<em>integer</em>) designates the number of trials and has to be a positive number. 
+         </p>
+         <p class="para_topic">The parameter <code>p</code> (<em>real</em>) designates the probability of the event of interest to occur. 
+         </p>
+         <p class="para_topic">The return value <code>k</code> (<em>integer</em>) tells how often the event is going to occur. The return value of the distribution is the number of trials (<em>real</em>). Although the returned values are natural numbers, we do not return a value of data type <em>integer</em>, but a value of data type <em>real</em>, so that all distribution function return the same data type.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id31886.html">Distribution Functions</a></p>
+         <p class="para_topic"><a class="links" href="id26000.html">Attributes of the Distributions</a></p>
+         <p class="para_topic"><a class="links" href="id29080.html">Methods of the Distributions</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id44338.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Beta"></a><a class="link" href="id26821.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Constant"></a></span></div>
+   </body>
+</html>

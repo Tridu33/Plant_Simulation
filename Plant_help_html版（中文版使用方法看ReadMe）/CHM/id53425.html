@@ -1,0 +1,112 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Exchange Data with an SQL Database</title>
+      
+      <meta name="MS-HKWD" content="Exchange Data with an SQL Database">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Exchange Data with an SQL Database</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id84466.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import Data from an Oracle Database"></a><a class="link" href="id25176.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Connection with the SQL Database"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48998.html">Importing and Exporting Data</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id24466.html">Import Data from a Database</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53425.html">Exchange Data with an SQL Database</a></span> &gt; <span class="simpleHTMLminitoc">Exchange Data with an SQL Database</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1667"></span><p class="para_topic"><em>Plant Simulation</em> can exchange data with an SQL database using the object <em>SQLite</em>. 
+         </p>
+         <p class="para_topic">To add the object <a class="links" href="id92910.html">SQLite</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/odbcSm.gif" border="0"> to the toolbar <b class="uiTerm">Information Flow</b> of your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt; <b class="uiTerm">Basic Objects</b> &gt;
+   <b class="uiTerm">InformationFlow</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Click the object on the toolbar <b class="uiTerm">Information Flow</b> and insert it into your simulation model.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/addSQLite.gif"></p>
+         <p class="para_topic">This sample model demonstrates how to use the object <em>SQLite</em> to establish a connection between <em>Plant Simulation</em> and an SQL database.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The object <em>SQLite</em> uses a database which is stored in main memory instead of in a file on your computer&rsquo;s hard disk.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The method <em>openDatabase</em> opens the database and creates a table in the database using SQL statements.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The objects <em>SourcePart</em> and <em>SourcePallet</em> produce different parts that pass through the plant. When the parts leave the respective <em>Source</em> objects, the method <em>enterCreationTime</em> records the part type and the creation time in the database.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Once the parts reach the <em>Drain</em>, the method <em>enterDeletionTime</em> records the time at which the parts leave the plant.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The simulation runs for 6 days. At the end of the simulation run the <em>endSim method</em> computes the average lifetime of the parts and the method <em>fillTable</em> writes these results into a <em>Plant Simulation</em> table. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The method <em>closeDatabase</em>, which is called by the <em>endSim method</em>, closes the database.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To create the model, you will:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id25176.html">Configure the Connection with the SQL Database</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id99206.html">Configure the Material Flow Through the Facility in Plant Simulation</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id44371.html">Import the Simulation Results From the Database and Show Them</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The finished simulation model looks like this:</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/SQLiteFinished.gif"></p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id37636.html">Import Data from an ODBC Database</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id84466.html">Import Data from an Oracle Database</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id24466.html">Import Data from a Database</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id84466.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import Data from an Oracle Database"></a><a class="link" href="id25176.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Connection with the SQL Database"></a></span></div>
+   </body>
+</html>

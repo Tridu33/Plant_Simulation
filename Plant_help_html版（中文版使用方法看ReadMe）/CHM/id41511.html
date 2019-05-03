@@ -1,0 +1,100 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Supported Services</title>
+      
+      <meta name="MS-HKWD" content="Supported Services">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Supported Services</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id30685.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Station"></a><a class="link" href="id53766.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Worker stays here after completing the job"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27173.html">Workplace</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48161.html">Dialog Window of the Workplace</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84589.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc">Supported Services</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8955"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/supportedServicestextbox.gif" border="0"></p>
+         <p class="para_topic">First, click the <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/inheritanceEin.gif" border="0"> button to deactivate <a class="links" href="id23901.html">Inheritance</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/inheritanceAus.gif" border="0">. Only then you can enter data into the list. 
+         </p>
+         <p class="para_topic">To open the list into which you enter the services, which the <em> Workplace</em> supports, click this. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter an expression of your choice into the cell, and click <b class="uiTerm">Apply</b>. You might, for example, enter different names for the different services, such as drilling, milling, turning, etc. or group them by name. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The name of the service is not case-sensitive, just like the names of <em>attributes</em> and <em>methods</em> of the objects are not case-sensitive.
+                           </p>
+                           
+                           <p class="para_note_body">To save memory and improve access speed, all places which use such an case-insensitive string point to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing.</p>
+                           
+                           <p class="para_note_body">In <em>SimTalk</em> you can compare strings in a case-insensitive manner with the <b class="uiTerm">==</b> operator, compare <a class="links" href="id62503.html">Relational Operators</a>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/workplSuppServ.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you do not enter any services into the list, the Worker can execute any service on this Workplace. </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you do not insert a Workplace, when no Workplace is present that supports this service, or when all Workplaces that support this service are occupied, the program transports the Worker to the work station itself, where he will perform his task. </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <em>Worker</em> even works, when he does not find a <em>Workplace</em> that supports the requested service. In this case, he will not be animated though. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p class="para_item"> Then, the material flow object only shows with an LED in the LED area of its icon that a <em>Worker</em> is <a class="links" href="id47522.html">Working</a>. It does not animate him there, but continues to animate him in the <em>WorkerPool</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id44974.html">supportedServices</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id36180.html">Context Menu of Embedded Lists</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id30685.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Station"></a><a class="link" href="id53766.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Worker stays here after completing the job"></a></span></div>
+   </body>
+</html>

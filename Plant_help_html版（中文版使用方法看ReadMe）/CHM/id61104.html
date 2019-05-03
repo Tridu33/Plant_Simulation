@@ -1,0 +1,130 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Find the Parameters of Truncated Distributions</title>
+      
+      <meta name="MS-HKWD" content="Find the Parameters of Truncated Distributions">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">Find the Parameters of Truncated Distributions</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id37198.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Run a Regression Analysis"></a><a class="link" href="id91572.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Run an Analysis of Variance (ANOVA)"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70398.html">Statistics Tools</a></span> &gt; <span class="simpleHTMLminitoc">Find the Parameters of Truncated Distributions</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_18361"></span><p class="para_topic"> For modeling random failures, you will often use probability distributions with lower and upper bounds. We do know these bounds and the mean value of the failures from experience. We want to find the distribution parameters, guaranteeing that the desired mean value occurs during the simulation.</p>
+         <p class="para_topic"> This poses these two problems:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> A truncated distribution has other mean values and another standard deviation than the distribution without bounds.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> To generate a random number with bounds, <em> Plant Simulation</em> generates a number of the unlimited distribution and checks whether this random number lies between the bounds. You can enter the maximum number of the taken samples by selecting <b class="uiTerm">File &gt; Preferences/Model Settings &gt; Simulation</b> in the main program window. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit-100.gif"></p>
+         <p class="para_topic"> Setting the maximum number of samples for generating truncated distributions</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> Since the simulation is interrupted when this number of trials is reached, it is advisable to know the probability for the interval between the bounds before we start the simulation. If the probability <em> P</em> is located near 1, the mean value and the standard deviation of the truncated distribution will only slightly differ from the respective values of the distribution without bounds.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> The object <em> TruncDistribution</em><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/Icon_CalcMuSigmaSm.gif" border="0"> computes the (real) mean value and the standard deviation for a distribution with an upper and a lower bound. 
+         </p>
+         <p class="para_topic"> You can compare the mean value of the original (dotted line) and of the truncated distribution (continuous line) of the density function in a diagram.</p>
+         <p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/determParam.gif" border="0"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/determParamDensity.gif" border="0"></p>
+         <p class="para_topic"> The object TruncDistribution for the analysis of a truncated distribution</p>
+         <p class="para_topic"> The object <em> TruncDistribution</em> assists you in solving the following task:
+         </p>
+         <p class="para_topic"> Given are a continuous distribution--of type Erlang, Gamma, Lognorm, Negexp, Normal, Weibull--, the lower bound<em> a</em> and the upper bound <em> b</em>, a shape parameter--for instance, &alpha; or &sigma; --of the distribution under consideration and the desired (real) mean value of the truncated distribution. You want to find the remaining scaling parameter (for instance, &beta; or µ) of the distribution, so that the truncated distribution has the desired mean value. Furthermore, you want to know the probability<em> P([a,b])</em> for the unlimited distribution <em> P</em> using the determined parameter.
+         </p>
+         <p class="para_topic"> To display all results in the dialog of the object, press the button Start. Note that it my happen that the desired mean value cannot be reached for some selected distributions. </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/determParamDLG.gif"></p>
+         <p class="para_topic"> Determination of the parameters of a truncated distribution</p>
+         <p class="para_topic"> You can also have the simulation compute the parameters during the simulation run and then use the determined parameters in the <em> Plant Simulation</em> model:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var StatObj := TruncDistribution
+var distrType := &quot;Normal&quot;
+StatObj.distribution := distrType
+
+var lowerBd := 240 -- lower bound 4 minutes
+StatObj.a := lowerBd
+
+var upperBd  := 600 -- upper bound 10 minutes
+StatObj.b := upperBd
+
+StatObj.MuDesired := 360 -- desired mean value of 6 minutes
+
+var sigma := 60 -- standard deviation of 1 minute
+StatObj.ShapeParam := sigma
+
+StatObj.DetermParam -- calculation
+var mu := StatObj.DetParam
+
+Station.procTime.setParam(distrType, mu, sigma, lowerBd, upperBd)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> You may ask yourself why the triangular distribution is not considered. Firstly, you can compute it yourself, secondly in some cases the desired mean value can never be reached. The lower and upper bounds are a, b, respectively. We want to determine the remaining parameter c such that a desired mean value m is reached. Naturally c can be calculated by the known formula <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit-105.gif" border="0"> . If we set a = <code>0</code>, b =<code>10</code> and µ = <code>3</code> we receive an impossible value for c, which does not lie between the bounds a and b.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id37198.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Run a Regression Analysis"></a><a class="link" href="id91572.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Run an Analysis of Variance (ANOVA)"></a></span></div>
+   </body>
+</html>

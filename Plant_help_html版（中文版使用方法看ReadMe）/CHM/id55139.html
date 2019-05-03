@@ -1,0 +1,152 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>isNameUnique</title>
+      
+      <meta name="MS-HKWD" content="isNameUnique">
+      <meta name="MS-HKWD" content="Identifier">
+      <meta name="MS-HKWD" content="Identifier,exists or not">
+      <meta name="MS-HKWD" content="Attribute name">
+      <meta name="MS-HKWD" content="Attribute name,exists or not">
+      <meta name="MS-HKWD" content="Method name">
+      <meta name="MS-HKWD" content="Method name,exists or not">
+      <meta name="MS-HKWD" content="Assigned name, isNameUnique">
+      <meta name="MS-HKWD" content="Assigned identifier, isNameUnique">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">isNameUnique</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1485038.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:hasAttribute"></a><a class="link" href="id38897.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:memUsage"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18479.html">Methods of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id16850.html">General Methods of All Objects</a></span> &gt; <span class="simpleHTMLminitoc">isNameUnique</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4155"></span><span id="ndxgenid_PlantSimulationENU_4156"></span><span id="ndxgenid_PlantSimulationENU_4157"></span><span id="ndxgenid_PlantSimulationENU_4158"></span><span id="ndxgenid_PlantSimulationENU_4159"></span><span id="ndxgenid_PlantSimulationENU_4160"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.isNameUnique(NameToBeChecked:string) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>isNameUnique</em> checks if the <em>name to be checked</em> of data type <em>string</em> is not assigned yet within the <a class="links" href="id55817.html">Name Space</a> of the object designated by Path (<em>true</em>) or if it is assigned (<em>false</em>). 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The parameter <em>NameToBeChecked</em> of data type <em>string</em> designates the <em>name that is to be checked</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>. 
+         </p>
+         <p class="para_topic"> When <em>isNameUnique</em> returns <em>false</em> you can enter the identifier of data type <em>string</em>, separated by a period after the path to the object into the source code of a <em>Method</em>, as this object then either has a built-in attribute or a built-in method or a user-defined attribute with this identifier. When the object is a <em>Frame</em> or a <em>folder</em>, then <em>isNameUnique</em> also considers objects with this identifier, which you inserted into the <em>Frame</em>. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you would like to rename an object with <em>SimTalk</em> commands, you can use <em>isNameUnique</em> to find out in advance, if the identifier is already assigned to an object within the surrounding <em> Frame</em> to prevent a runtime error.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">print .Hall2.isNameUnique(&quot;Station1&quot;) -- object inserted into Frame
+print .Hall2.isNameUnique(&quot;Name&quot;) -- built-in attribute
+print .Hall2.isNameUnique(&quot;~&quot;) -- built-in method
+print .Hall2.isNameUnique(&quot;myUserDefinedAttribute&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1485038.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:hasAttribute"></a><a class="link" href="id38897.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:memUsage"></a></span></div>
+   </body>
+</html>

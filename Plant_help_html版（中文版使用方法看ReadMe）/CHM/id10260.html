@@ -1,0 +1,72 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Random</title>
+      
+      <meta name="MS-HKWD" content="Random">
+      <meta name="MS-HKWD" content="Random,exit strategy">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Random</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id16474.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Percentage"></a><a class="link" href="id52425.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Start at successor 1"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97208.html">Tab Exit</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id51141.html">Strategy</a></span> &gt; <span class="simpleHTMLminitoc">Random</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3568"></span><p class="para_topic">To move the <em>MUs</em> on to the successors in a random fashion, select <b class="uiTerm">Random</b> from the drop-down list. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/exitbehaviorE.gif"></p>
+         <p class="para_topic">Click <b class="uiTerm">Open List</b> and enter the percentages in the list that opens. The n-th row on the table defines the n-th successor&rsquo;s portion: When you enter 20 in row 1, for example, the object moves 20 percent of the <em>MUs</em> it received to the successor with the number 1, etc. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When you select <b class="uiTerm">Blocking</b>
+                  <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/blockingOn.gif" border="0">, the object determines the successor using the random-number generator. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you clear <b class="uiTerm">Blocking</b>
+                  <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/blockingOff.gif" border="0">, the object determines the successor using the random-number generator until it either computes a successor, which can receive the <em>MU</em>, or the object has iterated through all successors.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Note that a previous call to the random number generator does affect the <b class="uiTerm">Random</b> strategy. The order in which the successors are iterated through is not predictable. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id32325.html">ExitStrategyBlocking</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id32430.html">ExitStrategy</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id31775.html">ExitStrategyPercentageValues</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id88602.html">Select an Exit Strategy</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="xid1402399.html">Data Held in Tabular Form in Attributes</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id16474.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Percentage"></a><a class="link" href="id52425.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Start at successor 1"></a></span></div>
+   </body>
+</html>

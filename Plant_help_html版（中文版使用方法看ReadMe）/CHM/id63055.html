@@ -1,0 +1,100 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Reading and Writing Values of Objects of Type Variable with DDE</title>
+      
+      <meta name="MS-HKWD" content="Reading and Writing Values of Objects of Type Variable with DDE">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Reading and Writing Values of Objects of Type Variable with DDE</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1201791.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Executing Methods with DDE"></a><a class="link" href="id35377.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:DDE Topics"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id78707.html">Inter-Process Communication Interfaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id63881.html">DDE</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id81285.html">Plant Simulation as DDE Server</a></span> &gt; <span class="simpleHTMLminitoc">Reading and Writing Values of Objects of Type Variable with DDE</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15912"></span><p class="para_topic">You can change the value of any <a class="links" href="id44724.html">Variable</a> object in <em>Plant Simulation</em> via DDE. Just establish a DDE channel using the topic <a class="links" href="id55333.html">Data</a>. Then, use the functions <a class="links" href="id56177.html">ddePoke</a> and <a class="links" href="id12684.html">ddeRequest</a> to read or write the value. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The value received from <em>Plant Simulation</em> is a <em>string</em> and the value sent to <em>Plant Simulation</em> has to be a <em>string</em>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">sub sampleDDE()
+   Dim channel As Long
+   ' open DDE channel to Plant Simulation
+   channel = DDEInitiate(&quot;eM-Plant&quot;,&quot;Data&quot;)
+   ' read .Frame2.Variable12
+   MsgBox DDErequest (channel,&quot;.Frame2.Variable12&quot;)
+   ' write a new value to .Frame2.Variable12
+   DDEpoke channel,&quot;.Frame2.Variable12&quot;, &quot;7&quot;
+   ' close DDE channel
+   DDETerminate (channel)
+End Sub</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1201791.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Executing Methods with DDE"></a><a class="link" href="id35377.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:DDE Topics"></a></span></div>
+   </body>
+</html>

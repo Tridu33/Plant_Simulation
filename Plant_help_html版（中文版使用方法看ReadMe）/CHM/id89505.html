@@ -1,0 +1,180 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>setUpFor</title>
+      
+      <meta name="MS-HKWD" content="setUpFor">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">setUpFor</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id11054.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Setting-Up the Material Flow Objects"></a><a class="link" href="id89680.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Defining Failures of the Material Flow Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id11054.html">Methods for Setting-Up the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">setUpFor</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4493"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.setUpFor(SetUpFor:any[ ,PerformSetup:boolean]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>setUpFor</em> starts setting-up the object designated by Path for a part. 
+         </p>
+         <p class="para_topic">The required time depends on the <a class="links" href="id54251.html">Set-up time</a> you entered for the object on the tab <b class="uiTerm">Times</b>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If the object cannot be set up at the current point in time, for example because it is failed, <em>Plant Simulation</em> does not attempt to set the object up anew. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm"> Parameter</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> The parameter <em>SetUpFor</em> of data type <em>any</em> designates the <em>MU</em> for which the object is going to set up:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item"> The parameter <em>SetUpFor</em> of data type <em>object</em> designates a specific <em>MU</em> instance for which the object is going to set up. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"> The parameter <em>SetUpFor</em> of data type <em>object</em> designates the <em>MU</em> class for which the object is going set up. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"> The parameter <em>SetUpFor</em> of data type <em>string</em> designates the type of <em>MU</em> for which the object is going set up. 
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em>PerformSetup</em> of data type <em>boolean</em> determines if the object only sets the current type of part (<code>false</code> ) or if the object actually sets-up (<code>true</code> ). When you do not pass the parameter, <em>Plant Simulation</em> sets the station up, as if you had passed <code>true</code>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic"> The return value has the data type <em> boolean</em>; false means that the object cannot be set up, for example because it is failed.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">waituntil ParallelStation.empty prio 1
+ParallelStation.setUpFor(@)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id72533.html">Setting-up for</a></p>
+         <p class="para_topic"><a class="links" href="id21459.html">AutomaticSetup</a></p>
+         <p class="para_topic"><a class="links" href="id46622.html">IsSetUpFor</a></p>
+         <p class="para_topic"><a class="links" href="id45586.html">setUp</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id11054.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Setting-Up the Material Flow Objects"></a><a class="link" href="id89680.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Defining Failures of the Material Flow Objects"></a></span></div>
+   </body>
+</html>

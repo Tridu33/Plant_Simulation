@@ -1,0 +1,161 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>methCall</title>
+      
+      <meta name="MS-HKWD" content="methCall">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">methCall</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id59112.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:load"></a><a class="link" href="id99044.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:newCallChain"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id25909.html">Method</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id10814.html">Methods of the Method</a></span> &gt; <span class="simpleHTMLminitoc">methCall</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11402"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">&amp;obj.methCall(CallAt:time[,Argument1:any, ...]) &rarr; boolean
+&amp;obj.methCall(CallAt:dateTime[,Argument1:any, ...]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>methCall</em> calls a <em>Method</em> after the number of seconds designated by the parameter of data type <em>time</em> has elapsed. <em>Plant Simulation</em> enters an event into the <a class="links" href="id60343.html">List</a> of scheduled events in the <em>EventController</em> for the amount of seconds you entered for <em>time</em> after the current simulation time. Since the <em>Method</em> will be called at some time in the future, <em>time</em> must be greater than or equal to 0. For parameters of data type <em>dateTime</em> or <em>date</em>, <em>Plant Simulation</em> computes the time span using the date of the <em>EventController</em> and the date designated by the parameters <em>dateTime</em> or <em>date</em>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>CallAt</em> of data type <em>time</em> designates the time in seconds after which the <em>Method</em> will be called.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The following optional parameters <em>(Argument1, ...)</em> of data type <em>any</em> are passed when the <em>Method</em> is called the next time.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The point in time of the method call has to be in the future.</p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">&amp;MyMethod1.methCall(23.5)
+-- throttle the engine in 5 seconds to 85 percent
+&amp;ThrottleEngine.methCall(5, 0.85)
+-- New years day 2000 midnight
+&amp;MyMethod2.methCall(str_to_date(&quot;1.1.00&quot;))
+-- call the method which a local variable references
+var obj: object := &amp;MyMethod3
+obj.methCall(4, &quot;my string&quot;, true)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id67982.html">deleteMethCall</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id59112.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:load"></a><a class="link" href="id99044.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:newCallChain"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>asObject</title>
+      
+      <meta name="MS-HKWD" content="asObject">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">asObject</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id69974.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Indirectly Accessing Lists and Tables"></a><a class="link" href="id53732.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:asString"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42077.html">Methods of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69974.html">Methods for Indirectly Accessing Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc">asObject</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10296"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.asObject(Column:any, Row:any) &rarr; any</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>asObject</em> can be applied to cells of lists or tables, which have the data types <em>string</em> or <em>object</em>. When the table contains a valid path to an object, the <em>method</em> returns this object.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Column</em> of data type <em>any</em> designates the column of the table.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Row</em> of data type <em>any</em> designates the row.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>any</em>. 
+         </p>
+         <p class="para_topic">When the table cell, which the method <a class="links" href="id53732.html">asString</a> returned, contains a valid path to a track of a <em>TwoLaneTrack</em>, the <em>method</em> returns this lane. This returned value does not have the data type <em>object</em> and thus cannot be assigned to a variable of data type <em>object</em>. You can, however, assign it to a local variable of data type <em>any</em>. When a table cell of data type <em>object</em> contains a path to a lane, reading the contents of the cell with brackets (<code>table[x,y]</code>) returns VOID as a lane does not have the data type <em>object</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var a : any
+if .MUs.Transporter:1.getRouteToDestination(TableFile) 
+a := MyTableFile.asObject(1,1)
+if isObject(a) 
+print &quot;first object: &quot;, a.name
+else
+print &quot;first object is a two-lane track: &quot;, a.~.name
+end
+print &quot;the length is: &quot;, a.length</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id69974.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Indirectly Accessing Lists and Tables"></a><a class="link" href="id53732.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:asString"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Read and Access Data Randomly</title>
+      
+      <meta name="MS-HKWD" content="Read and Access Data Randomly">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Read and Access Data Randomly</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id79116.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Read and Write Data Sequentially"></a><a class="link" href="id94367.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Access and Traverse Data Randomly"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48998.html">Importing and Exporting Data</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id55578.html">Import Data in XML Format</a></span> &gt; <span class="simpleHTMLminitoc">Read and Access Data Randomly</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1645"></span><p class="para_topic">You can <b class="uiTerm">read the data</b> in its entirety, and then <b class="uiTerm">randomly</b> process it as a whole. Here <em>Plant Simulation</em> imports the entire document first and then processes and analyzes all data in the <em>Method</em>, which you program. Randomly accessing data requires that all data you want to use is in RAM. The larger the amount of data, the more RAM the <em>XMLInterface</em> uses! 
+         </p>
+         <p class="para_topic">You might, for example:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select data from the XML document.</p>
+               
+               <p class="para_item">The source code looks like this:</p>
+               <pre class="indent">-- randomly accesses data via XPath instructions
+var tbl:table
+XMLInterface.FileName := &quot;D:\MSXML 4.0\books.xml&quot;
+-- load the XML document for random access into RAM
+XMLInterface.openDocument
+-- select nodes via XPath instruction
+-- selection starts at the Context node which you entered in the XMLInterface
+-- the second parameter is the selection depth for each node
+-- 0 means that no children will be selected
+-- the result is passed to a table
+tbl := XMLInterface.getNodes(&quot;book[title='Midnight Rain']&quot;, 1)
+XMLInterface.close</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">Delete existing data from the XML document.</p>
+               
+               <p class="para_item">The source code looks like this:</p>
+               <pre class="indent">-- deletes all nodes specified by XPath instructions
+XMLInterface.FileName := &quot;D:\MSXML 4.0\books.xml&quot;
+-- load the XML document for random access into RAM
+XMLInterface.openDocument
+-- delete all book nodes of genre 'Fantasy'
+XMLInterface.deleteNodes(&quot;book[genre = 'Fantasy']&quot;)
+XMLInterface.FileName := &quot;D:\MSXML 4.0\tmp.xml&quot;
+-- write the document to a file
+XMLInterface.write
+-- remove the document from RAM
+XMLInterface.close</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">Insert new data into the XML document.</p>
+               
+               <p class="para_item">The source code looks like this:</p>
+               <pre class="indent">-- inserts new data into the XML document
+var tbl:table
+XMLInterface.FileName := &quot;D:\MSXML 4.0\books.xml&quot;
+-- load the XML document
+XMLInterface.openDocument
+-- get an empty table for writing the data to
+-- depth=1 means that we want to write nodes with children
+tbl := XMLInterface.getContainer(1)
+-- set the parent node for the new data
+XMLInterface.setContext(&quot;/catalog&quot;)
+-- designate the node to append to the 'catalog' nodes
+tbl[1,1] := &quot;book&quot;
+-- are the attributes of the 'book' node
+tbl.createNestedList(4,1)
+-- explicit namespace
+tbl[4,1][1,1] := &quot;xmlns:aa&quot;
+tbl[4,1][2,1] := &quot;specAth&quot;
+-- additional attributes
+tbl[4,1][1,2] := &quot;id&quot;
+tbl[4,1][2,2] := &quot;bk113&quot;
+-- child nodes
+tbl.createNestedList(5,1)
+tbl[5,1][1,1] := &quot;aa:author&quot;
+tbl[5,1][2,1] := &quot;specAth&quot;
+tbl[5,1][3,1] := &quot;XYZ&quot;
+tbl[5,1][1,2] := &quot;title&quot;
+tbl[5,1][3,2] := &quot;UNKNOWN&quot;
+tbl[5,1][1,3] := &quot;genre&quot;
+tbl[5,1][3,3] := &quot;also&quot;
+tbl[5,1][1,4] := &quot;price&quot;
+tbl[5,1][3,4] := &quot;12,45&quot;
+tbl[5,1][1,5] := &quot;publish_date&quot;
+tbl[5,1][3,5] := &quot;12.1.02&quot;
+tbl[5,1][1,6] := &quot;description&quot;
+tbl[5,1][3,6] := &quot;xx0011&quot;
+XMLInterface.insertNodes(tbl)
+-- save the changed document
+XMLInterface.FileName := &quot;D:\MSXML 4.0\tmp.xml&quot;
+XMLInterface.write
+-- close the document
+XMLInterface.close</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">Update the XML document.</p>
+               
+               <p class="para_item">The source code looks like this:</p>
+               <pre class="indent">-- updates the selected nodes of the document
+var tbl:table;
+XMLInterface.FileName := &quot;D:\MSXML 4.0\books.xml&quot;
+XMLInterface.openDocument;
+-- select the nodes to be changed
+tbl := XMLInterface.getNodes(&quot;/catalog/book[title='Midnight Rain']&quot;, 1)
+-- update the values
+tbl[5,1][3,3] := &quot;TEST&quot;
+-- write the changed values
+XMLInterface.updateNodes(tbl)
+XMLInterface.FileName := &quot;D:\MSXML 4.0\tmp.xml&quot;
+XMLInterface.write
+XMLInterface.close</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">Create a new XML document.</p>
+               
+               <p class="para_item">The source code looks like this:</p>
+               <pre class="indent">-- creates a new document by calling the method newDocument
+var tbl:table;
+XMLInterface.newDocument(&quot;catalog&quot;)
+tbl := XMLInterface.getContainer(1)
+XMLInterface.setContext(&quot;/catalog&quot;)
+-- parent node
+tbl[1,1] := &quot;book&quot;
+-- default namespace
+tbl[2,1] := &quot;MyBooks&quot;
+-- attributes
+tbl.createNestedList(4,1)
+-- explicit namespace
+tbl[4,1][1,1] := &quot;xmlns:aa&quot;
+tbl[4,1][2,1] := &quot;specAth&quot;
+-- additional attributes
+tbl[4,1][1,2] := &quot;id&quot;
+tbl[4,1][2,2] := &quot;bk113&quot;
+-- child nodes
+tbl.createNestedList(5,1)
+tbl[5,1][1,1] := &quot;aa:author&quot;
+tbl[5,1][2,1] := &quot;specAth&quot;
+tbl[5,1][3,1] := &quot;XYZ&quot;
+tbl[5,1][1,2] := &quot;title&quot;
+tbl[5,1][3,2] := &quot;UNKNOWN&quot;
+tbl[5,1][1,3] := &quot;genre&quot;
+tbl[5,1][3,3] := &quot;also&quot;
+tbl[5,1][1,4] := &quot;price&quot;
+tbl[5,1][3,4] := &quot;12,45&quot;
+tbl[5,1][1,5] := &quot;publish_date&quot;
+tbl[5,1][3,5] := &quot;12.1.02&quot;
+tbl[5,1][1,6] := &quot;description&quot;
+tbl[5,1][3,6] := &quot;xx0011&quot;
+XMLInterface.insertNodes(tbl)
+XMLInterface.FileName := &quot;D:\MSXML 4.0\tmp.xml&quot;
+XMLInterface.write</pre>
+               </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id55578.html">Import Data in XML Format</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id79116.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Read and Write Data Sequentially"></a><a class="link" href="id94367.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Access and Traverse Data Randomly"></a></span></div>
+   </body>
+</html>

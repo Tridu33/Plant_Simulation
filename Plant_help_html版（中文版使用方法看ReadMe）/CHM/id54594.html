@@ -1,0 +1,337 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>createSensor</title>
+      
+      <meta name="MS-HKWD" content="createSensor">
+      <meta name="MS-HKWD" content="createSensor,material flow objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">createSensor</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id36220a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of Sensors of the Length-Oriented Objects"></a><a class="link" href="id27307.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:deleteSensor"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36220a.html">Methods of Sensors of the Length-Oriented Objects</a></span> &gt; <span class="simpleHTMLminitoc">createSensor</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4520"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.createSensor(Position:real, &quot;Length&quot;|&quot;Relative&quot;:string, Control:method [,Front:boolean, Rear:boolean [,Destination:Path [,BothLanes:boolean [,LightBarrierMode:boolean]]] &rarr; integer])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The method <em>createSensor</em> creates a new sensor for the object designated by Path. It then returns its unique number. You can use this number to access the sensor. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> Creating and manipulating sensors via <em> SimTalk</em> for the loading space of the <em> Transporter</em> only works if you select the loading space <a class="links" href="id89093.html"> Type</a>s <b class="uiTerm">Track</b> or <b class="uiTerm">Line</b>! 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <p class="para_topic"> The sensor itself is defined by these parameters: </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> The parameter <em> Position</em> of data type <em> real</em> defines the position. The values you can enter for the parameter of data type <em> real</em> depend on the type of position you enter, <code>length</code> or <code>relative</code>, for the parameter <em> string</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The parameter <em> Position</em> of data type <em> string </em> designates the type of position <code>length</code> or <code>relative</code>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The parameter <em> Control</em> of data type <em> method</em> designates the name of the <em> Method</em> object that the <em> Sensor</em> triggers. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">You can enter the name of the <em> method</em> as a string, i.e., <code>&quot;myMethod&quot;</code> or you can enter <code>&amp;myMethod</code>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em> Front</em> of data type <em> boolean</em> sets if the front of the <em> MU</em> is going to activate the sensor (<code>true</code>) or not (<code>false</code>). 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em> Rear</em> of data type <em> boolean</em> sets if the rear of the <em> MU</em> is going to activate the sensor (<code>true</code>) or not (<code>false</code>). 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em> Destination</em> of data type <em> path</em> sets sensor activation to <b class="uiTerm">Only when Destination</b> and enters the object, which you enter, as the <b class="uiTerm">Destination</b>. When VOID is passed, the setting will be <b class="uiTerm">Always</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> For the object <em> TwoLaneTrack</em> the optional parameter <em> BothLanes</em> of data type <em> boolean</em> sets if the sensor will also be created on the other lane of this track, i.e., if the object creates a sensor on both lanes. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The optional parameter <em> LightBarrierMode</em> of data type <em> boolean</em> designates that a light-barrier is going to activate the sensor (<code>true</code>) or not (<code>false</code>).
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> When you do not enter any parameters, <em> Plant Simulation</em> creates the sensor with these default settings:
+         </p>
+         <p class="para_topic"><code>(0,&quot;Length&quot;,VOID,true,false,VOID,false)</code>, i.e., the position is 0, does not trigger a <em> method</em> and is activated by the <b class="uiTerm">front </b>of the <em> MU</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic"> The return value has the data type <em> integer</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var ID1,ID2: integer
+ID1 := MyTrack.createSensor(0.5,&quot;Relative&quot;,&quot;SensCtrl&quot;,true,false)
+ID2 := MyTrack.createSensor(0.7,&quot;Relative&quot;,&amp;myMethod,false,true)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.MUs.Transporter:1.LoadBayType := &quot;Track&quot;
+.MUs.Transporter:1.createSensor(0.5,&quot;Length&quot;,&quot;MyControl&quot;,true,false,VOID,false,false)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent"> TwoLaneTrack.B.createSensor(1,&quot;Length&quot;,&quot;MyCtrl&quot;,true,false,VOID,false)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.MUs.Transporter:1.LoadBayType := &quot;Track&quot;
+.MUs.Transporter:1.createSensor(0.5,&quot;Length&quot;,&quot;MyControl&quot;,true,false,VOID,false,false)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id31061.html">Sensors</a></p>
+         <p class="para_topic"><a class="links" href="id44316.html">New</a> sensor
+         </p>
+         <p class="para_topic"><a class="links" href="id27307.html">deleteSensor</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id36220a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of Sensors of the Length-Oriented Objects"></a><a class="link" href="id27307.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:deleteSensor"></a></span></div>
+   </body>
+</html>

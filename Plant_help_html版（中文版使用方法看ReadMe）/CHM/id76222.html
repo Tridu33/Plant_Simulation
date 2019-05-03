@@ -1,0 +1,173 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Cycle time</title>
+      
+      <meta name="MS-HKWD" content="Cycle time">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Cycle time</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id10673.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Recovery time starts"></a><a class="link" href="id40324.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Set-Up"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id40202.html">Tab Times</a></span> &gt; <span class="simpleHTMLminitoc">Cycle time</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3419"></span><p class="para_topic">The <b class="uiTerm">cycle time</b> is the time during which the second gate at the entrance of a material flow object opens and closes cyclically, regardless of <em>MUs</em> entering the object. The cycle time is useful to model chain conveyors with a fixed chain interval that only transport materials when a free hook is available. 
+         </p>
+         <p class="para_topic">You can use the attribute <a class="links" href="id12056.html">EntranceOpen</a> to check if the entrance is currently open. You can use the attribute <a class="links" href="id18350.html">TimeUntilEntranceOpen</a> to query the time at which the entrance will be open again. 
+         </p>
+         <p class="para_topic">Select a distribution, and enter the values, which that distribution requires, into the text box. The program shows these values along the top border of the tab. You can also enter a constant time (<b class="uiTerm">Const</b>). When you select the <a class="links" href="id90935.html">Formula</a> distribution, you can enter a numeric expression or the name of a <em>Method</em>. You can use the anonymous identifier @ to access the <em>MU</em> for which the cycle time applies. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/matrixType.gif"></p>
+         <p class="para_topic"><em>Plant Simulation</em> opens the entrance for a moment. When an <em>MU</em> is <a class="links" href="id84863.html">Waiting</a> to enter at that time, it may enter, if not, another cycle has to pass before it may enter. 
+         </p>
+         <p class="para_topic">When you enter 0 the entrance is always open. A value of 10 seconds for example means that the gate opens every 10 seconds (compare <a class="links" href="id57990.html">Recovery time</a>). The value <code>34</code>, for example, means that <em>MUs</em> can enter at the simulation times 0, 34, 68, 102, &hellip;
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you select a distributed time, then <em>Plant Simulation</em> computes the value for the cycle time interval only once to arrive at equidistant intervals.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Note that recovery time and cycle time may overlap. Then, <em>MUs</em> may only enter the work stations if both gates are open.
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk</b>:
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id25373.html">CycleTime</a>
+            
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id26000.html">Attributes of the Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id32650.html">Probability Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id29080.html">Methods of the Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id65040.html">Empirical Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id31886.html">Distribution Functions</a>in <em>SimTalk</em>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id24449.html">User-defined Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id37256.html">Format of Time and Date</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id29794.html">Bounding Probability Distribution Functions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id64129.html">Times and Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id10673.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Recovery time starts"></a><a class="link" href="id40324.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Set-Up"></a></span></div>
+   </body>
+</html>

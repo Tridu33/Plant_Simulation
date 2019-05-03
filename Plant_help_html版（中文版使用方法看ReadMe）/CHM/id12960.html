@@ -1,0 +1,272 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Connect Objects with the Connector</title>
+      
+      <meta name="MS-HKWD" content="Connect Objects with the Connector">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Connect Objects with the Connector</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id58677.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Work with Objects in the Frame Window"></a><a class="link" href="id53888.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model Transitions between Frames"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69343.html">Working with the Frame</a></span> &gt; <span class="simpleHTMLminitoc">Connect Objects with the Connector</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_452"></span><p class="para_topic">The objects you insert into your simulation model represent stations in a production process. Each material flow object in your model has entrance points which receive parts, and exit points from where the parts move on to the succeeding objects in the sequence of stations. </p>
+         <p class="para_topic">In real installations the relation between the different stations is obvious by the way in which the machines are arranged on the shop floor. <em>Plant Simulation</em>, on the other hand, handles this somewhat differently. 
+         </p>
+         <p class="para_topic">To clarify to which other object parts are to be moved when leaving an object, you have to establish connections between these objects. </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To connect the stations that represent the flow of materials:</p>
+               
+               <p class="para_item">Click the <a class="links" href="id29001.html">Connector</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/handles.gif" border="0"> in the <em>Toolbox</em> to activate connect mode. The mouse pointer turns into crosshairs (+). When you connect objects in the <em>Frame</em>, <em>Plant Simulation</em> attaches the connecting line to the front end of the cursor <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/connector2.gif" border="0">, allowing you to actually see the connection before setting it. 
+               </p>
+               
+               <p class="para_item">To connect object <em>A</em> and object <em>B</em>, first click object <em>A</em> and then object <em>B</em>. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body"><em>Plant Simulation</em> only shows the connection, when you select <b class="uiTerm">Show Connections</b> on the <b class="uiTerm">General</b> ribbon tab.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">To connect several objects one after the other</b> without having to return to the <em>Toolbox</em> each time you established a connection, <b class="uiTerm"> bold down Ctrl </b>, while you establish the connection.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To automatically connect the objects while you insert them, place the objects right next to each other, when you insert them. You will then have to manually move the objects to their final position.</p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">This only works, when <b class="uiTerm">File &gt; Preferences &gt; Modeling &gt; Connect automatically</b> is active. In addition the position of the exit of the one and the entrance of the other object are to be no more than 3 pixels apart. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To tell <em>Plant Simulation</em> where and how to place the <em>Connector</em> in the <em>Frame</em>, hold down <b class="uiTerm">Shift</b>, <b class="uiTerm">Ctrl</b>, or <b class="uiTerm">Alt</b> while you establish the connection:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item"><em>Connector</em>, no key: <em>Plant Simulation</em> aligns the connection to the grid, i.e., to the grid points next to the location where you click the mouse button. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"><em>Connector</em>+ <b class="uiTerm">Ctrl</b>: <em>Plant Simulation</em> stays in connect mode, so you can connect several objects one after the other without having to return to the <em>Toolbox</em> each time you established a connection.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"><em>Connector</em>+ <b class="uiTerm">Shift</b>: <em>Plant Simulation</em> inserts the connection at a right angle, regardless of where you click. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"><em>Connector</em>+ <b class="uiTerm">Alt</b>: <em>Plant Simulation</em> sets anchor points of the connection at the location where you click. Note that this is similar to the freehand drawing feature. 
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To create a <b class="uiTerm">non-straight connection</b>, set one or more anchor points: First, click object <em>A</em>, proceed to point 1 and click once, then proceed to point 2, click once, and finally move to object <em>B</em> and click the mouse button once to establish the connection.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ConnectorNonStraight.gif"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ConnectorNonStraight1.gif"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To create a <b class="uiTerm">right-angled connection</b>, hold down <b class="uiTerm">Shift</b> and click the left mouse button to set the anchor point.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To move an anchor point, click it, hold the mouse button down, and drag the handle <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/handles.gif" border="0"> to the desired location. <em>Plant Simulation</em> also moves the <em>Connector</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To check if all connections between the objects really have been established, click <b class="uiTerm">Unconnected Objects</b> on the <b class="uiTerm">General</b> ribbon tab. <em>Plant Simulation</em> selects all objects with unconnected entrance and exit points.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To make the connecting line thicker, enter a higher number into the text box <b class="uiTerm">Weight</b>. 
+               </p>
+               
+               <p class="para_item">To make the connecting line thinner, enter a lower number into the text box <b class="uiTerm">Weight </b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To select another color than the default black, in the dialog <b class="uiTerm">Colors</b>, click the field next to <b class="uiTerm">Color</b>. 
+               </p>
+               
+               <p class="para_item">You can select one of the predefined colors or you can click <b class="uiTerm">More Colors</b> and click the <b class="uiTerm">Select</b> button to select a color in the color matrix. Then click <b class="uiTerm">OK</b>. <em>Plant Simulation</em> show this color next to <b class="uiTerm">More Colors</b> and uses it as the active color. 
+               </p>
+               
+               <p class="para_item">Or you can click <b class="uiTerm">Custom</b> and select a color in the color matrix. Move the mouse in the color matrix over the area that is similar to the color you want. You can set the attributes of the color with the scrollbar on the right hand side. Click <b class="uiTerm">OK</b> to make this color the active color in the program.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To show the source and the target of the <em>Connector</em> in the <em>Frame</em> is a <em>Tooltip</em>, drag the mouse over the <em>Connector</em>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/connectorSourceTarget.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">exchange the successor</b> of a <em>Connector</em>, select the end point of the <em>Connector</em> and drag it to another object.
+               </p>
+               
+               <p class="para_item">To <b class="uiTerm">exchange the predecessor</b> of a <em>Connector</em>, select the starting point of the <em>Connector</em> and drag it to another object 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">place an object</b>, which you insert from the <em>Class Library</em> into a <em>Frame</em>, <b class="uiTerm">in between two already connected objects</b>, drag that object onto that spot of the <em>Connector</em> and drop it there. In this process <em>Plant Simulation</em> exchanges the successor of the original <em>Connector</em>.
+               </p>
+               
+               <p class="para_item"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insertConnBet1.gif" border="0"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insertConnBet2.gif" border="0"></p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insertConnBet3.gif"></p>
+               
+               <p class="para_item">This also works when you drag a <em>Frame</em>, which contains exactly one suitable <b class="uiTerm">entrance</b>
+                  <em>Interface</em> and exactly one suitable <b class="uiTerm">exit</b>
+                  <em>Interface</em>, onto the <em>Connector</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">a]utomatically connect predecessor and successor when deleting an object</b> located between other connected objects, hold down the <b class="uiTerm">Ctrl</b> key while you delete the object with the context menu command <b class="uiTerm">Delete</b>.
+               </p>
+               
+               <p class="para_item"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insertConnBet3.gif" border="0"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insertConnBet1.gif" border="0"></p>
+               
+               <p class="para_item">When you work with the <b class="uiTerm">Delete</b> key, select the object(s) you want to delete, and press <b class="uiTerm">Delete</b>. Follow the instructions in the dialog that opens.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/deleteDelDailog.gif"></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">This does not work when an object has more than one predecessor and successor. If the object has a successor, <em>Plant Simulation</em> exchanges the successor of all preceding <em>Connectors</em>. If the object has a predecessor, <em>Plant Simulation</em> exchanges the predecessor of all succeeding <em>Connectors</em>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">reorder the sequence of the succeeding objects</b>, i.e., the sequence of the <em>Connectors</em>, click the object with the right mouse button and select <a class="links" href="id83093.html">Reorder Successors</a>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/sortSuccessors.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id62259.html">Connect Objects</a><b class="uiTerm"> in 3D</b></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id69343.html">Working with the Frame</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id58677.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Work with Objects in the Frame Window"></a><a class="link" href="id53888.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model Transitions between Frames"></a></span></div>
+   </body>
+</html>

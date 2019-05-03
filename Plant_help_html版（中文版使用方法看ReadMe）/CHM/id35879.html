@@ -1,0 +1,155 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>User-defined control for the parts</title>
+      
+      <meta name="MS-HKWD" content="User-defined control for the parts">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">User-defined control for the parts</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id15119.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Activate"></a><a class="link" href="id47314.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:User-defined control for the targets"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54344.html">Tools</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id86723.html">TransferStation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58808.html">Dialog Window of the TransferStation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id21897.html">Tab Advanced Controls</a></span> &gt; <span class="simpleHTMLminitoc">User-defined control for the parts</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_13066"></span>
+         
+         <p class="para_topicComponent"> Enter the name of the <em> Method</em><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/methodIconSm.gif" border="0"> in which you defined the conditions when a part exits a point-oriented station, which provides the parts for the <em> TransferStation</em>. For the length-oriented objects the control will be called, when the part continues its way at the sensor. You might, for example, define conditions what will happen with the <a class="links" href="id43296.html"> Empty</a> container/transporter after the parts have been unloaded. 
+         </p>
+         
+         <p class="para_topicComponent"> When you enter a boolean parameter in the user-defined control, <em> Plant Simulation</em> also calls the method, when a part arrives at the object.
+         </p>
+         
+         <p class="para_topicComponent"> User-defined controls might for example look like this:</p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- for point-oriented objects 
+(leavingPart : boolean)
+if leavingPart then
+   @.move
+end
+</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- for the lenght-oriented object Conveyor
+(leavingPart : boolean)
+if leavingPart then
+   @.Stopped := false
+else
+   @.Stopped:= true
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"> Or click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0">, navigate to the <em> Frame</em> in which you stored the <em> Method</em> and select it there. 
+         </p>
+         
+         <p class="para_topicComponent">
+            <b class="uiTerm"> Related Topic</b>
+            
+         </p>
+         
+         <p class="para_topicComponent">
+            <a class="links" href="id58752.html"> UserPartExitCtrl</a>
+            
+         </p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id15119.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Activate"></a><a class="link" href="id47314.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:User-defined control for the targets"></a></span></div>
+   </body>
+</html>

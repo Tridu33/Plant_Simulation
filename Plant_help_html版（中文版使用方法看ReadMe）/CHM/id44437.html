@@ -1,0 +1,132 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Color</title>
+      
+      <meta name="MS-HKWD" content="Color">
+      <meta name="MS-HKWD" content="Color,Connector attribute">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Color</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1186708.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attributes of the Connector"></a><a class="link" href="id92506.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:CornerPoints"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29001.html">Connector</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1186708.html">Attributes of the Connector</a></span> &gt; <span class="simpleHTMLminitoc">Color</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5429"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">ConnectorPath.Color</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>Color</em> defines the color of the <em>Connector</em> designated by ConnectorPath.
+         </p>
+         <p class="para_topic">You can set the RGB values of the color with the method <a class="links" href="id37525.html">makeRGBValue</a>. When you assign an invalid value to the attribute <em>Color, </em>
+            <em>Plant Simulation</em> retains the current color.
+         </p>
+         <p class="para_topic">The <em>Connectors</em> in <em>3D</em> use the color you define here as well. The default RGB color 7, 0, 0 of the <em>Connector</em> in <em>Plant Simulation</em> is interpreted as white in <em>3D</em>. All other colors are applied as you define them in <em>Plant Simulation</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>integer</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.succConnector(3).Color := makeRGBValue(100,100,100)
+MyStation.succConnector(3).Color := 6579300 -- is the same as the color above</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id65689.html">Color</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1186708.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attributes of the Connector"></a><a class="link" href="id92506.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:CornerPoints"></a></span></div>
+   </body>
+</html>

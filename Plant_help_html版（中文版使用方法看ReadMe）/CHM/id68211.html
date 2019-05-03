@@ -1,0 +1,155 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>positionList</title>
+      
+      <meta name="MS-HKWD" content="positionList">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">positionList</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id54451.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:num"></a><a class="link" href="id45824.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setLength"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id38692.html">Methods of All Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66973.html">Methods for Creating and Locating Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc">positionList</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_9150"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.positionList(Positions:table)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>positionList</em> returns the position list of a material flow object and writes it into a table. (Remember that an <em>MU</em> may be located on more than one length-oriented objects.)
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameter</b></p>
+         
+         <p class="para_topicComponent">The parameter <em>Positions</em> of data type <em>table</em> designates the name of the table.
+         </p>
+         
+         <p class="para_topicComponent"><em>Plant Simulation</em> automatically generates the format of the table. 
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">Column 1 of the table contains the object the <em>MUPart</em> is located on (<em>object</em>). 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Column 2 and column 3 contain the position of the front and the rear of the <em>MUPart</em> (<em>length</em>).
+               </p>
+               
+            </li>
+         </ul>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">@.positionList(MyTable)
+num := MyTable.ydim
+print num</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topic</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id72289.html">Position</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id54451.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:num"></a><a class="link" href="id45824.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setLength"></a></span></div>
+   </body>
+</html>

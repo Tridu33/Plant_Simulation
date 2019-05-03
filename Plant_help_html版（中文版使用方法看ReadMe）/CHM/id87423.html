@@ -1,0 +1,106 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Change Failure Settings During the Simulation Run</title>
+      
+      <meta name="MS-HKWD" content="Change Failure Settings During the Simulation Run">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Change Failure Settings During the Simulation Run</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id65350.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define Failures"></a><a class="link" href="id94260.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Buffering Parts within the Production Line"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id65918.html">Modeling Failures</a></span> &gt; <span class="simpleHTMLminitoc">Change Failure Settings During the Simulation Run</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_629"></span><p class="para_topic">In real-life machines fail more often as they grow older. This is why you will want to reduce the <b class="uiTerm">availability</b> of the machine in the simulation model during the simulation run after a certain time has passed. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To change the <a class="links" href="id45006.html">Availability</a> and the <a class="links" href="id64296.html">MTTR</a> of our station <em>MyStation</em> via <em>SimTalk</em>, enter the following instructions into a <em>Method</em>. In our example we called this method <em>setFailure</em>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">As our machine <em>MyStation</em> only has a single <em>failure profile</em>, we can type in the instructions in the simplified notation as below. <em>Plant Simulation</em> then always uses the first <em>failure profile</em>. If the machine had several <em>failure profiles</em>, we would have to address the attributes via the respective <em>failure profile</em>, <code>MyStation.Failures.MyFailureProfile1.Availability := 80</code> for example.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">-- Reduces the availability and the MTTR during the simulation run.
+-- This method is called by the init method via a methCall after 12 hours.
+print EventController.simTime,&quot; Simulated availability in the morning: &quot;,round(100 * (1 - MyStation.statFailPortion),2),&quot; %&quot;
+MyStation.initStat
+-- reduce the availability
+MyStation.Availability := 80
+MyStation.MTTR := str_to_time(&quot;10:00&quot;)
+MyStation.FailureActive := false
+MyStation.FailureActive := true -- activate failures</pre><ul>
+            <li>
+               
+               <p class="para_item">To start reducing the <b class="uiTerm">availability</b> of the machine after 12 hours have been simulated, enter the following instructions into the <em>init method</em> in the model:
+               </p>
+               <pre class="indent">&amp;setFailure.methCall(str_to_time(&quot;12:0:0&quot;))</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">To reset the <b class="uiTerm">availability</b> of the machine at the start of the next simulation run to 100 percent, enter the following instruction into the <em>reset method</em> in the model.
+               </p>
+               <pre class="indent">MyStation.Availability := 100;</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">To show the simulated <b class="uiTerm">availability</b> at the end of the simulation run in the <em>Console</em>, enter the following instruction into the <em>endSim method</em> in the model.
+               </p>
+               <pre class="indent">print EventController.simTime,&quot; Simulated availability in the afternoon: &quot;, round(100 * (1 - MyStation.statFailPortion),2),&quot; %&quot;;</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">Then, run the simulation and watch what <em>Plant Simulation</em> show in the <em>Console</em>. 
+               </p>
+               
+               <p class="para_item">For the first 12 hours of the simulation run the <b class="uiTerm">availability</b> of the object <em>MyStation</em> was 100 percent. Then we set the <b class="uiTerm">availability</b> to 80 percent and the <b class="uiTerm">MTTR</b> to 10 minutes and deactivated and reactivated <em>failures</em>, to make sure that the next failure is calculated with an complete set of valid parameters. After an additional 10 hours of simulating, compare the end time of the <em>EventController</em>, the <b class="uiTerm">availability</b> of the machine <em>MyStation</em> has decreased to 79.45 percent.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/failuresSModel.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id65350.html">Define Failures</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id99447.html">Modeling Random Processes</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id67622.html">Enter Times</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id65918.html">Modeling Failures</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id65350.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define Failures"></a><a class="link" href="id94260.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Buffering Parts within the Production Line"></a></span></div>
+   </body>
+</html>

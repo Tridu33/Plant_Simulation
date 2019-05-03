@@ -1,0 +1,94 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Sources and the Parts to be Produced</title>
+      
+      <meta name="MS-HKWD" content="Configure the Sources and the Parts to be Produced">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Configure the Sources and the Parts to be Produced</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id61128.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Place Parts with a Target Control"></a><a class="link" href="id75866.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Processing Station"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id99775.html">Picking and Placing Parts with the Pick-And-Place Robot</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61128.html">Place Parts with a Target Control</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Sources and the Parts to be Produced</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_887"></span><p class="para_topic">Insert and configure the <em>Sources</em> which produce the parts:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select the type of part which the object <em>Source</em> is to produce. We selected <em>Part1</em> in our example.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/MyRobotSource.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Define the <b class="uiTerm">entrance control</b>, which sets the last station on which the part is located. To do so, you can right-click into the text box and select <b class="uiTerm">Create Control</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/MyRobotSourceControl.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Copy the following source code and paste it. The identifier @ designates the part, while the identifier ? designates the station, i.e., the material flow object, on which the part is located.</p>
+               <pre class="indent">@.LastStation := ?</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">Select the type of part which the object <em>Source1</em> is to produce. We selected <em>Part1</em> is well.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Create an <b class="uiTerm">entrance control</b> for the <em>Source1</em> and enter the same source code as above.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Create the user-defined attribute <code>LastStation</code> for the part <em>Part1</em>. This attribute is evaluated in the target control of the <em>pick-and-place robot</em> to select the new target station.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Double-click the object <em>Part1</em> and click the tab <b class="uiTerm">User-defined Attributes</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">New</b>, enter the <b class="uiTerm"> name</b> of the user-defined attribute and select its <b class="uiTerm"> data type</b>. We entered <code>LastStation</code> and selected the <b class="uiTerm">data type</b>
+    &gt; <b class="uiTerm">object</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/MyRobotPart.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id75866.html">Configure the Processing Station</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id40156.html">Configure the Robot</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id61128.html">Place Parts with a Target Control</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id61128.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Place Parts with a Target Control"></a><a class="link" href="id75866.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Processing Station"></a></span></div>
+   </body>
+</html>

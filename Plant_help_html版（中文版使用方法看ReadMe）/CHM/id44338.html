@@ -1,0 +1,64 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Beta</title>
+      
+      <meta name="MS-HKWD" content="Beta">
+      <meta name="MS-HKWD" content="Beta,distribution">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Beta</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id32650a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Probability Distributions"></a><a class="link" href="id78886.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Binomial"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64129.html">Times and Distributions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id32650a.html">Probability Distributions</a></span> &gt; <span class="simpleHTMLminitoc">Beta</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4012"></span><p class="para_topic">Depending on its parameters, the <em>beta distribution</em> assumes a variety of shapes. 
+         </p>
+         <p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/betaDistDrop.gif" border="0"></p>
+         <p class="para_topic">The parameters of the distribution are described under <a class="links" href="id26000.html">Attributes of the Distributions</a>.
+         </p>
+         <p class="para_topic">You can use it to model distributed quantities in your simulation model when you do not have sufficient data. You can, for example, model down times and repair times of machines, the number of rejects, or the processing time for an order.</p>
+         <p class="para_topic">The density of the <em>beta distribution</em> is <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/beta1.gif" border="0"></p>
+         <p class="para_topic">where 0  x  1 applies. </p>
+         <p class="para_topic">The mean is µ = <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/beta2.gif" border="0"></p>
+         <p class="para_topic">The variance is <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/beta3.gif" border="0"></p>
+         <p class="para_topic">The <em> beta distribution</em> is a continuous distribution whose realizations are located between 0 and 1 (<em> real</em> ).
+         </p><a name="genid_PlantSimulationENU_4013" id="genid_PlantSimulationENU_4013"></a><table class="figureTable" align="center" width="100%" id="genid_PlantSimulationENU_4013">
+            <tr>
+               <td>
+                  <div class="figure_box">
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/Beta.gif"></p>
+                  </div>
+               </td>
+            </tr>
+         </table>
+         <div class="title_figure">Figure 6-2. Density functions of the beta distribution</div>
+         <p class="para_topic">You can also create the <em>beta distribution</em> with this <em>SimTalk</em> function:
+         </p><pre class="indent">z_beta(Stream:integer,Alpha1:real,Alpha2:real)</pre><p class="para_topic">The parameter <b class="uiTerm">Stream</b> (<em>integer</em>) designates the random number stream. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <p class="para_topic">The parameters <code>Alpha1</code> and <code>Alpha2</code> are positive numbers. The have the data type <em>real</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id31886.html">Distribution Functions</a></p>
+         <p class="para_topic"><a class="links" href="id26000.html">Attributes of the Distributions</a></p>
+         <p class="para_topic"><a class="links" href="id29080.html">Methods of the Distributions</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id32650a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Probability Distributions"></a><a class="link" href="id78886.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Binomial"></a></span></div>
+   </body>
+</html>

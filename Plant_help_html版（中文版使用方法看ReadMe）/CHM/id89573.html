@@ -1,0 +1,69 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Stop mode</title>
+      
+      <meta name="MS-HKWD" content="Stop mode">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Stop mode</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id49154.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Resume control"></a><a class="link" href="id58348.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id41556.html">LockoutZone</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15428.html">Dialog Window of the LockoutZone</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id72986.html">Tab Controls</a></span> &gt; <span class="simpleHTMLminitoc">Stop mode</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8537"></span><p class="para_topic">Select the <b class="uiTerm">stop mode</b>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Stop immediately</b></p>
+               
+               <p class="para_item">stops the processing operations of all stations that are part of the <em>LockoutZone</em>as soon as one of the stations assigned to it fails. Note that none of the other stations in the model are stopped! 
+               </p>
+               
+               <p class="para_item">Within this period of time additional failures can take place for the assigned stations,several failures of differing stations can thus overlap. The stations only start processing parts again after all failures were removed. They then only use up the remaining processing time.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Stop when service arrives</b></p>
+               
+               <p class="para_item">only stops the stations assigned to the <em>LockoutZone</em> when the repair services, which the failed station requested, are assigned. Depending on your modeling situation this can be at a different point in time. If you model <em>Footpaths</em> on which the <em>Worker</em> walks to the station, <em>Plant Simulation</em> considers the <em>Worker</em>as received once he has reached the station. For <em>Exporters</em> or <em>Workers</em> who can be beamed, the service is considered to be received once the <em>Broker</em> has assigned the service. This matches the behavior of the <b class="uiTerm">receive control</b>.
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/lockoutStopMode.gif"></p>
+         <p class="para_topic">The <em>LockoutZone</em> does not influence the <b class="uiTerm">recovery time</b> and the <b class="uiTerm">cycle time</b> of the stations which it controls. The <em>LockoutZone</em> stops these objects and records statistics values for the state <a class="links" href="xid1493026.html#id34384">Stopped</a>. If you deactivate the <em>LockoutZone</em> while it is in the process of stopping other stations, <em>Plant Simulation</em> immediately releases all objects stopped by the <em>LockoutZone</em>. When you reset your model, all objects change their state from <b class="uiTerm">stopped</b> to <b class="uiTerm">operational</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic">
+            <a class="links" href="id64135.html">StopMode</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id10407.html">Use a Stop Processing Control</a></p>
+         <p class="para_topic"><a class="links" href="xid1493026.html#id34384">Stopped</a> state
+         </p>
+         <p class="para_topic"><a class="links" href="id49625.html">Stopped</a></p>
+         <p class="para_topic"><a class="links" href="id56613.html">Stop the Associated Stations Immediately After a Failure</a></p>
+         <p class="para_topic"><a class="links" href="id90517.html">Stop the Associated Stations When the Repair Service Arrives</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id49154.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Resume control"></a><a class="link" href="id58348.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Objects"></a></span></div>
+   </body>
+</html>

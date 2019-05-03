@@ -1,0 +1,103 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Tab Product</title>
+      
+      <meta name="MS-HKWD" content="Tab Product">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Tab Product</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id31666.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stop simulation after all orders have been received"></a><a class="link" href="id37737.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Controls"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1203830.html">Value Stream Mapping Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18205.html">Customer</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69943.html">Dialog Window of the Customer</a></span> &gt; <span class="simpleHTMLminitoc">Tab Product</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_17773"></span><p class="para_topic"> On the tab <b class="uiTerm">Product</b> you can define the products that the <em> Customer</em> requests. Which settings the columns show depends on the setting you selected for the <b class="uiTerm">Order sequence</b> on the <a class="links" href="id52750.html"> Tab Order</a>.
+         </p>
+         <p class="para_topic"> You can add products to the products table by clicking <a class="links" href="id11011.html"> Add</a>. You can edit the selected product by clicking <a class="links" href="id96358.html"> Edit</a>. You can edit the products table by clicking <a class="links" href="id73114.html"> Edit Table</a>. You can delete the selected product from the products table by clicking <a class="links" href="id95540.html"> Delete</a>.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/customerTabProd.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/customerProductproduct.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <ul>
+            <li>
+               
+               <p class="para_item"> For the setting <b class="uiTerm">Demand according to customer cycle</b> you have to enter the <b class="uiTerm">product</b> and the <b class="uiTerm">amount per order</b>. You can select the product from the list of the products you already defined by clicking the button <b class="uiTerm">Product</b>. Enter the time <b class="uiTerm">interval</b> in which the products are ordered. You can use the <b class="uiTerm">range of variation</b> to define the fluctuation percentage of the called products. Entering 100 percent means that the called quantity is between 0 percent and 200 percent of the defined value. <em> Plant Simulation</em> computes the value using the triangular distribution.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/CustomerOrderSequ.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> For the setting <b class="uiTerm">In sequence</b> you have to enter the same data as for the setting <b class="uiTerm">Demand on customer cycle</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> For the setting <b class="uiTerm">Fixed date controlled</b> you have to select the <b class="uiTerm">Product</b>, and enter the <b class="uiTerm">Quantity/request</b>, and the <b class="uiTerm">Date</b>. <em> Plant Simulation</em> then commissions the orders at the given dates.
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/customerTabProdprodfixed.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> The <em> PPS</em> uses the <b class="uiTerm">Quantity/request</b> you enter in the text box to create the production orders. Thus it does not make sense entering the quantity of a weekly or monthly production program. This will lead to very large production orders allocating <em> Process</em> objects for a very long time.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id31666.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stop simulation after all orders have been received"></a><a class="link" href="id37737.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Controls"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>COM</title>
+      
+      <meta name="MS-HKWD" content="COM">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">COM</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1201615.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Compiling the C Program"></a><a class="link" href="id64456.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Functions of the COM Interface"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id78707.html">Inter-Process Communication Interfaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47631.html">COM</a></span> &gt; <span class="simpleHTMLminitoc">COM</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15858"></span><p class="para_topic">With the <em>COM Interface</em> you can control <em>Plant Simulation</em> from other applications  by entering <code>Tecnomatix.PlantSimulationRemoteControl</code>. This starts the most recent version. If you have installed several versions, you can also specify the version with <b class="uiTerm">Tecnomatix.PlantSimulationRemoteControl.&lt;Major&gt;.&lt;Minor&gt;</b>, for example <code>Tecnomatix.PlantSimulationRemoteControl.14.0</code>.
+         </p>
+         <p class="para_topic">You might, for example, start a simulation run in <em>Plant Simulation</em> from Microsoft Excel and then write the results into an Excel table. You can use the <em>COM Interface</em> to control <em>Plant Simulation</em> from any application that can address COM objects. This includes all Office applications, the Windows Scripting Host, and many other applications.
+         </p>
+         <p class="para_topic">The type of the interface is <b class="uiTerm">IRemoteControl</b>:
+         </p><pre class="indent">interface IRemoteControl : IDispatch
+{
+     HRESULT NewModel();
+     HRESULT LoadModel(BSTR);
+     HRESULT SaveModel(BSTR);
+     HRESULT CloseModel();
+     HRESULT StartSimulation(BSTR);
+     HRESULT StopSimulation();
+     HRESULT ResetSimulation(BSTR);
+     HRESULT IsSimulationRunning([out,retval]VARIANT_BOOL*);
+     HRESULT SetPathContext(BSTR);
+     HRESULT ExecuteSimTalk(BSTR,[optional]VARIANT,[out,retval]VARIANT*);
+     HRESULT GetValue(BSTR,[out,retval]VARIANT*);
+     HRESULT SetValue(BSTR,VARIANT);
+     HRESULT Quit();
+};</pre><div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <em>COM interface</em> is part of the <em>Plant Simulation Interface Package</em>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id64456.html">Functions of the COM Interface</a></p>
+         <p class="para_topic"><a class="links" href="id62682.html"> Events of the COM Interface</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1201615.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Compiling the C Program"></a><a class="link" href="id64456.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Functions of the COM Interface"></a></span></div>
+   </body>
+</html>

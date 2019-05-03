@@ -1,0 +1,137 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Chart for Showing the Full and Empty Portions</title>
+      
+      <meta name="MS-HKWD" content="Configure the Chart for Showing the Full and Empty Portions">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Configure the Chart for Showing the Full and Empty Portions</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id12132.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Buffers"></a><a class="link" href="id19450.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Placing Parts into Stock and Removing Parts from It"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id94260.html">Buffering Parts within the Production Line</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id32251.html">Check the Fill Level of the Buffers in the Facility</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Chart for Showing the Full and Empty Portions</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_643"></span><p class="para_topic">In addition to viewing the percentage values for <b class="uiTerm">relatively empty</b> and <b class="uiTerm">relative full</b> on the tab <b class="uiTerm">Statistics</b>, you can also display these values in a <em>Chart</em>. 
+         </p>
+         <p class="para_topic">To do so, proceed as follows:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert a <em>Chart</em> into the simulation model. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click the tab <b class="uiTerm">Display</b> and select the <b class="uiTerm">Category</b> &gt;
+          <b class="uiTerm">Chart</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferChartChart.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click the tab <b class="uiTerm">Data</b> and select the <b class="uiTerm">Data source</b> &gt; <b class="uiTerm">Input Channels</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Deactivate inheritance of the input channels table and click <b class="uiTerm">Input Channels</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferChartinputDeactivInher.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the labels of the values you want to display into the table. We entered <code>Empty</code>, <code>Partially full</code>, and <code>Full</code> into the cells of the row index.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferChartInputChannels.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">As we want to drag the <em>Buffers</em> onto the <em>Chart</em> and drop them there to display the values, we need to create a <b class="uiTerm">drag-and-drop control</b> for the <em>Chart</em>:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Select <b class="uiTerm">Tools </b> &gt;
+       <b class="uiTerm">Edit Controls</b>, click in the text box next to <b class="uiTerm">drag-and-drop</b>, and press the <b class="uiTerm">F4</b> key. This creates the <b class="uiTerm">drag-and-drop</b> control as a <em>user-defined attribute</em> of data type <em>method</em>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferChartCreateControl.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Copy the following source code and paste it into the method that opens:</p>
+                     
+                     <p class="para_item">The source code looks like this:</p>
+                     <pre class="indent">param draggedObjects: object[]
+var obj: object
+var numBuffers: integer
+var MyTab : table := @.InputChannels -- inheritance of the table 'InputChannels' is already deactivated
+MyTab.delete({1,0}..{*,*})
+
+for var i := 1 to draggedObjects.dim 
+   obj := draggedObjects[i]
+
+   switch obj.internalClassName
+   case &quot;NwIOBuffer&quot;, &quot;Buffer&quot;, &quot;Sorter&quot; 
+
+      numBuffers := self.~.InputChannels.xDim +1
+      
+      MyTab[numBuffers,0] := obj.Name
+      MyTab[numBuffers,1] := obj.Name + &quot;.statRelativeEmptyPortion&quot;
+      MyTab[numBuffers,2] := &quot;1 - &quot; + obj.Name + &quot;.statRelativeEmptyPortion - &quot; + obj.Name + &quot;.statRelativeFullPortion&quot;
+      MyTab[numBuffers,3] := obj.Name + &quot;.statRelativeFullPortion&quot;
+       
+   end
+next
+   
+print &quot;Number of detected buffers: &quot;, numBuffers
+@.InputChannels := MyTab -- makes the chart apply the new settings
+@.Active := true</pre>
+                     </li>
+                  <li>
+                     
+                     <p class="para_item">Drag a marquee over all objects in the model, drag them onto the <em>Chart</em>, and drop them there. The <em>Chart</em> automatically knows for which of the objects it can display values and then displays them.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferChartChartDisplay.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id64668.html">Configure the Processing Stations</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id12132.html">Configure the Buffers</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id32251.html">Check the Fill Level of the Buffers in the Facility</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id12132.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Buffers"></a><a class="link" href="id19450.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Placing Parts into Stock and Removing Parts from It"></a></span></div>
+   </body>
+</html>

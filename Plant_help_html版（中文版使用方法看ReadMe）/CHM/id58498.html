@@ -1,0 +1,94 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Collision control</title>
+      
+      <meta name="MS-HKWD" content="Collision control">
+      <meta name="MS-HKWD" content="Collision control,Transporter">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Collision control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id78168.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Destination control"></a><a class="link" href="id33053.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Distance control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87822.html">Dialog Window of the Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id74342.html">Tab Controls</a></span> &gt; <span class="simpleHTMLminitoc">Collision control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_9654"></span>
+         
+         <p class="para_topicComponent">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object in the dialog <a class="links" href="id17045.html">Select Object</a>. Enter the source code of the <b class="uiTerm">collision control</b>. When the <em>Transporter</em> crashes into another <em>Transporter</em>, i.e., the successor moves with a higher speed than the predecessor, the faster <em>Transporter</em> calls the <b class="uiTerm">collision control</b>. 
+         </p>
+         
+         <p class="para_topicComponent">For <em>tugger trains</em> this applies: When a <em>tugger train</em> collides, the <b class="uiTerm">collision control</b> of the <em>tractor</em> will always be triggered. Within the <em>control method</em> the anonymous identifier @ is the <em>Transporter</em>, which actually collides, while the anonymous identifier ? designates the <em>tractor</em> of the <em>tugger train</em>. 
+         </p>
+         
+         <p class="para_topicComponent">Instead, you can also right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>, such as <code>self.ExitControlEnginePlant</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnCollision</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, press the <b class="uiTerm">F2</b> key.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk:</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="xid1177093.html">CollisionCtrl</a>
+            
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topics</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id45550.html">Collided</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id36418.html">Programming the Collision Control</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id78168.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Destination control"></a><a class="link" href="id33053.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Distance control"></a></span></div>
+   </body>
+</html>

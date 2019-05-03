@@ -1,0 +1,109 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Turnplate</title>
+      
+      <meta name="MS-HKWD" content="Turnplate">
+      <meta name="MS-HKWD" content="Turnplate,object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Turnplate</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id65968.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Width"></a><a class="link" href="id85460.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Turnplate"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id46256.html">Turnplate</a></span> &gt; <span class="simpleHTMLminitoc">Turnplate</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7288"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/turnplateIcon.gif" border="0"></p>
+         <p class="para_topic">You can use the <em>Turnplate</em> to model a rotating platform, which rotates the loaded part and ensures the uniform orientation of the leaving part. A typical Syntax is in the package shipping industry where all packages have to be rotated to a uniform direction so that a scanner can automatically read the barcode holding the address information.
+         </p>
+         <p class="para_topic">The <em>Turnplate</em> has a capacity of one, i.e., only one part can be located on it at any one time. The part moves onto the <em>Turnplate</em> and the <em>Turnplate</em> starts rotating once the booking point of the part has reached the center of rotation of the <em>Turnplate</em>. When the rotation is finished, the part exits the <em>Turnplate</em>. The conveying direction on the <em>Turnplate</em> is unidirectional, i.e., the part cannot be conveyed forwards and then backwards.
+         </p>
+         <p class="para_topic">The length of the part does not matter as long as the part itself is not longer than the <em>Turnplate</em> itself. 
+         </p>
+         <p class="para_topic">The center of rotation is by default located in the center of the turnplate. The rotation takes up a certain amount of time. You can enter the rotation time per rotation steps of 90 degrees. If you enter a rotation time of 0, the part is rotated instantaneous without using up any time at all. </p>
+         <p class="para_topic">The rotation angle that you enter should be a multiple of 90 degrees. If you enter an angle other than that, <em> Plant Simulation</em> rounds this angle to the next angle that is divisible by 90. You can also enter a value greater than 360 degrees as long as it is divisible by 90. This way the turnplate can rotate the part several times to simulate packing machines. By default the turnplate rotates 90 degrees clockwise. 
+         </p>
+         <p class="para_topic">After the turnplate has rotated the part and it has left it, the turntable returns to its starting position. You can control the rotation animation steps, with which the <em>Turnplate</em> rotates, with the setting <a class="links" href="id52672.html">Animate every x-th pixel</a>. When you insert the <em>Turnplate</em> with its icon <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/turnplateIconInserted.gif" border="0">, the <a class="links" href="id16684.html">Number of Animation Events</a> controls these steps.
+         </p>
+         <p class="para_topic">To add the <em>Turnplate</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; MaterialFlow &gt; Turnplate</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id60064.html"> Aligning and Shrink-Wrapping Parts with the Turnplate</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id73886.html"> Methods of the Turnplate</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id19873.html"> Configure the Turnplate to Rotate the Part According to an Attribute</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id51845.html"> Attributes of the Turnplate</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id85460.html"> Dialog Window of the Turnplate</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43953.html"> Shared Properties of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id65968.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Width"></a><a class="link" href="id85460.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Turnplate"></a></span></div>
+   </body>
+</html>

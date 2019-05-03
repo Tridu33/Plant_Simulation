@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>AutomaticSetUp</title>
+      
+      <meta name="MS-HKWD" content="AutomaticSetUp">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">AutomaticSetUp</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id99922.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attributes for Setting-Up the Material Flow Objects"></a><a class="link" href="id52416.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:SetupAfterNPartsMode"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id99922.html">Attributes for Setting-Up the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">AutomaticSetUp</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4894"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.AutomaticSetUp</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>AutomaticSetUp</em> sets if the object designated by Path is set up automatically, whenever it is necessary (<code>true</code>) or not (<code>false</code>).
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When you enter <code>true</code> for <em>AutomaticSetUp</em>, <em>Plant Simulation</em> triggers the set-up process of objects as soon as the respective differing <em>MU</em> class intends to move onto the object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you enter <code>false</code> for <em>AutomaticSetUp</em>, you have to define the set-up process yourself, for example with the <em>Method</em>
+                  <a class="links" href="id89505.html">setUpFor</a>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">If the object cannot be set up at the current point in time, for example because it is failed, <em>Plant Simulation</em> does not attempt to set the object up anew. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">ParallelStation.AutomaticSetUp := true</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id45413.html">Automatic</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id99922.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attributes for Setting-Up the Material Flow Objects"></a><a class="link" href="id52416.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:SetupAfterNPartsMode"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Weibull</title>
+      
+      <meta name="MS-HKWD" content="Weibull">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Weibull</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id54199.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Uniform"></a><a class="link" href="id65040.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Empirical Distributions"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64129.html">Times and Distributions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id32650a.html">Probability Distributions</a></span> &gt; <span class="simpleHTMLminitoc">Weibull</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4049"></span><p class="para_topic">The <em>Weibull distribution</em> is a continuous distribution.
+         </p>
+         <p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/weibullDistDrop.gif" border="0"></p>
+         <p class="para_topic">The parameters of the distribution are described under <a class="links" href="id26000.html">Attributes of the Distributions</a>.
+         </p>
+         <p class="para_topic">You can use the <em>Weibull distribution</em> to model the reliability of your plant:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Use <code>Alpha</code>
+                  <code>&alpha;</code>  1 to model the random life time of an plant with a decreasing failure rate. The probability of a failure to occur within a certain time interval decreases as time goes on. Burn-in failures will become more improbable the longer the machines work. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Use <code>&alpha;</code> = 1 to model the exponential distribution. A random exponential life time describes an plant that does not age. The probability of a failure to occur is independent of the life time up to then.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Use <code>&alpha;</code>
+    &gt; 1 to model the random life time of an plant with an increasing failure rate. After running machines for a long time, wear-out failures occur, so that the probability of a failure within a time interval increases as the system ages. The life times that accrue most of the time are determined by the maximum of the density function (for <code>&alpha;</code>
+    &gt; 1) and are roughly defined by the values 
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/weibull7.gif"></p>
+         <p class="para_topic">The <em> Weibull</em> -<em> distribution</em> with the parameters <code> &alpha;</code>,<code> &beta; </code>
+   &gt; 0 has the distribution density <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/weibull2.gif" border="0"> for x&gt;0. 
+         </p>
+         <p class="para_topic"> For x &gt; 0 the distribution function is: <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/weibull4.gif" border="0"> .
+         </p>
+         <p class="para_topic">The mean value is: <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/weibull5.gif" border="0"> and the variance is: <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/weibull6.gif" border="0"></p>
+         <p class="para_topic">The expression <code>&Gamma;</code> (x) designates the gamma function. The value x has to be greater than 0. Both parameters <code>&alpha;</code> and <code>&beta;</code> of the <em>Weibull distribution</em> are positive numbers. <em>Weibull</em>-distributed random numbers always are positive numbers. For <code>&alpha;</code> =1 leads to the exponential distribution. 
+         </p>
+         <p class="para_topic">The parameter <em>beta</em> has the data type <em>time</em>.
+         </p><a name="genid_PlantSimulationENU_4050" id="genid_PlantSimulationENU_4050"></a><table class="figureTable" align="center" width="100%" id="genid_PlantSimulationENU_4050">
+            <tr>
+               <td>
+                  <div class="figure_box">
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/Weibull_Mittelwert_2.gif"></p>
+                  </div>
+               </td>
+            </tr>
+         </table>
+         <div class="title_figure">Figure 6-13. Density functions of the Weibull-distribution with a mean value of 2</div>
+         <p class="para_topic">You can also create the <em>Weibull-distribution</em> with this <em>SimTalk</em> function:
+         </p><pre class="indent">z_weibull(Stream:integer,Alpha:real,Beta:time)</pre><p class="para_topic">The parameter <b class="uiTerm">Stream</b> (<em>integer</em>) designates the random number stream. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <p class="para_topic">The parameters <code>Alpha</code> and <code>Beta</code> are the parameters of the <em>Weibull-distribution</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id31886.html">Distribution Functions</a></p>
+         <p class="para_topic"><a class="links" href="id26000.html">Attributes of the Distributions</a></p>
+         <p class="para_topic"><a class="links" href="id29080.html">Methods of the Distributions</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id54199.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Uniform"></a><a class="link" href="id65040.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Empirical Distributions"></a></span></div>
+   </body>
+</html>

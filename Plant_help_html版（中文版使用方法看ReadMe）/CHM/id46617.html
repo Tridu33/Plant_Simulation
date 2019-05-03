@@ -1,0 +1,82 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>How to Use the Supplier</title>
+      
+      <meta name="MS-HKWD" content="How to Use the Supplier">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">How to Use the Supplier</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id64388.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Dialog Window of the Object Supplier"></a><a class="link" href="id77641.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Product"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1203830.html">Value Stream Mapping Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67990.html">Supplier</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64388.html">Dialog Window of the Object Supplier</a></span> &gt; <span class="simpleHTMLminitoc">How to Use the Supplier</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_18187"></span><p class="para_topic"> Typically the <em> Supplier</em> receives the order for delivering products from the <a class="links" href="id58047.html"> PPS</a>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/supplier-examplesb1.jpg"></p>
+         <p class="para_topic"> This only works if you insert an <em> Information Connector</em> between the objects <em> PPS</em> and the <em> Supplier</em>. The <em> PPS</em> computes the quantity of products needed for the next day and then orders these products from the <em> Supplier</em>.
+         </p>
+         <p class="para_topic"> In the example below, the <em> Supplier</em> delivers products cyclical. We did not insert an <em> Information Connector</em> between the <em> PPS</em> and the <em> Supplier</em>. In the example, 10 products of type <b class="uiTerm">coil</b> will be delivered every day.
+         </p>
+         <p class="para_topic"><em> Plant Simulation</em> adjusts the ordered <b class="uiTerm">quantity</b> to the <a class="links" href="id77641.html#id16680"> Packaging size</a> of the <em> Supplier</em>.
+         </p>
+         <p class="para_topic"> The <em> Supplier</em> delivers the products immediately after the <b class="uiTerm">interval time</b> has elapsed. For this setting there is no additional <b class="uiTerm">replacement time</b>. 
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/supplier-examplesb2.jpg" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/supplierCylicCoil.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> In the example below the <em> Supermarket</em> orders products from the <em> Supplier</em>. Whenever the reorder level of a product is reached, the <em> Supermarket</em> orders new products from the <em> Supplier</em>. After the products used up the <b class="uiTerm">restocking time</b>, they will be transferred to the <em> Supermarket</em> via the object <em> TransportExternal</em>. <em> Plant Simulation</em> adjusts the ordered <b class="uiTerm">quantity</b> to the <a class="links" href="id77641.html#id16680"> Packaging size</a> of the <em> Supplier</em>.
+         </p>
+         <p class="para_topic">The <em>Supplier</em> delivers the products immediately after the <b class="uiTerm">interval time</b> has elapsed. For this setting there is no additional <b class="uiTerm">replacement time</b>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/supplier-examplesb4.jpg"></p>
+         <p class="para_topic"> In the last example a <a class="links" href="id11900.html"> Kanban</a> object controls ordering the products. Depending on the strategy you selected in the <em> Kanban</em> object, <em> Kanban</em> -orders will be sent to the <em> Supplier</em> and the products will be transferred to the <em> Supermarket</em> after the <b class="uiTerm">restocking time</b> has elapsed. Keep in mind that the <em> Supplier</em> sends the quantity of products defined on the <em> Kanban</em> card, not the <b class="uiTerm">packaging size</b>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/supplier-examplesb5.jpg"></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id64388.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Dialog Window of the Object Supplier"></a><a class="link" href="id77641.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Product"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Sources and the Containers and Parts to be Produced</title>
+      
+      <meta name="MS-HKWD" content="Configure the Sources and the Containers and Parts to be Produced">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Configure the Sources and the Containers and Parts to be Produced</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id16001.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Pick Up Several Parts and Place Them with the Robot"></a><a class="link" href="id64687.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Robot to Pick Up Several Parts"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id99775.html">Picking and Placing Parts with the Pick-And-Place Robot</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id16001.html">Pick Up Several Parts and Place Them with the Robot</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Sources and the Containers and Parts to be Produced</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_878"></span><p class="para_topic">Insert and configure the <em>Sources</em> which produce the parts:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select the type of part which the object <em>SourceContainers</em> is to produce. We selected <em>MyContainer</em> in our example. We did not change any other settings on this or the other tabs.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/myRobotSourceContainers.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the type of part which the object <em>SourceParts</em> is to produce. We selected <em>MyNewPart</em> in our example. We also want this <em>Source</em> to produce a part every second, so we entered <code>0:01</code> is the <b class="uiTerm">Interval</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/myRobotSourceParts.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Configure the <em>Container</em>, which the <em>SourceContainers</em> is going to produce. We entered the settings shown in the screenshot below. We want our parts to be placed in two rows of four each, so we entered <code>2</code> is the <b class="uiTerm">y-dimension</b> and <code>4</code> is the <b class="uiTerm">x-dimension</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/myRobotContainer1.gif"></p>
+               
+               <p class="para_item">We are going to use <a class="links" href="id10338.html">vector graphics</a> for the animation of the mobile objects instead of the icons of the objects. <em>Plant Simulation</em> then shows the graphics of the parts with the correct size and with the correct distance to each other while animating your simulation model. We selected these settings:
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/myRobotContainer2.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Configure the <em>part</em> which the <em>SourceParts</em> is going to produce. For this type of part we do not use its vector graphics, but its icon. We did not change any of the settings of our part <em>MyNewPart</em>, we only changed its icon to fit onto the graphic of our container. We just reduced its size to <code>4</code> by <code>4</code> pixels and assigned it a color that is easy to recognize during the simulation. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/myRobotMyNewPart.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id64687.html">Configure the Robot to Pick Up Several Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id40513.html">Configure the AssemblyStation</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id61128.html">Place Parts with a Target Control</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id16001.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Pick Up Several Parts and Place Them with the Robot"></a><a class="link" href="id64687.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Robot to Pick Up Several Parts"></a></span></div>
+   </body>
+</html>

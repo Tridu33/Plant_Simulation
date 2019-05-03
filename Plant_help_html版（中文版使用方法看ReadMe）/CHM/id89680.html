@@ -1,0 +1,86 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Methods for Defining Failures of the Material Flow Objects</title>
+      
+      <meta name="MS-HKWD" content="Methods for Defining Failures of the Material Flow Objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Methods for Defining Failures of the Material Flow Objects</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id89505.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setUpFor"></a><a class="link" href="id38993.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:createFailure"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id89680.html">Methods for Defining Failures of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">Methods for Defining Failures of the Material Flow Objects</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4496"></span><p class="para_topic"> Within a production environment production resources such as machines, vehicles and workers my fail for unpredictable reasons. For simulating failures, the production resources have a failure generator whose settings you can select on the <a class="links" href="id14973.html">Tab Failures</a>. Alternatively you can also define failures with <b class="uiTerm">availability</b> and <b class="uiTerm">MTTR</b> (mean time to repair). In addition you can set between which points in time ( <b class="uiTerm">Start</b> and <b class="uiTerm">Stop</b> ) these failures take place.
+         </p>
+         <p class="para_topic"> Failures may have different reasons, called <em> failure profiles</em>, which may overlap. A machine might, for example, fail because a tool breaks or because a motor fails. Both reasons for the failure of the production resource take place within different time <b class="uiTerm">intervals</b> and require different repairing durations. You can define the <b class="uiTerm">interval</b>, the <b class="uiTerm">duration</b>, the <b class="uiTerm">availability</b>, the <b class="uiTerm">MTTR</b>, the <b class="uiTerm">start</b>, and <b class="uiTerm">stop</b> time on the <a class="links" href="id14973.html">Tab Failures</a>. 
+         </p>
+         <p class="para_topic"> You can select a probability distribution for each of the times. Some distributions require additional information.</p>
+         <p class="para_topic"><em>Plant Simulation</em> provides the <em>methods</em>
+            <a class="links" href="id38993.html">createFailure</a>, <a class="links" href="id51472.html">count</a>, <a class="links" href="id97445.html">deleteFailure</a>, <a class="links" href="id64029.html">getFailure</a>, <a class="links" href="id53100.html">getTable</a>, and <a class="links" href="id56991.html">setTable</a> for defining several failures of the material flow objects. 
+         </p>
+         <p class="para_topic"> The objects address <em>failure profile methods</em> as sub-methods of <code>Failures.</code></p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyExporter.Failures.createFailure(&quot;NameOfNewFailure&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> Also compare the <a class="links" href="id96953.html">Attributes for Defining Failures of the Material Flow Objects</a>.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id89505.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setUpFor"></a><a class="link" href="id38993.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:createFailure"></a></span></div>
+   </body>
+</html>

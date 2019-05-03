@@ -1,0 +1,169 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Methods of All Mobile Objects</title>
+      
+      <meta name="MS-HKWD" content="Methods of All Mobile Objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Methods of All Mobile Objects</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id29180.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Unplanned"></a><a class="link" href="id66973.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Creating and Locating Mobile Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id38692.html">Methods of All Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc">Methods of All Mobile Objects</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9131"></span><p class="para_topic">All mobile objects provide:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id66973.html">Methods for Creating and Locating Mobile Objects</a>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id27872.html">Methods for the State of the Mobile Object</a>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id11406.html">Methods for Accessing the Cargo of Container and Transporter</a>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id91615.html">Methods for Accessing Statistics of the Mobile Objects</a>
+                  
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id97171.html">Methods of the Material Flow Objects</a>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To view all of the <em>methods</em>and <em>attributes</em>of the <em>mobile object</em>, open the window <a class="links" href="id14400.html">Show Attributes and Methods</a>. The figure below illustrates the information using the example of the object <em>Source</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showAttrMeth2.gif"></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showMethod1Online.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Show Attributes and Methods</b>on the context menu of the <b class="uiTerm">Class Library</b> to show the <em>attributes</em> and <em>methods</em> of the selected <a class="links" href="id23901.html#id75750">Class</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Press the <b class="uiTerm">F8</b> key or click <b class="uiTerm">Show Attributes and Methods</b> on the <b class="uiTerm">Home</b> ribbon tab of the <em>Frame</em> into which you inserted an instance to show the <em>attributes</em> and <em>methods</em> of the selected Instance.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">An example of the <b class="uiTerm">Syntax</b> line of the individual methods might look like this:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.create(MU-Location:length [,Position:length, CopyStatistics:boolean])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <ul>
+            <li>
+               
+               <p class="para_item">MU-path designates a valid path to the <em>MU</em> (for example: <code>MyTrack.Cont</code>, <code>ParallelStation.MU(1)</code>, <code>.MUs.Part:203</code>). If you use the <em>Method</em> as an entrance or exit control, you can access the <em>MU</em> that triggered the control using the anonymous identifier <em>@</em> (see <a class="links" href="id18348.html">Anonymous Identifiers in the <em>Reference Manual</em></a>).
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">MU-location designates a location- or length-oriented material flow object, a single processing station of an object with several stations, or a length-oriented object including a position. You can enter the position as the additional parameter of data type <em>length</em>. If you do not enter a position, <em>Plant Simulation</em>uses 0.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The signature of the method, consisting of the identifier and the data type of the parameter, is listed in parentheses. The expression <em>(Parameter:&lt;real)</em>, for example, designates a parameter of data type <em>string</em>. Instead of a constant value, you can also use a variable of the required type or a <em>method</em> that returns the required data type. 
+               </p>
+               
+               <p class="para_item">Optional parameters are listed within square brackets. The expression <em>[,Parameter:boolean]</em>, for example, means that you can, but do not have to enter the <em>boolean</em> parameter. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Make sure to enter the parentheses for expressions within parentheses (&hellip;). Not entering them may lead to unexpected results and open the <em>Debugger</em>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id29180.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Unplanned"></a><a class="link" href="id66973.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Creating and Locating Mobile Objects"></a></span></div>
+   </body>
+</html>

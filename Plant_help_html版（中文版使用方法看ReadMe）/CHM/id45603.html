@@ -1,0 +1,59 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Statistics Collection Period</title>
+      
+      <meta name="MS-HKWD" content="Statistics Collection Period">
+      <meta name="MS-HKWD" content="Statistics Collection Period,material flow objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Statistics Collection Period</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id23074.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Statistics of the Material Flow Objects"></a><a class="link" href="id34504.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Resource Statistics"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id23074.html">Statistics of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">Statistics Collection Period</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3878"></span><p class="para_topic">The statistics collection period is the interval between activating statistics collection or resetting it on the one hand and the time you query the statistics on the other hand. </p>
+         <p class="para_topic"><em>Plant Simulation</em> collects statistical data by default. To deactivate statistics collection for the object, clear the check box <a class="links" href="idResource_Statistics.html">Resource statistics</a>
+            <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/resourcestatCheckbox.gif" border="0"> on the tab <b class="uiTerm">Statistics</b> of the object, or set the attribute <a class="links" href="id29158.html">ResStatOn</a> to <code>false</code>. Deactivating <b class="uiTerm">Resource statistics</b> deletes all statistical data for the object. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you reset your simulation model, <em>Plant Simulation</em> deletes the statistical information of all objects. During a simulation run you can achieve the same effect using the method <a class="links" href="id65659.html">InitStat</a>. This way you can restart the collection of statistical information after a warm-up period of a machine.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Access statistical data, for example by employing the method <a class="links" href="id27467.html">statistics</a>, and save it to a table or file.
+         </p>
+         <p class="para_topic">The following example illustrates the terms statistics collection period and statistics collection:</p>
+         <p class="para_topic"><b class="uiTerm">Query One</b></p>
+         <p class="para_topic">The statistics collection period starts when you activate statistics collection of the object, by selecting the check box <a class="links" href="idResource_Statistics.html">Resource statistics</a> on the tab <b class="uiTerm">Statistics</b>, or by assigning the value true to the attribute <a class="links" href="id29158.html">ResStatOn</a>, and ends with the query of the statistical data. The progression of the failure of the object, the start of the statistics query and the time of statistics query 1 add up to a failure portion of 100 percent for statistics query 1. For this query the times the object was not in <a class="links" href="id29588.html">Failed</a> mode are all located outside the statistics collection period. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/statisticsCollectionPeriod.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Query Two</b></p>
+         <p class="para_topic">The progression of the failure of the object, the start of the statistics query and the time of statistics query 2 add up to a failure portion of less than 100 percent for statistics query 2 because, for a time, the object was not in failed mode during the statistics collection period of the object.</p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id23074.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Statistics of the Material Flow Objects"></a><a class="link" href="id34504.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Resource Statistics"></a></span></div>
+   </body>
+</html>

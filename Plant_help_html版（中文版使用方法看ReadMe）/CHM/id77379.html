@@ -1,0 +1,192 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Find Objects and Attributes</title>
+      
+      <meta name="MS-HKWD" content="Find Objects and Attributes">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Find Objects and Attributes</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id84590.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Select How to Show the Objects and the Names"></a><a class="link" href="id13813.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:2D Reference Help"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18086.html">Setting Parameters in the Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id21288.html">Set Parameters with the AttributeExplorer</a></span> &gt; <span class="simpleHTMLminitoc">Find Objects and Attributes</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1789"></span><p class="para_topic">You can also use the <em>AttributeExplorer</em> to find objects in your simulation model. First, enter the criteria into the cells of the list on the tab <b class="uiTerm">Query</b>. Then, click <b class="uiTerm">Show Explorer</b>. The <em>Explorer</em> window shows only the objects, which meet the search criteria you entered. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/attrQuery2.gif"></p>
+         <p class="para_topic">If you also want to change the attributes, enter their names on the tab <b class="uiTerm">Attributes</b>. Then, click <b class="uiTerm">Show Explorer</b>. Next to the objects the <em>Explorer</em> window now also shows the attribute, which you can also change, when you selected <b class="uiTerm">Edit</b> on the tab <b class="uiTerm">Data</b>. 
+         </p>
+         <p class="para_topic">You can:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select the number of opening <b class="uiTerm">Parentheses</b> of the query. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the name of any of the attributes of the object, which the dialog <a class="links" href="id10360.html">Show Attributes and Methods</a> displays.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click in the cell once with the left mouse button and select a <b class="uiTerm">Condition</b> from the drop-down list. The value of the attribute can be:
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">&lt;</b> (less than) 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">&lt;=</b> (less than or equal to) 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">&gt;</b> (greater than) 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">&gt;=</b> (greater than or equal to) 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">=</b> (equal to), compares attributes of data type <em>real</em>, <em>length</em>, <em>height</em>, <em>speed</em>, and <em>time</em> for the exact value
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">~=</b> (equal to, case-insensitive) compares if strings are equal not considering lower and upper casing, or compares if the values of attributes are about equal
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">/=</b> (not equal to) 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Expression</b>, which is a regular expression, compare <a class="links" href="id70616.html">Show Structure</a>. You might, for example, enter <code>^Inf</code>, which finds any word beginning with <code>Inf</code>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Exists</b>, checks if the object has the designated attribute or not.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Then enter the value into the corresponding cell in the column <b class="uiTerm">Value</b>. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the <b class="uiTerm">Value</b> of the attribute which the <em>AttributeExplorer</em> is to find. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the number of closing <b class="uiTerm">Parentheses</b> of the query. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click in the cell once with the left mouse button and select a boolean <b class="uiTerm">Operator</b> from the drop-down list. This operator connects the boolean values of the active row with the next row. The boolean values result from evaluating the logical expression you defined in a row of the query table. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">end</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">or</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter a <b class="uiTerm">Comment</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the <em>Frame</em> in the dialog <b class="uiTerm">Select Object</b> there you want to start finding the attributes of the objects. 
+               </p>
+               
+               <p class="para_item">To also include any <em>Frames</em> that are located within the <em>Frame</em> you selected, select the check box <b class="uiTerm">Include subframes</b>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Select to show the objects with their path on the tab <b class="uiTerm">Data</b> for this setting.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id42079.html">Finding Objects and Text in Your Simulation Model</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id25254.html">Enter the Objects You Want to Parameterize</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id74235.html">Enter the Attributes You Want to View or Change</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id84590.html">Select How to Show the Objects and the Names</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id21288.html">Set Parameters with the AttributeExplorer</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id84590.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Select How to Show the Objects and the Names"></a><a class="link" href="id13813.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:2D Reference Help"></a></span></div>
+   </body>
+</html>

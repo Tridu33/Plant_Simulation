@@ -1,0 +1,54 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Close Model</title>
+      
+      <meta name="MS-HKWD" content="Close Model">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Close Model</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id27757.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Quick Access Toolbar"></a><a class="link" href="id69314.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Save Model"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70614.html">Ribbon Bar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27757.html">Quick Access Toolbar</a></span> &gt; <span class="simpleHTMLminitoc">Close Model</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1805"></span><p class="para_topic">The command <b class="uiTerm">Close Model</b> closes the current model and prompts you to save it. 
+         </p>
+         <p class="para_topic">Click <b class="uiTerm">Cancel</b> to continue working on your model. Click <b class="uiTerm">Yes</b> to save it, click <b class="uiTerm">No</b> to close the model without saving it. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you defined a <em>Method</em> with the name <em>onCloseModel</em> in the folder <b class="uiTerm">basis</b> of your model, then this method will be executed when you close the model instead of actually closing the model. This <em>Method</em> has to declare a boolean parameter. When you exit <em>Plant Simulation</em>, the parameter has the value true, when you close the model, the parameter has the value false. When you actually want to close the model, you have to explicitly program that in the <em>onCloseModel </em> method by calling the function <em>closeModel</em>. Note that the <em>onCloseModel</em> method located in the <b class="uiTerm">Basis</b> folder will not be called when you close the model via information flow, i.e., with the method <em>closeModel</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">When the model is actually closed (either because the <em>onCloseModel</em> method in the <b class="uiTerm">Basis</b> folder called the method <em>closeModel</em>, or because no <em>onCloseModel</em> method exists in the <b class="uiTerm">Basis</b> folder), then all other existing <em>onCloseModel</em> method classes in the <em>Class Library</em> are called. Within these methods you can executed clean-up tasks, for example delete temporary files.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="xid1188409.html">closeModel</a></p>
+         <p class="para_topic"><a class="links" href="id45925.html">exitApplication</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id27757.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Quick Access Toolbar"></a><a class="link" href="id69314.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Save Model"></a></span></div>
+   </body>
+</html>

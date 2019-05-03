@@ -1,0 +1,208 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Delivery table</title>
+      
+      <meta name="MS-HKWD" content="Delivery table">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Delivery table</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id87183.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Number adjustable"></a><a class="link" href="id26431.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Trigger"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id65865.html">Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88314.html">Dialog Window of the Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57223.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id90312.html">Time of creation</a></span> &gt; <span class="simpleHTMLminitoc">Delivery table</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7026"></span><p class="para_topic">The <em>Source</em> creates the <em>MUs</em> according to the<b class="uiTerm">delivery time</b>, the <b class="uiTerm">class</b>, the <b class="uiTerm">number</b> and the <b class="uiTerm">name</b>, which you entered into the <em>Delivery Table</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourcedeltab.gif"></p>
+         <p class="para_topic">Enter the path of the <em>Delivery Table</em> into the text box next to <b class="uiTerm">Table</b>. 
+         </p>
+         <p class="para_topic">Or you can click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a table in the dialog <a class="links" href="id17045.html">Select Object</a>. 
+         </p>
+         <p class="para_topic">You may also add information about the name and number of the produced parts as well as values for their attributes to the<em>Delivery Table</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourceformattab.gif"></p>
+         <p class="para_topic">The <em>Delivery Table</em> has five columns with the data types <em>time</em>, <em>object</em>, <em>integer</em>, <em>string</em>, and <em>table</em>. Instead of the data type <em>time</em> you can also use the data types <em>date</em>, <em>dateTime</em>, or <em>real</em>. Each row of the <em>Delivery Table</em> defines one order for producing MUs:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the time at which the <em>Source</em> produces the <em>MUs</em> into the column <b class="uiTerm">Delivery Time</b>. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body"><em>Plant Simulation</em> processes the <em>Delivery Table</em> row by row. For this reason the time should increase from row to row. If <em>Plant Simulation</em> processes a row in which the time is located in the past, it creates the part immediately. This may not be what you would expect to happen. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the class of the <em>MU</em> into the column <b class="uiTerm">MU</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the number of <em>MUs</em> to be produced into the column <b class="uiTerm">Number</b>. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When you enter <code>0</code> as <b class="uiTerm">Number</b> into a row, <em>Plant Simulation</em> does take the specified interval for the next creating cycle into account. This means that it does not skip this row, but does not produce a part during this cycle.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter a name for the <em>MUs</em> to be produced into the column <b class="uiTerm">Name</b>. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">You have to enter data in the columns <b class="uiTerm">Delivery Time</b> and <b class="uiTerm">MU</b>. When you leave column 3 (<b class="uiTerm">Number</b>) empty, <em>Plant Simulation</em> produces a single MU. When you leave column 4 empty, the <em>MUs</em> produced inherit the name of their class. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Type in the name of the table attributes and user-defined attributes that the <em>Source</em> sets when it produces the <em>MUs</em> into the column <b class="uiTerm">Attributes</b>. 
+               </p>
+               
+               <p class="para_item">Enter the name of the attribute in column 1 of the attribute table. When an attribute with that name does not exist, <em>Plant Simulation</em> creates it. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body"><em>Plant Simulation</em> assigns the data type of the column containing the value of the attribute to the data type of the attribute. The respective entry is the value of the generated attribute.
+                           </p>
+                           
+                           <p class="para_note_body">When the data type of the column is <em>table/list/stack/queue</em>, <em>Plant Simulation</em> does not copy the sublists of the attribute table, but creates a reference to this list. The newly created user-defined attribute then accesses this list, i.e., when you change one of the two lists, the contents of the other list is changed as well.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <em>Source</em> does not produce parts whose time of creation is in the future when you assign a <b class="uiTerm">delivery table</b> during the simulation.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Instead of using a <em>TableFile</em>, which you inserted into a <em>Frame</em>, you can also employ a user-defined attribute of data type <em>table</em> of the <em>Source</em> as the <b class="uiTerm">Delivery Table</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id24364.html">creationTable</a></p>
+         <p class="para_topic"><a class="links" href="id88975.html">TimeOfGeneration</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id78858.html"> Produce Parts According to a Delivery Table</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id65040.html"> Empirical Distributions</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id64129.html"> Times and Distributions</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id24449.html"> User-defined Distributions</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id32650.html"> Probability Distributions</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id87183.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Number adjustable"></a><a class="link" href="id26431.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Trigger"></a></span></div>
+   </body>
+</html>

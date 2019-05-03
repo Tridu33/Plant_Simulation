@@ -1,0 +1,148 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.generateEllipse</title>
+      
+      <meta name="MS-HKWD" content="_3D.generateEllipse">
+      <meta name="MS-HKWD" content="generateEllipse">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.generateEllipse</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id82413.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Built-in Methods for Creating Extrusion Profiles"></a><a class="link" href="id47166.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.generateHollowEllipse"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id82413.html">Built-in Methods for Creating Extrusion Profiles</a></span> &gt; <span class="simpleHTMLminitoc">_3D.generateEllipse</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14616"></span><span id="ndxgenid_PlantSimulationENU_14617"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">basis.~._3D.generateEllipse(BasePoint:length[2], Width:length, Height:length, CurvePrecision:real)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.generateEllipse</em> creates a two-dimensional ellipse profile which you can use in your user-defined extrusion configuration. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>BasePoint</em> is an <em>array</em> of data type <em>length</em> which sets the base point of the ellipse profile.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Width</em> of data type <em>length</em> sets its width.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Height</em> of data type <em>length</em> sets its height.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>CurvePrecision</em> of data type <em>real</em> sets the sampling accuracy for the generate ellipse.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var profile : any := basis.~._3D.generateEllipse([2.6,4.5], 4, 4, 0.1) 
+--  returns a two-dimensional array containing the values defining a profile; to be used for an extrusion profile</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id82413.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Built-in Methods for Creating Extrusion Profiles"></a><a class="link" href="id47166.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.generateHollowEllipse"></a></span></div>
+   </body>
+</html>

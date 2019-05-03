@@ -1,0 +1,207 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>promptListN</title>
+      
+      <meta name="MS-HKWD" content="promptListN">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">promptListN</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id11938.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:promptList1"></a><a class="link" href="id77332.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Output Functions"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Predefined_Functions_1.html">Predefined Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15104.html">Input Functions</a></span> &gt; <span class="simpleHTMLminitoc">promptListN</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14276"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">promptListN(List:list [,Text:string, ...]) &rarr; list</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The function <em>promptListN</em> allows the user to pick one or several entries out of the designated list, which is displayed in the dialog window. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/promptListN.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>List</em> of data type <em>list</em> designates the list. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The user can select <b class="uiTerm">one</b> or <b class="uiTerm">more</b> entries by holding down the <b class="uiTerm">Ctrl</b> key and clicking the entry. <b class="uiTerm">OK</b> closes the dialog and accepts the choice.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The optional parameter(s) <em>Text</em> of data type <em>string</em> designate the text above the list box. You can enter any number of optional parameters of data type <em> string</em> with a maximum length of 45 characters.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>list[integer]</em>. When the user clicks <b class="uiTerm">Cancel</b>, <em>Plant Simulation</em> returns zero. <em>Plant Simulation</em> saves the indexes of the selected entries unsorted. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- A part entering the plant may be processed by more than one machine.
+var machPark: list[string]  -- You are going to enter the machines that can 
+var indices: list[integer]  -- process it
+machPark.create
+machPark[1] := &quot;M7&quot;; machPark[2] := &quot;M12&quot;
+machPark[3] := &quot;M4&quot;; machPark[4] := &quot;M19&quot;
+indices := promptListN(machPark,
+   &quot;Select one or several of the machines that can&quot;, &quot;process the part:&quot;)
+for var i := 1 to Indices.Dim 
+   switch indices[i]
+   case 1 
+   -- M7 selected
+   case 2 
+      -- M12 selected
+   case 3 
+      -- M4 selected
+   case 4 
+      -- M19 selected
+   end -- switch
+next </pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">promptlistN(MyCardFile, &quot;Select one or several entries from the list below&quot;,
+&quot;by Shift+clicking or Ctrl+clicking the objects.&quot;,&quot;Additional text, text, text, text, ...&quot;)
+-- the entries are contained in the object MyCardFile</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id11938.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:promptList1"></a><a class="link" href="id77332.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Output Functions"></a></span></div>
+   </body>
+</html>

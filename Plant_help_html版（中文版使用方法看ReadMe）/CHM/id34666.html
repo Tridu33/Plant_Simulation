@@ -1,0 +1,42 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Training and Checking the Neural Network</title>
+      
+      <meta name="MS-HKWD" content="Training and Checking the Neural Network">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Training and Checking the Neural Network</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id25515.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Importing Training Data"></a><a class="link" href="id33093.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Illustrating the Results of the Training"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54344.html">Tools</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50388.html">Artificial Neural Network</a></span> &gt; <span class="simpleHTMLminitoc">Training and Checking the Neural Network</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12752"></span><p class="para_topic"> After you started training the neural network on the tab  Training you cannot change the imported data and the parameters of the training algorithm any longer. The associated dialog items will then be deactivated. Resetting the neural network deletes the training results. Then, you can manipulate the data and the parameters of the training algorithm again. </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/NN2.gif"></p>
+         <p class="para_topic" align="center">
+            <b class="uiTerm">Training the neural network</b></p>
+         <p class="para_topic"> A neural network cannot determine a set of output values for a given set of input values that will exactly match the output values that a simulation yields. The error, which results from the difference of the output of the neural network and the given output values is a feature of the neural network. At the beginning of the training the error decreases from training step to training step until it reaches a minimum. The size of the error depends on the structure of the neural network.</p>
+         <p class="para_topic"> For rating the quality of the neural network the training data will only be used for validation purposes. The error rate is displayed in the dialog. It is visualized in the charts under the group <b class="uiTerm">Progress</b> on the tab <b class="uiTerm">Training</b>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/NN3.gif"></p>
+         <p class="para_topic" align="center"><b class="uiTerm">Progress of the training</b></p>
+         <p class="para_topic"> When no noteworthy improvement of the error is to be expected, the training algorithm will be restarted with a reinitialization. This prevents that the search for the minimum error gets stuck in a local minimum for too long. The error charts show a vertical dashed line at the corresponding training step. </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id25515.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Importing Training Data"></a><a class="link" href="id33093.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Illustrating the Results of the Training"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>str_to_method</title>
+      
+      <meta name="MS-HKWD" content="str_to_method">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">str_to_method</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id27537.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Functions for Converting References"></a><a class="link" href="id83876.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:str_to_obj"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Predefined_Functions_1.html">Predefined Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17992.html">Functions for Converting Data Types</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27537.html">Functions for Converting References</a></span> &gt; <span class="simpleHTMLminitoc">str_to_method</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_14357"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">str_to_method(Path:any[, Context:object]) &rarr; object</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The function <em>str_to_method</em> addresses a user-defined attribute of data type <em>method</em> designated by the parameter of data type <em>path</em> of data type <em>any</em>.
+         </p>
+         
+         <p class="para_topicComponent">You can, for example, use the function <em>str_to_method</em> to extract the source code of a <em>Method</em> which you entered as the <b class="uiTerm">exit control</b> in a certain object. Pass the path, which is entered as the <b class="uiTerm">exit control</b> as first argument, pass the object into which the <b class="uiTerm">exit control</b> is entered as the second argument. When the path references a <em>Method</em> or a <em>user-defined attribute</em> of data type <em>Method</em>, <em>Plant Simulation</em> returns the <em>Method</em> or the <em>user-defined attribute</em> respectively.
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameters</b></p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Path</em> of data type <em>any</em> designates the path that is going to be evaluated.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The first parameter can be of data type <em>string</em> or you can pass a parameter of data type <em>object</em>. This is useful to evaluate a path from an attribute of an object, for example the exit control<em>ExitCtrl</em>. In this case you do not have to convert the value of the attribute to a <em>string</em>, using <a class="links" href="id94045.html">to_str</a>, before calling the function <em>str_to_method</em>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If you pass the optional parameter <em>Context</em> of data type <em>object</em> and if you specified a relative path as the parameter <em>Path</em>, the path evaluation of the relative path does not start in the surrounding <em>Frame</em> of the method, which contains the <em>str_to_method</em> statement, but in the specified object. When the relative path starts with <code>self</code>, <code>self</code> will be replaced with the second parameter. If the relative path does not start with <code>self</code>, the path evaluation starts with the surrounding <em>Frame</em> of the second parameter, unless the specified object itself is a <em>Frame</em>. Then the path evaluation starts there.
+               </p>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Return Value</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>object</em>.
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- returns the user-defined method attribute of the Station
+str_to_method(&quot;self.OnExit&quot;, Station) 
+
+-- returns the method 'Method1' within the Frame in which 
+-- the Station is located
+str_to_method(&quot;Method1&quot;, Station) 
+
+-- Call the exit control of the Station. This also works if this control 
+-- points to a user-defined method and is defined by a path like 
+-- &quot;self.OnExit&quot;. 
+str_to_method(Station.ExitCtrl, Station).execute </pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id27537.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Functions for Converting References"></a><a class="link" href="id83876.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:str_to_obj"></a></span></div>
+   </body>
+</html>

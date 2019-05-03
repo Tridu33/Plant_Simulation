@@ -1,0 +1,217 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Edit Observers</title>
+      
+      <meta name="MS-HKWD" content="Edit Observers">
+      <meta name="MS-HKWD" content="Edit Observers,View menu">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Edit Observers</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id39535.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Unplanned control"></a><a class="link" href="id64829.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:New"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id55025.html">Tools Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88228.html">Edit Observers</a></span> &gt; <span class="simpleHTMLminitoc">Edit Observers</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3860"></span><p class="para_topic">The menu command <b class="uiTerm">Edit Observers</b> opens the dialog <b class="uiTerm">Edit Observers</b>. Here you can create observers, which observe the values of observable attributes and methods and which enable you to react to changed values.
+         </p>
+         <p class="para_topic">When you create your simulation model, it will often become necessary to trigger certain actions, when the values of observable <em>attributes</em> or observable <em>methods</em> of objects change. To accomplish this, you can create observers for most of the built-in objects. 
+         </p>
+         <p class="para_topic">This observer observes the value of an <b class="uiTerm">attribute</b> or a <b class="uiTerm">method</b> and then executes one or several methods. This <b class="uiTerm">method</b> can either be a <em>Method</em> object, which you insert into a Frame, or a user-defined attribute of data type <em>method</em>.
+         </p>
+         <p class="para_topic">An observer of a <em>user-defined attribute</em> of data types <em>table</em>/<em>list</em>/<em>stack</em>/<em>queue</em> is not going to be called when the contents of the list changes, but only when a new list is assigned. In addition the old list will not be passed to the second parameter of the <em>observer method</em>, but this parameter is always VOID for lists.
+         </p>
+         <p class="para_topic">Within the <em>Method</em>, you can use the anonymous identifiers <b class="uiTerm">?</b> and <b class="uiTerm">@</b> to address the object, whose attribute changed, i.e., the caller of the <em>Method</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <p class="para_topic">The program passes one, two, or three parameters to the <em>Method</em>, which will be executed:
+         </p><pre class="indent">param attribute: string, oldValue, newValue: any</pre><ol type="1" start="1">
+            <li>
+               
+               <p class="para_item">The name of the observable <em>attribute</em> or the observable <em>method</em>, whose value changed. This way you can use a single <em>Method</em> as the called <em>Method</em> for several <em>attributes/methods</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The previous value of the observed <em>attribute</em> or the observed <em>method</em>. This way you can still access the previous value after the <em>Method</em> changed it to the new value.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The new value of the served <em>attribute</em> or the observed <em>method</em>.
+               </p>
+               
+            </li>
+         </ol>
+         <p class="para_topic">You can either omit the first two parameters or the last parameter. Thus you can declare <em>observer methods</em> with one, two, or three parameters:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- 1 parameter, without parameter 1 and 2 
+param newValue: any
+
+-- 2 parameters, without parameter 3
+param attribute: string, oldValue: any
+
+-- 3 Parameter
+param attribute: string, oldValue, newValue: any</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Proceed as follows to work with <em>observer methods</em>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To create a new observer, click <a class="links" href="id64829.html">New</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To edit an existing observer, select it in the list field and click <a class="links" href="id26292.html">Edit</a> or double-click it in the list field.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete an observer, select it in the list field and click <a class="links" href="id47093.html">Delete</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can use these keyboard keys in the list: </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Return</b> to open the dialog <b class="uiTerm">Select Observing Method</b> of the selected observer. Here you can then change the settings.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Insert</b> to create a new observer.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Delete</b> to delete the selected observer. When you cleared the check box <b class="uiTerm">Confirm</b> under <b class="uiTerm">File</b>
+    &gt; <b class="uiTerm">Preferences</b> &gt; <b class="uiTerm">Modeling</b> &gt;
+     <b class="uiTerm">Delete objects</b>, <em>Plant Simulation</em> deletes the observer without prompting you to confirm.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">As a rule <em>observer methods</em> are called after all other controls. If you want to react to state changes before other controls, you have to use the <em>stopuntil instruction</em> or the <em>waituntil instruction</em> instead of an <em> observer</em>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/observerR1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/observer31.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id26761.html"> Create and Delete an Observer</a></p>
+         <p class="para_topic"><a class="links" href="id23244.html"> addObserver</a></p>
+         <p class="para_topic"><a class="links" href="id60499.html"> attributeWatchable</a></p>
+         <p class="para_topic"><a class="links" href="id26569.html"> getObservers</a></p>
+         <p class="para_topic"><a class="links" href="id57017.html"> removeObserver</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id39535.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Unplanned control"></a><a class="link" href="id64829.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:New"></a></span></div>
+   </body>
+</html>

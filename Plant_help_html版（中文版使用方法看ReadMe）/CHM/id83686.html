@@ -1,0 +1,84 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>How a Process Object Processes an Order</title>
+      
+      <meta name="MS-HKWD" content="How a Process Object Processes an Order">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">How a Process Object Processes an Order</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id92089.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:How to Place an Order"></a><a class="link" href="id31592.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Showing a Display Panel"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53228.html">Shared Properties of the Value Stream Mapping Objects</a></span> &gt; <span class="simpleHTMLminitoc">How a Process Object Processes an Order</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_17744"></span><p class="para_topic"> When a production order was sent to any of the <em> Process</em> objects <em> Process</em>, <em> Process_indexed</em>, <em> Process_multiple</em>, or <em> Process_assembly</em>, <em> Plant Simulation</em> processes this production order as follows:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><em> Plant Simulation</em> computes the order quantity. In some cases the ordered quantity might be adjusted to the lot size.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em> Plant Simulation</em> enters the production order into the order list. In some cases the order list contains more than one production order.
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item"> If the object of type <em> Process</em> is in the state <b class="uiTerm">waiting</b> then it will be activated.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item"> Until <em> Plant Simulation</em> finds a <em> production order</em> that can be satisfied, it executes the following steps:
+                     </p>
+                     
+                     <ul>
+                        <li>
+                           
+                           <p class="para_item"><em> Plant Simulation</em> checks if the preceding <em> Inventory</em> can provide enough base products.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item"> If the required number of base products is available, the base products will be commissioned at the <em> Inventory</em>, they will be sent to the object of type <em> Process</em>, and they will be processed there.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item"> If the required number of base products is not available, <em> Plant Simulation</em> checks the following production order to see if this order can be processed.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id92089.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:How to Place an Order"></a><a class="link" href="id31592.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Showing a Display Panel"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>getAlternativeServices</title>
+      
+      <meta name="MS-HKWD" content="getAlternativeServices">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">getAlternativeServices</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id48315.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of the Importer"></a><a class="link" href="id56606.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getExporters"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48315.html">Methods of the Importer</a></span> &gt; <span class="simpleHTMLminitoc">getAlternativeServices</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4548"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.imp.getAlternativeServices(Services:table) &rarr; table
+Path.setupImp.getAlternativeServices(Services:table) &rarr; table
+Path.failImp.getAlternativeServices(Services:table) &rarr; table</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The method <em> getAlternativeServices</em> returns the different alternatives for the services of the <em> importer</em> of the object designated by Path and writes them into a table.
+         </p>
+         <p class="para_topic"> Only the <a class="links" href="id18003.html"> Station</a>, the <a class="links" href="id29026.html"> ParallelStation</a>, the <a class="links" href="id95185.html"> AssemblyStation</a>, and the <a class="links" href="id85371.html"> DismantleStation</a>, the <a class="links" href="id16225.html"> Mixer</a>, the <a class="links" href="id77602.html"> Portioner</a>, and the <a class="links" href="id47279.html"> Tank</a>, can import services, which you define on the <a class="links" href="id88367.html"> Tab Importer</a>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The parameter <em> Services</em> of data type <em> table</em> designates the name of the table.
+         </p>
+         <p class="para_topic"><em>Plant Simulation</em> passes an unformatted table (a <em>Frame</em> table or a local table) as parameter. The table has three columns, the first contains the name of the <b class="uiTerm">service</b> (<em>string</em>), the second contains the <b class="uiTerm">amount</b> of services to be provided (<em>integer</em>), the third the name of the <b class="uiTerm">alternative</b> service (<em>string</em>). The <em>importer</em> requires that all services of a single alternative are present at the same time.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>table</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Station11.imp.getAlternativeServices(myImpAltServicesList)
+ParallelStation.setupImp.getAlternativeServices(mySetupImpAltServicesList)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id47833.html"> Services for Processing</a></p>
+         <p class="para_topic"><a class="links" href="id45091.html"> Services for Setting-Up</a></p>
+         <p class="para_topic"><a class="links" href="id35908.html"> Services for Repairing</a></p>
+         <p class="para_topic"><a class="links" href="id86703.html"> setAlternativeServices</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id48315.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of the Importer"></a><a class="link" href="id56606.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getExporters"></a></span></div>
+   </body>
+</html>

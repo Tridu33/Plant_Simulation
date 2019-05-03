@@ -1,0 +1,197 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Data source</title>
+      
+      <meta name="MS-HKWD" content="Data source">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Data source</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id88880.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Data"></a><a class="link" href="id83718.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Data"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59466.html">Display and User Interface Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84336.html">Chart</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id45001.html">Dialog Window of the Chart</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88880.html">Tab Data</a></span> &gt; <span class="simpleHTMLminitoc">Data source</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11789"></span><p class="para_topic"> Select whether the <em>Chart</em> takes the data you want to display from a table file or from a set of input channels. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Table File</b>
+                  
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/chartDataSource.gif"></p>
+               
+               <p class="para_item">For this setting, the <em>Chart</em> shows the contents of a table as a diagram. 
+               </p>
+               
+               <p class="para_item">Enter the name of and path to the table file containing the data, or click the button <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select the table in the dialog <a class="links" href="id17045.html">Select Object</a>. 
+               </p>
+               
+               <p class="para_item">Enter the <b class="uiTerm">Range</b> of the table cells you want to show. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">To show all cells in all columns and rows, enter <code>{*,*}..{*,*}</code>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">To show the first four cells of column one, enter <code>{1,1}..{1,4}</code>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">To show all cells in column one, enter <code>{1,1}..{1,*}</code>.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+               <p class="para_item">You can also enter negative numbers:</p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">To show the one but last column, enter <code>{-2,*}..{-2,*}</code>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">To show the one but last and the last column of the table, enter <code>{-2,*}..{*,*}</code>.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <a name="id81265" id="id81265"></a><p class="para_item" id="id81265">
+                  <b class="uiTerm">Input Channels </b></p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/datasourceinput.gif"></p>
+               
+               <p class="para_item"> For this setting, the <em>Chart</em> shows the channels contained in the <b class="uiTerm">Table File</b>. 
+               </p>
+               
+               <p class="para_item">To open a table into which you enter the input channels, click <b class="uiTerm">Table File</b>. These channels are, as a rule, the paths to attributes or methods of objects, whose values you want to display. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/chartInputOnline.gif"></p>
+               
+               <p class="para_item">To delete the entire contents of the input channels table, hold down <b class="uiTerm">Shift</b> while you drag-and-drop a new object onto the <em>Chart</em>.
+               </p>
+               
+               <p class="para_item">You can also enter complex expressions, such as the sum of two attributes, method calls, formulas, etc. Enter text for labeling the <em>Chart</em> in the row index and the column index. 
+               </p>
+               
+            </li>
+         </ul>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">To enter a formula, type it directly into the respective cell of the <em>TableFile</em>. Do not click the formula button <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/formulabutton.gif" border="0"> on the <b class="uiTerm">List</b> ribbon tab of the <em>TableFile</em>!
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">To change the order in which the <em>Chart</em> shows the stations, edit the <b class="uiTerm">table</b> of the <b class="uiTerm">Input channels</b> by cutting the respective columns and pasting them in the desired order.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When the amount of data to be displayed is extremely large, it may take some time to show the <em>Chart</em>. This applies, for example, to a table containing several tens of thousands of cells. Some chart types, for example the 3D types, also take a comparatively large amount of time to display. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">SimTalk</b></p>
+         <p class="para_topic"><a class="links" href="id37424.html">DataRange</a></p>
+         <p class="para_topic"><a class="links" href="id59064.html">DataTable</a></p>
+         <p class="para_topic"><a class="links" href="id84074.html">InputChannels</a></p>
+         <p class="para_topic"><a class="links" href="id84615.html">UseInputChannels</a></p>
+         <p class="para_topic"><b class="uiTerm"> Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id84615.html"> UseInputChannels</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id59064.html"> DataTable</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id37424.html"> DataRange</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id84074.html"> InputChannels</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id88880.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Data"></a><a class="link" href="id83718.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Data"></a></span></div>
+   </body>
+</html>

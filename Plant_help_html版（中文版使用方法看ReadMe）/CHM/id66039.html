@@ -1,0 +1,66 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Import or Export Data in ASCII Format</title>
+      
+      <meta name="MS-HKWD" content="Import or Export Data in ASCII Format">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Import or Export Data in ASCII Format</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id44371.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import the Simulation Results From the Database and Show Them"></a><a class="link" href="id20520.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Showing Data Stored in an External Program"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48998.html">Importing and Exporting Data</a></span> &gt; <span class="simpleHTMLminitoc">Import or Export Data in ASCII Format</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1675"></span><p class="para_topic">You can import data for a simulation run from a text file with the <a class="links" href="id81496.html">FileInterface</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/fileInterfaceS.gif" border="0">. You can also export data directly into a text file with the <em>FileInterface</em>: You can write log files of your simulation runs or record statistics data, etc. The <em>FileInterface</em> only processes ASCII characters, i.e., letters, numbers and special characters. It provides a number of <em>methods</em> to move within the file.
+         </p>
+         <p class="para_topic">You can insert the <em>FileInterface</em> into your simulation model from the folder <b class="uiTerm">InformationFlow</b> in the <em>Class Library</em> or from the toolbar <b class="uiTerm">Information Flow</b> in the <em>Toolbox</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/insFileInterface.gif"></p>
+         <p class="para_topic">Enter the File Name of the text file, which the <em>FileInterface</em> opens, when you want to import data. When you export data, it specifies the name of the file, which it saves. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/fileInterfaceDialog.gif"></p>
+         <p class="para_topic">The method <a class="links" href="id75382.html">readLn</a> opens the file and reads a single line from it. It then increases the internal line counter by one and closes the file again. 
+         </p>
+         <p class="para_topic">The <em>FileInterface</em> transforms the contents of the line it read into a <em>string</em>. You can manipulate these <em>strings</em> with the <a class="links" href="id99198.html">Functions for Manipulating Strings</a>, such as <a class="links" href="id30135.html">copy</a>, <a class="links" href="id50180.html">omit</a>, <a class="links" href="id15943.html">strlen</a> and with the <a class="links" href="id17992.html">Functions for Converting Data Types</a>, such as <a class="links" href="id82818.html">str_to_num</a>, <a class="links" href="id30045.html">str_to_time</a> etc. 
+         </p>
+         <p class="para_topic">Calling the method <em>readLn</em> again and again moves to the respective next line in the text file. The method <a class="links" href="id39496.html">gotoConveyor</a> moves to the line within the text file, which you pass as an <em>integer</em>. You can then import that line with the method <em>readLn</em>. If you would like to access the same file several times in a row, we advise to open the file beforehand, as that will increase access speed. If you do not need a file any longer, close it. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <em>FileInterface</em> can keep ten text files open at any one time. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">When writing data, for example with the method <a class="links" href="id11861.html"> write</a>, the <em>FileInterface</em> opens the file and sets its internal line counter to the end of the file by calling the method <a class="links" href="id68588.html">goBottom</a>. Then, the <em>FileInterface</em> saves the data to the file and closes it. The <em>FileInterface</em> always adds new data to the end of the file, it does not overwrite any existing data. 
+         </p>
+         <p class="para_topic">If you would like to access the same file several times in a row, we advise to open it beforehand, as it buffers the data before saving it. The <em>FileInterface</em> saves data before the next reading access of the file or when closing it. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id48998.html">Importing and Exporting Data</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id44371.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import the Simulation Results From the Database and Show Them"></a><a class="link" href="id20520.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Showing Data Stored in an External Program"></a></span></div>
+   </body>
+</html>

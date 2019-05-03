@@ -1,0 +1,289 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Inventory</title>
+      
+      <meta name="MS-HKWD" content="Inventory">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Inventory</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id97621.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Mode of Operation and Use of the Object ForeignOrders"></a><a class="link" href="id54005.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Object Inventory"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1203830.html">Value Stream Mapping Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id60236.html">Inventory</a></span> &gt; <span class="simpleHTMLminitoc">Inventory</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_17843"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/InventoryIcon.gif" border="0"></p>
+         <p class="para_topic"> The object <em> Inventory</em> represents an uncontrolled stock of products. The <em> Inventory</em> receives products on a workpiece carrier and places them into stock. If a succeeding object requires products, it moves them out of stock on their workpiece carriers and transfers them to the requesting process. In case there are not enough parts at stock, the requesting object has to wait until parts arrive and are placed in stock. The Inventory will then inform all waiting processing objects. In the same sequence as above the objects then again request the parts and the parts will be transferred to the requesting objects.
+         </p>
+         <p class="para_topic">Note that it may happen again that not all requests can be fulfilled and that the requesting objects have to wait again. This may prevent one of the requesting processes to never receive any parts.</p>
+         <p class="para_topic">Compare these examples:</p>
+         <p class="para_topic">The process <em>P1</em> needs <em>Part1</em> with a lot size of 40 parts.
+         </p>
+         <p class="para_topic">The process P2 needs <em>Part1</em> with a lot size of 80 parts.
+         </p>
+         <p class="para_topic">The <em>Inventory</em> stores <em>Part1</em>, 20 parts are in stock-
+         </p>
+         <p class="para_topic">Step 1:</p>
+         <p class="para_topic">The production order for <em>P2</em> requires 80 parts of <em>Part1</em>. 
+         </p>
+         <p class="para_topic">The production order for <em>P1</em> requires 40 parts of <em>Part1</em>.
+         </p>
+         <p class="para_topic">Step 2:</p>
+         <p class="para_topic">40 parts of <em>Part1</em> arrive at the <em>Inventory</em>.
+         </p>
+         <p class="para_topic">The processes P1 and <em>P2</em> will be informed.
+         </p>
+         <p class="para_topic">Step 3:</p>
+         <p class="para_topic">The request of the process <em>P2</em> can not be satisfied.
+         </p>
+         <p class="para_topic">The request of the process <em>P1</em> can be satisfied.
+         </p>
+         <p class="para_topic">Consequently 40 parts of <em>Part1</em> will be transferred to the process <em>P1</em>.
+         </p>
+         <p class="para_topic">Step 4:</p>
+         <p class="para_topic">The production order for <em>P2</em> requires 80 parts of <em>Part1</em>. 
+         </p>
+         <p class="para_topic">The production order for <em>P1</em> requires 40 parts of <em>Part1</em>.
+         </p>
+         <p class="para_topic">Step 5:</p>
+         <p class="para_topic">40 parts of <em>Part1</em> arrive at the <em>Inventory</em>.
+         </p>
+         <p class="para_topic">The processes <em>P1</em> and <em>P2</em> will be informed.
+         </p>
+         <p class="para_topic">Step 6:</p>
+         <p class="para_topic">The request of the process <em>P2</em> can not be satisfied.
+         </p>
+         <p class="para_topic">The request of the process <em>P1</em> can be satisfied.
+         </p>
+         <p class="para_topic">Consequently 40 parts of <em>Part1</em> will be transferred to the process <em>P1</em>.
+         </p>
+         <p class="para_topic">The number of products on a workpiece carrier does not change, meaning that the products are not repacked in the <em>Inventory</em>.
+         </p>
+         <p class="para_topic">The <em> Inventory</em> stores products which are contained in a list. You have to enter the product name and the corresponding initial stock. The initial stock is available at the start of the simulation run and is increased or decreased during the simulation run.
+         </p>
+         <p class="para_topic"> Note that the <a class="links" href="id25533.html"> Supermarket</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SupermarketIconSm.gif" border="0"> is a special type of <em> Inventory</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Possible predecessors</b> are:
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <col span="1" width="80%">
+            
+            <col span="1" width="20%">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1204777.html"> FIFO</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/FIFOicon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id99504.html"> Process_assembly</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/processAssemblyIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id73041.html"> Process_indexed</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/processIndexedIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id11376.html"> Process_multiple</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ProcessMultipleIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id67990.html"> Supplier</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/supplierIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id21448.html"> Transport</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/TransportIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id91552.html"> TransportExternal</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/TransportExternalIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> Possible successors</b> are:
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <col span="1" width="80%">
+            
+            <col span="1" width="20%">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id21872.html"> Process</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ProcessIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id99504.html"> Process_assembly</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/processAssemblyIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id73041.html"> Process_indexed</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/processIndexedIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id11376.html"> Process_multiple</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ProcessMultipleIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> The object Inventory does not have any information Connectors.</b></p>
+         <p class="para_topic"><b class="uiTerm"> Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id54005.html"> Dialog Window of the Object Inventory</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id97621.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Mode of Operation and Use of the Object ForeignOrders"></a><a class="link" href="id54005.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Object Inventory"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Assignment Operators</title>
+      
+      <meta name="MS-HKWD" content="Assignment Operators">
+      <meta name="MS-HKWD" content="Assignment">
+      <meta name="MS-HKWD" content="Assignment,operator">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Assignment Operators</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id62503.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Relational Operators"></a><a class="link" href="id64735.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:&amp; (SimTalk 2.0) ref (SimTalk 1.0)"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67662.html">Operators and Expressions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Assignment_Operators.html">Assignment Operators</a></span> &gt; <span class="simpleHTMLminitoc">Assignment Operators</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13775"></span><span id="ndxgenid_PlantSimulationENU_13776"></span><p class="para_topic">The <b class="uiTerm">assignment operator :=</b> assigns a new value to a variable. <em>Plant Simulation</em> first evaluates the expression to the right of the operator. If value and variable have the same data type, the value is assigned to the variable. 
+         </p>
+         <p class="para_topic">If the data types are different, the value will have to be converted first. <em>Plant Simulation</em> automatically converts <em>real</em> into <em>integer</em> and <em>integer</em> into <em>real</em> values. Note that during conversion of <em>real</em> values into <em>integer</em> values <em>Plant Simulation</em> deletes the positions after the decimal point. The same is true for assignments of <em>date</em> to <em>dateTime</em> and <em>dateTime</em> to <em>date</em>. The time part will be discarded. 
+         </p><pre class="indent">integer_Var := 0.999 -- value is 0, no digits after decimal point</pre><p class="para_topic">Note that you will have to explicitly convert all other data types using the respective conversion functions, compare <a class="links" href="Converting_Data_Types.html#id83389">Manually Converting Data Types</a>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var i: integer, r: real, b: boolean, s: string, d: date, dt: dateTime
+i := 5.5                    -- 5
+r := 1.0 + 4 * (3 - 0.18)   -- 12.28
+b := true and (b or true)   -- true
+s := &quot;value&quot;                -- string
+s := &quot;new&quot; + &quot; value&quot;                   -- &quot;new value&quot;
+d := str_to_dateTime(&quot;1.1.98 13:45:44&quot;) -- 1.1.1998 no time
+dt := d                                 -- 1.1.1998 0:0:0 midnight
+                                        -- set time to 0</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><em>Plant Simulation</em> first completely evaluates the right hand side of an assignment before assigning the value to the variable on the left side. This allows to directly increase the value of a variable.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">a := a + 3 -- integer</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Suppose the variable <em>a</em> still has the value 5 assigned to it from a previous example. The result on the right side is formed by the addition of the previous value of <em>a</em> and the <em>integer</em> constant 3. This sum is then assigned to the variable <em>a</em>. The previous value will be overwritten!
+         </p>
+         <p class="para_topic">You can assign values with the operators <a class="links" href="id64735.html">&amp; (SimTalk 2.0) ref (SimTalk 1.0)</a> and <a class="links" href="id56084.html">byref</a> or you can assign <a class="links" href="id90493.html">void</a>.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id62503.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Relational Operators"></a><a class="link" href="id64735.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:&amp; (SimTalk 2.0) ref (SimTalk 1.0)"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Maximum number of call chains</title>
+      
+      <meta name="MS-HKWD" content="Maximum number of call chains">
+      <meta name="MS-HKWD" content="Maximum number of call chains,preferences">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Maximum number of call chains</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id17651.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Maximum depth of calls"></a><a class="link" href="id42574.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Maximum number of suspended methods"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70614.html">Ribbon Bar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88930.html">File Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47898.html">Preferences</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id34872.html">Simulation</a></span> &gt; <span class="simpleHTMLminitoc">Maximum number of call chains</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_2039"></span>
+         
+         <p class="para_topicComponent">Enter the maximum number of call chains. During the reset and init phases of your simulation model, the <em>EventController</em>creates a list of all method calls to be executed, the <em>call chain</em>. 
+         </p>
+         
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/simmethods.gif"></p>
+         
+         <p class="para_topicComponent">With the method <a class="links" href="id61950.html">callEvery</a>, you can create a list of methods yourself. A modeling flaw may cause the same <em>callEvery</em> method to be called repeatedly during the simulation, thus taking up more and more memory and finally terminating the simulation. By limiting the number of call chains, you can detect and correct the modeling error.
+         </p>
+         
+         <p class="para_topicComponent">When the <b class="uiTerm">Maximum number of call chains</b> reaches the value you entered, the simulation stops and <em>Plant Simulation</em> shows an error message. Then you can increase the maximum number of call chains and continue or you can correct the faulty source code. To do so, hold down the <b class="uiTerm">Ctrl</b> key and double-click the selected line containing the error in the <em>Debugger</em>. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk:</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id40091.html">setMaxNumberOfCallChains</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id17651.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Maximum depth of calls"></a><a class="link" href="id42574.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Maximum number of suspended methods"></a></span></div>
+   </body>
+</html>

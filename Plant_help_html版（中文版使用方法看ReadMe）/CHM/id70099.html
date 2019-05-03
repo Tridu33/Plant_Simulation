@@ -1,0 +1,117 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Write the Contents List into a Table for Further Processing</title>
+      
+      <meta name="MS-HKWD" content="Write the Contents List into a Table for Further Processing">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Write the Contents List into a Table for Further Processing</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id80982.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Open the Contents List in the Dialog of the Material Flow Objects"></a><a class="link" href="id53009.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Print the Contents List to the Console as an Array"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42624.html">Animating the Simulation Model and Viewing the Results</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84748.html">Viewing and Visualizing Statistics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56050.html">Viewing Statistics in the Dialogs of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id11268.html">Check the Contents List of the Stations</a></span> &gt; <span class="simpleHTMLminitoc">Write the Contents List into a Table for Further Processing</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1437"></span><p class="para_topic">As the internal <a class="links" href="id24555.html">Contents</a>
+            <b class="uiTerm">list</b> of the objects, which the menu command <b class="uiTerm">View</b> &gt;
+   <b class="uiTerm">Contents</b> opens, will be deleted when you reset your simulation model, you have to save it, if you need this data later on for further processing. 
+         </p>
+         <p class="para_topic">As the default return value of the contents list, among others of the method <a class="links" href="id59124.html">contentsList</a>, is an <em>array</em>, we are going write this <em>array</em> into a table with the method <a class="links" href="id89472.html">copyToTable</a>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/contentsListFrameSimulated.gif"></p>
+         <p class="para_topic">To accomplish this, we entered the following source code into an <em>endSim</em>method:
+         </p><pre class="indent">-- Copies the contents lists into the table MyContentsList
+-- as an array with the method <a class="links" href="id89472.html">copyToTable</a> 
+var x,y: real, row: integer
+var a : any := Buffer.contentsList 
+MyContentsList[1,1] := &quot;Buffer&quot;
+a.copyToTable(MyContentsList,2,1)
+row := MyContentsList.yDim + 2 -- inserts an empty line
+MyContentsList[1,row] := &quot;Conveyor&quot;
+print a -- prints the contents list as an array to the console
+print &quot;Number of items: &quot;,a.yDim
+var b := Conveyor.contentsList -- local variable is of data type any
+print b
+print &quot;Number of items: &quot;,b.yDim
+b.copyToTable(MyContentsList,2,row)
+MyContentsList.opendialog
+-- Writes the contentsList into a table
+-- as previous versions of the program did
+Buffer.contentsList(ContentsListBuffer)
+Conveyor.contentsList(ContentsListConveyor)</pre><p class="para_topic">Then, we manually formatted the table <em>MyContentsList</em> by selecting the correct data types for the columns and by entering the column index items as shown below.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/contentsListListEmpty.gif"></p>
+         <p class="para_topic">After running the simulation, the <em>endSim</em> method writes the contents lists to the table:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/contentsListList.gif"></p>
+         <p class="para_topic">To delete the contents of the contents list, you can enter the following source code into a <em>reset method</em>.
+         </p><pre class="indent">MyContentsList.delete</pre><p class="para_topic">In addition it writes the contents lists as an <em>array</em> each for the objects <em>Buffer</em> and <em>Conveyor</em> to the <em>Console</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/consoleContentsListMyC.gif"></p>
+         <p class="para_topic">Finally, the <em>endSim</em> method writes the contents lists of the <em>Buffer</em> and the <em>Conveyor</em> into the tables <em>ContentsListBuffer</em> and <em>ContentsListConveyor</em>, which we inserted into the <em>Frame</em>.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/contentsListBufferList.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/contentslistLineList.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id80982.html">Open the Contents List in the Dialog of the Material Flow Objects</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id53009.html">Print the Contents List to the Console as an Array</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id11268.html">Check the Contents List of the Stations</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id80982.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Open the Contents List in the Dialog of the Material Flow Objects"></a><a class="link" href="id53009.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Print the Contents List to the Console as an Array"></a></span></div>
+   </body>
+</html>

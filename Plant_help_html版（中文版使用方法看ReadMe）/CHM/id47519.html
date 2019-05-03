@@ -1,0 +1,152 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Buffer</title>
+      
+      <meta name="MS-HKWD" content="Buffer">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Buffer</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id11240.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:PartListMode"></a><a class="link" href="id87501.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Buffer"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47519.html">Buffer</a></span> &gt; <span class="simpleHTMLminitoc">Buffer</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5330"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ioBufferIcon.gif" border="0"></p>
+         <p class="para_topic">A <em>Buffer</em> placed between two components of your plant serves two purposes:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">It temporarily holds parts, when one of the components following it in the sequence of stations fail. </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">It moves parts on, when the preceding components stop working, preventing the production process from grinding to a halt.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Dimensioning a <em>Buffer</em> with a large enough capacity for covering all failures leads to a complete decoupling of both components of your plant. The <em>Buffer</em> not only tides over failure times but also serves as a compensating station for fluctuating transport and operating times, which lead to queues forming in front of a machine or a component. But even then it cannot always prevent the material flow from being interrupted or coming to a halt.
+         </p>
+         <p class="para_topic">As the object <em>Buffer</em> does not have individual stations, it does not have to divide the processing time, i.e., the time during which the <em>part</em> remains in it, into small individual steps. Instead, you can select the sequence in which the parts exit the buffer. When you select <a class="links" href="id21837.html">Buffer type</a></p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Queue</b> the <em>parts</em> exit the <em>Buffer</em> in the same order in which they entered it (<b class="uiTerm">F</b>irst <b class="uiTerm">I</b>n <b class="uiTerm">F</b>irst <b class="uiTerm">O</b>ut). 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Stack</b> the <em>part</em>, which entered last, leaves the <em>Buffer</em> first (<b class="uiTerm">L</b>ast <b class="uiTerm">I</b>n <b class="uiTerm">F</b>irst <b class="uiTerm">O</b>ut). 
+               </p>
+               
+            </li>
+         </ul>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Each MU remains at least for the time in the <em>Buffer</em>, which you entered as the <a class="links" href="id39034.html">Dwell time</a>. For the <b class="uiTerm">buffer type &gt; Stack</b> an MU can only exit the <em>Buffer</em>, when all parts which entered the <em>Buffer</em> after the current part, have already exited the <em>Buffer</em>, i.e., when the MU is located at the very top of the stack.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The <em>Buffer </em> is ideally suited for modeling a buffer with a great <a class="links" href="id50462.html">Capacity</a> requiring high performance. If you need more advanced functions, you can use the <a class="links" href="id21426.html">PlaceBuffer</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/platzPufferBeschnitten.gif" border="0">.
+         </p>
+         <p class="para_topic">To add the <em>Buffer</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; MaterialFlow &gt; Buffer</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id94260.html">Buffering Parts within the Production Line</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43953.html">Shared Properties of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id87501.html">Dialog Window of the Buffer</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id25469.html">Properties of the QueueFile</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id35823.html">Methods of the Buffer</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id54377.html">Properties of the StackFile</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id41623.html">Attributes of the Buffer</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id11240.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:PartListMode"></a><a class="link" href="id87501.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Buffer"></a></span></div>
+   </body>
+</html>

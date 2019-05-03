@@ -1,0 +1,185 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>setList</title>
+      
+      <meta name="MS-HKWD" content="setList">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">setList</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id38897a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setIndex"></a><a class="link" href="id17208.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setPasswordMasking"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59466.html">Display and User Interface Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87122.html">Dialog</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48922.html">Methods of the Dialog</a></span> &gt; <span class="simpleHTMLminitoc">setList</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12353"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.setList(DialogItem:string, List:any) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>setList</em> sets the items of a list that the dialog items below show.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>DialogItem</em> of data type <em> string</em> designates a dialog item of type <a class="links" href="id62827.html">New List Box</a>, <a class="links" href="id81109.html">New Drop-Down List Box</a> or <a class="links" href="id71986.html">New Tab Control</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>List</em> of data type <em>any</em> designates the one-columned list into which you enter the <a class="links" href="id74882.html">Items</a> which the dialog items <b class="uiTerm">list box</b> or <b class="uiTerm">drop-down list box</b> shows. For the <a class="links" href="id71986.html">New Tab Control</a>, it sets the captions of the individual tabs.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>. The return value true shows that the item in the list was addressed and that it changed its display.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var units: list[string]
+units.create
+units.insert(1,&quot;pound&quot;)
+units.insert(2,&quot;stone&quot;)
+MyDialog.setList(&quot;unit&quot;,units)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyDialog.setList(&quot;sedan&quot;,ListSedan)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id38897a.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setIndex"></a><a class="link" href="id17208.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setPasswordMasking"></a></span></div>
+   </body>
+</html>

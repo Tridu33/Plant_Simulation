@@ -1,0 +1,77 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Set Dynamic Parameters</title>
+      
+      <meta name="MS-HKWD" content="Set Dynamic Parameters">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Set Dynamic Parameters</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id19883.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modify Settings in the Configuration Method"></a><a class="link" href="id68614.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create a Rule of Your Own"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53177.html">Executing Simulation Experiments</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87901.html">Execute Experiments with the ExperimentManager</a></span> &gt; <span class="simpleHTMLminitoc">Set Dynamic Parameters</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1131"></span><p class="para_topic">Under <b class="uiTerm">Tools</b> &gt;
+   <b class="uiTerm">Advanced Settings</b> &gt; <b class="uiTerm">Rules</b> you can define <em>dynamic parameters</em>. For this type of parameterization the results of previous experiments produce the values for the input values of the current experiment. 
+         </p>
+         <p class="para_topic">A <b class="uiTerm">rule</b> is a logic expression that consists of a condition and an action. As soon as the condition of a rule is met, the associated action of the rule is taken.
+         </p>
+         <p class="para_topic">First enter the number of experiments you want the <em>ExperimentManager</em> to execute.
+         </p>
+         <p class="para_topic">The <em>ExperimentManager</em> checks if the conditions you entered as the <b class="uiTerm">table condition</b> and as the <b class="uiTerm">method condition</b> on the tab do apply. It then takes the action(s) which you entered into the <b class="uiTerm">table action</b> and programmed in the <b class="uiTerm">method action</b>.
+         </p>
+         <ol type="1" start="1">
+            <li>
+               
+               <p class="para_item">To use dynamically changing parameters, select the check box <b class="uiTerm">use rules</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select one of the built-in rules from the drop-down list <b class="uiTerm">Select rule</b>, <a class="links" href="id68614.html">Create a Rule of Your Own</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the check box <b class="uiTerm">Rule is active</b>, to activate the rule you selected. This rule will then be executed before the simulation experiment.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If you want to, you can enter the number of the experiment(s) for which the rule applies.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter a <b class="uiTerm">Priority</b>. The greater the number you enter, the higher the priority will be: A rule with the priority <code>10</code> is executed before a rule with the priority <code>1</code>. 
+               </p>
+               
+            </li>
+         </ol>
+         <p class="para_topic">To use the rule which you selected for the first experiment, select the check box <b class="uiTerm">Use for first simulation run</b>. When you do not select it, the <em>ExperimentManager</em> only uses the rule from the second experiment onward.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/RulesTab.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id82510.html">Refine the Settings</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id19883.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modify Settings in the Configuration Method"></a><a class="link" href="id68614.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create a Rule of Your Own"></a></span></div>
+   </body>
+</html>

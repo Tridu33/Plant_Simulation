@@ -1,0 +1,41 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Display a Method</title>
+      
+      <meta name="MS-HKWD" content="Display a Method">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Display a Method</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id40185.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Display a Dropdown List"></a><a class="link" href="id23609.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Display an HtmlReport"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59466.html">Display and User Interface Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53118.html">HtmlReport</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17201.html">Dialog Window of the HtmlReport</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58581.html">Tab Content</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1201111.html">Select an Object or an Object Attribute to be Displayed</a></span> &gt; <span class="simpleHTMLminitoc">Display a Method</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12637"></span><p class="para_topic">To execute the <a class="links" href="id25909.html">Method</a>, whose name you enter in square brackets, and to display the return value on the HTML page, type in the following instructions. Within parentheses you can also pass parameters to the <em>Method</em>.
+         </p><pre class="indent">[Method]
+[Method(Argument1, Argument2])</pre><p class="para_topic">The source code of our <em>Method</em> named <em>MyMethod</em> queries the <b class="uiTerm">x-position</b> and the <b class="uiTerm">y-position</b> of the object <em>MyStation</em>. 
+         </p>
+         <p class="para_topic">It looks like this :</p><pre class="indent">param obj: object -&gt;string
+return to_str(&quot;x=&quot;, obj.XPos, &quot;, y=&quot;, obj.YPos)</pre><p class="para_topic">The following statement displays these positions in the <em>HtmlReport</em>.
+         </p><pre class="indent">[MyMethod(MyStation])</pre><p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/reportMethod.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id93710.html">Showing Statistics and Other Values in a Report</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id40185.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Display a Dropdown List"></a><a class="link" href="id23609.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Display an HtmlReport"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Format string</title>
+      
+      <meta name="MS-HKWD" content="Format string">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic8" id="xps10_pagetitle">Format string</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id55215.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Data type"></a><a class="link" href="id22475.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Common format"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36465.html">Window of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id45928.html">List Ribbon Tab</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1181970.html">Edit Format</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58325.html">Tab Data Type</a></span> &gt; <span class="simpleHTMLminitoc">Format string</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10043"></span><p class="para_topic">For the data types <b class="uiTerm">Integer</b>, <b class="uiTerm">Real</b>, <b class="uiTerm">Length</b>, <b class="uiTerm">Weight</b>, <b class="uiTerm">Speed</b>, <b class="uiTerm">Acceleration</b>, <b class="uiTerm">Money</b>, and <b class="uiTerm">String</b> you can restrict the data the user can enter in the window of the list object to certain values by entering a format string. Note that the <b class="uiTerm">Format String</b> does not restrict assignments via <em>Methods</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/formatString.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Data type <b class="uiTerm">String</b></p>
+               
+               <p class="para_item">For the data type <em>string</em>
+                  <em>Plant Simulation</em> differentiates for each digit:
+               </p>
+               
+               <table border="1" cellpadding="10" width="100%" align="center">
+                  
+                  <tbody>
+                     
+                     <tr align="left">
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">Format</p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">Enter</p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>A</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">letters only</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>U</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">upper case letters only</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>X</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">all characters</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>C</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">upper case letters and numbers</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>N</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">numbers only</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>L</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">letters and numbers</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>I</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">all characters permitted for object names: letters, including umlaut, numbers and underscore</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+               <p class="para_item">So, if you enter <code>AANXU</code>, the first two digits have to be letters, such as a lower case <code>a</code> or an upper case <code>A</code>. The third digit has to be a number, such as <code>1</code>, the fourth digit may be any character, such as <code>e</code>, <code>E</code>, <code>5</code>or a special character, such as the question mark <code>?</code>. The fifth digit has to be an upper case letter, such as <code>B</code>. This way you set the length of an expression and the format of each single digit. 
+               </p>
+               
+               <p class="para_item">When you enter several terms of your choice, separated by a semicolon, and not followed by a blank, <em>Plant Simulation</em> creates a drop-down list in the cell of the formatted range into which the user clicks. You can then select one of the terms you entered from the drop-down list.
+               </p>
+               
+               <p class="para_item">When you enter <b class="uiTerm">stack</b>; <b class="uiTerm">list</b>; <b class="uiTerm">random</b>, <em>Plant Simulation</em> creates a drop-down list with the commands <b class="uiTerm">stack</b>, <b class="uiTerm">list </b>and <b class="uiTerm">random</b> and enters it into the cell you click in the range you formatted.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/formatstr1.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/formatstr2.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Data type <b class="uiTerm">Integer</b></p>
+               
+               <p class="para_item">Enter a number into the text box to limit the number of digits <em>Plant Simulation</em> shows. When you enter <code>3</code>, for example, <em>Plant Simulation</em> only shows the first three digits, when you enter data, such as <code>123</code>. Entering a minus character, such as <code>-3</code>, allows you to enter negative values also, such as <code>-123</code>. 
+               </p>
+               
+               <p class="para_item">For the data type <em>integer</em> you can also enter the value <code>color</code> as the format string. When you then double-click  cell in this column, <em>Plant Simulation</em> opens the Windows dialog <b class="uiTerm">Color</b>. You can then select a color for the background of this cell here. <em>Plant Simulation</em> calculates the RGB value and enters it as an integer value into the cell, compare <a class="links" href="id37525.html">makeRGBValue</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Data type <b class="uiTerm">Real</b></p>
+               
+               <p class="para_item">Enter two numbers, separated by a point, into the text box to restrict the number of digits before and after the decimal point. When you enter <code>5.3</code>, for example, the number the user enters may have 5 digits altogether; three of these digits may be after the decimal point <code>1.234</code> for example. Entering a minus character, such as <code>-6.3</code>, allow you to enter negative values also, such as <code>-123.456</code>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id12321.html">FormatString</a></p>
+         <p class="para_topic"><a class="links" href="id54368.html">getFormatString</a></p>
+         <p class="para_topic"><a class="links" href="id43190.html">setFormatString</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id55215.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Data type"></a><a class="link" href="id22475.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Common format"></a></span></div>
+   </body>
+</html>

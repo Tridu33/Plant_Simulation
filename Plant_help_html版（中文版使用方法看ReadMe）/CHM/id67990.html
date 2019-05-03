@@ -1,0 +1,273 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Supplier</title>
+      
+      <meta name="MS-HKWD" content="Supplier">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Supplier</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id91967.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:StopOnSupplyShortage"></a><a class="link" href="id64388.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Object Supplier"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1203830.html">Value Stream Mapping Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67990.html">Supplier</a></span> &gt; <span class="simpleHTMLminitoc">Supplier</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_18182"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/supplierIcon.gif" border="0"></p>
+         <p class="para_topic"> The <em> Supplier</em> is a kind of inexhaustible source for products and materials. The <em> Supplier</em> takes orders. Once you defined the products to be ordered in the delivery list of the <em> Supplier</em>, it delivers the ordered products. The products are delivered rounded up to the container quantity of the product, compare the attribute <em> PackagingSize</em>. 
+         </p>
+         <p class="para_topic"> The <em> Supplier</em> always moves the parts on after the <b class="uiTerm">restocking time</b> has elapsed. If you do not want this, you can control the times during which the parts are moved on with a <em> ShiftCalendar</em>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> Caused by the changes we made to the objects <em> Supplier</em> and <em> TransportExternal</em>, existing simulation models can behave differently. The products on the Supplier can accumulate because the object TransportExternal does not provide sufficient transport capacity. As a consequence memory consumption can increase dramatically.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm"> Possible successors</b> are:
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <col span="1" width="80%">
+            
+            <col span="1" width="20%">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1204777.html"> FIFO</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/FIFOicon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id60236.html"> Inventory</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/InventoryIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id21872.html"> Process</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ProcessIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id99504.html"> Process_assembly</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/processAssemblyIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id73041.html"> Process_indexed</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/processIndexedIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id11376.html"> Process_multiple</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ProcessMultipleIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id25533.html"> Supermarket</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SupermarketIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id21448.html"> Transport</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/TransportIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id91552.html"> TransportExternal</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/TransportExternalIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> Possible information predecessors</b> are:
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <col span="1" width="80%">
+            
+            <col span="1" width="20%">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id58047.html"> PPS</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ppsIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id25533.html"> Supermarket</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SupermarketIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id11900.html"> Kanban</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/KANBANIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm"> The object Supplier does not have any information successors</b>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id64388.html"> Dialog Window of the Object Supplier</a></p>
+         <p class="para_topic"><a class="links" href="id46617.html"> How to Use the Supplier</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id91967.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:StopOnSupplyShortage"></a><a class="link" href="id64388.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Object Supplier"></a></span></div>
+   </body>
+</html>

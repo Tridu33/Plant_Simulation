@@ -1,0 +1,64 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Activating Licenses</title>
+      
+      <meta name="MS-HKWD" content="Activating Licenses">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Activating Licenses</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Ordering_Your_License_from_Tecnomatix.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Ordering Your License from Tecnomatix"></a><a class="link" href="Identifying_Applications_in_the_License_File.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Identifying Applications in the License File"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id39091.html">Setting-Up and Starting</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id73814.html">Licensing Plant Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87538.html">Activating Licenses</a></span> &gt; <span class="simpleHTMLminitoc">Activating Licenses</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_176"></span><p class="para_topic">When you start <em>Plant Simulation</em> for the first time after installing it, it detects that you do not have a license. It then opens the <b class="uiTerm">Preferences</b> dialog with the tab <a class="links" href="id23610.html">License</a> and asks you to enter the required information. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Setting-Up_and_Starting/LicenseLicense.gif"></p>
+         <p class="para_topic">The set-up processes for the different types of licenses are slightly different from each other, depending on the license you are using. </p>
+         <p class="para_topic">Copy the license files to a folder of your choice. </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">If you are <a class="links" href="id27165.html">Using a Floating License</a> or are <a class="links" href="id41726.html">Using a Node-Locked License</a>, this is a <em>license.lic</em> file.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If you are <a class="links" href="id30778.html">Using a Named-User License</a>, this is a <em>license.lic</em> file <b class="uiTerm">and</b>a <em>ugslmd.opt</em> file. Create a text document on the license server computer in the folder to which you copied the licens file and name it <em>ugslmd.opt</em>. You can then add the names of users to the options file, change the names of users, or remove users from it. 
+               </p>
+               
+               <p class="para_item">You can add any number of users to the <em>ugslmd.opt</em> file. The <em>SPLM License Server</em> only assigns the number of licenses which you purchased and which the Tecnomatix Customer Service Department added to the <em>license.lic</em> file it sent to you. 
+               </p>
+               
+               <p class="para_item">The <em>license.lic </em>file contains the number of licenses, 3 in our example, the <em>ugslmd.opt</em> file contains the names of the users for whom the licenses are reserved:
+               </p>
+               <pre class="indent">SERVER Servername
+VENDOR ugslmd
+FEATURE EMPLANT_FULL_DEMO ugslmd 14.1 permanent 3 SIGN=&quot;0141 8A53 6041 0FF8 158A CEDB 3B12 3893 1CE5 42AA 4601 3DF7 3DEE B433 E2DC 214A 71DE 5EDE 137A 39E8 B9A0&quot;</pre>
+               <pre class="indent">INCLUDE 1 EMPLANT_FULL_DEMO USER Larry_Jones
+INCLUDE 1 EMPLANT_FULL_DEMO USER Curly_Meyer
+INCLUDE 1 EMPLANT_FULL_DEMO USER Moe_Johns</pre>
+               </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id48538.html">License file</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Ordering_Your_License_from_Tecnomatix.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Ordering Your License from Tecnomatix"></a><a class="link" href="Identifying_Applications_in_the_License_File.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Identifying Applications in the License File"></a></span></div>
+   </body>
+</html>

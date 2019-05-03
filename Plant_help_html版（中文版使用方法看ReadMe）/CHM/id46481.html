@@ -1,0 +1,455 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Set How 3D Shows an Object</title>
+      
+      <meta name="MS-HKWD" content="Set How 3D Shows an Object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Set How 3D Shows an Object</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id88732.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Use Identical Lengths and Positions"></a><a class="link" href="xid1406331.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Make Sure That 3D Model and 2D Model Look the Same"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58193.html">Modeling in 3D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id22845.html">Working with Objects</a></span> &gt; <span class="simpleHTMLminitoc">Set How 3D Shows an Object</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1250"></span><p class="para_topic">Depending on which level of the object hierarchy you open a 3D window, a 3D object can look different. For this reason we differentiate between the <b class="uiTerm">outside representation</b> of the object and the <b class="uiTerm">inside representation</b> of the object:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The <b class="uiTerm">outside representation</b> designates the entirety of all graphics, which are visible, when the location of this object is opened in a 3D window. This includes:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Its graphic groups which are not marked as <a class="links" href="id83938.html#id39615">Internal</a>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Its states group which you set according to the <a class="links" href="id95786.html">States orientation</a>.
+                     </p>
+                     
+                     <p class="para_item">When you activated <a class="links" href="id87031.html">Show content</a> for the object, this also includes in addition:
+                     </p>
+                     
+                     <ul>
+                        <li>
+                           
+                           <p class="para_item">Its graphic groups which are marked as <a class="links" href="id83938.html#id39615">Internal</a>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p class="para_item">The <b class="uiTerm">outside representation</b> of those of its contained 3D objects, which are not explicitly excluded from the superordinate outside representation, i.e., for which you activated <a class="links" href="id93341.html">Hide this object in the representation of the location</a>.
+                           </p>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <b class="uiTerm">inside representation</b> designates the entirety of all graphics, which are visible, when the object itself is opened in a 3D window. This includes:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Its graphic groups which are marked as <a class="links" href="id83938.html#id39615">Internal</a>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Its states group you set according to <a class="links" href="id95786.html">States orientation</a>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">The <b class="uiTerm">outside representation</b> of its contained 3D objects.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Independent of the representation, a graphic group is generally only visible when you select the check box <a class="links" href="id83938.html#id28966">Visible</a>. This makes sense for graphic groups, which you only want to use temporarily for the represent the object.
+         </p>
+         <p class="para_topic">When editing the object, it might helpful to show the outside representation and the inside representation at the same time. To do so, activate <a class="links" href="id85265.html">Show External Graphics</a> in a 3D window, which contains the object you are editing.
+         </p>
+         <p class="para_topic">In addition, you can show or hide all <em>Connectors</em> and <em>Interfaces</em> in the active 3D window with the button <a class="links" href="id76654.html">Show Connections</a>.
+         </p>
+         <table border="1" cellpadding="1" width="100%" align="center">
+            
+            <col span="1" width="5%">
+            
+            <col span="1" width="45%">
+            
+            <col span="1" width="25">
+            
+            <col span="1" width="25%">
+            
+            <tbody>
+               
+               <tr align="left" valign="middle">
+                  
+                  <td colspan="2" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Graphic Group/States Group</b></p>
+                     
+                  </td>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Part of the Inside Representation</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Part of the Outside Representation</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Graphic group</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/visibleOn.gif"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">no</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">no</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/internalOn.gif"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">yes</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/showContentOn.gif" border="0">: yes
+                     </p>
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/showContentOff.gif" border="0">: no
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/internalOff.gif" border="0"></p>
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/hideInRepoff.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">
+                        <b class="uiTerm">Show External Graphics</b> on: yes
+                     </p>
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Show External Graphics</b> off: no
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">yes</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/internalOff.gif" border="0"></p>
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/hideInRepon.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">
+                        <b class="uiTerm">Show External Graphics</b> on: yes
+                     </p>
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Show External Graphics</b> off: no
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">only in the location</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> from <em>Connector</em> or <em>Interface</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">not possible</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">
+                        <b class="uiTerm">Show Connections</b> on: yes
+                     </p>
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Show Connections</b> off: no
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="2" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">States group</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">yes</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td">
+                        <b class="uiTerm">Show Connections</b> on: yes
+                     </p>
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Show Connections</b> off: no
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The following sample model demonstrates the different ways of representing objects in 3D: </p>
+         <p class="para_topic">In addition to a number of material flow objects, our model <em>MyPlant</em> contains the <em>Frame</em> named <em>WashingMachine</em> and two instances of the <em>Frame</em> named <em>WorkerCell</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepFrame.gif"></p>
+         <p class="para_topic">The 3D window of the <em>Frame</em> named <em>MyPlant</em> shows the <em>WashingMachine</em> is a green box. The <b class="uiTerm">green box</b> is the <b class="uiTerm">outside representation</b> of the <em>WashingMachine</em>.
+         </p>
+         <p class="para_topic">When you open the <em>WashingMachine</em> in a 3D window of its own, it shows its <b class="uiTerm">content</b>, namely a <em>Station</em> displaying its <em>states</em>, an <em>Part</em>, and <em>Interfaces</em> and <em>Connectors</em>. This is the <b class="uiTerm">inside representation</b> of the <em>WashingMachine</em>. You can right-click into the background of the 3D window and select <b class="uiTerm">Show Structure</b> to show its structure.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWashingMashine.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWashingMashineStructureSm.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Click <b class="uiTerm">Show Connections</b> to hide the <em>Interfaces</em> and <em>Connectors</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWashingMachineConnectionsOff.gif"></p>
+         <p class="para_topic">When you click <b class="uiTerm">Show External Graphics</b>, <em>3D</em> also shows external graphic groups in the <b class="uiTerm">internal representation</b>, allowing you to edit them. In our <em>WashingMachine</em> the graphic group named <b class="uiTerm">Default</b> is the only graphic group that is not <b class="uiTerm">internal</b> but <b class="uiTerm">external</b>. You can right-click into the background of the 3D window and select <b class="uiTerm">Show Graphic Structure</b> to show its graphic structure.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWashingMachineExternalOn.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWashingMachineGraphicStructure.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">In the <b class="uiTerm">outside representation</b> external graphics are always visible, provided you selected the check box <b class="uiTerm">Visible</b>
+            <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/visibleOn.gif" border="0">. 
+         </p>
+         <p class="para_topic">The content of an object, on the other hand, is only visible, when you activated <b class="uiTerm">Show content</b>
+            <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/showContentOn.gif" border="0"> for this object, which is not the case for the <em>WashingMachine</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWashingMachineTabGraphics.gif"></p>
+         <p class="para_topic">As we selected <b class="uiTerm">Show content</b> for the <em>WorkerCell</em>, its content is visible in its outside representation.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWorkerCelTabGraphics.gif"></p>
+         <p class="para_topic">Comparing the outside representation of the <em>WorkerCell</em> in the window <em>MyPlant</em> with the inside representation in its own 3D window, namely with the window <em>WorkerCell</em>, you&rsquo;ll notice that the outside representation shows the safety fence and the floor plate, while the inside representation does not show them. This is because these graphics belong to the external graphic group named <b class="uiTerm">Default</b> and that <b class="uiTerm">Show External Graphics</b> is deactivated by default in the window of the <em>WorkerCell</em></p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWorkerCell.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWorkerCellGraphicStruct.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWorkerCellExternalOn.gif"></p>
+         <p class="para_topic">The work tables and the cabinets of the internal graphic group named <b class="uiTerm">Deco</b>, on the other hand, are also visible in the <b class="uiTerm">outside representation</b> because by definition <b class="uiTerm">Deco</b> belongs to the content of the <em>WorkerCell</em>. 
+         </p>
+         <p class="para_topic">The objects <em>Broker</em> and <em>WorkerPool</em> in the <em>WorkerCell</em> however are visible in the <b class="uiTerm">inside representation</b>, but not in the outside representation. This is because the check box <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/hideInRepon.gif" border="0"> is activated by default for these objects.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepWorkerPoolTabGraphics.gif"></p>
+         <p class="para_topic">The following figure provides an overview over the outside and the inside representation:</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepOverview.gif"></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/RepOverview1.gif"></p>
+         <p class="para_topic"></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b><a class="links" href="xid1406331.html">Make Sure That 3D Model and 2D Model Look the Same</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id22845.html">Working with Objects</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id88732.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Use Identical Lengths and Positions"></a><a class="link" href="xid1406331.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Make Sure That 3D Model and 2D Model Look the Same"></a></span></div>
+   </body>
+</html>

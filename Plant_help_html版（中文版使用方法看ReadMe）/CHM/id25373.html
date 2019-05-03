@@ -1,0 +1,142 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>CycleTime</title>
+      
+      <meta name="MS-HKWD" content="CycleTime">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">CycleTime</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id37245.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attributes for Setting Times of the Material Flow Objects"></a><a class="link" href="id96819.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ProcTime"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id37245.html">Attributes for Setting Times of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">CycleTime</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4879"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.CycleTime</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The attribute <em>CycleTime </em> sets the <a class="links" href="id76222.html">Cycle time</a>, i.e., the times at which <em>MUs</em> may enter the object designated by Path. The value <code>34</code>, for example, means that <em>MUs</em> can enter at the simulation times 0, 34, 68, 102, &hellip;
+         </p>
+         <p class="para_topic"> The <b class="uiTerm">cycle time</b> is the time during which the second gate at the entrance of a material flow object opens and closes cyclically, regardless of <em>MUs</em> entering the object. The cycle time is useful to model chain conveyors with a fixed chain interval that only transport materials when a free hook is available. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When you select a distributed time, then <em>Plant Simulation</em> computes the value for the cycle time interval only once to arrive at equidistant intervals.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> The value 0 allows <em>MUs</em> to move onto the object at any time.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>time</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.CycleTime := 120 -- 2 minutes</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id64129.html">Times and Distributions</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id37245.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attributes for Setting Times of the Material Flow Objects"></a><a class="link" href="id96819.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ProcTime"></a></span></div>
+   </body>
+</html>

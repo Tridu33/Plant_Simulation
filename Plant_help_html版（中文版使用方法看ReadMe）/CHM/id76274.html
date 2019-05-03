@@ -1,0 +1,207 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Make Calculations with a Formula</title>
+      
+      <meta name="MS-HKWD" content="Make Calculations with a Formula">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Make Calculations with a Formula</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id99364.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Sort CardFile, TableFile and TimeSequence"></a><a class="link" href="id63017.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Import or Export the Contents of a List"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id46379.html">Working with Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc">Make Calculations with a Formula</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1726"></span><p class="para_topic">A <a class="links" href="id67698.html">Formula</a> is any expression, which accesses and links other cells within the list or which access any of the attributes of the objects. With these values, the formula then performs the calculations you defined. 
+         </p>
+         <p class="para_topic">For linking the operands within a formula, you can use the same arithmetic operators and mathematical functions as you use in <em>methods</em>, compare <a class="links" href="id67662.html">Operators and Expressions</a>.
+         </p>
+         <ol type="1" start="1">
+            <li>
+               
+               <p class="para_item">To activate <em>Formula</em> mode, click <b class="uiTerm">Formula</b> on the <b class="uiTerm">List</b> ribbon tab so that it is selected <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/formulaActL.gif" border="0">.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/formul1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To enter a formula into a cell, click in it and type the expression in. Instead, you can also type it into the text box above the list. In our example we add the value of cell 2 in column 1 to the value of cell 3 in column 2. To do so, we entered <code>[1,2]+[2,3]</code>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/formul21.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To show the result of the calculation of the formula, i.e., its value, in the cell, press <b class="uiTerm">Enter</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/formul3.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To show the formula itself in the text box, double-click in the cell that contains the formula. Then, you can change the formula. You can also access the values in a column via the column index.</p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/formul21.gif"></p>
+               
+            </li>
+         </ol>
+         <p class="para_topic">The list shows cells containing a formula in color. Turquoise designates a formula with a correct syntax, red a formula with syntax errors. </p>
+         <p class="para_topic">Within a formula you can access the value of another cell of the same list with the anonymous identifier @:</p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"><b class="uiTerm">Formula</b></p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"><b class="uiTerm">Executes</b></p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>@[1,1]+@[1,2]</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">adds the contents of the cell [1,1] to the contents of the cell [1,2].</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>@[1,1]*track.length</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">multiplies the contents of cell [1,1] with the length of the object track.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>@[1,@.ydim]+5</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">adds 5 to the value of the last cell in the first column.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>@[xSelf+1,ySelf]-7</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">subtracts 7 from the value of the neighboring cell to the right</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>@.sum({3,*})</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">computes the sum of the third column.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code>@.min({1,2}..{1,*})</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">determines the smallest value of the first column, starting from cell 2.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The data type of the result of a formula has to have the same data type as the cell or the column in which the cell containing the formula is located. </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">In sub-lists, you can access the list, into which you inserted the sub-list, with the anonymous identifier ?. Note that for user-defined attributes of lists, the anonymous identifier ? accesses the object for which you defined the user-defined attribute. </p>
+         <p class="para_topic"><code>xSelf</code> and <code>ySelf</code> contain the number of the column or the number of the row respectively, which contains the formula. This way you can easily access neighboring cells.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id46379.html">Working with Lists and Tables</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id99364.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Sort CardFile, TableFile and TimeSequence"></a><a class="link" href="id63017.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Import or Export the Contents of a List"></a></span></div>
+   </body>
+</html>

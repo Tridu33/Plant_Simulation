@@ -1,0 +1,145 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Methods of All Objects</title>
+      
+      <meta name="MS-HKWD" content="Methods of All Objects">
+      <meta name="MS-HKWD" content="Method">
+      <meta name="MS-HKWD" content="Method,general description">
+      <meta name="MS-HKWD" content="Methods">
+      <meta name="MS-HKWD" content="Methods,general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Methods of All Objects</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id24781.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setTypeAndAttr"></a><a class="link" href="id16850.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:General Methods of All Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18479.html">Methods of All Objects</a></span> &gt; <span class="simpleHTMLminitoc">Methods of All Objects</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4126"></span><span id="ndxgenid_PlantSimulationENU_4127"></span><span id="ndxgenid_PlantSimulationENU_4128"></span><p class="para_topic">All objects share the <em>methods</em> described below. The sub-chapters about the objects list additional <em>methods</em> that apply to these objects. 
+         </p>
+         <p class="para_topic">A <b class="uiTerm">method</b> queries information from an object and returns a value. It computes a value and starts one or several actions that control the behavior of the object. We grouped the <em>methods</em> according to their functions. 
+         </p>
+         <p class="para_topic">An example of the <b class="uiTerm">Syntax</b> line of the individual methods might look like this:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.derive([Destination:object, Name:string]) &rarr; object</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <ul>
+            <li>
+               
+               <p class="para_item">The expression <em>Path</em> designates the path of the object to which the <em> method</em> applies. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The signature of the method, consisting of the identifier and the data type of the parameter, is listed in parentheses. The expression <em>(Parameter:string)</em>, for example, designates a parameter of data type <em>string</em>. The expression <em> (byRef X:integer)</em>, for example, designates a variable of data type <em>integer</em>.
+               </p>
+               
+               <p class="para_item">Instead of a constant value, you can also use a variable of the required type or a <em>method</em> that returns the required data type. 
+               </p>
+               
+               <p class="para_item">Optional parameters are listed within square brackets. The expression <em>[,Parameter:boolean]</em>, for example, means that you can, but do not have to enter the <em>boolean</em> parameter. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Make sure to enter the parentheses for expressions within parentheses (&hellip;). Not entering them may lead to unexpected results and open the <em>Debugger</em> .
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To view all of the <em>methods</em> and <em>attributes</em> of the material flow object, open the window <a class="links" href="id14400.html">Show Attributes and Methods</a>. The figure below illustrates the information using the example of the object <em>Source</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/showAttrMeth2.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Show Attributes and Methods</b> on the context menu of the <b class="uiTerm">Class Library</b> to show the <em>attributes</em> and <em>methods</em> of the selected <a class="links" href="id23901.html#id75750">Class</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Press the <b class="uiTerm">F8</b> key or click <b class="uiTerm">Show Attributes and Methods</b> on the <b class="uiTerm">Home</b> ribbon tab of the <em>Frame</em> into which you inserted an instance to show the <em>attributes</em> and <em>methods</em> of the selected Instance.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id16850.html">General Methods of All Objects</a></p>
+         <p class="para_topic"><a class="links" href="id50316.html">Methods for Animating All Objects</a></p>
+         <p class="para_topic"><a class="links" href="id55509.html">Methods of the Display Panel</a></p>
+         <p class="para_topic"><a class="links" href="id71830.html">Methods for the Location, Predecessor, and Successor of All Objects</a></p>
+         <p class="para_topic"><a class="links" href="id42424.html">Methods for Managing Inheritance Relations of All Objects</a></p>
+         <p class="para_topic"><a class="links" href="id95335.html">Methods for Managing Attributes of All Objects</a></p>
+         <p class="para_topic"><a class="links" href="id91599.html">Methods for Managing User-defined Attributes</a></p>
+         <p class="para_topic"><a class="links" href="id59260.html">Attributes and Methods of User-defined Attributes</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id24781.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setTypeAndAttr"></a><a class="link" href="id16850.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:General Methods of All Objects"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Sequence</title>
+      
+      <meta name="MS-HKWD" content="Sequence">
+      <meta name="MS-HKWD" content="Sequence,AssemblyStation">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Sequence</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id63115.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Exiting MU"></a><a class="link" href="id93370.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Failures"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id95185.html">AssemblyStation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id13418.html">Dialog Window of the AssemblyStation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id77954.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc">Sequence</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5235"></span><p class="para_topic">Select the sequence in which the <em>AssemblyStation</em> requests parts and/or services: 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/assemblySequen.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">MUs then services</b>: It requests the <em>MUs</em> before it requests the required services. 
+               </p>
+               
+               <p class="para_item">Select this, when the services are not required until all mounting parts are available. The services are requested, when all attachment parts have been moved to the <em>AssemblyStation</em> or have been deleted, compare <a class="links" href="id43721.html">Assembly mode</a>. When all attachment parts are available, set-up and processing operations can start, when the <em>AssemblyStation</em> has received the associated services.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Services then MUs</b>: It requests the services before it requests the <em>MUs</em> required. 
+               </p>
+               
+               <p class="para_item">Select this, when services are already required for providing the attachment parts. The services are requested before the main part arrives, when the main part is ready to exit the preceding station. When the attachment parts arrive at the <em>AssemblyStation</em>, the <em>Exporters</em> are already positioned at the <em>AssemblyStation</em>. Set-up and processing procedures only begin, when all attachment parts are available.
+               </p>
+               
+               <p class="para_item">The attachment parts are moved to the main part or are deleted, before the processing time starts, compare <a class="links" href="id43721.html">Assembly mode</a>.
+               </p>
+               
+               <p class="para_item">If the services are not available for the <em>AssemblyStation</em>, the attachment parts will not be moved to the main part or will not be deleted. The <em>AssemblyStation</em> then records a special blocking time. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">MUs and Services</b>: It requests the <em>MUs</em> and the services at the same time. 
+               </p>
+               
+               <p class="para_item">Select this, when services are already required for providing the attachment parts, but not for the assembly proper. </p>
+               
+               <p class="para_item">For the setting <b class="uiTerm">Services then MUs</b> the services are requested before the main part arrives. When the <em>AssemblyStation</em> can receive the services immediately, it behaves identically for the settings <b class="uiTerm">Services then MUs</b> and <b class="uiTerm">MUs and Services</b>.
+               </p>
+               
+               <p class="para_item">When the <em>AssemblyStation</em> cannot receive the services, the attachment parts will be moved to the main part anyway and then be deleted. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <em>AssemblyStation</em> requests set-up services when the main <em>MU</em> enters or attempts to enter.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id64621.html">OrderSequence</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id63115.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Exiting MU"></a><a class="link" href="id93370.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Failures"></a></span></div>
+   </body>
+</html>

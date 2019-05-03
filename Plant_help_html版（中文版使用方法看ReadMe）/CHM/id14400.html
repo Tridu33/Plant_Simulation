@@ -1,0 +1,201 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Show Attributes and Methods</title>
+      
+      <meta name="MS-HKWD" content="Show Attributes and Methods">
+      <meta name="MS-HKWD" content="Show Attributes and Methods,described">
+      <meta name="MS-HKWD" content="F8">
+      <meta name="MS-HKWD" content="F8,Show Attributes and Methods">
+      <meta name="MS-HKWD" content="Return value of a method">
+      <meta name="MS-HKWD" content="&rarr; return value of a method">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Show Attributes and Methods</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id57443.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Edit User-defined Attributes"></a><a class="link" href="id63032.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Working with the Dialog Show Attributes and Methods"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70614.html">Ribbon Bar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id75300.html">Home Ribbon Tab</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14400.html">Show Attributes and Methods</a></span> &gt; <span class="simpleHTMLminitoc">Show Attributes and Methods</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_2770"></span><span id="ndxgenid_PlantSimulationENU_2771"></span><span id="ndxgenid_PlantSimulationENU_2772"></span><span id="ndxgenid_PlantSimulationENU_2773"></span><p class="para_topic">The context menu command <b class="uiTerm">Show Attributes and Methods</b> shows the <em>attributes</em> and <em>methods</em> of the selected object.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showAttrAndMethods.gif"></p>
+         <p class="para_topic"><a class="links" href="id63032.html">Working with the Dialog Show Attributes and Methods</a> shows how you can utilize the information to work even more efficiently.
+         </p>
+         <p class="para_topic">The window lists the <b class="uiTerm">Name</b>of the <em>attribute</em> or of the <em>method</em> in the leftmost column, its <b class="uiTerm">Signature</b>, i.e., the data type or data types of its parameters, its <b class="uiTerm">Value</b>, if the value is <b class="uiTerm">inherited</b> (<b class="uiTerm">i</b>) or <b class="uiTerm">not inherited</b> (<b class="uiTerm">ni</b>) or neither <b class="uiTerm">inherited</b> nor <b class="uiTerm">not inherited</b> (no entry), and if a <em>waituntil instruction</em> can <b class="uiTerm">observe</b> the <em>attribute</em> or the <em>method</em> (asterisk, *) or not (no asterisk). The rightmost column shows the <b class="uiTerm">Name</b> of the <em>attribute</em> or of the <em>method</em> in <b class="uiTerm">German</b>.
+         </p>
+         <p class="para_topic">Let us demonstrate how to interpret the information the dialog presents using data from the screenshot above:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Show Attributes</b></p>
+               
+               <p class="para_item">To only <b class="uiTerm">show the attributes</b> of the object, we click on <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/AttrShowAttr_dup4.gif" border="0"> on the toolbar of the dialog.
+               </p>
+               
+               <p class="para_item">In our example below the <b class="uiTerm">Name</b> of the <em>attribute</em> is <b class="uiTerm">CurrIcon</b>, it expects the value to be passed as a <b class="uiTerm">string</b>, its current value is <b class="uiTerm">operational</b>, this value is <b class="uiTerm">inherited</b> and a wait until instruction in <em>Plant Simulation</em> can observe it. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showAttrMeth1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">edit</b> the <b class="uiTerm">value</b>, double-click the name of the attribute. The title bar of the dialog that opens shows the entire path to the object. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showAttributeEdit.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">change</b> the <b class="uiTerm">value of a boolean attribute from true to false</b> and vice versa, double-click the row in the list. A <em>boolean</em> attribute shows <b class="uiTerm">i</b> or <b class="uiTerm">ni</b> in the column <b class="uiTerm">inherited/not inherited</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">change</b> the <b class="uiTerm">value of an attribute of data type string</b>, first sort the column <b class="uiTerm">Signature</b> according to the data type and scroll to the data type <b class="uiTerm">string</b>. Then, double-click the respective attribute and select another value in the drop-down list.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="33%">
+                     
+                     <col span="1" width="33%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/putValuesIntoTable4.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/putValuesIntoTable5.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+               <p class="para_item">Examples for such attributes are the values of the drop-down lists in the dialogs of the objects.</p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="33%">
+                     
+                     <col span="1" width="33%">
+                     
+                     <col span="1" width="33%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/putValuesIntoTable6.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/putValuesIntoTable7.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/putValuesIntoTable8.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Let&rsquo;s have a look at the <em>attribute</em>
+                  <b class="uiTerm">ConnectCtrl</b>. It expects to be passed the path to the <b class="uiTerm">method</b> to be executed; its current value is <b class="uiTerm">VOID</b>, its value is <b class="uiTerm">inherited</b> and a waituntil instruction in <em>Plant Simulation</em> cannot <b class="uiTerm">watch/observe</b> it. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showMethodMethod.gif"></p>
+               
+               <p class="para_item">The type <b class="uiTerm">method</b> in the <b class="uiTerm">Signature</b> usually is the path to a <em>Method</em>
+                  <b class="uiTerm">object</b>. In most cases it will be the same as the type object. In some cases you will have to type <a class="links" href="id64735.html">&amp; (SimTalk 2.0) ref (SimTalk 1.0)</a> in front of the name of the <em>Method</em> within <em>SimTalk</em> statements to prevent the <em>Method</em>from being executed.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Show Read-Only Attributes</b></p>
+               
+               <p class="para_item">To only <b class="uiTerm">show the read-only-attributes</b> of the object, we click on <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/AttrShowReadOnly_dup4.gif" border="0"> on the toolbar of the dialog.
+               </p>
+               
+               <p class="para_item">In our example the Name of the <em>Read-Only Attribute</em> is <b class="uiTerm">NumSucc</b>. It has the value <b class="uiTerm">1</b> at the point-in-time of our query. The return value has the data type <b class="uiTerm">integer</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showReadOnlyOnline.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Show Methods</b></p>
+               
+               <p class="para_item">To only <b class="uiTerm">show the methods</b> of the object, we click on <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/AttrShowMethods_dup4.gif" border="0"> on the toolbar of the dialog.
+               </p>
+               
+               <p class="para_item">Let&rsquo;s have a look at the <em>method</em>
+                  <b class="uiTerm">deleteAttr</b>. The cell <b class="uiTerm">Signature</b> shows the data type of the parameter you have to enter in parenthesis, <b class="uiTerm">string</b> in this case, and it shows the data type of the return value to the right of the keyword <b class="uiTerm">-&gt;</b>, <b class="uiTerm">boolean</b> in this case. If the <em>Method</em> has optional parameters, they are listed within square brackets.
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showAttrMeth2.gif"></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showMethod1Online.gif"></p>
+         <p class="para_topic">The <a class="links" href="id19142.html">Auto Complete</a> window in the <em>method editor</em> provides the same functions.
+         </p>
+         <p class="para_topic">Instead, you can also right-click the object in the <em>Frame</em> and select <a class="links" href="id43167.html">Show Attributes and Methods</a> on the context menu or press the <b class="uiTerm">F8</b> key.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id63032.html">Working with the Dialog Show Attributes and Methods</a></p>
+         <p class="para_topic"><a class="links" href="id60499.html">attributeWatchable</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id57443.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Edit User-defined Attributes"></a><a class="link" href="id63032.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Working with the Dialog Show Attributes and Methods"></a></span></div>
+   </body>
+</html>

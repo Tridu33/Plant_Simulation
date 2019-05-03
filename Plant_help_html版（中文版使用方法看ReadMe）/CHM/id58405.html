@@ -1,0 +1,140 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>origin</title>
+      
+      <meta name="MS-HKWD" content="origin">
+      <meta name="MS-HKWD" content="origin,general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">origin</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id95115.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Class"></a><a class="link" href="id84192.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:typeOf"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18479.html">Methods of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42424.html">Methods for Managing Inheritance Relations of All Objects</a></span> &gt; <span class="simpleHTMLminitoc">origin</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4276"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.origin &rarr; object</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>origin</em> accesses the object from which the object designated Path was derived most recently. 
+         </p>
+         <p class="para_topic">Compare this example: We copied the object <em>Frame</em> three times and named it <code>Frame1</code>, <code>Frame2</code>, and <code>Frame3</code>. Then, we insert <em>Frame1</em> into <em>Frame2</em>, and <em>Frame2</em> into <em>Frame3</em>. 
+         </p>
+         <p class="para_topic">When we call <code>.Frame3.Frame2.Frame1.origin</code> the result will be <code>.Frame2.Frame1</code>, as <em>.Frame2.Frame1</em> is the object from which <code>.Frame3.Frame2.Frame1</code> was derived most recently. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>object</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if local_change
+  current.openDialog
+else
+  current.origin.openDialog
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id77555.html">Show Origin</a> in the class library
+         </p>
+         <p class="para_topic"><a class="links" href="id12989.html">Open Origin</a> in the dialog of the objects
+         </p>
+         <p class="para_topic"><a class="links" href="id18026.html">Go to Origin</a> in the dialog of the objects
+         </p>
+         <p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/openOriginSm.gif" border="0"> on the <a class="links" href="id75300.html">Home Ribbon Tab</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id95115.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Class"></a><a class="link" href="id84192.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:typeOf"></a></span></div>
+   </body>
+</html>

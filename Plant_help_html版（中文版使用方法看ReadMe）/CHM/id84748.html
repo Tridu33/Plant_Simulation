@@ -1,0 +1,134 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Viewing and Visualizing Statistics</title>
+      
+      <meta name="MS-HKWD" content="Viewing and Visualizing Statistics">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Viewing and Visualizing Statistics</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id37951.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set and Link Animation Points and Animation Lines"></a><a class="link" href="id56050.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Viewing Statistics in the Dialogs of the Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42624.html">Animating the Simulation Model and Viewing the Results</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84748.html">Viewing and Visualizing Statistics</a></span> &gt; <span class="simpleHTMLminitoc">Viewing and Visualizing Statistics</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1418"></span><p class="para_topic">By default all material flow objects collect statistics values from the beginning to the end of the simulation runs. If you don&rsquo;t want them to do so, deactivate statistics collection by clearing the check box <b class="uiTerm">Resource statistics</b>
+            <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/resStatCheck.gif" border="0"> on the tab <b class="uiTerm">Statistics</b> or <b class="uiTerm">Product statistics</b>
+            <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/prodStatCheck.gif" border="0"> on the tab <b class="uiTerm">Product Statistics</b>.
+         </p>
+         <p class="para_topic">In addition the material flow objects provide <b class="uiTerm"> energy statistics</b> values.
+         </p>
+         <p class="para_topic">The <em>EventController</em> controls when statistics collection starts and when it will be reset, i.e., started anew.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click the tab <b class="uiTerm">Settings</b>. Click in the text box <b class="uiTerm">Statistics</b> and enter the time at which the <em>EventController</em> resets statistics and deletes all statistics values it collected up so that time, compare <a class="links" href="id45603.html">Statistics Collection Period</a>. <em>Plant Simulation</em> starts collecting statistical data for all material flow objects anew from this time on. This way you can discard data collected during warm-up phases, which might distort the validity of the simulation results. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/Eventcontroller2.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/resetStat.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you reset your simulation model, by clicking <b class="uiTerm">Reset Simulation</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/evReset.gif" border="0">, <em>Plant Simulation</em> deletes statistics data of all objects and resets the statistics values to 0. During a simulation run you can achieve the same effect using the method <em>initStat</em>. This way you can restart the collection of statistical information after a warm-up period of a machine, for example.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Covering <em>Plant Simulation</em> statistics in detail would go beyond the scope of the <em>Plant Simulation Step-by-Step Help</em>. It is described under the topic <a class="links" href="id23074.html">Statistics of the Material Flow Objects</a> in the <em>Plant Simulation Reference Help</em>. 
+         </p>
+         <p class="para_topic">You can view and visualize the statistics results of your simulation runs in a number of ways.</p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id56050.html">Viewing Statistics in the Dialogs of the Objects</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id25473.html">Viewing the Statistics Report</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id76178.html">Showing Statistics with Display Panels in the Model</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id78729.html">Showing Statistics in a Chart</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id93710.html">Showing Statistics and Other Values in a Report</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id21874.html">Showing Values During the Simulation Run with the Display</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id65110.html">Showing Statistics During the Simulation Run in Excel</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id80346.html">Accessing Statistics with Methods and Attributes</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="xid1493029.html">Showing Parts on Ressources in a GanttChart</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id23074.html">Statistics of the Material Flow Objects</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id16428.html">Statistics of the Mobile Objects</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id37951.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set and Link Animation Points and Animation Lines"></a><a class="link" href="id56050.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Viewing Statistics in the Dialogs of the Objects"></a></span></div>
+   </body>
+</html>

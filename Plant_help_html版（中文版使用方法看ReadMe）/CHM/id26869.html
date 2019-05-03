@@ -1,0 +1,135 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Program Actions for Interacting with the Dialog</title>
+      
+      <meta name="MS-HKWD" content="Program Actions for Interacting with the Dialog">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Program Actions for Interacting with the Dialog</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id62613.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Program Actions which the Dialog Items Execute"></a><a class="link" href="id21288.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Set Parameters with the AttributeExplorer"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18086.html">Setting Parameters in the Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47691.html">Set Parameters for Objects in Your Own Dialog</a></span> &gt; <span class="simpleHTMLminitoc">Program Actions for Interacting with the Dialog</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1777"></span><p class="para_topic">After you created your dialog, you will have to program what happens, when the user opens the dialog, when he applies settings, and when he closes it. Enter these actions as callback parameters into the <a class="links" href="id95707.html">Callback method</a>. 
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/cbmethPrint.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/simpleDialog2Online.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <ul>
+            <li>
+               
+               <p class="para_item">The <em>Dialog</em> executes the <b class="uiTerm">Open</b> section of the <em>callback</em>
+                  <em>method</em> then the user opens the dialog. It initializes the contents of the dialog window or sets the dialog items to values of your choice. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <em>Dialog</em> executes the <b class="uiTerm">Apply</b> section of the <em>callback</em>
+                  <em>method</em>, when the user clicks <b class="uiTerm">OK</b> or <b class="uiTerm">Apply</b> in the <em>Dialog</em>. The statements you enter may evaluate new or changed values.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When the user clicks <b class="uiTerm">OK</b>, the <em>Dialog</em> [executes the <em>callback</em>
+                              <em>method</em> twice. The first time it calls the <b class="uiTerm">Apply</b> section. The second time it calls the <b class="uiTerm">Close</b> section. When the user clicks <b class="uiTerm">Apply</b>, the <em>Dialog</em> only executes the <b class="uiTerm">Apply</b> section of the <em>callback</em>
+                              <em>method</em>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <em>Dialog</em> executes the <b class="uiTerm">Close</b> section of the <em>callback</em>
+                  <em>method</em>, when the user clicks <b class="uiTerm">Cancel</b> in the <em>Dialog</em> or when he closes it with <b class="uiTerm">Close</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/closeButton_dup.gif" border="0"> in the title bar. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">For our sample dialog we started defining the settings shown below. When the user opens the dialog, <em>Plant Simulation</em> sets the variant of the car to the number of the user-defined attribute <em>VariantNo</em>. It selects the check box for the sun roof and it prompts the user to enter vanity text he wants added to his paint job. Naturally, you can preallocate as many values as you want.
+         </p>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">param action: string
+switch action
+case &quot;Open&quot; 
+   @.setIndex(&quot;VariantType&quot;, @.VariantNo)
+   @.setCheckbox(&quot;SunRoof&quot;, true)
+   @.setValue(&quot;Vanity text&quot;, &quot;Enter your text&quot;)
+case &quot;Apply&quot; 
+   @.VariantNo := @.getIndex(&quot;VariantType&quot;)
+case &quot;Close&quot;
+-- no action is required
+
+case &quot;CallbackChart&quot; 
+   MyChart.active := true 
+case &quot;CallbackReport&quot; 
+   MyReport.show
+end </pre><p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id62613.html">Program Actions which the Dialog Items Execute</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id45562.html">Design a Simple Dialog</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id86289.html">Design a Tabbed Dialog</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id86289.html">Design a Tabbed Dialog</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare the</b>
+            <a class="links" href="id75964.html">Tab Method</a> of the Dialog
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id47691.html">Set Parameters for Objects in Your Own Dialog</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id62613.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Program Actions which the Dialog Items Execute"></a><a class="link" href="id21288.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Set Parameters with the AttributeExplorer"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Programming the Collision Control</title>
+      
+      <meta name="MS-HKWD" content="Programming the Collision Control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic8" id="xps10_pagetitle">Programming the Collision Control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id82510.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configuring the Source Object and Creating the Sequence Table"></a><a class="link" href="id75512.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model the Track System on which the Tugger Trains Move"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id93322.html">Model a Tugger Train</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id25024.html">Model the Source Creating the Tugger Trains</a></span> &gt; <span class="simpleHTMLminitoc">Programming the Collision Control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1076"></span><p class="para_topic">To program the <b class="uiTerm">collision control</b>
+            <em>hitchMethod</em>, which we inserted above, double-click the <em>Method</em> object. We want this control to hitch the colliding <em>Transporter</em> to the one in front of it. To do so, we have to establish the <em>Transporter</em> moving in front of the active <em>Transporter</em>. 
+         </p>
+         <p class="para_topic">Finally, we are going to hitch the rear <em>Transporter</em> to the one moving in front of it to create the <em>tugger train</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/tuggerTrainsDirection.gif"></p>
+         <p class="para_topic">These statements above translate into this source code in our <em>Method</em></p><pre class="indent">var Rear, Front: object, TractorSpeed: real
+Rear := @
+Front := @.frontMU
+if Front.IsTractor
+   TractorSpeed := Front.Speed
+   Rear.hitchFront(Front)
+else
+   Rear.hitchFront(Front)
+end </pre><p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id82510.html">Configuring the Source Object and Creating the Sequence Table</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id25024.html">Model the Source Creating the Tugger Trains</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id82510.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configuring the Source Object and Creating the Sequence Table"></a><a class="link" href="id75512.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model the Track System on which the Tugger Trains Move"></a></span></div>
+   </body>
+</html>

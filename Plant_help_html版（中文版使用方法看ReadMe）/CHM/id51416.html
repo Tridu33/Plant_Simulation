@@ -1,0 +1,147 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ReleaseCtrl</title>
+      
+      <meta name="MS-HKWD" content="ReleaseCtrl">
+      <meta name="MS-HKWD" content="ReleaseCtrl,Exporter">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">ReleaseCtrl</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id16741.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Priority"></a><a class="link" href="id30049.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:FootPath"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id93899.html">Exporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id41405.html">Attributes of the Exporter</a></span> &gt; <span class="simpleHTMLminitoc">ReleaseCtrl</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8486"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.ReleaseCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>ReleaseCtrl</em> designates a <em>Method</em> object, the <a class="links" href="id19243.html">Release control</a>, which the <em>Exporter</em> calls as soon as an <em>importer</em> releases it. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <p class="para_topic">The <em> Method</em> you enter here is defined by two parameters that characterize the <em>importer</em>: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Importer</em> of data type <em>object</em> designates the <em>importer</em> proper. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Type</em> of data type <em>integer</em> designates its <b class="uiTerm">type</b>: <code>0</code> designates the <em>failure/remove failure-importer</em>, <code>1</code> the <em>set-up-importer</em>, <code>2</code> the <em>processing-importer</em>, and <code>3</code> the <em>transport-importer</em>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The <em>Method</em> will be formatted automatically. When the control is called, the <em>Exporter</em> has already left its <em>importer</em>. If you entered a <em>Method</em>, you yourself have to take care that the <em>Exporter</em> is assigned new <em>importers</em>, for example with the method <a class="links" href="id42462.html">findNewImporter</a>. In this case the <em>Exporter</em> will not automatically register as being available with its <em>Broker</em>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Reformatting the Method:</b> When you manually enter an order control and click <b class="uiTerm">Apply</b> or <b class="uiTerm">OK</b>, <em>Plant Simulation</em> automatically checks if the <em>Method</em> expects the correct parameters. If this is not the case, <em> Plant Simulation</em> shows a message asking if the <em>Method</em> shall be reformatted or not. Empty <em>methods</em> are reformatted automatically. Note that you cannot suppress the checking of the format of the <em>Method</em>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>method</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyExporter.ReleaseCtrl := &amp;myReleaseCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id19243.html">Release control</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id16741.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Priority"></a><a class="link" href="id30049.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:FootPath"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ExitStrategy</title>
+      
+      <meta name="MS-HKWD" content="ExitStrategy">
+      <meta name="MS-HKWD" content="ExitStrategy,material flow objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">ExitStrategy</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id17478.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:DefaultSuccessor"></a><a class="link" href="id32325.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ExitStrategyBlocking"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id31164.html">Attributes for Setting the Exit Strategy of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">ExitStrategy</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5057"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.ExitStrategy</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The attribute <em>ExitStrategy</em> sets the transfer strategy for <em>MUs</em> which leave the material flow object designated by Path. You can enter <a class="links" href="id54133.html">Cyclic</a>, <a class="links" href="id52425.html">Start at successor 1</a>, <a class="links" href="id10260.html">Random</a>, <a class="links" href="id16474.html">Percentage</a>, <a class="links" href="id32522.html">Cyclic sequence</a>, <a class="links" href="id11576.html">Linear sequence</a>, <a class="links" href="id72356.html">Least recent demand</a>, <a class="links" href="xid1181673.html">Most recent demand</a>, <a class="links" href="xid1181687.html">Max. contents</a>, <a class="links" href="id22776.html">Min. contents</a>, <a class="links" href="xid1181685.html">Max. proc. time</a>, <a class="links" href="id92990.html">Min. proc. time</a>, <a class="links" href="id35049.html">Max. set-up time</a>, <a class="links" href="xid1181674.html">Min. set-up time</a>, <a class="links" href="xid1181686.html">Max. num. in</a>, <a class="links" href="id51680a.html#id51680">Min. num. in</a>, <a class="links" href="id38971.html">Max. rel. occu.</a>, <a class="links" href="id96868.html">Min. rel. occu.</a>, <a class="links" href="id73518.html">MU Attribute</a>, or <a class="links" href="id29219.html">Carry part away</a>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em> only takes the exit strategy for length-oriented objects into account, when the part moves in the forward direction.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/exitbehaviorE.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>string</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">ParallelStation.ExitStrategy := &quot;random&quot;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id17478.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:DefaultSuccessor"></a><a class="link" href="id32325.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ExitStrategyBlocking"></a></span></div>
+   </body>
+</html>

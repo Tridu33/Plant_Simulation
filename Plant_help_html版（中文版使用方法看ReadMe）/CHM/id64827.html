@@ -1,0 +1,86 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Track on Which the Transporters Drive</title>
+      
+      <meta name="MS-HKWD" content="Configure the Track on Which the Transporters Drive">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Configure the Track on Which the Transporters Drive</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id88499.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Source That Produces the Transporters"></a><a class="link" href="id28450.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Transporter That Drives on the Track"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id26257.html">Modeling the Flow of Materials, Advanced</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27440.html">Create and Work with a Distance Control</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Track on Which the Transporters Drive</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_700"></span><p class="para_topic">To make the first <em>Transporter</em> stop on the <em>Track</em> in which it drives, we added a <em>sensor</em> to the <em>Track</em> at 10 meters. 
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="33%">
+               
+               <col span="1" width="33%">
+               
+               <col span="1" width="33%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/distanceTrack.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/distanceTrackSensor.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/distancetrackall.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The source code which we entered into the control attached to the <em>sensor</em> stops the first <em>Transporter</em> and shows a message with the time at which it stopped in the <em>Console</em>.
+         </p>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">param sensorID: integer, Front: boolean
+if @.ID = 1 
+   @.Speed := 0
+   print EventController.simTime, &quot; The first Transporter stopped.&quot;
+end</pre><p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/distanceStoppedPlusConsole.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id88499.html">Configure the Source That Produces the Transporters</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id28450.html">Configure the Transporter That Drives on the Track</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id27440.html">Create and Work with a Distance Control</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id88499.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Source That Produces the Transporters"></a><a class="link" href="id28450.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Transporter That Drives on the Track"></a></span></div>
+   </body>
+</html>

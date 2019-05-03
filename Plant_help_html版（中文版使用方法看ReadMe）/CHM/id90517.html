@@ -1,0 +1,85 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Stop the Associated Stations When the Repair Service Arrives</title>
+      
+      <meta name="MS-HKWD" content="Stop the Associated Stations When the Repair Service Arrives">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Stop the Associated Stations When the Repair Service Arrives</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id56613.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stop the Associated Stations Immediately After a Failure"></a><a class="link" href="id10407.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Use a Stop Processing Control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id90688.html">Modeling a Lockout Zone</a></span> &gt; <span class="simpleHTMLminitoc">Stop the Associated Stations When the Repair Service Arrives</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_849"></span><p class="para_topic">To make the <em>LockoutZone</em> stop the processing operations of the stations it controls once the service technician, who repairs the failed stations, arrives, select the <b class="uiTerm">stop mode</b>
+      &gt; <b class="uiTerm">stop when service arrives</b>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/lockoutzoneServiceArrives.gif"></p>
+         <p class="para_topic">In our example the <em>LockoutZone</em> stops the processing operations of the assigned stations, namely <b class="uiTerm">Station2</b>, <b class="uiTerm">Station3</b>, and <b class="uiTerm">Station4</b>, when the repair service, which the failed <b class="uiTerm">Station3</b> requested, is assigned. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/lockoutzoneServicesModel_Names.gif"></p>
+         <p class="para_topic">Proceed as follows to create our simple sample model:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert the stations you want to simulate and drag these stations over the icon of the <em>LockoutZone</em> to assign them. In our case these are <b class="uiTerm">Station2</b>, <b class="uiTerm">Station3</b>, and <b class="uiTerm">Station4</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">As a service technician is to repair the failed machines, add a <em>Workplace</em> to them and connect the <em>Workplace</em> with the <em>workerpool</em> with a <em>footpath</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">As we want <b class="uiTerm">Station3</b> to fail, define a <em> failure profile</em> for it.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/lockoutzoneServicesFailure1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To make a service technician repair <b class="uiTerm">Station3</b> once it fails, insert a <em>Broker</em> into the model and assign it on the sub-tab <b class="uiTerm">Failure</b>. Then <b class="uiTerm">activate</b> the <em>failure importer</em>. There is no need to change any other settings. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/lockoutzoneFailureImporter.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Then, run the simulation by clicking <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/startSimulation3D.gif" border="0"> on the <b class="uiTerm">Home</b> ribbon tab. Once <b class="uiTerm">Station3</b> fails, the <em>Worker</em> walks from the <em>workerpool</em> to the failed station on the <em>footpath</em>. Once our <em>service technician</em> has reached the <em>Workplace</em> attached to the failed station <b class="uiTerm">Station2</b>, the <em>LockoutZone</em> stops the associated stations, namely <b class="uiTerm">Station2</b> and <b class="uiTerm">Station4</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/lockoutzoneServicesModel.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id90924.html">Enter the Stations Which the LockoutZone Stops</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to </b><a class="links" href="id91247.html">Create a Failure Profile for One of the Stations</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id56613.html">Stop the Associated Stations Immediately After a Failure</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id90688.html">Modeling a Lockout Zone</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id56613.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stop the Associated Stations Immediately After a Failure"></a><a class="link" href="id10407.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Use a Stop Processing Control"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Console</title>
+      
+      <meta name="MS-HKWD" content="Console">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">Console</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id19779.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setRequiredLicense"></a><a class="link" href="xid1170141.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Moving Docking Windows"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc">Console</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3119"></span><p class="para_topic">The <em>Console</em> shows information about actions, which <em>Plant Simulation</em> executes. You can select which information the <em>Console</em> window shows under <b class="uiTerm">File</b>
+  &gt; <b class="uiTerm">Preferences</b> &gt; <b class="uiTerm">User Interface</b> &gt; <a class="links" href="id21515.html">Console filter</a>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/consoleFilter.gif"></p>
+         <p class="para_topic">You can also select one or several of the filters for the current simulation model on the context menu of the <em>Console</em> window.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Print:</b>
+                  
+               </p>
+               
+               <p class="para_item">To show output from <a class="links" href="id87867.html">print</a> commands in <em>Methods</em>, select this command.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Info:</b>
+                  
+               </p>
+               
+               <p class="para_item">To show text, which is displayed in info boxes, such as those shown during the <b class="uiTerm">reset</b> and <b class="uiTerm">init</b> phases of the model, select this. In addition, it includes warnings, for example when you use a no-longer-supported attribute in a method. When you start the program with the command-line parameter <code>-NoWarning</code>, it does not write any of the above to the <em>Console</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Message</b>:
+               </p>
+               
+               <p class="para_item">To show miscellaneous messages, select this command.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Debug</b>: 
+               </p>
+               
+               <p class="para_item">To show additional information and internal program messages, such as potential problems, select this. When you start the program with the command-line parameter <code>-NoWarning</code>, it does not write any of the above to the <em>Console</em>. 
+               </p>
+               
+               <p class="para_item"><em>Plant Simulation</em> also counts all of the built-in objects, which are contained in the entire model, i.e., in the <em>Class Library</em> and in all <em>Frames</em>. It does not count these objects: <em>Lists</em> and <em>Tables</em>, <em>Methods</em>, <em>Variables</em>, <em>MUs</em>, and <em>Connectors</em>.
+               </p>
+               
+               <p class="para_item">You might want to know this number if you are working with a <em>Plant Simulation</em>
+                  <em>Standard License</em> which is limited to 4000 objects. <em>SimTalk</em>: <a class="links" href="id56714.html">numOfLimitedObjects</a></p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/consoleFilterN.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To record messages, display the <em>Console</em> by clicking <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SmallCon.gif" border="0"> on the <b class="uiTerm">Window</b> ribbon tab. To not record messages, hide it.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To copy the contents of the <em>Console</em> window, select the text it contains and then select <b class="uiTerm">Copy</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete the contents of the <em>Console</em> window, select <b class="uiTerm">Clear</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To select the entire text in the <em>Console</em> window, select <b class="uiTerm">Select All</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To close the <em>Console</em> window, select <b class="uiTerm">Hide</b>. To show it again, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SmallCon.gif" border="0"> on the <b class="uiTerm">Window</b> ribbon tab. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To auto hide the <em>Console</em>, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/autoHide_dup4.gif" border="0">. When you then click in another window, <em>Plant Simulation</em> hides the window until you move the mouse over the name of the window again. To deactivate auto hide, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/autoHideOn_dup4.gif" border="0">.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When the <em>Console</em> window shows a path to an object, you can open this object by double-clicking the respective line. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The open <em>Console</em> window may slow down your simulation model!
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1170141.html">Moving Docking Windows</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1188390.html">setConsoleFilter</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id62385.html">clearConsole</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id74918.html">Entering Start Options</a>, <code>-Logfile File</code></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id64059.html">closeConsole</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id74918.html">Entering Start Options</a>, <code>-NoWarning</code></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id63004.html">openConsole</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id19779.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setRequiredLicense"></a><a class="link" href="xid1170141.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Moving Docking Windows"></a></span></div>
+   </body>
+</html>

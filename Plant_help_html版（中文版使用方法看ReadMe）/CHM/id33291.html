@@ -1,0 +1,256 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Execute an Action by Clicking a Button</title>
+      
+      <meta name="MS-HKWD" content="Execute an Action by Clicking a Button">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Execute an Action by Clicking a Button</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id75886.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Switch Modes Using a Control"></a><a class="link" href="id46712.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Select One of Several Options from a Drop-down List"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42624.html">Animating the Simulation Model and Viewing the Results</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id68258.html">Toggling States and Executing</a></span> &gt; <span class="simpleHTMLminitoc">Execute an Action by Clicking a Button</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1532"></span><p class="para_topic">You can insert the <a class="links" href="id32483.html">Button</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/buttonIconSm_dup.gif" border="0"> into your simulation model from the folder <b class="uiTerm">UserInterface</b> in the <em>Class Library</em> or from the toolbar <b class="uiTerm">User Interface</b> in the <em>Toolbox</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/insButton.gif"></p>
+         <p class="para_topic">The button executes the action, which you programmed in the <b class="uiTerm">control</b>, when you click it. The button shows the <b class="uiTerm">label</b> you type in as text on the button in the <em>Frame</em>.
+         </p>
+         <p class="para_topic">By default <em>Plant Simulation</em> does not show a tooltip for the button in the <em>Frame</em> when you roll the mouse over it. To display a your own tooltip, create a user-defined attribute and name it <code>Tooltip</code>.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonTooltip1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonTooltip2.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><em>Plant Simulation</em> can show the button in the <em>Frame</em> in a number of ways:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">With the built-in icon and the <b class="uiTerm">label</b> you type in, for example <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonButton.gif" border="0">. You might have to adjust the <b class="uiTerm"> width</b> and the <b class="uiTerm"> height</b> so that the label fits the button without being cut off. You can do this by holding down <b class="uiTerm">Ctrl+Shift</b> and dragging a corner of the icon. Or you can enter exact values into the text boxes. Or you can combine both methods by first dragging to roughly resize the button and then by fine-tuning the values in the text boxes.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonControl2.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttondragtoResize.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">With a <b class="uiTerm">user-defined icon</b>
+                  <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonIconGreenNoText.gif" border="0">, which you draw in the icon editor.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/ButtonGreen.gif"></p>
+               
+               <p class="para_item">Then, you can show the text you enter as the <b class="uiTerm">label</b> in this user-defined icon of the button, <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/ButtonContinueButton.gif" border="0"> for example. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonContinue.gif"></p>
+               
+               <p class="para_item">To be able to tell that you clicked the button, we recommend to draw two pictures for the button, one for the unclicked state <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/ButtonContinueButton.gif" border="0">, and one for the clicked state <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonContinueClicked.gif" border="0">. In our example above the name of the unclicked icon is <b class="uiTerm">icon3</b>, the name of the clicked icon consequently has to be <b class="uiTerm">icon3_down</b>. Note that the button does not stay depressed, but returns to its unclicked, raised state when you release the mouse button.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">With a <b class="uiTerm">picture</b> you paste into a new icon in the <em>icon editor</em>, <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonPlayIcon.gif" border="0"> and <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonPauseIcon.gif" border="0"> for example.
+               </p>
+               
+               <p class="para_item">Then, program the action in the <b class="uiTerm">button control</b> that the button executes when it is clicked. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonContinue.gif"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonControl2.gif"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To execute this action, click the button in the <em>Frame</em>.
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Built-in Icon, Not Clicked</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Built-in Icon, Clicked</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">User-defined Icon, Not Clicked</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">User-defined Icon, Clicked</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"></p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonPress1.gif"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"></p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonpress2.gif"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"></p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/ButtonContinueButton.gif"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"></p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonContinueClickedMouse.gif"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">To open the dialog of the button, click it with the right mouse button and select <b class="uiTerm">Open</b> on the context menu. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/buttonOpen.gif"></p>
+         <p class="para_topic">You can also select the button by dragging a marquee around it.</p>
+         <p class="para_topic"><b class="uiTerm">See also</b>
+            <a class="links" href="id44662.html">Configure the Buttons to Open the Parts Table and the Callback Method</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id68258.html">Toggling States and Executing Actions</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id75886.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Switch Modes Using a Control"></a><a class="link" href="id46712.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Select One of Several Options from a Drop-down List"></a></span></div>
+   </body>
+</html>

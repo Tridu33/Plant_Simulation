@@ -1,0 +1,215 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>RotateMovables</title>
+      
+      <meta name="MS-HKWD" content="RotateMovables">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">RotateMovables</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id16235.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:PenWidth"></a><a class="link" href="id78937.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:TransferLengthToObject"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29475.html">Attributes of the Curved Objects</a></span> &gt; <span class="simpleHTMLminitoc">RotateMovables</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5136"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.RotateMovables</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The attribute <em>RotateMovables</em> sets if the <em>MU</em> turns in the direction of motion when it turns in a curve (<code>true</code>) on the curved object designated by Path. When you type in <code>false</code>, the parts keep their previous direction/rotation.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> We advise to not deactivate <b class="uiTerm">Rotate movables</b> as this setting does not affect the behavior in <em>3D</em>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table border="1" cellpadding="1" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Rotate MUs active/true</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Rotate MUs not active/false</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/rotMUs.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/rotMusNo.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> A rotation triggered by the setting <a class="links" href="id55793.html">Rotate movables</a> (<em>RotateMovables</em>) on a length-oriented object only has an effect as long as the part is located on this object. When leaving the object the part again assumes the rotation it had before. When entering a new object, the part considers the rotation of this new object when <b class="uiTerm">Rotate MUs</b> is active.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When <em>Plant Simulation</em> shows the length-oriented object in <b class="uiTerm">curve</b> mode, <em>Plant Simulation</em> evaluates the setting <b class="uiTerm">Rotate MUs</b> (<em>RotateMovables</em>). 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/curveCurve.gif"></p>
+         <p class="para_topic">When <em>Plant Simulation</em> shows the object as an icon <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/03LineIcon.gif" border="0">, <em>Plant Simulation</em> evaluates the setting <a class="links" href="id24322.html">Same as the Object</a> (<a class="links" href="id89053.html">RotateMUs</a>). 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>boolean</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if MyConveyor.CurveActive 
+   MyConveyor.RotateMovables := true
+else
+   MyConveyor.RotateMUs := true
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id55793.html">Rotate movables</a></p>
+         <p class="para_topic"><a class="links" href="id89053.html">RotateMUs</a> for point-oriented object
+         </p>
+         <p class="para_topic"><a class="links" href="id76835.html">RotateMUs</a> in the Frame
+         </p>
+         <p class="para_topic"><a class="links" href="id93381.html">Tab Curve</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id16235.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:PenWidth"></a><a class="link" href="id78937.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:TransferLengthToObject"></a></span></div>
+   </body>
+</html>

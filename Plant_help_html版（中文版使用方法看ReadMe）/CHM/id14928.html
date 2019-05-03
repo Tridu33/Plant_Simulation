@@ -1,0 +1,149 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Shared Properties of Lists and Tables</title>
+      
+      <meta name="MS-HKWD" content="Shared Properties of Lists and Tables">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Shared Properties of Lists and Tables</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id84553.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Information Flow Objects"></a><a class="link" href="id36465.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Window of Lists and Tables"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc">Shared Properties of Lists and Tables</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9964"></span><p class="para_topic">The <a class="links" href="id42286.html">Material Flow Objects</a>, which <em>Plant Simulation</em> provides, usually suffice for quickly creating simple simulation models. For more complex models you will employ lists and tables in addition. Lists manage and administer information and data. The <em>Class Library</em> provides these lists and tables: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id52910.html">CardFile</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/cardSm.gif" border="0"> accesses all cells randomly by their position. You can add new cells at any location. When you remove a cell, all cells with a higher number move up one position. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The<em>StackFile</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/stackSm.gif" border="0">, compare <a class="links" href="id59602.html">QueueFile and StackFile</a>, only accesses the cell you added last. When you add a cell all existing cells move one position down. When you remove a cell, the remaining cells each move up one cell. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The<em>QueueFile</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/queueSm.gif" border="0">, compare <a class="links" href="id59602.html">QueueFile and StackFile</a>, only accesses the cell you added first. It adds new cells after the last existing cell. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id21891.html">TableFile</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/tableSm.gif" border="0"> accesses all cells randomly by their column and row number. Note that a new contents will overwrite and replace any existing contents of the cell. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id25631.html">TimeSequence</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/timesequSm.gif" border="0"> accesses all cells randomly by their column and row number. It adds new entries in ascending order according to the time. Entries with a higher position move up by one position when you remove a previous entry. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can access the functions of the <em>list objects</em> on the <a class="links" href="id45928.html">List Ribbon Tab</a>.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id36465.html">Window of Lists and Tables</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id42077.html">Methods of Lists and Tables</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id36959.html">Accessing Data in Lists</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1388993.html">Read-Only Attributes of Lists and Tables</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id49511.html">Accessing a Range of Cells with a Method</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id18910.html">Attributes of Lists and Tables</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id29956.html">Creating Lists within Lists and Tables</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id46379.html">Working with Lists and Tables</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id84553.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Information Flow Objects"></a><a class="link" href="id36465.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Window of Lists and Tables"></a></span></div>
+   </body>
+</html>

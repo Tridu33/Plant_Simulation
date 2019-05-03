@@ -1,0 +1,85 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Designating the Tractor</title>
+      
+      <meta name="MS-HKWD" content="Designating the Tractor">
+      <meta name="MS-HKWD" content="Tractor of tugger train">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Designating the Tractor</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Hitching_and_Unhitching_Transporters.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Hitching and Unhitching Transporters"></a><a class="link" href="Failures_and_Pauses.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Failures and Pauses"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id10304.html">Tugger Trains</a></span> &gt; <span class="simpleHTMLminitoc">Designating the Tractor</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9553"></span><span id="ndxgenid_PlantSimulationENU_9554"></span><p class="para_topic">You can designate the tractor of the <em>tugger train</em>, which pulls or pushes the <em>trailers</em>, with the check box <a class="links" href="id90422.html">Is Tractor</a><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/istracctorcheckb.gif" border="0"> or with the attribute <a class="links" href="id15148.html">IsTractor</a>. The attribute only applies to a <em>Transporter</em>, which is part of a <em>tugger train</em>. Each train has a single <em>tractor</em> for which the attributes relating to the battery and the driving behavior apply. The <em>Transporter</em> then shows the icon <b class="uiTerm">tractor</b>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/transporterTractor.gif" border="0"> instead of the icon <b class="uiTerm">Operational</b>. As a vector graphic the icon of the <b class="uiTerm">tractor</b> looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/transporterTractorVector.gif" border="0">. To find out which <em>Transporter</em> is the <em>tractor</em> of a train, you can use the method <a class="links" href="id11891.html">GetTractor</a>. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">To prevent the <em>tractor</em> from loading parts, enter <code>0</code> as the <a class="links" href="id66667.html">X-dimension</a> and the <a class="links" href="id23467.html">Y-dimension</a> for the loading space of <b class="uiTerm">type</b> &gt;
+    <b class="uiTerm">Store</b>. For the loading space types <b class="uiTerm">Track</b> and <b class="uiTerm">Line</b>, enter <code>0</code> as the <a class="links" href="id89788.html">Capacity</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/tractorNoLoad.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/tractorNoLoad1.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">When a <em>tugger train</em>h as several <em>Transporters</em>, automatic routing evaluates the <b class="uiTerm">Destination</b> of the <em>tractor</em>. When the frontmost <em>Transporter</em> in the direction of motion is transferred, the <em>tugger train</em> uses the <b class="uiTerm">Destination</b> of the <em>tractor</em> when determining the successor with destination lists. When the foremost <em>Transporter</em> of a <em>tugger train</em> in the direction of motion exits the <b class="uiTerm">destination</b> object, the <b class="uiTerm">destination control</b> of the <em>tractor</em> will be executed. Sensors which only trigger actions, when the <em>Transporter</em> has the same <em>destination</em> as the <em>sensor</em>, evaluates the <b class="uiTerm">Destination</b> of the <em>tractor</em> for all <em>Transporters</em> of a <em>tugger train</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id46540.html">Define the Tractor of the Tugger Train</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Hitching_and_Unhitching_Transporters.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Hitching and Unhitching Transporters"></a><a class="link" href="Failures_and_Pauses.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Failures and Pauses"></a></span></div>
+   </body>
+</html>

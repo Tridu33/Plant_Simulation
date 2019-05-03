@@ -1,0 +1,360 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Tab Failures</title>
+      
+      <meta name="MS-HKWD" content="Tab Failures">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Tab Failures</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id54627.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set-up depends on"></a><a class="link" href="id48047.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Active"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14973.html">Tab Failures</a></span> &gt; <span class="simpleHTMLminitoc">Tab Failures</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3435"></span><p class="para_topic">On the tab <b class="uiTerm">Failures</b> you can enter the settings for failures. In a real-world plant machines do fail for unforeseeable reasons. Any current processing operations on the machines are interrupted for the duration of the failure. Any upcoming production order can only be processed after the failure is removed, i.e., the machine is repaired. 
+         </p>
+         <p class="para_topic">For planning production processes the description of the availability of machines or common production resources, such as <em>Station</em>, <em>ParallelStation</em>, <em>Transporter</em>, and <em>Worker</em>, is critical. The on-schedule completion of customer orders does, for example, strongly depend on unexpected interruptions of the manufacturing process by failures of machines and by unavailable personnel. 
+         </p>
+         <p class="para_topic">The time interval between the end of the last failure and the beginning of the next failure is called the <b class="uiTerm">MTBF</b> (<b class="uiTerm">M</b>ean <b class="uiTerm">T</b>ime <b class="uiTerm">B</b>etween <b class="uiTerm">F</b>ailures). The duration of a failure is called the MTTR (<b class="uiTerm">M</b>ean <b class="uiTerm">T</b>ime <b class="uiTerm">T</b>o <b class="uiTerm">R</b>epair) although the duration of a failure does, generally speaking, not only contain the repair time. In practice both times, <b class="uiTerm">MTBF</b> and <b class="uiTerm">MTBF</b>, are random numbers.
+         </p>
+         <p class="para_topic">In a real-world plant production resources may fail for a number of reasons, which differ in their frequency and in the required repair time. Failures might be</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">the breakage of a tool </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">the loss of a part of a machine through corrosion</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">a power outage of the entire factory</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">structural damages to the buildings caused by a thunderstorm.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The different failure reasons lead to different time intervals between failures (<b class="uiTerm">MTBF</b>), while the duration of the failure naturally depends on its cause.
+         </p>
+         <p class="para_topic">For simulating different failure causes you can define several <b class="uiTerm">failure profiles</b> for a production resource. For some failure reasons the <b class="uiTerm">MTBF</b> is extended because the machine is not used during pauses or during repair times. A tool does not wear out for example, when the machine is not <a class="links" href="id47522.html">Working</a>. The machine still corrodes though, even if it is not working. 
+         </p>
+         <p class="para_topic">Failures caused by power outages or by thunderstorms naturally relate to the simulation time. These failures also occur, when the machine is not working, they take place <b class="uiTerm">independent</b> of each other. A failure reason based on the simulation time do not allow us to draw a conclusion about the occurrence of additional failure reasons based on the simulation time. 
+         </p>
+         <p class="para_topic">When a machine has two failure reasons based on the operating time or the processing time, the time between two failures of the first reason is extended by the repair time for a failure of the second reason. Beginning and end of the failures caused by different reasons are no longer independent of each other. Thus the repair times of failure reasons based on the operating time or the processing time can not overlap.</p>
+         <p class="para_topic">When we compare a machine with two simulation-time or the operating-time-based failure reasons, which will not be paused, we&rsquo;ll detect that each failure reason has an availability of 50 percent. </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">In the first case the resulting availability is 25 percent as both failure reasons occur independent of each other.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">In the second case the resulting availability is 33.3 percent:</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The mean times to repair (<b class="uiTerm">MTTR</b>) and failure intervals (<b class="uiTerm">MTBF</b>) of both failure reasons are four identical time values. While the times of the failure durations never can overlap, the time of the failure intervals, namely of the <b class="uiTerm">operating time</b>, of both <em>failure profiles</em> passes simultaneously. For this reason the resource is ready for use during a third of the time.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you change failure settings, we recommend to first clear the check box <b class="uiTerm">Active</b> and to then click <b class="uiTerm">Apply</b>. Then, change your settings, apply them, and select the check box <b class="uiTerm">Active</b> again. This ensures that the next <b class="uiTerm">failure event</b> (<a class="links" href="id60343.html#id80865">DisruptionBegin</a>/<a class="links" href="id60343.html#id65221">DisruptionEnd</a>) will be calculated with a complete valid set of parameters.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/tabFailures.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/tabFailuresInheritanceOff.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/tabFailures1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/tabFailures2.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">To define a new <em>failure profile</em>, click <a class="links" href="id80954.html">New</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/newButtonPlusPicture.gif" border="0">. 
+         </p>
+         <p class="para_topic">To edit the <em>failure profile</em>, which you selected in the <a class="links" href="id92694.html">List of Failure Profiles</a>, click <a class="links" href="id49537.html">Edit</a>. Instead, you can also double-click the name of the <em>failure profile</em> in the list.
+         </p>
+         <p class="para_topic">To delete the <em>failure profile</em>, which you selected in the list of failure profiles, click <a class="links" href="id78108.html">Delete</a>. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">You can fail a <em>failure profile</em> by assigning <code>true</code> to the attribute <a class="links" href="id34032.html">Failed</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The object is <b class="uiTerm">failed</b> when you activate one of its <em>failure profiles</em> or when you activate the check box <a class="links" href="id88096.html">Failed</a>.
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id89680.html">Methods for Defining Failures of the Material Flow Objects</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id65918.html">Modeling Failures</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id96953.html">Attributes for Defining Failures of the Material Flow Objects</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id48047.html">Active</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id67577.html">Attributes of the Failure Profiles</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id31886.html">Distribution Functions</a> in <em>SimTalk</em>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id82964.html">Attributes for Failures in the Simplified Notation</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">
+            <b class="uiTerm">Additional Methods Relating to Failures</b>
+            
+         </p>
+         <p class="para_topic">Some of the <a class="links" href="id10051.html">Methods for the State of the Material Flow Objects</a> also relate to failures:
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id65930.html">endFailure</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id22181.html">GetDisruptionEndTime</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id32518.html">endFailureIn</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id31285.html">startFailure</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id67094.html">eraseFailureEvents</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id67041.html">startFailureIn</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id39021.html">GetDisruptionBeginTime</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id54627.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set-up depends on"></a><a class="link" href="id48047.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Active"></a></span></div>
+   </body>
+</html>

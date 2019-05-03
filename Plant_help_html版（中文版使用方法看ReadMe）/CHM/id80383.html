@@ -1,0 +1,188 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>typeStatisticsCumulated</title>
+      
+      <meta name="MS-HKWD" content="typeStatisticsCumulated">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">typeStatisticsCumulated</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id66296.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:typeStatistics"></a><a class="link" href="xid1377425.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Read-Only Attributes of the Drain"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15363.html">Drain</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67037.html">Methods of the Drain</a></span> &gt; <span class="simpleHTMLminitoc">typeStatisticsCumulated</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5841"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.typeStatisticsCumulated[(CumulatedTypeStatisticsTable:table]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The method <em>typeStatisticsCumulated</em> returns the cumulated statistics table containing the MU types which the object designated by Path removed from the plant. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The optional parameter <em>CumulatedTypeStatisticsTable</em> of data type <em> table</em> designates the name of the table. The column <b class="uiTerm">Type</b> remains empty though. The columns are the same as those on the table which the method <a class="links" href="id66296.html">typeStatistics</a> fills.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The return value is true if statistics collection is activated. It is false if it is deactivated. Then the table remains unaltered.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If you do not enter the optional parameter, the return value is the table containing the statistics data if statistics collection is activated. The return value is void if statistics collection is deactivated.</p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyDrain.typeStatisticsCumulated(myCumulatedDrainStatistics) -- Writes the statistics values to the table named MyDrainStatisticsTable. 
+The return value is true if statistics collection is activated. 
+It is false if it is deactivated. Then the table remains unaltered.</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyDrain.typeStatisticsCumulated -- Writes the statistics values to a table. 
+The return value is the statistics table if statistics collection is activated. 
+It is void if statistics collection is deactivated.</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id66296.html">typeStatistics</a></p>
+         <p class="para_topic"><a class="links" href="id10410.html">TypeStatOn</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id66296.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:typeStatistics"></a><a class="link" href="xid1377425.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Read-Only Attributes of the Drain"></a></span></div>
+   </body>
+</html>

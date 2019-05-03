@@ -1,0 +1,87 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Use a Buffer between Processing Stations</title>
+      
+      <meta name="MS-HKWD" content="Use a Buffer between Processing Stations">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Use a Buffer between Processing Stations</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id94260.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Buffering Parts within the Production Line"></a><a class="link" href="id32251.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Check the Fill Level of the Buffers in the Plant"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id94260.html">Buffering Parts within the Production Line</a></span> &gt; <span class="simpleHTMLminitoc">Use a Buffer between Processing Stations</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_634"></span><p class="para_topic">In our sample model consisting of a simple production line with a <em>source</em>, a <em>processing station</em>, a <em>test station</em>, and a <em>drain</em>, the <em>processing station</em> is blocked now and then because the <em>test station</em> cannot test the parts fast enough. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferBlocked.gif"></p>
+         <p class="para_topic">To remedy the situation, we inserted a <a class="links" href="id47519.html">Buffer</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/BufferSm.gif" border="0"> between the <em>processing station</em> and the <em>test station</em>. The <em>Buffer</em> temporarily holds the parts before moving them on to the <em>test station</em>. 
+         </p>
+         <p class="para_topic">As compared to the default settings we changed the <b class="uiTerm">capacity</b> of the <em>Buffer</em> from <b class="uiTerm">4</b> to <code>200</code> and entered a processing time of <code>15</code> minutes. We left the remaining settings unchanged.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="33%">
+               
+               <col span="1" width="33%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferAttributes.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferTimes.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">When you now run the simulation, you will notice that the <em>processing station</em> will not be blocked because the <em>Buffer</em> temporarily holds a maximum of 200 parts for 15 minutes each before the <em>testing station</em> can test them.
+         </p>
+         <p class="para_topic">The tab <b class="uiTerm">Statistics</b> show the relative occupancy, the percentage of the time it was relatively empty or relatively full, maximum and minimum contents and the number of entries and exits.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferStatistics.gif"></p>
+         <p class="para_topic">You can also use a <em>Chart</em> to show how the number of parts in the <em>Buffer</em> develops over time.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferChart.gif"></p>
+         <p class="para_topic">To show more parts on the icon of the <em>Buffer</em> than it will normally show, you make the icon of the <em>Buffer</em> wider. To do so, hold down the <b class="uiTerm">Shift</b> and <b class="uiTerm">Ctrl</b> key, drag the mouse over the right border of the icon, and drag the mouse to the right. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferMakeIconWider1.gif"></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferMakeIconWider2.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id32251.html">Check the Fill Level of the Buffers in the Facility</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id94260.html">Buffering Parts within the Production Line</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id94260.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Buffering Parts within the Production Line"></a><a class="link" href="id32251.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Check the Fill Level of the Buffers in the Plant"></a></span></div>
+   </body>
+</html>

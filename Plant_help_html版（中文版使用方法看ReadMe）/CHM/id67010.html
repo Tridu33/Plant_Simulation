@@ -1,0 +1,136 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>predConnector</title>
+      
+      <meta name="MS-HKWD" content="predConnector">
+      <meta name="MS-HKWD" content="predConnector,general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">predConnector</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id90114.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:pred"></a><a class="link" href="id98252.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:succ"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18479.html">Methods of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id71830.html">Methods and Read-Only Attributes for the Location, Predecessor, and Successor of All Objects</a></span> &gt; <span class="simpleHTMLminitoc">predConnector</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4263"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.predConnector &rarr; object
+Path.predConnector([PredecessorNumber:integer]) &rarr; object</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>predConnector</em> returns incoming connections joined directly to the object designated by Path. Note that adding and deleting connections may change the index number of a connection. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The optional parameter <em>PredecessorNumber</em> of data type <em>integer</em> designates the number of the predecessor.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>object</em>.
+         </p>
+         <p class="para_topic">The <em>method</em> returns VOID if the connection does not exist.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">for i := MyTrack.NumPred downto 1   
+  -- deletes connections with predecessors
+  MyTrack.predConnector(i).deleteObject
+next</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id38033.html">Show Predecessors</a></p>
+         <p class="para_topic"><a class="links" href="id74015.html">predConnector</a> of the <em>TwoLaneTrack</em></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id90114.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:pred"></a><a class="link" href="id98252.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:succ"></a></span></div>
+   </body>
+</html>

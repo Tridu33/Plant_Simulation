@@ -1,0 +1,51 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Forecasting</title>
+      
+      <meta name="MS-HKWD" content="Forecasting">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Forecasting</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id63444.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Analyzing the Quality of the Neural Network"></a><a class="link" href="id29243.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configuring the Neural Network"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54344.html">Tools</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50388.html">Artificial Neural Network</a></span> &gt; <span class="simpleHTMLminitoc">Forecasting</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12758"></span><p class="para_topic"> When optimizing the model, you will often look for a combination of input values for which an output value is located as close as possible to a given value. You can select an output value under the group  Forecast on the tab  Forecast for which you want to compute a forecast. The object shows the observation interval of the training data after you selected the output value.</p>
+         <p class="para_topic"> Values located within this interval will produce realistic forecasts. Then, enter the desired output value.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/NNforecast.gif"></p>
+         <p class="para_topic" align="center"> Optimizing the input values for a desired output value</p>
+         <p class="para_topic"> For smaller simulation studies you can evaluate the complete table of all combinations of the input values. Within this table you can compare the simulation results and results of the neural network. The columns of the output values are marked with the suffixes &quot;_S&quot; (training data, which may be the results of a simulation) and &quot;_NN&quot; (for neural network). The columns of the den simulation results may contain empty cells, when you reduced the size of the input values in the dialog <b class="uiTerm"> Configuration</b> . The artificial neural network then computes approximate values for these empty cells.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/NNOUtnn1.gif"></p>
+         <p class="para_topic" align="center">Table containing all input and output values as well as the results of the neural network </p>
+         <p class="para_topic"> You can open this table and the corresponding visualization of the data under the group Comparison on the tab Forecast. The table is sorted according to the selected output value. The range around the desired output value, which you enter into the text box Range for cost minimization, is marked light green. The row with the most cost-efficient input values is marked dark green. </p>
+         <p class="para_topic"> In addition, all rows, in which the desired output value appears exactly as expected, are marked orange. If this value is not arrived at, the <em> NeuralNet</em> marks the row, which comes closest to the desired output value.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/NNOutputnn.gif"></p>
+         <p class="para_topic" align="center"> Optimization on the table of all combinations of the input values</p>
+         <p class="para_topic"> When a very large number of combinations of the input values exists, the program cannot create such a table in a short amount of time. In addition it is hard to manually evaluate very large tables. In these cases the most cost-efficient combinations of the input values are calculated by an optimization algorithm. To do so, click the button <b class="uiTerm">Start</b> under the group <b class="uiTerm">Forecast</b>. This opens the table with the input values, which approximate the desired output value as closely as possible and which cause the least amount of costs. Although the optimization algorithm does not search within a limited range, it can only detect a local minimum of the costs. To get various solutions for a certain problem, click <b class="uiTerm">Start</b> repeatedly.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/NNForecastCalc.gif"></p>
+         <p class="para_topic" align="center"> Forecast for an output value</p>
+         <p class="para_topic"> You can select to compute the costs with a table or with a <em>Method</em>, compare <b class="uiTerm">Configuration &gt; Settings &gt; Costs</b> of the input values.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id63444.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Analyzing the Quality of the Neural Network"></a><a class="link" href="id29243.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configuring the Neural Network"></a></span></div>
+   </body>
+</html>

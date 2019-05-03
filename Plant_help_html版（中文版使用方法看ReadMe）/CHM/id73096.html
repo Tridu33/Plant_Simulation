@@ -1,0 +1,137 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>getValue</title>
+      
+      <meta name="MS-HKWD" content="getValue">
+      <meta name="MS-HKWD" content="getValue,Dialog">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">getValue</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id46450.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getUserDialogXYWH"></a><a class="link" href="id90580.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:open"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59466.html">Display and User Interface Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87122.html">Dialog</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48922.html">Methods of the Dialog</a></span> &gt; <span class="simpleHTMLminitoc">getValue</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12333"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.getValue(DialogItem:string) &rarr; string</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>getValue</em> returns the changed value of the dialog item designated by the parameter of data type <em>string</em>.
+         </p>
+         <p class="para_topic">This method applies to the dialog items of type <a class="links" href="id81109.html">New Drop-Down List Box</a>, <a class="links" href="id17375.html">New Check Box</a>, <a class="links" href="id55280.html">New Radio Button</a>, <a class="links" href="id62827.html">New List Box</a>, <a class="links" href="id49132.html">New Edit Text Box</a>, and <a class="links" href="id71986.html">New Tab Control</a>. When you apply the method to the <b class="uiTerm">Tab Control</b>, <em>Plant Simulation</em> returns the name of the active tab. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>string</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var value: string
+var number : integer
+value := MyDialog.getValue(&quot;unit&quot;)
+number := str_to_num(value)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id21466.html">createCheckBox</a></p>
+         <p class="para_topic"><a class="links" href="id80647.html">createDropDownListBox</a></p>
+         <p class="para_topic"><a class="links" href="id69674.html">createEditTextBox</a></p>
+         <p class="para_topic"><a class="links" href="id81605.html">createListBox</a></p>
+         <p class="para_topic"><a class="links" href="id66122.html">createRadioButton</a></p>
+         <p class="para_topic"><a class="links" href="id21668.html">createTabControl</a></p>
+         <p class="para_topic"><a class="links" href="id30840.html">setCaption</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id46450.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getUserDialogXYWH"></a><a class="link" href="id90580.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:open"></a></span></div>
+   </body>
+</html>

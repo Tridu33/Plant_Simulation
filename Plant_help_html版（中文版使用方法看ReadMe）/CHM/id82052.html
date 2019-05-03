@@ -1,0 +1,61 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Program the Method that Places Parts into Stock</title>
+      
+      <meta name="MS-HKWD" content="Program the Method that Places Parts into Stock">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Program the Method that Places Parts into Stock</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id81832.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Stations"></a><a class="link" href="id99264.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Program the Method that Removes Parts from Stock"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id19450.html">Placing Parts into Stock and Removing Parts from It</a></span> &gt; <span class="simpleHTMLminitoc">Program the Method that Places Parts into Stock</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_650"></span><p class="para_topic">After configuring the material flow stations in our warehouse model, you have to program the method that places parts into stock of the <em>Store</em>. In our sample model we named this method <em>PlaceInStock</em>.
+         </p>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">-- entrance control of the object &rsquo;MyStore&rsquo;
+-- find free row in the &rsquo;InventoryTable&rsquo; of &rsquo;MyStore&rsquo;
+var NextRow := Inventory.ydim + 1
+
+-- enter the ID of the new part and the path
+-- to the part in the &rsquo;InventoryTable&rsquo;
+InventoryTable[0,NextRow] := @.id
+InventoryTable[1,NextRow] := @
+
+AttemptToRemoveNextPart -- name of our Method 
+
+-- increase the capacity of &rsquo;MyStore&rsquo; if needed
+if MyStore.full 
+   MyStore.xDim := MyStore.xDim + 4
+end</pre><p class="para_topic">The object <em>MyStore</em> uses this method as the entrance control.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/warehousestore21.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id81832.html">Configure the Stations</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id99264.html">Program the Method that Removes Parts from Stock</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id23189.html">Program the Method that Manages the Inventory Table</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id58669.html">Visualize the Occupancy of the Store Over Time</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id19450.html">Placing Parts into Stock and Removing Parts from It</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id81832.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Stations"></a><a class="link" href="id99264.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Program the Method that Removes Parts from Stock"></a></span></div>
+   </body>
+</html>

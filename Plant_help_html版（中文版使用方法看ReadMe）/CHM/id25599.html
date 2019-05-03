@@ -1,0 +1,92 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Model language</title>
+      
+      <meta name="MS-HKWD" content="Model language">
+      <meta name="MS-HKWD" content="Model language,model settings">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Model language</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id28208.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:General"></a><a class="link" href="id42984a.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Date and time format"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70614.html">Ribbon Bar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88930.html">File Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id52165.html">Model Settings</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id28208.html">General</a></span> &gt; <span class="simpleHTMLminitoc">Model language</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_1884"></span>
+         
+         <p class="para_topicComponent">Select the language of the <b class="uiTerm">currently open simulation model</b>. <em>Plant Simulation</em> saves this setting to the model file. 
+         </p>
+         
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/modellanguage.gif"></p>
+         
+         <p class="para_topicComponent">When you create a new simulation model, the <b class="uiTerm">model language</b> determines:
+         </p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">The names of folders and objects, such as <em>MaterialFlow</em> and <em>Station</em> for English or <em>Materialfluss</em> and <em>Einzelstation</em> for German.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The return value of the attributes that correspond to the entries of the drop-down lists, for example <code>Station.RecoveryTimeMode</code>. When you query such an attribute in <em>SimTalk</em>, <em>Plant Simulation</em> returns the value in <b class="uiTerm">English</b>, except when the model language is <b class="uiTerm">German</b>; in the latter case <em>Plant Simulation</em> returns the value in <b class="uiTerm">German</b>. For the example <code>Station.RecoveryTimeMode</code>
+                  <em>Plant Simulation</em> returns <code>&quot;Wenn Teil eintritt&quot;</code> when the model language is <b class="uiTerm">German</b>, <code>&quot;When part enters&quot;</code> for all other model languages. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The contents of the window <a class="links" href="id10360.html">Show Attributes and Methods</a>. When the model language is <b class="uiTerm">German</b>, the window lists the German names of the attributes and methods. For all <b class="uiTerm">other model languages</b> the window lists the names in English
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The names, which the feature <a class="links" href="id19142.html">Auto Complete</a> in the <em>method editor</em> suggests. When the model language is <b class="uiTerm">German</b>, the method editor suggests the German names of attributes and methods. For all other model languages it suggests the English names.
+               </p>
+               
+            </li>
+         </ul>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you change the <b class="uiTerm">model language</b>, the <b class="uiTerm">user interface language</b> of <em>Plant Simulation</em> will not be changed. The <b class="uiTerm">user interface language</b> of <em>Plant Simulation</em> is determined by the operating system of your computer. You can change the <b class="uiTerm">user interface language</b> of <em>Plant Simulation</em> with the command line argument <code>-UILanguage</code>, compare <a class="links" href="id74918.html">Entering Start Options</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id71193.html">language</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id68471.html">userInterfaceLanguage</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id28208.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:General"></a><a class="link" href="id42984a.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Date and time format"></a></span></div>
+   </body>
+</html>

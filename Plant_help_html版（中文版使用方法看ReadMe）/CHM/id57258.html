@@ -1,0 +1,305 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The Relative Path</title>
+      
+      <meta name="MS-HKWD" content="Relative Path">
+      <meta name="MS-HKWD" content="Paths">
+      <meta name="MS-HKWD" content="Paths,relative">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">The Relative Path</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id87760.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The Absolute Path"></a><a class="link" href="id64391.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Object Reference"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Names_1.html">Names</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Paths.html">Paths</a></span> &gt; <span class="simpleHTMLminitoc">The Relative Path</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13615"></span><span id="ndxgenid_PlantSimulationENU_13616"></span><p class="para_topic">The <em>relative path</em> starts in the current name space--formed by all objects located within one <em>Frame</em> --or the <em>Frame</em> in which the <em>Method</em> object is located. 
+         </p>
+         <p class="para_topic">The relative path starts with an anonymous identifier, a name in the current name space or a built-in method. Then a period follows and the name of a <em>Frame</em> or a period and a built-in method. The last entry is a period and the name of the object or a period and a built-in method or a period and an attribute. 
+         </p>
+         <p class="para_topic">This table lists, where the relative path starts for the different objects:</p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> --</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">User-defined attribute created for an MU</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">User-defined attribute created for an object</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">User-defined attribute created for a Frame</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Built-in objects</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> Object variable</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">In the <em>Frame</em> in which the material flow object, on which the <em>MU</em> stays, is located. 
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">In the <em>Frame</em> in which the material flow object is located. 
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Within that <em>Frame</em>. 
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">In the <em>Frame</em> in which the object is located.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> Method (current)</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">In the <em>Frame</em> in which the material flow object, on which the <em>MU</em> stays, is located. 
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">In the <em>Frame</em> in which the material flow object is located. 
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Within that <em>Frame</em>. 
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">In the <em>Frame</em> in which the object is located.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> Table with column of data type <em> object</em></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">The material flow object, on which the <em>MU</em> stays.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">In the <em>Frame</em> in which the material flow object is located. 
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">In the <em>Frame</em> into which you inserted that <em>Frame</em>.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">In the <em>Frame</em> in which the object is located.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For user-defined attributes of <b class="uiTerm">static objects</b>, the <em>Frame</em> in which the object is located is the starting point of the relative path. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">For user-defined attributes of the <em>MU</em> the static object on which the <em>MU</em> is located is the starting point of the relative path, independent of the fact that the location of the <em>MU</em> might be another <em> MU</em> . 
+         </p>
+         <p class="para_topic">Suppose that in the <em>Method</em> object <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/methodIconSm.gif" border="0">
+            <em>M</em>, which you inserted into a <em>Frame</em>, you would like to access the object named <em>MA</em> by employing a relative path. The <em> Method</em> object is located in <em>Frame</em><em> W</em>. The object <em>MA</em> is not located in the same name space as <em>M</em> and has to be identified by an additional path. The object <em>MA</em> is located in the <em>Frame</em> that also contains the method <em>M</em>. The relative path begins with the name of the <em>Frame</em> in which the object is located, followed by a period and the object name. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">variable := AP.MA</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">In our second example the <em>Method</em>
+            <em>M</em> is supposed to access the <em>Store</em> located in <em>Frame</em>
+            <em>L</em> and to query the number of <em>MUs</em>. The <em>Store </em> is not located in the same <em>Frame</em> as the <em>Method</em>. Therefore, we will use an anonymous identifier.
+         </p>
+         <p class="para_topic">The keyword <a class="links" href="id56981.html">current</a> returns the current <em>Frame</em>. The method <a class="links" href="id30211.html">location/ ~</a> returns the <em>Frame</em> located above in the hierarchy of objects. From now on you can access <em>L</em> and the <em>Store</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Var := current.location.L.store.NumMU
+Var := location.L.store.NumMU</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id87760.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The Absolute Path"></a><a class="link" href="id64391.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Object Reference"></a></span></div>
+   </body>
+</html>

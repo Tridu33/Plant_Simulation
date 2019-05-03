@@ -1,0 +1,120 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Enter Times During Which the Plant Works Part of the Time</title>
+      
+      <meta name="MS-HKWD" content="Enter Times During Which the Plant Works Part of the Time">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Enter Times During Which the Plant Works Part of the Time</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id96571.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Enter the Names of the Shifts, the Respective Times and Days"></a><a class="link" href="id62852.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Enter the Stations which the ShiftCalendar Controls"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id85153.html">Modeling a Shift System</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id65765.html">Defining Shifts with the ShiftCalendar</a></span> &gt; <span class="simpleHTMLminitoc">Enter Times During Which the Plant Works Part of the Time</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_827"></span><p class="para_topic">Before you can enter data pertaining to public holidays, retooling periods and times the plant only works part of the time, click the toggle button <b class="uiTerm">Inheritance</b>, so that it looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/toggleNotSelected_dup3.gif" border="0">.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/shiftCalCalendar.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To enter the date when your plant starts not working into the cells below <b class="uiTerm">Date From</b>: 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Double-click into the cell and click the down arrow <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/downArrow.gif" border="0">.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Select a date in the calendar. Click the right or left buttons to move to another month. </p>
+                     
+                     <p class="para_item">To designate an entire day as a day-off, only enter a start date and no end date ( <b class="uiTerm">Date To</b>), and no <b class="uiTerm">Reduce Time To</b>. 
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To enter the date when your plant stops not working into the cells below <b class="uiTerm">Date To</b>: 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Double-click into the cell and click the down arrow <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/downArrow.gif" border="0">.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Select a date in the calendar. Click the right or left buttons to move to another month. </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To designate a single day on which your plant only works part of the time, enter its date in the cell in the column <b class="uiTerm">Date From</b>. Enter the hour and the minute when the reduced working time starts, a hyphen and the hour and minute the reduced time ends in the cells below <b class="uiTerm">Reduce Time To</b>. 
+               </p>
+               
+               <p class="para_item">If your plant only works half a day on Christmas eve, for example the shifts from midnight to noon, you would enter <code>0:00 - 12:00</code> into the cell <b class="uiTerm">Reduce Time To</b>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <em>ShiftCalendar</em> combines the reduced time and the definition of the shifts for a day. If, for example, the start time of a day with a reduced working time falls on a break, then this work day starts with a break. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter why your plant does not work into the cells below <b class="uiTerm">Comment</b>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can also import a calender, which you saved as a tab-delimited text file or which you received from factory management. Enter data, so that it matches the screenshot below. Or you can export a calender you defined and then import it into another simulation model. To do so, right-click in the list field and select <b class="uiTerm">Export</b> or <b class="uiTerm">Import</b> on the context menu. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/importCalendar.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id96571.html">Enter the Names of the Shifts, the Corresponding Times and Days</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id62852.html">Enter the Stations which the ShiftCalendar Controls</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id37100.html">Schedule Date and Time to Start or to Finish the Production Process</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id65765.html">Defining Shifts with the ShiftCalendar</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id96571.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Enter the Names of the Shifts, the Respective Times and Days"></a><a class="link" href="id62852.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Enter the Stations which the ShiftCalendar Controls"></a></span></div>
+   </body>
+</html>

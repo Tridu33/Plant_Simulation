@@ -1,0 +1,106 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Close control</title>
+      
+      <meta name="MS-HKWD" content="Close control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Close control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id13190.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Change path control"></a><a class="link" href="id43362.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Connect control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id55025.html">Tools Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id31871.html">Edit Controls</a></span> &gt; <span class="simpleHTMLminitoc">Close control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3827"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/closeControl.gif" border="0"></p>
+         <p class="para_topic">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object. Enter the source code of the <b class="uiTerm">close control</b>. The program calls it, when you close the <em>object window</em>. 
+         </p>
+         <p class="para_topic">For list objects the program passes a parameter, of data type <em>boolean</em>, to the <em>Method</em> that is called. This parameter shows if the contents of the list window has changed or not. 
+         </p>
+         <p class="para_topic">Instead, you can also right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <b class="uiTerm">close control</b> does not react on closing a 3D window.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnClose</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <em>Plant Simulation</em> activates the <a class="links" href="id16869.html">Plausibility control</a> control for lists and tables only, when you close the list or table after making a <b class="uiTerm">change</b>. <em>Plant Simulation</em> also considers loading a file into a table as a change. This way <em>Plant Simulation</em> can check the entry and display an error message if the entry was wrong.
+         </p>
+         <p class="para_topic">When you enter a <b class="uiTerm">close control</b> and a <b class="uiTerm">plausibility control</b>, <em>Plant Simulation</em> always calls the plausibility control before it calls the <b class="uiTerm">close</b> control. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, click in the text box, and press the <b class="uiTerm">F2</b> key.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The <b class="uiTerm">standard close control</b> looks like this:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/closeControlTable.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b>
+            
+         </p>
+         <p class="para_topic">The parameter <em>Changed</em> of data type <em>boolean</em> shows if the contents of the list object has changed (true) or not (false). 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id30077.html">CloseCtrl</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id13190.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Change path control"></a><a class="link" href="id43362.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Connect control"></a></span></div>
+   </body>
+</html>

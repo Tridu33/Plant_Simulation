@@ -1,0 +1,48 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Maximum number of samples</title>
+      
+      <meta name="MS-HKWD" content="Maximum number of samples">
+      <meta name="MS-HKWD" content="Maximum number of samples,model settings">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Maximum number of samples</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id67617.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Maximum number of suspended methods"></a><a class="link" href="id47865.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tolerance for about equal (~=) comparison"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70614.html">Ribbon Bar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88930.html">File Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id52165.html">Model Settings</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id30602a.html">Simulation</a></span> &gt; <span class="simpleHTMLminitoc">Maximum number of samples</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_1936"></span>
+         
+         <p class="para_topicComponent">Enter the <b class="uiTerm">Maximum number of samples</b>, to prevent <em>Plant Simulation</em> from spending an excessive amount of time for die rolls, which are caused by an unfortunate selection of the interval bounds.
+         </p>
+         
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/simdistr.gif"></p>
+         
+         <p class="para_topicComponent">You can enter a number between <code>1</code> and <code>32000</code>. <em>Plant Simulation</em> ignores values outside of this range without issuing a warning message and keeps the previous value. The greater the value you enter, the later you recognize if the bounds are too close together. For a normal distribution it may, for instance, happen that <em>Plant Simulation</em> draws extremely large values. When the bounds are too close together, this may result almost exclusively in outliers. Then <em>Plant Simulation</em> has to create a large number of random numbers consecutively before a valid value is available. This can take up a lot of time. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">SimTalk</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id30958.html">setMaxNumberOfSamples</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id67617.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Maximum number of suspended methods"></a><a class="link" href="id47865.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tolerance for about equal (~=) comparison"></a></span></div>
+   </body>
+</html>

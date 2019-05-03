@@ -1,0 +1,324 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Methods of Lists and Tables</title>
+      
+      <meta name="MS-HKWD" content="Methods of Lists and Tables">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Methods of Lists and Tables</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id83130.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Accessing the Name of a Sub-List with a Method"></a><a class="link" href="id72048.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Accessing Lists and Tables"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42077.html">Methods of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc">Methods of Lists and Tables</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10184"></span><p class="para_topic">The lists and tables share a number of methods. Note that the different kinds--<em>StackFile</em>, <em>QueueFile</em>, <em>CardFile, TableFile</em>, and <em>TimeSequence</em> in addition provide object-specific methods. 
+         </p>
+         <p class="para_topic">An example of the <em>Syntax</em> line of the individual methods might look like this:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.readFile(FileName:string [,NoDebugger:boolean])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <ul>
+            <li>
+               
+               <p class="para_item">The expression <em>Path</em> designates the path of the object to which the <em>method</em> applies. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The signature of the method, consisting of the identifier and the data type of the parameter, is listed in parentheses. The expression <em>(Parameter:string)</em>, for example, designates a parameter of data type <em>string</em>. Instead of a constant value, you can also use a variable of the required type or a <em>method</em> that returns the required data type. We use these abbreviations:
+               </p>
+               
+            </li>
+         </ul>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Argument of data type</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Data type</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Range of values</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <em>integer</em>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">integer</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">integer greater than zero</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <em>any</em>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">all data types</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">depending on the data type</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <em>listrange</em>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">--</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">a range</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <em>direction</em>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">string</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">&quot;up&quot;, &quot;down&quot;, &quot; &quot;</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <em>attributes</em>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">string</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">name of an attribute</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Optional parameters are listed within square brackets. The expression <em>[,Parameter:boolean]</em>, for example, means that you can, but do not have to enter the <em>boolean</em> parameter. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Make sure to enter the parentheses for expressions within parentheses (&hellip;). Not entering them may lead to unexpected results and open the <em>Debugger</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">To view all of the <em>methods</em> and <em>attributes</em> of the list or table, open the window <a class="links" href="id14400.html">Show Attributes and Methods</a>. The figure below illustrates the information using the example of the object <em>Source</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showAttrMeth2.gif"></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/showMethod1Online.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Show Attributes and Methods</b> on the context menu of the <b class="uiTerm">Class Library</b> to show the <em>attributes</em> and <em>methods</em> of the selected <a class="links" href="id23901.html#id75750">Class</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Press the <b class="uiTerm">F8</b> key or click <b class="uiTerm">Show Attributes and Methods</b> on the <b class="uiTerm">Home</b> ribbon tab of the <em>Frame</em> into which you inserted an instance to show the <em>attributes</em> and <em>methods</em> of the selected Instance.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id72048.html">Methods for Accessing Lists and Tables</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id40007.html">Methods for the Order of Cells within Lists and Tables</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id72569.html">Methods for the Format of Lists and Tables</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id99621.html">Methods for Querying Statistics Values of List and Tables</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id52148.html">Methods for Importing and Exporting Data in Text Format</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id60172.html">Instantiating Local Lists and Tables</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id69974.html">Methods for Indirectly Accessing Lists and Tables</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id79670.html">Methods of the TableFile</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id12984.html">Methods of the CardFile</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id14881.html">Methods of the QueueFile and the StackFile</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id83130.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Accessing the Name of a Sub-List with a Method"></a><a class="link" href="id72048.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Accessing Lists and Tables"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Exchange the Default Graphic of the Worker With an Animated Worker</title>
+      
+      <meta name="MS-HKWD" content="Exchange the Default Graphic of the Worker With an Animated Worker">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Exchange the Default Graphic of the Worker With an Animated Worker</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id11672.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model a Worker Who Carries Parts between Workplaces in 3D"></a><a class="link" href="id75605.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Change the Size of the Part Which the Worker Carries"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18156.html">Modeling Workers and the Jobs They Do</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id46415.html">Model a Worker Who Carries Parts Between Workplaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id11672.html">Model a Worker Who Carries Parts between Workplaces in 3D</a></span> &gt; <span class="simpleHTMLminitoc">Exchange the Default Graphic of the Worker With an Animated Worker</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_796"></span><p class="para_topic">To model a <em>Worker</em> in 3D who carries parts between <em>Workplaces</em> we are going to create a new <em>Worker</em> class:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Duplicate</b> the class <em>Worker</em> in the folder <em>Resources</em> the <em>Class Library</em>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/duplicateWorker.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Rename the new class to <code>Jack</code>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Open</b> the folder <em>Resources</em> in the <em>Class Library</em>, which contains the object <em>Jack</em>, <b class="uiTerm"> in 3D</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click the object <em>Jack</em> with the right mouse button and select <b class="uiTerm">Exchange Graphics</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/exchangeGraphicsFolderOpen.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>3D</em> opens the dialog <b class="uiTerm">Exchange Graphics</b>. By default it opens the folder in which you installed <em>Plant Simulation</em>, namely <b class="uiTerm">C:\Program Files\Siemens\Tecnomatix Plant Simulation XX</b>. Change to the sub-folder <b class="uiTerm">3D</b>, select the folder and file as shown in the screenshot below, and click <b class="uiTerm">Open</b>.
+               </p>
+               
+               <p class="para_item">The files whose name contains <b class="uiTerm">Jack</b> are the male workers, the files whose name contains <b class="uiTerm">Jill</b> are the female workers. The suffix <b class="uiTerm">6</b> designates a <em>Worker</em> that is animated with 6 graphics per double-step. The suffix <b class="uiTerm">15</b> designates a <em>Worker</em> that is animated with 15 graphics per double-step. More graphics naturally lead to a greater file size and a smoother, more realistic animation.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/exchangeGraphicsJackJill.gif"></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To replace existing graphics of the built-in objects in a model, which you created in a previous version of the program, with the new graphics, select the respective graphic and select <a class="links" href="id81182.html">Exchange Graphics</a>. Navigate to the folder <b class="uiTerm">3D &gt; BasicObjects</b> and select the new graphic of the object.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Open</b> the <em>Frame</em> containing your simulation model in <b class="uiTerm">3D</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open the object <em>WorkerPool</em> and click <b class="uiTerm">Creation Table</b>. Drag our worker <em>Jack</em> from the folder <b class="uiTerm">Resources</b> in the <em>Class Library</em> to the first cell of the <b class="uiTerm">worker creation</b> table. Click <b class="uiTerm">OK</b>. The <em>WorkerPool</em> now assigns <em>Jack</em> to do the jobs in the factory.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workercreationTableJack.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">You can view <em>Jack&rsquo;s</em> predefined postures for walking and carrying motions on the <a class="links" href="id53241.html">Tab Graphic Sequences</a>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/TabGraphicSequencesJack.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id75605.html">Change the Size of the Part Which the Worker Carries</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id11672.html">Model a Worker Who Carries Parts between Workplaces in 3D</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id11672.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model a Worker Who Carries Parts between Workplaces in 3D"></a><a class="link" href="id75605.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Change the Size of the Part Which the Worker Carries"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>MutationOperator</title>
+      
+      <meta name="MS-HKWD" content="MutationOperator">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">MutationOperator</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id81605.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Mutation"></a><a class="link" href="id61080.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:MutationPlan"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59068.html">Genetic Algorithms</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47591.html">GASequence</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76323.html">Attributes of the GASequence</a></span> &gt; <span class="simpleHTMLminitoc">MutationOperator</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15736"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.MutationOperator</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">When the attribute <a class="links" href="id81605.html">Mutation</a> is set to true, the attribute <em>MutationOperator</em> designates the mutation operator, which the <em>GASequence</em> is going to use.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Random mutations</b></p>
+               
+               <p class="para_item">Enter a number for the <a class="links" href="id47774.html">Start probability</a> to define the probability for exchanging an item in the first generation. 
+               </p>
+               
+               <p class="para_item">Enter a number for the <a class="links" href="id17105.html">Delta per generation</a> to define the change of this probability for the genetic operators, when the generation changes. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Fixed number of mutations</b></p>
+               
+               <p class="para_item">The <em>GASequence</em> shows the button <b class="uiTerm">Plan</b>. It opens a table with four columns of data type <em>integer</em>, where you define the number of mutations per chromosome for each generation. Decreasing the number of mutations, for example, allows you to better search for a local optimum during the end phase of the optimization. Enter the first generation into the cells of the column <b class="uiTerm">Generation (from)</b>, and the number of mutations for this and the following generations into the column <b class="uiTerm">Number of Mutations</b>. Modify the number of mutations for a generation by entering values into another line/row of the table. Make sure that column 1 of the table is sorted in ascending order.
+               </p>
+               
+               <p class="para_item">Enter the number of positions the genetic algorithm may move an item up into the column <b class="uiTerm">Max. Position Offset (up)</b> or down into the column <b class="uiTerm">Max. Position Offset (down)</b>. This is called position offset restriction of a mutation (compare <a class="links" href="id63787.html">Mutation Operator</a> for sequence tasks).
+               </p>
+               
+               <p class="para_item">When you do not enter values into the columns <b class="uiTerm">Max. Position Offset (up)</b> and <b class="uiTerm">Max. Position Offset (down)</b>, the genetic algorithm uses a mutation without position offset restrictions.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>string</em>: <code>Fixed number of mutations</code> or <code>Random mutations</code>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">GASequence.MutationOperator := &quot;Random mutations&quot;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id44118.html">Mutation Operator</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id81605.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Mutation"></a><a class="link" href="id61080.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:MutationPlan"></a></span></div>
+   </body>
+</html>

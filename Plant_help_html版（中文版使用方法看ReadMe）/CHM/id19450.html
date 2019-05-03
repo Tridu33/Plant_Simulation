@@ -1,0 +1,82 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Placing Parts into Stock and Removing Parts from It</title>
+      
+      <meta name="MS-HKWD" content="Placing Parts into Stock and Removing Parts from It">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Placing Parts into Stock and Removing Parts from It</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id83008.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Chart for Showing the Full and Empty Portions"></a><a class="link" href="id81832.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Stations"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id19450.html">Placing Parts into Stock and Removing Parts from It</a></span> &gt; <span class="simpleHTMLminitoc">Placing Parts into Stock and Removing Parts from It</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_646"></span><p class="para_topic">When you model your plant you will, at one point, also face the task of placing parts into stock and removing them from stock. To model a warehouse, you will use the object <a class="links" href="id54257.html">Store</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/storeSm.gif" border="0">. The parts remain in the <em>Store</em> until you remove them with a <em>Method</em>. The <em>Store</em> accepts parts as long as storage places are available. The incoming <em>part</em> triggers a sensor, when it enters the <em>Store</em>. The sensor then calls an <b class="uiTerm">entrance control</b>, i.e., a <em>Method</em> object, that determines the storage place onto which the <em>Store</em> deposits the <em>part</em>. The <b class="uiTerm">entrance control</b> can, for example, update the inventory list or execute any other action which you program. If you do not use an <b class="uiTerm">entrance control</b>, the <em>Store</em> deposits the <em>part</em> into the first free storage place in the net of coordinates of the storage places. In our sample model the material flow is controlled by the method <em>PlaceInStock</em>, which we use as the <b class="uiTerm">entrance control</b> of the warehouse, and by the method <em>RemoveFromStock</em>, which we use as the <b class="uiTerm">exit control</b> of the station <em>RetrieveFromStore</em>.
+         </p>
+         <p class="para_topic">As parts occasionally have to be reworked, we want to change the original order of parts, which are placed into stock, and we then want to re-establish the original order when we remove them from stock. We do this in the station <em>MixOrders</em> located directly before our <em>Store</em>. 
+         </p>
+         <p class="para_topic">We have to set the size of the <em>Store</em> according to the degree of change of the sequence to prevent it from overflowing. To accomplish this two events are essential: First an additional part arrives at the <em>Store</em> and second a part is removed from the <em>Store</em>. When the <em>Store</em> is full, it does not accept any additional parts. We therefore have to increase the size of the <em>Store</em> in the <b class="uiTerm">entrance control</b> of the <em>Store</em> is full. Each part that is placed into stock and that is removed from stock must be registered on the table file <em>InventoryTable</em>. To manage the inventory and to remove parts from stock, we program the control <em>AttemptToRemoveNextPart</em>, which is called by the methods <em>PlaceInStock</em> and <em>RemoveFromStock</em>. This method checks whether the next removing action is possible so that the original order of the parts can be re-established so that the production process can be maintained without a shortage of parts. 
+         </p>
+         <p class="para_topic">In the <em>reset method</em> we delete the contents of the <em>InventoryTable</em> and reset the counter of the <em>variable</em><em>NextNumber</em> to 1.
+         </p>
+         <p class="para_topic">You can insert the <em>Store</em> into your simulation model from the folder <b class="uiTerm">Materialflow</b> in the <em>Class Library</em> or from the toolbar <b class="uiTerm">Materialflow</b> in the <em>Toolbox</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insStore.gif"></p>
+         <p class="para_topic">To do you, you will:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id81832.html">Configure the Stations</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id82052.html">Program the Method that Places Parts into Stock</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id99264.html">Program the Method that Removes Parts from Stock</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id23189.html">Program the Method that Manages the Inventory Table</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id58669.html">Visualize the Occupancy of the Store Over Time</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The finished simulation model looks like this:</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/warehouseFinished.gif"></p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id61915.html">Modeling the Flow of Materials, Basics</a></p>
+         <p class="para_topic"><b class="uiTerm">Also Compare</b>
+            <a class="links" href="xid1487230.html">Stacking Parts in the Store</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id83008.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Chart for Showing the Full and Empty Portions"></a><a class="link" href="id81832.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Stations"></a></span></div>
+   </body>
+</html>

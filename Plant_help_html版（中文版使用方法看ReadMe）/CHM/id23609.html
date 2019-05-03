@@ -1,0 +1,42 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Display an HtmlReport</title>
+      
+      <meta name="MS-HKWD" content="Display an HtmlReport">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Display an HtmlReport</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id63372.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Display a Method"></a><a class="link" href="id79934.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Display a Picture of a 3D Scene"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59466.html">Display and User Interface Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53118.html">HtmlReport</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17201.html">Dialog Window of the HtmlReport</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58581.html">Tab Content</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1201111.html">Select an Object or an Object Attribute to be Displayed</a></span> &gt; <span class="simpleHTMLminitoc">Display an HtmlReport</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12639"></span><p class="para_topic">To display an <em>HtmlReport</em> on the HTML page, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/htmlObjectRef.gif" border="0"> on the toolbar <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/htmlToolbarSm.gif" border="0"> and select it or enter its name within square brackets,. 
+         </p>
+         <p class="para_topic">You can pass an object as argument to the <em>HtmlReport</em>. You can then access the object in the called <em>HtmlReport</em> by entering @ within square brackets. This is especially useful if you want to display several object in the same way.
+         </p>
+         <p class="para_topic">At time you might also display an <em>HtmlReport</em> on its own and also embed it as part of a larger report. Suppose that you model a production line in a <em>sub-Frame</em> and assign this <em>sub-Frame</em> an <em>HtmlReport</em>. In this case you might want to display the <em>HtmlReport</em> individually on its own but also integrate it into the <em>HtmlReport</em> of the surrounding <em>Frame</em>. Then you might want to treat the heading for the sub-report different than for the individual report. You might, for example, want to display headings of level 1 in the sub-report as headings of level 2 and headings of level 2 as headings of level 3, etc. Then you can pass the parameter <code>#</code> to the <em>HtmlReport</em>. You can also pass several number signs. The <em>HtmlReport</em> increases the heading levels by 1 per a single number sign, meaning that the size of the heading levels is decreased.
+         </p><pre class="indent">[HtmlReport2]
+[HtmlReport2, Station1]
+[HtmlReport2, Station1, #]</pre><p class="para_topic">You can also insert sub-reports for all instances of an object. To do so, enter the path to the object, followed by an <code>*</code> (asterisk) as parameter. <em>Plant Simulation</em> then calls the specified <em>HtmlReport</em> for all instances which inherit directly or indirectly from the object, and which are inserted into the <em>Frame</em>, in which the outer <em>HtmlReport</em> is located. This also includes <em>sub-Frames</em>.
+         </p><pre class="indent">[HtmlReport2, .MaterialFlow.Station*]</pre><p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id93710.html">Showing Statistics and Other Values in a Report</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id63372.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Display a Method"></a><a class="link" href="id79934.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Display a Picture of a 3D Scene"></a></span></div>
+   </body>
+</html>

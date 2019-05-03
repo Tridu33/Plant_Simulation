@@ -1,0 +1,67 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Integrate a String Unchanged into the HTML Code</title>
+      
+      <meta name="MS-HKWD" content="Integrate a String Unchanged into the HTML Code">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Integrate a String Unchanged into the HTML Code</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id99304.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Protect Characters"></a><a class="link" href="id46330.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab User-defined Attributes"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59466.html">Display and User Interface Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53118.html">HtmlReport</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17201.html">Dialog Window of the HtmlReport</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58581.html">Tab Content</a></span> &gt; <span class="simpleHTMLminitoc">Integrate a String Unchanged into the HTML Code</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12656"></span><p class="para_topic">To integrate a string into the HTML code without changing it, enclose it between two opening angle brackets <code>&lt;&lt;</code> and two closing angle brackets <code>&gt;&gt;</code>. The string can have any length and can contain any number of line breaks.
+         </p>
+         <p class="para_topic">This may be required for two reasons:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To prevent that a long string of text is being interpreted as markup language.</p>
+               
+               <p class="para_item">To prevent that a long string of text from being interpreted as markup language, you can enter a backslash <code> \</code>. This might prove to be cumbersome though. Imagine that you want to display the string <code>------</code> on the HTML page. To prevent two consecutive hyphens from being interpreted as comment, you would have to protect each second hyphen with a backslash: <code>-\--\--\-</code>. Instead, you can also enclose the string within two angle brackets: <code>&lt;&lt;------&gt;&gt;</code>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/reportFiveHyphens.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To generate characters which have a special meaning in HTML.</p>
+               
+               <p class="para_item">When you enter a character that has a special meaning in HTML, <em>Plant Simulation</em> automatically converts this character into a HTML entity. An example for a special meaning in HTML are the quotation marks (<code>&quot;</code> ). For this reason <em>Plant Simulation</em> generates the HTML entity &amp;quot; for quotation marks within the HTML code.
+               </p>
+               
+               <p class="para_item">If you want to generate a quotation mark within the HTML code (note that this way you can easily generate invalid HTML), you cannot accomplish this by protecting the quotation mark with a backslash. <em>Plant Simulation</em> will convert this quotation mark into a HTML entity to avoid generating invalid HTML code. To prevent this, you can enclose the quotation mark in two opening and two closing angle brackets <code>&lt;&lt;&quot;&gt;&gt;</code>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/reportquotationMark.gif"></p>
+               
+               <p class="para_item">Suppose that you want to display the per mille sign ‰ but that you cannot enter it by typing on the keyboard. If you know that the per mille sign has the Unicode code 8240, you can formulate the sign as the HTML entity <code>&amp;#8240;</code>. As the sign <code>&amp;</code> has a special meaning in HTML (namely to open the HTML entities), <em>Plant Simulation</em> generates the HTML code <b class="uiTerm">&amp;amp;#8240;</b>, so that the Browser displays the string <b class="uiTerm">&amp;#8240;</b>. If you want to display the per mille sign in the Browser, you have to enclose the string in two angle brackets so that <em>Plant Simulation</em> integrates it into the HTML code: <code>&amp;#8240;&gt;&gt;</code> without changing it.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/reportPerMille.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id93710.html">Showing Statistics and Other Values in a Report</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id99304.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Protect Characters"></a><a class="link" href="id46330.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab User-defined Attributes"></a></span></div>
+   </body>
+</html>

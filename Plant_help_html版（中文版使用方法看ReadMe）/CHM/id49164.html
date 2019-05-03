@@ -1,0 +1,171 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>getRouteLength</title>
+      
+      <meta name="MS-HKWD" content="getRouteLength">
+      <meta name="MS-HKWD" content="getRouteLength,lane A or B">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">getRouteLength</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id59648.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:fwBlockList"></a><a class="link" href="id22791.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:pred"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id73650.html">TwoLaneTrack</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id55386.html">Methods of the TwoLaneTrack</a></span> &gt; <span class="simpleHTMLminitoc">getRouteLength</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7561"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.A.getRouteLength(Target:path [,Backwards:boolean [Position:length [,ObjectsAlongRoute:table, RouteWeightingAttribute:string]]] &rarr; length
+Path.B.getRouteLength(Target:path[,Backwards:boolean [Position:length [,ObjectsAlongRoute:table, RouteWeightingAttribute:string]]] &rarr; length</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>getRouteLength</em> computes the shortest route from the lane of the <em>TwoLaneTrack</em> to the target, designated by the parameter of data type <em>object</em> and returns the length of this route. The destination may either be a material flow object, which can be reached directly via <em>Connectors</em>, or a destination, which you entered into a sensor. The <em>method</em> returns -1, when <em>Plant Simulation</em> did not find a route.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">As the route is intended for <em>Transporters</em>, <em>Plant Simulation</em> only takes objects of type <em>Track</em> and <em>TwoLaneTrack</em> into consideration, when calculating the route.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Target</em> of data type <em>object</em> designates the target.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>Backwards</em> of data type <em>boolean</em> designates the direction in which <em> Plant Simulation</em> looks for a route. <code>True</code> stands for backwards, <code>false</code> stands for forwards , which is the default setting.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>Position</em> of data type <em>length</em> designates the position on the lane at which the search starts. If you do not enter the parameter, <em>Plant Simulation</em> starts searching at the end of the lane<em></em> if you search forwards , or it starts searching at the beginning if you search backwards . This is particularly important if the <a class="links" href="id44924.html">Destination</a> is a sensor, which is located on the lane of the <em>TwoLaneTrack</em> itself. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you enter the optional parameter <em>ObjectsAlongRoute</em> of data type <em>table</em>, <em>Plant Simulation</em> writes the objects along the route into the specified table.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>RouteWeightingAttribute</em> of data type <em>string</em> sets the name of the attribute for the route weighting attribute (<a class="links" href="id11742.html">RouteWeightingAttr</a>) for automatic routing. If the parameter is not passed, <em>Plant Simulation</em> does not weight the lengths of the routes.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>length</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">print TwoLaneTrack5.B.getRouteLength(Track26)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id59648.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:fwBlockList"></a><a class="link" href="id22791.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:pred"></a></span></div>
+   </body>
+</html>

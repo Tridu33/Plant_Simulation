@@ -1,0 +1,115 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Assignment</title>
+      
+      <meta name="MS-HKWD" content="Assignment">
+      <meta name="MS-HKWD" content="Assignment,FlowControl exit">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Assignment</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id70074.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Strategy"></a><a class="link" href="id42246.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Cyclic"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id94577.html">FlowControl</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47525.html">Dialog Window of the FlowControl</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id35044.html">Tab Exit Strategy</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70074.html">Strategy</a></span> &gt; <span class="simpleHTMLminitoc">Assignment</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6130"></span><div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">A <em>FlowControl</em> using the <b class="uiTerm">Assignment</b> strategy always moves the <em>MUs</em> on to the successor with the number 1. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The strategy <b class="uiTerm">Assignment</b> does not determine the successor to which the <em>FlowControl</em> moves the <em>MU</em> on. Instead, you can change the values of the attributes of the <em>MU</em>, when it moves to the one and only successor of the <em>FlowControl</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/fcexitassignment.gif"></p>
+         <p class="para_topic">As soon as the <em>MU</em> is moved on to the successor, <em> Plant Simulation</em> calls the <em> method</em>, whose name you entered into the text box <b class="uiTerm">Method</b>. Define the assignments to be made in this <em> method</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">@.color := &quot;red&quot;
+@.ProdState := 3</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Normally <em>Plant Simulation</em> only calls the <em>method</em>, when it is certain that the successor can receive the <em>MU</em>. If the successor is a <em>FlowControl</em>, changing an attribute of the <em>MU</em> by this <em> method</em> can affect to which successor this succeeding <em>FlowControl</em> will move the <em>MU</em> on. In this case the <em>method</em> will be called for a temporary copy of the <em>MU</em> and the succeeding <em>FlowControl</em> determines its successor using this copy. The original MU stays untouched during this time. If the thus determined successor can receive the <em>MU</em>, the <em>method</em> will be called again for the original <em>MU</em>.
+                     </p>
+                     
+                     <p class="para_note_body">In this case you should make sure that you assign the same value to the copy as to the original <em>MU</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id34696.html">ExitBehavior</a></p>
+         <p class="para_topic"><a class="links" href="id61196.html">DefaultSuccessor</a></p>
+         <p class="para_topic"><a class="links" href="id23124.html">Show Successors</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id70074.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Strategy"></a><a class="link" href="id42246.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Cyclic"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Worker</title>
+      
+      <meta name="MS-HKWD" content="Worker">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Worker</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id41059.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ShiftPlan"></a><a class="link" href="id90740.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:How the Worker Finds the Shortest Route"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67192.html">Worker</a></span> &gt; <span class="simpleHTMLminitoc">Worker</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8688"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/workerIcon2.gif" border="0"></p>
+         <p class="para_topic">The <em>Worker</em> represents a working person who works on a <a class="links" href="id27173.html">Workplace</a> attached to a machine. The <a class="links" href="id67192.html">Worker</a>-<a class="links" href="id13713.html">WorkerPool</a>-<em>Workplace</em>-<a class="links" href="id30049.html">FootPath</a>-concept refines the <a class="links" href="id19366.html">Broker</a>-<em>Importer</em>-<a class="links" href="id93899.html">Exporter</a>-concept.
+         </p>
+         <p class="para_topic">If your <em>Worker</em> does not walk, make sure that the importer on the tab <a class="links" href="id88367.html">Importer</a> of the station is activated, on whose <em>Workplace</em> the <em>Worker</em> is to work.
+         </p>
+         <p class="para_topic">In the <a class="links" href="id13713.html">WorkerPool</a> you can select the <a class="links" href="id10075.html">Travel mode</a> with which the <em>Worker</em> gets to his work station:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ResourceObjects/TravelMode.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Move freely within the area</b></p>
+               
+               <p class="para_item">The <em>Worker</em> moves freely within the area of the simulation model and walks around obstacles, compare <a class="links" href="xid1208909.html">Obstacle for the Worker</a>, which you defined in <em>3D</em>.
+               </p>
+               
+               <p class="para_item">Plant Simulation automatically calculates the shortest route between the <em>WorkPlaces</em> and between the <em>WorkerPool</em> and the <em>WorkPlaces</em>. It uses the <b class="uiTerm">layout of the 3D model</b> to calculate the shortest route to a <em>WorkPlace</em>. The 2D layout is irrelevant. Once you activate the freely moving <em>Worker</em>, <em>Plant Simulation</em> prompts you to start <em>3D</em>.
+               </p>
+               
+               <p class="para_item">To calculate the shortest route, <em>Plant Simulation</em> uses information about those areas of the model, which the <em>Worker</em> cannot walk on or cross. These areas encompass all kinds of obstacles, for example walls, pillars, machines, conveyors, safety fences, etc. <em>Plant Simulation</em> automatically detects these areas. By default we marked the <em>material flow objects</em>, the <em>animatable objects</em>, and the <em>graphics</em>, which belong to the <em>Frame</em>, as <b class="uiTerm">barred areas</b>. <em>Information flow objects</em> and <em>user interface objects</em> by default are not <b class="uiTerm">barred areas</b>. You can set if an object is an obstacle for the worker under <b class="uiTerm">Edit 3D Properties &gt; Tab Graphics &gt;</b>
+                  <a class="links" href="xid1208909.html">Obstacle for the Worker</a>. For graphics you can do this under <b class="uiTerm">Edit 3D Properties &gt;</b>
+                  <a class="links" href="xid1197513.html">Tab Graphic Settings</a>, for example to allow the <em>Worker</em> to cross a <em>Track</em>. MUs do not provide this setting. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ResourceObjects/werkerHindernis1E.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ResourceObjects/werkerHindernisE.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+               <p class="para_item"></p>
+               
+               <p class="para_item">All settings, except for <b class="uiTerm">None</b> automatically create a barred area. 
+               </p>
+               
+               <p class="para_item">To designate an area in the plant, which the <em>Worker</em> can enter, but should not, for example the pivoting area of a crane, you can manually create a barred area with the command <a class="links" href="xid1201471.html">Insert Barred Area</a> in <em>3D</em>. 
+               </p>
+               
+               <p class="para_item">The 2D layout can differ from the 3D layout of the simulation model. As your 3D model normally represents the looks of you plant much better than the 2D model, with respect to the positions, the dimensions, and the orientation of the machines and to architectural structures, we use the 3D model to calculate the shortest route. Although the 2D objects are normally located at the same coordinates as the 3D objects, they mostly do not have the same orientation and size, because the 2D model uses object icons to depict the simulation objects. </p>
+               
+               <p class="para_item">The <em>Worker</em> walks slower on an incline than he walks on a flat surface.
+               </p>
+               
+               <p class="para_item"><a class="links" href="xid1244532.html">Model a Worker Who Walks Freely Within the Model</a> gives a short introduction to the topic.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Walk along footpaths</b></p>
+               
+               <p class="para_item">The <em>Worker</em> walks on the <em>Footpaths</em>, which you inserted between the <em>Stations</em>/<em>Workplaces</em>, to the station at which he is going to work. 
+               </p>
+               
+               <p class="para_item">If you want to model and to simulate the distances between the <em>WorkerPool</em> and the work stations or between the work stations, insert <em>FootPaths</em>. <em>Plant Simulation</em> animates the <em>Workers</em> on the <em>FootPaths</em> when they walk towards the work stations or when they walk between the stations. 
+               </p>
+               
+               <p class="para_item">You can link several <em>FootPaths</em> with <em>Connectors</em> to create a network of <em>FootPaths</em>. The <em>Worker</em> moves within this network from his <em>WorkerPool</em> to the <em>WorkPlace</em>. Provided the <em>WorkerPool</em> and the <em>WorkPlace</em> are connected to the same network of <em>FootPaths</em>, the <em>Worker</em> moves from the <em>WorkerPool</em> to the <em>WorkPlace</em> and back on the shortest possible route.
+               </p>
+               
+               <p class="para_item">A network of <em>FootPaths</em> consists of all <em>FootPaths</em> that are joined with <em>Connectors</em>, as well as the <em>WorkerPools</em> and the <em>WorkPlaces</em> that are joined with one of these <em>FootPaths</em> with a <em>Connector</em>.
+               </p>
+               
+               <p class="para_item">The time it takes the <em>Worker</em> to move from his <em>WorkerPool</em> to the <em>WorkPlace</em> depends on his <a class="links" href="id27582.html">Speed</a> and the combined <a class="links" href="id88471.html">Lengths</a> of the <em>FootPaths</em> he covers to reach his destination. <em>Plant Simulation</em> recognizes on which <em>FootPaths</em> the <em>Worker</em> moves, when he exits a <em>FootPath</em> at another end than the one at which he entered it. When the <em>Worker</em> does not move to his destination on a <em>FootPath</em> or when he is transported to his destination, he does not consume any time at all. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Beam to workplace</b></p>
+               
+               <p class="para_item">The <em>Worker</em> is beamed (teleported) to the <em>Workplace</em> to which he was brokered and at which he is going to work instantly, without using up any time, provided he cannot get to this <em>Workplace</em> on any <em>Footpath</em>. Here the <em>Worker</em> functions as an <a class="links" href="id93899.html">Exporter</a> with a capacity of 1. 
+               </p>
+               
+               <p class="para_item">You can use this feature to build a model, which does not contain any <em>FootPaths</em>. The Worker then always jumps between the <em>WorkerPool</em> and the <em>Workplaces</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can assign a <em> Workplace</em> to the material flow objects that support an <em>importer</em>, e.g. to the <a class="links" href="id18003.html">Station</a>, the <a class="links" href="id29026.html">ParallelStation</a>, the <a class="links" href="id95185.html">AssemblyStation</a> and the <a class="links" href="id85371.html">DismantleStation</a>.
+         </p>
+         <p class="para_topic">You can also set the <a class="links" href="id79942.html">Loading time</a> and the <a class="links" href="id20650.html">Unloading time</a>, which the <em>Worker</em> needs for manually loading and unloading the station, in the <a class="links" href="id27173.html">Workplace</a> attached to the station. 
+         </p>
+         <p class="para_topic">The <em>Workers</em> are created in the <a class="links" href="id13713.html">WorkerPool</a> and they stay there when they do not work and are waiting for an order. As a rule you enter the <em>Workers</em>, which you want to use in your simulation model, into the <a class="links" href="id78500.html">Creation Table</a>. You can also drag a single <em>Worker</em> or any number of <em> Workers</em> from the <em>Class Library</em> onto the icon of the <em>WorkerPool</em> and drop them there. The <em>WorkerPool</em> appends a line to the <b class="uiTerm">Creation Table</b> for this <em>Worker</em>. When it already contains a line for this <em>Worker</em>, the <em>WorkerPool</em> increments the amount by 1. 
+         </p>
+         <p class="para_topic">You can also create individual <em>Workers</em>, which you do not want to generate via the <b class="uiTerm">Creation Table</b>, with the method <a class="links" href="id63269.html">create</a> for a single simulation run. This only works in the <em>WorkerPool</em> though. Be aware that <em> Plant Simulation</em> deletes this <em>Worker</em> when you <b class="uiTerm">reset</b> the model and then only creates the <em> Workers</em> from the <b class="uiTerm">Creation Table</b> at the next <b class="uiTerm">Init</b> event that takes place. 
+         </p>
+         <p class="para_topic">The <a class="links" href="id19366.html">Broker</a> procures the <em>Workers</em> to the individual work stations. As soon as a <em>Worker</em> can provide a service, the <em>Broker</em> sends him from his <em>WorkerPool</em> to the work station that ordered him:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When the <em>Worker</em> moves freely within the area of the simulation model, he walks on the shortest route to the <em>WorkPlace</em> and walks around obstacles you designated.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> When you modeled the work station using one of the material flow objects and the <em>Workplace</em> and connected the <em>WorkerPool</em> and the <em>Workplace</em> with a <em>FootPath</em>, <em> Plant Simulation</em> animates the <em>Worker</em> while he moves on the <em>FootPath</em> and while he works on the <em>Workplace</em>. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <em>Worker</em> only consumes time, when he walks on the <em>FootPath</em>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you inserted a <em>Workplace</em>, and the <em>Worker</em>, who is supposed to work there, cannot reach it via a <em>FootPath</em>, <em>Plant Simulation</em> transports the <em>Worker</em> directly to the <em>Workplace</em> and animates him there. When you do not insert a <em>Workplace</em>, when no <em>Workplace</em> is present that supports this service, or when all <em>Workplace</em> s that support this service are occupied, <em>Plant Simulation</em> transports the <em>Worker</em> to the work station itself, where he will perform his task. Then, the material flow object only shows with an LED in the LED area of its icon that a <em>Worker</em> is working. It does not animate him there, but continues to animate him in the <em>WorkerPool</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">If a <em>Worker</em> is brokered for an <em> importer</em> for performing set-up, repairing or processing services and this <em>Worker</em> then is assigned a failure, the <em>Worker</em> walks to the <em>Workerpool</em> and the <em>importer</em> immediately places a new request to the <em> Broker</em>. Consequently the respective operation can also be finished by another <em> Worker</em>.
+         </p>
+         <p class="para_topic">When the <em>Worker</em> pauses or when a failure occurs when he finishes his work at the same time <em>Plant Simulation</em> does not delete the <b class="uiTerm">DisruptionEnd</b>, <b class="uiTerm">Out</b>, and <b class="uiTerm">SetupEnd</b> events from the event list and does not request the <em>Worker</em> again after the failure or pause. This applies to set-up, processing, and repair jobs. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">A paused <em>Worker</em> always returns to the <em>Workerpool</em>. A failed <em>Worker</em> stays at the <em>Workplace</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic">We offer alternative graphics for the <em>Worker</em> in <em>3D</em>. Click <a class="links" href="id81182.html">Exchange Graphics</a> in the 3D window of the <em>Worker</em> and select an alternative graphic.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/exchangeGraphicsJackJill.gif"></p>
+         <p class="para_topic">If you would like to show a <em>Sankey diagram</em> which visualizes the paths of the <em>Worker</em> who move freely within the area, use the <a class="links" href="xid1398586.html">WorkerSankeyDiagramm</a>.
+         </p>
+         <p class="para_topic">If you would like to show statistics of all <em>Workers</em>, who are stationed in a single <em>WorkerPool</em>, use the <a class="links" href="id21473.html">Worker Chart</a>.
+         </p>
+         <p class="para_topic">To add the <em>Worker</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; Resources &gt; Worker</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Also compare the videos <b class="uiTerm">Modeling with Workers</b> and <b class="uiTerm">Worker Carrying Parts between Workplaces</b>, which you can open under <b class="uiTerm">Window</b> ribbon tab &gt;
+   <b class="uiTerm">Start Page</b> &gt; <b class="uiTerm">Getting Started</b> &gt;
+  <b class="uiTerm">Videos</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id18156.html">Modeling Workers and the Jobs They Do</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id11093.html">Dialog Window of the Worker</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id17296.html">How the Worker Carries Parts</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id60114.html">Methods of the Worker</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id90740.html">How the Worker Finds the Shortest Route</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1388315.html">Read-Only Attributes of the Worker</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id86904.html">Model Workers with Importer, Broker and Exporter</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id18387.html">Attributes of the Worker</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id41059.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ShiftPlan"></a><a class="link" href="id90740.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:How the Worker Finds the Shortest Route"></a></span></div>
+   </body>
+</html>

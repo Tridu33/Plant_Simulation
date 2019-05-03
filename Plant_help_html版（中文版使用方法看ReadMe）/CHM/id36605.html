@@ -1,0 +1,52 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Reactivating Methods</title>
+      
+      <meta name="MS-HKWD" content="Reactivating Methods">
+      <meta name="MS-HKWD" content="Method">
+      <meta name="MS-HKWD" content="Method,reactivate">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">Reactivating Methods</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id55940.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Priority"></a><a class="link" href="id98496.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Simultaneously Reactivating Several Methods"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Control_Flow_Statements_1.html">Control Flow Statements</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Suspending_Methods.html">Suspending Methods</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id71748.html">The Waituntil-Statement and the Stopuntil-Statement</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36605.html">Reactivating Methods</a></span> &gt; <span class="simpleHTMLminitoc">Reactivating Methods</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_13843"></span>
+         <span id="ndxgenid_PlantSimulationENU_13844"></span>
+         
+         <p class="para_topicComponent">The value of a condition leading to a method being suspended can change because of a simulation event (for example a leaving <em>MU</em>) or method processing (for example, assignment of a value). When a method is active, the interpreter interrupts the execution of the active method and saves the method&rsquo;s entire call chain. 
+         </p>
+         
+         <p class="para_topicComponent">After that, the interpreter re-analyzes the conditions of the suspended methods. The interpreter does not analyze conditions that do not depend on the change again. If the condition is not <em>true</em>, it suspends the methods immediately. If the condition is <em>true</em>, the interpreter analyzes its priority and builds a priority list. It then selects the method with the highest priority and resumes executing that method. The method execution continues until <em>Plant Simulation</em> executed the entire present call chain or the method is suspended again. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topics</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id98496.html">Simultaneously Reactivating Several Methods</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id61393.html">Simultaneously Reactivating Several Methods with waituntil</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id31254.html">Simultaneously Reactivating Several Methods Using stopuntil</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id55940.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Priority"></a><a class="link" href="id98496.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Simultaneously Reactivating Several Methods"></a></span></div>
+   </body>
+</html>

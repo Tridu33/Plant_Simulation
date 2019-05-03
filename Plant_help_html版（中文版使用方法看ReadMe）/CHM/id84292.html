@@ -1,0 +1,365 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>executeSilent</title>
+      
+      <meta name="MS-HKWD" content="executeSilent">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">executeSilent</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id19099.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:execute"></a><a class="link" href="id53438.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:existsFile"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Predefined_Functions_1.html">Predefined Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id86615.html">Miscellaneous Global Functions</a></span> &gt; <span class="simpleHTMLminitoc">executeSilent</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14110"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">executeSilent(SourceCode:string [,Parameter, ...])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The function <em>executeSilent</em> receives a string and interprets it as though it were the source code of a method. 
+         </p>
+         <p class="para_topic">The function <em>executeSilent</em> accepts all statements. The anonymous identifier ? refers to the <em>Method</em> object that called the <em>executeSilent</em> function. The anonymous identifier @ is received by the calling method. 
+         </p>
+         <p class="para_topic">The semantics of <em>executeSilent</em> is as follows:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When the string method does not have a return value, <em>executeSilent</em> returns VOID.
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">var objPath : string := &quot;Track&quot;
+var attrName: string := &quot;Length&quot;
+var attrVal : length := 3.5
+executeSilent(to_str(objPath, &quot;.&quot;, attrName, &quot;:=&quot;, attrVal))</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">When the <em>string</em> method has a return value, these may look as follows:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">When the string method contains a syntax error, <em>executeSilent</em> returns VOID. 
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="100%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                                    
+                                    <tbody>
+                                       
+                                       <tr valign="top">
+                                          
+                                          <td colspan="1" rowspan="1" width="85">
+                                             
+                                             <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                             
+                                          </td>
+                                          
+                                          <td colspan="1" rowspan="1" width="500">
+                                             <pre class="indent">executeSilent(&quot;-&gt; integer; 1+&quot;) -- returns VOID </pre>
+                                             </td>
+                                          
+                                       </tr>
+                                       
+                                    </tbody>
+                                    
+                                 </table>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">When a runtime error occurs while the string method is executed, <em>executeSilent</em> returns the default value of the corresponding type, i.e., the value of a local variable of this type would have at the beginning of the execution of the method. Note that <em>Plant Simulation</em> does not open the <em>Debugger</em> when a runtime error occurs, but continues to be executed. Use the function <a class="links" href="id19099.html">execute</a> to make <em>Plant Simulation</em> open the <em>Debugger</em>, when runtime errors occur. For example, the <em>executeSilent</em>-statement below returns false because assigning the keyword &quot;if&quot; to the name of an object causes a runtime error. 
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="100%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                                    
+                                    <tbody>
+                                       
+                                       <tr valign="top">
+                                          
+                                          <td colspan="1" rowspan="1" width="85">
+                                             
+                                             <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                             
+                                          </td>
+                                          
+                                          <td colspan="1" rowspan="1" width="500">
+                                             <pre class="indent">executeSilent(&quot;-&gt;boolean; Station.name := \&quot;if\&quot;; return true&quot;)
+-- returns false because of a runtime error </pre>
+                                             </td>
+                                          
+                                       </tr>
+                                       
+                                    </tbody>
+                                    
+                                 </table>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">In all other cases, <em>executeSilent</em> will return the return value of the string method.
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">executeSilent(&quot;-&gt;integer; return := 42&quot;) -- returns 42</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The function <em>executeSilent </em> executes the referenced <em>Method</em>. You can use it to execute methods that you referenced via variables. Let us say you save a method to a variable <em>obj</em> of data type <em>object</em>, you can now call this method using <em>obj.executeSilent</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param obj: object, new_name: string
+if not executeSilent(&quot;param o: object -&gt; boolean; o.name := \&quot;&quot; + new_name + &quot;\&quot;; return true&quot; obj) 
+   print &quot;invalid name&quot;
+end </pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Be aware that the variant</p><pre class="indent">executeSilent(&quot;-&gt;boolean; &quot; + obj + &quot;.name := \&quot;&quot; + new_name + &quot;\&quot;; return true&quot;) </pre><p class="para_topic">does not work, when <code>obj</code> points to a method.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The syntax which is used in the argument for the <em>executeSilent</em> function has to be the same as the <em>Method</em> syntax which calls the <em>executeSilent</em> function.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id19099.html">execute</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id19099.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:execute"></a><a class="link" href="id53438.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:existsFile"></a></span></div>
+   </body>
+</html>

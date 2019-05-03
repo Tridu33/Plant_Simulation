@@ -1,0 +1,107 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Tab Exit Strategies</title>
+      
+      <meta name="MS-HKWD" content="Tab Exit Strategies">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Tab Exit Strategies</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id80742.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Transport"></a><a class="link" href="id84490.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Import/Export"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1203830.html">Value Stream Mapping Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1204777.html">FIFO</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54897.html">Dialog Window of the Object FIFO</a></span> &gt; <span class="simpleHTMLminitoc">Tab Exit Strategies</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_17815"></span><p class="para_topic"> On the tab <b class="uiTerm">Exit Strategies</b> you can select the strategy according to which a workpiece carrier is to be moved on to one of the succeeding objects.
+         </p>
+         <p class="para_topic"> Note that the exit controls are only used when an object of type <em> FIFO</em> has several successors which are able to process the same products. If there is a single successor or if there are several successors only one of which can process the product, it is uniquely determined where the workpiece carrier is to be moved and the exit controls will not be taken into consideration.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/FIFOExitControlCyclic.gif"></p>
+         <p class="para_topic"> The object <em> FIFO</em> provides these exit strategies :
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Cyclic</b></p>
+               
+               <p class="para_item"> This strategy moves the workpiece carriers one after the other to the successors. This is a blocking strategy. This means that when its the turn of successor 2, but when this successor is occupied, <em> Plant Simulation</em> waits for successor 2 all the same until this successor can receive the workpiece carrier.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Start at successor 1</b></p>
+               
+               <p class="para_item"> This strategy always attempts to move the workpiece carrier to the first successor. It only takes the other successors into consideration when this is not possible.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">First free successor</b></p>
+               
+               <p class="para_item"> This strategy checks which successor can accept the workpiece carrier. It them moves the workpiece carrier to this successor.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">
+                  <b class="uiTerm">Percentage</b></p>
+               
+               <p class="para_item"> This strategy attempts to distribute the workpiece carriers among the successors according to a percentage which you define.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> Note that all exit strategies always move the workpiece carriers belonging to a production order to the same successor to avoid uncalled for set-up processes. If the workpiece carriers are not kept together, this would amount to an order splitting, which the <em> value stream mapping library</em> generally does not support.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/FIFO_ExitControl_Demo_Model.gif"></p>
+         <p class="para_topic"> The model depicted above shows the effects of the exit strategies. In the model we defined two products with different cycle times and with different lot sizes and transfer units. The objects <em> Process1</em> and <em> Process2</em> can process both products.
+         </p>
+         <p class="para_topic"> With a simulation duration of 20 days the object <em> FIFO</em> moves on 2591 workpiece carriers.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> For the setting <b class="uiTerm">Cyclic</b> it moves 1364 workpiece carriers to the object <em> Process1</em> and 1227 workpiece carriers to the object <em> Process2</em>. Both processes were set-up 22 times.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> For the setting <b class="uiTerm">Start at successor 1</b> the object <em> Process1</em> receives 1937 workpiece carriers, while the object <em> Process2</em> only receives 654 workpiece carriers. To accomplish this, the object Process1 had to be set-up 193 times. while the object Process2 had to be set-up only 11 times only.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> For th setting <b class="uiTerm">First free successor</b><em> Process1</em> receives 1364 workpiece carriers, while <em> Process2</em> receives 1227 workpiece carriers. Both processes had to be set-up 22 times. This is the same as the strategy Cyclic as both processes have the same cycle time for the products.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> For th setting <b class="uiTerm">Percentage</b> with a distribution of 40/60 for <em> Process1</em> /<em> Process2</em>, <em> Process1</em> receives 1039 workpiece carriers and <em> Process2</em> receives 1552 workpiece carriers. <em> Process1</em> had to be set-up 69 times, while <em> Process2</em> had to be set-up 136 times. The percentage distribution achieved in the simulation is 40,1% to 59,9%.
+               </p>
+               
+            </li>
+         </ul>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id80742.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Transport"></a><a class="link" href="id84490.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Import/Export"></a></span></div>
+   </body>
+</html>

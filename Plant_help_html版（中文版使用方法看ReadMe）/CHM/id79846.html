@@ -1,0 +1,86 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Create the Train</title>
+      
+      <meta name="MS-HKWD" content="Create the Train">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic8" id="xps10_pagetitle">Create the Train</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id35627.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Parameterize the Crane"></a><a class="link" href="id35298.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Load the Train"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64826.html">Model a Facility Using a Storage Crane</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64681.html">Load a Train with the Storage Crane</a></span> &gt; <span class="simpleHTMLminitoc">Create the Train</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1058"></span><p class="para_topic">For our model we create two new object classes, <em>Engine</em> and <em>Boxcar</em>, in the <em>Class Library</em> by<b class="uiTerm">duplicating</b> the <em>Transporter</em>:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/portalcraneEngineE.gif"></p>
+         <p class="para_topic">In a <em>Frame</em> of its own we combine the <em>Source</em>, the <em>sequence table</em>, the <em>collision control hitch </em> and a short piece of track. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/portalcraneSourceTrainFrameE.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">We configure the <em>Source</em> so that it creates a train every ten minutes according to the settings, which we enter into the <b class="uiTerm">sequence table</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/portalcraneSourceTrainE.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">In the <b class="uiTerm">sequence table</b> we instruct the <em>Source</em> to produce one <em>engine</em> and seven <em>boxcars</em> per train.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/portalcraneSourceTrainSeqE.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">For the <em>engine</em> we set the attribute <em>isTractor</em> to <code>true</code> and the speed (in column 12) to 1 m/s. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/portalcraneengineSettE.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">For the <em>boxcars</em> we set <em>isTractor</em> to <code>false</code> and the speed (in column 12) to 1.1 m/s. This way we cause a collision event, which hitches the <em>boxcars</em> to each other and to the <em>engine</em>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/portalcraneTrailersettE.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">We then program the control for the collision event in the method <em>hitch</em>.
+               </p>
+               
+               <p class="para_item">The source code looks like this:</p>
+               <pre class="indent">var rear, front: object
+rear := @
+front := rear.frontMU
+rear.hitchFront(front)</pre>
+               </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id64680.html">Load a Train with the Storage Crane</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id35627.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Parameterize the Crane"></a><a class="link" href="id35298.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Load the Train"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.setGraphicPosition</title>
+      
+      <meta name="MS-HKWD" content="_3D.setGraphicPosition">
+      <meta name="MS-HKWD" content="setGraphicPosition">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.setGraphicPosition</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id33028.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.setGraphicName"></a><a class="link" href="id36076.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.setGraphicRotation"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id85031.html">Built-in Methods for Detailed Access To Graphics</a></span> &gt; <span class="simpleHTMLminitoc">_3D.setGraphicPosition</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14755"></span><span id="ndxgenid_PlantSimulationENU_14756"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path._3D.setGraphicPosition(GraphicPath:any, Position:length[3] [,GraphicGroupName:string])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.setGraphicPosition</em> sets the position of the designated graphic of the object designated by Path.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The method deactivates graphic inheritance.</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>GraphicPath</em> of data type <em>any</em> designates the path of the graphic. The parameter is described under <a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Position</em> is an array of data type <em>length</em> which designates the position of the graphic. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>GraphicGroupName</em> of data type <em>string</em> designates the name of the graphic group you are working with. The parameter is described under <a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Station._3D.setGraphicPosition([1,1], [2,2,2])
+ParallelStation._3D.setGraphicPosition([&quot;Graphic1&quot;], [2,2,2])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Station._3D.setGraphicPosition([1,1], [2,2,2])
+ParallelStation._3D.setGraphicPosition([&quot;Graphic1&quot;], [2,2,2], &quot;deco&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id20408.html">_3D.getGraphicPosition</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id33028.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.setGraphicName"></a><a class="link" href="id36076.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.setGraphicRotation"></a></span></div>
+   </body>
+</html>

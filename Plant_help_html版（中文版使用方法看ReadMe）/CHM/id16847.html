@@ -1,0 +1,168 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>insertList</title>
+      
+      <meta name="MS-HKWD" content="insertList">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">insertList</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id34787.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:delete"></a><a class="link" href="id18183.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:interSection"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42077.html">Methods of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id72048.html">Methods for Accessing Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc">insertList</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10195"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.insertList(Cell:integer,SourceList:any)
+Path.insertList(Column:integer,Row:integer,SourceList:any)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>insertList </em> inserts the contents of a list into a <em>TableFile</em> or a <em>CardFile</em>. <em>Plant Simulation</em> deletes existing data in a table. In a list it moves the data to another position.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Copying a large amount of data from one list to another with the method <em>insertList </em>might be slow. We recommend to the use the method <a class="links" href="id55213.html">copyRangeTo</a> instead, whose code is executed much faster. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">For the <em>CardFile</em> the parameter <em>Cell</em> of data type <em>integer</em> designates the cell from which on <em>Plant Simulation</em> inserts the contents of the list. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">For the <em>TableFile </em> the parameter <em>Column</em> of data type <em>integer</em> designates the column of the cell from which on <em>Plant Simulation</em>inserts the contents of the list. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">For the <em>TableFile </em> the parameter <em>Row</em> of data type <em>integer</em> designates the row of the cell from which on <em>Plant Simulation</em> inserts the contents of the list. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>SourceList</em> of data type <em>any</em> designates the contents of the list that is going to be inserted.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><em>Plant Simulation</em> deletes all existing entries in a <b class="uiTerm">table</b>, but moves entries in lists to another position. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var lst: list [string]
+lst.create -- create
+lst.insert(1,&quot;one&quot;) -- enters value
+lst.insert(2,&quot;two&quot;)
+MyCardFile.insertList(3,lst)
+TableFile.insertList(2,2,lst)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id34787.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:delete"></a><a class="link" href="id18183.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:interSection"></a></span></div>
+   </body>
+</html>

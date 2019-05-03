@@ -1,0 +1,61 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Import Data from an ODBC Database</title>
+      
+      <meta name="MS-HKWD" content="Import Data from an ODBC Database">
+      <meta name="MS-HKWD" content="ODBC">
+      <meta name="MS-HKWD" content="ODBC,import data from database">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Import Data from an ODBC Database</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id24466.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import Data from a Database"></a><a class="link" href="id91507.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Set the Data Source Up"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48998.html">Importing and Exporting Data</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id24466.html">Import Data from a Database</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id37636.html">Import Data from an ODBC Database</a></span> &gt; <span class="simpleHTMLminitoc">Import Data from an ODBC Database</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1654"></span><span id="ndxgenid_PlantSimulationENU_1655"></span><p class="para_topic">To import data from an ODBC database into your <em>Plant Simulation</em> simulation model, you will use the <em>Plant Simulation</em> object <a class="links" href="id92182.html">ODBC</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/odbcSm.gif" border="0">. To access several databases at the same time, you can insert several objects of type <em>ODBC</em> into your simulation model, each of which communicates with another database. 
+         </p>
+         <p class="para_topic">You can also access the same database with several <em>ODBC</em> objects. We advise against doing so, as this may result in inconsistent data caused by conflicting commands. It might, for example, happen that one <em>Method</em> deletes a data set, while another <em>Method</em> attempts to access just this data set. Using a single <em>ODBC</em> object ensures that the sequence of instructions conforms to your intentions.
+         </p>
+         <p class="para_topic">This holds especially true for real databases for which you have to apply any data manipulations, such as read, write delete, etc. with the SQL instruction <code>commit</code>, before they take effect.
+         </p>
+         <p class="para_topic">To import data from an ODBC database into your <em>Plant Simulation</em> simulation model you have to:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id91507.html">Set the Data Source Up</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id56114.html">Import Data into Your Simulation Model</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">After the simulation runs are finished, you can also export the simulation results back into the database, compare <a class="links" href="id36348.html">Export Data to the Database</a>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id53425.html">Exchange Data with an SQL Database</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id24466.html">Import Data from a Database</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id24466.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import Data from a Database"></a><a class="link" href="id91507.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Set the Data Source Up"></a></span></div>
+   </body>
+</html>

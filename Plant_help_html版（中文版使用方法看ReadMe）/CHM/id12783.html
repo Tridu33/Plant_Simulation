@@ -1,0 +1,153 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>PullCtrl</title>
+      
+      <meta name="MS-HKWD" content="PullCtrl">
+      <meta name="MS-HKWD" content="PullCtrl,pick-and-place robot">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">PullCtrl</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1370439.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:OnlyForEmptyBlockingList"></a><a class="link" href="id57576.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:TargetCtrl"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61965.html">PickAndPlace Robot</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id49727.html">Attributes of the Pick-and-Place Robot</a></span> &gt; <span class="simpleHTMLminitoc">PullCtrl</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6876"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.PullCtrl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>PullCtrl</em> designates a <em>Method</em> object, which is called, whenever it is ready to pick up a new part or when it is ready when a new <em>MU</em> is <a class="links" href="id84863.html">Waiting</a> at its entrance. In the <a class="links" href="id59178.html">Pull control</a> you can determine which of the parts, which intends to move onto the object, the <em>pick-and-place robot</em> will accept. For this you have to get the forward blocking list of the object with the method <a class="links" href="id47949.html">fwBlockList</a> and unblock an <em>MU</em> in the list with the method <a class="links" href="id62334.html"> unblock</a>. 
+         </p>
+         <p class="para_topic">Let us assume that red parts are especially important and thus have to priority for being processed. Then you can always pull red parts first from the predecessors and only then pull parts in other colors.</p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The <b class="uiTerm">pull control</b> does not determine if an MU is to be moved to this or to another successor. Instead it selects one of the parts which have already determined to move on to this successor. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For the objects <em>Conveyor</em>, <em>Track</em>, and <em>TwoLaneTrack</em> the <b class="uiTerm">pull control</b> only applies to <em>MUs</em> moving in the forward direction, i.e., to objects, which move onto them at their <b class="uiTerm">entrance</b> and exit them at their <b class="uiTerm">exit</b>. It does not apply to <em>MUs</em> moving onto them <b class="uiTerm">backwards</b> at their <b class="uiTerm">exit</b>!
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic"> You can assign a value of data type <em>object</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyPickAndPlace.PullCtrl := &amp;myPullControl</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id59178.html">Pull control</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1370439.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:OnlyForEmptyBlockingList"></a><a class="link" href="id57576.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:TargetCtrl"></a></span></div>
+   </body>
+</html>

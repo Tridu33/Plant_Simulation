@@ -1,0 +1,100 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Model Transitions between Frames</title>
+      
+      <meta name="MS-HKWD" content="Model Transitions between Frames">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Model Transitions between Frames</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id12960.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Connect Objects with the Connector"></a><a class="link" href="id17583.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Controlling the Simulation with the EventController"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69343.html">Working with the Frame</a></span> &gt; <span class="simpleHTMLminitoc">Model Transitions between Frames</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_454"></span><p class="para_topic">One of the main advantages of <em>Plant Simulation</em> is that you can model hierarchically, i.e., you can model components of your overall plant in a <em>Frame</em>, make sure that these components work by themselves and then insert them into your overall simulation model. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/interface1.gif"></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/Interface2.gif"></p>
+         <p class="para_topic">In this case, you will have to connect the component (<em>Frame</em>) to the material flow objects or <em>Frames</em> that precede and succeed it in the sequence of stations with the object <a class="links" href="id97801.html">Interface</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/interfaceSmall.gif" border="0">. The transitions are the places where <em>MUs</em> move from one <em>Frame</em> to another or from a material flow object to a <em>Frame</em> and vice versa. <em>Plant Simulation</em> show if the <em>Interface</em> you inserted into a <em>Frame</em> is connected to another object with a <em>Connector</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/5UebergangAktiv.gif" border="0"> or not connected <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/5UebergangNichtAktiv.gif" border="0">. <em>Plant Simulation</em> also recognizes if an <em>Interface</em> is an <b class="uiTerm">entrance</b> or an <b class="uiTerm">exit</b>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/InterfaceEntranceExit.gif"></p>
+         <p class="para_topic">You can insert the <em>Interface</em> into your simulation model from the folder <b class="uiTerm">MaterialFlow</b> in the <em>Class Library</em> or from the toolbar <b class="uiTerm">Material Flow</b> in the <em>Toolbox</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insInterface.gif"></p>
+         <p class="para_topic">To model transitions, click the folder or the toolbar <b class="uiTerm">Material Flow</b> and insert as many objects of type <em>Interface</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/interfaceSmall.gif" border="0"> anywhere in the <em>Frame</em>. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select the side of the icon of the <em>Frame</em> at which the <em>Interface</em> is to be located: on the Top, on the Right hand side, on the <b class="uiTerm">Bottom</b>, or on the <b class="uiTerm">Left</b> hand side of the <em>Frame</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the maximum number of external connections the <em>Interface</em> may have. Depending on the type, any number of <em>Interfaces</em> may have more than one predecessor or successor. 
+               </p>
+               
+               <p class="para_item">The <b class="uiTerm">predecessor</b> is the object that is connected to the selected object with a <em>Connector</em> and that is located in front of it in the sequence of stations in the simulation model.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/showPredecessors.gif"></p>
+               
+               <p class="para_item">The <b class="uiTerm">successor</b> is the object that is connected to the selected object with a <em>Connector</em> and that is located after it in the sequence of stations in the simulation model. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/showSuccessors.gif"></p>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the position of the <em>Interface</em> in the side of the <em>Frame</em> it is inserted into in percent into the text box Position in %. You can enter a value between 0 and 100 percent. <em>Plant Simulation</em> uses the value you enter, when you activate <b class="uiTerm">File &gt; Preferences &gt; Modeling &gt; Connect</b> automatically. Connecting objects automatically only works when the exit of <em>FrameA</em> and the entrance of <em>FrameB</em> are not more three pixels apart.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">An <em>Interface</em> object you insert into a <em>Frame</em> and connect with a <em>Connector</em> show its <b class="uiTerm">Type</b> in the dialog: either <b class="uiTerm">Entrance</b> or <b class="uiTerm">Exit</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If need be, you can also select an <b class="uiTerm">exit strategy</b> on the tab <b class="uiTerm">Exit Strategy</b>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id48245.html">Modeling Hierarchically</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id92136.html">Transferring Parts from Station to Station</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id69343.html">Working with the Frame</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id12960.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Connect Objects with the Connector"></a><a class="link" href="id17583.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Controlling the Simulation with the EventController"></a></span></div>
+   </body>
+</html>

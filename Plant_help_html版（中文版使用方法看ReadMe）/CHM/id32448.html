@@ -1,0 +1,168 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>localTestImportFor</title>
+      
+      <meta name="MS-HKWD" content="localTestImportFor">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">localTestImportFor</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id46244.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:localOpenRequestsFor"></a><a class="link" href="id79003.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:serviceStat"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id19366.html">Broker</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id74171.html">Methods of the Broker</a></span> &gt; <span class="simpleHTMLminitoc">localTestImportFor</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_8255"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.localTestImportFor(Importer:object, Type:integer, Exporters:table [,OnlyAvailable:boolean]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>localTestImportFor</em> checks all <em>Exporters</em> directly managed by the <em>Broker</em> for the <em>Importer</em>. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm"> Parameters</b></p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Importer</em> of data type <em>object</em> designates the <em>Importer</em> proper.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Type</em> of data type <em>integer</em> designates its type: 0 designates the <em>failure-importer</em>, 1 the <em>set-up-importer</em>, 2 the <em>processing-importer</em>, and 3 the <em>transport-importer</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Exporters</em> of data type <em>table</em> contains all <em>Exporter</em>s directly managed by the <em>Broker</em> and able to provide any service the <em>Importer</em> requires. However, the <em>Broker</em> does not check if the <em>Exporters</em> are able to export the service or are available.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>OnlyAvailable</em> of data type <em>boolean</em> sets if all <em>Workers</em>/<em>Exporters</em> will be listed (false) or if only the actually available <em>Workers</em>/<em>Exporters</em> will be listed (true). This parameter only prevents from paused or failed <em>Workers</em>/<em>Exporters</em> from being returned.
+               </p>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>boolean</em>. 
+         </p>
+         
+         <p class="para_topicComponent">The method returns a table which contains all <em>Workers</em>, who provide one of the services for the services required by the <em>Importer</em>. Note that the method does not only provide those <em>Workers</em> that can be brokered.
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyBroker.localTestImportFor(ParallelStation3,0,tab3)
+MyBroker.localTestImportFor(pp3,0,tab3,true)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topic</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id26638.html">globalTestImportFor</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id46244.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:localOpenRequestsFor"></a><a class="link" href="id79003.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:serviceStat"></a></span></div>
+   </body>
+</html>

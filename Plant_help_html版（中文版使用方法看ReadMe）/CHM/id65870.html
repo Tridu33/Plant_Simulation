@@ -1,0 +1,130 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Value</title>
+      
+      <meta name="MS-HKWD" content="Value">
+      <meta name="MS-HKWD" content="Value,Variable text box">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Value</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id38977.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Data type"></a><a class="link" href="id42748.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Inherit value"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id44724.html">Variable</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79465.html">Dialog Window of the Variable</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id44359.html">Tab Value</a></span> &gt; <span class="simpleHTMLminitoc">Value</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11533"></span><p class="para_topic">Depending on the <a class="links" href="id38977.html">Data type</a> you selected, you can:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select the value from a drop-down list. </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/variableDT1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the value of the <em>Variable</em>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/variableDT2.gif"></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">For the data types <em>length</em>, <em>weight</em>, and <em>speed</em> the units you select in the <em>Plant Simulation</em> main window under <b class="uiTerm">File</b>
+     &gt; <b class="uiTerm">Model Settings/Preferences</b> &gt; <b class="uiTerm">Units</b> &gt; <a class="links" href="id19752.html">Mass</a> /<a class="links" href="id68083.html">Speed</a>/<a class="links" href="id64571.html">Length</a> determine how <em>Plant Simulation</em> interprets the value. A value of <code>100</code> with the length set to <em>km</em> is interpreted as 100 km. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Open</b> to open the dialog window of the objects that correspond to the data types <em>table</em>, <em>stack</em> or <em>queue</em>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/varialbeDatAtYPETable.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select the object of data type <em>object</em> in the dialog <a class="links" href="id17045.html">Select Object</a>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/variableDataTypeObject.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">You can also enter the path to and the name of the <em>object</em> into the text box <b class="uiTerm">Value</b>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body"> To open the dialog of the object, whose name you entered into the text box, press the <b class="uiTerm">F2</b> key.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p class="para_item">The data type <em>object</em> designates an <b class="uiTerm"> absolute</b> or a <b class="uiTerm"> relative</b> path to an object. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">The absolute path always begins with a period, starting in the <em>Class Library</em>, such as <em>.building</em> and identifies the object in a unique manner. Note that <em>Plant Simulation</em> does not modify the absolute path when you derive or insert a <em>Frame</em> employing a <em>Variable</em> object, i.e., the absolute path will still reference the source object, not to the one you derived or inserted!
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">The relative path, which starts with <em>location </em> or <em>~</em>, considers the current location of the <em>Variable</em> object each time the object <em>Variable</em> is accessed. Thus, when deriving or inserting an object consisting of several hierarchically structured <em> Frames</em> , you do not have to modify the existing <em> object</em> values in the <em>Variable</em> objects. 
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If you would like to use the data type <em>time</em> with a random number distribution, select the data type <em>randtime</em>, and enter the parameters of the distribution function, as the data type <a class="links" href="id33355.html">Time</a> only accepts constant values. Note you have to initialize the <em>randtime</em> value before accessing it, for example by employing the method <a class="links" href="id90889.html">rollDice</a>, which determines the next random number the <em>Variable</em> uses.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id73795.html">Value</a></p>
+         <p class="para_topic"><a class="links" href="id63871.html">asString</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id38977.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Data type"></a><a class="link" href="id42748.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Inherit value"></a></span></div>
+   </body>
+</html>

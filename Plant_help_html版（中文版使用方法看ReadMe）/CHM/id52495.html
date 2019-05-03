@@ -1,0 +1,132 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>delObject</title>
+      
+      <meta name="MS-HKWD" content="delObject">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">delObject</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id48235.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:addObject"></a><a class="link" href="id97856.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Visible"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id23822.html">Toolbox</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id22668.html">Attributes and Methods of the Toolbox</a></span> &gt; <span class="simpleHTMLminitoc">delObject</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3090"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.delObject(Icon:object) &rarr; integer</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>delObject</em> deletes the icon of an object from the toolbar designated by Path. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The parameter <em>Icon</em> of data type <em>object</em> designates the entire path to the object. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value </b></p>
+         <p class="para_topic">The return value has the data type <em>integer</em>.
+         </p>
+         <p class="para_topic">The <em>method</em> returns the position of the button, if the object was present on the toolbar. It returns 0, if it was not present. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- deletes the icon of the object MyStation from the toolbar Material Flow
+.MaterialFlow.Toolbar.delObject(.Materialflow.MyStation)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id58110.html">Remove from Toolbar</a></p>
+         <p class="para_topic"><a class="links" href="id60988.html">Add Objects to the Toolbox or Delete Them from It</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id48235.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:addObject"></a><a class="link" href="id97856.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Visible"></a></span></div>
+   </body>
+</html>

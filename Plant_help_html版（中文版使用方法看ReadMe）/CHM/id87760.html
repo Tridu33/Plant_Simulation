@@ -1,0 +1,43 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The Absolute Path</title>
+      
+      <meta name="MS-HKWD" content="Absolute Path">
+      <meta name="MS-HKWD" content="Paths">
+      <meta name="MS-HKWD" content="Paths,absolute">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">The Absolute Path</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Paths.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Paths"></a><a class="link" href="id57258.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:The Relative Path"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Names_1.html">Names</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Paths.html">Paths</a></span> &gt; <span class="simpleHTMLminitoc">The Absolute Path</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13612"></span><span id="ndxgenid_PlantSimulationENU_13613"></span><p class="para_topic">The <em>absolute path</em> is formed by adding up all names beginning with the top-level folder and the <em>Frame</em> in the <a class="links" href="id96990.html">Class Library</a> until it reaches the object of your choice. 
+         </p>
+         <p class="para_topic"> The absolute path starts with a period--standing for the <em>Class Library</em>--followed by the name of the folder and top-level <em>Frame</em>. Then a period and a name alternate until you reach the desired object, which again is preceded by a period: 
+         </p><pre class="indent">.Models.MyPlant.Engine_Assembly_Anytown.MyStation</pre><p class="para_topic">You might, for example, use the absolute path for a <em>control method</em>. This method might always execute certain actions before starting a simulation run, and which never change. Then it makes sense to add this method to the <em>Class Library</em> and reference it using its absolute path that never changes.
+         </p>
+         <p class="para_topic">You also have to use the absolute path for MUs when you model a complex station, for example a receiving station of a plant with one or more <em>Sources</em>.
+         </p>
+         <p class="para_topic">If, on the other hand, you want to use the same method, but with different source code, in instantiated <em>Frames</em>, you will use <a class="links" href="id57258.html">The Relative Path</a>, to make sure that each <em>Frame</em> finds the method where you programmed actions specific to this <em>Frame</em>. 
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Paths.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Paths"></a><a class="link" href="id57258.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:The Relative Path"></a></span></div>
+   </body>
+</html>

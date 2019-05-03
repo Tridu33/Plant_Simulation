@@ -1,0 +1,204 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Drag-and-drop control</title>
+      
+      <meta name="MS-HKWD" content="Drag-and-drop control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Drag-and-drop control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id42229.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Destructor control"></a><a class="link" href="id49265.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Fail control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id55025.html">Tools Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id31871.html">Edit Controls</a></span> &gt; <span class="simpleHTMLminitoc">Drag-and-drop control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3835"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/dragAndDropCtrl.gif" border="0"></p>
+         <p class="para_topic">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object. Enter the source code of the <b class="uiTerm">drag-and-drop control</b>. The program calls it for the object, which you drag onto another object and drop it there. The dropped object can be an object or text. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">You can assign the <em>method</em> a <b class="uiTerm">label</b>, which <em>Plant Simulation</em> shows in the status bar, when you drag an object onto the object for which you created the <b class="uiTerm">drag-and-drop control</b>. This way you can tell the user which actions the control executes.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">
+            <b class="uiTerm">Parameter</b>
+            
+         </p>
+         <p class="para_topic">
+            <em>Plant Simulation</em> passes the parameter <em>PathOfDroppedObject</em> of data type <em>string</em> to the called method, which contains the path of the dropped object.
+         </p>
+         <p class="para_topic">The <b class="uiTerm">standard drag-and-drop control</b> looks like this:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/dragAndDropControl.gif"></p>
+         <p class="para_topic">A <b class="uiTerm">drag-and-drop control</b> might look like this:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param str: string
+print &quot;Dragged object &quot;,str,&quot; onto &quot;,?,&quot; and dropped it there.&quot;
+-- ?,@ object with a control method, 
+-- onto which the other object is dropped.</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param draggedObjects: object[]) -- one-dimensional array with n objects
+                                -- the size of which can change
+var obj: object
+-- @,?: target object onto whicht the dragged object was dropped
+
+for var i := 1 to draggedObjects.dim 
+     obj := draggedObjects[i]
+    print i,&quot;: &quot;,draggedObjects[i] -- prints the dragged objects to the Console
+next</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, click in the text box, and press the <b class="uiTerm">F2</b> key.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Instead, you can also right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnDragDrop</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id20370.html">DragDropCtrl</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id55278.html">Use a Drag-and-Drop Control for Several Objects</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id42229.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Destructor control"></a><a class="link" href="id49265.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Fail control"></a></span></div>
+   </body>
+</html>

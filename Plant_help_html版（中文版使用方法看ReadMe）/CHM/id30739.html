@@ -1,0 +1,194 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Dismantle Station that Removes the Parts</title>
+      
+      <meta name="MS-HKWD" content="Configure the Dismantle Station that Removes the Parts">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Configure the Dismantle Station that Removes the Parts</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id28207.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Source Where the Cars Enter the Junk Yard"></a><a class="link" href="id20842.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Station That Tests the Parts"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id77774.html">Removing Parts with the Dismantle Station</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Dismantle Station that Removes the Parts</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_864"></span><p class="para_topic">Insert and configure the <em>DismantleStation</em> which removes the mounting parts from the main part. In our example it removes the <em>trunk lid</em>, the outside <em>mirrors</em>, and the <em>wheels</em> from the car:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select the <b class="uiTerm">sequence</b> in which it moves the parts on to its successors. We selected <b class="uiTerm">Main MU after other MUs</b>, which means that it first moves the mounting parts--trunk lid, outside mirrors, wheels in our case--on to the successor, and then the main <em>MU</em>, the stripped car in our case.
+               </p>
+               
+               <p class="para_item">We then clicked <b class="uiTerm">Dismantle Table</b> and entered the required information about the mounting parts which we want to remove: 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">We want to remove <code>4</code>
+                        <code>wheels</code> and send them on to the successor with the number <code>2</code> of the <em>DismantleStation</em>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">We want to remove <code>2</code>
+                        <code>mirrors</code> and send them on to the successor with the number <code>2</code>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">We want to remove <code>1</code>
+                        <code>trunkLid </code> and send it on to the successor with the number <code>2</code>. 
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="50%">
+                           
+                           <col span="1" width="50%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/dismantleDismantleStation.gif" border="0"></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/dismantleSuccessor.gif" border="0"></p>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the <b class="uiTerm">dismantle mode</b>. We used the default setting <b class="uiTerm">Create MUs</b>; the <em>DismantleStation</em> then creates a new <em>part</em> for each successor and moves that <em>part</em> there.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the <b class="uiTerm">successor</b> to which the <b class="uiTerm">main MU</b>, the stripped car in our case, moves. We used the default setting <b class="uiTerm">1</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select if the <em>DismantleStation</em> moves the main <em>MU</em> or a new <em>MU</em> in to its successor. We used the default setting <b class="uiTerm">Main MU</b>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">As removing the parts also takes up some time, we entered <code>30</code> minutes as the <b class="uiTerm">processing time</b> on the tab <b class="uiTerm">Times</b>.
+         </p>
+         <p class="para_topic">As we want to also show that the parts were removed from the car, we drew an icon of the car without these parts. This icon has the number 1.</p>
+         <p class="para_topic">To make the successor line display the picture of the stripped car, we created an <b class="uiTerm">entrance control</b> for this line and programmed it to switch to the icon with the number 1 once the car moves onto it.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/dismantleLineSwitchIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/dismantleCarsIcons.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table><pre class="indent">@.CurrIconNo := 1</pre><p class="para_topic">The result looks like this:</p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/dismantlePartsOff1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/dismantlePartsOff2.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id28207.html">Configure the Source Where the Cars Enter the Junk Yard</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id20842.html">Configure the Station That Tests the Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id45420.html">Configure the Station That Distributes the Removed Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id77774.html">Removing Parts with the Dismantle Station</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id28207.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Source Where the Cars Enter the Junk Yard"></a><a class="link" href="id20842.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Station That Tests the Parts"></a></span></div>
+   </body>
+</html>

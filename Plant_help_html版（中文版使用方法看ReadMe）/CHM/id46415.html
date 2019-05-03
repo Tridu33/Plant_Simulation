@@ -1,0 +1,98 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Model a Worker Who Carries Parts Between Workplaces</title>
+      
+      <meta name="MS-HKWD" content="Model a Worker Who Carries Parts Between Workplaces">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Model a Worker Who Carries Parts Between Workplaces</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id28636.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define How Many Workers Are Created When the Model is Initialized"></a><a class="link" href="xid1244529.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Worker Who Carries Two Parts in 2D"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18156.html">Modeling Workers and the Jobs They Do</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id46415.html">Model a Worker Who Carries Parts Between Workplaces</a></span> &gt; <span class="simpleHTMLminitoc">Model a Worker Who Carries Parts Between Workplaces</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_785"></span><p class="para_topic">The <a class="links" href="id67192.html">Worker</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/workerSm.gif" border="0"> can pick up and carry parts, which are ready to leave the station, to the destination object, and place them there. To do so, select the strategy <b class="uiTerm">Carry part away</b> from the drop-down list on the tab <b class="uiTerm">Exit Strategy</b> of the material flow object. 
+         </p>
+         <p class="para_topic">If you would like to define the <a class="links" href="id79942.html">Loading time</a> and/or the <a class="links" href="id20650.html">Unloading time</a>, you can enter them into the <a class="links" href="id27173.html">Workplace</a> that is attached to the station.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Click <b class="uiTerm">Apply</b> to display the dialog items of this strategy.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The <em>Worker</em> evaluates the <em>part</em>
+            <b class="uiTerm">targets</b> and walks to the closest one first. At the target station, he deposits all parts destined for this station. If he carries additional parts, he evaluates the next target and walks to the closest one.
+         </p>
+         <p class="para_topic">At the end of his shift the <em>Worker</em> talks back to his <em>WorkerPool</em> and deposits the parts he could not deliver in the <a class="links" href="id84966.html">Parts buffer</a>, which you assigned to the <em>WorkerPool</em>. If you did not assign a <em>Buffer</em> to the <em>Workerpool</em>, <em>Plant Simulation</em> shows a warning and stops the simulation. When a new shift starts, <em>Plant Simulation</em> treats the parts in the <em>Buffer</em> according to the <b class="uiTerm">exit strategy</b> you selected there. When you select <b class="uiTerm">Carry part away</b>, the <em>Worker</em> who carries parts requests the service, which you entered.
+         </p>
+         <p class="para_topic">You can, for example:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id78639.html">Model a Worker Who Walks on FootPaths</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="xid1244529.html">Model a Worker Who Carries Two Parts in 2D</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="xid1244531.html">Model a Worker Who Carries Two Parts in 3D</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id11672.html">Model a Worker Who Carries Parts between Workplaces in 3D</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="xid1244532.html">Model a Worker Who Walks Freely Within the Model</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id83251.html">Model and Record Times for Picking-up and for Depositing Parts</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Compare the video Worker Carrying Parts between Workplaces under the Window ribbon tab &gt; Start Page &gt; Getting Started &gt; Videos</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to </b><a class="links" href="id93561.html">Model a Worker Who Works at a Machine</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id83796a.html">Model a Worker Who Repairs a Machine</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id28636.html">Define How Many Workers Are Created When the Model is Initialized</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to </b><a class="links" href="id86904.html">Model Workers with Importer, Broker and Exporter</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id18156.html">Modeling Workers and the Jobs They Do</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id28636.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define How Many Workers Are Created When the Model is Initialized"></a><a class="link" href="xid1244529.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Worker Who Carries Two Parts in 2D"></a></span></div>
+   </body>
+</html>

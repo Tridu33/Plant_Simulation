@@ -1,0 +1,53 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Method</title>
+      
+      <meta name="MS-HKWD" content="Method">
+      <meta name="MS-HKWD" content="Method,user-defined attribute of type">
+      <meta name="MS-HKWD" content="Method">
+      <meta name="MS-HKWD" content="Method,data type">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Method</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id51728.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:List"></a><a class="link" href="id42479.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Money"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58240.html">Data Types</a></span> &gt; <span class="simpleHTMLminitoc">Method</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13729"></span><span id="ndxgenid_PlantSimulationENU_13730"></span><p class="para_topic">A user-defined attribute of data type <em>method</em> is a part of the object, i.e., it moves with the object, when you insert it into another <em>Frame</em> or model or when you move it. Compare <a class="links" href="id35448.html">Entrance control</a> and <a class="links" href="id43255.html">self</a> for details about using it. 
+         </p>
+         <p class="para_topic">Method execution for user-defined attributes of data type <em>method</em>, which are deleted while they are being executed, is terminated immediately, it will not be continued. Compare the following examples: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Suppose that an MU has a <em>user-defined attribute method</em>, which was suspended via a <em>waituntil instruction</em>. Then, the MU is deleted in the <em>Drain</em>, which naturally also deletes its <em>user-defined attributes</em>. Thereupon the <em> Method</em> is deleted from the list of suspended methods and method execution is terminated, i.e., the instructions after the <em>waituntil instruction</em> will not be executed. If the <em> attribute method</em> was called from another <em> Method</em>, execution of this <em>Method</em> will be continued. When the <em>attribute method</em> had a return value, the value, which the implicitly existing local variable <em>result</em> had at this point in time, will be returned to the calling <em>Method</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Suppose that an MU has a <em>user-defined attribute method</em>, which is called by the entrance control of a <em>Station</em>. The <em>attribute method</em> in turn calls a <em>Method</em> that is inserted in the <em>Frame</em>. This <em>Method</em> deletes the MU with the statement <b class="uiTerm">Station.Cont.delete</b>. Both the execution of the <em>attribute method</em> and of the <em>Method</em> called by it are terminated immediately. The return value of the <em>attribute method</em> (or VOID if no return value was declared) will be returned to the <b class="uiTerm">entrance control</b>, whose execution is continued.
+               </p>
+               
+            </li>
+         </ul>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id51728.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:List"></a><a class="link" href="id42479.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Money"></a></span></div>
+   </body>
+</html>

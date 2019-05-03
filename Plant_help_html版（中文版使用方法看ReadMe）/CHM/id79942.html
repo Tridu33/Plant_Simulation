@@ -1,0 +1,77 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Loading time</title>
+      
+      <meta name="MS-HKWD" content="Loading time">
+      <meta name="MS-HKWD" content="Loading time,Workplace">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Loading time</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id38862.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Times"></a><a class="link" href="id20650.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Unloading time"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27173.html">Workplace</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48161.html">Dialog Window of the Workplace</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id38862.html">Tab Times</a></span> &gt; <span class="simpleHTMLminitoc">Loading time</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8962"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/loadingTime.gif" border="0"></p>
+         <p class="para_topic">The <b class="uiTerm">loading time</b> is the time it takes the <a class="links" href="id67192.html">Worker</a> for picking up a part at a station. After the loading time has elapsed, the <em>Worker</em> waits for the delay time to pass if he still has carrying capacity. If not, he immediately carries the part to the target station and places it there. 
+         </p>
+         <p class="para_topic">The part is booked on the <em>Worker</em> while he picks it up. The processing station is locked until the loading time has elapsed.
+         </p>
+         <p class="para_topic">Select a distribution, and enter the values, which that distribution requires,into the text box. The program shows these values along the top border of the tab. You can also enter a constant time(<b class="uiTerm">Const</b>).
+         </p>
+         <p class="para_topic">When you select the <a class="links" href="id90935.html">Formula</a> distribution, you can enter a numeric expression or the name of a <em>Method</em>. You can use the anonymous identifier @ to access the <em>part</em> for which the loading time applies. The anonymous identifier ? points to the <em>Workplace</em>. You can access the <em>Worker</em> with <code>?.Cont</code>. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Behavior during interruptions of the <em>Worker</em></p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><em>Plant Simulation</em> extends the loading time by <b class="uiTerm"> failure</b> times of the <em>Worker</em>. The processing station remains locked during the failure. 
+         </p>
+         <p class="para_topic">When the <em>Worker</em>
+            <b class="uiTerm">pauses</b> during the loading time, <em>Plant Simulation</em> cancels the loading time and considers it as completely elapsed. This means that the <em>Worker</em> carries at least one part to the <em>Workerpool</em>. When the <b class="uiTerm"> shift</b> ends during the loading time, <em>Plant Simulation</em> cancels the loading time and considers it as completely elapsed. This means that the <em>Worker</em> carries at least one part to the parts buffer. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Behavior during interruptions of the processing station.</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Failures</b> of the processing station do not affect loading the part through the <em>Worker</em>. The part is already located at the <em>Worker</em> and loading takes place during the failure. 
+         </p>
+         <p class="para_topic">The same applies for processing stations which are <b class="uiTerm">stopped</b>, <b class="uiTerm">paused</b>, or <b class="uiTerm">unplanned</b>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id44494.html">LoadingTime</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id38862.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Times"></a><a class="link" href="id20650.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Unloading time"></a></span></div>
+   </body>
+</html>

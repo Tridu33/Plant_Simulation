@@ -1,0 +1,417 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Edit Controls</title>
+      
+      <meta name="MS-HKWD" content="Edit Controls">
+      <meta name="MS-HKWD" content="Edit Controls,Tools menu">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Edit Controls</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id55025.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tools Menu"></a><a class="link" href="id17045.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Select Object"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id55025.html">Tools Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id31871.html">Edit Controls</a></span> &gt; <span class="simpleHTMLminitoc">Edit Controls</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3821"></span><p class="para_topic">The menu command <b class="uiTerm">Edit Controls</b> opens the dialog <b class="uiTerm">Edit Controls</b>. You can make the <em>Plant Simulation</em> objects react to a number of user actions, such as inserting and deleting objects, etc. User input calls the <em>Method</em> you entered. You can also assign <em>Methods</em> from within other <em>Methods</em>. The respective attributes are described under <a class="links" href="id17950.html">Attributes for Controls of All Objects</a>. 
+         </p>
+         <p class="para_topic">Depending on their functions, the objects provide different controls. The <em>EventController,</em> for example, does not have a <b class="uiTerm">rename control</b>, as you cannot rename it. <em>Control methods</em> which are available only for certain objects are explained in the respective sections. Controls that are not available for the object are deactivated, i.e., grayed out.
+         </p>
+         <p class="para_topic">Select a <em>Method</em> to be activated, when <em>Plant Simulation</em> performs a certain action:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> next to the name of the control. In the dialog <a class="links" href="id17045.html">Select Object</a>, navigate to the folder in which the <em>Method</em> object is located and select it.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Or right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>, such as <code>self.ExitControlEnginePlant</code>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnBuilt_in_name_of_the_control</code>, such as <code>self.OnEntrance</code>. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, click in the text box, and press the <b class="uiTerm">F2</b> key.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Enter the source code of this control into the <em>Method</em> that opens. 
+         </p>
+         <p class="para_topic">This control is a user-defined attribute of data type <em>method</em>. To open and modify this <em>Method</em>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click in the text box and press <b class="uiTerm">F2</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Shift</b> and double-click in the text box.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the tab <b class="uiTerm">User-defined Attributes</b> and double-click the name of the <em>Method</em> in the list pane. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/selectControlPrint1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/selectControlPrint2.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Once you enter a control, either here or on the <a class="links" href="id33317.html">Tab Controls</a>, the context menu of the object in the <em>Frame</em> shows the command <a class="links" href="id66412.html">Controls</a>. You can then select the name of the control on the submenu to edit it.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/controlsContextFrame.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/controlsContextFrame2.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">
+            <b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id45798.html">Define Controls</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id40575.html">Rename control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">The dialog <a class="links" href="id17045.html">Select Object</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id23787.html">Relabel control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id97160.html">Constructor control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id13190.html">Change path control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id42229.html">Destructor control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id35466.html">Move-to-folder control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id98362.html">Select control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id52433.html">Init control</a> of the EventController
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id31361.html">Move-in-frame control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id49989.html">Init control</a> of the Transporter
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id23491.html">Open control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id49265.html">Fail control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id28583.html">Close control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id71158.html">Pause control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id11703.html">Permit-delete control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id39535.html">Unplanned control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id21174.html">Drag-and-drop control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id85496.html">Available control</a> of Exporter/Worker
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43362.html">Connect control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id38287.html">Not-available control</a> of Exporter/Worker
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id16869.html">Plausibility control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id55025.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tools Menu"></a><a class="link" href="id17045.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Select Object"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.generateHollowRectangle</title>
+      
+      <meta name="MS-HKWD" content="_3D.generateHollowRectangle">
+      <meta name="MS-HKWD" content="generateHollowRectangle">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.generateHollowRectangle</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id47166.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.generateHollowEllipse"></a><a class="link" href="id36926.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.generateRectangle"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id82413.html">Built-in Methods for Creating Extrusion Profiles</a></span> &gt; <span class="simpleHTMLminitoc">_3D.generateHollowRectangle</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14622"></span><span id="ndxgenid_PlantSimulationENU_14623"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">basis.~._3D.generateHollowRectangle(BasePoint:length[2], Width:length, Height:length, BarThickness:length)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.generateHollowRectangle</em> creates a two-dimensional hollow rectangular profile which you can use in your user-defined extrusion configuration. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>BasePoint</em> is an <em>array</em> of data type <em>length</em> which sets the base point of the hollow rectangular profile.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Width</em> of data type <em>length</em> sets its width.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Height</em> of data type <em>length</em> sets its height.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>BarThickness</em> of data type <em>length</em> sets the thickness of the bar.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var profile : any := basis.~._3D.generateHollowRectangle([2.6,4.5], 4, 2, 3, 0.1)
+ --  returns a two-dimensional array containing the values defining a profile; to be used for an extrusion profile</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id47166.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.generateHollowEllipse"></a><a class="link" href="id36926.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.generateRectangle"></a></span></div>
+   </body>
+</html>

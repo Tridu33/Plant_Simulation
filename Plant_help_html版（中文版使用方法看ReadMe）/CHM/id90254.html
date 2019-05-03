@@ -1,0 +1,212 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Frame</title>
+      
+      <meta name="MS-HKWD" content="Frame">
+      <meta name="MS-HKWD" content="Frame,object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Frame</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id61763.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ExitSelectionProperty"></a><a class="link" href="id93007.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:The Frame Window"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id90254.html">Frame</a></span> &gt; <span class="simpleHTMLminitoc">Frame</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6241"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/06FrameIcon.gif" border="0"></p>
+         <p class="para_topic">Create your simulation models in the <em>Frame</em> located in the folder <b class="uiTerm">Models</b> in the <em>Class Library</em>. The <em>Frame</em> serves for grouping objects and to build hierarchically structured models by inserting any of the built-in objects or any objects you design. The <em>Frame</em> represents the entire plant, while you can model sub-sections of the plant in <em>Frames</em> of their own, which you insert into the <em>Frame</em> representing the entire plant. Model transitions from <em>Frame</em> to <em> Frame</em> with the object <a class="links" href="id97801.html">Interface</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/06InterfaceIcon.gif" border="0">. Connect objects within the <em>Frame</em> and <em>Frames</em> with the object <a class="links" href="id29001.html">Connector</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/06ConnectorIcon.gif" border="0">. 
+         </p>
+         <p class="para_topic"> When you connect <em>Frames</em> with <em>Connectors</em>, <em>Plant Simulation</em> opens the dialog <b class="uiTerm">Select Interface</b> in which you have to select an <em>Interface</em>, which you inserted into the <em>Frame</em>. A <em>Frame</em> counts as unconnected when one of its <em>Interfaces</em> is not connected to the outside. 
+         </p>
+         <p class="para_topic"> The dialog <b class="uiTerm"> Select Interface</b>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Highlights the <a class="links" href="id97801.html">Interface</a> that has the least number of connections. In our example the <em>Interface</em> named <code>Unlimited</code> has one (<b class="uiTerm">1</b>) out of an unlimited number of possible connections. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Lists in brackets how many connections out of the number you defined the <em>Interface</em> has. In our example the <em>Interface</em> named <code>Max3</code> has one (<b class="uiTerm">1</b>) out of the three (<b class="uiTerm">3</b> ) possible connections. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Marks the <em>Interface</em>, which has reached its maximum number of external connections with an asterisk *. In our example the <em>Interface</em> named <code>Only1</code> has reached one (<b class="uiTerm">1</b>) out of one (<b class="uiTerm">1</b>) possible connections.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/SelectInterface82.gif"></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">We modeled most of the <a class="links" href="id54344.html">Tools</a>, such as the <a class="links" href="id86723.html">TransferStation</a> and the <a class="links" href="id53177.html">ExperimentManager</a>, and some of the objects in the <a class="links" href="id66772.html">Object Libraries</a> as application objects in a <em>Frame</em>. For this reason <b class="uiTerm">F1</b> opens the help for the <em>Frame</em>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p class="para_item">To open help for the tool, select <b class="uiTerm">Help</b> &gt;
+    <b class="uiTerm">Help</b> on in its dialog.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> After you start <em>3D</em>, the 2D <em>Frame</em> window shows the x-axis and the y-axis in red. The point where these two red Conveyors intersect is the point, which will be mapped to the zero point, i.e., the <a class="links" href="id26196.html">Position</a> of the grid, in 3D. You can set the origin of the grid in 2D with the attribute <a class="links" href="id54108.html">AxesOrigin</a>.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/xpos3d1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/xpos3d.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">You can also show a screenshot of the contents of a <em>Frame</em> in an <a class="links" href="id53118.html">HtmlReport</a>, compare <a class="links" href="id56556.html">Display a Frame</a>.
+         </p>
+         <p class="para_topic">When you insert a new <em>Frame</em> into your <b class="uiTerm">3D Only</b> model, it contains temporary (internal) deco graphics labeled <b class="uiTerm">Under Construction</b> to represent it outwards as long as you do not insert any other object into the <em>Frame</em>. This is because the default (external) graphics are set to be invisible.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/underConstruction.gif"></p>
+         <p class="para_topic">To add the <em>Frame</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; MaterialFlow &gt; Frame</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id54024.html"> Creating a Simple Simulation Model</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id78159.html"> Show the Contents of a Frame in the Class Library</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id93007.html"> The Frame Window</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id69343.html"> Working with the Frame</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id22536.html"> States of the Frame</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id11184.html"> Insert an Object from the Toolbox</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id33060.html"> Methods of the Frame</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id15361.html"> Insert an Object from the Class Library</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id87654.html"> Attributes of the Frame</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id61763.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ExitSelectionProperty"></a><a class="link" href="id93007.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:The Frame Window"></a></span></div>
+   </body>
+</html>

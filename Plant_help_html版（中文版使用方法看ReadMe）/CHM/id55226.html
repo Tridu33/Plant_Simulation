@@ -1,0 +1,143 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.TypeOfAnimations.createAnimationSpline</title>
+      
+      <meta name="MS-HKWD" content="_3D.TypeOfAnimations.createAnimationSpline">
+      <meta name="MS-HKWD" content="createAnimationSpline">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.TypeOfAnimations.createAnimationSpline</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id52796.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.MUAnimations.createAnimationPoint"></a><a class="link" href="id23084.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.TypeOfAnimations.getAnimation"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58665.html">Built-in Methods and Read-Only Attributes for Animations in 3D</a></span> &gt; <span class="simpleHTMLminitoc">_3D.TypeOfAnimations.createAnimationSpline</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14467"></span><span id="ndxgenid_PlantSimulationENU_14468"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path._3D.MUAnimations.createAnimationSpline(Name:string) &rarr; boolean
+Path._3D.SelfAnimations.createAnimationSpline(Name:string) &rarr; boolean
+Path._3D.CameraAnimations.createAnimationSpline(Name:string) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The method <em>_3D.TypeOfAnimations.createAnimationSpline</em> creates a new saved animation path of type Spline .
+         </p>
+         <p class="para_topic"> You can set the values of the animation path with the method <a class="links" href="id57582.html">_3D.TypeOfAnimations.setTable</a>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameter</b></p>
+         <p class="para_topic"> The parameter <em> Name</em> of data type string designates the name of the new animation path to be created.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic"> The return value has the data type <em>boolean</em>. 
+         </p>
+         <p class="para_topic"> It tells if the animation path was created successfully, i.e., if the name has not been assigned yet.</p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var a: boolean := self.~._3D.SelfAnimations.createAnimationSpline(&quot;spline movement&quot;)
+if not a
+   print &quot;The animation spline could not be created.&quot;
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id59120.html">Edit 3D Properties</a> &gt;<a class="links" href="id52643.html">Tab MU Animation</a></p>
+         <p class="para_topic"><a class="links" href="id59120.html">Edit 3D Properties</a> &gt;<a class="links" href="id74705.html">Tab Self Animation</a></p>
+         <p class="para_topic"><a class="links" href="id59120.html">Edit 3D Properties</a> &gt;<a class="links" href="id41051a.html">Tab Camera Animation</a></p>
+         <p class="para_topic"><a class="links" href="id45721.html">_3D.TypeOfAnimations.getTable</a></p>
+         <p class="para_topic"><a class="links" href="id57582.html">_3D.TypeOfAnimations.setTable</a></p>
+         <p class="para_topic"><a class="links" href="id34561.html">_3D.TypeOfAnimations.createAnimationCurve</a></p>
+         <p class="para_topic"><a class="links" href="id70922.html">_3D.TypeOfAnimations.createAnimationLine</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id52796.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.MUAnimations.createAnimationPoint"></a><a class="link" href="id23084.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.TypeOfAnimations.getAnimation"></a></span></div>
+   </body>
+</html>

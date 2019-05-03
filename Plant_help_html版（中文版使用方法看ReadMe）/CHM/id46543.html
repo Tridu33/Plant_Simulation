@@ -1,0 +1,118 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Create the Sequence of Stations within the Line</title>
+      
+      <meta name="MS-HKWD" content="Create the Sequence of Stations within the Line">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Create the Sequence of Stations within the Line</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id92392.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling a Kanban System"></a><a class="link" href="id56582.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the AssemblyStation"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id92392.html">Modeling a Kanban System</a></span> &gt; <span class="simpleHTMLminitoc">Create the Sequence of Stations within the Line</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_975"></span><p class="para_topic">We&rsquo;ll start modeling our Kanban system by establishing the sequence of stations within the plant. </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert a <a class="links" href="id70513.html">KanbanSource</a> and a <a class="links" href="id97720.html">KanbanBuffer</a>, which feed the wheels for our cars to the <em>AssemblyStation</em>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insKanbanSource.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert another <em>KanbanSource</em>, which produces the cars to which the wheels from the other line are attached. Insert a processing station, a <em>Station</em><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/SingleProcSm.gif" border="0"> in our case, to the right of the <em>KanbanSource</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert an <a class="links" href="id95185.html">AssemblyStation</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/assemblySm.gif" border="0"> to the right of the two feeding lines. It attaches the wheels to the cars.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert a <a class="links" href="id13702.html">KanbanStation</a> and a <em>Drain</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/drainSm_dup.gif" border="0">.This <em>KanbanStation</em> is the crucial station of the entire system as it orders the parts to be produced and assembled.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insKanbanSingleProc.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Connect all objects with <em>Connectors</em>. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Make sure that you connect the bottom line to the <em>AssemblyStation</em>
+                              <b class="uiTerm">before</b> connecting the top line otherwise the wheels will not be loaded onto the truck correctly! 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To view the order in which you connect the stations, click <b class="uiTerm">Options</b> &gt;
+      <b class="uiTerm">Show Predecessors</b> in the <b class="uiTerm">General</b> ribbon tab.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/kanbanPredecessor.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The model should then look like this:</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/kanbanMod1.gif"></p>
+         <p class="para_topic">After inserting the required objects into our simulation model, we have to configure them. </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id56582.html">Configure the AssemblyStation</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id75568.html">Configure the Kanban Station which Orders the Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id12277.html">Configure the Kanban Sources which Produce the Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id44619.html">Configure the Kanban Buffer which Manages Storing and Ordering of Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id75681.html">Program a Control which Orders Parts from the Kanban Buffer</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id92392.html">Modeling a Kanban System</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id92392.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling a Kanban System"></a><a class="link" href="id56582.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the AssemblyStation"></a></span></div>
+   </body>
+</html>

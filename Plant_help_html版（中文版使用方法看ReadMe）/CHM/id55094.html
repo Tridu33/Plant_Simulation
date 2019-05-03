@@ -1,0 +1,130 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Reload Parts with the Transfer Station</title>
+      
+      <meta name="MS-HKWD" content="Reload Parts with the Transfer Station">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Reload Parts with the Transfer Station</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id25602.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Load Parts with the Transfer Station"></a><a class="link" href="id83696.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Unload Parts with the Transfer Station"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id92136.html">Transferring Parts from Station to Station</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id82024.html">Load, Unload, and Reload Parts with the TransferStation</a></span> &gt; <span class="simpleHTMLminitoc">Reload Parts with the Transfer Station</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_597"></span><p class="para_topic">When <b class="uiTerm">reloading</b> parts, the <em>TransferStation</em> takes these parts from a means of transport (<em>Container</em> or <em>Transporter</em>), which is located at the parts station, and places them onto a <em>Container</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/containerSm_dup.gif" border="0"> or a <em>Transporter</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/transporterSmSm_dup.gif" border="0">, which is located at the target station. The parts station is the station, which provides the parts to be transported. The target station is the station onto which the parts will be placed. The reloading process starts as soon as both means of transport are ready.
+         </p>
+         <p class="para_topic">To model a reloading process, proceed like this:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert a <em>Source</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/sourceSm_dup.gif" border="0">, which creates the <em>Transporters</em>. In our sample model we named it <code>SourceTransporters</code>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/reloadSourceTransp.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert the <em>Track</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/lineSm_dup1.gif" border="0">, on which the <em>Transporter</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/transporterSmSm_dup.gif" border="0"> transports there loaded parts. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert a <em>TransferStation</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/transferStIconSm.gif" border="0">, which reloads the transported parts from the <em>Container</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/containerSm_dup.gif" border="0"> into the <em>Transporter</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/transporterSmSm_dup.gif" border="0">. In our sample model we named it <code>ReloadingStation</code>. Then, we tell this station what we want it to do. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">We want to reload parts, so we select <b class="uiTerm">Reload</b> as the <b class="uiTerm">Station type</b>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Then, we have to tell it where the <b class="uiTerm">parts</b> to be reloaded <b class="uiTerm">come from</b>. For this we drag the <em>Conveyor</em> from the <em>Frame</em> ever the text box in the dialog of the <em>ReloadingStation</em> and drop it there.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Next, we have to tell it where the <b class="uiTerm">means of transport</b>, our <em>Transporter</em>, <b class="uiTerm">is located</b>. For this we drag the <em>Track</em> from the <em>Frame</em> ever the text box in the dialog of the <em>ReloadingStation</em> and drop it there.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Finally, we have to designate the exact spot on the <em>Conveyor</em>, where the <em>ReloadingStation</em> removes the parts from the pallets. For this we enter <code>40.5</code> meters as the <b class="uiTerm">position of the sensor</b>, which the <em>ReloadingStation</em> automatically enters into the object <em>Conveyor</em>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/reloadAttr.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">As we want to reload the parts from the pallet onto a <em>Transporter</em>, we have to designate the exact spot on the <em>Track</em>, where the <em>ReloadingStation</em> loads the parts onto the <em>Transporter</em>. For this we enter <code>16</code> meters as the <b class="uiTerm">position of the sensor</b>, which the <em>ReloadingStation</em> automatically enters into the object <em>Track</em>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To successfully transfer the <em>MU</em> into the target station, you have to make sure that the target station provides enough space to accommodate the incoming <em>MU</em>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To set how we want the parts to be reloaded, we click the tab <b class="uiTerm">Advanced Attributes</b>. We want to load parts in blocks of <code>2</code>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/reloadAvanced.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id25602.html">Load Parts with the Transfer Station</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id83696.html">Unload Parts with the Transfer Station</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id21553.html">Create Sensors</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id82024.html">Load, Unload, and Reload Parts with the TransferStation</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id25602.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Load Parts with the Transfer Station"></a><a class="link" href="id83696.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Unload Parts with the Transfer Station"></a></span></div>
+   </body>
+</html>

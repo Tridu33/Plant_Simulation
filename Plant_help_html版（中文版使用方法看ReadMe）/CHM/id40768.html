@@ -1,0 +1,158 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Produce the Parts with a Source Using a Sequence Table</title>
+      
+      <meta name="MS-HKWD" content="Produce the Parts with a Source Using a Sequence Table">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Produce the Parts with a Source Using a Sequence Table</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id81873.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create the Work Plan"></a><a class="link" href="id26803.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Program the Exit Control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id49128.html">Producing and Processing Parts with a Work Plan</a></span> &gt; <span class="simpleHTMLminitoc">Produce the Parts with a Source Using a Sequence Table</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_531"></span><p class="para_topic">To produce the parts in the sequence, which we specify in a sequence table:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert a <em>Source</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/sourceSm_dup.gif" border="0"> into the <em>Frame</em>. Select <b class="uiTerm">MU selection</b> &gt; <a class="links" href="id37478.html">Sequence cyclical</a>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplan1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert a <em>TableFile</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/tableSm_dup.gif" border="0"> into the <em>Frame</em>. Drag this table over the text box <b class="uiTerm">Table</b>. <em>Plant Simulation</em> automatically assigns the columns on the table the correct data types and the correct column headers. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplan21.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open the table and enter the type of part you want to produce, how many of them, their name and the name of the sub-table containing the attributes of the part. </p>
+               
+               <p class="para_item">In our example the <em>Source</em> is to produce <code>1</code> part of the <em>MU</em> class <code>Part</code> each with the name <code>MyPartA</code> and <code>MyPartB</code>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplan31.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To create a sub-table for the user-defined attributes of the parts, enter an identifier into the cells below <b class="uiTerm">Attributes</b>. To open this sub-table, double-click the cell. Here we enter the names and the values of two user-defined attributes: One sets the name of the part, the <code>PartType</code> is either <code>MyPartA</code> or <code>MyPartB</code>. The other sets the position of the part in the work plan (<code>PositionInWorkPlan</code>). In our case the sequence of operations always starts at position <code>0</code>, which is the <em>Source</em>. The counter, which we programmed in the <b class="uiTerm">exit control</b>, then steps through the stations: <em>Milling</em> is position 1, <em>Drilling_A</em> or <em>Drilling_B</em> are position <b class="uiTerm">2</b> and <em>Packing</em> is position <b class="uiTerm">3</b>. 
+               </p>
+               
+               <table border="1" cellpadding="10" width="100%" align="center">
+                  
+                  <tbody>
+                     
+                     <tr align="left">
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">User-defined Attributes for MyPart A</p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">User-defined Attributes for MyPart B</p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplan41.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplan42.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+               <p class="para_item">During the simulation run <em>Plant Simulation</em> enters these user-defined attributes into the created <em>Parts</em>. The <em>Part</em> with the number <b class="uiTerm">5628</b>, for example, is of type <b class="uiTerm">MyPart B</b> and is located on station <b class="uiTerm">3</b>, <em>Packing</em>, according to the position, which we defined in the work plan as operation.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/WorkplanEntity.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplanB.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Finally, enter the name of the <b class="uiTerm">exit control</b>, which finds the processing station and moves the part onto it. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplanSourceControl.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id81873.html">Create the Work Plan</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id45128.html">Create the Processing Stations</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id49128.html">Producing and Processing Parts with a Work Plan</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id81873.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create the Work Plan"></a><a class="link" href="id26803.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Program the Exit Control"></a></span></div>
+   </body>
+</html>

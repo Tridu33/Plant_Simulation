@@ -1,0 +1,115 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Import JT Graphics Representing an Object</title>
+      
+      <meta name="MS-HKWD" content="Import JT Graphics Representing an Object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Import JT Graphics Representing an Object</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id26637.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Change the Orientation and the Position of the Airplane on the Stations"></a><a class="link" href="id39788.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Illustrating State Graphics"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58193.html">Modeling in 3D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id83093.html">Working with Graphics</a></span> &gt; <span class="simpleHTMLminitoc">Import JT Graphics Representing an Object</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1294"></span><p class="para_topic">Instead of using shapes, which you create in <em>3D</em> itself, you can also import graphics to represent an object. In our example we used a number of JT graphics, which we received from a colleague, to build a dune buggy. Proceed as follows: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Duplicate the part <b class="uiTerm">.MUs.Part</b> in the <em>Class Library</em> and rename it to <code>DuneBuggy</code>. Add the graphic groups containing the graphics of the components on the <a class="links" href="id24835.html">Tab Graphics</a>. We added the following graphic groups and named them as shown in the screenshot below.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/DuneBuggyJTGroups.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Import the JT graphics into the graphic groups with the respective name. Import the files <em>Body.jt</em> and <em>Seats.jt</em> into all graphic groups whose name starts with <b class="uiTerm">Body</b> or <b class="uiTerm">Seats</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/DuneBuggyJTfiles.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Change to the 3D ribbon tab <b class="uiTerm">Edit</b> and click <b class="uiTerm">Import Graphics</b>, navigate to the folder containing the JT graphics, and click <b class="uiTerm">Open</b> in the dialog <b class="uiTerm">Open</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/DuneBuggyJTfilesImport1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Drag the JT graphic, the <b class="uiTerm">Frame</b> of the dune buggy in the example below, roughly to the position in the <em>Frame</em> named <b class="uiTerm">.MUs.DuneBuggy</b>, where you want it to be, and click the left mouse button. Select the graphic group to which you want to add the graphic, <b class="uiTerm">Frame</b> in our case.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/DuneBuggyJTfilesImport2.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Repeat the steps above for all JT files.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Arrange the position of the components of the dune buggy. We used a combination of the arrow keys and the settings in the dialog <b class="uiTerm">Edit 3D Properties</b>.
+               </p>
+               
+               <p class="para_item">Place the three body panels at exactly the same position. Do the same for the three seat assemblies. This way you can later show or hide selected body panels and seats to test different color combinations.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To change the color of a graphic, click into the background of the <em>Frame</em>
+                  <b class="uiTerm">.MUs.DuneBuggy</b> with the right mouse button, and select <b class="uiTerm">Show Graphic Structure</b>. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Expand the graphic group by clicking the <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/plusSign.gif" border="0"> button, <b class="uiTerm">BodyRed</b> in our case. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click the <b class="uiTerm">JT</b> button <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/openIn3DJt.gif" border="0"> and look for the node with a <b class="uiTerm">-M</b> at the end of the name. This designates that this node defines a material.  
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click that node with the right mouse button, <b class="uiTerm">(1-JtGroup-M)</b> in our case, and select <b class="uiTerm">Edit 3D Properties</b>. Experiment with the different material colors to create the look that you want. Using the color combinations, you can fine-tune glossy effects etc.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/duneBuggyJTRed.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id51663.html">Use a Different Graphic for an Object</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id83093.html">Working with Graphics</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id26637.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Change the Orientation and the Position of the Airplane on the Stations"></a><a class="link" href="id39788.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Illustrating State Graphics"></a></span></div>
+   </body>
+</html>

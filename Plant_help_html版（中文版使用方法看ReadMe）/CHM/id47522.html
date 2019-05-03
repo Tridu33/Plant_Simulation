@@ -1,0 +1,278 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Working</title>
+      
+      <meta name="MS-HKWD" content="Working">
+      <meta name="MS-HKWD" content="Working,general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Working</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id34504.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Resource Statistics"></a><a class="link" href="id79387.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Setting-Up"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id23074.html">Statistics of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id34504.html">Resource Statistics</a></span> &gt; <span class="simpleHTMLminitoc">Working</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3883"></span><p class="para_topic">The definition of <em>working</em> depends on the object that processes the <em>MU</em>:
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left" bgcolor="">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">The object</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Is working when </p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id18003.html">Station</a>, <a class="links" href="id29026.html">ParallelStation</a>, <a class="links" href="id95185.html">AssemblyStation</a>, <a class="links" href="id85371.html">DismantleStation</a>, <a class="links" href="id21426.html">PlaceBuffer</a>, <a class="links" href="id15363.html">Drain</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> it processes at least one <em>MU</em></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id37562.html">Track</a>, <a class="links" href="id73650.html">TwoLaneTrack</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> at least one <em>MU</em> is moving on it
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id60466.html">Conveyor</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> its current speed is not 0. It can also be <em>working</em> when it is moving and when it does not transport any part
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id46256.html">Turnplate</a>, <a class="links" href="id63264.html">Turntable</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> it has a speed or when it is rotating, no matter if it moves a part or not</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id41205.html">Converter</a>, <a class="links" href="id74072.html">AngularConverter</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> has a speed or when the moving time is running</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id61965.html">PickAndPlace Robot</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> it is rotating, no matter if it moves a part or not or when it picks a part up or deposits a part</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id65865.html">Source</a>, <a class="links" href="id54257.html">Store</a>, <a class="links" href="id47519.html">Buffer</a>, <a class="links" href="id42793.html">Transporter</a>, <a class="links" href="id44788.html">Container</a>, <a class="links" href="id47279.html">Tank</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> --</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id24372.html"> Sorter</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"> --</p>
+                     
+                     <p class="para_td_last">The processing time is identical with the sorting time, i.e., it is always zero. This means the sorting takes place instantaneously. Even though the processing time is zero, each sorting action counts as a processing procedure.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id40724.html">FluidDrain</a>, <a class="links" href="id71012.html">FluidSource</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> material flows</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id16225.html">Mixer</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> when materials are mixed</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id77602.html">Portioner</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> when the is transformed into an MU</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id39276.html">DePortioner</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> when the MU is transformed into a material</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The read-only attribute <a class="links" href="id57073.html">ResWorking</a>, returns the state <em>working </em> of the resource.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The LED of a station that is processing parts is green <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/LEDWorking.gif" border="0">.
+         </p>
+         <p class="para_topic">The <a class="links" href="id37822.html">Statistics Report</a> shows the <a class="links" href="id54435.html">Working Time</a> below <a class="links" href="id71915.html">Resource Statistics of Stationary Resources</a>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk</b></p>
+         <p class="para_topic"><a class="links" href="id57073.html">ResWorking</a></p>
+         <p class="para_topic"><a class="links" href="xid1484798.html">ResCurrentState</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id64297.html">Failure relates to</a> &gt; <a class="links" href="id64297.html#id44393">The processing time</a></p>
+         <p class="para_topic"><a class="links" href="id16207.html">Tab Statistics</a></p>
+         <p class="para_topic"><a class="links" href="id46055.html">States and Icons of the Material Flow Objects</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id34504.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Resource Statistics"></a><a class="link" href="id79387.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Setting-Up"></a></span></div>
+   </body>
+</html>

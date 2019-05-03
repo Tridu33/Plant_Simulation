@@ -1,0 +1,434 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Plan the Layout and the Structure of Your Dialog</title>
+      
+      <meta name="MS-HKWD" content="Plan the Layout and the Structure of Your Dialog">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Plan the Layout and the Structure of Your Dialog</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id47691.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set Parameters for Objects in Your Own Dialog"></a><a class="link" href="id45562.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Design a Simple Dialog"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18086.html">Setting Parameters in the Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47691.html">Set Parameters for Objects in Your Own Dialog</a></span> &gt; <span class="simpleHTMLminitoc">Plan the Layout and the Structure of Your Dialog</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1741"></span><p class="para_topic">Before you start designing your dialog, take a few moments to think about its layout. Orient the dialog items in the direction the user reads, in Western countries this is from left-to-right and from top-to-bottom. Place the primary dialog item with which the user interacts as close to the upper corner of the dialog as possible. Do the same when orienting dialog items within groups in your dialog. Place the major command buttons stacked along the right border of the dialog or lined up across the bottom of the dialog. Place the most important button as the first button in a set of buttons. </p>
+         <p class="para_topic">Also, take a few moments to decide about the structure of your dialog. Ask yourself which dialog items you do need, and if you can show them all in a <b class="uiTerm">simple dialog</b> with a flat hierarchy in the dialog or if you need to present the information on <b class="uiTerm">tabs</b>. 
+         </p>
+         <p class="para_topic">The structure you decide upon determines how and in which order you create the dialog items. Let us say, you want to show the dialog items on tabs. Then, you first have to create the <b class="uiTerm">Tab Control</b>, which is the container that accommodates the individual tabs. After this you have to create the individual tabs, and finally you can insert the dialog items onto each one of these <b class="uiTerm">tabs</b>.
+         </p>
+         <p class="para_topic">The same applies to <b class="uiTerm">groups</b> of dialog items. First, create the group and then insert and position the items you want to add so that group. The y-coordinate you enter for items in a group relate to the y-coordinate within that group, not within the overall dialog. 
+         </p>
+         <p class="para_topic">For both dialog types you can create menus and you can create these types of dialog items. </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Dialog item</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Icon</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Looks like this</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Static Text Box</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icStatTextBox.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/staticText.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Text Box</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icTextBox.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/dialogTextbox.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Button</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icButton.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/Orderactive.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Drop-Down List Box</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icDDListbox.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/dropdownlist.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Group Box</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icGroupBox.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/groupBox.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Check Box</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icCheckbox.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/checkBox.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Radio Button</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icRadioButton.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/radioButton.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">List Box</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icListfield.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/listBox.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Image</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icPicture.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/imagesmall.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">List View</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icListView.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/listView.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Tab Control</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icTabControl.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/tabcontrol1.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Tab Page</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/icTab.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/tabpage.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">
+                        <b class="uiTerm">Menu/menu command</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/DmenuIcon.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/menu.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Depending on your modeling needs, you will:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id45562.html">Design a Simple Dialog</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id86289.html">Design a Tabbed Dialog</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">For both types you have to program the actions, which the dialog items execute, when the user selects them.</p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/simpleDialog2.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Setting_Parameters_in_the_Model/tbFinished.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em>shows the dialog with the settings you select in <b class="uiTerm">Control Panel</b>
+   &gt; <b class="uiTerm">Display under Display Properties</b> &gt; <b class="uiTerm">Appearance</b> &gt;
+    <b class="uiTerm">Font size</b>as well as with the <b class="uiTerm">Font</b> and the <b class="uiTerm">Size</b>you can select, when you click <b class="uiTerm">Advanced</b>. When you change these settings, the dialog scales text, while the images always retain their size in pixels. For this reason it can happen that text overlaps the image. We recommend to test your dialogs with different display settings to make sure that everything works as you expect it. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id62613.html">Program Actions which the Dialog Items Execute</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id26869.html">Program Actions for Interacting with the Dialog</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id47691.html">Set Parameters for Objects in Your Own Dialog</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id47691.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Set Parameters for Objects in Your Own Dialog"></a><a class="link" href="id45562.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Design a Simple Dialog"></a></span></div>
+   </body>
+</html>

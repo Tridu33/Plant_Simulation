@@ -1,0 +1,346 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Check Statistics of Exporter and Worker</title>
+      
+      <meta name="MS-HKWD" content="Check Statistics of Exporter and Worker">
+      <meta name="MS-HKWD" content="Statistics">
+      <meta name="MS-HKWD" content="Statistics,Worker and Exporter">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Check Statistics of Exporter and Worker</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id68851.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Check Product Statistics of Parts"></a><a class="link" href="id25473.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Viewing the Statistics Report"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42624.html">Animating the Simulation Model and Viewing the Results</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84748.html">Viewing and Visualizing Statistics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56050.html">Viewing Statistics in the Dialogs of the Objects</a></span> &gt; <span class="simpleHTMLminitoc">Check Statistics of Exporter and Worker</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1444"></span><span id="ndxgenid_PlantSimulationENU_1445"></span><p class="para_topic">The <a class="links" href="id93756.html">Tab Statistics</a> show the values split up by <em>Services</em> and by <em>Exporter</em>. For each of these blocks, adding up the individual values yields 100 percent. You can query most of these values with the <em>Methods</em> that are listed next to the name of the value in the description of the <a class="links" href="id37822.html">Statistics Report</a>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/statExporter.gif"></p>
+         <p class="para_topic">When you select the check box <b class="uiTerm">Fail services</b> on the tab <b class="uiTerm">Attributes</b>, the <em>Exporter</em> collects the failure times of the <em>Services</em> and of the <em>Exporter</em>. When you deactivate it, the <em>Exporter</em> only collects the failure times of the <em>Exporter</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/statExp11.gif"></p>
+         <p class="para_topic">The <em>Exporter</em> only collects <em>failed</em> times that take place during the processing and the set-up time, i.e., times that are located outside of the <em>paused</em> time and of the <em>unplanned</em> time. 
+         </p>
+         <p class="para_topic">
+            <em>Waiting</em> times only accumulate during the times, when the <em>Exporter</em> is available, i.e., when these times are located outside of the <em>paused</em>, the <em>unplanned</em> and of the <em>failed</em> times. 
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <col span="1" width="25%">
+            
+            <col span="1" width="75%">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Services setting-up</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the portion of the set-up time for services of the statistics collection period of the <em>Exporter</em>, weighted with the capacity.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Services processing</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the portion of the working time of the services of the statistics collection period of the <em>Exporter</em>, weighted with the capacity.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Services repairing</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the portion of the statistics collection period, which the <em>services</em> spent for repairs, weighted with the capacity.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Services waiting</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the portion of the statistics collection period, which the <em>services</em> spent waiting for an <em>importer</em> plus the time the <em>services</em> spent waiting for an MU at the <em>importer</em>, weighted with the capacity.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Services failed</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the portion of the statistics collection period during which the <em>services</em> were failed.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Exporter operational</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the portion of the statistics collection period during which the <em>Exporter</em> was working, weighted with the capacity.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Exporter paused</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the portion of the statistics collection period during which the <em>Exporter</em> was paused. 
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Exporter unplanned</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the portion of the statistics collection period during which the <em>Exporter</em> was unplanned. 
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Exporter failed</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the portion of the statistics collection period during which the <em>Exporter</em> was failed. 
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Free capacity</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the capacity that is available at the moment.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Mediated capacity</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the capacity that is brokered at the moment. </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Free capacity (sum)</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the sum of the released capacity that the <em>Exporter</em> placed with any <em>importer</em>.
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Mediated capacity (sum)</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the sum of the brokered capacity.</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Minimum free capacity</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the minimum capacity that is available. When the <em>Exporter</em> did not collect any valid value yet, the tab shows -1. 
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Maximum free capacity</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the maximum capacity that is available. When the <em>Exporter</em> did not collect any valid value yet, the tab shows -1. 
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Minimum mediated capacity</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the minimum brokered capacity. When the <em>Exporter</em> did not collect any valid value yet, the tab shows -1. 
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Maximum mediated capacity</b></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">Shows the maximum brokered capacity. When the <em>Exporter</em> did not collect any valid value yet, the tab shows -1. 
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id56050.html">Viewing Statistics in the Dialogs of the Objects</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id68851.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Check Product Statistics of Parts"></a><a class="link" href="id25473.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Viewing the Statistics Report"></a></span></div>
+   </body>
+</html>

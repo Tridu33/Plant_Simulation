@@ -1,0 +1,54 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Operating mode</title>
+      
+      <meta name="MS-HKWD" content="Operating mode">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Operating mode</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id57223.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Attributes"></a><a class="link" href="id90312.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Time of creation"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id65865.html">Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88314.html">Dialog Window of the Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57223.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc">Operating mode</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7016"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourceOperatingMode.gif" border="0"></p>
+         <p class="para_topic">The <b class="uiTerm">Operating mode</b> sets how the <em>Source</em> proceeds when it cannot create the <em>MUs</em> at the <a class="links" href="id90312.html">Time of creation</a> you entered. 
+         </p>
+         <p class="para_topic">When you select <b class="uiTerm">Blocking</b>, the <em>Source</em> remembers the time at which it was supposed to produce the next <em>MU</em>. It then produces the following <em>MUs</em> at the next possible point in time, i.e., when the <em>MU</em> that was blocked by the successor, was moved on. The <em>Source</em> stops creating parts when the simulation time has reached the <b class="uiTerm">Stop</b> time.
+         </p>
+         <p class="para_topic">When you clear <b class="uiTerm">Blocking</b>, the <em>Source</em> creates another <em>MU</em> exclusively at the time of creation you entered.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When the <em>Source</em> is temporarily not operational because it is failed, paused or blocked, the times of creation may shift, when you select <b class="uiTerm">Blocking</b>. Then, the settings for the times of creation cannot be realized.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id33945.html">Blocking</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id57223.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Attributes"></a><a class="link" href="id90312.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Time of creation"></a></span></div>
+   </body>
+</html>

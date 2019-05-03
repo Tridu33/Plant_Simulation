@@ -1,0 +1,175 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>LoadingTime</title>
+      
+      <meta name="MS-HKWD" content="LoadingTime">
+      <meta name="MS-HKWD" content="LoadingTime,Workplace">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">LoadingTime</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id38158.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ExitCtrl"></a><a class="link" href="id18082.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Station"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27173.html">Workplace</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id85532.html">Attributes of the Workplace</a></span> &gt; <span class="simpleHTMLminitoc">LoadingTime</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8997"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.LoadingTime</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>LoadingTime</em> sets the <a class="links" href="id79942.html">Loading time</a>. This is the time it takes the <a class="links" href="id67192.html">Worker</a> for picking up a part at a station. After the loading time has elapsed, the <em> Worker</em> waits for the delay time to pass if he still has carrying capacity. If not, he immediately carries the part to the target station and places it there.
+         </p>
+         <p class="para_topic"> You can use the anonymous identifier @ to access the <em>part</em> for which the loading time applies. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">During the <b class="uiTerm">loading time</b> no part can be placed onto the delivering station.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Behavior during interruptions of the <em>Worker</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><em>Plant Simulation</em> extends the loading time by <b class="uiTerm">failure</b> times of the <em>Worker</em>. The processing station remains locked during the failure. 
+         </p>
+         <p class="para_topic">When the <em>Worker</em>
+            <b class="uiTerm">pauses</b> during the loading time, <em>Plant Simulation</em> cancels loading and considers it as completely elapsed. This means that the <em> Worker</em> carries at least one part to the <em>Workerpool</em>. When the shift ends during the loading time, <em>Plant Simulation</em> cancels the loading time and considers it as completely elapsed. This means that the <em>Worker</em> carries at least one part to the parts buffer. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Behavior during interruptions of the processing station</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Failures of the processing station do not affect loading the part through the <em>Worker</em>. The part is already located at the <em>Worker</em> and loading takes place during the failure. 
+         </p>
+         <p class="para_topic">The same applies for processing stations which are <b class="uiTerm"> stopped</b>, <b class="uiTerm"> paused</b>, or <b class="uiTerm"> unplanned</b>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>time</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyWorkplace.LoadingTime := 10:00</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id79942.html">Loading time</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id38158.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ExitCtrl"></a><a class="link" href="id18082.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Station"></a></span></div>
+   </body>
+</html>

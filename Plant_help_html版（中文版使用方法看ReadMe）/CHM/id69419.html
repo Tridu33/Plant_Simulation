@@ -1,0 +1,191 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Creating a Simulation Model</title>
+      
+      <meta name="MS-HKWD" content="Creating a Simulation Model">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Creating a Simulation Model</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id29319.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling in 2D"></a><a class="link" href="id54024.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Creating a Simple Simulation Model"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc">Creating a Simulation Model</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_356"></span><p class="para_topic">We recommend to create the model either in <b class="uiTerm">2D Only</b> mode or in <b class="uiTerm">3D Only</b> mode, compare <a class="links" href="id71164.html">Selecting Settings in Plant Simulation</a>.
+         </p>
+         <p class="para_topic">You will create your simulation model by inserting instances of the built-in objects and of objects you yourself or a colleague designed, the so-called user-defined or application objects, from the <em>Class Library</em> into the object <em>Frame</em> in the folder <b class="uiTerm">Models</b>. By modeling application objects you can develop libraries that meet the modeling requirements of your company. The most important built-in objects are: the <em>Frame</em>, the active and the passive material flow objects, the mobile objects (MUs), the <em>Method</em> object, lists and tables, and the <em>EventController</em>.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The <em>Frame</em> is the object in which you create your simulation model. You will rename this <em>Frame</em> and then insert the objects that represent the stations in your plant, into it. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To run the simulation you will insert an <em>EventController</em> that starts, stops and resets the simulation run. You can re-use each and every simulation model you created as an application object in other simulation models. 
+               </p>
+               
+               <p class="para_item">By inserting <em>Frames</em> into <em>Frames</em> you create a randomly nested <b class="uiTerm">hierarchy</b> of models. This way you can build and structure simulation models that exactly match the plant you are simulating, and break down complex tasks into manageable chunks. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">You can derive or duplicate each object and re-use it as often as required, which introduces an important time-saving key feature of <em>Plant Simulation</em>, namely <b class="uiTerm">inheritance</b>: A derived object, i.e., a child object, retains a controllable link to the template object, i.e., the parent object. In many cases the immense advantage of inheritance regarding productivity and the low number of errors only becomes clear at a later point in time, when you actively work with your simulation models. Naturally you can also turn inheritance for individual features off, by clicking the inheritance button, so that it looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/inheritanceAus_dup1.gif" border="0">.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <b class="uiTerm">active material flow objects</b> transport and/or actively process mobile objects (MUs), i.e., parts, within the simulation models.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/toolb1.gif"></p>
+               
+               <p class="para_item">The <b class="uiTerm">passive material flow objects</b> to not actively process parts. They store parts and represent tracks on which the processed parts are moved. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <b class="uiTerm">mobile objects</b>(<em>MUs</em>) represent the parts that are created in, stored in, transported in, processed in and removed from your simulation model. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/toolbMUs.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <b class="uiTerm">fluid objects</b> serve for simulating free-flowing materials, be they in liquid, gaseous, or pourable form. The fluid objects are suited for the food and beverages processing, and for the pharmaceutical industries.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/toolb6.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <b class="uiTerm"> resource objects</b> are intended for modeling how and when <em>Workers</em> move from the <em>WorkerPool</em> to the <em>Workplaces</em> at the stations. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/toolb2.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Employing objects of data type <em>method</em> you can program the actions that you need to take place when the conditions you program become true. For this we integrated a powerful programming language into <em>Plant Simulation</em>. The <em>Methods</em> are either activated as controls by the material flow objects or by other <em>Method</em> objects. The <em>Method</em> also provides a <em>Debugger</em> to locate errors and allow you to correct faulty code. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Lists and tables</b> ensure the random exchange of information between all objects. The powerful processing of information in <em>Plant Simulation</em> is the result of a variety of functions, data types and operators. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/toolb3.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The objects <em>Chart</em> and <em>Report</em> allow you to graphically display the statistical values that the material flow objects collect during the simulation runs. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/toolb4.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">With the object <em>Dialog</em> you can create a dialog window similar to the built-in dialog windows that <em>Plant Simulation</em> provides. This way you can provide a simple user interface for complex simulation models other users work with. You can also prevent another user from manipulating a <em>Frame</em>. To accomplish this, insert a <em>Method</em> object as an <b class="uiTerm">open control</b> into the <em>Frame</em>. Double-clicking the <em>Frame</em> will then not open it any longer, but call the <em>control method</em> in which you might, for example, program it to open a dialog, where the user can then select the settings. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">In the folder <b class="uiTerm">User Objects</b> you can save and provide objects, which you yourself created and add them to the tab <b class="uiTerm">User Objects</b>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">We recommend to not change the default settings of the built-in objects if at all possible. When you customize these objects and when you merge models or update the <em>Class Library</em> at a later point in time, <em>Plant Simulation</em> discards your changes and restores the default settings. For this reason you have to customize the objects anew.
+                           </p>
+                           
+                           <p class="para_note_body">If you need objects with customized settings, we recommend to derive the respective object/objects in the <em>Class Library</em> and then continue working with this class. You can then place these objects into the folder <b class="uiTerm">User Objects</b> and add them to the tab <b class="uiTerm">User Objects</b> in the <b class="uiTerm">Toolbox</b>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">With the objects <em>BottleneckAnalyzer</em> and <em>SankeyDiagram</em> you can analyze and evaluate the results the simulation runs provided. Use the <em>ExperimentManager</em> to define how <em>Plant Simulation</em> executes the simulation experiments. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/toolb5.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Naturally you can also exchange data with other programs and processes using the interfaces we provide. For integration purposes with other software it is important that data can be exchanged not only at the beginning and the end of the simulation run but also during the simulation run. </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When you create your simulation models, you will more than likely combine these two modeling strategies:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The top-down strategy is characterized by a roughly structured model that you break down step-by-step. The more refined the model becomes, the more detailed it becomes. This approach requires a large degree of abstraction. The big picture becomes obvious quickly though.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The bottom-up strategy is characterized by a detailed model that you created by using prefabricated components with a rather small degree of abstraction. This enables a quick analysis of the details, but makes it harder to recognize the big picture.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id54024.html">Creating a Simple Simulation Model</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id81197.html">Introducing Classes</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id33441.html">Using Inheritance</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id30608.html">Work with Folders, Frames and Objects in the Class Library</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id78159.html">Show the Contents of a Frame in the Class Library</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id69343.html">Working with the Frame</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id48245.html">Modeling Hierarchically</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id17583.html">Controlling the Simulation with the EventController</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id91896.html">Delete Parts with the Mouse or when Resetting the Model</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id29319.html">Modeling in 2D</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id29319.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling in 2D"></a><a class="link" href="id54024.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Creating a Simple Simulation Model"></a></span></div>
+   </body>
+</html>

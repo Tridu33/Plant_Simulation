@@ -1,0 +1,200 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Add a Graphic and a Color to the Background or the Icon of the Frame</title>
+      
+      <meta name="MS-HKWD" content="Add a Graphic and a Color to the Background or the Icon of the Frame">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Add a Graphic and a Color to the Background or the Icon of the Frame</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id11184.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Insert an Object from the Toolbox"></a><a class="link" href="id59087.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Draw Vector Graphics or Text onto the Background of the Frame"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69343.html">Working with the Frame</a></span> &gt; <span class="simpleHTMLminitoc">Add a Graphic and a Color to the Background or the Icon of the Frame</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_444"></span><p class="para_topic">To add a graphic to the background of a <em>Frame</em>, do one of the following:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Drag a .gif, .bmp, .ppm, .ppm raw, .dgn, .dxf, or a .dwg file from the Windows Explorer, the Internet Browser, the icon library etc. over the background of the <em>Frame</em> and drop it there. 
+               </p>
+               
+               <p class="para_item">This new graphic will then replace the icon named <em>background</em> of the <em>Frame</em>. If you have not assigned a background icon, <em>Plant Simulation</em> automatically creates a <em>background</em> icon. Note that <em>Plant Simulation</em> does not automatically scale the size of the background icon to the size of the <em>Frame</em>!
+               </p>
+               
+               <p class="para_item">You can also add a background picture with the method <a class="links" href="id73266.html">getBackgroundImage</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Drag a layout drawing you created in Autodesk over the background of the <em>Frame</em> and drop it there. 
+               </p>
+               
+               <p class="para_item">You can use this layout drawing as the actual background of the <em>Frame</em> and insert the <em>Plant Simulation</em> objects on top of it. This is feasible when your simulation model is not too complex.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">If you are modeling a complex plant, this might not be practicable, as it might lead to a very cluttered layout. Then, you might want the layout drawing to be one of the icons of the <em>Frame</em>, and have the <em>MUs</em> move through the plant on the animation lines you define in the class of that <em>Frame</em>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p class="para_item">Be aware that the .dxf, .dgn or .dwg files are vector based, whereas <em>Plant Simulation</em> uses pixel based graphics. This means that you have to think about how to transfer one size to the other. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/autocad.gif"></p>
+               
+               <p class="para_item">Proceed as follows to scale an AutoCAD drawing so that it fits onto the background of your <em>Frame</em>:
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Measure the dimensions of your AutoCAD drawing with the AutoCAD measurement tools and convert these dimensions to meters! Then compare the x-dimension with the y-dimension and establish the maximum value, let&rsquo;s say 90 meters.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Divide this value by the <em>Frame</em> size you want to use. In our example we divide 90 by 6000 which results in the value 0.015. This is the required scaling factor for our <em>Frame</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Scaling Factor</b> in the <b class="uiTerm">General</b> ribbon tab of the <em>Frame</em> and enter the scaling factor <code>0.015</code>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/scalingfactor0015.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you drag the .dwg drawing onto the background of the <em>Frame</em> and drop it there, a dialog opens asking for the scaling factor of the drawing. Enter the factor to convert the drawing units to meters. If the drawing units are millimeters for example, you will enter <code>0.001</code>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/scalingFactor0001.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To make the background graphic transparent, so that the background color of the <em>Frame</em> shines through:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Icons</b> on the <b class="uiTerm">Home</b> ribbon tab to open the <em>Icon Editor</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Next Icon</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/nextIconSmall_dup.gif" border="0"> to navigate to the icon called <em>background</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click the color picker <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/eyedropper_dup1.gif" border="0"> and click in the background of the icon. This makes that color the active drawing color, which we want to replace. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Replace Color</b> on the <b class="uiTerm">Home</b> ribbon tab. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the transparency color in the <em>Color Palette</em> that replaces the active drawing color. 
+               </p>
+               
+               <p class="para_item">If the transparency color is not part of the color palette, double-click any field in the <em>Color Palette</em> that contains a color you do not need, and enter <code>0</code>, <code>128</code>, <code>128</code> into the dialog <b class="uiTerm">Colors &gt; Custom</b> and click <b class="uiTerm">OK</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Transparent</b> on the <b class="uiTerm">Home</b> ribbon tab.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Apply Changes</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/SmallApplyIEdit_dup1.gif" border="0"> to make the dxf file transparent. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Open the <em>Icon Editor</em> by clicking <b class="uiTerm">Edit Icons</b> on the <b class="uiTerm">Home</b> ribbon tab. Click <b class="uiTerm">New</b> in the <b class="uiTerm">Edit</b> ribbon tab, click <b class="uiTerm">Import</b>, and select the type of file and the actual file you would like to open. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Draw an icon for the <em>Frame</em> and name it <em>background</em>. <em>Plant Simulation</em> uses this graphic as the new background graphic. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete the background graphic, select the icon with the name <b class="uiTerm">Background</b> in the <em>Icon Editor</em> and click <b class="uiTerm">Delete</b> in the <b class="uiTerm">Start</b> ribbon tab.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To set a color of your choice for the background of the <em>Frame</em>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click the <b class="uiTerm">General</b> ribbon tab and select <b class="uiTerm">Background &gt; Select Color</b>. If you do not like the white frame around the icons of objects you inserted into the <em>Frame</em>, select the icon with the number <b class="uiTerm">0</b> in the <em>Icon Editor</em> and click on <b class="uiTerm">Transparent</b> in the <b class="uiTerm">Edit </b> ribbon tab.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id59087.html">Draw Vector Graphics or Text onto the Background of the Frame</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id37951.html">Set and Link Animation Points and Animation Lines</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id20686.html">Add a Layout File to Your Simulation Model</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id89784.html">Working with a Point Cloud</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id69343.html">Working with the Frame</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id11184.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Insert an Object from the Toolbox"></a><a class="link" href="id59087.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Draw Vector Graphics or Text onto the Background of the Frame"></a></span></div>
+   </body>
+</html>

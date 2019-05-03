@@ -1,0 +1,37 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Assigning Applications to Users in the Options File</title>
+      
+      <meta name="MS-HKWD" content="Assigning Applications to Users in the Options File">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Assigning Applications to Users in the Options File</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Defining_Groups_of_Users.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Defining Groups of Users"></a><a class="link" href="id52035.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Starting Plant Simulation with Different Kinds of Licenses"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id39091.html">Setting-Up and Starting</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id73814.html">Licensing Plant Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87538.html">Activating Licenses</a></span> &gt; <span class="simpleHTMLminitoc">Assigning Applications to Users in the Options File</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_182"></span><p class="para_topic">To assign users (using the login names) to products (using the package names), use the keyword <code>INCLUDE</code> in the <em>ugslmd.opt</em> options file. The syntax is:
+         </p><pre class="indent">INCLUDE package name USER login name1 login name2 login name3 &hellip;</pre><p class="para_topic">Our example for the login names <code>BobM</code>, <code>VladimirK</code>, and <code>ManoM</code> looks like this:
+         </p><pre class="indent">INCLUDE CAR_PLANTSIM_RESEARCH USER BobM VladimirK ManoM</pre><p class="para_topic">If you would like to define groups, use the keyword <code>GROUP</code> followed by a group name of your choice, followed by the login names. The syntax is:
+         </p><pre class="indent">GROUP group name&gt; login name1 login name2 login name3 &hellip;</pre><p class="para_topic">Our example looks like this:</p><pre class="indent">GROUP SimulationExperts BobM VladimirK ManoM</pre><p class="para_topic">Then you can assign products to groups:</p><pre class="indent">INCLUDE CAR_PLANTSIM_RESEARCH GROUP SimulationExperts</pre><p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id48538.html">License file</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Defining_Groups_of_Users.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Defining Groups of Users"></a><a class="link" href="id52035.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Starting Plant Simulation with Different Kinds of Licenses"></a></span></div>
+   </body>
+</html>

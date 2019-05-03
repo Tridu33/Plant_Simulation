@@ -1,0 +1,163 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Units</title>
+      
+      <meta name="MS-HKWD" content="Units">
+      <meta name="MS-HKWD" content="Units,model settings">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Units</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id57070.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Display panel frame rate"></a><a class="link" href="id80368.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Mass"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70614.html">Ribbon Bar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88930.html">File Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id52165.html">Model Settings</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58609.html">Units</a></span> &gt; <span class="simpleHTMLminitoc">Units</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1945"></span><p class="para_topic">On the tab <b class="uiTerm">Units</b> you can select the units for <b class="uiTerm">mass</b>, <b class="uiTerm">currency</b>, <b class="uiTerm">speed</b>, <b class="uiTerm">acceleration</b>, and <b class="uiTerm">length</b>. These settings only affect how <em>Plant Simulation</em> shows values in <em>lists</em>, <em>tables</em>, <em>global variables</em>, and in the window of the <em>Console</em> when values are to be shown in the user interface.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/modelSettingsUnits.gif"></p>
+         <p class="para_topic">Internally <em>Plant Simulation</em> uses SI (Standard International) units ( <b class="uiTerm">kg</b>, <b class="uiTerm">m/s</b>, <b class="uiTerm">m/s2</b>, <b class="uiTerm">m</b>) for all physical values, regardless of what you selected on the Units ribbon tab. This has two visible effects when writing source code:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When you assign a constant value to a <em>variable</em> or an attribute of an object, <em>Plant Simulation</em> interprets this value in the corresponding SI unit. For example, the statement <code>Conveyor.Length := 3.4</code> means that <em>Plant Simulation</em> assigns 3.4 meters independent of the selected <b class="uiTerm">Length</b>unit.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you assign a physical data type to a value of data type <em>real</em>, you will receive the value in SI units. This also applies when you use physical units in computations with a result of data type <em>real</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var r: real := Conveyor.Length -- r always contains the length in meters</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id80368.html">Mass</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id61775.html">Length</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id73859.html">Currency</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id37478a.html">Time scale</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id74444.html">Speed</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1208944.html">Daylight saving time</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id13265.html">Acceleration</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id57070.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Display panel frame rate"></a><a class="link" href="id80368.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Mass"></a></span></div>
+   </body>
+</html>

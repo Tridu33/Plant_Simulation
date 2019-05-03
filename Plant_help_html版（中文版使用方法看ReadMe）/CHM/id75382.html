@@ -1,0 +1,135 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>readLn</title>
+      
+      <meta name="MS-HKWD" content="readLn">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">readLn</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id26200.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:open"></a><a class="link" href="id14770.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:remove"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id81496.html">FileInterface</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id16260.html">Methods of the FileInterface</a></span> &gt; <span class="simpleHTMLminitoc">readLn</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10974"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.readLn &rarr; string</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>readLn</em> reads the line, in which the file cursor is located, into the file and increases the counter by one. It passes the entire line as a <em>string</em>. You may have to employ one of the conversion functions, such as <em>str_to_num</em>, to convert the string into another data type.
+         </p>
+         <p class="para_topic">If the file is not open for <em>write,</em> the <em>FileInterface</em> opens it and reads the line. When the file cannot be opened, for example because the path to the file is invalid, the function fails with an error. To avoid this error, you can explicitly call the method <a class="links" href="id26200.html">open</a>, which returns false if the file cannot be opened. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>string</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- A file contains numbers in several lines. These will be read 
+-- into the second column of a TableFile
+var y: integer, line: string
+y := 1
+while not MyFileInterface.EoF  -- until end of file reached
+   line := MyFileInterface.readLn&nbsp;-- get next line
+   MyTableFile[2,y] := line
+   y += 1
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id35889.html">writeLn</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id26200.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:open"></a><a class="link" href="id14770.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:remove"></a></span></div>
+   </body>
+</html>

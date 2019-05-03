@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>[ ] (write the contents of a cell)</title>
+      
+      <meta name="MS-HKWD" content="[ ] (writing to a cell)">
+      <meta name="MS-HKWD" content="[ ] (writing to a cell),TableFile">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">[ ] (write the contents of a cell)</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1136060.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Accessing the TableFile"></a><a class="link" href="id22487.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:[ ] (read the contents of a cell)"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id21891.html">TableFile</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79670.html">Methods of the TableFile</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1136060.html">Methods for Accessing the TableFile</a></span> &gt; <span class="simpleHTMLminitoc">[ ] (write the contents of a cell)</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10586"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path[Column:integer or string, Row:integer or string]</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>[,]</em> writes data to the <em>TableFile</em> designated by Path. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Column</em> of data type <em>integer</em> or <em>string</em> designates the column of the cell.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Row</em> of data type <em>integer</em> or <em>string</em> designates the row of the cell. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">First you access the cell by its index and then you assign a value. The index statement begins and ends with a bracket. In the bracket you first enter the column and then the row of the cell to be accessed. You can use the system index or a user-defined index, which you assigned.</p>
+         <p class="para_topic">The data type of the return value is the same as the data type of the table cell. Note that <em>Plant Simulation</em> reads the contents of the cell, but does not remove it! 
+         </p>
+         <p class="para_topic">The data type of the new value has to be the same as the data type of the table cell.</p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyTableFile[2,3] := 12.34 -- system index
+orderList[&quot;OrderNo&quot;,&quot;Miller&quot;] := 12.34 -- user-defined index</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em> reads the contents of the cell, but does not remove it.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1136060.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Accessing the TableFile"></a><a class="link" href="id22487.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:[ ] (read the contents of a cell)"></a></span></div>
+   </body>
+</html>

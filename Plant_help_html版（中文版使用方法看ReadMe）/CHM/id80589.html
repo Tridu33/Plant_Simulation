@@ -1,0 +1,176 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>getBoundingBox</title>
+      
+      <meta name="MS-HKWD" content="getBoundingBox">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">getBoundingBox</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id82828.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getAniPoints"></a><a class="link" href="id97612.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getIconSize"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18479.html">Methods of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50316.html">Methods for Animating All Objects</a></span> &gt; <span class="simpleHTMLminitoc">getBoundingBox</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4206"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.getBoundingBox(byRef X:integer, byRef Y:integer, byRef Width:integer, byRef Height:integer)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">A <b class="uiTerm">3D Only</b> model does not provide the method <em>getBoundingBox</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The method <em>getBoundingBox</em> returns the coordinates of the upper left corner of the bounding box, and its width and height and assigns them to the local variables, whose names you pass. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Local Variables</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The local variable <em>X</em> designates the x-coordinate of the upper left corner of the bounding box.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The local variable <em>Y</em> designates its y-coordinate.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The local variable <em>Width</em> designates the width of the bounding box. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The local variable <em>Height</em> designates its height. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The bounding box is the rectangle that surrounds the icon. In the figure below the bounding box is the green area around the rotated icon of the <em>Station</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/boundingBox.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">This <em> method</em> applies to all objects, except for the <em>Variable</em>, the <em>Comment</em>, the <em>folder</em> and the <em>toolbar</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.getBoundingBox(x,y,w,h)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id82828.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getAniPoints"></a><a class="link" href="id97612.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getIconSize"></a></span></div>
+   </body>
+</html>

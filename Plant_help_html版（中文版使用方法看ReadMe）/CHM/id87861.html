@@ -1,0 +1,137 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Assigning a Value to a Variable</title>
+      
+      <meta name="MS-HKWD" content="Assigning a Value to a Variable">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Assigning a Value to a Variable</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id67321.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of the Variable"></a><a class="link" href="id42783.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Calling the Contents of a Variable"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id44724.html">Variable</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67321.html">Methods of the Variable</a></span> &gt; <span class="simpleHTMLminitoc">Assigning a Value to a Variable</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11584"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path := any</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">When assigning a new value to the <em>Variable</em>, this value has to be compatible with the active data type. A value is compatible if <em>Plant Simulation</em> can automatically transform it into a correct value for the task. A change of value may occur because: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><em>Plant Simulation</em> cannot display digits after the decimal point and cuts them off. It transforms, for example, the <em>real</em> value 3.9 into the <em>integer</em> value 3. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Loss of significance occurs for great value differences. Floating point operations only save a certain number of digits and the magnitude of a number (mantissa and exponent). <em>Plant Simulation</em> deletes additional digits created during a calculation and the number does not return the expected value. This kind of error cannot be avoided and only appears if the difference in size is at least 10<sup class="superscript">7</sup>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When you assign a <em>Variable</em> to a <em>Method</em> keep in mind that <em>Plant Simulation</em> calls and executes this <em>Method</em>, when you only enter the <b class="uiTerm">name</b>of a <em>Method</em>. This way, the <em>Method</em> is returned, instead of to the reference you would like to receive. Use the <em>reference</em> operator, to get the reference!
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Variable := Value
+Variable := &amp;MyMethod</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id67321.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of the Variable"></a><a class="link" href="id42783.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Calling the Contents of a Variable"></a></span></div>
+   </body>
+</html>

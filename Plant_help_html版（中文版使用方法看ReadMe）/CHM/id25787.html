@@ -1,0 +1,274 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>connect</title>
+      
+      <meta name="MS-HKWD" content="connect">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">connect</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id80557.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of the Connector"></a><a class="link" href="id37602.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getEndPoint"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29001.html">Connector</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id80557.html">Methods of the Connector</a></span> &gt; <span class="simpleHTMLminitoc">connect</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5409"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">ConnectorPath.connect(StartOfConnection:any, EndOfConnectionY:any [,SideOfConverterStart:integer, SideOfConverterEnd:integer])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>connect</em> connects objects within a <em>Frame</em> with the <em>Connector</em> designated by ConnectorPath.
+         </p>
+         <p class="para_topic">Using the method <em>connect</em> you can also connect any end of a <em>TwoLaneTrack</em> with any end of another <em>TwoLaneTrack</em>. To do so, you have to pass two lanes to the method <em>connect</em>. The exit of the first lane, which you specify, will then be connected with the entrance of the second lane. Note that the <em>method</em> still connects the <em>TwoLaneTracks</em> and not the individual lanes.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>StartOfConnection</em> of data type <em>any</em> designates the beginning of the connection.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>EndOfConnection</em> of data type <em>any</em> designates the end of the connection. 
+               </p>
+               
+               <p class="para_item">You can also set an <em>Interface</em> object as first or as second parameter.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>SideOfConverterStart</em> of data type <em>integer</em> sets at which side of the <a class="links" href="id41205.html">Converter</a> the <em>Connector</em> is to dock: <code>0</code> designates <b class="uiTerm">right</b>, <code>1</code> designates <b class="uiTerm">bottom</b>, <code>2</code> designates <b class="uiTerm">left</b>, and <code>3</code> designates <b class="uiTerm">top</b>. 
+               </p>
+               
+               <table border="1" cellpadding="10" width="100%" align="center">
+                  
+                  <tbody>
+                     
+                     <tr align="left">
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last"> Left</p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last"> Bottom</p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last"> Top</p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last"> Right</p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/converterConnectLeft.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/converterConnectBottom.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/converterConnectTop.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/converterConnectRight.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>SideOfConverterEnd</em> of data type <em> integer</em> is only required when you insert a <em>Connector</em> between two <em>Converters</em>. The parameter <em>SideOfConverterStart</em> then designates the side of the <em>source Converter</em>, the parameter <em>SideOfConverterEnd</em> designates the side of the <em>target Converter</em> at which the <em>Connector</em> ends. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>object</em>. 
+         </p>
+         <p class="para_topic">The <em>method</em> returns the <em>Connector</em> that has been created. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.Materialflow.Connector.connect(Station, Store)
+.Materialflow.Connector.connect(Station, Interface3)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.Materialflow.Connector.connect(T1, T2)
+-- connects the exit of T1 with the entrance of T2
+.Materialflow.Connector.connect(T1.A, T2.A)
+-- connects the exit of T1 with the entrance of T2
+.Materialflow.Connector.connect(T1.A, T2.B)
+-- connects the exit of T1 with the exit of T2
+.Materialflow.Connector.connect(T1.B, T2.A)
+-- connects the entrance of T1 with the entrance of T2
+.MaterialFlow.Connector.connect(&quot;TwoLaneTrack1.B&quot;, &quot;TwoLaneTrack2.A&quot;)
+-- connects lanes of two-laned tracks</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id80557.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of the Connector"></a><a class="link" href="id37602.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getEndPoint"></a></span></div>
+   </body>
+</html>

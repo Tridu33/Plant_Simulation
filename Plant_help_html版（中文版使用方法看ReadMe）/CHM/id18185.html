@@ -1,0 +1,182 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Processing time</title>
+      
+      <meta name="MS-HKWD" content="Processing time">
+      <meta name="MS-HKWD" content="Processing time,general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Processing time</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id40202.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Times"></a><a class="link" href="id54251.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Set-up time"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id40202.html">Tab Times</a></span> &gt; <span class="simpleHTMLminitoc">Processing time</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3411"></span><p class="para_topic">The <b class="uiTerm">processing time</b> is the time during which the <em>MU</em> is located on the object to be processed. It designates the interval between the time at which the material flow object was set-up for processing this part type and the time at which the object moves the processed part on to its successor. 
+         </p>
+         <p class="para_topic">The successor is the object that is connected to the selected object with a <em>Connector</em> and that succeeds it in the sequence of stations in the simulation model. 
+         </p>
+         <p class="para_topic">Select a distribution, and enter the values, which that distribution requires, into the text box. The program shows these values along the top border of the tab. You can also enter a constant time (<b class="uiTerm">Const</b>). Or select to process the <em>MU</em> depending on its type (<b class="uiTerm">List(Type)</b>). For the <em>ParallelStation</em> you can select to process the <em>MU</em> depending on the station on which it is located (<b class="uiTerm">List(Place)</b>). For the <em>Buffer</em> and the <em>PlaceBuffer</em> you can only enter a constant processing time. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/procTime.gif"></p>
+         <p class="para_topic">When you select <a class="links" href="id90935.html">Formula</a>, you can enter a numeric expression or the name of a <em>Method</em>. You can use the anonymous identifier @ to access the <em>MU</em> for which the processing time applies. 
+         </p>
+         <p class="para_topic">For a <b class="uiTerm">processing time</b> of <code>0</code>, <em>Plant Simulation</em> does not request a <em>Worker</em>. For this reason the <b class="uiTerm">processing time</b> will be calculated when the MU enters the station or when set-up is done.
+         </p>
+         <p class="para_topic">If you would like to request a <em>Worker</em> in spite of a <b class="uiTerm">processing time</b> of <code>0</code> enter a processing time that is slightly greater than 0, for example <code>0.001</code>.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id96819.html">ProcTime</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id87534.html">Defining Processing Times</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id32650.html">Probability Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id96824.html">Change the Processing Time in the Entrance Control</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id65040.html">Empirical Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id26000.html">Attributes of the Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id24449.html">User-defined Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id29080.html">Methods of the Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id29794.html">Bounding Probability Distribution Functions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id37256.html">Format of Time and Date</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id31886.html">Distribution Functions</a> in <em>SimTalk</em>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id64129.html">Times and Distributions</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id40202.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Times"></a><a class="link" href="id54251.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Set-up time"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>New Features of the Material Flow Objects</title>
+      
+      <meta name="MS-HKWD" content="New Features of the Material Flow Objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">New Features of the Material Flow Objects</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id36767.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Important Changes in Plant Simulation 13"></a><a class="link" href="id82972.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Changed Features of the Material Flow Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id22601.html">What's New</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id35670.html">What's New in Tecnomatix Plant Simulation 13</a></span> &gt; <span class="simpleHTMLminitoc">New Features of the Material Flow Objects</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_46"></span><p class="para_topic"><em>Tecnomatix
+  Plant Simulation</em> 13 provides a number of new features. 
+         </p>
+         <div>
+            
+            <div class="title_division">New Features in Plant Simulation 13.0</div>
+            
+            <ul>
+               <li>
+                  
+                  <p class="para_item">We extended the functionality of most of the 3D objects to enable you to set if these objects are an obstacle for the <em>Worker</em> who moves freely within the area. You find the setting Obstacle for the Worker on the <a class="links" href="id24835.html">Tab Graphics</a> or on the <a class="links" href="xid1197513.html">Tab Graphic Settings</a>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added the method isUp to the <em>AngularConverter</em>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added the methods <a class="links" href="xid1244288.html">statTspUnplannedCount</a>, <a class="links" href="xid1244293.html">statTspUnplannedDelta</a>, <a class="links" href="xid1244294.html">statTspUnplannedMu</a>, and <a class="links" href="xid1244295.html">statTspUnplannedTime</a> to the <em>Transporter</em>.
+                  </p>
+                  
+               </li>
+            </ul>
+            
+         </div>
+         <div>
+            
+            <div class="title_division">New Features in Plant Simulation 12.2</div>
+            
+            <ul>
+               <li>
+                  
+                  <p class="para_item">We added the setting <a class="links" href="id40811.html">Base height</a> to the <a class="links" href="id93381.html">Tab Curve</a> of the length-oriented objects. As opposed to previous versions of the program, the <b class="uiTerm">Base height</b> can now be inherited, meaning that you can define it once in the class instead of having to define it for each instance individually. It is mainly used in <em>3D</em>. Here the <b class="uiTerm">Z-coordinate</b> defines the floor of the installation and the <b class="uiTerm">Base height</b> defines the distance of the legs of the conveyor from the floor. By changing the setting <b class="uiTerm">&Delta;Z</b> in the <b class="uiTerm">Segments</b> table, you can add an additional offset. The setting <b class="uiTerm">&Delta;Z</b> also affects the simulation time in <em>Plant Simulation</em> 2D.
+                  </p>
+                  
+                  <p class="para_item">To facilitate these changes, we also changed the <a class="links" href="id23482.html">Segments</a> table, the <a class="links" href="id69536.html">Context Menu of Curved Objects</a>, and we added the methods <a class="links" href="id62702.html">getCurveSegments</a> and <a class="links" href="id17294.html">getCurveSegments</a>. The methods replace the attribute <em>SegmentsTable</em>.
+                  </p>
+                  
+                  <p class="para_item">The changes above also affect <em>3D</em>. We replaced the settings <b class="uiTerm">Visualize</b>, <b class="uiTerm">Edit</b>, and <b class="uiTerm">Extend</b> in the group box <b class="uiTerm">Curve</b> with the button <a class="links" href="id10011.html">Segments</a>. It opens the segments table of the object in 3D, which now is the same as in 2D.
+                  </p>
+                  
+                  <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Whats_New/extrusionPolycurvesettings.gif"></p>
+                  
+                  <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Whats_New/Segments3D.gif"></p>
+                  
+                  <p class="para_item">We removed support for the 3D attribute <em>_3D.ExtPolycurve</em>. We added the methods <a class="links" href="id96227.html">3D.getExtSegments</a> and <a class="links" href="id76270.html">3D.setExtSegments</a> instead.
+                  </p>
+                  
+               </li>
+            </ul>
+            
+         </div>
+         <div>
+            
+            <div class="title_division">New Features in Plant Simulation 12.1</div>
+            
+            <ul>
+               <li>
+                  
+                  <p class="para_item">We added the text box <b class="uiTerm">Exit control</b> to the <a class="links" href="id44186.html">Tab Controls</a> of the <em>Store</em>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added the text box <a class="links" href="id91814.html">Capacity</a> to the <em>Converter</em>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added the <b class="uiTerm">Exit strategy</b> &gt;
+      <b class="uiTerm">Carry part away</b> to the <em> Store</em>. This enables a <em> Worker</em> to pick a part up at the <em> Store</em> and carry it to another station.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added the setting <a class="links" href="id47167.html">Width</a> to the <em> length-oriented objects</em>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added the attributes <a class="links" href="id58568.html">ObjectAngle</a> and <a class="links" href="id86204.html">ObjectMirrored</a> to the <em> curved objects</em>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added the method <a class="links" href="id26569.html">getObservers</a> to objects which can have observers.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added an optional parameter to the method <a class="links" href="id89505.html">setUpFor</a>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added an optional parameter to the <a class="links" href="id97160.html">Constructor control</a>.
+                  </p>
+                  
+                  <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Whats_New/constructorCtrlPlusParameter.gif"></p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added the methods <a class="links" href="id56533.html">getCurrentAngle</a>, <a class="links" href="id86210.html">getLastDestination</a>, and <a class="links" href="id78968.html">isRotating</a> to the <em>PickAndPlaceRobot</em>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added the method <a class="links" href="id20039.html">findPart</a> to the <em>ParallelStation</em>, the <em>Store</em>, and the <em> Container</em>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added optional parameters to the method <a class="links" href="id38993.html">createFailure</a>.
+                  </p>
+                  
+               </li>
+               <li>
+                  
+                  <p class="para_item">We added a number of statistics methods to the MUs, for example <a class="links" href="id94268.html">statProdFailTime</a>, etc., <a class="links" href="id55841.html">statStoreFailTime</a>, etc., and <a class="links" href="id91895.html">statTranspFailPortion</a>, etc.
+                  </p>
+                  
+               </li>
+            </ul>
+            
+            <p class="para_division"><b class="uiTerm">Back to</b>
+               <a class="links" href="id35670.html">What&rsquo;s New in Tecnomatix Plant Simulation 13</a></p>
+            
+         </div>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id36767.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Important Changes in Plant Simulation 13"></a><a class="link" href="id82972.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Changed Features of the Material Flow Objects"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Cyclic sequence</title>
+      
+      <meta name="MS-HKWD" content="Cyclic sequence">
+      <meta name="MS-HKWD" content="Cyclic sequence,exit strategy">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Cyclic sequence</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id54133.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Cyclic"></a><a class="link" href="id72356.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Least recent demand"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97208.html">Tab Exit</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id51141.html">Strategy</a></span> &gt; <span class="simpleHTMLminitoc">Cyclic sequence</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3536"></span><p class="para_topic">To cyclically move the <em>MUs</em> to the material flow object&rsquo;s successor according to the sequence of successors, which you entered into the list, select <b class="uiTerm">Cyclic sequence</b> from the drop-down list.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/exitbehaviorE.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Click <b class="uiTerm">Apply</b>, to apply your settings, and to display the button <b class="uiTerm">Open List</b>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Click <b class="uiTerm">Open List</b> and enter the data into the list, which the exit strategies <b class="uiTerm">Cyclic sequence</b>, <a class="links" href="id73518.html">MU Attribute</a>, <a class="links" href="id16474.html">Percentage</a>, and <a class="links" href="id10260.html">Random</a> require. 
+         </p>
+         <p class="para_topic">For the <b class="uiTerm">Cyclic sequence</b> you will enter the number of the succeeding object into the corresponding cell of the list. When you enter 3 into the cell in row 1, the object first moves the <em>MU</em> to the successor with the number 3.
+         </p>
+         <p class="para_topic">The successor to which the object moves the <em>MU</em> is the next one in line that can receive it in the sequence, which you entered into the list. When the object arrives at the last entry in the list (last object in the sequence), it returns to the first entry and processes the list again. 
+         </p>
+         <p class="para_topic">Note that the same successor object may be contained several times, one after the other, in the list. Then the object attempts to move the <em>MU</em> to this same successor as often as it is contained in the list.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When you select <b class="uiTerm">Blocking</b>
+                  <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/blockingOn.gif" border="0">, the object only moves the <em>MU</em>, when the designated successor is ready to receive it. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you clear <b class="uiTerm">Blocking</b>
+                  <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/blockingOff.gif" border="0">, the object attempts to move the <em>MU</em> to the corresponding successor, beginning with the active entry of the list. When the object arrives at the last entry in the list (last object in the sequence), it returns to the first entry and processes the list again. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id32325.html">ExitStrategyBlocking</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id38230.html">ExitStrategyMUAttributeList</a></p>
+         <p class="para_topic"><a class="links" href="id31775.html"> ExitStrategyPercentageValues</a></p>
+         <p class="para_topic"><a class="links" href="id32430.html">ExitStrategy</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id87269.html">ExitStrategySequence</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id88602.html">Select an Exit Strategy</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id54133.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Cyclic"></a><a class="link" href="id72356.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Least recent demand"></a></span></div>
+   </body>
+</html>

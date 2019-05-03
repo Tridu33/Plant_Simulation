@@ -1,0 +1,129 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>storeStatement</title>
+      
+      <meta name="MS-HKWD" content="storeStatement">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">storeStatement</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id47229.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:step"></a><a class="link" href="id41490.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:useStatement"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36445.html">Database Interfaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id92910.html">SQLite</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id45456.html">Methods of the SQLite Interface</a></span> &gt; <span class="simpleHTMLminitoc">storeStatement</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15340"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.storeStatement &rarr; integer</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>storeStatement</em> saves the current SQL expression, which has been prepared with the method <a class="links" href="id17322.html">prepare</a>, for later re-use.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>integer</em>. 
+         </p>
+         <p class="para_topic">You can use the return value in the method <a class="links" href="id41490.html">useStatement</a> to activate the saved SQL expression.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">SQLite.prepare(&quot;INSERT INTO BETrace (BEName, BEType, StartTime) VALUES (?1, ?2, ?3)&quot;)
+SQLite.storeStatement()</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="xid1334091.html">Statements</a></p>
+         <p class="para_topic"><a class="links" href="xid1334093.html">executeStatement</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id47229.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:step"></a><a class="link" href="id41490.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:useStatement"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Turntable</title>
+      
+      <meta name="MS-HKWD" content="Turntable">
+      <meta name="MS-HKWD" content="Turntable,object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Turntable</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id54699.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Width"></a><a class="link" href="id40949.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Turntable"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id63264.html">Turntable</a></span> &gt; <span class="simpleHTMLminitoc">Turntable</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7376"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/turntableIcon.gif" border="0"></p>
+         <p class="para_topic">You can use the <em>Turntable</em> to model a rotating platform, which moves the part onto one of several connected material flow objects and/or turns it around. The <em>Turntable</em> has a capacity of one, i.e. only one part can be located on it at any one time. 
+         </p>
+         <p class="para_topic">The <em>Turntable</em> moves the part on to its successors within the flow of materials like this:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The part arrives at the exit of the predecessor. It notifies the turntable that it wants to be rotated.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The turntable then determines if it accepts the part for rotating it or not.</p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Without a <b class="uiTerm">pull control</b>, the turntable will be notified that a part wants to be rotated and it accepts it. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">When you entered a <a class="links" href="id88489.html">Pull control</a>, the turntable executes it, and when the part is selected, it will be rotated.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The turntable rotates to the respective predecessor, and the part moves onto the turntable and drives onto it. </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Once one of the conditions below is met, the turntable looks for the target station and starts rotating towards it:</p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">When the part has <b class="uiTerm">completely entered</b> the turntable.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">When the part has <b class="uiTerm">reached the rotation point</b> on the table.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">When the part is located in the <b class="uiTerm">center</b> of the turntable, i.e., when both ends of the part have the same distance from the ends of the turntable.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">When you want the turntable to not rotate automatically, but only when the part has reached a user-defined sensor, select <b class="uiTerm">User-defined with Sensor</b>. In the <b class="uiTerm">sensor control</b>, you have to tell the turntable to call the method <a class="links" href="id77717.html">setDestination</a>.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">For determining the target station the turntable either uses its default exit strategies or the <a class="links" href="id22819.html">Target control</a>. Within this <em> Method</em> you set the target station with the method <a class="links" href="id77717.html">setDestination</a>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">Do not use an <b class="uiTerm">exit control</b> for determining the target of the <em> part</em>, as an exit control will be called only when the <em> part</em> is ready to exit the <em>Turntable</em>. This point in time is too late though, as the target has to be determined earlier in time.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Then the turntable rotates to the target and the part moves on, once the turntable has reached the final position of the rotation. Only then a new <em> part</em> can move onto the <em>Turntable</em>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When an object, from which/onto which the part is to be moved is not present in the respective angle table, the <em>Turntable</em> checks the <b class="uiTerm">Exit Angle Table</b> for an entering part or the <b class="uiTerm">Entry Angle Table</b> for a leaving part, if the object is present there and uses that angle. If the object is not contained in the respective table, the <em>Turntable</em> uses the angle from the layout in the <em> Frame</em>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can control the rotation animation steps, with which the <em>Turntable</em> rotates, with the setting <a class="links" href="id52672.html">Animate every x-th pixel</a>. When you insert the <em>Turntable</em> with its icon <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/turntableIcon.gif" border="0">, the <a class="links" href="id16684.html">Number of Animation Events</a> controls these steps.
+         </p>
+         <p class="para_topic">To add the <em>Turntable</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; MaterialFlow &gt; Turntable</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id47338.html">Moving Parts On with the Turntable</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id39347.html">Attributes of the Turntable</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id40949.html">Dialog Window of the Turntable</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43953.html">Shared Properties of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id15188.html">Methods of the Turntable</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id54699.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Width"></a><a class="link" href="id40949.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Turntable"></a></span></div>
+   </body>
+</html>

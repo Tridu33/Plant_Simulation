@@ -1,0 +1,67 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Select the Set-Up Time</title>
+      
+      <meta name="MS-HKWD" content="Select the Set-Up Time">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Select the Set-Up Time</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id99367.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Select the Set-Up Criteria"></a><a class="link" href="id87534.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Defining Processing Times"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56694.html">Setting a Station Up</a></span> &gt; <span class="simpleHTMLminitoc">Select the Set-Up Time</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_609"></span><p class="para_topic">The set-up time is the time it takes to set the station up for processing a different type of <em>MU</em>. An identical name designates that <em>MUs</em> are of the same type. In this case the material flow object will not have to set up for a different <em>MU</em> type. It only needs to set up, when the <em>MUs</em> are of another type, denoted by a name that differs from the previous type. 
+         </p>
+         <p class="para_topic">For the set-up time, you can select a distribution from the drop-down list on the tab <b class="uiTerm">Times</b>, depending on the type of <em>MU</em>, or the location on a station, or you can enter a constant time. When you selected a distribution, you will then enter the values, which that distribution requires, into the text box. <em>Plant Simulation</em> show these values along the top border of the tab. In addition to any of the other distributions, you can select the <b class="uiTerm">Matrix(Type)</b> distribution. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/matrixType.gif"></p>
+         <p class="para_topic">When setting-up, the time may not only depend on the target type, for which you want to set-up, but also on the source type. In this case you can define the times in a table. Activate the user-defined row index and the user-defined column index of the table. The row index designates the source type. The column index designates the target type. </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/matrixE.gif"></p>
+         <p class="para_topic">In our example above setting-up from no type, indicated by the hyphen, to the target type <em>Part</em> takes exactly one minute. setting-up from the type <em>Part</em> to the type <em>Transporter</em> takes two minutes and seven seconds. 
+         </p>
+         <p class="para_topic">When you select the <em>Formula</em> distribution, you can enter a numeric expression or the name of a <em>Method</em>. You can use the anonymous identifier @ to access the <em>MU</em> for which the set-up time applies. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">You can also determine the set-up time in a user-defined attribute of data type <em>method</em>, which you created for the <b class="uiTerm">MU</b>!
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/calcSetupTime.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Compare </b><a class="links" href="id98738.html">Select Set-up Options</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id67622.html">Enter Times</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id98738.html">Select Set-up Options</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id56694.html">Setting a Station Up</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id99367.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Select the Set-Up Criteria"></a><a class="link" href="id87534.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Defining Processing Times"></a></span></div>
+   </body>
+</html>

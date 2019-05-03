@@ -1,0 +1,99 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Object</title>
+      
+      <meta name="MS-HKWD" content="Object">
+      <meta name="MS-HKWD" content="Object,data type">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Object</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id42479.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Money"></a><a class="link" href="id80650.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Queue"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58240.html">Data Types</a></span> &gt; <span class="simpleHTMLminitoc">Object</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13734"></span><p class="para_topic">A variable of data type <em>object</em> points to an object in your simulation model or is <em>void</em>. You can save any <b class="uiTerm"> graphically</b> represented object with the data type <em>object</em>. This variable can be a local variable, a formal parameter, a global variable and values in tables.
+         </p>
+         <p class="para_topic">You can assign both objects and <em>strings</em> to the variables of data type <em>object</em> mentioned above. When you assign an object, <em>Plant Simulation</em> creates an <a class="links" href="id64391.html">Object Reference</a>, regardless if you specify the object with a relative or an absolute path. When you specify the object with a relative path, <em>Plant Simulation</em> immediately resolves the relative path within the context of the current method and creates an object reference to the calculated object.
+         </p>
+         <p class="para_topic">Let&rsquo;s suppose that the metho d<em>.Models.Frame.method</em> contains the following method call: <code>SubFrame.methodU(Station)</code></p>
+         <p class="para_topic"><em>Plant Simulation</em> resolves the relative path <b class="uiTerm">Station</b> to an object reference to <em>.Models.Frame.Station</em>, and passes this object reference to the method within the <em>sub-Frame</em>. If the path cannot be resolved to an object, <em>Plant Simulation</em> opens the <em>Debugger</em>.
+         </p>
+         <p class="para_topic">When a <em>string</em> is passed to a variable, the <em>string</em> is assigned as a path to the variable. Regardless if this path is relative or absolute, <em>Plant Simulation</em> does not resolve it at this point in time. Instead, the path is resolved each and every time when the variable is read.
+         </p>
+         <p class="para_topic">Let&rsquo;s suppose that the method <em>.Models.Frame.method</em> contains the following method call: <code>sub-Frame.methodU(&quot;Station&quot;)</code></p>
+         <p class="para_topic"><em>Plant Simulation</em> passes the relative path Station to the method within the <em>sub-Frame</em>. At this point in time such an object neither has to exist within the context of the calling method, nor within the context of the called method as the path is not resolved yet. Let&rsquo;s suppose that we inserted an object of type <em> Station</em> into the <em>sub-Frame</em> and that this object has the name <em>Station1</em>. 
+         </p>
+         <p class="para_topic">Let&rsquo;s also suppose that the source code of <em>methodU</em> in the <em>sub-Frame</em> looks like this:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param o: object
+Station1.Name := &quot;Station&quot;
+o.name := &quot;Station1&quot;
+o.name := &quot;Test&quot;  -- ERROR!</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Each time the local variable <code>o</code> is accessed, the relative path will be resolved, in fact it will be resolved within the context of this method, meaning that path resolution starts in the <em>sub-Frame</em>. This way it points to <em>.Models.Frame.sub-Frame.Station</em>, which now exists. This <em>Station</em> is then renamed to <em>Station1</em> so that the path <em>Station</em> cannot be resolved in the next line and <em>Plant Simulation</em> thus opens the <em> Debugger</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id87760.html">The Absolute Path</a></p>
+         <p class="para_topic"><a class="links" href="id57258.html">The Relative Path</a></p>
+         <p class="para_topic"><a class="links" href="id64391.html">Object Reference</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id42479.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Money"></a><a class="link" href="id80650.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Queue"></a></span></div>
+   </body>
+</html>

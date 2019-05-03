@@ -1,0 +1,68 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Import Data from an Oracle Database</title>
+      
+      <meta name="MS-HKWD" content="Import Data from an Oracle Database">
+      <meta name="MS-HKWD" content="Oracle 11g">
+      <meta name="MS-HKWD" content="Oracle 11g,import data from database">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Import Data from an Oracle Database</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id36348.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Export Data to the Database"></a><a class="link" href="id53425.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Exchange Data with an SQL Database"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48998.html">Importing and Exporting Data</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id24466.html">Import Data from a Database</a></span> &gt; <span class="simpleHTMLminitoc">Import Data from an Oracle Database</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1663"></span><span id="ndxgenid_PlantSimulationENU_1664"></span><p class="para_topic">In principle you will use the object <em>Oracle11g</em> in pretty much the same was as you do the object <em>ODBC</em>. First, establish a connection with a database instance, which exists on the Oracle Server. This database instance determines the name of the database, which you enter into the object <em>Oracle11g</em>. Microsoft Windows does not provide Oracle settings.
+         </p>
+         <p class="para_topic">If the Oracle Server is not installed on the same computer on which you execute <em>Plant Simulation</em>, you have to install an Oracle Client on that computer, which establishes the connection to the server. If the Oracle Client is not included in your Oracle Installation, contact your Oracle dealer to obtain it.
+         </p>
+         <p class="para_topic">If you have to handle large amounts of data, the object <em>Oracle11g</em> performs better and provides more commands than the object ODBC. 
+         </p>
+         <p class="para_topic">After you established the connection to an external Oracle database server within the computer network that your local computer can access, insert the object <em>Oracle11g</em> into your <em>Plant Simulation</em> simulation model. It connects to the database and imports data from it. You can write this data into <em>Plant Simulation</em> tables, change them there and use them in your simulation runs and re-export the changed data back into the database. 
+         </p>
+         <p class="para_topic">To add <a class="links" href="id42415.html">Oracle11g</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/oracleSm.gif" border="0"> to the toolbar <b class="uiTerm">Information Flow</b> of your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt; <b class="uiTerm">Basic Objects</b> &gt;
+   <b class="uiTerm">InformationFlow</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Click the object on the toolbar <b class="uiTerm">Information Flow</b> and insert it into your simulation model.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/addOracleE.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">You can also use ODBC together with Oracle! Then, you do not have to install an Oracle Client. Be aware that the SQL instructions, which you use, are not necessarily compatible with the ODBC version. This may cause problems if, for example, you want to switch between an Oracle database and an Access-database for test purposes. In this case, we recommend to use ODBC for all databases.</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id37636.html">Import Data from an ODBC Database</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id53425.html">Exchange Data with an SQL Database</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id24466.html">Import Data from a Database</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id36348.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Export Data to the Database"></a><a class="link" href="id53425.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Exchange Data with an SQL Database"></a></span></div>
+   </body>
+</html>

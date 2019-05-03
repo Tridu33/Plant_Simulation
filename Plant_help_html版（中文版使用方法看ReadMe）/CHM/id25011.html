@@ -1,0 +1,60 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Using Pseudo Random Numbers</title>
+      
+      <meta name="MS-HKWD" content="Using Pseudo Random Numbers">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Using Pseudo Random Numbers</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id16176.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Random Numbers and Their Statistical Distribution"></a><a class="link" href="id87294.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Use Probability Distributions"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id99447.html">Modeling Random Processes</a></span> &gt; <span class="simpleHTMLminitoc">Using Pseudo Random Numbers</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_668"></span><p class="para_topic">On first sight it seems to be impossible to simulate random processes with a computer, as a computer computes the numbers according to fixed stipulated calculation rules. A computer cannot create a truly random sequence of numbers. A computer-generated sequence of numbers can only approximately have the properties of random numbers. This is why they are called <b class="uiTerm">pseudo random numbers</b>. The sequence of numbers that a computer creates is called random number stream. The computer computes the following number starting from a random number. The algorithm for creating random numbers starts out with the so-called <b class="uiTerm">seed values</b> and can generate any number of values from them. By using different seed values you can model several random processes that are independent of each other. 
+         </p>
+         <p class="para_topic">For creating a random number it oftentimes suffices to create a uniformly distributed random number located in the interval between 0 and 1 (0,1). A random number is uniformly distributed, when the probability for an interval only depends on its length, and not from it position on the line of numbers. Using a uniformly distributed random number the computer can, for example, algorithmically create a normally distributed random number with a given mean value and standard deviation.</p>
+         <p class="para_topic">A uniformly distributed pseudo random number has to meet a number of requirements:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The arrangement of the random numbers shows no typical characteristics, i.e., the algebraic signs of consecutive random numbers do not display any typical patterns. </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The algorithm for creating random numbers has to become periodic, as the computer only has a finite number of states. For this reason the period length has to be as large as possible.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Starting from the given seed values a large number of stochastically independent random numbers has to be available for the simulation. </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The random processes of a simulation have to be reproducible to be able to use certain statistic methods, such as the variance reduction.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id99447.html">Modeling Random Processes</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id16176.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Random Numbers and Their Statistical Distribution"></a><a class="link" href="id87294.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Use Probability Distributions"></a></span></div>
+   </body>
+</html>

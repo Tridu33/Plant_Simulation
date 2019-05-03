@@ -1,0 +1,185 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.countGraphics</title>
+      
+      <meta name="MS-HKWD" content="_3D.countGraphics">
+      <meta name="MS-HKWD" content="_3D.countGraphics">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.countGraphics</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id25337.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.concatenateRotations"></a><a class="link" href="id94099.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.deleteGraphic"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id85031.html">Built-in Methods for Detailed Access To Graphics</a></span> &gt; <span class="simpleHTMLminitoc">_3D.countGraphics</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14722"></span><span id="ndxgenid_PlantSimulationENU_14723"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path._3D.countGraphics(GraphicPath:any[] [,GraphicGroupName:string])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.countGraphics</em> counts the direct child graphics of the graphic of the object designated by Path.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>GraphicPath</em> is an <em>array</em> of data type <em>any</em> into which the method writes the child graphics. Here you can also enter an empty path, i.e., the expression <code>[]</code>. The parameter is described under <a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>GraphicGroupName</em> of data type <em>string</em> designates the name of the graphic group you are working with. The parameter is described under <a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var count : integer := MyStation._3D.countGraphics([1,2,4]) 
+for var i := 1 to count 
+   MyStation._3D.setGraphicName([1,2,4,i],to_str(&quot;P&quot;,i))
+next</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var count : integer := MyStation._3D.countGraphics([1,2,4], &quot;deco&quot;) 
+for var i := 1 to count 
+   MyStation._3D.setGraphicName([1,2,4,i],to_str(&quot;P&quot;,i))
+next</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id25337.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.concatenateRotations"></a><a class="link" href="id94099.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.deleteGraphic"></a></span></div>
+   </body>
+</html>

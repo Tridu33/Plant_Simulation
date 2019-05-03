@@ -1,0 +1,152 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Calendar</title>
+      
+      <meta name="MS-HKWD" content="Calendar">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Calendar</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id23323.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Active"></a><a class="link" href="id41390.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Resources"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61534.html">ShiftCalendar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12401.html">Attributes of the ShiftCalendar</a></span> &gt; <span class="simpleHTMLminitoc">Calendar</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8681"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.Calendar</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>Calendar</em> sets the calendar of the <em>ShiftCalendar</em>. <em>Plant Simulation</em> copies the contents of the table <em>object</em>, which you enter, to the internal calendar table on the <a class="links" href="id35836.html">Tab Calendar</a>. For clarity, you might use a column index and a row index. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select the data type <em>date</em> for the first column (<b class="uiTerm">Date From</b>) of the table file and enter the date the shift starts. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the data type <em>date</em> for the second column (<b class="uiTerm">Date To</b>) and enter the date the shift ends.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the data type <em>string</em> for the third column (<b class="uiTerm">Reduce Time To</b>) and enter the hours during which the shift in your plant is active. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the data type <em>string</em> for the fourth column (<b class="uiTerm">Comment</b>) and enter why the shift does not apply. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Note that assigning the table overwrites the contents of any existing calendar. </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>any</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyShiftCalendar.Calendar := shiftCalendarTable</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id35836.html">Tab Calendar</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id23323.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Active"></a><a class="link" href="id41390.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Resources"></a></span></div>
+   </body>
+</html>

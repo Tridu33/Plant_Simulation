@@ -1,0 +1,151 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>FluidDependsOn</title>
+      
+      <meta name="MS-HKWD" content="FluidDependsOn">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">FluidDependsOn</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id49722.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:AttrNameMaterial"></a><a class="link" href="id20531.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Material"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36050.html">Fluid Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id39276.html">DePortioner</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79435.html">Attributes of the DePortioner</a></span> &gt; <span class="simpleHTMLminitoc">FluidDependsOn</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7752"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.FluidDependsOn</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>FluidDependsOn</em> sets how the material and the amount of the fluid that is to be created is defined:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">By a <b class="uiTerm">fixed</b> material and a fixed amount for every MU. For this setting you can enter the <a class="links" href="id49425.html">Material</a>/<a class="links" href="id20531.html">Material</a> and the Amount per MU/<a class="links" href="id33298.html">AmountPerMU</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">By the <b class="uiTerm">MU Name</b> depending on the MU names that are defined in the <a class="links" href="id57450.html">Mapping table</a>/<a class="links" href="id48317.html">MappingTable</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">By the <b class="uiTerm">MU Attribute</b>, for which you can enter the <a class="links" href="id95385.html">Material attribute</a>/<a class="links" href="id49722.html">AttrNameMaterial</a> and the <a class="links" href="id56987.html">Amount attribute</a>/<a class="links" href="id94500.html">AttrNameAmount</a> of the MU.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The name of each material that is to be used has to be defined in the <a class="links" href="id55462.html">MaterialsTable</a>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>string</em>, namely <code>&quot;Fixed&quot;</code>, <code>&quot;MU Name&quot;</code>, or <code>&quot;MU Attribute&quot;</code>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyDePortioner.FluidDependsOn := &quot;Fixed&quot;´</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id68877.html">Fluid depends on</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id49722.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:AttrNameMaterial"></a><a class="link" href="id20531.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Material"></a></span></div>
+   </body>
+</html>

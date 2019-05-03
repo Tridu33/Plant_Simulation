@@ -1,0 +1,107 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Program a Control which Orders Parts from the Kanban Buffer</title>
+      
+      <meta name="MS-HKWD" content="Program a Control which Orders Parts from the Kanban Buffer">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Program a Control which Orders Parts from the Kanban Buffer</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id44619.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Kanban Buffer Which Manages Storing and Ordering of Parts"></a><a class="link" href="id14255.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Modeling Transport Systems"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id92392.html">Modeling a Kanban System</a></span> &gt; <span class="simpleHTMLminitoc">Program a Control which Orders Parts from the Kanban Buffer</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_985"></span><p class="para_topic">In addition to the stations we inserted above, we need:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">A <b class="uiTerm">control</b>, which orders the wheels to be attached to the cars, when they are ready to be moved to the <em>AssemblyStation</em>. We enter this control as an <b class="uiTerm">exit control</b> into the <em>Station</em>
+                  <em>Processing</em> in the bottom line.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">A <b class="uiTerm">bill of materials</b>, i.e., a <em>TableFile</em>, which tells how many and which type of wheel the different car models need.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To accomplish this, insert a <em>Method</em> and a <em>TableFile</em> into the simulation model.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insKanbanMethod.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/insKanbanTable.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"></p>
+         <p class="para_topic">To make the <em>KanbanBuffer</em> order the type of wheels, <em>MyWheelA</em> or <em>MyWheelB</em>, for the car models, <em>MyCarA</em> or <em>MyCarB</em>, we entered this source code into the method <em>MyExitControl</em>. They instruct the buffer to get the correct type of wheels according to the mapping you are going to enter into the <em>TableFile</em>
+            <em>BOM</em> (bill of materials) in the next step. It then moves the part on to the successor.
+         </p>
+         <p class="para_topic">The source code looks like this:</p><pre class="indent">var requiredWheelType: string
+requiredWheelType := BOM[1,@.PartType]
+KanbanBuffer.requestParts(requiredWheelType, 4)
+@.move</pre><p class="para_topic">on the table, activate the column index and the row index.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/kanbanBOM.gif"></p>
+         <p class="para_topic">Then, enter the <em>Method</em> is the <b class="uiTerm">exit control</b> into the <em>Station</em><em>Processing</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/kanbanExitControlentered.gif"></p>
+         <p class="para_topic">Finally, start the simulation and watch what happens.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ModelSimulationRunning.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id46543.html">Create the Sequence of Stations within the Conveyor</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id56582.html">Configure the AssemblyStation</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id75568.html">Configure the Kanban Station which Orders the Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id12277.html">Configure the Kanban Sources which Produce the Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id44619.html">Configure the Kanban Buffer which Manages Storing and Ordering of Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id92392.html">Modeling a Kanban System</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id44619.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Kanban Buffer Which Manages Storing and Ordering of Parts"></a><a class="link" href="id14255.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Modeling Transport Systems"></a></span></div>
+   </body>
+</html>

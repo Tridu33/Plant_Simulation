@@ -1,0 +1,146 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>executeFunction</title>
+      
+      <meta name="MS-HKWD" content="executeFunction">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">executeFunction</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id52287.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:evalPath"></a><a class="link" href="xid1201624.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:executeMethod"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id78707.html">Inter-Process Communication Interfaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id30952.html">C</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1201607.html">Structure of the C Program</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id33155.html">Accessing Plant Simulation Objects</a></span> &gt; <span class="simpleHTMLminitoc">executeFunction</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15841"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">UF_Value executeFunction(char *FunctionName,int argc,UF_Value *args)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The function <em>executeFunction</em> calls a built-in <em>SimTalk</em> method, such as <em>setSeedTable</em>, <em>sin</em>, <em>version</em>, etc. from within the C function.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>char *FunctionName</em> designates the name of the built-in method. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>int argc</em> designates the number of the parameters.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameters <em>UF_Value *args</em> designate the parameters as such. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The result of the method is the return value.</p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">UF_Value retVal
+UF_Value argv[1]
+argv[0].type = UF_REAL
+argv[0].value.real = 3.1415
+retVal = executeFunction(&quot;sin&quot;,1,argv)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id52287.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:evalPath"></a><a class="link" href="xid1201624.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:executeMethod"></a></span></div>
+   </body>
+</html>

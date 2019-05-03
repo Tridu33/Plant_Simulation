@@ -1,0 +1,113 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Import Data from a Microsoft Excel Worksheet</title>
+      
+      <meta name="MS-HKWD" content="Import Data from a Microsoft Excel Worksheet">
+      <meta name="MS-HKWD" content="Excel">
+      <meta name="MS-HKWD" content="Excel,import data from">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Import Data from a Microsoft Excel Worksheet</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id62039.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import a Text File or an Object File into a List"></a><a class="link" href="id32334.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Import a Services List, a List of Shifts, etc. into an Object"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48998.html">Importing and Exporting Data</a></span> &gt; <span class="simpleHTMLminitoc">Import Data from a Microsoft Excel Worksheet</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1631"></span><span id="ndxgenid_PlantSimulationENU_1632"></span><p class="para_topic">When <em>Plant Simulation</em> reads an MS Excel table, it attempts to convert the values in the individual column to the data types of the columns in your <em>Plant Simulation</em> table. This only works, when you created the columns on the Excel worksheets so that they only contain a single data type, meaning that, when you, for example, assign the data type <em>String</em> to a cell of a column, the entire column may only be of data type <em>String</em>. After importing the data into <em>Plant Simulation</em>, you have to check the data types of the individual columns, you might have to correct the type of some, and you will have to filter out data you do not need. You can either do this manually in the open <em>Plant Simulation</em> table, or you can program a <em>Method</em> to manipulate the data while importing it. 
+         </p>
+         <p class="para_topic">If the Excel file has a column label, which you want to also use in your <em>Plant Simulation</em> list, activate and show the column index in the <em>Plant Simulation</em> list. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/showColumnIndexActive.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">For our example we used the file <em>MyTestData.xls</em>, which looks like this in Excel.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/importExcel.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To open the Excel file in an <em>Plant Simulation</em> table, click<a class="links" href="id56485.html">Import File</a> on the <b class="uiTerm">List</b> ribbon tab. 
+               </p>
+               
+               <p class="para_item">Navigate to the folder where you stored the file. Select the file you would like to open and click <b class="uiTerm">Open</b>. Select the Excel worksheet you want to import and click <b class="uiTerm">OK</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/openInTable.gif"></p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/openExcel.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/worksheets.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The imported Excel worksheet looks like this in our <em>Plant Simulation</em> table.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/importExcelTable.gif"></p>
+               
+               <p class="para_item">Check the file for correct data types, data you do not need, etc. You can also pre-process or post-process the data by programming a <em>Method</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To export the contents of an <em>Plant Simulation</em> list or table as an Excel file, click <a class="links" href="id55994.html">Export Excel File</a> on the <b class="uiTerm">List</b> ribbon tab. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id63017.html">Import or Export the Contents of a List</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id48998.html">Importing and Exporting Data</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id62039.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Import a Text File or an Object File into a List"></a><a class="link" href="id32334.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Import a Services List, a List of Shifts, etc. into an Object"></a></span></div>
+   </body>
+</html>

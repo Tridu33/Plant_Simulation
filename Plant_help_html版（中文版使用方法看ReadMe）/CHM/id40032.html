@@ -1,0 +1,496 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>move</title>
+      
+      <meta name="MS-HKWD" content="move">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">move</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id24250.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:insert"></a><a class="link" href="id54451.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:num"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id38692.html">Methods of All Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66973.html">Methods for Creating and Locating Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc">move</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_9146"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1">
+                                 <pre class="indent">MU-path.move &rarr; boolean
+MU-path.move(Target:any [,Position:length]) &rarr; boolean
+MU-path.move(Index:integer [,Position:length]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>move</em> moves the front of the <em>MU</em> designated by MU-path. 
+         </p>
+         
+         <p class="para_topicComponent">When you enter a successor for the <em>MU</em>, the method <em>move</em> moves the <em>MU</em> to this successor, regardless if the object on which the <em>MU</em> is located and the successor are connected with a <em>Connector</em>. 
+         </p>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you <em>move</em> an <em>MU</em> driving in reverse onto a length-oriented object, <em>Plant Simulation</em> automatically places this <em>MU</em> at the end of the length-oriented object.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent"><em>Plant Simulation</em> moves the entire <em>MU</em> onto a point-oriented object, such as a <em>Station</em> or a <em>ParallelStation</em>. The <em>MU</em> exits the first object entirely and enters the second in its entirety, independent of its length. 
+         </p>
+         
+         <p class="para_topicComponent">The method <em>move</em> only moves the front of the <em>MU</em> immediately to a length-oriented object, such as a <em>Conveyor </em> or a <em>Track</em>, and the remainder of the <em>MU</em> continually, according to the speed you set. For this reason an <em>MU</em> may be located on more than one object at the same time. It is only going to be shown on the object on which its booking point is located!
+         </p>
+         
+         <p class="para_topicComponent">Note that you cannot call the method with an index for the successor. </p>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If you moved an MU before an <b class="uiTerm">Out</b>-event was processed for this MU, for example in a sensor control, and if the MU could not be moved and was thus entered into the <b class="uiTerm">blocking list</b> of the target object, the MU will not be removed from the <b class="uiTerm">blocking list</b> of the target object, when the object, on which the blocked MU is located, is failed/paused/stopped.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameters</b></p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">When you do not enter a parameter, <em>Plant Simulation</em> moves the <em>MU</em> to the different successors of the object on which the <em>MU</em> is located using the <b class="uiTerm">Exit</b>
+                  <a class="links" href="id51141.html">Strategy</a> you selected. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you enter the name of the successor as the parameter <em>Target</em> of data type <em>any</em>, <em>Plant Simulation</em> moves the <em>MU</em> to this object. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you enter the index of the successor as the parameter of data type <em>integer</em>, <em>Plant Simulation</em> moves the <em>MU</em> to this object. The expression <em>integer</em> is short for MU-path<code>.location.succ(integer)</code>. Note that you cannot use it if the <em>MU</em> is located on another <em>MU</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you enter the names of the successors as the parameter <em>Target</em> of data type <em>array</em>, <em>Plant Simulation</em> tries to move the <em>MU</em> to these objects. When none of the objects you entered as members of the <em>array</em> can accept the <em>MU</em>, it will be entered into the <b class="uiTerm">blocking list</b> of each of the objects that are members of the <em>array</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Index</em> of data type <em>integer</em> designates the number of the <em>Connector</em> which is located in the direction of motion. If the <em>MU</em> moves backwards, the instruction <code>move(1)</code> moves the <em>MU</em> to the predecessor with the number 1. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">For the <em>Converter</em> you cannot specify an index. Use the method <em>move</em> without a parameter instead. Then <em>Plant Simulation</em> moves the <em>MU</em> onto the target object designated in the <b class="uiTerm">target control</b></p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Position</em> of data type <em>length</em> designates the position on a length-oriented object. 
+               </p>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Return Value</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>boolean</em>: It is <em>true</em> when the action was successful.
+         </p>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you move an <em>MU</em> that moves in reverse onto a length-oriented object, <em>Plant Simulation</em> automatically places this <em>MU</em> at the end of the length-oriented object.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var ar: object[]
+ar := [Station, Station1, ParallelStation, DismantleStation]
+ar.append(&quot;TwoLaneTrack.A&quot;)
+if ?.ExitCtrlFront 
+   @.move(ar)
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.MUs.Part:1.move(Conveyor)
+.MUs.Part:2.move(ParallelStation[2,5])
+.MUs.Transporter:3.move(track,3.3)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyConveyor.Cont.move
+station.Cont.move(station.succ(2))</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">You cannot move <em>MUs</em> to an object of type <em>Source</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent">You can use the methods <a class="links" href="id69037.html">transfer</a> or <a class="links" href="id24250.html">insert</a> to make the <em>MU</em> completely exit a length-oriented object. Within <b class="uiTerm">entrance</b> or <b class="uiTerm">exit controls</b>, you can access the triggering <em>MU</em> with the anonymous identifier @ (see <a class="links" href="id18348.html">Anonymous Identifiers</a>):
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">@.move
+@.move(Target:any)
+@.move(Index:integer]</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Return Value</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>boolean</em>: It is <em>true</em> when the action was successful.
+         </p>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When moving an object with the commands <code>MU-path.move</code>, <code>MU-path.move(TargetObjectany)</code>, or <code>MU-path.move(Position:integer)</code> failed, then <em>Plant Simulation</em> enters the <em>MU</em> into the <a class="links" href="id69726.html">Forward Blocking List</a>/<a class="links" href="id12649.html">Backward Blocking List</a> of the target object onto which it intended to move. Once the target object is ready to accept the next <em>MU</em>, the target object enters an <b class="uiTerm">Out</b> event for all entries, i.e., for all <em>MUs</em> in the <b class="uiTerm">Forward Blocking List</b>. Then the target object deletes all entries from its <b class="uiTerm">Forward Blocking List</b>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If you enter a certain position on the target object using the parameter of data type <em>length</em>, the <em>MU</em> does not enter itself into the <b class="uiTerm">Forward/Backward Blocking List</b> as <em>Plant Simulation</em> cannot watch/observe at which point in time this position is available again.
+                     </p>
+                     
+                     <p class="para_note_body">In addition <em>Plant Simulation</em> does not enter an MU into the <b class="uiTerm">Forward/Backward Blocking List</b> when it is located on a moving <em>Transporter</em>.
+                     </p>
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em> removes an MU, which is located on the loading space of a <em>Container/Transporter</em>, from the <b class="uiTerm">Forward/Backward Blocking List</b> when the <em>Container/Transporter</em> itself is moved.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var i: integer
+-- checks all successors
+for i := 1 to @.location.NumSucc 
+    if @.move(i)  -- if the moving action was successful
+        return
+    end
+next
+print &quot;None of the successors is ready.&quot;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topics</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id24250.html">insert</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id69037.html">transfer</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id24250.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:insert"></a><a class="link" href="id54451.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:num"></a></span></div>
+   </body>
+</html>

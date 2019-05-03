@@ -1,0 +1,182 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Genetic Algorithms</title>
+      
+      <meta name="MS-HKWD" content="Genetic Algorithms">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">Genetic Algorithms</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id98677.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:FileName"></a><a class="link" href="id17944.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Genetic Algorithms and Simulation"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59068.html">Genetic Algorithms</a></span> &gt; <span class="simpleHTMLminitoc">Genetic Algorithms</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15355"></span><p class="para_topic">The add-in <em>Genetic Algorithms</em> provides these objects:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Genetic_Algorithms/gaObjects.gif"></p>
+         <p class="para_topic"><em>Genetic Algorithms</em> provide optimization tools for solving complex sequential, allocation and selection tasks. <em>Genetic Algorithms</em> work along the same line as the biological evolution does. 
+         </p>
+         <p class="para_topic">The great naturalist Charles Darwin found out that those individuals, who adapted best to their natural surroundings, procreate the best. Once an individual acquires an advantageous characteristic, either by mutation or by cross-breeding, it may use these advantages and pass them on to its offspring. They, and their descendants, will benefit from these selection advantages, so that over the generations all individuals of the corresponding species will acquire these characteristics. Individuals without these advantages will have fewer offspring because of this selection disadvantage, so that the lack of an advantageous characteristics will lead to their extinction. </p>
+         <p class="para_topic"><em>Genetic Algorithms</em> use these same principles. The most successful solutions are selected from a given initial set of proposed solutions and used for creating new solutions. Then, better solutions are created over succeeding generations. If a proposed solution has a selection advantage and if it then is used for creating new solutions depends on the so called <b class="uiTerm"> fitness value</b> that is produced by a simulation model. 
+         </p>
+         <p class="para_topic">You might, for example, have to optimize the loading sequence of orders for a production plant. A simulation model will provide you the with entire processing time for each proposed loading sequence of orders. The evolution cycle will then produce successively better sequences that will process the orders in as little a time as possible. </p>
+         <p class="para_topic">Major advantages of genetic algorithms are that they are task-independent and that they return good results. This is why genetic algorithms are ideally suited in effectively supporting you in a variety of simulation-based optimization tasks. </p>
+         <p class="para_topic">You can apply <em>Genetic Algorithms</em> to solve a variety of problems without spending too much time for implementing, and for adapting, your simulation models. How you can accomplish this is described under <a class="links" href="id41287.html">Optimize Models with Genetic Algorithms</a>. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Instead of configuring your optimization tasks with the individual objects of the <em>Genetic Algorithms</em>, you can accomplish this much more comfortably with the <em>GAWizard</em>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> To add the objects of the <em>Genetic Algorithms</em> to the <em>Class Library</em>, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt; <b class="uiTerm">Basic Objects</b> &gt;
+   <b class="uiTerm">GA</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">The <em>Wizard for Genetic Algorithms</em> (<a class="links" href="id78919.html">GAWizard</a>) integrates genetic algorithms into an existing simulation model. You can use it for optimizations in which the evaluation is based on a simulation run as well as for optimizations in which the evaluation is based on calculations in methods. 
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Genetic_Algorithms/addGAE.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Genetic_Algorithms/addGaWizE.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id78919.html">GAWizard</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id47591.html">GASequence</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id17944.html">Genetic Algorithms and Simulation</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id36959.html">GARangeAllocation</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="idGaControl.html">GAOptimization</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id40362.html">GASetAllocation</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id35455.html">GASelection</a>
+                        
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id98677.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:FileName"></a><a class="link" href="id17944.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Genetic Algorithms and Simulation"></a></span></div>
+   </body>
+</html>

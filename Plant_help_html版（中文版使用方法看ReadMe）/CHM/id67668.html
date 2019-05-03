@@ -1,0 +1,153 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Value Stream Mapping</title>
+      
+      <meta name="MS-HKWD" content="Value Stream Mapping">
+      <meta name="MS-HKWD" content="VSM">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Value Stream Mapping</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id32860.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:PartInformation"></a><a class="link" href="id57417.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Course of Events of the Internal Control of the Model"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc">Value Stream Mapping</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_17710"></span><span id="ndxgenid_PlantSimulationENU_17711"></span><p class="para_topic"> The <em>value stream mapping library</em> in <em> Tecnomatix Plant Simulation</em> allows you simulate lean production systems and to analyze value streams. By definition a value stream encompasses all steps a product has to pass through from producing the unmachined products until the machined products leave the plant and arrive at the customer.
+         </p>
+         <p class="para_topic"><em>The value stream mapping library</em> focuses on optimized throughput times, on minimal work in progress, and on the ability to deliver the product to the customer in time.
+         </p>
+         <p class="para_topic">By definition entering the data for the <em> value stream mapping simulation</em> is an involved and time-consuming process. To create an executable simulation model, you have to provide some or all of the following data:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> Products to be produced</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Point in time of retrieval and retrieval quantity of the production orders</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Arrangement of the processes and of the inventory</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Cycle times of the processes</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Transport times of the products</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Lot sizes and transfer amounts of the products</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Delivery times and delivery numbers of the suppliers</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You have to enter these parameters into the dialogs of the <em>value stream mapping objects</em> which in turn use them for the simulation. Be aware that completeness and consistency of the input data is crucial to produce reliable results.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Always keep in mind that value stream mapping is not synonymous with material flow simulation. </b><em> Value stream mapping simulation</em> is a dynamic simulation using the settings you selected and the data you entered. It produces and shows the results based on the settings you selected, it does not optimize those settings.
+         </p>
+         <p class="para_topic">To add the <em>value stream mapping library</em> to the <em>Class Library</em>, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt; <b class="uiTerm">Libraries</b> &gt;
+   <b class="uiTerm">Standard Libraries</b> &gt;
+  <b class="uiTerm">Licensed</b> on the <b class="uiTerm">Home</b> ribbon tab. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/valueStreamEverything.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> The <em> value stream mapping library</em> creates a temporary <em> SQLite</em> database to store statistical values. For this reason we recommend to reset your simulation model to make sure that the database will be emptied and closed.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> If you change your <em> value stream mapping model</em>, we strongly recommend to reset your model first. To do so, click the <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/evReset.gif" border="0"><em> EventController</em> in your model.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> If Microsoft Excel shows an error message when you open your model file, and opens the file in protected mode, you have to add the directory, which contains the Excel file, to the list of trustworthy directories for Excel. For more information, consult the Microsoft Excel Help.</p>
+                     
+                     <p class="para_note_body"> We recommend to use <em> Plant Simulation</em> Version 10.1.4 or higher when working with the Excel interface. Otherwise you may run into problems when re-importing data.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> We modeled the objects of the <em> value stream mapping library</em> as application objects based on a <em> Frame</em>. For this reason opening Help with <b class="uiTerm">F1</b> and <em> What&rsquo;s This Help</em> in the dialogs of the objects do not work. To open help for an object, select <b class="uiTerm">Help</b>
+   &gt; <b class="uiTerm">Help on Object</b> in its dialog.
+                     </p>
+                     
+                     <p class="para_note_body"> We modeled the dialogs of the objects with the object <em> Dialog</em>. The <b class="uiTerm"> windows</b> of the objects do not use the standard Siemens PLM theme, but your Windows theme.
+                     </p>
+                     
+                     <p class="para_note_body"> To assign the object another name or a label, click it with the right mouse button and select <b class="uiTerm">Rename</b>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm"> Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id57417.html"> Course of Events of the Internal Control of the Model</a></p>
+         <p class="para_topic"><a class="links" href="id53228.html"> Shared Properties of the Value Stream Mapping Objects</a></p>
+         <p class="para_topic"><a class="links" href="xid1203830.html"> Value Stream Mapping Objects</a></p>
+         <p class="para_topic"><a class="links" href="id58670.html"> Value Stream Mapping Tools</a></p>
+         <p class="para_topic"><a class="links" href="id85160.html"> Value Stream Mapping Connectors</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id32860.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:PartInformation"></a><a class="link" href="id57417.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Course of Events of the Internal Control of the Model"></a></span></div>
+   </body>
+</html>

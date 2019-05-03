@@ -1,0 +1,132 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>succLaneNo</title>
+      
+      <meta name="MS-HKWD" content="succLaneNo">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">succLaneNo</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id12297.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:succLane"></a><a class="link" href="xid1377438.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Read-Only Attributes of the TwoLaneTrack"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id73650.html">TwoLaneTrack</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id55386.html">Methods of the TwoLaneTrack</a></span> &gt; <span class="simpleHTMLminitoc">succLaneNo</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7577"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.A.succLaneNo &rarr; integer
+Path.B.succLaneNo &rarr; integer
+Path.A.succLaneNo(LaneNumber:integer) &rarr; integer
+Path.B.succLaneNo(LaneNumber:integer) &rarr; integer</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>succLaneNo</em> returns the number of the succeeding lane of the specified lane of the <em>TwoLaneTrack</em> designated by Path.
+         </p>
+         <p class="para_topic">The method <em>succLaneNo(LaneNumber:integer)</em> returns the number of the lane of the n-th successor designated by the parameter of data type <em>integer</em>. Note that the objects have to be connected for this to work.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>integer</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if MyTwoLaneTrack.A.succLaneNo = 1 
+   print &quot;succeeding lane is lane A&quot;
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id84358.html">PredLaneNo</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id12297.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:succLane"></a><a class="link" href="xid1377438.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Read-Only Attributes of the TwoLaneTrack"></a></span></div>
+   </body>
+</html>

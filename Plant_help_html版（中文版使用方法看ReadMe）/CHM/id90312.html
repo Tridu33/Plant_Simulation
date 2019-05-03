@@ -1,0 +1,182 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Time of creation</title>
+      
+      <meta name="MS-HKWD" content="Time of creation">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Time of creation</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id47634.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Operating mode"></a><a class="link" href="id19075.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Interval adjustable"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id65865.html">Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88314.html">Dialog Window of the Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57223.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id90312.html">Time of creation</a></span> &gt; <span class="simpleHTMLminitoc">Time of creation</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7019"></span><p class="para_topic">Select the point in time at which and how the <em>Source</em> produces <em>MUs</em>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id19075.html">Interval adjustable</a>: It produces the first <em>MU</em> at the <a class="links" href="id80430.html">Start</a> time. The <b class="uiTerm">time of creation</b> designates the <a class="links" href="id34057.html">Interval</a> between two creation events. It produces the last <em>MU</em> at the <a class="links" href="id23677.html">Stop</a> time. 
+               </p>
+               
+               <p class="para_item">If you do not enter a <a class="links" href="id23677.html">Stop</a> time for this setting, <em>Plant Simulation</em> produces the amount of parts you entered at most. The default value of -1 designates an unlimited number of parts to be produced. Otherwise the <em>Source</em> produces parts until the <b class="uiTerm">Stop</b> time is reached and ignores the <b class="uiTerm">Amount</b> of parts you entered.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When you select a <b class="uiTerm">constant</b> time all <em>MUs</em> are produced at this point in time.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id87183.html">Number adjustable</a>: It produces the number of <em>MUs</em>, which you enter as the <b class="uiTerm">Amount</b>. When you activate the check box Generate as batch, the <b class="uiTerm">amount</b> does not designate the number of <em> parts</em>, but the number of <em>batches</em> that the <em>Source</em> produces. The times at which the <em>MUs</em> are created are distributed according to the distribution you select for the <b class="uiTerm">Interval</b>. 
+               </p>
+               
+               <p class="para_item">When you select a <b class="uiTerm">constant</b> time all <em>MUs</em> are produced at this point in time.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id24686.html">Delivery table</a>: It produces <em>MUs</em> according to the <b class="uiTerm">delivery time</b>, the <b class="uiTerm">class</b>, the <b class="uiTerm">number</b> the <b class="uiTerm">name</b>, and the <b class="uiTerm">attribute</b> which you enter into the <em>Delivery Table</em>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body"> When you assign a new <b class="uiTerm">delivery table</b> to the <em>Source</em> during the simulation, it also produces parts which were to be produced in the past according to the new delivery table.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id26431.html">Trigger</a>: It produces <em>MUs</em> according to the values that a set of <em> Trigger</em> objects control. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/timeofcreation.gif"></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body"> Depending on the setting you select, the attribute <a class="links" href="id24586.html">Path</a> (dialog item <b class="uiTerm">MU</b> or <b class="uiTerm">Table</b> ) either sets the path to the <em>MU</em> class, the delivery list, the sequence table, the frequency table, or the percentage table.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="33%">
+               
+               <col span="1" width="33%">
+               
+               <col span="1" width="33%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourceIntervalAdj.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourceNumberAdj.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourcedeltab.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">When the <em>Source</em> cannot produce the <em>MUs</em> at the <b class="uiTerm">time of creation</b>, the <a class="links" href="id47634.html">Operating mode</a> determines how it proceeds:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When you select <b class="uiTerm">Blocking</b>
+                  <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourceOperatingMode.gif" border="0">, the <em>Source</em> remembers the time at which it was supposed to produce the next <em>MU</em>. It then produces the following <em>MUs</em> at the next possible point in time, i.e., when the <em>MU</em> that blocked the successor was moved on. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you clear <b class="uiTerm">Blocking</b>, the <em>Source</em> creates another <em>MU</em> exclusively at the time of creation you entered. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When the <em>Source</em> is temporarily not operational because it is failed, paused or blocked, the <b class="uiTerm">times of creation</b> may shift, when you select <b class="uiTerm">Blocking</b>. Then, the settings for the times of creation cannot be realized.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id88975.html">TimeOfGeneration</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id47634.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Operating mode"></a><a class="link" href="id19075.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Interval adjustable"></a></span></div>
+   </body>
+</html>

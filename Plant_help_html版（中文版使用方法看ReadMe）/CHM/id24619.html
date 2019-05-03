@@ -1,0 +1,272 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Units</title>
+      
+      <meta name="MS-HKWD" content="Units">
+      <meta name="MS-HKWD" content="Units,preferences">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Units</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id17484.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Display panel frame rate"></a><a class="link" href="id19752.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Mass"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70614.html">Ribbon Bar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88930.html">File Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47898.html">Preferences</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id24619.html">Units</a></span> &gt; <span class="simpleHTMLminitoc">Units</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_2052"></span><p class="para_topic">On the tab <b class="uiTerm">Units</b> you can select the units for <b class="uiTerm">mass</b>, <b class="uiTerm">currency</b>, <b class="uiTerm">speed</b>, <b class="uiTerm">acceleration</b>, and <b class="uiTerm">length</b>. These settings only affect how <em>Plant Simulation</em> shows values in <em>lists</em>, <em>tables</em>, <em>global variables</em>, and the window of the <em>Console</em> when values are displayed in the user interface.
+         </p>
+         <p class="para_topic">Internally <em>Plant Simulation</em> uses SI (Standard International) units ( <b class="uiTerm">kg</b>, <b class="uiTerm">m/s</b>, <b class="uiTerm">m/s2</b>, <b class="uiTerm">m</b>) for all physical values, regardless of what you selected on the <b class="uiTerm">Units</b>ribbon tab. This has two visible effects when writing source code:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When you assign a constant value to a <em>variable</em> or an attribute of an object, <em>Plant Simulation</em> interprets this value in the corresponding SI unit. For example, the statement <code>Conveyor.Length := 3.4</code> means that <em>Plant Simulation</em> assigns 3.4 meters independent of the selected <b class="uiTerm">Length</b> unit.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you assign a physical data type to a value of data type <em>real</em>, you will receive the value in SI units. This also applies when you use physical units in computations with a result of data type <em>real</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var r: real := Conveyor.Length -- r always contains the length in meters</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">You can also enter values for the <b class="uiTerm">time scale</b> and <b class="uiTerm">daylight saving time</b>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/tabUnitsPref.gif"></p>
+         <p class="para_topic">A <b class="uiTerm">length</b> of <code>1.5</code> equals 1.5 meters.
+         </p>
+         <p class="para_topic">A <b class="uiTerm">speed</b> of <code>4.55</code> equals 4.55 m/s.
+         </p>
+         <p class="para_topic">A <b class="uiTerm">mass</b> of <code>0.3</code> equals 0.3 kg.
+         </p>
+         <p class="para_topic">A <b class="uiTerm">time</b> of <code>0.1</code> equals 0.1 s.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If you change units while modeling, <em>Plant Simulation</em> will convert all values you entered originally into the dialogs of objects to the new unit, except for monetary values. For these <em>Plant Simulation</em> only changes to the new currency symbol, but does not convert the values you entered originally!
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><em>Plant Simulation</em> stores units with 15 valid digits. If you enter more digits, <em>Plant Simulation</em> keeps only the first 15 digits and rounds according to the remaining digits (down until the number 4, up from the number 5 on). 
+         </p>
+         <p class="para_topic">The computer stores the number 9876543210123456789.0 for example as 9.876543210123456*10E18.</p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">As <em>Plant Simulation</em> stores numbers using a finite number of digits, most of these values are only approximations of the exact values. Therefore, be aware of rounding errors, especially in comparisons! 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var a,b,c: length
+a := 3.5; b := 4.7; c := 5.860034
+if a*a+b*b-c*c = 0.0 then -- never reached: rounding error
+elseif abs(a*a+b*b-c*c)  0.000001 -- compensates rounding error
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id19752.html">Mass</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id64571.html">Length</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id60144.html">Currency</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id37328.html">Time scale</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id68083.html">Speed</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1208978.html#id93281">Daylight saving time</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id55460.html">Acceleration</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last">--</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id17484.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Display panel frame rate"></a><a class="link" href="id19752.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Mass"></a></span></div>
+   </body>
+</html>

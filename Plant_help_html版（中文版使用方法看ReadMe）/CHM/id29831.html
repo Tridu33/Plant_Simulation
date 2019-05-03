@@ -1,0 +1,119 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Exit Angle Table</title>
+      
+      <meta name="MS-HKWD" content="Exit Angle Table">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Exit Angle Table</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id74593.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Entry Angle Table"></a><a class="link" href="id53214.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Times"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id63264.html">Turntable</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id40949.html">Dialog Window of the Turntable</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id99444a.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc">Exit Angle Table</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7406"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/exitAngletable.gif" border="0"></p>
+         <p class="para_topic">To open the table of the exit angles at which the parts leave the <em>Turntable</em>, click this. You can view or fine-tune these settings:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The number of the <b class="uiTerm">successor</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The name of the <b class="uiTerm">successor</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <b class="uiTerm">angle</b> the <em>Connector</em> from the <em>Turntable</em> connects to this successor.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">At <b class="uiTerm">which side</b> it turns towards the successor.
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">When you select <b class="uiTerm">Start Point</b>, the <em>Turntable</em> turns with the side, at which you started inserting the <em>Turntable</em> towards this successor.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">When you select <b class="uiTerm">End Point</b>, the <em>Turntable</em> turns with the side, at which you finished inserting the <em>Turntable</em> towards this successor.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">When you select <b class="uiTerm">Any</b>, the <em>Turntable</em> computes the smallest angle and turns with this calculated side towards this successor. With this setting the <em>part</em> can leave backwards or forwards, depending on the side which can be reached with the smallest angle.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">When you select <b class="uiTerm">MU keeps Direction</b>, the <em>Turntable</em> turns this side of the <em>Turntable</em> towards this successor which makes the <em>part</em> keep its direction.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you select <b class="uiTerm">MU leaves backwards</b>, the <em>Turntable</em> turns this side of the <em>Turntable</em> towards this successor so that the <em>Turntable</em> turns the <em>part</em> around and it leaves moving backwards. Compare <a class="links" href="id68158.html">MU leaves backwards depends on</a>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/turntableRotatedPart.gif"></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The button <b class="uiTerm">Exit Angle Table</b> is only active after you connected the <em>Turntable</em> with its successor.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/exitangle.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">If you want the <em>Turntable</em> to compute the angles at which you connected it to its successors, click it with the right mouse button and select <a class="links" href="id67015.html">Calculate Angles</a>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/calculateAngles.gif"></p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id19511.html">setExitAngles</a>,
+         </p>
+         <p class="para_topic"><a class="links" href="id29567.html">getExitAngles</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id74593.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Entry Angle Table"></a><a class="link" href="id53214.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Times"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Shift Calendar</title>
+      
+      <meta name="MS-HKWD" content="Shift Calendar">
+      <meta name="MS-HKWD" content="ShiftCalendar">
+      <meta name="MS-HKWD" content="ShiftCalendar,object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Shift Calendar</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id49625.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stopped"></a><a class="link" href="id86719.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the ShiftCalendar"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61534.html">ShiftCalendar</a></span> &gt; <span class="simpleHTMLminitoc">Shift Calendar</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8599"></span><span id="ndxgenid_PlantSimulationENU_8600"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ShiftCalendarIcon.gif" border="0"></p>
+         <p class="para_topic"> You can model the different shifts worked in your plant with the object <em>ShiftCalendar</em>. You can define as many shifts as you need. A shift pauses one or several machines in your model, by setting the boolean attributes <em>Pause</em> and <em>Unplanned</em> of the respective material flow objects to true.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When you deactivate the <em>Pause</em> during the unplanned time, either by deactivating the check box <b class="uiTerm">Pause</b> in the dialog of the object, or by setting the attribute <em>Pause</em> to <code>false</code>, the object starts to work. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> You can use the method <a class="links" href="id80452.html">schedule</a> to make the <em>ShiftCalendar</em> set the date and time to start or to finish the production process. We distinguish between:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Forward scheduling</b>, beginning from the start date forward into the future, and
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Backward scheduling</b>, which computes the start date going backwards in time from the demand date.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Normally, you start with the demand date, calculating the start date through backward scheduling. If this start date is located in the past though, you have to recalculate the dates beginning with the present time and forward-schedule the end date.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/scheduleNew.gif"></p>
+         <p class="para_topic">To add the <em>ShiftCalendar</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; Resources &gt; ShiftCalendar</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id85153.html"> Modeling a Shift System</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1388313.html">Read-Only Attributes of the ShiftCalendar</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id86719.html"> Dialog Window of the ShiftCalendar</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id12401.html"> Attributes of the ShiftCalendar</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id56527.html"> Methods of the ShiftCalendar</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43953.html"> Shared Properties of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id49625.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Stopped"></a><a class="link" href="id86719.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the ShiftCalendar"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Services for Setting-Up</title>
+      
+      <meta name="MS-HKWD" content="Services for Setting-Up">
+      <meta name="MS-HKWD" content="Setup service">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Services for Setting-Up</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="idUsingSeparateResources.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Using Separate Resources for Setting-Up and For Processing"></a><a class="link" href="id65206.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Can be interrupted and drawn off"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88367.html">Tab Importer</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id20536.html">Sub-tab Set-up</a></span> &gt; <span class="simpleHTMLminitoc">Services for Setting-Up</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3659"></span><span id="ndxgenid_PlantSimulationENU_3660"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/servicesSetupandProc.gif" border="0"></p>
+         <p class="para_topic">To enter groups of <b class="uiTerm">services for setting the station up for parts</b>, click this. Each of these services represents an alternative. 
+         </p>
+         <p class="para_topic">To execute the <em>set-up</em>, <em>processing</em>, or <em>repair</em> jobs, the <em>importer</em> always needs all services of an <b class="uiTerm">Alternative</b>. When, for example, the <em>importer</em> does not have all services of <b class="uiTerm">Alternative1</b>, he attempts to get all services of <b class="uiTerm">Alternative2</b>, etc. Note that for successive services on the table, which all belong to the same alternative, the name of the alternative only appears after the first service on the table. 
+         </p>
+         <p class="para_topic">The <em>set-up-importer</em> requests <em>Exporters</em> before setting-up. By default the object releases the <em>Exporters</em> when set-up is finished and the object is not in the process of setting-up for a part. 
+         </p>
+         <p class="para_topic">The <em>processing-importer</em> requests <em>Exporters</em> from the beginning of the processing time to the end of the processing time. By default the material flow object releases the <em>Exporters</em> when processing is finished. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">First, click the button <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/inheritanceEin.gif" border="0"> to deactivate <a class="links" href="id23901.html">Inheritance</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/toggleNotSelected.gif" border="0">. Only then you can enter data into the list. 
+               </p>
+               
+               <p class="para_item">The toggle button activates or deactivates inheritance. </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">A green button <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/toggleSelected.gif" border="0"> means that inheritance is active. Then, the object inherits, i.e., uses, the value from the parent object from which it was derived. When you modify the value of the parent object, the program also modifies the value of the child object.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">An orange button with a minus <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/toggleNotSelected.gif" border="0"> means that inheritance is not active. Values you select or enter only apply to the selected object.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the name of the service to be imported into the cells of the column <b class="uiTerm">Service</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the amount, i.e., the number of services to be imported, into the cells of the column <b class="uiTerm">Amount</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the name of the alternative service, which the <em>importer</em> provides if it cannot meet the previous service, into the cells of the column <b class="uiTerm">Alternative</b>. When you want to add a service to an alternative at a later point in time, you can type this service and the name of the <b class="uiTerm">Alternative</b> into the last row of the table. When you click <b class="uiTerm">Apply</b> here, and in the dialog of the material flow object, <em>Plant Simulation</em> sorts the list anew and places this service below the respective alternative.
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/services75.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you enter several services with the same name, which belong to the same alternative, <em>Plant Simulation</em> only considers the first entry of the services into the table, and deletes the other services from the table. For this reason you have to enter the correct <b class="uiTerm">Amount</b> of the respective service instead of distributing the service onto several Conveyors.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The name of the service is not case-sensitive, just like the names of <em>attributes</em> and <em>methods</em> of the objects are not case-sensitive.
+                     </p>
+                     
+                     <p class="para_note_body">To save memory and improve access speed, all places which use such an case-insensitive string point to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing.</p>
+                     
+                     <p class="para_note_body">In <em>SimTalk</em> you can compare strings in a case-insensitive manner with the <b class="uiTerm">==</b> operator, compare <a class="links" href="id62503.html">Relational Operators</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><em>Plant Simulation</em> enters these services into the list of offered services of the <em>Broker</em>: To view them, select <b class="uiTerm">View</b>
+  &gt; <a class="links" href="id13851.html">Offered Services</a>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk</b>
+            
+         </p>
+         <p class="para_topic">setUpImp.<a class="links" href="id33204.html">setServices</a></p>
+         <p class="para_topic">setUpImp.<a class="links" href="id86088.html">getServices</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="idUsingSeparateResources.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Using Separate Resources for Setting-Up and For Processing"></a><a class="link" href="id65206.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Can be interrupted and drawn off"></a></span></div>
+   </body>
+</html>

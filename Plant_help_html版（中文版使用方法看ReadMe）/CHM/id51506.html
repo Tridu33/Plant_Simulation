@@ -1,0 +1,128 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Availability</title>
+      
+      <meta name="MS-HKWD" content="Availability">
+      <meta name="MS-HKWD" content="Availability,attribute">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Availability</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id82964.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attributes for Failures in the Simplified Notation"></a><a class="link" href="id76250.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:FailDuration"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15305.html">Attributes of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96953.html">Attributes for Defining Failures of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id82964.html">Attributes for Failures in the Simplified Notation</a></span> &gt; <span class="simpleHTMLminitoc">Availability</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4945"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.Availability</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The attribute <em>Availability </em> sets the <a class="links" href="id45006.html">Availability</a> in percent of the object designated by Path. Availability is the proportion of time during which a machine is in an operable state.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic"> You can assign a value of data type <em>real</em>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> You can only query the <b class="uiTerm">Availability</b>, when the representation <b class="uiTerm">Availability %</b> and <b class="uiTerm">MTTR</b> is active, otherwise the <em>Debugger</em> opens! 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> When you selected the representation <b class="uiTerm">Interval</b> and <b class="uiTerm">Duration</b>, and you assign a value to the <b class="uiTerm">Availability %</b>, either in <em>SimTalk</em>, with the <em>AttributeExplorer</em>, etc., <em>Plant Simulation</em> changes the representation to <b class="uiTerm">Availability %</b> and <b class="uiTerm">MTTR</b>. It then uses the percentage value you entered for the <b class="uiTerm">Availability %</b> and enters a default value of 1 hour for the <b class="uiTerm">MTTR</b>. 
+         </p>
+         <p class="para_topic"> When you set these two values via information flow with these attributes, the following assignments </p><pre class="indent">MyStation.MTTR := 60
+MyStation.Availability := 100</pre><p class="para_topic"> result in an MTTR of 0, i.e., the <em> Station</em> will not fail during the simulation.
+         </p>
+         <p class="para_topic"> The following sequence of assignments </p><pre class="indent">MyStation.Availability := 100
+MyStation.MTTR := 60</pre><p class="para_topic"> result in an availability of the <em>Station</em> of 95 percent. This is a typical value for the availability of a machine. For these settings the <em>Station</em> will fail during the simulation.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When you change failure settings, this does not affect the already computed failure events. If you would like the changed settings to take effect immediately, you first have to assign the value <code>false</code> to the attribute <a class="links" href="id15036.html">Active</a>, and then reassign the value <code>true</code> again to the attribute after changing the <em>Duration</em> of the failure. This causes a new failure event to be calculated.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When you set an availability of 100 percent, meaning that the station will never fail, and subsequently change the availability to a more realistic value, say 50 percent, <em>Plant Simulation</em> will only apply this new setting when you first assign the value <code>false</code> to the attribute <a class="links" href="id15036.html">Active</a>, and then reassign the value <code>true</code> to the attribute <em>Active</em> again after setting the attribute <em>Availability</em>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id82964.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attributes for Failures in the Simplified Notation"></a><a class="link" href="id76250.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:FailDuration"></a></span></div>
+   </body>
+</html>

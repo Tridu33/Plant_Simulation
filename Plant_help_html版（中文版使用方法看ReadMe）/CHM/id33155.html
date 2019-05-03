@@ -1,0 +1,86 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Accessing Plant Simulation Objects</title>
+      
+      <meta name="MS-HKWD" content="Accessing Plant Simulation Objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Accessing Plant Simulation Objects</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id37581.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The Structure UF_Value"></a><a class="link" href="xid1201627.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:assignValue"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id78707.html">Inter-Process Communication Interfaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id30952.html">C</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1201607.html">Structure of the C Program</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id33155.html">Accessing Plant Simulation Objects</a></span> &gt; <span class="simpleHTMLminitoc">Accessing Plant Simulation Objects</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15835"></span><p class="para_topic">The functions assignValue, <a class="links" href="id52287.html">evalPath</a>, <a class="links" href="id58374.html">executeFunction</a>, executeMethod, <a class="links" href="id72139.html">listAt</a>, <a class="links" href="id51768.html">listAtPut</a>, <a class="links" href="id97131.html"> listAtIndex</a>, and <a class="links" href="id84060.html">listAtIndexPut</a> provide direct access to <em>Plant Simulation</em> objects. The objects are defined by the corresponding object ID of data type <em>simpleObjID</em>. They are assigned the corresponding object ID, when an <em>Plant Simulation</em> object is passed as parameter to your C function. The <em>Plant Simulation</em> objects <em>TableFile</em>, <em>CardFile</em>, <em>QueueFile </em> or <em>StackFile </em> and the variables of data type <em>table, list, stack</em> and <em>queue</em> are accessed in an analogous way. These items will be referred to as list objects hereafter. For the one-dimensional list objects <em>CardFile</em>, <em>StackFile</em> and <em>QueueFile</em> and for the variables of data type <em>list</em>, <em>stack</em> and <em>queue</em> only the first index entry (second parameter of the <em>listAtxxx</em> functions) is evaluated. The third parameter has to have the type <code>UF_Integer</code> and the value <code>1</code>.
+         </p>
+         <p class="para_topic">Using index oriented access functions for one-dimensional list objects and for tables without user-defined indexes is not possible. In this case, the functions return an object of type UF_ERROR that may be evaluated.</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">UF_Value <a class="links" href="id72139.html">listAt</a> (simpleObjID list, int x, int y)
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_Value <a class="links" href="id51768.html">listAtPut</a> (simpleObjID list, int x, int y, UF_Value *value)
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_Value <a class="links" href="id97131.html">listAtIndex</a> (simpleObjID list, UF_Value *x, UF_Value *y)
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_Value <a class="links" href="id84060.html">listAtIndexPut</a> (simpleObjID list, UF_Value *x, UF_Value *y, UF_Value *value)
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_Value <a class="links" href="id52287.html">evalPath</a> (simpleObjID startObject,char *path, int argcount, UF_Value *args)
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_Value <a class="links" href="xid1201624.html">executeMethod</a> (simpleObjID method, simpleObjID caller, simpleObjID-ID activeElement, int argcount,UF_Value *args)
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_Value <a class="links" href="id58374.html">executeFunction</a> (char *FunctionName, int argcount, UF_Value *args)
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">UF_Value <a class="links" href="xid1201627.html">assignValue</a> (SimpleObjID lValue, char *attribute, char*subattribute, UF_Value *value)
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">These functions are defined in the file <em>cwinfunc.h.</em></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id37581.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:The Structure UF_Value"></a><a class="link" href="xid1201627.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:assignValue"></a></span></div>
+   </body>
+</html>

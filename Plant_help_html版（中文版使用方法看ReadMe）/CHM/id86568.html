@@ -1,0 +1,102 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>MU distance type</title>
+      
+      <meta name="MS-HKWD" content="MU distance type">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">MU distance type</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id94065.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Capacity"></a><a class="link" href="id74391.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:MU distance"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id60466.html">Conveyor</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57769.html">Dialog Window of the Conveyor</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id23757.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc">MU distance type</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5581"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/mudistanceType.gif" border="0"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em> only runs the distance check when a part enters. If you selected <a class="links" href="id10965.html">Accumulating</a> for example, the distance can fall below the value once the parts accumulate.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Select the distance type for the space between the parts. Then enter the actual distance into the text box <a class="links" href="id74391.html">MU distance</a>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/mudistanceTypeListOpen.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Gap</b> determines the distance between the rear of the preceding part and the front of the succeeding part. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/gapOnline.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Pitch</b> determines the distance between the front of the preceding part and the front of the succeeding part. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/pitchOnline.gif"></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <b class="uiTerm">Front</b> of the part always moves towards the end of the length-oriented object into the direction with which you inserted it along the direction of motion of the material flow. When you insert a length-oriented object, for example a <em>Conveyor</em>, from left to right, the <b class="uiTerm">Front</b> of the part is located on the right-hand side and moves towards the right. When you insert a length-oriented object from right to left, the <b class="uiTerm">Front</b> of the part is located on the left-hand side and moves towards the left. 
+                           </p>
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/ForderrichtungBug.gif"></p>
+                           
+                           <p class="para_note_body">This also applies to parts which move backwards when you select the check box <a class="links" href="id91539.html">Backwards</a> of the <em>Conveyor</em> or the <em>Transporter</em>! The <b class="uiTerm">Front</b> of the part keeps on pointing towards the end of the length-oriented object into the direction with which you inserted it along the direction of motion of the material flow.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Minimum Gap</b> determines the minimum distance between the rear of the preceding part and the front of the succeeding part. This setting prevents the <em>Conveyor</em> from stopping and from waiting for new parts and allows it to run dry.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Minimum Pitch</b> determines the minimum distance between the front of the preceding part and the front of the succeeding part. This setting prevents the <em>Conveyor</em> from stopping and from waiting for new parts and allows it to run dry.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id87580.html">MUDistanceType</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id70543.html">Model a Fixed Gap or a No Gap Conveyor</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id94065.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Capacity"></a><a class="link" href="id74391.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:MU distance"></a></span></div>
+   </body>
+</html>

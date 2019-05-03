@@ -1,0 +1,167 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>hitchFront</title>
+      
+      <meta name="MS-HKWD" content="hitchFront">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">hitchFront</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id52067.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getRouteToDestination"></a><a class="link" href="id84719.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:hitchRear"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id78692.html">Methods of the Transporter</a></span> &gt; <span class="simpleHTMLminitoc">hitchFront</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9740"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path-Transporter-rear.hitchFront</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>hitchFront</em> hitches the front of the active <em>Transporter</em> to the back of the <em>Transporter</em> in front of it. When you do not enter the parameter, <em>Plant Simulation</em> attempts to automatically hitch to the trailer located in front of it. You will use the parameter, when the active trailer is located at the end of a track, which has several succeeding tracks on which trailers are located, which could be hitched up.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em> copies the values of the attributes <b class="uiTerm">Speed</b> and <b class="uiTerm">Backwards</b> of the <em>tractor</em> to the <em>trailers</em> hitched up to it.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The active <em>Transporter </em> can either be one of the trailers or the tractor or a <em>Transporter </em> which is not part of a train yet.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/tuggerTrainsDirection.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you hitch up two <em>tugger trains</em> both of which trains have a tractor, <em>Plant Simulation</em> deactivates the attribute <a class="links" href="id15148.html">IsTractor</a> of the train that is hitching up.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- @ is the transporter which Collided
+-- @.frontMu references the transporter in front
+-- hitch the current transporter to the transporter driving in front of it
+@.hitchfront</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id33891.html">UnhitchFront</a></p>
+         <p class="para_topic"><a class="links" href="id84719.html">hitchRear</a></p>
+         <p class="para_topic"><a class="links" href="id93145.html">UnhitchRear</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id52067.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getRouteToDestination"></a><a class="link" href="id84719.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:hitchRear"></a></span></div>
+   </body>
+</html>

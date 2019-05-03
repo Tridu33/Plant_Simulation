@@ -1,0 +1,167 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Tab Graphics</title>
+      
+      <meta name="MS-HKWD" content="Tab Graphics">
+      <meta name="MS-HKWD" content="Tab Graphics,MUs">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Tab Graphics</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id91067.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Destination"></a><a class="link" href="id10720.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Vector graphics active"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42652.html">Dialog Window of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id10338.html">Tab Graphics</a></span> &gt; <span class="simpleHTMLminitoc">Tab Graphics</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9038"></span><p class="para_topic">The tab <b class="uiTerm">Graphics</b> of the <em>Part</em>, the <em>Container</em>, and the <em>Transporter</em> provides settings for displaying them as vector graphics in your simulation model. With this setting <em>Plant Simulation</em> shows the graphics of the parts with the correct size and with the correct distance to each other while animating your simulation model.
+         </p>
+         <p class="para_topic">The default vector graphic of the <em>Part</em> looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/muVector.gif" border="0">, of the <em>Container</em> it looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/containerVector.gif" border="0">, and of the <em>Transporter</em> it looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/transporterVector.gif" border="0">.
+         </p>
+         <p class="para_topic">You can select or enter the settings <a class="links" href="id10720.html">Vector graphics active</a>, <a class="links" href="id92730.html">Color</a>, <a class="links" href="id75914.html">Border color</a>, <a class="links" href="id90745.html">Border width</a>, <a class="links" href="id28729.html">Show direction arrow</a>, and <a class="links" href="id42126.html">Show state</a>. 
+         </p>
+         <p class="para_topic">In addition the <em>Transporter</em> provides the setting <a class="links" href="id31647.html">Direction of the animation line</a> for the <b class="uiTerm">loading space</b>
+            <a class="links" href="id89093.html">Types</a>
+            <b class="uiTerm">Track</b> and <b class="uiTerm">Line</b>.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/GraphicTabEntity.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/GraphicTabTransporter.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/vectorExample.gif"></p>
+         <p class="para_topic">For loaded <em>Containers</em>, <em>Plant Simulation</em> distributes the animation points, onto which it places loaded MUs, according to the <a class="links" href="id44740.html">X-dimension</a> and <a class="links" href="id62864.html">Y-dimension</a> that you entered. The same applies for <em>Transporters</em> for which you activated the <b class="uiTerm">loading space</b>
+            <a class="links" href="id89093.html">Type</a> &gt; <b class="uiTerm">Store</b> and then entered the <a class="links" href="id66667.html">X-dimension</a> and the <a class="links" href="id23467.html">Y-dimension</a> of the loading space.
+         </p>
+         <p class="para_topic"><em>Plant Simulation</em> calculates the distance between the animation points as follows: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Distance in the <b class="uiTerm">x-direction</b> (horizontal) is the length in pixels of the loaded object divided by the <b class="uiTerm">x-dimension</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Distance in the <b class="uiTerm">y-direction</b> (vertical) is the width in pixels of the loaded object divided by the <b class="uiTerm">y-dimension</b>.
+               </p>
+               
+            </li>
+         </ul>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For determining the size in pixels, compare the <a class="links" href="id85960.html">Scaling Factor</a>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">If either the distance in the <b class="uiTerm">x-direction</b> or in the <b class="uiTerm">y-direction</b> is smaller than 4 pixels, <em>Plant Simulation</em> does not show any MUs at all but draws a pattern to signify that the object is not empty. 
+         </p>
+         <p class="para_topic">As long as the loading space is half empty, <em>Plant Simulation</em> shows a hatch pattern. If the loading space is more than half full, <em>Plant Simulation</em> shows a checker pattern.
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Half empty loading space</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">More than half full loading space</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/vectorGraphicsHatch.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/vectorGraphicsCheck.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">To also show the graphic in 3D that corresponds to the vector graphic in 2D, select <a class="links" href="xid1208683.html">Scale automatically</a> on the <a class="links" href="id23332.html">Tab Appearance of the MUs</a> in the dialog <b class="uiTerm">Edit 3D-Properties</b>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/vectorGraphicsPlusAutomaticGrafics.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id23332.html">Tab Appearance</a> in 3D
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id91067.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Destination"></a><a class="link" href="id10720.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Vector graphics active"></a></span></div>
+   </body>
+</html>

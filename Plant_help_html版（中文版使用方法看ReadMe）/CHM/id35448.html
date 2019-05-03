@@ -1,0 +1,174 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Entrance control</title>
+      
+      <meta name="MS-HKWD" content="Entrance control">
+      <meta name="MS-HKWD" content="Entrance control,general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Entrance control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id33317.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Controls"></a><a class="link" href="id86906.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Exit control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id33317.html">Tab Controls</a></span> &gt; <span class="simpleHTMLminitoc">Entrance control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3478"></span><p class="para_topic">You can modify the built-in behavior of the material flow objects with an <b class="uiTerm">entrance control</b> in which you can program the actions that you want to execute. The object calls the <em>Method</em> you entered as soon as an <em>MU</em> intends to enter the object. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/controlsSP.gif"></p>
+         <p class="para_topic">You can use <em>control methods</em> in a number of ways. You might, for example, count the number of incoming <em>MUs</em> and then, after a specified number has been reached, move the following <em>MUs</em> to a different successor. 
+         </p>
+         <p class="para_topic">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object into which you entered the source code of the <b class="uiTerm">entrance control</b>. 
+         </p>
+         <p class="para_topic">Or you can select the <em>Method</em> in a <em>Frame</em>, drag it to the text box and drop it there.
+         </p>
+         <p class="para_topic">Instead, you can also right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>, such as <code>self.ExitControlEnginePlant</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnBuilt_in_name_of_the_control</code>, such as <code>self.OnEntrance</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. An example might look like this:
+               </p>
+               <pre class="indent">switch @.Name
+   case &quot;PartA&quot;
+       ?.ProcTime := str_to_time(&quot;10:0&quot;) -- PartA will be processed for 10 minutes
+   case &quot;PartB&quot; then
+       ?.ProcTime := str_to_time(&quot;2:0&quot;)  -- PartB will be processed for 2 minutes
+end </pre>
+               </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/createControl2.gif"></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, click in the text box, and press the <b class="uiTerm">F2</b> key.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <em>Plant Simulation</em> activates the <b class="uiTerm">entrance control</b>: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Once the <em>part</em> enters a <b class="uiTerm">point-oriented object</b>, such as the <em>Station</em>. For this setting, the default, the check box <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/BeforeActions.gif" border="0"> is cleared. 
+               </p>
+               
+               <p class="para_item">To activate the entrance control of the <b class="uiTerm">point-oriented objects</b>
+                  <b class="uiTerm">before</b> the standard actions are started, when a part enters the object, select <b class="uiTerm">Before actions</b>. Standard actions are, for example, starting the <b class="uiTerm">processing time</b> or the <b class="uiTerm">set-up time</b>, requesting <b class="uiTerm">services</b> through the <em>importer</em>, or changing the <b class="uiTerm">assembly table</b> of the <em>AssemblyStation</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When the <b class="uiTerm">Front</b> or the <b class="uiTerm">Rear</b> of the <em>part</em> enters a <b class="uiTerm">length-oriented object</b>, such as the <em>Conveyor</em>, or <em>Track</em> or a <em>TwoLaneTrack</em>. 
+               </p>
+               
+               <p class="para_item">Remember that a <em>part</em>, for which you entered a length, does not enter these objects all at once, but continually. Depending on the length and the speed of the <em>part</em>, there will a delay between the time the front and the time the rear of the <em>part</em> enters the object. 
+               </p>
+               
+               <p class="para_item">Select <b class="uiTerm">Front</b> to activate the control as soon as the front of the <em>part</em> enters, i.e., is located on the object. This means that changing the processing time in the entrance control does not affect the <em>part</em> that already entered the object. To set the processing time depending on the <em>part</em> that arrives, define the processing time in a formula. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <b class="uiTerm">Front</b> of the part always moves towards the end of the length-oriented object into the direction with which you inserted it along the direction of motion of the material flow. When you insert a length-oriented object, for example a <em>Conveyor</em>, from left to right, the Front of the part is located on the right-hand side and moves towards the right. When you insert a length-oriented object from right to left, the <b class="uiTerm">Front</b> of the part is located on the left-hand side and moves towards the left. 
+                           </p>
+                           
+                           <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/ForderrichtungBug.gif"></p>
+                           
+                           <p class="para_note_body">This also applies to parts which move backwards when you select the check box <a class="links" href="id91539.html">Backwards</a> of the <em>Conveyor</em> or the <em>Transporter</em>! The <b class="uiTerm">Front</b> of the part keeps on pointing towards the end of the length-oriented object into the direction with which you inserted it along the direction of motion of the material flow.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p class="para_item">Select <b class="uiTerm">Rear</b> to activate the control as soon as the rear of the <em>part</em> enters the object. 
+               </p>
+               
+               <p class="para_item">You can also select both <b class="uiTerm">Front</b> and <b class="uiTerm">Rear</b>. The <em>part</em> then executes the control as soon as the front or the rear of the <em>part</em> enters the object. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To activate the entrance control of the <b class="uiTerm">point-oriented objects</b>
+            <b class="uiTerm">before</b> the standard actions are started, when a part enters the object, select <b class="uiTerm">Before actions</b>. Standard actions are, for example, starting the <b class="uiTerm">processing time</b> or the <b class="uiTerm">set-up time</b>, requesting <b class="uiTerm">services</b> through the <em>importer</em>, or changing the assembly table of the <em>AssemblyStation</em>. Then, you can, for example, change the processing time in the entrance control, which then affects processing of the part that is already located on the object. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/beforeActionsSP.gif"></p>
+         <p class="para_topic">To activate the entrance control after the standard action has been executed, clear the check box. </p>
+         <p class="para_topic">Also compare the video <b class="uiTerm">Creating an Exit Control</b>, which you can open under the <b class="uiTerm">Window ribbon tab</b>
+  &gt; <b class="uiTerm">Start Page</b> &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Videos</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id66634.html">EntranceCtrl</a></p>
+         <p class="para_topic"><a class="links" href="id21969.html">EntranceCtrlFront</a></p>
+         <p class="para_topic"><a class="links" href="id15032.html">EntranceCtrlRear</a></p>
+         <p class="para_topic"><a class="links" href="id21082.html">EntranceCtrlBeforeActions</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id91863.html">Create Entrance and Exit Controls</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id96824.html">Change the Processing Time in the Entrance Control</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id38236.html">Change the Services of the Importer in the Entrance Control</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id76040.html">Change the Assembly List in the Entrance Control</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id83714.html">FwDestList</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id31061.html">Sensors</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id33317.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Controls"></a><a class="link" href="id86906.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Exit control"></a></span></div>
+   </body>
+</html>

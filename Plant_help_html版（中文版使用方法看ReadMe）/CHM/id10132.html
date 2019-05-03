@@ -1,0 +1,66 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Snap to Objects</title>
+      
+      <meta name="MS-HKWD" content="Snap to Objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Snap to Objects</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id99932.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Snap to Grid"></a><a class="link" href="id12176.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Lock Structure"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id58128.html">3D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id28391.html">3D Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id22828.html">Edit Ribbon Tab</a></span> &gt; <span class="simpleHTMLminitoc">Snap to Objects</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13255"></span><p class="para_topic"> The command <b class="uiTerm">Snap to Objects</b> snaps objects, which you insert into your simulation model, to already inserted and positioned objects. To do so, <em>Plant Simulation</em> uses the position and/or the orientation of the inserted objects.
+         </p>
+         <p class="para_topic"> To decide where to snap the object you are about to insert, <em>3D</em> uses hotspots, which are characteristic positions of its graphic:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> For the normal 3D objects <em>3D</em> creates a bounding box around the graphic, whose corners, center points of the vertices and planes are the hotspots.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The hotspot of <em> Interface</em> objects is their insertion position.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The hotspots of the length-oriented objects are determined as follows:</p>
+               
+               <p class="para_item">
+                  <em>Plant Simulation</em> takes all anchor points and the centers of the straight segments and creates a bounding box in the direction of the animation line around them, so that they are the center points of the planes of the bounding box. The corners, the center points of the vertices, and the first and last anchor point are the hotspots of the object.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Graphics do not have hotspots.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The commands <b class="uiTerm">Align to Grid</b>, <b class="uiTerm">Snap to Grid</b>, and <b class="uiTerm">Snap to Objects</b> adjust the two coordinates that are placed along the grid plane, which normally are the <b class="uiTerm">x-coordinate</b> and the <b class="uiTerm">y-coordinate</b>.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id99932.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Snap to Grid"></a><a class="link" href="id12176.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Lock Structure"></a></span></div>
+   </body>
+</html>

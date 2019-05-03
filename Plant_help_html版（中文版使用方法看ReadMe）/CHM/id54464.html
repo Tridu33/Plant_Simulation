@@ -1,0 +1,109 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Working with the Event Debugger</title>
+      
+      <meta name="MS-HKWD" content="Working with the Event Debugger">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Working with the Event Debugger</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id35686.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Select Settings for the Simulation"></a><a class="link" href="id92862.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Example 1"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17583.html">Controlling the Simulation with the EventController</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54464.html">Working with the Event Debugger</a></span> &gt; <span class="simpleHTMLminitoc">Working with the Event Debugger</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_462"></span><p class="para_topic">The <a class="links" href="id39578.html">EventDebugger</a> is a tool that lets you accurately control the execution of simulation events, when you click <b class="uiTerm">Single Step Simulation</b>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/evStepSmall_dup1.gif" border="0">. This way you can follow how <em>Plant Simulation</em> processes the individual events during the simulation run and detect errors in your simulation model. As opposed to clicking <b class="uiTerm">Start/Stop Simulation</b> on the tab <b class="uiTerm">Controls</b> of the <em>EventController</em> you can, for example, enter a condition when the <em>Event Debugger</em> is to <b class="uiTerm">Stop</b> the simulation. Then, you can follow the execution of the events in the <em>Event Debugger</em>. 
+         </p>
+         <p class="para_topic">The following examples demonstrate a number of typical usages for the <em>Event Debugger</em>. 
+         </p>
+         <p class="para_topic">To open the <em>Event Debugger</em>, to define breakpoints and to step through the scheduled events:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Open the <em>EventController</em>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/Eventcontroller1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click the <b class="uiTerm">List </b> button <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/evList_dup1.gif" border="0"> on the tab <b class="uiTerm">Controls</b>. The event list contains the types of scheduled events, which the objects in your simulation model entered and which the <em>EventController</em> has to process. It is sorted ascending by time, tells the type of event, the scheduled processing time, and lists recipient and sender of the event. 
+               </p>
+               
+               <p class="para_item">Double-click a cell in the row where you would like to insert a single breakpoint. Then, the <em>Event Debugger</em> stops the simulation run immediately before the <em>EventController</em> processes that event. Double-click the row again to delete the breakpoint.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the check box <b class="uiTerm">Breakpoints active</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Breakpoints</b> to open the list of the breakpoints you defined. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">Insert</b> in the dialog <b class="uiTerm">Breakpoint</b> to add an additional breakpoint.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/eventDebugger.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">You can also use an event from the list in the <em>EventController</em> to define breakpoints. Select the event in the list and click <b class="uiTerm">Stop at Selected Event</b>. This adds this event to the list of defined event breakpoints. You can also edit the selected event. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To process a single event and stop the simulation again, click <b class="uiTerm">Single Step Simulation</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/evStepSmall_dup1.gif" border="0">. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To proceed with the simulation until the <em>EventController</em> reaches the next breakpoint, click <b class="uiTerm">Start/Stop Simulation</b>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id92862.html">Example 1</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id59061.html">Example 2</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id38835.html">Example 3</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id88756.html">Example 4</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id56552.html">Example 5</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id54464.html">Working with the Event Debugger</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id35686.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Select Settings for the Simulation"></a><a class="link" href="id92862.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Example 1"></a></span></div>
+   </body>
+</html>

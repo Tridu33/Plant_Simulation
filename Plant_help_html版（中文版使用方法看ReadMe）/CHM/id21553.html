@@ -1,0 +1,303 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Create Sensors</title>
+      
+      <meta name="MS-HKWD" content="Create Sensors">
+      <meta name="MS-HKWD" content="Create Sensors,material flow objects">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Create Sensors</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id98419A.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define Controls for Length-Oriented Objects"></a><a class="link" href="id26761.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create and Delete an Observer"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id26257.html">Modeling the Flow of Materials, Advanced</a></span> &gt; <span class="simpleHTMLminitoc">Create Sensors</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_691"></span><p class="para_topic">The material flow objects have built-in sensors, i.e., the entrance controls and the exit controls that the arriving or the leaving <em>MUs</em> trigger. A triggered sensor calls the <em>Method</em> object, whose name you entered as an <b class="uiTerm">entrance</b> or as an <b class="uiTerm">exit</b> control. These user-defined controls will then replace the built-in properties of the object. 
+         </p>
+         <p class="para_topic">For the length-oriented objects <em>Track</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/trackSm_dup.gif" border="0">, <em>TwoLaneTrack</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/twoLaneTrackSm_dup.gif" border="0">, <em>Turntable</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/turntableSm.gif" border="0">, and <em>Conveyor</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/lineSm_dup1.gif" border="0">, and for the <em>Transporter</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/transporterSm.gif" border="0"> you yourself can, in addition to the entrance controls and to the exit controls, define sensor controls anywhere on the object. The <em>Track</em> and the <em>Conveyor</em> activate the <em>Methods</em> you assigned to the sensor, when an <em>MU</em> passes the sensor, which in your plant might be a light barrier, or a similar device. In the <em>Method</em> assigned to the control you can program the action you want <em>Plant Simulation</em> to execute. You might, for example define the conditions that apply when the parts are transferred onto the next material flow object, or you might change the target velocity, and the icon, of a transporter, when its front reaches the sensor.
+         </p>
+         <p class="para_topic">To create <a class="links" href="id31061.html">sensors</a> in the dialog of the <em>Track</em>, the <em>TwoLaneTrack</em>, the <em>Turntable</em>, the <em>Conveyor</em> or the <em>Transporter</em>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click the position at which you would like to insert the sensor with the right mouse button and select <a class="links" href="id35117.html">Create Sensor</a> on the context menu. Enter the data defining to the sensor into the dialog that opens.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/createSensorContext.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Or click the tab <b class="uiTerm">Controls</b>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <em>Transporter</em> show the button on the tab <b class="uiTerm">Load Bay</b>, when you select <b class="uiTerm">Track</b> or <b class="uiTerm">Conveyor</b>. Click <b class="uiTerm">Apply</b> to activate the button.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the name of the <em>control method</em> in which you programmed the action you would like the <em>Transporter</em> to execute. In our example, we want it to turn around, when its front passes the sensor. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="33%">
+                     
+                     <col span="1" width="33%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/sensor1.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/sensor1Trans.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To create a new sensor and open the dialog <b class="uiTerm">Sensor</b>, click <b class="uiTerm">New</b>. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/sensors3.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/sensors31.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">ID</b> is the number that <em>Plant Simulation</em> automatically assigns to the sensor, when it creates it. You can use this unique identifier to access that sensor from within <em>Methods</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the type of position, <b class="uiTerm">Relative</b> or <b class="uiTerm">Length</b>, from the drop-down list and enter the position of the sensor. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">For <b class="uiTerm">Relative</b> you can enter a value between <code>0</code> and <code>1</code>, and <em>Plant Simulation</em> show <b class="uiTerm">0..1</b> to the right of the text box. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">For <b class="uiTerm">Length</b> you can enter a value between <code>0</code> and the length of the object.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+               <p class="para_item"><em>Plant Simulation</em> uses the length unit you selected under <b class="uiTerm">File</b>
+    &gt; <b class="uiTerm">Model Settings/Preferences</b> &gt; <b class="uiTerm">Units</b> &gt;
+     <b class="uiTerm">Length</b>. When you enter an invalid value, <em>Plant Simulation</em> changes the color of the text box to red.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you define a sensor for a <em>Track</em>, you can select when a <em>Transporter</em> passing over it triggers the sensor: <b class="uiTerm">Always</b>, independent of the destination of the <em>Transporter</em>. Or <b class="uiTerm">Only when</b> the <em>Transporter</em> has the same <b class="uiTerm">destination</b>, which you entered into the sensor. 
+               </p>
+               
+               <p class="para_item">The <em>Transporter&rsquo;s</em> automatic routing feature also includes this destination object. When you assign a Destination to the <em>Transporter</em> while automatic routing is active, it drives to the sensor. There it activates the <b class="uiTerm">sensor Control</b> and a <b class="uiTerm">destination control</b> which you defined for the <em>Transporter</em>. The same destination object can be defined in several sensors. It may also be directly reached via different <em>Tracks</em>. Even when a direct route leads to the <b class="uiTerm">destination</b> object, the <em>Transporter</em> drives to the nearest sensor, when this sensor can be reached on a shorter route than the destination object itself. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the name of the object to which the <em>Transporter</em> drives into the text box <b class="uiTerm">Destination</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the name of the <em>Method</em>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/methodIconSm_dup.gif" border="0">, which the sensor calls, in the dialog<b class="uiTerm">Select Object</b>. To open the dialog of the object, whose name you entered into the text box, click in the text box, and press the <b class="uiTerm">F2</b> key. The source code of our <em>Method</em><em>accelerate</em> looks reads like this:
+               </p>
+               <pre class="indent">@.Speed := 50
+@.currIcon := &quot;car_fast&quot;</pre>
+               <p class="para_item">As soon as the sensor calls this <em>Method</em>, it passes the <b class="uiTerm">Sensor ID</b> is parameter. When the <em>Method</em> expects an <em>integer</em> parameter, the sensor passes the <b class="uiTerm">Sensor ID</b> to the <em>Method</em>; if you do not enter an <em>integer</em> parameter, the <em>Method</em> will be called without a parameter.
+               </p>
+               
+               <p class="para_item">Or you can right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em>, which is a user-defined attribute of data type <em>method</em> of this object: 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>, such as <code>self.MySensorControl</code>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts<code>self.OnBuilt_in_name_of_the_control</code>, such as <code>self.OnSelect</code>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+                     
+                  </li>
+               </ul>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Front</b>, so that the front of the <em>MU</em> calls the <em>Method</em>. You can also select <b class="uiTerm">Front</b> and <b class="uiTerm">Rear</b>. Then both the front and the rear of the <em>MU</em> activate the <em>Method</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Rear</b>, so that the rear of the <em>MU</em> calls the <em>Method</em>. You can also select <b class="uiTerm">Front</b> and <b class="uiTerm">Rear</b>. Then both the front and the rear of the <em>MU</em> activate the <em>Method</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">OK</b> to apply your settings and to close the dialog. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/sensors4.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you click the <b class="uiTerm">Close</b>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/closeButton_dup4.gif" border="0"> button, <em>Plant Simulation</em> updates and shows the <b class="uiTerm"> number of sensors</b> in the button <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/sensors7.gif" border="0"> in the dialog. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">edit</b> the sensor, which you selected in the list, click <b class="uiTerm">Edit</b>. Or double-click the row that defines the sensor in the list.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">delete</b> the sensor, which you selected in the list, click <b class="uiTerm">Delete</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To open the sensor that <em>Plant Simulation</em> inserts as a red line into the icon of the object, <b class="uiTerm">Alt</b>+double-click the red line <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/sensors61.gif" border="0"> and change the settings in the dialog that opens. Or click the sensor with the right mouse button and select <a class="links" href="id72546.html">Open Sensor</a> on the context menu.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ContOpenSens1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To show a <em>tooltip</em> with information about the sensor, drag the mouse over the red line designating it on the object.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/sensorTooltip.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You will make extensive use of sensors when <a class="links" href="id14255.html">Modeling Transport Systems</a>. used them in our sample applications for loading and unloading a <a class="links" href="id29644.html">cross sliding car</a> and a <a class="links" href="xid1162948.html">tugger train</a>.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id92136.html">Transferring Parts from Station to Station</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id91863.html">Create Entrance and Exit Controls</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id37355.html">Customize the Behavior of Objects</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id26257.html">Modeling the Flow of Materials, Advanced</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id98419A.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define Controls for Length-Oriented Objects"></a><a class="link" href="id26761.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create and Delete an Observer"></a></span></div>
+   </body>
+</html>

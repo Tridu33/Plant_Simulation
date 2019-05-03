@@ -1,0 +1,266 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.createTiledPlate</title>
+      
+      <meta name="MS-HKWD" content="_3D.createTiledPlate">
+      <meta name="MS-HKWD" content="createTiledPlate">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.createTiledPlate</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id30376.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.createText"></a><a class="link" href="id36349.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Built-in Attributes, Read-Only Attributes, and Methods for Accessing Graphics"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id34231.html">Built-in Methods for Creating 3D Shapes</a></span> &gt; <span class="simpleHTMLminitoc">_3D.createTiledPlate</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14662"></span><span id="ndxgenid_PlantSimulationENU_14663"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">_3D.createTiledPlate(BasePoint:length[3], FilePath:string, Orientation:integer, Size:length[2], Bifacial:boolean, TileSize:length[2] [, Thickness:length, GraphicGroupName:string]) &rarr; string</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.createTiledPlate</em> creates a plate which shows the picture or the texture loaded from a picture tiled.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>BasePoint</em> is an array of data type <em>length</em> which sets the base point of the picture.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>FilePath</em> of data type <em>string</em> sets the path and the name of the file you want to import.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Orientation</em> of data type <em>integer</em> sets the sets the orientation of the picture. <code>1</code> stands for <b class="uiTerm">Floor</b>, <code>2</code> stands for <b class="uiTerm">Front Wall</b>, and <code>3</code> stands for <b class="uiTerm">Side Wall</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Size</em> is an array of data type <em>length</em> which sets the width and the height of the picture. Enter a value less than or equal to 0 to ignore the width and/or the height.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Bifacial</em> of data type <em>boolean</em> sets if the texture will be shown on both sides of the plate (<code>true</code>) or only on the top side of the plate (<code>false</code>). 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>TileSize</em> is an array of data type <em>length</em> which sets the width and the height of a tile. Enter a value less than or equal to 0 to ignore the width and/or the height.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>Thickness</em> of data type <em>length</em> designates the thickness of the plate.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>GraphicGroupName</em> of data type <em>string</em> designates the name of the graphic group you are working with. The parameter is described under<a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>integer</em> and specifies the numerical index of the textured plate, compare <a class="links" href="id72302.html">_3D.getGraphicIndex</a>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">_3D.createTiledPlate([2.0,2.0,1], &quot;D:\Picture.png&quot;, 1, [4.0,2.0], true, [2.0, 2.0], 0.1)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">_3D.createTiledPlate([2.0, 2.0, 1], &quot;D:\Picture.png&quot;, 1, [4.0, 2.0], true, [2.0, 2.0], 0.1, &quot;deco&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var index := _3D.createTiledPlate([2.0,2.0,1], &quot;D:\Picture.png&quot;, 1, [4.0,2.0], true, [2.0, 2.0], 0.1, &quot;deco&quot;)
+_3D.setGraphicMaterial([index], makeRGBValue(255,0,0), 0, 0, 0, 0, 0, &quot;deco&quot;)
+</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id96513.html">Insert Textured Plate</a></p>
+         <p class="para_topic"><a class="links" href="id14406.html">_3D.createPicture</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id30376.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.createText"></a><a class="link" href="id36349.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Built-in Attributes, Read-Only Attributes, and Methods for Accessing Graphics"></a></span></div>
+   </body>
+</html>

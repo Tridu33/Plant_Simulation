@@ -1,0 +1,54 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Search Lists with Methods</title>
+      
+      <meta name="MS-HKWD" content="Search Lists with Methods">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Search Lists with Methods</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id36637.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Address Columns and Rows with Methods"></a><a class="link" href="id37092.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Search Manually within Lists"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id46379.html">Working with Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc">Search Lists with Methods</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1718"></span><p class="para_topic">Lists and tables have an internal cursor pointing to a cell of the list. You can query the current position of the cursor with the attribute <a class="links" href="id48503.html">Cursor</a> and set it anew by assigning an integer value to it. A search, for example with the method <a class="links" href="id35379.html">find</a>, begins at the current cursor position. Before starting the search, make sure that the list cursor is placed at the cell from which on you want to search.
+         </p>
+         <p class="para_topic">After a successful search, <em>Plant Simulation</em> places the cursor in the cell where it found the value. If the list contains the value you searched for more than once, a new call of the method <em>find</em> finds the next value starting at that cell, and so on.
+         </p>
+         <p class="para_topic">When you set a range for the <em>find</em> command, <em>Plant Simulation</em> determines the starting position of the cursor by combining the cursor and the range. The search begins at the first entry of the list in the range you entered, starting at the cursor position. The search ignores any range, which is located before the current cursor position. If the cursor is located in the middle of the range you entered, <em>Plant Simulation</em> does not search for entries before of the cursor position! The search goes on until <em>Plant Simulation</em> finds the value or reaches the end of the list. When <em>Plant Simulation</em> finds the value you searched for, it places the cursor into the cell, which contains the value. A new search begins at the next cell. If the search does not find the value, the internal cursor remains in the cell it had before the search. 
+         </p>
+         <p class="para_topic">The same principle applies to tables. As a table has rows and columns, it naturally has two cursors: <a class="links" href="id29006.html">CursorX</a> designates the column and <a class="links" href="id67770.html">CursorY</a> designates the row, which identifies the cell. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Set the cursor anew after inserting or deleting rows, to determine its position. </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id46379.html">Working with Lists and Tables</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id36637.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Address Columns and Rows with Methods"></a><a class="link" href="id37092.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Search Manually within Lists"></a></span></div>
+   </body>
+</html>

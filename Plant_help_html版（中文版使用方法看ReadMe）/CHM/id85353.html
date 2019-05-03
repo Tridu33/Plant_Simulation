@@ -1,0 +1,96 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Tab Product</title>
+      
+      <meta name="MS-HKWD" content="Tab Product">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Tab Product</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id63513.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Reworking process"></a><a class="link" href="id86506.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Set-Up"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67668.html">Value Stream Mapping</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1203830.html">Value Stream Mapping Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id21872.html">Process</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id37787.html">Dialog Window of the Object Process</a></span> &gt; <span class="simpleHTMLminitoc">Tab Product</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_17939"></span><p class="para_topic"> On the tab <b class="uiTerm">Product</b> you can enter the properties of the product to be produced. 
+         </p>
+         <p class="para_topic"> You can add products to the products table by clicking <a class="links" href="id11011.html"> Add</a>. You can edit the selected product by clicking <a class="links" href="id96358.html"> Edit</a>. You can edit the products table by clicking <a class="links" href="id73114.html"> Edit Table</a>. You can delete the selected product from the products table by clicking <a class="links" href="id95540.html"> Delete</a>.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/ProcessTabProduct.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/ProcessPrio.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The dialog <b class="uiTerm">Product</b> then enters your settings into the cells of the <b class="uiTerm">product table</b> on the tab.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Product</b></p>
+         <p class="para_topic"> Click the button Product and select the product that is to be processed. Instead, you can also enter the name of the product into the dialog Product .</p>
+         <p class="para_topic"><b class="uiTerm">BaseProduct</b></p>
+         <p class="para_topic"> Click the button Base Product and select the base product that is required to produce the product. Instead, you can also enter the name of the base product into the dialog <b class="uiTerm">Base Product</b>.
+         </p>
+         <p class="para_topic"> The required product can have the same identifier as the product. To produce the product <em> cylinder</em>, for example, the base product <em> blank</em> is required.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Number of consumed parts</b></p>
+         <p class="para_topic"> Enter the quantity, i.e., how many of the requested base products are used to produce one product.</p>
+         <p class="para_topic"> For producing one <em> cylinder</em> 0.25 <em> blanks</em> are required for example. Thus four <em> cylinders</em> can be produced with one <em> blank</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Lotsize</b></p>
+         <p class="para_topic"> Enter the lot size in which you want to produce the product. The production order quantity will always be rounded to this lot size. The exception is the last <em> Process</em> object before the <em> Customer</em> object. The products are ordered with this lot size from the preceding store (<em> Inventory</em> or <em> Supermarket</em> ).
+         </p>
+         <p class="para_topic"><b class="uiTerm">Cycletime</b></p>
+         <p class="para_topic"> Enter the <b class="uiTerm">cycle time</b>. The cycle time is the time that elapses between two consecutive products that leave the <em> Process</em>. For the object <em> Process</em> the <b class="uiTerm">cycle time</b> is identical wit the <b class="uiTerm">processing time</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Transfer quantity</b></p>
+         <p class="para_topic"> Enter the number of products which are transferred on a workpiece carrier at the same time.</p>
+         <p class="para_topic"><b class="uiTerm">Reworkrate</b></p>
+         <p class="para_topic"> Enter the percentage of products which will be marked for reworking. These products will be moved out of the line at the next <em> rework connector</em>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Scraprate</b></p>
+         <p class="para_topic"> Enter the percentage of products which will be deleted because they are scrap. They will be deleted immediately after they were processed.</p>
+         <p class="para_topic"><b class="uiTerm">Priority</b></p>
+         <p class="para_topic"> Enter the priority. <em> Plant Simulation</em> adds the priority of a product to the production order when a new order arrives at the object of type <em> Process</em>. All production orders in the order list are sorted according to the priority and the point in time at which the order arrives. This way you can define high priority products which have to be processed before all other products. The higher the number you enter the higher the priority.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id63513.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Reworking process"></a><a class="link" href="id86506.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Set-Up"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Test Our Station in the Simulation Model</title>
+      
+      <meta name="MS-HKWD" content="Test Our Station in the Simulation Model">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Test Our Station in the Simulation Model</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id34781.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Add Animations and Interactions to the Simulation Objects"></a><a class="link" href="id11988.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Fine-tune Our Station"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58193.html">Modeling in 3D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id20438.html">Creating an Animatable Object</a></span> &gt; <span class="simpleHTMLminitoc">Test Our Station in the Simulation Model</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1310"></span><p class="para_topic">Now we are ready to test our screwdriver station in the simulation model.</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert a <em>Source</em>, which produces the pallets which we want to screw together. We named it <code>SourcePallets</code>. 
+               </p>
+               
+               <p class="para_item">Insert a second <em>Source</em>, which feeds the screws required for screwing together the pallets. We named it <code>SourceScrews</code>. We received the screw, including the JT file, from a colleague.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert a <em>Drain</em>, which removes the finished pallets from the plant. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert our <em>Screwdriver</em> station. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert three <em>Conveyors</em> between the <em>Sources</em>, the <em>Drain</em>, and the <em>Screwdriver</em> station.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Connect all objects with <em>Connectors</em>. Connect the <em>SourcePallets</em>, that produces the <b class="uiTerm">MU</b>
+    &gt;
+     <b class="uiTerm">PartsCarrier</b>, with the <em>ConveyorPallets</em>, and with the <em>Interface</em><em>InPalette</em> of the <em>Screwdriver</em>. Connect the <em>SourceScrews</em> that produces the <b class="uiTerm">MU</b>
+    &gt;
+     <b class="uiTerm">Screw</b>, with the <em>ConveyorScrews</em>, and with the <em>Interface</em><em>InScrew</em>. Connect the <em>ConveyorOut</em> with the <em>Interface</em><em>Out</em> and then with the <em>Drain</em>. The simulation model should now look like this:
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverFinishedModel.gif"></p>
+               
+               <p class="para_item">You might be wondering how we inserted the <em>Conveyors</em> with an inclination to smoothly connect to the <em>Screwdriver</em> station. We proceeded as follows:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">For the <em>ConveyorPallets</em> we entered an <b class="uiTerm"> anchor point height</b> of <code>1</code> meter for the first anchor point and an anchor point height of <code>0.15</code> meters for the second anchor point. This is the height of the object <em>SourcePallets</em> to which we connect it on the left-hand side. 
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="50%">
+                           
+                           <col span="1" width="50%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverLinePallets1.gif"></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverLinePallets2.gif"></p>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">For the <em>ConveyorOut</em> we edited values in the dialog <b class="uiTerm">Edit 3D Properties</b>
+      &gt;
+       <b class="uiTerm">Appearance</b>. We entered a <b class="uiTerm">base height</b> of <code>0.15</code> meters, which means that the left-hand side of the <em>ConveyorOut</em> is placed 15 centimeters above the floor. We then clicked <b class="uiTerm">Segments</b> and entered <code>1</code> meter as the <b class="uiTerm">Z</b> timension so that the right-hand side connects smoothly to the <em>Drain</em>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modelinginthe3DViewer/screwdriverLineOutEdit3D.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">When you run the simulation, you might want to run it with a low <b class="uiTerm">real-time</b> factor to be able to watch how the screwdriver actually screws the screws in.
+                     </p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic"></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id84876.html">Create the Required Simulation Object</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id34781.html">Add Animations and Interactions to the Simulation Objects</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id11988.html">Fine-Tune Our Station</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id20438.html">Creating an Animatable Object</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id34781.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Add Animations and Interactions to the Simulation Objects"></a><a class="link" href="id11988.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Fine-tune Our Station"></a></span></div>
+   </body>
+</html>

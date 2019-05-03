@@ -1,0 +1,186 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>update Table</title>
+      
+      <meta name="MS-HKWD" content="updateTable">
+      <meta name="MS-HKWD" content="updateTable,Oracle">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">update Table</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id41032.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:sql"></a><a class="link" href="id23540.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Attributes of the Oracle11g Interface"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36445.html">Database Interfaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42415.html">Oracle11g</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id74334.html">Methods of the Oracle11g Interface</a></span> &gt; <span class="simpleHTMLminitoc">update Table</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15271"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.updateTable(SourceData:table, SQLTable:string, RowNumber:integer) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>updateTable</em> updates a database table with the values from a <em>Plant Simulation</em> table. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>SourceData</em> of data type <em>table</em> designates the <em>Plant Simulation</em> table.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>SQLTable</em> of data type <em>string</em> designates the database table.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>RowNumber</em> of data type <em>integer</em> designates the primary index used to identify, which rows of the tables match.
+               </p>
+               
+            </li>
+         </ul>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Plant Simulation table</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Database table</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Database_Interfaces/updateTable1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Database_Interfaces/updateTable.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- the contents of row 3 of the Plant Simulation table replaces the existing
+-- contents of row 3 of the database table
+MyOracle.updateTable(MyTableFile,&quot;Name_of_Database_Table&quot;,3)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id41032.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:sql"></a><a class="link" href="id23540.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Attributes of the Oracle11g Interface"></a></span></div>
+   </body>
+</html>

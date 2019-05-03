@@ -1,0 +1,320 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>&amp; (SimTalk 2.0) ref (SimTalk 1.0)</title>
+      
+      <meta name="MS-HKWD" content="&amp; (SimTalk 2.0)">
+      <meta name="MS-HKWD" content="ref (SimTalk 1.0)">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">&amp; (SimTalk 2.0) ref (SimTalk 1.0)</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Assignment_Operators.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Assignment Operators"></a><a class="link" href="id56084.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:byref"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67662.html">Operators and Expressions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Assignment_Operators.html">Assignment Operators</a></span> &gt; <span class="simpleHTMLminitoc">&amp; (SimTalk 2.0) ref (SimTalk 1.0)</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13778"></span><span id="ndxgenid_PlantSimulationENU_13779"></span><p class="para_topic">Before you can to access attributes or methods of objects of type <a class="links" href="id44724.html">Variable</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/variableSm.gif" border="0"> or <a class="links" href="id25909.html">Method</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/methodSm.gif" border="0">, keep this in mind:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When accessing a global <a class="links" href="id44724.html">Variable</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/variableSm.gif" border="0">
+                  <em>Plant Simulation</em> returns its contents and therefore you would send the attribute name or method name to the content and not to the <em>Variable</em> object itself. 
+               </p>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">When accessing a <a class="links" href="id25909.html">Method</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/methodIconSm.gif" border="0">
+                  <em>Plant Simulation</em> starts executing the method and therefore you would send the attribute name or method name to the result and not to the <em>Method</em> object itself. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">If you want to access attributes or methods of one of these objects, you have to use the <em>reference operator</em> . It prevents accessing the contents of the variable or calling the method and returns the reference as an <b class="uiTerm">absolute</b> path of data type <em>object</em>. You can then enter this reference or the path in lists or tables and enter them as parameter into other methods.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- SimTalk 2.0 notation 
+var obj: object
+obj := &amp;MyMethod
+obj := &amp;MyVariable</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- SimTalk 1.0 notation
+is
+   obj : object;
+do
+   obj := ref(MyMethod);
+   obj := ref(MyVariable);
+end;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Place parenthesis around the reference to access the contents of a global variable of data type <em>object</em>. If the reference designates a <em>Method</em>, <em>Plant Simulation</em> is going to call this <em>Method</em>. During the call parameters may be passed.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- SimTalk 2.0 notation 
+MyVariable := .MaterialFlow.Station  -- variable of data type object
+var obj := &amp;MyVariable
+print obj.Name                          -- returns MyVariable
+print obj.Value.Name                    -- returns Station
+obj := &amp;MyMethod                        -- reference
+obj.execute                             -- call
+obj := &amp;methodWithArgument
+obj.execute(1.0, true,&quot;parameter&quot;)      -- call with parameter</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- SimTalk 1.0 notation
+is
+   obj : object;
+do
+   .variable := .MaterialFlow.Station;  -- variable of data type object
+   obj := ref(.myVariable);
+   print obj.Name;                         -- returns .myVariable
+   print (obj).Name;                       -- returns Station
+   obj := ref(myMethod);                   -- reference
+   (obj);                                  -- call
+   obj := ref(methodWithArgument);
+   (obj)(1.0, true,&quot;parameter&quot;);           -- call with parameter
+end;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When using a user-defined attribute of data type <em>method</em>, and you want to access the <em>attributes</em> and <em>methods</em> of that user-defined attribute, then you may not use the <em>reference operator</em>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Station.method               -- executes the user-defined method
+Station.method.methcall(60)  -- schedules the user-defined method 
+                                 -- to be called in 60 seconds</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Assignment_Operators.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Assignment Operators"></a><a class="link" href="id56084.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:byref"></a></span></div>
+   </body>
+</html>

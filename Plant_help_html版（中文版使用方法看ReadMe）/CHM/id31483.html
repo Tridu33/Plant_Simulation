@@ -1,0 +1,206 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>engage</title>
+      
+      <meta name="MS-HKWD" content="engage">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">engage</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id93638.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:doStandardImport"></a><a class="link" href="id78105.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:forgetOpenRequest"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id19366.html">Broker</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id74171.html">Methods of the Broker</a></span> &gt; <span class="simpleHTMLminitoc">engage</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_8237"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.engage(Importer:object, Type:integer, Data:table) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">With the method <em>engage</em> the <em>Broker</em> designated by Path assigns <em>Exporters</em> to an <em>importer</em>.
+         </p>
+         
+         <p class="para_topicComponent">The <em>Broker</em> attempts to book the specified services and the amount required with the <em>Exporters</em>. The <em>Exporters</em> have to be registered with any <em>Broker</em>. <em> Exporters</em> and services may be contained multiple times. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameters</b></p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Importer</em> of data type <em>object</em> designates the <em>importer</em> proper.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Type</em> of data type <em>integer</em> designates its type: <code>0</code> designates the <em>failure/remove failure-importer</em>, <code>1</code> the <em>set-up-importer</em>, <code>2</code> the <em>processing-importer</em>, and <code>3</code> the <em>transport-importer</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Data</em> of data type <em>Table</em> designates a table with the columns <b class="uiTerm">Exporter</b>, <b class="uiTerm">Services</b>, and <b class="uiTerm">Amount</b>.
+               </p>
+               
+            </li>
+         </ul>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>boolean</em>. It shows that all services were assigned with the required amount. <em>Plant Simulation</em> returns false if this was not the case. Note that the <em>Broker</em> does not save and remember requests it cannot fulfill.
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param obj: object, type: integer -- importer type (0 is the failure, 1 the setup, 2 the process, and 3 the transport importer)
+var tab : table[object, string, integer]
+var service : string
+tab.create
+tab.writeRow(1,1, .Resources.Worker:1, &quot;myservice&quot;, 1 )
+return MyBroker.engage(obj, type, tab)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyBroker.engage(importer1,1,tableTile)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id93638.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:doStandardImport"></a><a class="link" href="id78105.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:forgetOpenRequest"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>writeExcelFile</title>
+      
+      <meta name="MS-HKWD" content="writeExcelFile">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">writeExcelFile</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id59995.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:readXMLString"></a><a class="link" href="xid1484935.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:writeExcelXMLFile"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42077.html">Methods of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id52148.html">Methods for Importing and Exporting Data in Text Format</a></span> &gt; <span class="simpleHTMLminitoc">writeExcelFile</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10283"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.writeExcelFile(FileName:string [,Sheet:string, NoDebugger:boolean=false]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>writeExcelFile</em> exports the content of a list or table to the designated Excel file. <em>Plant Simulation</em> overwrites any existing content of the file.
+         </p>
+         <p class="para_topic">The <em>method</em> applies to the objects <em>StackFile</em>, <em>QueueFile</em>, <em>CardFile</em>, <em>TableFile</em>, and <em>TimeSequence</em>. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em> uses Excel as COM-server when reading and writing MS Excel-files. For this reason MS Excel has to be installed on your computer. To continue using the previous, no longer supported Excel interface, you can use the start option <code>-NativeExcel</code>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>FileName </em> of data type <em>string </em> designates the Excel file into which <em>Plant Simulation</em> exports the data. 
+               </p>
+               
+               <p class="para_item">The file name has to have one of the following extensions: .xls, .xlsx, .xlsm, or . xlsb. The file extension determines which Excel file format <em>Plant Simulation</em> writes.
+               </p>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>Sheet</em> of data type <em>string </em> designates the worksheet. When you do not enter it, <em>Plant Simulation</em> saves the list with the name of the worksheet, as <b class="uiTerm">Table1</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>NoDebugger</em> of data type <em>boolean</em> sets if the <em>Debugger</em> opens after an unsuccessful access or not. 
+               </p>
+               
+               <p class="para_item">When you do not specify the optional parameter, the <em>Debugger </em>always opens. 
+               </p>
+               
+               <p class="para_item">When you enter <code>true</code>, the <em>Debugger</em> does not open and the <em>method</em> returns the value false when an error occurs.
+               </p>
+               
+               <p class="para_item">The default value is <code>false</code>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStackFile.writeExcelFile(&quot;C:\users\nelly\factory_a.xls&quot;)
+MyTableFile.writeExcelFile(&quot;C:\temp\factory_a.xls&quot;,&quot;Engines&quot;,true)
+if MyCardFile.writeExcelFile(&quot;C:\temp\data.xls&quot;) 
+   -- data written successfully
+else -- take appropriate measures
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id55994.html">Export Excel File</a></p>
+         <p class="para_topic"><a class="links" href="id74918.html">Entering Start Options</a>, <code>-NativeExcel</code></p>
+         <p class="para_topic"><a class="links" href="id13228.html">readExcelFile</a></p>
+         <p class="para_topic"><a class="links" href="xid1484935.html">writeExcelXMLFile</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id59995.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:readXMLString"></a><a class="link" href="xid1484935.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:writeExcelXMLFile"></a></span></div>
+   </body>
+</html>

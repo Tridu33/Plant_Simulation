@@ -1,0 +1,73 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Set the Root Folder for Your Simulation Model</title>
+      
+      <meta name="MS-HKWD" content="Set the Root Folder for Your Simulation Model">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Set the Root Folder for Your Simulation Model</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id27959.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create a Folder Structure for Your Simulation Model"></a><a class="link" href="id88222.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create Your Own Classes"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id69419.html">Creating a Simulation Model</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id98418.html">Working with Classes in the Class Library</a></span> &gt; <span class="simpleHTMLminitoc">Set the Root Folder for Your Simulation Model</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_399"></span><p class="para_topic">To prevent <em>Plant Simulation</em> from wasting RAM, you might, for example, not want to insert a <em>Method</em> that has a large number of instances into a large number of <em>Frames</em>. Instead, you can directly call this <em>Method</em> in which you programmed an action that many object use, from the <em>Class Library</em>. In this case, you can use the anonymous identifier <em>rootFolder</em> to avoid long paths. 
+         </p>
+         <p class="para_topic">When you use <em>rootFolder</em> in a <em>Method</em>, the <em>rootfolder</em> is a folder in the <em>Class Library</em> for which you have set the attribute <a class="links" href="id55792.html">RootFolder</a> to <code>true</code>. Then, <em>Plant Simulation</em> searches for that folder, starting with the class of the <em>Method</em>, upwards in the hierarchy of objects. 
+         </p>
+         <p class="para_topic">In your application object library, you will, as a rule, set the top folder that contains all your application objects as the rootfolder. This allows you to access any of the application objects you created, to access any of the dialogs you, or your colleagues designed, and so on.</p>
+         <p class="para_topic">To set the root folder:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Use the attribute <em>RootFolder</em>. You might, for example, enter into a <em>Method</em>:
+               </p>
+               
+               <p class="para_item"><code>.ApplicationObjects.RootFolder := true</code></p>
+               
+               <p class="para_item">Or</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Right-click the folder you would like to use as the root folder in the <em>Class Library</em>. Select <b class="uiTerm">Show Attributes and Methods</b>, and click in the window. Press <b class="uiTerm">r</b> in the keyboard and scroll down to <b class="uiTerm">RootFolder</b>. Double-click it. <em>Plant Simulation</em> adds an upper-case <b class="uiTerm">R</b> to the icon of the folder <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/rootfolderIcon.gif" border="0">. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/rootfolder.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">This example illustrates one of the usages of the root folder. </p>
+         <p class="para_topic">We designated the folder <b class="uiTerm">ApplicationObjects</b> is the <b class="uiTerm">RootFolder</b>. We inserted all objects that a large number of other objects use into the <em>Frame</em>
+            <b class="uiTerm">MyComponent</b>. An example is the method <em>openObject</em> that opens a context menu for the objects and that provides the command <b class="uiTerm">Open Object</b>. This allows us to access the method <em>openObject </em> from this one central location by entering <code>rootfolder.MyComponent.openObject</code> in the <b class="uiTerm">General</b> ribbon tab <b class="uiTerm">Context Menu</b>
+  &gt;
+  <b class="uiTerm">Context Menu</b> of the <em>Frames</em> for which we want to provide a context menu. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/configureMenu.gif"></p>
+         <p class="para_topic">You can also use the anonymous identifier <em>rootFolder</em> within <em>Methods</em> in which you programmed controls. Here <em>Plant Simulation</em> looks for the folder for which you set the attribute <em>RootFolder</em>, starting with the class of the <em>Frame</em> into which you inserted the object in which you programmed the control.
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm">Compare</b>
+            <a class="links" href="id27959.html">Create a Folder Structure for Your Simulation Model</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id98418.html">Working with Classes in the Class Library</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id27959.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create a Folder Structure for Your Simulation Model"></a><a class="link" href="id88222.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create Your Own Classes"></a></span></div>
+   </body>
+</html>

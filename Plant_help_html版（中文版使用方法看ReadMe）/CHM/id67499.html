@@ -1,0 +1,145 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Add an Icon to a Ribbon Command</title>
+      
+      <meta name="MS-HKWD" content="Add an Icon to a Ribbon Command">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic8" id="xps10_pagetitle">Add an Icon to a Ribbon Command</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id59511.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create a Ribbon Panel Using the # Sign"></a><a class="link" href="id35296.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create an Access Key Using the &amp; Sign"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id90254.html">Frame</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id93007.html">The Frame Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id63115a.html">General Ribbon Tab</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id71301a.html">Configure User-defined Ribbon Tab</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id34510.html">Text to be displayed</a></span> &gt; <span class="simpleHTMLminitoc">Add an Icon to a Ribbon Command</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6300"></span><p class="para_topic">Create an icon in the <em>Frame</em> for which you define the user-defined ribbon tab and which has the same name as the <b class="uiTerm">text to be displayed</b>, to show this icon to the left of the ribbon command. 
+         </p>
+         <p class="para_topic">To show an icon to the left of a command, create an object icon with a size of 16 by 16 and/or 32 by 32 pixels and assign it the prefix <code>ribbon</code> and a number matching the ribbon command, for example <code>ribbon1</code>. Add <b class="uiTerm">_32</b> or <b class="uiTerm">_16</b> to the name of the object icon to use these icons for the respective size of the button of the ribbon command. <em>Plant Simulation</em> shows the ribbon button on the ribbon tab with the icon that best matches the available space. If the available space is small, <em>Plant Simulation</em> shows the icon with the size of 16 by 16 pixels. If enough space is available, it shows the icon with the size of 32 by 32 pixels. 
+         </p>
+         <p class="para_topic">In our <b class="uiTerm"> example</b> we created three icons in our <em>Frame</em>
+            <em>MyPlantAnytown</em>. We typed in the same name as the <b class="uiTerm">text to be displayed</b> to which we want to add the icon: <code>MyCommand1_16</code>, <code>My Command 2_16</code>, and <code>My Command 3_16</code>. The suffix <code>_16</code> designates them as icons with a size of 16 by 16 pixels.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/userdefinedRibbonIconsCommands.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/ribbonPanelCommands.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">If you do not enter a <b class="uiTerm">method to be executed</b> into the text box next to <b class="uiTerm">text to be displayed</b>, <em>Plant Simulation</em> grays the icon out. In our example we removed the <b class="uiTerm">method to be executed</b> to the right of the command <b class="uiTerm">MyCommand1</b>:
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/usermenu31.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/ribbonPanelGrayedOut.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">If the ribbon command or the panel label contains a formula, <em>Plant Simulation</em> uses the result of the formula to search for icons with names according one of the following rules:
+         </p>
+         <ol type="1" start="1">
+            <li>
+               
+               <p class="para_item">If you entered a name for the ribbon command or for the panel label, <em>Plant Simulation</em> looks for an icon matching the name with the size suffix <code>_16</code> or <code>_32</code> and uses it as the icon if it finds it
+               </p>
+               
+               <p class="para_item">Examples are <code>MyCommand1_16</code> and <code>My Command 2_16</code>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If you entered a name for the ribbon command and no icon with one of the two suffixes exists, <em>Plant Simulation</em> uses the icon exactly matching the exact name.
+               </p>
+               
+               <p class="para_item">Examples are <code>MyCommand1</code> and <code>My Command 2</code>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If no icon name matches the exact command name or if you did not enter the panel name, <em>Plant Simulation</em> uses the prefix <b class="uiTerm">ribbon</b>, the number of the ribbon command, and one of the two suffixes to search for an icon with a matching name.
+               </p>
+               
+               <p class="para_item">Examples are <b class="uiTerm">ribbon1_16</b> and <b class="uiTerm">ribbon1_32</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If <em>Plant Simulation</em> did not find an icon matching the rules above, it attempts to find an icon using the prefix <b class="uiTerm">ribbon</b> and the ribbon command number without an suffix to find an icon matching the name.
+               </p>
+               
+               <p class="para_item">Examples are <b class="uiTerm">ribbon1</b> and <b class="uiTerm">ribbon2</b>.
+               </p>
+               
+            </li>
+         </ol>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id34510.html"> Text to be displayed</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id59511.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create a Ribbon Panel Using the # Sign"></a><a class="link" href="id35296.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create an Access Key Using the &amp; Sign"></a></span></div>
+   </body>
+</html>

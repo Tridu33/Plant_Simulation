@@ -1,0 +1,52 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Example of a Dynamic Parameterization</title>
+      
+      <meta name="MS-HKWD" content="Example of a Dynamic Parameterization">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Example of a Dynamic Parameterization</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1206530.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Priority of a Rule"></a><a class="link" href="id45873.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Recording the Results of a Simulation Study"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54344.html">Tools</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53178.html">ExperimentManager</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53974.html">Advanced Settings</a></span> &gt; <span class="simpleHTMLminitoc">Example of a Dynamic Parameterization</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12965"></span><p class="para_topic"> Below we&rsquo;ll demonstrate how to use rule-based parameterization by means of the inventory model by Law and Kelton, compare <a class="links" href="id93617.html"> Use a Two-level Experimental Design and Use Factorial Analysis</a>. The experiment design showed that the least cost-intensive order strategy for the store consists of the <em> order type</em> Normal and the <em> inventory-evaluation interval</em> of 1 month . We want to investigate the inventory costs for all values ranging from 0 to 70 with a step size of 5 for the values <em> safety stock</em> and the <em> difference</em>. Note that we do not use the experiment table in this example.
+         </p>
+         <p class="para_topic"> Now we have to create rules which set these pairs of values (<em> safety stock</em> and <em> difference</em> ):
+         </p>
+         <p class="para_topic"> (0,0), (0,5), (0,10), &hellip; , (0,70), (5,0), (5,5), (5,10), &hellip; , (5,70), (10,0), (10,5), (10,10), &hellip; , (70,70)</p>
+         <p class="para_topic"> This results in 152, i.e., 225 experiments. In the first experiment an initialization rule sets both values to 0. In a second rule we check if the value <em> difference</em> is less than or equal to 70. If this condition is met, the value <em> difference</em> is increased by 5. A third rule checks if the value 70 for the <em> difference</em> is exceeded. When this is the case the corresponding action resets the value <em> difference</em> to 0 and increases the value <em> safety stock</em> by 5. 
+         </p>
+         <p class="para_topic"> The second and the third rule only work when the second rule is evaluated first. For this reason you have to assign a greater priority to the second rule than to the third rule. </p>
+         <p class="para_topic"> Then, we set the Number of experiments to <code> 225</code> on the tab Rules. Finally we start the experiment run by clicking Start. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/Chart3D.gif"></p>
+         <p class="para_topic"> Showing the results in a user-defined chart</p>
+         <p class="para_topic"> To open this model and to run experiments with it, click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"> If you want to show the results in a chart as a <em> 3D Surface</em>, you have to use the evaluation method in the sample model. 
+         </p>
+         <p class="para_topic"> Our analysis has shown that monthly costs could be reduced to € 115.57. The values belonging to the minimum are a <em> safety stock</em> of 15 and a <em> difference</em> of 30.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1206530.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Priority of a Rule"></a><a class="link" href="id45873.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Recording the Results of a Simulation Study"></a></span></div>
+   </body>
+</html>

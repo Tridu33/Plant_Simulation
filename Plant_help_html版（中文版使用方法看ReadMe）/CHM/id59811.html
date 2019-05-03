@@ -1,0 +1,137 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Default Arguments</title>
+      
+      <meta name="MS-HKWD" content="Default Arguments">
+      <meta name="MS-HKWD" content="Standard arguments">
+      <meta name="MS-HKWD" content="Optional arguments">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Default Arguments</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id50545.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Control Flow"></a><a class="link" href="Introduction.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Introduction"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="A_Quick_Tour_Through_SimTalk_20_1.html">A Quick Tour Through SimTalk 2.0</a></span> &gt; <span class="simpleHTMLminitoc">Default Arguments</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13481"></span><span id="ndxgenid_PlantSimulationENU_13482"></span><span id="ndxgenid_PlantSimulationENU_13483"></span><p class="para_topic">You can define default arguments in <em>SimTalk</em> 2.0. If the <em>Method</em> is then called without the argument, the associated parameter will be set to the default value, which is defined in the <em>Method</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param x: integer := 123</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The <em>Method</em> can be called with or without argument. If the <em>Method</em> is called without argument, the parameter <code>x</code> has the value 123 in the example above.
+         </p>
+         <p class="para_topic">It is also possible to only define default arguments for a part of the parameters. When a parameter has a default argument, all following parameters also have to have a default argument.</p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param a: string,
+b, c: string := &quot;&quot;,
+d: boolean := true</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The <em>Method</em> in this example can be called with one to four arguments, but not without any argument at all, as no default argument was defined for the parameter <code>a</code>.
+         </p>
+         <p class="para_topic">Possible calls are: </p><pre class="indent">Method(&quot;A&quot;)
+Method(&quot;A&quot;, &quot;B&quot;)
+Method(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+Method(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, false)</pre><p class="para_topic">Only constant values are allowed as default argument. You cannot define numbers, strings (string constants), true, false, void, and pi.</p>
+         <p class="para_topic">Parameters of data type <em>object</em>, <em>table</em>, <em>list</em>, <em>stack</em>, <em>queue</em>, or <em>any</em> can only have <code>void</code> as default argument. Parameters of data type <em>date</em> or <em>datetime</em> cannot have a default argument at all. The same is true for parameters of data type a <em>array</em>, they cannot have a default argument.
+         </p>
+         <p class="para_topic">In addition reference parameters, i.e., parameters declared by the keyword <a class="links" href="id56084.html">byref</a>, cannot have a default argument.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id50545.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Control Flow"></a><a class="link" href="Introduction.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Introduction"></a></span></div>
+   </body>
+</html>

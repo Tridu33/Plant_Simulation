@@ -1,0 +1,165 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>writeFile</title>
+      
+      <meta name="MS-HKWD" content="writeFile">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">writeFile</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1484935.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:writeExcelXMLFile"></a><a class="link" href="id23113.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:writeObjectFile"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42077.html">Methods of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id52148.html">Methods for Importing and Exporting Data in Text Format</a></span> &gt; <span class="simpleHTMLminitoc">writeFile</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10287"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.writeFile(FileName:string [,NoDebugger:boolean, CodePage:string]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>writeFile</em> exports the contents of a list or table to the designated text file. Note that <em>Plant Simulation</em> overwrites any data that this file might already contain. 
+         </p>
+         <p class="para_topic">The <em>method</em> applies to the objects <em>StackFile</em>, <em>QueueFile</em>, <em>CardFile</em>, <em>TableFile</em>, and <em>TimeSequence</em>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>FileName</em> of data type <em>string</em> designates the name of the text file into which <em>Plant Simulation</em> exports the data. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>NoDebugger</em> of data type <em>boolean</em> sets if the <em>Debugger</em> opens after an unsuccessful access or not. 
+               </p>
+               
+               <p class="para_item">When you do not specify the optional parameter of data type <em>boolean</em>, the <em>Debugger </em>always opens. 
+               </p>
+               
+               <p class="para_item">When you enter <code>true</code>, the <em>Debugger</em> does not open and the <em>method</em> returns the value false when an error occurs.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>CodePage</em> of data type <em>string</em> sets the <b class="uiTerm">encoding</b> you want to use: <b class="uiTerm">ANSI</b>, <b class="uiTerm">UTF-8</b>, or <b class="uiTerm">Unicode</b>.
+               </p>
+               
+               <p class="para_item">If you don&rsquo;t specify this parameter, the encoding <b class="uiTerm">UTF-8</b> is used.
+               </p>
+               
+               <p class="para_item"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStackFile.writeFile(&quot;C:\users\nelly\times.txt&quot;)
+MyTableFile.writeFile(&quot;C:\temp\run1.txt&quot;)
+if MyCardFile.writeFile(&quot;C:\temp\data.txt&quot;, true) 
+   -- data written successfully
+else -- take appropriate measures
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id52232.html">Export to File</a></p>
+         <p class="para_topic"><a class="links" href="id41034.html">readFile</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1484935.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:writeExcelXMLFile"></a><a class="link" href="id23113.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:writeObjectFile"></a></span></div>
+   </body>
+</html>

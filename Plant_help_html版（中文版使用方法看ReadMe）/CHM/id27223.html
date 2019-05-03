@@ -1,0 +1,57 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The Evolution Cycle</title>
+      
+      <meta name="MS-HKWD" content="The Evolution Cycle">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">The Evolution Cycle</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id79914.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Initialization Phase"></a><a class="link" href="idGenetic_Operators.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Genetic Operators"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59068.html">Genetic Algorithms</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17944.html">Genetic Algorithms and Simulation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id86518.html">Course of Optimization</a></span> &gt; <span class="simpleHTMLminitoc">The Evolution Cycle</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15375"></span><p class="para_topic">After the genetic algorithm has generated the start generation of the individuals during the <a class="links" href="id79914.html">Initialization Phase</a>, it executes the generation cycle. The generation cycle consists of: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The stochastic or deterministic selection of the parents (reproduction of solutions). </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The generation of the offspring (children) created by the random application of genetic operations ( <b class="uiTerm">crossover</b>, <b class="uiTerm">mutation</b>, <b class="uiTerm">inversion</b> ). 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The evaluation of the fitness of the offspring (objective function). </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">After the initialization, the individuals of the start generation are evaluated by determining a fitness value for each solution. Then, a selection rule, which you select under <a class="links" href="id68659.html">Parent selection</a> in the object <em>GAOptimization</em>, determines, which parents out of the start generation are going to be used. The individuals you picked are going to be the parents. Both parents are copied, so that daughter and son are clones of mother and father. Then, the genetic operators are going to be applied to daughter and son. Whether the operators are used or not depends on the probability of the operators, which you define. The evaluation method then starts calculating the fitness values.
+         </p>
+         <p class="para_topic">According to the <a class="links" href="id99773.html">Offspring selection</a> the individuals for the next generation are chosen from each family. Once all individuals for the next generation are determined, new pairs of parents are determined from these individuals that then generate the children of the next generation, etc. 
+         </p>
+         <p class="para_topic">This cycle is terminated, when the maximum number of generations or a defined grade for the fitness value or the average of the fitness values is reached. </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id79914.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Initialization Phase"></a><a class="link" href="idGenetic_Operators.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Genetic Operators"></a></span></div>
+   </body>
+</html>

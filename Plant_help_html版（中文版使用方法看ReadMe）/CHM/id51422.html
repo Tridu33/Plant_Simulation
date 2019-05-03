@@ -1,0 +1,140 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Source That Produces the Parts</title>
+      
+      <meta name="MS-HKWD" content="Configure the Source That Produces the Parts">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Configure the Source That Produces the Parts</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1160157.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Distribute Parts Among its Successors with the FlowControl"></a><a class="link" href="id46137.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the FlowControl Which Distributes the Parts"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id92136.html">Transferring Parts from Station to Station</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1160157.html">Distribute Parts Among its Successors with the FlowControl</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Source That Produces the Parts</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_588"></span><p class="para_topic">Insert and configure the <em>Source</em> which produces the parts:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select when and how many parts of a certain type are to be produced. </p>
+               
+               <p class="para_item">We selected a <b class="uiTerm">delivery table</b> in our example, as shown in the screenshot below.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/flowControlSource.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">We then selected the name of the <b class="uiTerm">delivery table</b>, which we inserted before, namely <em>MyDeliveryTable</em>. Selecting it automatically applied the correct format. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Next, we entered the required information, compare the screenshot below. The <em>Source</em> which we named <em>PartsIn</em> in our sample model, produces six different parts with the names we entered into the column <b class="uiTerm">Name</b>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/flowControlDeliveryTable.gif"></p>
+               
+               <p class="para_item">To enter the attributes according to which the <em>FlowControl</em> distributes the parts among its successors, type in any name of your choice into the column <b class="uiTerm">Attributes</b> to create a sub-table with this name, and then double-click the name. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">For the part with the <b class="uiTerm">Name</b>
+                        <code>Red</code>, we typed in <code>MyAttr</code>, double-clicked the cell, and entered <code>Color</code> is the <b class="uiTerm">Name of the Attribute</b> and <code>Red</code> is the color of the part.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/flowControlDeliverySubt1.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">For the part with the <b class="uiTerm">Name</b>
+                        <code>BlackRound</code>, we typed in <code>MyAttr</code>, double-clicked the cell, and entered <code>Color</code> is the <b class="uiTerm">Name of the Attribute</b> and <code>Black</code> is the color of the part. We also entered a second attribute, namely <code>Shape</code>, and typed in <code>Round</code> as its shape.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/flowControlDeliverySubt2.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">For the part with the <b class="uiTerm">Name</b>
+                        <code>BlackOctagonal</code>, we typed in <code>MyAttr</code>, double-clicked the cell, and entered <code>Color</code> is the <b class="uiTerm">Name of the Attribute</b> and <code>Black</code> is the color of the part. We also entered a second attribute, namely <code>Shape</code>, and typed in <code>Octagonal</code> as its shape.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/flowControlDeliverySubt3.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When the <em>Source</em> produces the parts, it creates the attributes, which we entered above, as user-defined attributes of data type <em>string</em> for the respective part.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="33%">
+               
+               <col span="1" width="33%">
+               
+               <col span="1" width="33%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/flowControlPartRed.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/flowControlPartBlackRound.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/flowControlPartBlackOct.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">Then, insert the other objects into the facility, so that they match the screenshot below. </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/flowControlAllObjects.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id46137.html">Configure the FlowControl Which Distributes the Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="xid1160157.html">Distribute Parts Among its Successors with the FlowControl</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1160157.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Distribute Parts Among its Successors with the FlowControl"></a><a class="link" href="id46137.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the FlowControl Which Distributes the Parts"></a></span></div>
+   </body>
+</html>

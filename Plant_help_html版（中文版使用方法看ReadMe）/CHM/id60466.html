@@ -1,0 +1,150 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Conveyor</title>
+      
+      <meta name="MS-HKWD" content="Conveyor">
+      <meta name="MS-HKWD" content="Conveyor,object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Conveyor</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id64080.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Width"></a><a class="link" href="id57769.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Conveyor"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id60466.html">Conveyor</a></span> &gt; <span class="simpleHTMLminitoc">Conveyor</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5551"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/03LineIcon.gif" border="0"></p>
+         <p class="para_topic">With the object <em>Conveyor</em> you can model a conveyor system or a part thereof. As opposed to the other material flow objects, <em>Plant Simulation</em> uses the actual <a class="links" href="id48696.html">Length</a>, which you enter, during your simulation run. The <em>Conveyor</em> transports a <em>part</em> along its entire length with a constant speed. A <em> part</em> cannot pass another <em>part</em> moving along in front of it. If you do not enter an exit control, the <em>Conveyor</em> divides the <em>MUs</em> equally among the successors it is connected to. 
+         </p>
+         <p class="para_topic">In case the preceding <em>part</em> cannot exit the <em>Conveyor</em>, the check box <a class="links" href="id10965.html">Accumulating</a> sets if succeeding <em>MUs</em> may move up, so that they are located front to back to each other, or if they will retain their distance to each other. 
+         </p>
+         <p class="para_topic">When moving the <em>part</em> from <em>Conveyor </em> to <em>Conveyor,</em><em>Plant Simulation</em> moves it on <b class="uiTerm">continually</b> , i.e., it only moves the front of the <em>part</em> on to the successor, while the remainder of the <em>part</em> follows with the speed you set as the <a class="links" href="id82091.html">Speed</a>. When the transport speeds differ, <em>Plant Simulation</em> uses the speed of the <em>Conveyor</em>, on which the <a class="links" href="id83049.html">Booking point length</a> of the <em> part</em> is located. 
+         </p>
+         <p class="para_topic">When moving a part onto a point-oriented object, such as onto a <em>Station</em> or a <em>ParallelStation</em>, the <em>Conveyor</em> always moves the part in its entirety, i.e., the part is then located on that object as a whole, not only its front section.
+         </p>
+         <p class="para_topic">You can also enter the <a class="links" href="id74391.html">MU distance</a> between parts on the <em>Conveyor</em>. This is the distance between the end of the part that is located on the <em>Conveyor</em> and the beginning of the next part that wants to enter. When no further parts arrive, the <em>Conveyor</em> stops once the distance has been reached. As soon as the next part arrives, it starts to transport parts again. The default value -1 means that the <em>Conveyor</em> does not use an <b class="uiTerm">MU distance</b>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When the preceding <em>Conveyor</em> transports parts faster than the conveyor which uses a gap, the <a class="links" href="id74391.html">MU distance</a> can become smaller. This happens because the entering part will be transported with a greater speed until its booking point is located on the conveyor which uses a gap.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">You can insert the <em>Conveyor</em> into a <em> Frame</em>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">As a curve, which is the default setting, compare <a class="links" href="id93381.html">Tab Curve</a>. 
+               </p>
+               
+               <p class="para_item">By inserting any sequence of curved segments and straight segments, you can realistically model curved conveyor systems on which the parts move. </p>
+               
+               <p class="para_item"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/curveCurve.gif" border="0"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">With its icon, when you deactivate <b class="uiTerm">Curve</b> mode by clearing the check box <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/activeCheckbox.gif" border="0">. Then, it looks like this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/lineAsIcon.gif" border="0">. 
+               </p>
+               
+               <p class="para_item">To change the <b class="uiTerm">width/height</b> of the icon, open the dialog of the object and type in the <a class="links" href="id27756.html">Curve width</a> on the tab <b class="uiTerm">Curve</b>. Then, it looks like this <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/lineLong.gif" border="0">.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">You can control how often the part is shown on the <em>Conveyor</em> with the setting <a class="links" href="id52672.html">Animate every x-th pixel</a>. When you insert the <em>Conveyor</em> with its icon <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/lineAsIcon.gif" border="0">, the <a class="links" href="id71789.html">Number of Animation Events</a> controls these steps.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To add the <em>Conveyor</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; MaterialFlow &gt; Conveyor</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id57105.html"> Modeling a Transport System with Active Objects of Type Conveyor</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id91273.html"> Methods of the Conveyor</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id60549.html"> Working with Curved Objects</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id95034.html"> Attributes of the Conveyor</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id57769.html"> Dialog Window of the Conveyor</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43953.html"> Shared Properties of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id64080.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Width"></a><a class="link" href="id57769.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Conveyor"></a></span></div>
+   </body>
+</html>

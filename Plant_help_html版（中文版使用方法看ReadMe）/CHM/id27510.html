@@ -1,0 +1,90 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>autoexecLoadObj</title>
+      
+      <meta name="MS-HKWD" content="autoexecLoadObj">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">autoexecLoadObj</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id11233.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:autoexec"></a><a class="link" href="id13796.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:endSim"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Names_1.html">Names</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61611.html">Predefined Names</a></span> &gt; <span class="simpleHTMLminitoc">autoexecLoadObj</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13500"></span><p class="para_topic"><em>Plant Simulation</em> executes all loaded method classes named <em>autoexecLoadObj</em>, when it loads an object file (*.obj) or library file (*.lib) into the simulation model. In addition it executes all user-defined method attributes, which are located in any of the loaded classes and which are named <em>autoexecLoadObj</em>.
+         </p>
+         <p class="para_topic"><em>Plant Simulation</em> also executes <em>autoexecLoadObj</em> methods:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">When you load an object file with the method <a class="links" href="id65236.html">loadObjectAs</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you select the commands <a class="links" href="id87026.html">Load Object</a>, <a class="links" href="id68974.html">Load Object into Folder</a> or <a class="links" href="id27053.html">Update Class Library</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When you add a library in the dialog <a class="links" href="id95750.html">Manage Class Library</a>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><em>Plant Simulation</em> does not execute <em>autoexecLoadObj</em> methods when you load a model file. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <p class="para_topic">Optionally <em>Plant Simulation</em> can pass two parameters of data type <em>boolean</em> to this method. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><em>Plant Simulation</em> sets the first parameter to true, when the <em>Class Library</em> is updated and to false, when loading an object. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">For <em>autoexecLoadObj</em> methods, which are part of a library, you should ignore the first parameter, as <em>Plant Simulation</em> determines according to the version number if the library will be updated or not when loading a library. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">When the method is located within a library, the second parameter tells if the library was updated (true), or if the library was added to the simulation model (false).</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">Then second optional parameter can also be of data type <em>string</em>. When a library is being updated, the old version number of the library will be passed to this parameter. Then the library is not being updated but added, an empty string will be passed to the parameter.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id11233.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:autoexec"></a><a class="link" href="id13796.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:endSim"></a></span></div>
+   </body>
+</html>

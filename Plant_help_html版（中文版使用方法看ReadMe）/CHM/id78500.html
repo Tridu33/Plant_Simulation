@@ -1,0 +1,113 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Creation Table</title>
+      
+      <meta name="MS-HKWD" content="Creation Table ">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Creation Table</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id48600.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Attributes"></a><a class="link" href="id48989.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Get job orders in the pool only"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id13713.html">WorkerPool</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id75007.html">Dialog Window of the WorkerPool</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48600.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc">Creation Table</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8867"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/creationTable.gif" border="0"></p>
+         <p class="para_topic">Click the <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/inheritanceEin.gif" border="0"> button to deactivate <a class="links" href="id23901.html">Inheritance</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/inheritanceAus.gif" border="0">. Only then you can enter data into the table. 
+         </p>
+         <p class="para_topic">To open the table, into which you enter information pertaining to the <em>Workers</em> to be created and inserted into your model,click this. You can enter up to 30 different types of additional services into the columns to the right of <b class="uiTerm">Additional Services</b>. You can also leave gaps between the services in the table. This way you can enter identical services one below the other, even when you want some <em>Workers</em> to not provide these services. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the class of the <em>Worker</em>, which the <em>WorkerPool</em> uses as a template for the <em>Workers</em> to be created, into the cells below <b class="uiTerm">Worker</b>. You might, for example, enter <code>.Resources.Worker</code>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the number of the <em>Workers</em> to be created into the cells below <b class="uiTerm">Amount</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the name of a <b class="uiTerm">Shift</b> which you defined in the associated <a class="links" href="id34493.html">Shift calendar</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If you want the <em>Worker</em> to move on the <em>FootPath</em> with a different <a class="links" href="id27582.html">Speed</a> than the one defined in its class, enter this speed into the cell below <b class="uiTerm">Speed</b>. Note that this deactivates inheritance for the speed, i.e., speed changes in the class will not affect the <em>Worker</em> (<em> s</em> ) defined in this row.
+               </p>
+               
+               <p class="para_item">When you do not enter anything, the <em>Worker</em> moves with the speed entered in the class, meaning he inherits that value from the class.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the <a class="links" href="id88035.html">Efficiency</a> of the <em>Workers</em> to be created into the cells below <b class="uiTerm">Efficiency</b>. You might, for example, enter <code>80</code> for an efficiency of 80 percent.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter services the <em>Worker</em> can provide, in addition to those you entered into the <a class="links" href="id22899.html">Services</a> list, into the cells below <b class="uiTerm">Additional Services</b>. 
+               </p>
+               
+               <p class="para_item">Enter different types of additional services into the columns to the right.</p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The name of the service is not case-sensitive, just like the names of <em> attributes</em> and <em>methods</em> of the objects are not case-sensitive.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p class="para_item">To save memory and improve access speed, all places which use such an case-insensitive string point to the same string in main memory. The visible and unexpected result is that the first occurrence of the string defines how the string is written in terms of upper- and lower-casing.</p>
+               
+               <p class="para_item">In <em>SimTalk</em> you can compare strings in an case-insensitive manner with the == operator, compare <a class="links" href="id62503.html">Relational Operators</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/workerRepairCreation.gif"></p>
+         <p class="para_topic">You can also change the <b class="uiTerm">creation table</b> within the <a class="links" href="xid1396374.html">Init control</a> of the <em>WorkerPool</em> for the upcoming simulation run. This is not possible in an <a class="links" href="id67900.html">init</a> method, as the method is executed too late in time.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b>, and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm"> Example</b> in the dialog <b class="uiTerm"> Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id17977.html">getCreationTable</a></p>
+         <p class="para_topic"><a class="links" href="id55488.html">setCreationTable</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id28636.html">Define How Many Workers Are Created When the Model is Initialized</a></p>
+         <p class="para_topic"><a class="links" href="id36180.html">Context Menu of Embedded Lists</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id48600.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Attributes"></a><a class="link" href="id48989.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Get job orders in the pool only"></a></span></div>
+   </body>
+</html>

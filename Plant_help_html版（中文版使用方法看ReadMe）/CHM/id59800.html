@@ -1,0 +1,145 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Define Processing Times in a Formula</title>
+      
+      <meta name="MS-HKWD" content="Define Processing Times in a Formula">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Define Processing Times in a Formula</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id82820.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define Processing Times Depending on the Type of MU"></a><a class="link" href="id45179.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Define Processing Times of a ParallelStation"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87534.html">Defining Processing Times</a></span> &gt; <span class="simpleHTMLminitoc">Define Processing Times in a Formula</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_620"></span><p class="para_topic">You can also define the processing time of a station in a formula. </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the name of a <em>Method</em> into the text box and program the formula in that <em>Method</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the formula as a basic arithmetic operation directly into the text box. </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the formula directly into the text box and access the <em>MU</em> for which the processing time applies with the anonymous identifier @. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">To set the processing time of a station in a formula using a Method:</b></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/formulaproctime.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Formula</b> as the <b class="uiTerm">Processing time</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the name of a <em>Method</em> object into the text box. Enter the formula into the <em>Method</em>. This <em>Method</em> has to return a value of data type <em>time</em>. 
+               </p>
+               
+               <p class="para_item">The source code looks like this:</p>
+               <pre class="indent">-&gt; time
+if @.Name = &quot;red&quot;
+   result := 60
+elseif .Name = &quot;blue&quot;
+   result := 180
+else
+   result := 120
+end</pre>
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/formulaMethod.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">In our example, the formula, which we entered into the method <em>cyclesMethod</em>, sets how long the station processes the <em>MUs</em> in accordance to their color. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">To set the processing time of a station in a formula with an arithmetic operator:</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Formula</b> is the <b class="uiTerm">Processing time</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the expression into the text box. In our example we entered <code>@.MyAttribute+1</code>. This formula adds <code>1</code> minute to the <b class="uiTerm">processing time</b> of MUs that have the user-defined attribute <code>MyAttribute</code>. We defined <code>MyAttribute</code> in the class of the MU. 
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/formulaVariable1.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/formulaVariable21.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/formulaVariable211.gif"></p>
+         <p class="para_topic"><b class="uiTerm">To set the processing time of a station by accessing the MU:</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter <code>@.timeRed</code> into the text box.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Create a user-defined attribute for the <em>MU</em> and name it <code> timeRed</code>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id87534.html">Defining Processing Times</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id82820.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define Processing Times Depending on the Type of MU"></a><a class="link" href="id45179.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Define Processing Times of a ParallelStation"></a></span></div>
+   </body>
+</html>

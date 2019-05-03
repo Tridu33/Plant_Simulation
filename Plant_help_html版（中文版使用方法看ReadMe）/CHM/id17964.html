@@ -1,0 +1,371 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>General SimTalk Functions</title>
+      
+      <meta name="MS-HKWD" content="SimTalk">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">General SimTalk Functions</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1484029.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:SimTalk Reference"></a><a class="link" href="SimTalk_20_and_SimTalk_10_Compared.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:SimTalk 2.0 and SimTalk 1.0 Compared"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc">General SimTalk Functions</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13470"></span><p class="para_topic">The programming language <em>SimTalk</em> extends the ways you can model and control your simulation. Each object has built-in properties providing many useful features. When your model requires more detailed or completely different properties, you will program these in the programming language <em>SimTalk</em>. 
+         </p>
+         <p class="para_topic">First, you will enter the statements, which the built-in Interpreter program executes, into the object <a class="links" href="id25909.html">Method</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/methodIconSm.gif" border="0">. You can also combine the <em>Method</em> object with the material flow objects and the information flow objects to create models of great complexity. Then press the <b class="uiTerm">F7</b> and <b class="uiTerm">F5</b> keys to execute your source code. 
+         </p>
+         <p class="para_topic">When you then run the simulation, the Interpreter executes the source code, which you entered into your <em>Method</em> line-by-line and takes the actions you programmed.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>SimTalk</em> normally does not distinguish between upper- and lower-casing for the names of <em>methods</em> and <em>attributes</em> which you enter into the source code of your <a class="links" href="id25909.html">Method</a> objects.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><em>SimTalk</em> 2.0 makes programming methods in <em>Plant Simulation</em> faster, easier, and less error-prone. You can activate it by clicking <a class="links" href="id95907.html">New Syntax</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/NewSyntaxActive.gif" border="0"> on the <b class="uiTerm">Tools</b> ribbon tab of the <em>Method</em> you are programming. If you want to use <em>SimTalk</em> 2.0 syntax for all new <em>Methods</em> which you are going to program, activate <b class="uiTerm">New Syntax</b> in the <em>Method class</em> in the <em>Class Library</em>. Changes caused by <em>SimTalk</em> 2.0 also affect how the dialog <a class="links" href="id14400.html">Show Attributes and Methods</a> displays the signature of attributes and methods.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">You can select if you want to use the<b class="uiTerm">SimTalk 2.0 notation</b> or the <b class="uiTerm">SimTalk 1.0 notation</b> for each and every of your <em>Methods</em>. You can also freely mix <b class="uiTerm">SimTalk 2.0 notation</b> and <b class="uiTerm">SimTalk 1.0 notation</b> in your simulation models. There is no need to reprogram your existing source code.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Clicking <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/NewSyntaxActive.gif" border="0"> in an existing <em>Method</em> which you programmed in <b class="uiTerm">SimTalk 1.0 notation</b> automatically converts the source code to the correct <b class="uiTerm">SimTalk 2.0 notation</b>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">To convert the source code of all existing <em>Methods</em> in a simulation model to the new syntax, hold down the <b class="uiTerm">Shift</b> key, click on the object <b class="uiTerm">Basis</b> in the <em>Class Library</em> with the right mouse button and click Convert all Methods to New Syntax.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/convertAllMethodsToNew.gif"></p>
+         <p class="para_topic"><em>SimTalk</em> 2.0 encompasses:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">A <b class="uiTerm">line-controlled syntax</b>: You no longer need to type a semicolon (<b class="uiTerm">;</b>) at the end of each statement. Instead, you can simply enter a single statement into a line. As you still might want to be able to split a statement and distribute it over several lines, the interpreter needs to automatically determine if the statement is incomplete and is being continued in the next line. In addition, you can enter a semicolon to add another statement in the same line.
+               </p>
+               
+               <table border="1" cellpadding="10" width="100%" align="center">
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">SimTalk 2.0</p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">SimTalk 1.0</p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>MyStation.setName(&quot;MyStation&quot;)</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><code>MyStation.setName(&quot;MyStation&quot;);</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">A <b class="uiTerm">simplified body syntax</b>: In <em>SimTalk</em> 1.0 the source code requires the keywords <b class="uiTerm"> is do end</b>. <em>SimTalk</em> 2.0 does not need these keywords. In <em>SimTalk</em> 2.0 you will declare <b class="uiTerm">parameters</b> using the keyword <b class="uiTerm">param</b>, <b class="uiTerm">local variables</b> using the keyword <b class="uiTerm"> var</b>, and the <b class="uiTerm"> return value</b> using the keyword <b class="uiTerm">-&gt;</b> (hyphen plus right angle bracket).
+               </p>
+               
+               <table border="1" cellpadding="10" width="100%" align="center">
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">SimTalk 2.0</p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">SimTalk 1.0</p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           <pre class="indent">MyStation.setName(&quot;MyStation&quot;)</pre>
+                           </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           <pre class="indent">is
+do
+   MyStation.setName(&quot;MyStation&quot;);
+end </pre>
+                           <p class="para_td_last"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Improved referencing of methods and global variables</b>: In <em>SimTalk</em> 1.0 <em>Methods</em> and <em>Variables</em> are referenced with the reference operator. In <em>SimTalk</em> 2.0 you reference <em>Methods</em> and <em>Variables</em> with a leading <b class="uiTerm">&amp; operator</b>, for example <code>var o:object := &amp;Method</code>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">New div/mod operator</b>: In <em>SimTalk</em> 1.0 the <b class="uiTerm">// operator</b> represents an integer division and the <b class="uiTerm">\\ operator</b> represents an integer modulo operation. In <em>SimTalk</em> 2.0 the keyword <b class="uiTerm">div</b> represents an <b class="uiTerm">integer division</b> and the keyword <b class="uiTerm">mod</b> represents an <b class="uiTerm">integer modulo operation</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Improved literals</b>: In <em>SimTalk</em> 2.0 a backslash (<b class="uiTerm">\</b>) inside of a <em>string literal</em> will only quote double quotes and line breaks. The backslash will not quote another backslash any longer as in <em>SimTalk</em> 1.0.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Time literals</b>. A <em>time literal</em> starts with a digit and must contain one or more colons. A <em>time literal</em> can contain a decimal point and decimal places.
+               </p>
+               <pre class="indent">wait 1:30  -- wait for 1 minute and 30 seconds
+&amp;Methode.methCall(1:0:0:0.5) -- call the method in 1 day and half a second</pre>
+               </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Default arguments</b>: You can define default arguments for formal parameters by entering an assignment operator and the default value after the parameter declaration, for example: <code>param x := 0</code>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Simplified control flow statements</b>: The control structures which you can insert with the command <a class="links" href="id87523.html">Insert Control Structure</a> into your source code, reflect this. You can now enter control flow statements using the simplified syntax:
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id96043.html">if-else-end</a> instead of if-then-else-end
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id39835.html">for-next</a> instead of for-to-loop-next
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id42707.html">switch-case-end</a> instead of inspect-when-then-end
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="xid1183154.html">while-end</a> instead of while-loop-end
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/editControlstruct.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The keyword <a class="links" href="id38635.html"><b class="uiTerm">then</b></a> in <b class="uiTerm">if-statements</b> is optionally allowed.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The keyword <a class="links" href="id86388.html"><b class="uiTerm">loop</b></a> in <b class="uiTerm">loops</b> is optionally allowed.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">We added the keyword <b class="uiTerm">continue</b>, which skips the rest of the loop iteration and continues with the next iteration. If the iteration was the last iteration, <b class="uiTerm">continue</b> exits the loop.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> A <b class="uiTerm">changed about equal operator</b>. You now have to use:
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><code>~=</code> instead of <code>==</code> , compare <a class="links" href="id47865.html">Tolerance for about equal (~=) comparison</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><code>&lt;~=</code> instead of <code>&lt;==</code></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><code>&gt;~=</code> instead of <code>&gt;==</code></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">New</b>
+                  <b class="uiTerm">operators for adding, subtracting, or multiplying</b> a value:
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><code>x += y</code> is short for x := x + y 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">x <code>-= y</code> is short for x := x - y 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">x <code>*= y</code> is short for x := x * y 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">An <b class="uiTerm">improved list and table syntax</b>: You now only enter list ranges using curly brackets <code>{}</code>. The optional 1.0 syntax using a grave accent <code>`[]</code> is no longer available.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> You can read out an element of a <b class="uiTerm">one-dimensional list</b> with the bracket operator <code>[]</code>. This works for <em>Stacks</em> and <em>Queues</em> as well. You can read and remove an element from a <em>CardFile</em> with the new built-in method <a class="links" href="id92211.html">remove</a>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When reading the contents of a cell of a <em>CardFile</em> with the <b class="uiTerm">bracket operator [ ]</b> in <em>SimTalk</em> 1.0, the contents of the designated cell was read and removed. The remaining cells moved up by one position.
+                     </p>
+                     
+                     <p class="para_note_body">When assigning a value to the designated cell with the <b class="uiTerm">bracket operator</b> to a <em>CardFile</em> in <em>SimTalk</em> 1.0, this value was inserted into the cell and the existing cells moved down by one position. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When reading the contents of a cell with the <b class="uiTerm">bracket operator</b> in <em>SimTalk</em> 2.0, the contents of the designated cell will be read, but will remain in the <em>StackFile</em>, <em>QueueFile</em>, and the <em>CardFile</em>. 
+                     </p>
+                     
+                     <p class="para_note_body">When assigning a value to the designated cell with the <b class="uiTerm">bracket operator</b> to a <em>CardFile</em> in <em>SimTalk</em> 2.0, this value will just overwrite the contents of the existing cell. This way a <em>CardFile</em> will behave the same way as a <em>TableFile</em> with one column.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1484029.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:SimTalk Reference"></a><a class="link" href="SimTalk_20_and_SimTalk_10_Compared.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:SimTalk 2.0 and SimTalk 1.0 Compared"></a></span></div>
+   </body>
+</html>

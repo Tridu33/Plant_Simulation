@@ -1,0 +1,54 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Restore the Original Model Configuration</title>
+      
+      <meta name="MS-HKWD" content="Restore the Original Model Configuration">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Restore the Original Model Configuration</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id41042.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define the Input Values in the Experiment Table"></a><a class="link" href="id95637.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Controlling the Experiment Runs"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54344.html">Tools</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id53178.html">ExperimentManager</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id22512.html">Defining the Experiments</a></span> &gt; <span class="simpleHTMLminitoc">Restore the Original Model Configuration</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12891"></span><p class="para_topic"> If you select <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/restoreCheck.gif" border="0"> under <b class="uiTerm">Tools &gt; Advanced Settings &gt; Settings</b>, the <em> ExperimentManager</em> will restore these input values after each experiment run. By default this setting is deactivated.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Tools/RestoreInputValues.gif"></p>
+         <p class="para_topic"> The <em> ExperimentManager</em> recognizes if the current values of the input values differ from the saved values when you start an experiment run and shows a warning message. You can then decide if you want to start the experiment run without saving the values or you can save the values by selecting the menu command <b class="uiTerm">Tools &gt; Store Input Values</b>. The method <em> storeParam</em> of the <em> ExperimentManager</em> triggers this action.
+         </p>
+         <p class="para_topic"> The menu command  Tools &gt; Restore Input Values writes the values saved in the <em> ExperimentManager</em> back to the model. This way you can return to the original model configuration after an unwanted interruption of the experiment run, caused, for example, by a debugger call. The method <em> restoreParam</em> of the <em> ExperimentManager</em> triggers this action.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> You do not need this functionality for a distributed simulation as the controlling <em> ExperimentManager</em> does not modify the model within a distributed simulation.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> When you selected the check box  Restore original input values for a non-distributed simulation, the input values are saved before the first simulation run of the experiment run in the <em> ExperimentManager</em> and are written to the model again after the last simulation run. To set the saved original input values at the end of the experiment run, the <em> ExperimentManager</em> executes a  Reset . This  Reset is, for example, required to set buffer capacities.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id41042.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Define the Input Values in the Experiment Table"></a><a class="link" href="id95637.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Controlling the Experiment Runs"></a></span></div>
+   </body>
+</html>

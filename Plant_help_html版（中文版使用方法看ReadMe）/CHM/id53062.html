@@ -1,0 +1,115 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Creating Your Own Templates</title>
+      
+      <meta name="MS-HKWD" content="Creating Your Own Templates">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Creating Your Own Templates</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id18383.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Select Template"></a><a class="link" href="id87523.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Insert Control Structure"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id25909.html">Method</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id51890.html">The Method Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id99788.html">Edit Ribbon Tab</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18383.html">Select Template</a></span> &gt; <span class="simpleHTMLminitoc">Creating Your Own Templates</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11152"></span><p class="para_topic">You can create a <em>method template</em>of your own in a text editor and save it as a text file (*.txt). The syntax used is quite simple:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Create the file in the sub-folder <b class="uiTerm">C:\Siemens\Plant Simulation XX\Templates\English\Name_of_Your_Category</b>. The dialog <b class="uiTerm">Select Template</b> shows this name in the field below <b class="uiTerm">Select the category</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter two hyphens <code>--</code> followed by the key combination, which you want to use if you want to set a key combination. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter two hyphens <code>--</code> and the name of the template. The dialog <b class="uiTerm">Select Template</b> shows this name in the field below <b class="uiTerm">Select the template</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter two hyphens <code>--</code> and a description of the template. The dialog <b class="uiTerm">Select Template</b> shows this description in the rightmost field.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter <code>/*</code> and then the comment, the template itself shows after you loaded it into the <em>method</em><em>editor</em>. Close this comment with <code>*/</code>. 
+               </p>
+               
+               <p class="para_item">Enter the variable you want to use, and any comment you would like to add.</p>
+               
+               <p class="para_item">Then enter is and do and any source code you want to provide.</p>
+               
+               <p class="para_item">Enter the item you want the user to replace in the source code within left and right pointing double angle quotation marks, «attribute»=«value» in our example. </p>
+               
+               <p class="para_item">When the user drags the mouse over this item, the <em>Method</em> shows the text you enter at the end of the file as a <em>tooltip</em>: Start this tooltip text with <code>/*</code> followed by the term you entered in the double angle quotation marks. Finish it with <code>§§*/</code>. Note that you can enter the tooltip, but do not have to do it. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the <b class="uiTerm">key combination</b> that the user can type in to insert the code snippet. 
+               </p>
+               
+               <p class="para_item">Proceed as follows to insert the code snippet: Suppose that the key combination is <b class="uiTerm">Ctrl+T C</b>. Hold down the key and press the <b class="uiTerm">T</b> key on the keyboard. Then release the <b class="uiTerm">Ctrl</b> key and type in the letter that is assigned to the code snippet, <b class="uiTerm">C</b> in our case.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The text for the <b class="uiTerm">processing time</b> depending on an attribute of the part looks like this.
+         </p><pre class="indent">-- Determines the processing time of a station in a formula
+-- according to an attribute of the MU.
+-- @ is the MU that triggers the formula
+-- ? is the station calling this method
+-&gt;time
+
+if @.«attribute»=«value» 
+   result:=«time»
+   -- add your code here
+elseif @.«attribute»=«value»
+   result:=«time»
+   -- add your code here
+else
+   -- add your code here
+end </pre><p class="para_topic">The <em>Method</em>shows it like this, after you loaded it.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/methodtempl.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Compare any of the <em>method templates</em> that are part of your program package. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id18383.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Select Template"></a><a class="link" href="id87523.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Insert Control Structure"></a></span></div>
+   </body>
+</html>

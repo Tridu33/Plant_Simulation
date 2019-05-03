@@ -1,0 +1,143 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>id</title>
+      
+      <meta name="MS-HKWD" content="id">
+      <meta name="MS-HKWD" content="id,Tank">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">id</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id67862.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:existsSensorID"></a><a class="link" href="id38860.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:numSensors"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36050.html">Fluid Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47279.html">Tank</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54367.html">Methods of the Tank</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58238.html">Methods of the Sensors of the Tank</a></span> &gt; <span class="simpleHTMLminitoc">id</span></td>
+         </tr>
+      </table>
+      <div class="contentType_reference">
+         <span id="ndxgenid_PlantSimulationENU_8138"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.Sensor.id &rarr; integer</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>id</em> returns the unique identifier of a sensor of the <em>Tank</em> designated by Path, enabling you to access it. Our example deletes all sensors of the object <em> Tank</em> that are triggered when the amount of material exceeds the sensor position.
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Return Value</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>integer</em>.
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">for i := MyTank.numSensors downto 1 
+   if MyTank.sensorNo(i).Exceeded = true 
+      sensorID := MyTank.sensorNo(i).id
+      MyTank.deleteSensor(sensorID)
+   end
+next </pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topics</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id81997.html">Sensors</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id73308.html">sensorID</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id67862.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:existsSensorID"></a><a class="link" href="id38860.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:numSensors"></a></span></div>
+   </body>
+</html>

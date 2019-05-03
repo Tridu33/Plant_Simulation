@@ -1,0 +1,200 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Connector</title>
+      
+      <meta name="MS-HKWD" content="Connector">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Connector</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id69523.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ShowFillLevel"></a><a class="link" href="id89522.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Connector"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29001.html">Connector</a></span> &gt; <span class="simpleHTMLminitoc">Connector</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5381"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/06ConnectorIcon.gif" border="0"></p>
+         <p class="para_topic"> The <em>Connector</em> establishes material flow connections between two objects in the same <em>Frame</em> on which the parts move from object to object. It also connects an object with an exit or entrance--modeled with the <a class="links" href="id97801.html">Interface</a>--of a <em> Frame</em>. when you modeled hierarchically, i.e., when you nest <em>Frames</em> within <em>Frames</em>. The <em>Connector </em> shows the direction of the connection with an arrowhead in the middle of the connecting line. 
+         </p>
+         <p class="para_topic"> When you select <b class="uiTerm">Options</b> &gt; <a class="links" href="id38033.html">Show Predecessors</a> and/or <a class="links" href="id23124.html">Show Successors</a> on the <b class="uiTerm">General</b> ribbon tab of the <em>Frame</em>, it also shows a number, which designates the order in which you connected the objects:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> For the first connection <b class="uiTerm">from</b> another object to the current object, the <em>Connector</em> shows <b class="uiTerm">&gt;1</b>, denoting that this is the first <b class="uiTerm">predecessor</b>, for the second &gt;2, etc. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> For the first connection from the current object <b class="uiTerm">to</b> another object, the <em>Connector</em> shows the number <b class="uiTerm">1&gt;</b>, denoting that this is the first <b class="uiTerm">successor</b>, for the second 2, etc. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> To show the source and the target of the <em>Connector</em> in the <em>Frame</em> as a <em>Tooltip</em>, drag the mouse over the <em>Connector</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/connectorSourceTarget.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">You can only establish a single connection between two objects!</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">By default <em>3D</em> does not show <em>Connectors</em>, when you create a model in 2D and then update it in 3D. To display them, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ButtonConnections.gif" border="0"> on the <b class="uiTerm">View</b> ribbon tab in 3D.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">To reorder the sequence of the successors of the selected object, right-click the object in the <em>Frame</em> and select <a class="links" href="id83093.html">Reorder Successors</a> on the context menu.
+         </p>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/reorderSuccessors.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sortSuccessors.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">To add the <em>Connector</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; MaterialFlow &gt; Connector</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id12960.html">Connect Objects with the Connector</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id92506.html">CornerPoints</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id89522.html">Dialog Window of the Connector</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id90405.html">getInterfaceOfConnector</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id80557.html">Methods of the Connector</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id37602.html">getEndPoint</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1186708.html">Attributes of the Connector</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id63101.html">getStartPoint</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id25787.html">connect</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1"></td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id69523.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:ShowFillLevel"></a><a class="link" href="id89522.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the Connector"></a></span></div>
+   </body>
+</html>

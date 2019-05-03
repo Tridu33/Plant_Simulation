@@ -1,0 +1,144 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>setSensitive</title>
+      
+      <meta name="MS-HKWD" content="setSensitive">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">setSensitive</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id17208.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setPasswordMasking"></a><a class="link" href="id23961.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setTab"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59466.html">Display and User Interface Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87122.html">Dialog</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48922.html">Methods of the Dialog</a></span> &gt; <span class="simpleHTMLminitoc">setSensitive</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_12357"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.setSensitive(DialogItem:string, Activated:boolean) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>setSensitive</em> sets if the <em>Dialog</em> shows and activates a dialog item in the dialog window of the dialog you defined or shows it and gray it out. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>DialogItem</em> of data type <em>string</em> designates the dialog item.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Activated</em> of data <em>boolean</em> sets if the dialog item will be shown (<code>true</code>) or be shown and grayed out (<code>false</code>).
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The <em>method</em> applies to all dialog items, except for the <b class="uiTerm">Tab Control</b>, the <b class="uiTerm">Tab Page</b> and the <b class="uiTerm">Image</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>. It shows if the state of the dialog item, activated or deactivated, has changed or not.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if MyDialog.setSensitive(&quot;MyButton&quot;,false) 
+   print &quot;The button 'MyButton' was deactivated.&quot;
+else
+   print &quot;The button 'MyButton' has already been deactivated.&quot;
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id17208.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setPasswordMasking"></a><a class="link" href="id23961.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setTab"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pausing Material Flow Objects and Pausing Frames</title>
+      
+      <meta name="MS-HKWD" content="Pausing Material Flow Objects and Pausing Frames">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Pausing Material Flow Objects and Pausing Frames</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id37100.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Schedule Date and Time to Start or to Finish the Production Process"></a><a class="link" href="id81779.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Paused Material Flow Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id85153.html">Modeling a Shift System</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12404.html">Pausing Material Flow Objects and Pausing Frames</a></span> &gt; <span class="simpleHTMLminitoc">Pausing Material Flow Objects and Pausing Frames</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_834"></span><p class="para_topic">The <em>ShiftCalendar</em> enteracts with the material flow objects and the <em>Frames</em> it controls by changing their <b class="uiTerm">Paused/Planned/Unplanned</b> state. One of these objects is:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Paused</b> then it is not processing parts due to a pause. It resumes processing once you terminate the pause, either by selecting <b class="uiTerm">Planned</b> from the drop-down list or by setting its attribute <b class="uiTerm">Pause</b> to <code>false</code>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When a station fails, and a pause occurs during the failure, the failure time of the station will still be consumed, although the station is paused. Statistics counts the times during which these two states overlap as <b class="uiTerm">paused</b> time. <b class="uiTerm">Resetting</b> your model removes both failures and pauses of the object. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Unplanned</b> then it is not scheduled to work during the shifts which you defined in the <em>ShiftCalendar</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Planned</b> then it is scheduled to work during the shifts which you defined in the <em>ShiftCalendar</em>. The scheduled/planned time is the processing time minus the times of the breaks. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">We distinguish between:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id81779.html">Paused Material Flow Objects</a> and
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id80850.html">Paused Frames</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id65765.html">Defining Shifts with the ShiftCalendar</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id85153.html">Modeling a Shift System</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id37100.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Schedule Date and Time to Start or to Finish the Production Process"></a><a class="link" href="id81779.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Paused Material Flow Objects"></a></span></div>
+   </body>
+</html>

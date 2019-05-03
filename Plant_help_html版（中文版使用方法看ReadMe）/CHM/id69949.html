@@ -1,0 +1,59 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Tab Exit</title>
+      
+      <meta name="MS-HKWD" content="Tab Exit">
+      <meta name="MS-HKWD" content="Next aimed at successor">
+      <meta name="MS-HKWD" content="Next aimed at successor,Interface">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Tab Exit</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id92339.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Side"></a><a class="link" href="id82200.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab User-defined Attributes"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97801.html">Interface</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57533.html">Dialog Window of the Interface</a></span> &gt; <span class="simpleHTMLminitoc">Tab Exit</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6648"></span><p class="para_topic">Select to which of its successors the object moves the <em> MU</em> on the <a class="links" href="id97208.html">Tab Exit</a>.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When <em>Plant Simulation</em> determines the <em>n-th</em> successor of an object, for example with <code>print MyStation.</code>
+                        <a class="links" href="id98252.html">succ</a><code>(n)</code> and when the <em>n-th</em> successor is an <em> Interface</em>, <em>Plant Simulation</em> does not return the <em>Interface</em> itself, but any successor of the <em>Interface</em> according to the <b class="uiTerm">Exit strategy</b> of the <em>Interface</em>. When you select a <b class="uiTerm">non-blocking exit strategy</b>, <em>Plant Simulation</em> returns the next available successor according to the exit strategy or it returns VOID, when no successor can receive parts. When the <em> Interface</em> has a single successor, <em>Plant Simulation</em> returns this successor, even if you selected a non-blocking exit strategy and when the successor is occupied. i.e., it cannot receive parts at the moment.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The <em>Interface</em> shows the number of the next selected exit (next aimed at successor<span id="ndxgenid_PlantSimulationENU_6649"></span>) provided you already determined it, for example by calling the method succ for the successor object.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+    &gt; <b class="uiTerm">Getting Started</b> &gt;
+      <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id98640.html">Blocking</a></p>
+         <p class="para_topic"><a class="links" href="id51141.html">Strategy</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id92339.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Side"></a><a class="link" href="id82200.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab User-defined Attributes"></a></span></div>
+   </body>
+</html>

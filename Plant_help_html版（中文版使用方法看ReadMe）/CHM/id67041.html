@@ -1,0 +1,171 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>startFailureIn</title>
+      
+      <meta name="MS-HKWD" content="startFailureIn">
+      <meta name="MS-HKWD" content="startFailureIn,material flow object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">startFailureIn</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id31285.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:startFailure"></a><a class="link" href="id41583.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:startPause"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id10051.html">Methods for the State of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">startFailureIn</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4469"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.startFailureIn(StartFailureIn:time)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>startFailureIn </em> fails the object designated by Path. 
+         </p>
+         <p class="para_topic">The method sets the attribute <a class="links" href="id25802.html">Failed</a> to true. The time interval has to be equal to or greater than zero.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> In case the object does not have a <em>failure profile</em> yet, <em> Plant Simulation</em> creates a <em>failure profile</em> with an availability of 100 percent.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When employing the method <em>startFailureIn</em> we recommend to deactivate the internal failure generator by deactivating the check box <a class="links" href="id48047.html">Active</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"> When you set the failed state of a material flow object with the attribute <em>Failed</em>, and you would like to import a <b class="uiTerm">Service</b> for removing the failure, you have to use the method <em>name of station.failImp.</em><a class="links" href="id25816.html">import</a>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"> When you requested the service for removing the failure with the method <em>name of station.failImp.import</em>, you have to release the imported service, after the failure has been removed, with the method <em> name of station.failImp.</em><a class="links" href="id20824.html">releaseExporters</a>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameter</b></p>
+         <p class="para_topic">The parameter <em> StartFailureIn</em> of data type <em> time</em> designates the time after which the failure starts. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.startFailureIn(10)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id65930.html">endFailure</a></p>
+         <p class="para_topic"><a class="links" href="id32518.html">endFailureIn</a></p>
+         <p class="para_topic"><a class="links" href="id29588.html">Failed</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id31285.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:startFailure"></a><a class="link" href="id41583.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:startPause"></a></span></div>
+   </body>
+</html>

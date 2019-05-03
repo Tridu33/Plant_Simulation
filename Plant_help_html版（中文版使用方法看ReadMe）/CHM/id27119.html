@@ -1,0 +1,141 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Random Number Seed Values</title>
+      
+      <meta name="MS-HKWD" content="Random Number Seed Values">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Random Number Seed Values</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id78444.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Restrict Permission"></a><a class="link" href="id44645.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Borrow Licenses"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50257.html">The Plant Simulation Program Window</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70614.html">Ribbon Bar</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88930.html">File Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id39997.html">Options</a></span> &gt; <span class="simpleHTMLminitoc">Random Number Seed Values</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1873"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/RandomNumberSeedValues.gif" border="0"></p>
+         <p class="para_topic">The command <b class="uiTerm">Random Number Seed Values</b> opens the seed values table. It contains the seed values of the random number streams, which only apply to the <a class="links" href="id31886.html">Distribution Functions</a>, such as <em>z_uniform</em>, <em>z_normal</em>, etc. 
+         </p>
+         <p class="para_topic">The call <code>z_uniform(3,1,10)</code>, for example, generates uniformly distributed numbers between 1 and 10, using the random number stream 3. You can add more random number streams or you can edit the streams on the table. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/seedvaluestable1.gif"></p>
+         <p class="para_topic">The table lists the random number streams in consecutive order. If you do not enter different numbers, each random number stream uses its number as the seed value. </p>
+         <p class="para_topic"><b class="uiTerm">Example</b>: You already used five random number streams, and then decide to use stream 1000. Then, <em>Plant Simulation</em> creates the missing 995 random number streams.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Each of the material flow objects automatically uses a random number stream of its own. You can set that random number stream with the attribute <a class="links" href="id49672.html">RandomSeed</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><em>Plant Simulation</em> ensures that the random number streams of objects are initialized differently than random number streams for distribution functions. Even if you use the same number for the attribute <em>RandomSeed</em>and in the <b class="uiTerm">random number seed values</b> table, <em>Plant Simulation</em> creates other random numbers for this object.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If you would like to execute your simulation model several times and if you would like to use different random numbers, you only have to change the <a class="links" href="id10261.html">Random Numbers Variant</a> of the <em>EventController</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id67426.html">getSeedTable</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id49672.html">RandomSeed</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id42691.html">setSeedTable</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id92707.html">Simulating Random Processes</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id54188.html">resetRandomNumberStream</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id64129.html">Times and Distributions</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id63262.html">Type</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id31886.html">Distribution Functions</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id78444.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Restrict Permission"></a><a class="link" href="id44645.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Borrow Licenses"></a></span></div>
+   </body>
+</html>

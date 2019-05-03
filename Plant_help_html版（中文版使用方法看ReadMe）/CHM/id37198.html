@@ -1,0 +1,77 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Run a Regression Analysis</title>
+      
+      <meta name="MS-HKWD" content="Run a Regression Analysis">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">Run a Regression Analysis</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id72902.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Determine Confidence Intervals"></a><a class="link" href="id61104.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Find the Parameters of Truncated Distributions"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70398.html">Statistics Tools</a></span> &gt; <span class="simpleHTMLminitoc">Run a Regression Analysis</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_18359"></span><p class="para_topic"> Using a regression analysis you can describe the correlation between the input values and a single output value of a simulation study with a mathematical formula. This way you can predict an output value for a large number of parameter combinations of input values. If you want to study how a single input value determines an output value, start with several observations of value pairs of input and output values. You can perform a linear, a polynomial, or multiple regression analysis. The icon of the object shows a different icon after each calculation if you last ran a linear <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/regressionLinear.gif" border="0">, a polynomial <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/regressionPolynon.gif" border="0"> or a multiple <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/regressionPolynon.gif" border="0"> regression.
+         </p>
+         <p class="para_topic"> The object Regression <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/Icon_LinRegressionSmall.gif" border="0"> determines a regression line or a regression polynomial. It computes the correlation and the regression coefficient. A sample consists of ordered pairs <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfRegr.gif" border="0"> with j = 1,..., n, where n is the sample size.
+         </p>
+         <p class="para_topic"> You can input data via the object <em> FileInterface</em> or by pasting it from the Windows clipboard. To import data from a table which you inserted into a <em> Frame</em>, drag the table onto the Wizard and drop it there. This opens this dialog.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/regressionDataSource.gif"></p>
+         <p class="para_topic"> Click the button  Read XY to load a sample for a linear or a polynomial regression analysis. With the drop-down lists you can set the columns for the input values ( Column X ) and the output values ( Column Y ). To run a multiple regression analysis, load the entire contents of a table. This table has to contain the output values in the first column. The following columns contain input values.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/Linregr_Stat.gif"></p>
+         <p class="para_topic"> Descriptive statistics</p>
+         <p class="para_topic"> Selecting the appropriate degree of the polynomial is a trade off between minimizing the error rate and the ability of a regression analysis to filter out the data noise.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/regressionAnalysis.gif"></p>
+         <p class="para_topic"> Polynomial regression analysis</p>
+         <p class="para_topic"> The <em> RegressionAnalysis</em> recommends the degree of the regression curve, based on the <b class="uiTerm"> Akaike information criterion</b> ( AIC). The error between the data of the sample and the data of the regression curve is measured by the <b class="uiTerm"> mean squared error</b> ( MSE). Increasing the degree leads to a decreasing error. A great degree of the regression curve allows to also model data fluctuations resulting from the influence of random model components and modeling errors. Complex regression formulas with a large number of parameters make it difficult to recognize the essential correlations between the input values and the output values. On the other hand complex correlations of the input and the output values also require complex regression formulas.
+         </p>
+         <p class="para_topic"> The <em> RegressionAnalysis</em> creates the regression polynomials for all degrees between 1 and 10 and selects the best polynomial according to the <b class="uiTerm"> Akaike information criterion</b>. The results of these calculations are written to a table, which you can open by selecting Tools &gt; Akaike Information Criterion (AIC).
+         </p>
+         <p class="para_topic"> To show a scatter diagram for the data of the sample <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfRegr.gif" border="0">, click Show. It displays the linear association between the X and the Y values.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/Scatter_linRegr.gif"></p>
+         <p class="para_topic"> The scatter diagram of a sample with the regression line</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/PolyRegr_DLG.gif"></p>
+         <p class="para_topic"> Polynomial regression analysis</p>
+         <p class="para_topic"> If the data under consideration cannot be modeled with a linear function, run a polynomial regression analysis. The data is fitted by a polynomial y = an xn +... + a1 x + a0. You can type in the  degree of the polynomial n &gt; 0 into the text box.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/Coeff_PolyRegr.gif"></p>
+         <p class="para_topic"> Output of the resulting polynomial y = 0.62 x2 - 4.26 x + 26.18</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/Scatter_linRegr.gif"></p>
+         <p class="para_topic"> The scatter diagram of a sample with regression polynomial of degree 2</p>
+         <p class="para_topic"> If you want to analyze the correlation between several input values and a single output value, you will use a multiple regression analysis. An item of a sample consists of an observation of an output value y and the corresponding input values x <sub class="subscript">1</sub>, x<sub class="subscript"> 2</sub>, x<sub class="subscript"> 3</sub> ....
+         </p>
+         <p class="para_topic"> When a simulation study has four input values x<sub class="subscript"> 1</sub>, x<sub class="subscript"> 2</sub>, x<sub class="subscript"> 3</sub> and x<sub class="subscript"> 4</sub>, the wizard computes the coefficient &szlig;<sub class="subscript"> 0</sub>, &szlig;<sub class="subscript"> 1</sub>, &szlig;<sub class="subscript"> 2</sub>, &szlig;<sub class="subscript"> 3</sub> and &szlig;<sub class="subscript"> 4</sub>, so that the properties of the sample match the formula y = &szlig;<sub class="subscript"> 0</sub> + &szlig;<sub class="subscript"> 1</sub> x<sub class="subscript"> 1</sub> + &szlig;<sub class="subscript"> 2</sub> x<sub class="subscript"> 2</sub> + &szlig;<sub class="subscript"> 3</sub> x<sub class="subscript"> 3</sub> + &szlig;<sub class="subscript"> 4</sub> x<sub class="subscript"> 4</sub> as good as possible. The magnitude of the calculated coefficient &szlig;j and its algebraic sign allow to draw conclusions from the influence of the corresponding input value x<sub class="subscript"> j</sub> onto the output value y. This type of regression analysis is thus called <b class="uiTerm"> factorial regression</b>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/regressiondataxy.gif"></p>
+         <p class="para_topic"> Data for a multiple regression analysis</p>
+         <p class="para_topic"> For a multiple regression analysis all data has to be provided in a table. The first column always contains the observations of the output value.</p>
+         <p class="para_topic"> Just as in a polynomial regression analysis <b class="uiTerm"> Akaikes information criterion</b> (AIC) gives a recommendation as to which regression polynomial best describes the properties of the sample.
+         </p>
+         <p class="para_topic"> It may happen that regression formulas with fewer terms better describe the results of a simulation study as the regression formula with all variables. For this reason for a regression analysis with three input values regression formulas such as y = &szlig;<sub class="subscript"> 0</sub> + &szlig;<sub class="subscript"> 1</sub> x<sub class="subscript"> 1</sub> + &szlig;<sub class="subscript"> 3</sub> x<sub class="subscript"> 3</sub> will also be analyzed. This regression formula eliminates the influence of the input value x<sub class="subscript"> 2</sub> which possibly strongly depends on random model components.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/regressionDataTable.gif"></p>
+         <p class="para_topic"> Result polynomial &szlig;<sub class="subscript"> 0</sub> + &szlig;<sub class="subscript"> 1</sub> x<sub class="subscript"> 1</sub> + &szlig;<sub class="subscript"> 2</sub> x<sub class="subscript"> 2</sub> + &szlig;<sub class="subscript"> 3</sub> x<sub class="subscript"> 3</sub> + &szlig;<sub class="subscript"> 4</sub> x<sub class="subscript"> 4</sub></p>
+         <p class="para_topic"> To compute the output value with a regression formula in a table, select the command Tools &gt; Calculator . Enter the input values into the white-colored cells and click Apply.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/regressionCalculator.gif"></p>
+         <p class="para_topic"> Calculation of the output value for different sets of input values</p>
+         <p class="para_topic"> For additional information consult: Kenneth P. Burnham, David R. Anderson: Model Selection and Inference: A Practical Information-Theoretic Approach, 1998 Springer-Verlag, New York Inc.</p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id72902.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Determine Confidence Intervals"></a><a class="link" href="id61104.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Find the Parameters of Truncated Distributions"></a></span></div>
+   </body>
+</html>

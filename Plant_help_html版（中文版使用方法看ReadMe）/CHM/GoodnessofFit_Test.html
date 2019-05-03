@@ -1,0 +1,163 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Goodness-of-Fit Test</title>
+      
+      <meta name="MS-HKWD" content="Goodness-of-Fit Test">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Goodness-of-Fit Test</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="Kurtosis.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Kurtosis"></a><a class="link" href="The_Test.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:&nbsp;The -Test"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70398.html">Statistics Tools</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57319.html">Determine Probability Distributions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="GoodnessofFit_Test.html">Goodness-of-Fit Test</a></span> &gt; <span class="simpleHTMLminitoc">Goodness-of-Fit Test</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_18334"></span><p class="para_topic"> For a given level of significance <em> DataFit</em> checks whether a hypothesis about the distribution of a random variable X under consideration is true or not. The random sample <img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/dfmean1.gif" border="0"> is determined by X. Suppose that the hypothesis is true, then the test rejects the hypothesis with a probability &alpha;. This probability &alpha; is called level of significance. You can enter it on the tab Fit. Frequently used values for &alpha; are <code>0.1</code>, <code>0.05</code> or <code>0.01</code>. The value (1- &alpha; ) is therefore the probability for recognizing the true hypothesis.
+         </p>
+         <p class="para_topic"> The setting Number of classes only applies to the <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/chisquare.gif" border="0"> test. The analyzed range, within which the values of the sample are located, are split into a number of intervals (classes) of the same length, which you enter. The classes for which the frequencies to be expected are less than 5 are combined. The frequency to be expected results from the number of sample elements and the probability that a random variable of the selected and parametrized distribution are located within the interval (class). The program always executes this class adjustment as the used methods only work correctly under these circumstances. 
+         </p>
+         <p class="para_topic"> You can open a histogram by clicking the  Show button.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit_Tab_FIT.gif"></p>
+         <p class="para_topic"> The settings for the goodness-of-fit test</p>
+         <p class="para_topic"><em> DataFit</em> computes the parameters of the following distribution and performs the goodness-of-fit test. The string in parenthesis shows the name of the distribution in <em> Plant Simulation</em>.
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm"> Discrete Distributions</b>
+            
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> Binomial distribution ( Binomial )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Geometric distribution ( Geom )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Poisson-distribution ( Poisson )</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm"> Continuous Distributions</b>
+            
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> Beta distribution ( Beta )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Cauchy distribution (not contained in the drop-down list)</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Erlang-distribution ( Erlang )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Exponential distribution ( Negexp )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Frechet distribution (not contained in the drop-down list)</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Gamma distribution ( Gamma )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Gumbel distribution (not contained in the drop-down list)</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Laplace distribution (not contained in the drop-down list)</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Logistic distribution (not contained in the drop-down list)</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> LogLogistic distribution (not contained in the drop-down list)</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Log-Normal distribution ( Lognorm )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Normal distribution ( Normal )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Paralogistic distribution (not contained in the drop-down list)</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Pareto distribution (not contained in the drop-down list)</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Triangular distribution ( Triangle )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Uniform distribution ( Uniform )</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Weibull-distribution ( Weibull )</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> Click  Distributions &gt; Select to opens this dialog and select the distributions. Hold down  Shift to select more than one distribution. </p>
+         <p class="para_topic"><em> DataFit</em> runs three tests: The <em> Chi-square test </em> (<img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/chisquare.gif" border="0">-test), the <em> Kolmogorov-Smirnov test</em> (KS test) and the <em> Anderson-Darling test</em> (AD test).
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/DataFit_SelectDistr.gif"></p>
+         <p class="para_topic"> Selecting the distribution</p>
+         <p class="para_topic"> Using the data of the sample all tests compute a test function, the so-called test statistic. The level of significance yields a critical value &alpha;. The hypothesis is accepted if the test statistic is less than the critical value. </p>
+         <p class="para_topic"> Click the button  FIT to start rating the distribution parameters and the following parameter tests for the selected distribution types. The <em> Console</em> shows information about each and every action of the program.
+         </p>
+         <p class="para_topic"> To show the results of the calculations, click the button Results &gt; Open on the tab Evaluation.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/StatisticsTools/intermediateResults.gif"></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="Kurtosis.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Kurtosis"></a><a class="link" href="The_Test.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:&nbsp;The -Test"></a></span></div>
+   </body>
+</html>

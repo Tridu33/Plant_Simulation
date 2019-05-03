@@ -1,0 +1,162 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>LoadStation</title>
+      
+      <meta name="MS-HKWD" content="LoadStation">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">LoadStation</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1260984.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:VehicleSpeed"></a><a class="link" href="xid1261097.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the LoadStation"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66772.html">Object Libraries</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1256520.html">Electrical Overhead Monorail</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id1256523.html">LoadStation</a></span> &gt; <span class="simpleHTMLminitoc">LoadStation</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_17058"></span><p class="para_topic">The <em>LoadStation</em> facilitates the quick, easy, and cost-efficient vertical transport of goods. It mainly serves for moving <em>Hangers</em> of the <em>Electrical Overhead Monorail</em> from one level to another and for loading and unloading the <em>Hangers</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Add-Ins_Ref_Help/Object_Libraries/lifterGraphic.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">We modeled the <em>LoadStation</em> as a user-defined object based on the <em>Track</em>. For this reason opening Help with <b class="uiTerm">F1</b> and <b class="uiTerm">What&rsquo;s This Help</b> in the dialogs of the objects do not work. To open help for an object, select <b class="uiTerm">Help &gt; Help on Object</b> in its dialog.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">We modeled the <em>LoadStation</em> exclusively in 3D. In 2D the animation does not always match the animation in 3D.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">We modeled the <em>LoadStation</em> as a user-defined object based on the <em>Track</em>. 
+         </p>
+         <p class="para_topic">The <em>Transporter</em>, which moves the parts (Lift), is a built-in object of the <em>LoadStation</em>. The <em>Transporter</em> makes extensive used of the load bay of type Conveyor. This is a length-oriented loading space similar to a line. For this reason the library provides active <em>Transporters</em> (<em>Hanger</em>), which drive on the <em>Electrical Overhead Monorail</em>.
+         </p>
+         <p class="para_topic">The class object of the <em>Transporters</em> is the object <em>Hanger</em> which is part of the library. If you want to use another object, always create a duplicate of the object <em>Hanger</em> and modify it to suit your needs. Do not modify the attributes defined in the object <em>Hanger</em> as this might lead to unexpected errors.
+         </p>
+         <p class="para_topic"><em>EOM Transporters</em> arrive at the <em>LoadStation</em>, which are to be lifted to the lower or upper level depending on the attribute Destination of the <em>Transporter</em>. An arriving part registers at the <em>LoadStation</em> in the order list by calling the exit control of the respective Track. In this exit control the part enters itself into the list of the transport orders of the <em>LoadStation</em> by using the method transportOrder.
+         </p>
+         <p class="para_topic">When the <em>EOM-Transporter</em> has the <em>LoadStation</em> as target, <em>Plant Simulation</em> also create a transport order with the <em>LoadStation</em> as the target. In this case the <em>Transporter</em> (<em>Hanger</em>) is transported to the loading height which you entered into the dialog and can then be loaded there. As soon as loading the has been finished, the <em>Hanger</em> is moved on by calling the method loadFinished and the assignment of the target track.
+         </p>
+         <p class="para_topic">This order list can contain several orders. If you did not enter a strategy control, the Lifter processes the order list in the chronological order in which the orders were registered.</p>
+         <p class="para_topic">When an order is processed, the Lift of the <em>LoadStation</em> first drives to the rail, at which it is to pick up the <em>Hanger</em>. There the Lift waits until the <em>Hanger</em> has driven onto the Lift. This facilitates creating a transport order before the <em>Hanger</em> arrived at the end of the rail.
+         </p>
+         <p class="para_topic">As soon as the <em>Hanger</em> has driven onto the Lift, the Lift drives to the destination rail. Once it arrives there, the transported <em>Hanger</em> drives onto the destination rail. After the <em>Hanger</em> has completely driven off the Lift, the <em>LoadStation</em> processes the next order.
+         </p>
+         <p class="para_topic">To enter the attached lines (rails), which are to be serviced, into the table of the attached lines, drag them onto the <em>LoadStation</em> and drop them there. <em>Plant Simulation</em> simultaneously calculates the Z position of the rail. The calculation also determines the position to which the Lift has to drive so that the transport rail has the correct position.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The attached rails shall not form a ring, but have to consist of at least two segments. Otherwise <em>Plant Simulation</em> cannot uniquely determine if the station is a loading station or an unloading station. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The attached lines/rails all have to point in one direction. It is not allowed that the transport direction runs from right to left on one level and then gets changed to left to right. It does not matter which direction you choose, right to left or left to right. The Lift recognizes the orientation (material flow direction). It also recognizes differing material flow directions and shows an error message if that is the case.</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The Width of the Lift has to be slightly greater than the sum of the <b class="uiTerm">Widths</b> of the <em>Hangers</em> which are to be transported. This is especially important when the <b class="uiTerm">Capacity</b> is greater than 1.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">When the <em>LoadStation</em> fails, the <em>Transporter</em> stops immediately. As soon as the failure has been removed, it continues fulfilling the transport order and finishes it. 
+         </p>
+         <p class="para_topic">The end of a shift does not directly affect the <em>LoadStation</em>. Then end of the shift becomes noticeable when no additional order is placed. 
+         </p>
+         <p class="para_topic">When the currently transported part is deleted, the current order of the <em>LoadStation</em> will be canceled. When the order list contains an additional order, this order is processed. When the order list is empty, the <em>LoadStation</em> stops until another order is placed.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1261097.html">Dialog Window of the LoadStation</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1261055.html">Attributes of the LoadStation</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1261040.html">Methods of the LoadStation</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1244599.html">Load and Unload Hangers With the LoadStation</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1260984.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:VehicleSpeed"></a><a class="link" href="xid1261097.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the LoadStation"></a></span></div>
+   </body>
+</html>

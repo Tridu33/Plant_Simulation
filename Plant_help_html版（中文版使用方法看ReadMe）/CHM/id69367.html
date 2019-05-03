@@ -1,0 +1,173 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>setIconFromFile</title>
+      
+      <meta name="MS-HKWD" content="setIconFromFile">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">setIconFromFile</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id43115.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setCurrIconFromClipboard"></a><a class="link" href="id91759.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setIconSize"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18479.html">Methods of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50316.html">Methods for Animating All Objects</a></span> &gt; <span class="simpleHTMLminitoc">setIconFromFile</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4240"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.setIconFromFile(IconName:string, FileName:string) &rarr; boolean
+Path.setIconFromFile(IconNumber:integer,FileName:string) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">A <b class="uiTerm">3D Only</b> model does not provide the method <em>setIconFromFile</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The method <em>setIconFromFile</em> sets the icon of the object designed by Path to a number and overwrites the icon of the file with a graphics file. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">This method applies to the icon of the addressed instance not to icon of the object class.</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>IconName</em> of data type <em>integer</em> designates the number of the icon. 
+               </p>
+               
+               <p class="para_item">Instead, you can also enter the name of the icon as a <em>string</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>FileName</em> of data type <em>string</em> designates the file name of the graphic, which overwrites the current icon. 
+               </p>
+               
+               <p class="para_item">The graphics file of the icon may be located in a folder of your choice. The <em>method</em> returns false when it fails and does not make changes.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em> boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.setIconFromFile(3,&quot;outOfOrder.gif&quot;)
+MyStation.setIconFromFile(&quot;failed&quot;,&quot;C:\graphics\outOfOrder.gif&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id65170.html">Import</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id43115.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setCurrIconFromClipboard"></a><a class="link" href="id91759.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setIconSize"></a></span></div>
+   </body>
+</html>

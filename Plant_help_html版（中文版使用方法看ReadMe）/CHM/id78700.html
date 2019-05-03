@@ -1,0 +1,227 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.addGraphicTransformation</title>
+      
+      <meta name="MS-HKWD" content="_3D.addGraphicTransformation">
+      <meta name="MS-HKWD" content="addGraphicTransformation">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.addGraphicTransformation</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id85031.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Built-in Methods for Detailed Access To Graphics"></a><a class="link" href="id25337.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.concatenateRotations"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id85031.html">Built-in Methods for Detailed Access To Graphics</a></span> &gt; <span class="simpleHTMLminitoc">_3D.addGraphicTransformation</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14716"></span><span id="ndxgenid_PlantSimulationENU_14717"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path._3D.addGraphicTransformation(GraphicPath:any[], Position:length[3], RotationAngle:real, RotationAxis:real[3], RotationCenter:length[3], Scale:any [,GraphicGroupName:string])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.addGraphicTransformation</em> adds an additional transformation to an existing transformation of the designated graphic of the object designated by Path.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The method deactivates graphic inheritance.</p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Let&rsquo;s suppose that a graphic is translated by the coordinates (3, 0, 0) from its origin and its basic orientation, and rotated by 30&deg; around its y-axis.</p>
+         <p class="para_topic">Applying the method <em>addGraphicTransformation</em> to this graphic with a translation of (2, 0, 0) and a uniform scaling factor of 2 results in a graphic translation which first translates it by the coordinates (3, 0, 0), then rotates it by 30&deg; around the y-axis, then translates it by (2, 0, 0), and finally scales the resulting translation by a factor of 2 in all directions. Note the sequence is important. It is, for example, not possible to combine the translations into one.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>GraphicPath</em> is an <em>array</em> of data type <em>any</em> which sets the path to the graphic. The parameter is described under<a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Position</em> is an <em>array</em> of data type <em>length</em> which sets the position of the graphic.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>RotationAngle</em> of data type <em>real</em> sets its rotation angle.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>RotationAxis</em> is an <em>array</em> of data type <em>real</em> which sets the rotation axis of the graphic.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>RotationCenter</em> is an <em>array</em> of data type <em>length</em> which sets the rotation center of the graphic.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Scale</em> of data type <em>real</em>, <em>array</em>, etc. sets its scale.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>GraphicGroupName</em> of data type <em>string</em> designates the name of the graphic group you are working with. The parameter is described under<a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">addGraphicTransformation([1,4], [3,2,1], 30, [0,0,-1], [2,0,0], 2)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">addGraphicTransformation([1,4], [3,2,1], 30, [0,0,-1], [2,0,0], [1,2,3], &quot;deco&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id62600.html">Tab Transformation</a></p>
+         <p class="para_topic"><a class="links" href="id40625.html">_3D.setGraphicTransformation</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id85031.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Built-in Methods for Detailed Access To Graphics"></a><a class="link" href="id25337.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.concatenateRotations"></a></span></div>
+   </body>
+</html>

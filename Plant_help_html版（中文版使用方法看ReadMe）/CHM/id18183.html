@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>interSection</title>
+      
+      <meta name="MS-HKWD" content="interSection">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">interSection</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id16847.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:insertList"></a><a class="link" href="id25610.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:openDialog"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42077.html">Methods of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id72048.html">Methods for Accessing Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc">interSection</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10197"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path1.interSection(List:path) &rarr; list
+Path1.interSection(Range:range, List:path) &rarr; list
+Path1.interSection(Range:range, Range:range) &rarr; list</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>interSection</em> returns those values that the ranges or the lists/tables designated by the parameters share. Both ranges or lists/tables have to have the same data type. The return value is a list with one column containing the shared items. Note that values may be listed more than once. 
+         </p>
+         <p class="para_topic">The <em>method</em> applies to the objects <em>StackFile</em>, <em>QueueFile</em>, <em>CardFile</em>, <em>TableFile</em>, and <em>TimeSequence</em>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Range</em> of data type <em>range</em> designates a range of the table.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Range</em> of data type <em>path</em> designates a list/table.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>list</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- the second column of the tablefile contains numbers 2,4, ... 40 
+-- the third column contains the numbers 3,6, ... 60. The cardfile
+-- contains the square numbers from -10 to 10.
+destination.delete
+destination.insertList(2,1,MyTableFile.interSection(cardFile))
+-- the second column of the tablefile destination 
+-- contains the numbers 4,9,16,36,36
+destination.insertList(3,1,MyTableFile.
+interSection({2,1}..{3,2},cardFile))
+-- the third column of the tablefile destination contains 4
+dest.insertList(4,1,MyTableFile.interSection (2,1}..{2,*},{3,1}..{3,*}))
+-- the fourth column of the tablefile 
+-- destination contains the numbers 6,12,18,24,30,36</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id16847.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:insertList"></a><a class="link" href="id25610.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:openDialog"></a></span></div>
+   </body>
+</html>

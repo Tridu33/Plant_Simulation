@@ -1,0 +1,132 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>startProcessing</title>
+      
+      <meta name="MS-HKWD" content="startProcessing">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">startProcessing</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id33204.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setServices"></a><a class="link" href="id35576.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:stopProcessing"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48315.html">Methods of the Importer</a></span> &gt; <span class="simpleHTMLminitoc">startProcessing</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4568"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.imp.startProcessing
+Path.failImp.startProcessing</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The method <em> startProcessing</em> starts processing the <em> MU</em> for which the <em> Exporter</em> was requested. Then the appropriate <b class="uiTerm">out</b> event is registered. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameter</b></p>
+         <p class="para_topic"> If you would like to start processing anew from the beginning after an interruption, enter the parameter <code> true</code>.
+         </p>
+         <p class="para_topic"> Only the <a class="links" href="id18003.html"> Station</a>, the <a class="links" href="id29026.html"> ParallelStation</a>, the <a class="links" href="id95185.html"> AssemblyStation</a>, and the <a class="links" href="id85371.html"> DismantleStation</a>, the <a class="links" href="id16225.html"> Mixer</a>, the <a class="links" href="id77602.html"> Portioner</a>, and the <a class="links" href="id47279.html"> Tank</a>, can import services, which you define on the <a class="links" href="id88367.html"> Tab Importer</a>.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic"> The return value has the data type <em> boolean</em>. It is false when processing cannot be started, because not all of the required services are available. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyStation.failImp.startProcessing
+ParallelStation.imp.startProcessing
+MyAssembly.failImp.startProcessing(true)
+dismantle.imp.startProcessing(true)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id33204.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setServices"></a><a class="link" href="id35576.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:stopProcessing"></a></span></div>
+   </body>
+</html>

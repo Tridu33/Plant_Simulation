@@ -1,0 +1,76 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Define Times in the Class of the Processing Stations</title>
+      
+      <meta name="MS-HKWD" content="Define Times in the Class of the Processing Stations">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Define Times in the Class of the Processing Stations</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id45128.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create the Processing Stations"></a><a class="link" href="id59067.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Define Set-up Behavior in the Class of the Processing Stations"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id49128.html">Producing and Processing Parts with a Work Plan</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id45128.html">Create the Processing Stations</a></span> &gt; <span class="simpleHTMLminitoc">Define Times in the Class of the Processing Stations</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_523"></span><p class="para_topic">We define the <b class="uiTerm">Processing time</b> and the <b class="uiTerm">Set-up time</b> in a <b class="uiTerm">Formula</b> .
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/WorkPlanStationsTime.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">We want the stations to get the <b class="uiTerm">processing time</b> of all parts from the work plan <em>MyWorkPlan</em>. This table object <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/tableSm_dup.gif" border="0"> is located in the <em>Frame</em> in which we build the model, i.e., the <em>root</em>
+                  <em>Frame</em>. The station then opens the sub-table <b class="uiTerm">Operations</b> for the respective part and gets the times in the column <b class="uiTerm">Processing time</b> of the respective station within this sub-table.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/WorkPlanTable1.gif"></p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplan5.gif"></p>
+               
+               <p class="para_item">For the <b class="uiTerm">processing time</b> we use a <em>Method</em> which we call from the formula. The <em>Method</em> is called <em>processingTimeInFormula</em>.
+               </p>
+               
+               <p class="para_item">The source code in <em>SimTalk</em>
+                  <b class="uiTerm">2.0 notation</b> looks like this:
+               </p>
+               <pre class="indent">-&gt; time
+var PartType := @.PartType
+var Station  := ?
+var WorkPlan := root.myWorkPlan[&quot;Operations&quot;, PartType]
+result       := WorkPlan[&quot;Processing time&quot;,Station]</pre>
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplanProcTimeFormula.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">We want the stations to get the <b class="uiTerm">set-up time</b> of all parts from the work plan <em>MyWorkPlan</em>. This table object <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/tableSm_dup.gif" border="0"> is located in the <em>Frame</em> in which we build the model, i.e., the <em>root</em>
+                  <em>frame</em>. The station then opens the sub-table <b class="uiTerm">Operations</b> for the respective part and gets the times in the column <b class="uiTerm">Set-up time</b> of the respective station within this sub-table. <code>Self</code> identifies the station contained in the row on the sub-table.
+               </p>
+               
+               <p class="para_item">The above statements translate into this formula, which we directly enter into the text box:</p>
+               
+               <p class="para_item"><code>root.MyWorkPlan[&quot;Operations&quot;,@.PartType][&quot;Setup time&quot;,Self]</code></p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workplanSetupTime.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id45128.html">Create the Processing Stations</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id45128.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Create the Processing Stations"></a><a class="link" href="id59067.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Define Set-up Behavior in the Class of the Processing Stations"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Backwards</title>
+      
+      <meta name="MS-HKWD" content="Backwards">
+      <meta name="MS-HKWD" content="Backwards,Transporter attribute">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Backwards</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id38670.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:AutomaticRouting"></a><a class="link" href="id57350.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:BatBasicCons"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id98543.html">Attributes of the Transporter</a></span> &gt; <span class="simpleHTMLminitoc">Backwards</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9844"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.Backwards</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>Backwards</em> makes the <em>Transporter</em> drive in reverse on the objects <em>Track</em> or <em>TwoLaneTrack</em>. When the <em>Transporter</em> moves from a <em>Track/TwoLaneTrack</em> to a <em>Track/TwoLaneTrack</em>, it may enter the <em>Track</em>at the <em>Track&rsquo;s</em> exit and leave it at its entrance. This only applies when the <em>Transporter</em> moves from a <em>Track/TwoLaneTrack</em> to a <em>Track/TwoLaneTrack</em>, but not from a point-oriented object onto a <em>Track/TwoLaneTrack</em>.
+         </p>
+         <p class="para_topic">When you deactivated the check box <a class="links" href="id83154.html">Acceleration</a> or set the attribute <a class="links" href="id80521.html">AccelerationEnabled</a> to <code>false</code>, the attribute <em>Backwards</em> (<a class="links" href="id18697.html">Backwards</a>) sets if the <em>Transporter</em> designated by MU-path moves in reverse (<code>true</code>) or forward (<code>false</code>) on the <em>Track</em>. If, on the other hand, the feature <em>Acceleration</em> is active, the attribute <em>Backwards</em> marks the sign, positive or negative, of the final speed of the <em>Transporter</em>. Suppose a <em>Transporter</em> drives forward on a <em>Track</em> with a certain speed with the check box <code>Backwards</code> deactivated. Then you select the check box <code>Backwards</code>. This will result in the <em>Transporter</em> slowing down until its speed is 0. Then it accelerates in reverse direction until it reaches its final speed. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">if @.empty 
+   @.backwards := true
+else
+   waituntil SP2.empty prio 1
+   @.Cont.move(SP2)
+   @.backwards := true
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.MUs.MyTransporter.Backwards :=true</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id38670.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:AutomaticRouting"></a><a class="link" href="id57350.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:BatBasicCons"></a></span></div>
+   </body>
+</html>

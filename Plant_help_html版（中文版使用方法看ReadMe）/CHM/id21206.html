@@ -1,0 +1,209 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Show Values as Bars</title>
+      
+      <meta name="MS-HKWD" content="Show Values as Bars">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Show Values as Bars</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id41158.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Show Values as Text"></a><a class="link" href="id46119.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Show States with LEDs"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42624.html">Animating the Simulation Model and Viewing the Results</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84748.html">Viewing and Visualizing Statistics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76178.html">Showing Statistics with Display Panels in the Model</a></span> &gt; <span class="simpleHTMLminitoc">Show Values as Bars</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1456"></span><p class="para_topic">Suppose you want to display the number of parts in a buffer as a bar above the icon of the object. </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar1.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Click the station for which you want to show the value with the right mouse button and select <b class="uiTerm">Edit Display Panel</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the check box <b class="uiTerm">Active</b> to show the <a class="links" href="id16948.html">Display Panel</a> in the <em>Frame</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To display the bar above the icon, move the <a class="links" href="id72701.html">X-position</a> and the <a class="links" href="id26475.html">Y-position</a> to the top left corner of the icon. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the <b class="uiTerm">width</b> and the <b class="uiTerm">height</b> of the <em>display panel</em> in the <em>Frame</em>. In this case it matches the width and the height of the bar itself. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar3.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">New</b> to add the new item.
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">In the dialog <b class="uiTerm">Display Panel Element</b> click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select the <b class="uiTerm">Value</b> you want to show. As we want to show the number of parts in the buffer, we select the method <em>numMU</em>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Select the display <a class="links" href="id35364.html">Type</a> &gt; <b class="uiTerm">Bar</b>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Select the <a class="links" href="id82284.html">Color</a> of the bar and enter its <a class="links" href="id15671.html">Length</a> and its <a class="links" href="id66013.html">Width</a>. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Finally, select the <a class="links" href="id73365.html">Direction</a> into which the bar deflects starting at the <b class="uiTerm">X-position</b> of the item. We selected right. 
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Click <b class="uiTerm">OK</b> to add the item. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar2.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">OK</b> again to finish defining the <em>display panel</em>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar1.gif"></p>
+               
+               <p class="para_item">Suppose you want to display the <b class="uiTerm">working</b>, <b class="uiTerm">waiting</b>, <b class="uiTerm">blocking</b>, <b class="uiTerm">failed</b> and <b class="uiTerm">paused</b> portions of a station on a <em>display panel</em> below the object. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar4.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click the station for which you want to show the values with the right mouse button and select <b class="uiTerm">Edit Display Panel</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the check box Active to show the <em>display panel</em> in the <em>Frame</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the <b class="uiTerm">position</b> and the <b class="uiTerm">width</b> and the <b class="uiTerm">height</b> of the <em>display panel</em> in the <em>Frame</em>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar6.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">New</b> to add the new item.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">In the dialog <b class="uiTerm">Display Panel Element</b> click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/browseButton.gif" border="0"> and select the <b class="uiTerm">Value</b> you want to show. We selected the statistics method <em>statWorkingPortion</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the display <a class="links" href="id35364.html">Type</a> &gt; <b class="uiTerm">Bar</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the <a class="links" href="id82284.html">Color</a> of the bar and enter its <a class="links" href="id15671.html">Length</a> and its <a class="links" href="id66013.html">Width</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select the <a class="links" href="id73365.html">Direction</a> into which the bar deflects starting at the <b class="uiTerm">X-position</b> of the item. We selected <b class="uiTerm">up</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">OK</b> to add the item.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar5.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <b class="uiTerm">OK</b> again to finish defining the <em>display panel</em>. It then looks like this.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar41.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Repeat the steps described above to add the <b class="uiTerm">values</b>
+                  <a class="links" href="id14893.html">statWaitingPortion</a>, <a class="links" href="id23748.html">statBlockingPortion</a>, etc. to the <em>display panel</em>. Select a different color for each value and to shift the <b class="uiTerm">X-position</b> of each value to the right so that they do not overlap. The result will then look like this.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar7.gif"></p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/dpBar4.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id41158.html">Show Values as Text</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id46119.html">Show States with LEDs</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id61905.html">Show and Hide Display Panels with a Check Box</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id76178.html">Showing Statistics with Display Panels in the Model</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id41158.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Show Values as Text"></a><a class="link" href="id46119.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Show States with LEDs"></a></span></div>
+   </body>
+</html>

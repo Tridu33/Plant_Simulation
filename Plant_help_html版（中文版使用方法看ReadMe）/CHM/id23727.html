@@ -1,0 +1,188 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.optimizeByPruningTinyGraphics</title>
+      
+      <meta name="MS-HKWD" content="_3D.optimizeByPruningTinyGraphics">
+      <meta name="MS-HKWD" content="optimizeByPruningTinyGraphics">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.optimizeByPruningTinyGraphics</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id13953.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.InternalGraphics"></a><a class="link" href="id72307.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.optimizeByStructureFlattening"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36349.html">Built-in Attributes and Methods for Accessing Graphics</a></span> &gt; <span class="simpleHTMLminitoc">_3D.optimizeByPruningTinyGraphics</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14698"></span><span id="ndxgenid_PlantSimulationENU_14699"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">_3D.optimizeByPruningTinyGraphics(GraphicPath:any[], BoundingCubeSideLength:length[, GraphicGroupName:string])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>_3D.optimizeByPruningTinyGraphics</em> optimizes the graphic designated by Path by pruning its tiny graphics, i.e., it removes all component graphics which individually fit within the cube designated by the argument.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>GraphicPath</em> is an <em>array</em> of data type <em>any</em> which sets the path to the graphic. The parameter is described under<a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>boundingCubeSizeLength</em> is an <em>array</em> with a single value of data type <em>real</em>. It designates the size of the bounding cube.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>GraphicGroupName</em> of data type <em>string</em> designates the name of the graphic group you are working with. The parameter is described under<a class="links" href="id14724.html">The Parameters GraphicPath and GraphicGroupName</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.Models.Frame._3D.optimizeByPruningTinyGraphics([2], 0.001)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.Models.Frame._3D.optimizeByPruningTinyGraphics([2], 0.001, &quot;deco&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id76304.html">Optimize Selected Graphic</a></p>
+         <p class="para_topic"><a class="links" href="id39940.html">Step 1: Prune tiny graphics</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id13953.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.InternalGraphics"></a><a class="link" href="id72307.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.optimizeByStructureFlattening"></a></span></div>
+   </body>
+</html>

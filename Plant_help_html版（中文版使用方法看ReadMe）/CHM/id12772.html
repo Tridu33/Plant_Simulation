@@ -1,0 +1,275 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>muPart</title>
+      
+      <meta name="MS-HKWD" content="muPart">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">muPart</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id24005.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:mu"></a><a class="link" href="id11054.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Setting-Up the Material Flow Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id19671.html">Methods for Accessing the Contents of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">muPart</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4488"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.muPart[(Index:integer:= 1)] &rarr; object</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The method <em> muPart </em> accesses all <em> MUs</em> located on the object designated by Path as a whole or in part. 
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameter</b></p>
+         <p class="para_topic"> When you enter the optional parameter <em> Index</em> of data type <em> integer</em>, <em> Plant Simulation</em> accesses the <em> MU</em> designated by the parameter of data type <em> integer</em>. When you do not enter a parameter, <em> Plant Simulation</em> accesses the first <em> muPart</em> available. 
+         </p>
+         <p class="para_topic"> Example: The <em> MUs</em> A, B, C, D, E, and F are located on the length-oriented objects <b class="uiTerm">Line1</b>, <b class="uiTerm">Line2</b>, and <b class="uiTerm">Line3</b>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/MaterialFlowObjects12-8.gif"></p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/muPart.gif"></p>
+         <p class="para_topic"> The booking points of all <em> MUs</em> are located at their front end. The return values for <em> muPart </em> are listed in this table:
+         </p>
+         <table border="1" cellpadding="1" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr align="left">
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Call</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Returns </p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code> line1.MUPart(1)</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> MU A</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code> line1.MUPart(2)</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> VOID</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code> line2.MUPart(1)</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> MU D</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code> line2.MUPart(2)</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> MU C</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code> line2.MUPart(3)</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> MU B</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code> line2.MUPart(4)</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> MU A</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><code> line2.MUPart(5)</code></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"> VOID</p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Default Value</b></p>
+         <p class="para_topic">The default value is 1, meaning the first MU.</p>
+         <p class="para_topic"><b class="uiTerm"> Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em> object</em>.
+         </p>
+         <p class="para_topic">If no <em> muPart</em> is located on the object or if the <em>muPart</em> called does not exist, the <em> method</em> returns VOID.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">line1.muPart(1) -- returns VOID
+line2.muPart(1) -- returns the part named C</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id24555.html">Contents</a></p>
+         <p class="para_topic"><a class="links" href="id24005.html">mu</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id24005.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:mu"></a><a class="link" href="id11054.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Methods for Setting-Up the Material Flow Objects"></a></span></div>
+   </body>
+</html>

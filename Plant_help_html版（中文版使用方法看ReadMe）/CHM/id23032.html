@@ -1,0 +1,165 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>saveIconToFile</title>
+      
+      <meta name="MS-HKWD" content="saveIconToFile">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">saveIconToFile</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id91879.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:resetIcon"></a><a class="link" href="id27846.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setAniLine"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18479.html">Methods of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id50316.html">Methods for Animating All Objects</a></span> &gt; <span class="simpleHTMLminitoc">saveIconToFile</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4232"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.saveIconToFile(IconName:string, FileName:string [,FileFormat:string]) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">A <b class="uiTerm">3D Only</b> model does not provide the method <em>saveIconToFile</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The method <em>saveIconToFile</em> saves the icon of the object designed by Path as a file. The graphics format is set by the file extension. <em>Plant Simulation</em> supports the graphics file formats .bmp, .png, and .ppm.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>IconName</em> of data type <em>integer</em> designates the <em>number of the icon</em>.
+               </p>
+               
+               <p class="para_item">Instead, you can also enter the <em>name of the icon</em> as a <em>string</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>FileName</em> of data type <em>string</em> designates the file name of the graphics file.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>FileFormat</em> of data type <em>string</em> designates the file format of the graphics file.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><em>Plant Simulation</em> returns false when saving the icon to a file failed.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">sp1.saveIconToFile(3,&quot;iconfile.png&quot;)
+sp1.saveIconToFile(&quot;icon_name&quot;,&quot;iconfile.png&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id41342.html">Export Icon to File</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id91879.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:resetIcon"></a><a class="link" href="id27846.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setAniLine"></a></span></div>
+   </body>
+</html>

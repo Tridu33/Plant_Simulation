@@ -1,0 +1,140 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>exportReport</title>
+      
+      <meta name="MS-HKWD" content="exportReport">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">exportReport</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id27561.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of the Teamcenter Interface"></a><a class="link" href="id90969.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:login"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id78707.html">Inter-Process Communication Interfaces</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id86926.html">Teamcenter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27561.html">Methods of the Teamcenter Interface</a></span> &gt; <span class="simpleHTMLminitoc">exportReport</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_16348"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.exportReport(Report:object,FolderName:string)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>exportReport</em> exports a <em>Plant Simulation</em>
+            <a class="links" href="id53118.html">HtmlReport</a>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Report</em> of data type <em>object</em> designates the report.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>FolderName</em> of data type <em>string</em> designates the Teamcenter folder into which you want to save the <em>Report</em>. This folder has to be a subfolder of the <b class="userinput">Home</b> folder of the user logged on to <em>Teamcenter</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The method creates a dataset item in <em>Teamcenter</em> that contains the HTML page of the exported <a class="links" href="id53118.html">HtmlReport</a>. <em>Plant Simulation</em> sets the <b class="uiTerm">name</b> of the dataset to the <b class="uiTerm">label</b> or <b class="uiTerm">name</b> of the <em>Report</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Teamcenter.exportReport(MyReport,&quot;MyTargetFolder&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id48005.html">Html Report</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id27561.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods of the Teamcenter Interface"></a><a class="link" href="id90969.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:login"></a></span></div>
+   </body>
+</html>

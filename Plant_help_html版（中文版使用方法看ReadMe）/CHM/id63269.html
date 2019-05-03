@@ -1,0 +1,248 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>create</title>
+      
+      <meta name="MS-HKWD" content="create">
+      <meta name="MS-HKWD" content="create,MUs">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic_procedure" id="xps10_pagetitle">create</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id66973.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Creating and Locating Mobile Objects"></a><a class="link" href="id93694.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:delete"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id56173a.html">Shared Properties of the Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id38692.html">Methods of All Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id66973.html">Methods for Creating and Locating Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc">create</span></td>
+         </tr>
+      </table>
+      <div class="contentType_procedure">
+         <span id="ndxgenid_PlantSimulationENU_9136"></span>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MU-path.create(MU-Location:object [,Position:length, CopyStatistics:boolean]) &rarr; object</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent">The method <em>create</em> creates an instance of the <em>MU</em> class designated by MU-path on a material flow object designated by the parameter <em>MU_location</em>. Note that you cannot create an <em>MU</em> on the individual stations of a <em>Sorter</em>. 
+         </p>
+         
+         <p class="para_topicComponent">The <em>method</em> applies to <em>MU</em> classes and to <em>MU</em> instances. In the latter case, <em>Plant Simulation</em> creates a copy of the <em>MU</em>, including all of its attributes. Note that no inheritance exists between the original <em>MU</em> and the copy. 
+         </p>
+         
+         <p class="para_topicComponent">An <em>MU</em> created on the point-oriented objects <em>Station</em> and <em>ParallelStation</em> may exit the object immediately, without having to be processed. An <em>MU</em> will be created on the first station available on the <em>PlaceBuffer</em>, provided you did not designate a specific station. 
+         </p>
+         
+         <p class="para_topicComponent">If you want to keep the part on the material flow object, you can achieve this with the method <a class="links" href="id50628.html">outIn</a>.
+         </p>
+         
+         <p class="para_topicComponent">On length-oriented objects, <em>Plant Simulation</em> creates <em>MUs</em> with their front as close to the exit of the object as possible. If the available length does not suffice to receive the <em>MU</em> in its entirety, <em>Plant Simulation</em> attempts to place the remainder of the length onto the preceding object. If this is unsuccessful, <em>create</em> fails. 
+         </p>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Parameters</b></p>
+         
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>MU-Location</em> of data type <em>object</em> designates the material flow object that can accommodate an MU-instance.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>Position</em> of data type <em>length</em> designates the position on a length-oriented object. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>CopyStatistics</em> of data type <em>boolean</em> sets if statistics of the part is to be copied (true) or not (false). If statistics is copied, the created MU has the same life time as the original object after being created. If statistics is not copied, a new MU will be created which starts its life time from this point in time on.
+               </p>
+               
+               <p class="para_item">If you do not specify the parameter, statistics is not copied (false).</p>
+               
+               <p class="para_item">Copying statistics is only possible, when the method <em>create</em> is called for an MU instance.
+               </p>
+               
+            </li>
+         </ul>
+         
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Any <a class="links" href="id16618.html">ConstructorCtrl</a> methods you enter will also be executed. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Return Value</b></p>
+         
+         <p class="para_topicComponent">The return value has the data type <em>object</em> and designates the <em>MU</em>, which was created.
+         </p>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">.part.create(ParallelStation)
+.part.create(Store[2,5])
+.part.create(Track,9.3)
+Station1.Cont.create(Station2, 0, true)  -- duplicates the MU that is located on Station1</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">-- A Method to be called periodically by a Generator will create MUs of type
+-- Part on the Station named Start. The variable named unsuccAttempts
+-- counts how often MUs could not be created.
+var item: object
+item := .MUs.Part.create(Start)
+if item = VOID then -- unsuccessful?
+   unsuccAttempts := unsuccAttempts + 1 
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         
+         <p class="para_topicComponent"><b class="uiTerm">Related Topics</b></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id93694.html">delete</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id89289.html">Duplicate</a></p>
+         
+         <p class="para_topicComponent"><a class="links" href="id50628.html">outIn</a></p>
+         
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id66973.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Methods for Creating and Locating Mobile Objects"></a><a class="link" href="id93694.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:delete"></a></span></div>
+   </body>
+</html>

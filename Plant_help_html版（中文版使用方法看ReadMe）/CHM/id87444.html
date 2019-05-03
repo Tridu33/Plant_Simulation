@@ -1,0 +1,143 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Label</title>
+      
+      <meta name="MS-HKWD" content="Label">
+      <meta name="MS-HKWD" content="Label,attribute general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Label</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id60939.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:CreateIn3D"></a><a class="link" href="id49655.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Name"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id16415.html">Attributes of All Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id62959.html">General Attributes of All Objects</a></span> &gt; <span class="simpleHTMLminitoc">Label</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4350"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.Label</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>Label</em> sets the label of the object designated by Path. You can type in letters, numbers, blanks, and special characters. 
+         </p>
+         <p class="para_topic">You can use the label to display objects with the same functionality with the same identifier in the <em>Frame</em>. The <a class="links" href="id68692.html">Name</a> of the object, on the other hand, has to be unique!
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/NameLabel.gif"></p>
+         <p class="para_topic"><em>Plant Simulation</em> shows the label when you select <b class="uiTerm">Options &gt; Show Object Labels</b> on the <b class="uiTerm">General</b> ribbon tab of the <em>Frame</em>. You can change the default setting under <b class="uiTerm">File</b>
+  &gt; <b class="uiTerm">Preferences</b> &gt; <b class="uiTerm">Modeling</b> &gt;
+   <b class="uiTerm">Show object labels</b>. 
+         </p>
+         <p class="para_topic">The program shows the label which you enter for the objects <em> Report</em>, <em> Dialog</em>, <em>AttributeExplorer</em>, and <em>Chart</em> in the title bar of their display windows. If you do not enter a label, the title bar shows the name of the object.
+         </p>
+         <p class="para_topic">The same applies to a <em>toolbar</em> you add to the <em>Toolbox</em>. Select <b class="uiTerm">New</b>
+  &gt;
+   <b class="uiTerm">Toolbar</b>, then select the <em>toolbar</em> in the structure, press <b class="uiTerm">F2</b> and enter a <b class="uiTerm">Label</b> into the dialog <b class="uiTerm">Rename</b>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>string</em>. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>string</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">print Station1.Label
+Station1.Label := &quot;Lathe left&quot;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id65625.html">Label</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id60939.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:CreateIn3D"></a><a class="link" href="id49655.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Name"></a></span></div>
+   </body>
+</html>

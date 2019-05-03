@@ -1,0 +1,51 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Dwell time</title>
+      
+      <meta name="MS-HKWD" content="Dwell time">
+      <meta name="MS-HKWD" content="Dwell time,Buffer">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Dwell time</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id25117.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Times"></a><a class="link" href="id31631.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Failures"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id47519.html">Buffer</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87501.html">Dialog Window of the Buffer</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id25117.html">Tab Times</a></span> &gt; <span class="simpleHTMLminitoc">Dwell time</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5347"></span><p class="para_topic"> For the <em>Buffer</em> you can only enter a constant <b class="uiTerm">dwell time</b>. For the <em>PlaceBuffer</em> you can only enter a constant <b class="uiTerm">processing time</b>. Statistics counts the <b class="uiTerm">dwell time</b> as waiting time and not as processing time. The <b class="uiTerm">dwell time</b> thus is not prolonged by <b class="uiTerm">failures</b> or <b class="uiTerm">pauses</b>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/bufferProcessingTime.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Each MU remains at least for the time in the <em>Buffer</em>, which you entered as the <b class="uiTerm">dwell time</b>. For the <b class="uiTerm">buffer type &gt; Stack</b> an MU can only exit the <em>Buffer</em>, when all parts which entered the <em>Buffer</em> after the current part, have already exited the <em>Buffer</em>, i.e., when the MU is located at the very top of the stack.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id96819.html">ProcTime</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id25117.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Times"></a><a class="link" href="id31631.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Tab Failures"></a></span></div>
+   </body>
+</html>

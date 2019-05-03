@@ -1,0 +1,81 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Working with Graphics</title>
+      
+      <meta name="MS-HKWD" content="Working with Graphics">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Working with Graphics</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id16129.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attach a 3D Shape to an Object"></a><a class="link" href="id80836.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create a New MU Class Representing the Airplane"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58193.html">Modeling in 3D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id83093.html">Working with Graphics</a></span> &gt; <span class="simpleHTMLminitoc">Working with Graphics</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1279"></span><p class="para_topic"><em>3D</em> visually represents 3D objects with one or more graphic groups and one optional state group.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Graphic groups</b>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ViewerObjectGraphicGroup.gif" border="0"> consist of one or more graphics and have a name that is unique for this object. This is similar to the 2D icons of the simulation objects. You can define a graphic group to either be external or internal. <b class="uiTerm">External</b><b class="uiTerm">graphic groups</b>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ViewerObjectGraphicGroup.gif" border="0"> represent the object towards the outside, while <b class="uiTerm">internal graphic groups</b>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ViewerObjectGraphicGroup1.gif" border="0"> used to decorate the inside of the object. A graphic group can be permanently shown or hidden to enable switching between alternative visual representations. Each simulation object or animatable object contains at least one external graphic group named <b class="uiTerm">default</b> and optionally any number of alternative or additional graphic groups, which you can show or hide independent of each other. In addition a A <em>Frame</em> initially contains one internal graphic group named <b class="uiTerm">Deco</b>. The permanent visibility of the graphic groups is an object property which can be inherited as well as the entire graphic structure. You can create, delete, or replace graphic groups on the <a class="links" href="id24835.html">Tab Graphics</a> in the dialog <b class="uiTerm">Edit 3D Properties</b> and in the dialog <a class="links" href="id17815.html">Show 3D Graphic Structure</a>.
+         </p>
+         <p class="para_topic">The state group is named <b class="uiTerm">States</b> and consists of a set of state graphics which correspond to the LEDs in <em>Plant Simulation</em>2D. You can create, replace, or delete the state group on the <a class="links" href="id24835.html">Tab Graphics</a> in the dialog <b class="uiTerm">Edit 3D Properties</b> by selecting the orientation of the states for the state group: <b class="uiTerm">Horizontal</b>, <b class="uiTerm">Vertical</b>, or <b class="uiTerm">None</b>. When you change this setting, <em>3D</em> always deletes all state graphics and creates new state graphics afterwards, which are arranged according to your selection.
+         </p>
+         <p class="para_topic">You can delete and edit each graphic of a graphic group, a state group, or a state graphic individually. To modify a graphic you can either change it with the mouse in a 3D window or you can specify the new <b class="uiTerm">position</b>, the <b class="uiTerm">rotation</b>, the <b class="uiTerm">scaling</b>, or the <b class="uiTerm">material</b> in the dialog <b class="uiTerm">Edit 3D Properties</b> of the selected graphic.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you change any graphic or the graphic structure of a class object, this also changes all inherited objects. When you change the graphics of a derived object, this only changes the object in which you make the changes because <em>3D</em> turns off graphic inheritance if it has not been turned off already. As deactivating graphic inheritance causes graphics to be duplicated, we strongly advise you to make changes in the class object as far as possible.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">In this sample model we demonstrate how to model a greatly simplified airplane and how to display the assembly process by successively showing selected graphic groups representing a finished component.</p>
+         <p class="para_topic">We will demonstrate how to:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id80836.html">Create a New MU Class Representing the Airplane</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id36082.html">Create the Graphics of the Components in 3D</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id78224.html">Show the Progress of the Airplane Assembly</a></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id70558.html">Import JT Graphics Representing an Object</a></p>
+         <p class="para_topic"><b class="uiTerm">Compare</b>
+            <a class="links" href="id39788.html">Illustrating State Graphics</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id41547.html">Modeling in 3D</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id16129.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Attach a 3D Shape to an Object"></a><a class="link" href="id80836.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Create a New MU Class Representing the Airplane"></a></span></div>
+   </body>
+</html>

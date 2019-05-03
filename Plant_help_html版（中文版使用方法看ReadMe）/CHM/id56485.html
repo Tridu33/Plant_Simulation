@@ -1,0 +1,124 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Import File</title>
+      
+      <meta name="MS-HKWD" content="Import File">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Import File</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id45928.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:List Ribbon Tab"></a><a class="link" href="id52232.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Export to File"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id36465.html">Window of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id45928.html">List Ribbon Tab</a></span> &gt; <span class="simpleHTMLminitoc">Import File</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9972"></span><p class="para_topic">The command <b class="uiTerm">Import File</b> imports a list, which you saved beforehand. It opens the dialog window <b class="uiTerm">Open</b>. Double-click the name of a list/table which you exported before with the commands <a class="links" href="id63919.html">Export Text File</a> or <a class="links" href="id34080.html">Export Object File</a> or click the name once and then click <b class="uiTerm">Open</b>. 
+         </p>
+         <p class="para_topic">You can open files of these types:</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/TableOpenFileFormats.gif"></p>
+         <p class="para_topic"><em>Plant Simulation</em> automatically recognizes the encoding of a text file when opening it.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Opening an <em>Plant Simulation</em>
+                  <b class="uiTerm">object file</b></p>
+               
+               <p class="para_item">An <em>Plant Simulation</em> object file contains the contents and the <em>Plant Simulation</em>-format of the list. This way you can exchange lists between different <em>Plant Simulation</em> simulation models. <em>Plant Simulation</em> opens it with all values and formats, which you saved with the extension .<em>obj</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Opening a <b class="uiTerm">text file</b></p>
+               
+               <p class="para_item">A text file only contains the contents of the list. You can also create a text file in a text editor or spreadsheet application and then open it as a *.txt file in an <em>Plant Simulation</em> list, compare <a class="links" href="id92445.html">Text File Format</a>. Click a file you saved with either the extension .<em>txt</em> or with no extension.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Opening an <b class="uiTerm">Excel workbook</b></p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body"><em>Plant Simulation</em> uses Excel as COM-server when reading and writing MS Excel-files. For this reason MS Excel has to be installed on your computer. To continue using the previous, no longer supported Excel interface, you can use the start option <code>-NativeExcel</code>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p class="para_item">When <em>Plant Simulation</em> reads an MS Excel table, it attempts to convert the values in the individual column to the data types of the columns in your <em>Plant Simulation</em> table. This only works, when you created the columns on the Excel worksheets so that they only contain a single data type, meaning that, when you, for example, assign the data type <b class="uiTerm">String</b> to a cell of a column, the entire column may only be of data type <b class="uiTerm">String</b>.
+               </p>
+               
+               <p class="para_item">Row 0 (zero) is the exception: When the table, which <em>Plant Simulation</em> reads, has a column index, it interprets row 0 as the column index and it will not be part of the data type designation of the columns. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Informationflow/tableFile_2.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id41034.html">readFile</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id16528.html">readXMLFile</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id13228.html">readExcelFile</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id74918.html">Entering Start Options</a>, <code>-NativeExcel</code></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id45928.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:List Ribbon Tab"></a><a class="link" href="id52232.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Export to File"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Modeling Workers and the Jobs They Do</title>
+      
+      <meta name="MS-HKWD" content="Modeling Workers and the Jobs They Do">
+      <meta name="MS-HKWD" content="Broker">
+      <meta name="MS-HKWD" content="Broker,example">
+      <meta name="MS-HKWD" content="Importer">
+      <meta name="MS-HKWD" content="Importer,example">
+      <meta name="MS-HKWD" content="Exporter">
+      <meta name="MS-HKWD" content="Exporter,example">
+      <meta name="MS-HKWD" content="Worker">
+      <meta name="MS-HKWD" content="Worker,example">
+      <meta name="MS-HKWD" content="FootPath">
+      <meta name="MS-HKWD" content="FootPath,example">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Modeling Workers and the Jobs They Do</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id46344.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Check the Power Consumption in the Chart"></a><a class="link" href="id93561.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Worker Who Works at a Machine"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18156.html">Modeling Workers and the Jobs They Do</a></span> &gt; <span class="simpleHTMLminitoc">Modeling Workers and the Jobs They Do</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_771"></span><span id="ndxgenid_PlantSimulationENU_772"></span><span id="ndxgenid_PlantSimulationENU_773"></span><span id="ndxgenid_PlantSimulationENU_774"></span><span id="ndxgenid_PlantSimulationENU_775"></span><span id="ndxgenid_PlantSimulationENU_776"></span><p class="para_topic">When you simulate your plant, you also have to model <em>Workers</em>, who work at the machines (<a class="links" href="id88367.html">Tab Importer</a>), or who repair the machines (<a class="links" href="id61082.html">Sub-tab Failure</a>). While the <a class="links" href="id67192.html">Worker</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/workerSm.gif" border="0"> works at the machine or while he repairs the machine, he stays on a <a class="links" href="id27173.html">Workplace</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/workplaceSm.gif" border="0"> at the associated machine. While the <em>Worker</em> is <a class="links" href="id84863.html">Waiting</a> for a job, he stays in the <a class="links" href="id13713.html">WorkerPool</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/workerPoolSm.gif" border="0">, which might be the lounge or the staff room of your plant. When the <em>Worker</em> has to perform one or several jobs at a machine, the foreman (<a class="links" href="id19366.html">Broker</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/brokerSm.gif" border="0">) tells him to do so. The <em>Worker</em> then walks on a <a class="links" href="id30049.html">FootPath</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/footpathSM.gif" border="0"> from the <em>WorkerPool</em> to the <em>Workplace</em> of the respective machine and does his job.
+         </p>
+         <p class="para_topic">You can also use the <a class="links" href="id19366.html">Broker</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/brokerSm.gif" border="0"> and the <a class="links" href="id93899.html">Exporter</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/exporterSm.gif" border="0"> to model <em>Workers</em> and the tools they need to do their jobs. As a rule, you will use the <em>Worker</em>, if the time it takes him to get to a machine is of importance to you. In addition, the <em>Worker</em> will be animated on the <em>FootPath </em> and the <em>Workplace</em> while he walks to the station and works there. You will use <em>Importer</em>, <em>Broker</em> and <em>Exporter</em> of producing a part requires shared resources and if the LEDs on these objects suffice for your animation needs.
+         </p>
+         <p class="para_topic">You can insert the required objects into your simulation model from the folder <b class="uiTerm">Resources</b> in the <em>Class Library</em> or from the toolbar <b class="uiTerm">Resources</b> in the <em>Toolbox</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workerResourcesTab.gif"></p>
+         <p class="para_topic">In our examples we show how to:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id93561.html">Model a Worker Who Works at a Machine</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id83796a.html">Model a Worker Who Repairs a Machine</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id28636.html">Define How Many Workers Are Created When the Model is Initialized</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id46415.html">Model a Worker Who Carries Parts Between Workplaces</a></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><a class="links" href="id86904.html">Model Workers with Importer, Broker and Exporter</a></p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/workerCompl.gif"></p>
+         <p class="para_topic">If your <em>Worker</em> does not walk, make sure that the importer on the tab <a class="links" href="id88367.html">Importer</a> of the station is activated, on whose <em>Workplace</em> the <em>Worker</em> is to work.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Also compare the videos Modeling with Workers and Worker Carrying Parts between Workplaces which you can open under the Window ribbon tab &gt; Start Page &gt; Getting Started &gt; Videos.</b></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id29319.html">Modeling in 2D</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id46344.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Check the Power Consumption in the Chart"></a><a class="link" href="id93561.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Worker Who Works at a Machine"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Determine Probability Distributions</title>
+      
+      <meta name="MS-HKWD" content="Determine Probability Distributions">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Determine Probability Distributions</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id11757.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:About Statistics Tools"></a><a class="link" href="Input_Data.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Input Data"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70398.html">Statistics Tools</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57319.html">Determine Probability Distributions</a></span> &gt; <span class="simpleHTMLminitoc">Determine Probability Distributions</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_18305"></span><p class="para_topic"> The object <em>DataFit</em> assists you in determining the parameters of certain specified distributions for observed data (samples) of a random variable, so that the distribution matches the properties of the sample as adequately as possible. After manually scaling and translating the sample data, the parameters of the known distributions are calculated using the maximum-likelihood method and the method of moments. A goodness-of-fit test decides for a given level of significance, whether the distribution under consideration fits the sample data in an adequate manner.
+         </p>
+         <p class="para_topic"> The goodness-of-fit test is performed with the <em> chi-square test</em> (<img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/chisquare.gif" border="0">-test), the <em>Kolmogorov-Smirnov test</em> (KS test) and the <em> Anderson-Darling test</em> (AD test). The test is only invoked if the sample data is appropriate for the considered test. The KS test and the AD tests, for example, are executed only if the sample size is less than 2000 and the sample belongs to a population of a continuous random variable.
+         </p>
+         <p class="para_topic"> Data fitting comprises the following steps:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> Loading or generating the sample data (table file <em>DataFit</em>.DataX).
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Filtering and sorting the data (table file <em>DataFit</em>.Sampledata).
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Choosing a hypothesis about the distribution of the sample.</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Choosing the level of significance, which is the probability for rejecting the hypothesis although it was true: Type I error).</p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> Running a goodness-of-fit test (result table file <em>DataFit</em> Ranking).
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> If you want to, you can compare the observed and the expected frequencies, based on the selected distribution, in a diagram.</p>
+         <p class="para_topic"> If no distribution fits the sample with the desired level of confidence, then you can model the sample with an empirical distribution. The corresponding frequency table will be determined by <em>DataFit</em>.
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id11757.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:About Statistics Tools"></a><a class="link" href="Input_Data.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Input Data"></a></span></div>
+   </body>
+</html>

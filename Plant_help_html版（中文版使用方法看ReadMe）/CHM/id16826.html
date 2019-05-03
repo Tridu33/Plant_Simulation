@@ -1,0 +1,60 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Reset Simulation</title>
+      
+      <meta name="MS-HKWD" content="Reset Simulation">
+      <meta name="MS-HKWD" content="Reset Simulation,EventController">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Reset Simulation</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id27850.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Controls"></a><a class="link" href="id33095.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Start/Stop Simulation"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48621.html">EventController</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id35468.html">Dialog Window of the EventController</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27850.html">Tab Controls</a></span> &gt; <span class="simpleHTMLminitoc">Reset Simulation</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5911"></span><p class="para_topic">To reset your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/evReset.gif" border="0">. <em>Plant Simulation</em> then calls all <em>Methods</em> named <a class="links" href="id14809.html">reset</a> in your simulation model.
+         </p>
+         <p class="para_topic">Once all <b class="uiTerm">Reset</b> methods have been executed, <em>Plant Simulation</em> deletes all unprocessed events, resets the simulation time to 0, resets the statistics, clears all failures of all objects in the simulation model, and sets all objects to the state <b class="uiTerm">planned</b>. If <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/evDeleteMUson.gif" border="0"> is active, <em>Plant Simulation</em> also deletes all MUs.
+         </p>
+         <p class="para_topic">Note that the <a class="links" href="id34346a.html">request control</a>, the <a class="links" href="id49298a.html">receive control</a>, and the <a class="links" href="id23383.html">release control</a> of the <em>Importer</em> are not called when you reset the simulation. 
+         </p>
+         <p class="para_topic">When you click <b class="uiTerm">Reset Simulation</b> while the simulation is running, <em>Plant Simulation</em> finishes processing the current event and then resets the model.
+         </p>
+         <p class="para_topic">Resetting the simulation model also deletes MUs on the <em>Clipboard</em>, as MUs on the <em>Clipboard</em> would lead to a different numbering of the MUs for a new simulation run.
+         </p>
+         <p class="para_topic"><em>Plant Simulation</em> deletes suspensions of <em>methods</em>, which are located in the same <em>Frame</em> as the <em>EventController</em> or in a <em>sub-Frame</em> of this <em>Frame</em>. It also deletes suspensions of <em>methods</em>, whose caller (the anonymous identifier <em>?</em>) is located in the same <em>Frame</em> as the <em>EventController</em> or in a <em>sub-Frame</em> of this <em>Frame</em>. 
+         </p>
+         <p class="para_topic">Note that the global method <a class="links" href="id49575.html">deleteSuspendedMethods</a> deletes all suspensions of all methods.
+         </p>
+         <p class="para_topic">Instead, you can also click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/evReset.gif" border="0"> on the <a class="links" href="id75300.html">Home Ribbon Tab</a>.
+         </p>
+         <p class="para_topic">Or you can right-click the <em> EventController</em> in the <em>Frame</em> and select <a class="links" href="id18427.html">Reset Simulation</a> on the context menu.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/ContEventContr.gif"></p>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id50225.html">reset</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id21592.html">Delete MUs on reset</a></p>
+         <p class="para_topic"><a class="links" href="id65659.html">InitStat</a></p>
+         <p class="para_topic"><a class="links" href="id17399.html">IsInitialized</a></p>
+         <p class="para_topic"><a class="links" href="id70684.html">Reset Simulation</a> button in the <em>EventDebugger</em></p>
+         <p class="para_topic"><a class="links" href="id92354.html">ResetCtrl</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id27850.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Controls"></a><a class="link" href="id33095.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Start/Stop Simulation"></a></span></div>
+   </body>
+</html>

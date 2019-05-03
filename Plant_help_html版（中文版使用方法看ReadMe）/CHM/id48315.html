@@ -1,0 +1,246 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Methods of the Importer</title>
+      
+      <meta name="MS-HKWD" content="Methods of the Importer">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">Methods of the Importer</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id17294.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setCurveSegments"></a><a class="link" href="id49305.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getAlternativeServices"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id48315.html">Methods of the Importer</a></span> &gt; <span class="simpleHTMLminitoc">Methods of the Importer</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4546"></span><p class="para_topic"> The <em>importer</em> provides these methods:
+         </p>
+         <p class="para_topic"><a class="links" href="id49305.html">getAlternativeServices</a>, <a class="links" href="id56606.html">getExporters</a>, <a class="links" href="id28442.html">getImportedServices</a>, <a class="links" href="id86088.html">getServices</a>, <a class="links" href="id25816.html">import</a>, <a class="links" href="id38673.html">importExporter</a>, <a class="links" href="id20824.html">releaseExporters</a>, <a class="links" href="id86703.html">setAlternativeServices</a>, <a class="links" href="id33204.html">setServices</a>, <a class="links" href="id25985.html">startProcessing</a>, <a class="links" href="id35576.html">stopProcessing</a>, and <a class="links" href="id18333.html">startSetup</a>. 
+         </p>
+         <p class="para_topic"> Only the <a class="links" href="id18003.html">Station</a>, the <a class="links" href="id29026.html">ParallelStation</a>, the <a class="links" href="id95185.html">AssemblyStation</a>,  the <a class="links" href="id85371.html">DismantleStation</a>, the <a class="links" href="id16225.html">Mixer</a>, the <a class="links" href="id77602.html">Portioner</a>, the <a class="links" href="id39276.html">DePortioner</a>, and the <a class="links" href="id47279.html">Tank</a> can import services, which you define on the <a class="links" href="id88367.html">Tab Importer</a>.
+         </p>
+         <p class="para_topic"> In general <b class="uiTerm">0</b> designates the <em>failure-importer</em> (<em>failImp</em>), <b class="uiTerm">1</b> the <em>set-up-importer</em> (<em>setupImp</em>), <b class="uiTerm">2</b> the <em>processing-importer</em> (<em>imp</em>), and <b class="uiTerm">3</b> the <em>transport-importer</em> (<em>transportImp</em>). 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><em>Plant Simulation</em> addresses <em>processing-importer</em> methods as sub-methods of <code>imp</code>.
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">ParallelStation.imp.releaseExporters</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em> Plant Simulation</em> addresses <em>setup-importer</em> methods as sub-methods of <code>setupImp</code>. The <em>setup-importer</em> shares all <em>attributes</em> and <em>methods</em> with the <em>processing-importer</em>. The only exception are the set-up services.
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">MyAssembly.setupImp.getServices</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>Plant Simulation</em> addresses <em>failure-importer</em> methods as sub-methods of <code>failImp</code>. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">MyStation.failImp.releaseExporters</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><em>Plant Simulation</em> addresses <em>transport-importer</em> methods as sub-methods of <code>transportImp</code>. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="100%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                              
+                              <tbody>
+                                 
+                                 <tr valign="top">
+                                    
+                                    <td colspan="1" rowspan="1" width="85">
+                                       
+                                       <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                       
+                                    </td>
+                                    
+                                    <td colspan="1" rowspan="1" width="500">
+                                       <pre class="indent">MyRemovalStation.transportImp.setServices(TransportServices)</pre>
+                                       </td>
+                                    
+                                 </tr>
+                                 
+                              </tbody>
+                              
+                           </table>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+               <p class="para_item"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id72473.html">Attributes of the Importer</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id17294.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setCurveSegments"></a><a class="link" href="id49305.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getAlternativeServices"></a></span></div>
+   </body>
+</html>

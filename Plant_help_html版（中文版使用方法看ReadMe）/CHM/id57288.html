@@ -1,0 +1,152 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>exitBlockList</title>
+      
+      <meta name="MS-HKWD" content="exitBlockList">
+      <meta name="MS-HKWD" content="exitBlockList,material flow object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">exitBlockList</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id61674.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:erasePauseEvents"></a><a class="link" href="id52595.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:exitFree"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id97171.html">Methods of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id10051.html">Methods for the State of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc">exitBlockList</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_4453"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.exitBlockList([ExitBlockingList:table]) -&gt; object[]</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>exitBlockList </em> returns the exit blocking list of the object designated by Path. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">If you specify the optional parameter of data type <em>table</em>, the <em>method</em> writes the objects contained in the <a class="links" href="id74394.html">Exit Blocking List</a> into this list.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">If you do not specify the optional parameter, the <em>method</em> returns an <em>array</em> containing the objects contained in the <a class="links" href="id74394.html">Exit Blocking List</a>. The <em>array</em> is one-dimensional and only contains the objects in the blocking list. If you need the start times of the blockages, which are contained in the blocking table, you can query them from the object with the attribute <a class="links" href="id97399.html">BlockingStarttime</a>.
+               </p>
+               
+               <p class="para_item">For objects that have more than one stations next to each other, such as the <em>ParallelStation</em> and the <em>Store</em>, the blocking table also contains the position of the station for which a part is entered into the table. If you need this information you still have to pass a table instead of using an <em>array</em>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm"> Parameter</b></p>
+         <p class="para_topic">The optional parameter <em>ExitBlockingList</em> of data type <em>table</em> designates the name of the table, which can be a <em>TableFile</em> or a local variable, into which the method writes the values.
+         </p>
+         <p class="para_topic"><em>Plant Simulation</em> automatically generates the format of this table with two columns. Column 1 has the data type <em>object</em> and contains the MUs that unsuccessfully tried to exit the object. Column 2 contains the simulation time at which the <em>MUs</em> attempted to enter the object.
+         </p>
+         <p class="para_topic">For the <em>ParallelStation</em>
+            <em>Plant Simulation</em> lists in the third and fourth column onto which processing station the part wanted to move. The number of Conveyors matches the number of <em>MUs</em> in the blocking list.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">If you do not specify the optional parameter, the <em>method</em> returns an <em>array</em> of data type <em>object</em> containing the objects contained in the <a class="links" href="id74394.html">Exit Blocking List</a>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">ParallelStation.exitBlockList(myExitBlockList)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id74394.html">Exit Blocking List</a></p>
+         <p class="para_topic"><a class="links" href="id11268.html">Check the Contents List of the Stations</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id61674.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:erasePauseEvents"></a><a class="link" href="id52595.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:exitFree"></a></span></div>
+   </body>
+</html>

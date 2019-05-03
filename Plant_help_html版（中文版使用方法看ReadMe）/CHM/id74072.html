@@ -1,0 +1,271 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>AngularConverter</title>
+      
+      <meta name="MS-HKWD" content="AngularConverter">
+      <meta name="MS-HKWD" content="AngularConverter,object">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">AngularConverter</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id61109.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Transparent"></a><a class="link" href="id38333.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the AngularConverter"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id74072.html">AngularConverter</a></span> &gt; <span class="simpleHTMLminitoc">AngularConverter</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5143"></span><p class="para_topic"> The <em>AngularConverter</em> changes the conveying direction of the mobile objects from lengthwise to crosswise conveyance or from crosswise to lengthwise conveyance. The <em>AngularConverter</em> can contain a single part at any one time.
+         </p>
+         <p class="para_topic"> The <em>AngularConverter</em> moves the part on to its successor within the flow of materials like this:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> The <em>part</em> moves onto the first leg of the <em>AngularConverter</em>. When the <a class="links" href="id83049.html">Booking point length</a> has reached the entrance of the <em>AngularConverter</em>, the <em>part</em> drives along the <a class="links" href="id37491.html">Entry length</a> with the <a class="links" href="id93715.html">Entry speed</a> until the <b class="uiTerm">booking point length</b> reaches the point at which the conveying direction changes. There the <em>part</em> triggers the <a class="links" href="id19569.html">Moving time</a> and changes the conveying direction. At this point in time the <em> part</em> has to be entirely located on the first leg of the <em>AngularConverter</em>. To enable the first leg to completely accommodate the entering <em>part</em>, the difference between the <a class="links" href="id82203.html">MU length</a> and the <b class="uiTerm">booking point length</b> may not be greater than the <b class="uiTerm">entry length</b>. 
+               </p>
+               
+               <p class="para_item"> The <a class="links" href="id48102.html">MU width</a> is then used for all calculations, such as the time until it can exit the object, from here to the exit point. 
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/angConvEntry1.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/conveyingDirectionGraphic.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> After the <em> part</em> has reached the point at which the conveying direction changes, it can continue on the <em>AngularConverter</em> like this:
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <col span="1" width="80%">
+            
+            <col span="1" width="20%">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> Conveying direction</p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"> looks like this</p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td"><b class="uiTerm">Forward</b>. The part moves with its front in the direction of motion of the material flow.
+                     </p>
+                     
+                     <p class="para_td_last">After changing the conveying direction, the MU retains this direction, meaning that its front does not point in the direction of the material flow.</p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/convDirForward.gif" border="0"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/convDirForward1.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Lateral right</b>. The part moves with its right hand side in the direction of motion. After changing the conveying direction, the MU retains this direction, meaning that its front does not point in the direction of the material flow.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/convDirLateralRight.gif" border="0"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/convDirLateralRight1.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Backward</b>. The part is turned 180&deg; and moves backwards against the direction of motion. After changing the conveying direction, the MU retains this direction, meaning that its front does not point in the direction of the material flow.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/convDirBackward.gif" border="0"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/convDirBackward1.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><b class="uiTerm">Lateral left</b>. The part moves with its left hand side in the direction of motion. After changing the conveying direction, the MU retains this direction, meaning that its front does not point in the direction of the material flow.
+                     </p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/convDirLateralLeft.gif" border="0"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/convDirLateralLeft1.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Container</em> and <em>Part</em> show the <a class="links" href="id85441.html">Conveying direction</a> in their dialog window: 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/conveyingdirectionssm.gif"></p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <ul>
+            <li>
+               
+               <p class="para_item"> After the moving time has been consumed and the <em>part</em> has changed its conveying direction, it continues on the second leg of the <em>AngularConverter</em>. The <em> part</em> drives along the <a class="links" href="id55824.html">Exit length</a> with the <a class="links" href="id83678.html">Exit speed</a> until the <a class="links" href="id51237.html">Booking point width</a> has reached the exit of the <em>AngularConverter</em>. When the <em> part</em> has completely exited the <em>AngularConverter</em>, the <a class="links" href="id19569.html">Moving time</a> is triggered anew to return the <em>AngularConverter</em> to its original position. After the <b class="uiTerm">moving time</b> has passed, the next <em> part</em> can enter.
+               </p>
+               
+               <p class="para_item"> To enable the second leg to completely accommodate the leaving <em> part</em>, the difference between the <a class="links" href="id48102.html">MU width</a> and the <b class="uiTerm">booking point width</b> may not exceed the <b class="uiTerm">exit length</b> when the <em> part</em> turns left. When the <em> part</em> turns right the value for the booking point width may not exceed the <b class="uiTerm">exit length</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/angConvExit.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To add the <em>AngularConverter</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; MaterialFlow &gt; AngularConverter</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id15177.html">Changing the Conveying Direction with the AngularConverter</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1377416.html">Read-Only-Attributes of the AngularConverter</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id38333.html">Dialog Window of the AngularConverter</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id32243.html">Attributes of the AngularConverter</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id81558.html">Methods of the AngularConverter</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43953.html">Shared Properties of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id61109.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Transparent"></a><a class="link" href="id38333.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the AngularConverter"></a></span></div>
+   </body>
+</html>

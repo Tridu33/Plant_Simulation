@@ -1,0 +1,74 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Processing Stations</title>
+      
+      <meta name="MS-HKWD" content="Configure the Processing Stations">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Configure the Processing Stations</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id32251.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Check the Fill Level of the Buffers in the Plant"></a><a class="link" href="id12132.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Buffers"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id94260.html">Buffering Parts within the Production Line</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id32251.html">Check the Fill Level of the Buffers in the Facility</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Processing Stations</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_639"></span><p class="para_topic">Insert and configure the processing stations, which process the parts for a certain time before passing them on to their successors in the succession of stations into the factory:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">We inserted five stations of type <a class="links" href="id29026.html">ParallelStation</a>
+                  <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/ParallelprocSm.gif" border="0"> in our sample model.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the capacity of the processing stations. We used the default setting, namely <code>2</code> is the <b class="uiTerm">x-dimension</b> and as the <b class="uiTerm">y-dimension</b> respectively. This results in 4 processing places on each station.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferParallelProcs.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter a processing time. We decided to use a <b class="uiTerm">normally distributed time</b> with the values shown below.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferParallelProcsTimes.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter settings for failures of the processing station. We decided to use an <b class="uiTerm">availability</b> of <code>92</code> percent.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferParallelProcsFailures.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">We used the same settings for the other processing stations as well.</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/bufferAllStations.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id12132.html">Configure the Buffers</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id83008.html">Configure the Chart for Showing the Full and Empty Portions</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id32251.html">Check the Fill Level of the Buffers in the Facility</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id32251.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Check the Fill Level of the Buffers in the Plant"></a><a class="link" href="id12132.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the Buffers"></a></span></div>
+   </body>
+</html>

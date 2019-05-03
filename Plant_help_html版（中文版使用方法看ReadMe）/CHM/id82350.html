@@ -1,0 +1,227 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>getLineStyle</title>
+      
+      <meta name="MS-HKWD" content="getLineStyle">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">getLineStyle</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id48439.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getHTMLCode"></a><a class="link" href="id35271.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getRValue"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59466.html">Display and User Interface Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84336.html">Chart</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88872.html">Methods of the Chart</a></span> &gt; <span class="simpleHTMLminitoc">getLineStyle</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_11931"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.getLineStyle(ColorNumber:integer, byRef Style:string, byRef Weight:string, byRef Marker:string)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>getLineStyle</em> returns the settings of the line for the designated color and writes them into the passed parameters.
+         </p>
+         <p class="para_topic"><b class="uiTerm"> Parameters</b></p>
+         <p class="para_topic">The parameter <em>ColorNumber</em> of data type <em>integer</em> designates the <a class="links" href="id39396.html">Color</a>.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Grid</b> (number <b class="uiTerm">-3</b> )
+               </p>
+               
+               <p class="para_item">Is the color the <em>Chart</em> uses for displaying the grid, i.e., the bounding rectangles, and the grid lines of the graph proper in the <em>Chart</em> window. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Background</b> (number <b class="uiTerm">-2</b> )
+               </p>
+               
+               <p class="para_item">Is the color the <em>Chart</em> uses for displaying the background of the graph proper in the <em>Chart</em> window. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Desk</b> (number <b class="uiTerm">-1</b> )
+               </p>
+               
+               <p class="para_item">Is the color the <em>Chart</em> uses for displaying the area located outside of the bounding rectangle of the graph&rsquo;s grid in the <em>Chart</em> window.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Text</b> (number<b class="uiTerm"> 0</b> )
+               </p>
+               
+               <p class="para_item">Is the color the <em>Chart</em> uses for displaying text.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Colors</b> ( numbers <b class="uiTerm">1</b> through <b class="uiTerm">14</b>)
+               </p>
+               
+               <p class="para_item"><b class="uiTerm">1</b> through <b class="uiTerm">14</b> are the predefined colors of the input channels of the displayed data.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="50%">
+               
+               <col span="1" width="50%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/chartColor75M.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Display_and_User_Interface/ChartColorNumbers.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">You can also <b class="uiTerm">add</b>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/addButton.gif" border="0"> additional colors and define their properties to meet your modeling needs.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Style</em> of data type <em>string</em> designates the <a class="links" href="id18776.html">Line style</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Weight</em> of data type <em>string</em> designates the <a class="links" href="id60968.html">Line weight</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The optional parameter <em>Marker</em> of data type <em>string</em> designates the <a class="links" href="id44782.html">Marker type</a>.
+               </p>
+               
+            </li>
+         </ul>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyChart.getLineStyle(1,s,w,m)
+print s,&quot; &quot;,w,&quot; &quot;,m</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id97655.html">setLineStyle</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id48439.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getHTMLCode"></a><a class="link" href="id35271.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getRValue"></a></span></div>
+   </body>
+</html>

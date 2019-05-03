@@ -1,0 +1,146 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>getColumnNo</title>
+      
+      <meta name="MS-HKWD" content="getColumnNo">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">getColumnNo</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id64955.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getBackgroundColorColumn"></a><a class="link" href="id76111.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getColumnWidth"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id21891.html">TableFile</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79670.html">Methods of the TableFile</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id39467.html">Methods for Columns of the TableFile</a></span> &gt; <span class="simpleHTMLminitoc">getColumnNo</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10483"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.getColumnNo(ColumnIndex:any) &rarr; integer</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>getColumnNo</em> searches for the column which contains a user-defined column index of the <em>TableFile</em> designated by Path. It returns the column number. If the column index does not exist, <em>Plant Simulation</em> returns -1.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If the table contains a large number of entries, you might want to activate <b class="uiTerm">Fast index access</b>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The method only works for simple data types, such as <em>string</em>, <em>integer</em>, etc.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameter</b></p>
+         <p class="para_topic">The parameter <em>ColumnIndex</em> of data type <em>any</em> designates the column index which <em>Plant Simulation</em> searches.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>integer</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var column : integer
+column := MyTableFile.getColumnNo(&quot;Urgent&quot;)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id82911a.html">getRowNo</a></p>
+         <p class="para_topic"><a class="links" href="id35783.html">FastAccessColumnIndex</a></p>
+         <p class="para_topic"><a class="links" href="id79496.html">FastAccessRowIndex</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id64955.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:getBackgroundColorColumn"></a><a class="link" href="id76111.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:getColumnWidth"></a></span></div>
+   </body>
+</html>

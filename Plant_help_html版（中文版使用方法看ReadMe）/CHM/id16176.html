@@ -1,0 +1,44 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Random Numbers and Their Statistical Distribution</title>
+      
+      <meta name="MS-HKWD" content="Random Numbers and Their Statistical Distribution">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Random Numbers and Their Statistical Distribution</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id99447.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling Random Processes"></a><a class="link" href="id25011.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Using Pseudo Random Numbers"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id99447.html">Modeling Random Processes</a></span> &gt; <span class="simpleHTMLminitoc">Random Numbers and Their Statistical Distribution</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_666"></span><p class="para_topic">We know that there are deterministic processes and random processes. For a deterministic process, we can predict the result of the process, for example by knowing a law of nature. If we do not know all factors that characterize a process, its result is random. When we simulate a production processes, the occurrence of pauses is a deterministic process. Failures of machines or the rejects that are produces, on the other hand, are random processes. A random process results in a random number. The replication of the process results in the realization of the random number. Throwing the dice is a random process, the resulting number of points is the associated random number. </p>
+         <p class="para_topic">There are random numbers that can have individual, disjoined values. These may be a limited or an unlimited number of different values, such as the number of rejects over a long period of time or the number of orders on a day. A limited number may result from throwing the dice, an unlimited number can be a countable numbered amount. These types of random numbers are called <b class="uiTerm">discrete</b>. To simplify matters, we suppose that these values can be 0, 1, 2, etc. For describing the random number we specify the probability for the individual numbers to be the result of throwing the dice. Adding up all probabilities has to result in 1, as one of the numbers will always be thrown.
+         </p>
+         <p class="para_topic">A random number that can take all values within a limited or an unlimited interval of numbers is <b class="uiTerm">continuous</b>. Examples of continuous random numbers are the mean time between failures (MTBF) and the mean time to repair (MTTR) of a machine. For describing a continuous random number, we cannot specify the probability for an individual number to occur. We rather have to specify the probability with which this random number is located between two given values, i.e., we specify an interval. 
+         </p>
+         <p class="para_topic">The <b class="uiTerm">probability density function</b> test describes the distribution of a random number. The density function of a continuous random number only has values greater than 0 or equal to 0. It can be continuously drawn without interruption. The area underneath the function between two values a and b is the probability that the random number is located between these values a and b. Simply put the value of the density function at the location x describes how often a value will occur that approximates x. The entire area below the curve of the density function has the value 1, as with each realization of the random number a certain value occurs. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/DensityGamma.gif"></p>
+         <p class="para_topic">The screenshot above shows the density function of the gamma distribution with the parameters Alpha = 3 and Beta = 5,5. The most random numbers occur in the vicinity of the apex of the density function (random number x = 11). This value is called the <b class="uiTerm">modal value</b>. When you build the mean of many realizations of this distribution, you will notice that the mean value is substantially greater than the mode/modal value. The mean value will be around 16.5. This gamma distribution will create random numbers between 24 and 26 with a probability of 0.04. This probability equals the gray area below the curve in the screenshot above. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id99447.html">Modeling Random Processes</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id99447.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Modeling Random Processes"></a><a class="link" href="id25011.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Using Pseudo Random Numbers"></a></span></div>
+   </body>
+</html>

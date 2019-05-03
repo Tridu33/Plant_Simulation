@@ -1,0 +1,151 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Assembly table</title>
+      
+      <meta name="MS-HKWD" content="Assembly table">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Assembly table</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id77954.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Attributes"></a><a class="link" href="id48105.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Open"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id95185.html">AssemblyStation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id13418.html">Dialog Window of the AssemblyStation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id77954.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id32422.html">Assembly table</a></span> &gt; <span class="simpleHTMLminitoc">Assembly table</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_5225"></span><p class="para_topic"> Select if the <em>AssemblyStation</em> uses an <b class="uiTerm">assembly table</b> and if so which kind:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/assemblyTablewith.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">None</b>: The <em>AssemblyStation</em> does not use an <b class="uiTerm">Assembly Table</b>. Instead, it expects a part from each predecessor. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Predecessors</b>: Enter the number of the predecessor, which moves the part, into column 1 of the table and the amount into column 2 of the <b class="uiTerm">Assembly Table</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">MU Types</b>: Enter the <b class="uiTerm">name</b> of the <em>part</em>, such as <code>Part</code>, <code>Container</code>, <code>Transporter</code>, <code>Shaft</code>, etc., into column 1 and the amount into column 2 of the <b class="uiTerm">Assembly Table</b>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Depends on Main MU</b>: Enter the <b class="uiTerm">name</b> of the main MU, the name of the MU, such as <code>Part</code>, <code>Container</code>
+                  <code>Transporter</code>, <code>Shaft</code>, etc. and the <b class="uiTerm">amount</b> of the parts. You can also enter an asterisk *, which handles all main parts which you did not explicitly enter with names of their own into the <b class="uiTerm">assembly table</b>.
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">For the settings <b class="uiTerm">MU Types</b> and <b class="uiTerm">Depends on Main MU</b> this applies: When the <em>AssemblyStation</em> has objects of type <em>Store</em> as predecessors, it requests the required mounting parts from the <em>Store</em>. If the required parts are not available in the <em>Store</em> at the moment, the <em>Store</em> records the request and delivers the parts to the <em>AssemblyStation</em> when they are available again. 
+                           </p>
+                           
+                           <p class="para_note_body">The parts can also be carried from the <em>Store</em> to the <em>AssemblyStation</em> by a <em>Worker</em>. The <em>Store</em> can only provide mounting parts, but no main parts and has to be connected with a <em>Connector</em>, even when the <em>Worker</em> carries the part away. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To open the <b class="uiTerm">Assembly Table</b>, click <a class="links" href="id48105.html">Open</a>, and enter the respective values into the columns. 
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/assPred.gif" border="0"></p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/assMUtype1.gif" border="0"></p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/assemblyTable.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/assMUtype.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">Enter the number of the predecessor or the type of <em>MU</em> of the mounting parts, not the number of the main <em>MU</em>!
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The columns <b class="uiTerm">Predecessor</b> and <b class="uiTerm">MU Name</b> may not contain duplicate entries.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id97057.html">AssemblyList</a></p>
+         <p class="para_topic"><a class="links" href="id11240.html">PartListMode</a></p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id76040.html">Change the Assembly List in the Entrance Control</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id77954.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tab Attributes"></a><a class="link" href="id48105.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Open"></a></span></div>
+   </body>
+</html>

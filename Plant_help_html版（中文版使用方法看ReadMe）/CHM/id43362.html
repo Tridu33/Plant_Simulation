@@ -1,0 +1,172 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Connect control</title>
+      
+      <meta name="MS-HKWD" content="Connect control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Connect control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id28583.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Close control"></a><a class="link" href="id97160.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Constructor control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id55025.html">Tools Menu</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id31871.html">Edit Controls</a></span> &gt; <span class="simpleHTMLminitoc">Connect control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3829"></span><p class="para_topic"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/connectCtrl.gif" border="0"></p>
+         <p class="para_topic">Click this <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select a <em>Method</em> object. Enter the source code of the connect control. The program calls it, when you connect two objects with a <a class="links" href="id29001.html">Connector</a> and when you delete the connection between two objects. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">To open the dialog of the object, whose name you entered into the text box, click in the text box, and press the <b class="uiTerm">F2</b> key.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you insert a <em>Connector</em>, <em>Plant Simulation</em> first calls the <em>Connect control</em> for the <em>Connector</em> before calling the <em>Connect</em> controls for the objects you are connecting. 
+                     </p>
+                     
+                     <p class="para_note_body">When you delete a <em>Connector</em>, <em>Plant Simulation</em> first calls the <em>Connect</em> control for the connected objects before calling <a class="links" href="id42229.html">Destructor control</a>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">Instead, you can also right-click in the text box. Then, select <a class="links" href="id93222.html">Create Control</a> on the context menu to create a <em>control method</em> , which is a user-defined attribute of data type <em>method</em> of this object: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter a meaningful name into the text box and select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.Name_you_entered_for_the_control</code>. Or
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Create Control</b>. <em>Plant Simulation</em> then inserts <code>self.OnConnect</code>. 
+               </p>
+               
+               <p class="para_item">Enter the source code of this control into the <em>Method</em> that opens. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To delete this control, delete the user-defined attribute; deleting the name from the text box just deletes the name, but keeps the user-defined attribute.</p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm">Parameters</b>
+            
+         </p>
+         <p class="para_topic">The program passes three parameters to the <em>Method</em> that is called:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>ConnectionStart</em> of data type <em>object</em> designates the source object at which the connection starts.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>ConnectionEnd</em> of data type <em>object</em> designates the target object where the connection ends.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>ConnectionEstablishedDeleted</em> of data type <em>boolean</em> indicates if the connection is to be established (<code>true</code>) or to be deleted (<code>false</code>).
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">The <b class="uiTerm">standard connect control</b> looks like this:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/connectControl.gif"></p>
+         <p class="para_topic">A connect control might look like this:</p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">param ConnectionStart, ConnectionEnd: object, ConnectionEstablishedDeleted: boolean
+if ConnectionEstablishedDeleted
+   print &quot;New&quot;
+else
+   print &quot;Deleted&quot;
+end
+   print &quot;from:&quot;,ConnectionStart,&quot; to:&quot;,ConnectionEnd
+end</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">SimTalk:</b></p>
+         <p class="para_topic"><a class="links" href="id51827.html">ConnectCtrl</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id28583.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Close control"></a><a class="link" href="id97160.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Constructor control"></a></span></div>
+   </body>
+</html>

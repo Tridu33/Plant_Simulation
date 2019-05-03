@@ -1,0 +1,107 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Failed</title>
+      
+      <meta name="MS-HKWD" content="Failed">
+      <meta name="MS-HKWD" content="Failed,general description">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Failed</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id65625.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Label"></a><a class="link" href="id79284.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Paused/ Planned/ Unplanned"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id43953.html">Shared Properties of the Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id12533.html">Dialog Items of the Objects</a></span> &gt; <span class="simpleHTMLminitoc">Failed</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_3370"></span><p class="para_topic">To fail the object, select this. From then on, the object will not receive any parts. Parts can exit the object though, when you program this in a <em>Method</em>. 
+         </p>
+         <p class="para_topic">The program stops processing and set-up processes until the end of the failure, i.e., it adds the duration of the failure to these times.</p>
+         <p class="para_topic">When you manually fail a station, it remains <a class="links" href="id76137.html">Failed</a> while any of the <em>failure profiles</em> you defined is <a class="links" href="id58458.html">Active</a>. It will change to not failed once the last failure (<a class="links" href="id60343.html#id65221">DisruptionEnd</a>) of the last <em>failure profile</em> ends or when you clear the checkbox <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/failedCleared.gif" border="0">. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When a station fails, and a pause takes place during the failure, the failure time of the station will still be consumed, although the station is paused.</p>
+                     
+                     <p class="para_note_body">Statistics counts the times during which these two states overlap as <b class="uiTerm">pause</b> time. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The object is <b class="uiTerm">failed</b> when you activate this check box or when you activate one of its <em>failure profiles</em> on the <a class="links" href="id14973.html">Tab Failures</a>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/failuresActiveActive.gif"></p>
+         <p class="para_topic">Click <b class="uiTerm">OK</b> or <b class="uiTerm">Apply</b> to accept your changes.
+         </p>
+         <p class="para_topic">The LED of a failed station is red <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/LEDFailedSp.gif" border="0">.
+         </p>
+         <p class="para_topic">The length-oriented objects do not display LEDs. <em>Plant Simulation</em> shows the border of a failed length-oriented object red <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/lineFailed.gif" border="0">.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><em>Plant Simulation</em> resets failures when you click <a class="links" href="id16826.html">Reset Simulation</a> the simulation model.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">SimTalk</b>:
+         </p>
+         <p class="para_topic"><a class="links" href="id25802.html">Failed</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id65918.html">Modeling Failures</a>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id29588.html">Failed</a>state
+         </p>
+         <p class="para_topic"><a class="links" href="id49265.html">Fail control</a> of the material flow objects
+         </p>
+         <p class="para_topic"><a class="links" href="id52354.html">Fail control</a> of the <em>Transporter</em>
+            
+         </p>
+         <p class="para_topic"><a class="links" href="id46055.html">States and Icons of the Material Flow Objects</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id65625.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Label"></a><a class="link" href="id79284.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Paused/ Planned/ Unplanned"></a></span></div>
+   </body>
+</html>

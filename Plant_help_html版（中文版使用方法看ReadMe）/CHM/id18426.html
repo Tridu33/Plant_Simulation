@@ -1,0 +1,69 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Real</title>
+      
+      <meta name="MS-HKWD" content="Real">
+      <meta name="MS-HKWD" content="Real,data type">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">Real</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id80650.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Queue"></a><a class="link" href="id86340.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Speed"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58240.html">Data Types</a></span> &gt; <span class="simpleHTMLminitoc">Real</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13738"></span><p class="para_topic">A variable of data type <em>real</em> processes floating point numbers. The value range is between −1.7976931348623158e+308 and 1.7976931348623158e+308.
+         </p>
+         <p class="para_topic">Real numbers have a precision of 16 places (meaning digits, i.e., digits before and after the decimal point). When displaying the numbers, the computer rounds to 15 places.</p>
+         <p class="para_topic">As floating point numbers can only save a fixed number of places, rounding errors can, in principle, always occur when computing with floating point numbers. For this reason you should, as a rule, not use the equal operator <code>=</code> when comparing floating point numbers as it check for exact equivalence. Use the about-equal-operator <code>~=</code> instead.
+         </p>
+         <p class="para_topic">You can also type in floating point numbers with mantissa and exponent in this notation: <code>1.0e-3</code> This corresponds to 0.001.
+         </p>
+         <p class="para_topic">Internally <em>Plant Simulation</em> always saves the numbers with mantissa and exponent. The accuracy of the mantissa is limited to 16 decimal digits. This is determined by the representation of floating point numbers in the CPU, which is defined by the IEEE Standard for Floating-Point Arithmetic (IEEE 754).
+         </p>
+         <p class="para_topic">The CPU can only process binary data, i.e., zeros and ones. For this reason floating point number are represented according to the IEEE-754 standard in the binary numeral system. So the mantissa actually does not contain 16 decimal digits but 53 binary numbers. Note that many numbers, which can be represented within the decimal system with a finite number of digits, cannot be represented with a finite number of digits in the binary numeral system. </p>
+         <p class="para_topic"><b class="uiTerm">Examples</b>:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The decimal number 1.125 can be represented precise as 1 <em>+ 0/2 + 0/4</em> + 1/8. This corresponds to the binary number 1.001.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The decimal number 1.1 cannot be represented precise with a finite number of places. Within the binary numeral system this would be 1 <em>+ 0/2 + 0/4 + 0/8</em> + 1/16 + 1/32 <em>+ 0/64 + 0/128</em> + 1/256 + 1/512 <em>+ 0/1024 + 0/2048</em> + 1/4096 + 1/8192 + &hellip;
+               </p>
+               
+               <p class="para_item">This corresponds to the binary number 1.<em>000</em>11<em>00</em>11<em>00</em>11&hellip;
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When you type in a number with decimal point and digits after the decimal point into the Method editor, the computer converts this number to a floating point number according to the IEEE-754 standard when interpreting the source code so that the CPU can process it. The number is thus converted into a binary number with a fixed number of places. When binary places are cut off during this process, this number minimally differs from the decimal number that you entered.</p>
+         <p class="para_topic">You can witness this effect when you run the following <em>SimTalk</em> instruction:
+         </p>
+         <p class="para_topic"><code>var x: real := 1.1 - 1</code></p>
+         <p class="para_topic">You can then see in the <em>Method-Debugger</em> that x has the value 0.1000000000000001.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/realVariable.gif"></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id80650.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Queue"></a><a class="link" href="id86340.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Speed"></a></span></div>
+   </body>
+</html>

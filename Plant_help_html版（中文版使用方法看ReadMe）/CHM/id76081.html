@@ -1,0 +1,178 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>setPartStation</title>
+      
+      <meta name="MS-HKWD" content="setPartStation">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">setPartStation</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id10041.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setBlocksize"></a><a class="link" href="id41161.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setStationtype"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id54344.html">Tools</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id86723.html">TransferStation</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id81783.html">Methods of the TransferStation</a></span> &gt; <span class="simpleHTMLminitoc">setPartStation</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13100"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.setPartStation(PartsStation:&lt;object&gt;,SensorPosition:&lt;length,ActivateSensor:string,Lane:string,UserControl:string)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"> The method <em> setPartStation</em> sets the parts station of the <em> TransferStation</em>. 
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm"> Parameters</b>
+            
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"> The parameter <em> PartsStation</em> of data type <em> object</em> designates the parts station as such. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The parameter <em> SensorPosition</em> of data type <em> length</em> designates the position of the sensor, when the parts station is a <em> Conveyor</em> , a <em> Track</em> or a <em> TwoLaneTrack</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The parameter <em> ActivateSensor</em> of data type <em> string</em> designates when the <em> TransferStation</em> activates the sensor, when the parts station is a <em> Track</em> or a <em> TwoLaneTrack</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The parameter <em> Lane</em> of data type <em> string</em> designates the <a class="links" href="id10966.html"> Lane</a> on which the sensor will be inserted, when the target station is a <em> TwoLaneTrack</em>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"> The parameter <em> UserControl</em> of data type <em> string</em> designates the name of the user-defined control, which you can enter for all objects serving as parts station.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">
+            <b class="uiTerm"> Return Value</b>
+            
+         </p>
+         <p class="para_topic"> The return value has the data type <em> boolean</em>.
+         </p>
+         <p class="para_topic"> If the parts station does not exist at all or if you entered an object, which is not accepted, the <em> method</em> returns false.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var obj : object
+obj := .ApplicationObjects.TransferStation.derive(.Models.MyFrame)
+obj.setStationtype(&quot;Load&quot;)
+obj.setPartStation(MyTwolaneTrack,4,&quot;&quot;,&quot;&quot;,&quot;B+A&quot;)
+obj.setTargetStation(MyStation,0,&quot;&quot;,&quot;&quot;,&quot;&quot;)
+obj.setBlocksize(1)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic">
+            <a class="links" href="id28850.html"> Parts from</a>
+            
+         </p>
+         <p class="para_topic">
+            <a class="links" href="id15808.html"> getPartStation</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id10041.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:setBlocksize"></a><a class="link" href="id41161.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:setStationtype"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>findFloor</title>
+      
+      <meta name="MS-HKWD" content="findFloor">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic6" id="xps10_pagetitle">findFloor</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id39972.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:findCeil"></a><a class="link" href="id56540.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:inOrder"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84553.html">Information Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14928.html">Shared Properties of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42077.html">Methods of Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id40007.html">Methods for the Order of Cells within Lists and Tables</a></span> &gt; <span class="simpleHTMLminitoc">findFloor</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_10216"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.findFloor([Range:listrange, ...,] Value:any) &rarr; boolean</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The method <em>findFloor</em> searches in the list for the value less than or equal to the value you specify. 
+         </p>
+         <p class="para_topic">When <em>Plant Simulation</em> finds a value, the <em>method</em> returns true and sets the cursor onto that entry. It returns false when it did not find the value. When several values exist, <em>Plant Simulation</em> sets the cursor to the cell that is closest to the value of data type <em>any</em>.
+         </p>
+         <p class="para_topic">The search starts at the current cursor position. This holds only true when the cursor is located within one of the ranges specified. When that is not the case, the search begins in the first range specified and, if finished without success, is continued in the next range, etc. </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When the cursor is located in one of the ranges specified, <em>Plant Simulation</em> does not search the preceding ranges, not even after the search was negative for the other ranges. When the cursor is located in the middle of the range, <em>Plant Simulation</em> only searches the region after the cursor, but not the region before. When you do not enter a range, <em>Plant Simulation</em> searches the list starting at the position of the cursor to the end of the list. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The <em>method</em> only applies to lists and tables of data types <em>integer</em>, <em>real</em>and <em>string</em>, and to data types, which can be converted into the data type <em>real</em>, such as <em>dateTime</em>, <em>weight</em>, etc.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Value</em> of data type <em>any</em> designates the value you want to find.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>Range</em> of data type <em>listrange</em> designates the range between which <em>Plant Simulation</em> searches to the position of the cursor, for tables the position of both cursors. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Return Value</b></p>
+         <p class="para_topic">The return value has the data type <em>boolean</em>.
+         </p>
+         <p class="para_topic">When <em>Plant Simulation</em> finds a value, the <em>method</em> returns true and sets the cursor onto that entry. It returns false when it did not find the value. When several values exist, <em>Plant Simulation</em> sets the cursor to the cell that is closest to the value of data type <em>any</em>.
+         </p>
+         <p class="para_topic">Suppose that a <em>CardFile</em> C contains the entries 20, 40, 0, 30, 10, 50. We then apply the method <em>findFloor</em> to it:
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">c.Cursor := 1 -- prepares the search
+c.findFloor({2}..{5},25)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">As the result, <em>Plant Simulation</em> will set the cursor to the entry 10. Note that the <a class="links" href="id48503.html">Cursor</a><em></em> is located in cell 5. The entry 10 is the value smaller or equal to the search value 25, being closest to 25 <b class="uiTerm">and</b> that is located in the given range. 
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id10253.html">Find</a> on the Edit menu
+         </p>
+         <p class="para_topic"><a class="links" href="id39972.html">findCeil</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id39972.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:findCeil"></a><a class="link" href="id56540.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:inOrder"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Percentage</title>
+      
+      <meta name="MS-HKWD" content="Percentage">
+      <meta name="MS-HKWD" content="Percentage,Source">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Percentage</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id81597.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Random"></a><a class="link" href="id98417.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Generate as batch"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id65865.html">Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id88314.html">Dialog Window of the Source</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57223.html">Tab Attributes</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id70029.html">MU selection</a></span> &gt; <span class="simpleHTMLminitoc">Percentage</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_7047"></span><p class="para_topic">The <em>Source</em> produces <em>MUs</em> according to the values which you entered into the percentage table. Enter the path to this table into the text box next to <b class="uiTerm">Table</b>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourceMUSelPercentage.gif"></p>
+         <p class="para_topic">Or you can click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses.gif" border="0"> and select the name of the table in the dialog <a class="links" href="id17045.html">Select Object</a>. <em>Plant Simulation</em> automatically formats the table.
+         </p>
+         <p class="para_topic">Define the percentage for each type of <em>MU</em> in the percentage table. It has five columns with the data types <em>object, real, integer, string</em>, and <em>table</em>. Each row in the percentage table refers to a production order. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the name of and the path to the <em>MU</em> class into the column <b class="uiTerm">MU</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the percentage of the respective part types to be produced into the column <b class="uiTerm">Portion</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the amount of the respective part types to be produced into the column <b class="uiTerm">Number</b>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can, but you do not have to enter a <b class="uiTerm">Name</b> and <b class="uiTerm">Attributes</b> into the table. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Enter the name of the respective part types to be produced into the column <b class="uiTerm">Name</b>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Enter the name of the attribute sub-table of the respective part types to be produced into the column <b class="uiTerm">Attributes</b>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/sourcePercentageTable.gif"></p>
+         <p class="para_topic">To make the <em>Source</em> produce the number of <em>MUs</em>, which you entered into the cell <b class="uiTerm">Number</b> of the <b class="uiTerm">Table</b> in a single lot, select <a class="links" href="id98417.html">Generate as batch</a>
+            <img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/generateAsBatch.gif" border="0">. When you select <a class="links" href="id87183.html">Number adjustable</a> as the <b class="uiTerm">time of creation</b>, the amount does not designate the number of <em> parts</em>, but the number of <em> batches</em> that the <em>Source</em> produces. Then the <em>Source</em> produces the entire set of parts at the point in time you entered as <b class="uiTerm">Start time</b>. 
+         </p>
+         <p class="para_topic">To make the <em>Source</em> produce the <em>MUs</em> as a sequence of individual <em>MUs</em>, clear the check box. 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body"><b class="uiTerm">MU selection</b> &gt;
+    <b class="uiTerm">Percentage</b> is a deterministic process for realizing the frequencies of the part types which you entered into the column <b class="uiTerm">Portion</b> for the part types. When selecting the next part, the <em>Source</em> goes to the row on the table which has the greatest need in the column <b class="uiTerm">Portion</b> at this point in time. This creates periodically repeating patterns in the sequence of the part types to be produced.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id53588.html">MuSelection</a></p>
+         <p class="para_topic"><a class="links" href="id50961.html">CreationTableActive</a></p>
+         <p class="para_topic"><a class="links" href="xid1192648.html">GenerateAsBatch</a></p>
+         <p class="para_topic"><a class="links" href="id36890.html">Produce Parts According to a Percentage Entered into a Table</a></p>
+         <p class="para_topic">Exit strategy &gt; <a class="links" href="id16474.html">Percentage</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id81597.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Random"></a><a class="link" href="id98417.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Generate as batch"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Model an Accumulating/a Non-Accumulating Conveyor Between Stations</title>
+      
+      <meta name="MS-HKWD" content="Model an Accumulating/a Non-Accumulating Conveyor Between Stations">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Model an Accumulating/a Non-Accumulating Conveyor Between Stations</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id69880.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model a Simple Conveyor Between Two Stations"></a><a class="link" href="id70543.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Fixed Gap or a No Gap Conveyor"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57105.html">Modeling a Transport System with Active Objects of Type Conveyor</a></span> &gt; <span class="simpleHTMLminitoc">Model an Accumulating/a Non-Accumulating Conveyor Between Stations</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1012"></span><p class="para_topic">You can also use the <a class="links" href="id60466.html">Conveyor</a>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/duplicates3/lineSm_dup1.gif" border="0"> to model an accumulating or a non-accumulating transport system between stations. 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To make the <em>MUs</em> accumulate on the <em>Conveyor</em>, select the check box <b class="uiTerm">Accumulating</b>. This allows the <em>MUs</em> to move front to end to each other, when the exit of the <em>conveyor</em> is blocked. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To make the <em>MUs</em> retain their distance to each other, i.e., make all succeeding <em>MUs</em> stop moving when the preceding <em>MU</em> cannot exit, clear the check box to deactivate <b class="uiTerm">Accumulating</b>.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">As we want to apply the default behavior of the <em>Conveyor</em>, we do not change its <b class="uiTerm">Capacity</b> of -1, which stands for an infinite number of <em>MUs</em>. This way its capacity is defined by its own length and by the length of the parts (<em>MU</em>), which it transports. 
+         </p>
+         <p class="para_topic">In our sample we entered an <b class="uiTerm">Availability</b> of <code>85</code> percent and an <b class="uiTerm">MTTR</b> of <code>360</code> seconds for the two <em>Stations</em>, <em>SP1</em> and <em>SP2</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ts2SP.gif"></p>
+         <p class="para_topic">Note that <em>Plant Simulation</em> marks a failed <em>failure profile</em> red.
+         </p>
+         <p class="para_topic">You can use an accumulating <em>Conveyor</em> to decouple stations. Then, the <em>Conveyor</em> behaves like a roller conveyor that allows the <em>MUs</em> to move up to those in front of them, when the exit of the conveyor is blocked. 
+         </p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Conveyor accumulating <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/accumulating.gif" border="0"></p>
+                     
+                  </th>
+                  
+                  <th colspan="1" rowspan="1">
+                     
+                     <p class="para_th_last">Conveyor non-accumulating <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/nonaccumul.gif" border="0"></p>
+                     
+                  </th>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ts2.gif" border="0"></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/ts2Nonacc.gif" border="0"></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">When you do not decouple the stations, the <em>Conveyor</em> behaves like a belt conveyor, meaning that the belt stops when an <em>MU</em> blocks the exit of the <em>Conveyor</em> and restarts as soon as the <em>MU</em> at the exit has moved on to the successor. 
+         </p>
+         <p class="para_topic">
+            <b class="uiTerm">Go to</b>
+            <a class="links" href="id70543.html">Model a Fixed Gap or a No Gap Conveyor</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id69880.html">Model a Simple Conveyor Between Two Stations</a></p>
+         <p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id57105.html">Modeling a Transport System with Active Objects of Type Conveyor</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id69880.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model a Simple Conveyor Between Two Stations"></a><a class="link" href="id70543.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Model a Fixed Gap or a No Gap Conveyor"></a></span></div>
+   </body>
+</html>

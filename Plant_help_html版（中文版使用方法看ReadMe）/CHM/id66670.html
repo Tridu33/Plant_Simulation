@@ -1,0 +1,273 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Exchanging Data via a Network Socket</title>
+      
+      <meta name="MS-HKWD" content="Exchanging Data via a Network Socket">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic3" id="xps10_pagetitle">Exchanging Data via a Network Socket</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id58343.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Open a List as a Dialog Window in the Foreground"></a><a class="link" href="id18086.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Setting Parameters in the Model"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id96132.html">Importing Data for the Simulation</a></span> &gt; <span class="simpleHTMLminitoc">Exchanging Data via a Network Socket</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1732"></span><p class="para_topic">The object <em>Socket</em> provides a TCP/IP interface for <em>Plant Simulation</em>. It communicates with other applications, which have a socket interface.
+         </p>
+         <p class="para_topic">Socket communication is the foundation of the most widespread communication software. Sockets are point-to-point connections, established during initialization, allowing the online exchange of data. As the socket connection is directly based upon the TCP/IP protocol, it ensures fast communication without much data overhead. </p>
+         <p class="para_topic">With socket connections one process works as a server with additional processes registering as clients. <em>Plant Simulation</em> can be a client as well as a server.
+         </p>
+         <p class="para_topic">To add the object <a class="links" href="id72758.html">Socket</a> to the <em>Class Library</em>, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt; <b class="uiTerm">Basic Objects</b> &gt; <b class="uiTerm">InformationFlow</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/AddSocketE.gif"></p>
+         <p class="para_topic">You can insert the object <em>Socket</em>
+            <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/socketIconSm.gif" border="0"> into your simulation model from the folder <b class="uiTerm">InformationFlow</b> in the <em>Class Library</em> or from the toolbar <b class="uiTerm">Information Flow</b> in the <em>Toolbox</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/insSocket.gif"></p>
+         <p class="para_topic">Compare the sample models: Click the <b class="uiTerm">Window</b> ribbon tab, click <b class="uiTerm">Start Page</b>
+  &gt; <b class="uiTerm">Getting Started</b> &gt;
+   <b class="uiTerm">Example Models</b> and click <b class="uiTerm">Small Examples</b>. Then, select the respective <b class="uiTerm">Category</b>, the <b class="uiTerm">Topic</b>, and the <b class="uiTerm">Example</b> in the dialog <b class="uiTerm">Examples Collection</b> and click <b class="uiTerm">Open Model</b>.
+         </p>
+         <p class="para_topic">In our sample model a <em>server</em><em>Socket</em>, located in a <em>Frame</em> of its own in <em>Plant Simulation</em>, communicates with a <em>client</em><em>Socket</em>, also located in a <em>Frame</em> of its own, and vice versa. 
+         </p>
+         <p class="para_topic">To exchange data with the <em>Socket interface</em>, proceed as follows:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Model the <em>Frame</em>
+                  <em>ServerSocket</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert the objects required for the <em>ServerSocket </em> communicating with the <em>ClientSocket</em>: The <em>Socket</em> object, a <b class="uiTerm">callback method</b> for the <em>ServerSocket</em>, a <em>Variable</em> each for recording the sent message and the received message, and a <em>Method</em> in which you program how to send messages.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">We named our <em>server</em><em>Socket</em> object <em>MyServerSocket</em>. We used the default settings and selected our callback method, which we called <em>MyCallbackMethod</em>.
+               </p>
+               
+               <p class="para_item">Make sure to only select the check boxes <b class="uiTerm">On</b> and <b class="uiTerm">Server Socket</b> in the object <em>MyServerSocket</em>!
+               </p>
+               
+               <p class="para_item">When you select <b class="uiTerm">TCP</b> is the <b class="uiTerm">protocol</b> for transmitting the data, <em>Plant Simulation</em> establishes a connection across which the data will be exchanged. The TCP protocol ensures that the data packages arrive at the destination.
+               </p>
+               
+               <p class="para_item">When you select <b class="uiTerm">UDP</b>, <em>Plant Simulation</em> can exchange data without a connection having to be established. This creates less overhead, but does not guarantee that the data actually does arrive at the destination.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/socketSocket.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert the <em>Variables</em> for recording the sent message and the received message.
+               </p>
+               
+               <p class="para_item">We named our <em>Variables</em><em>MessageReceived</em> and <em>MessageSent</em> and selected the following settings:
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="33%">
+                     
+                     <col span="1" width="33%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/SocketMessageR.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/SocketMessageS.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Program the method with the message which you would like to send. </p>
+               
+               <p class="para_item">We entered the following source code to create a random number between 0 and 100, write this value to the <em>Variable</em>, which we named <em>MessageSent</em>, and send the value. We named our <em>method</em><em>sendMessages</em>.
+               </p>
+               
+               <p class="para_item">The source code looks like this:</p>
+               <pre class="indent">var str: string
+-- generates a random number between 0 and 100
+str := to_str(round(z_uniform(1,0,100),1))
+-- writes the value of the random number to the variable &rsquo;MessageSent&rsquo;
+MessageSent := str
+-- sends the message using channel 0
+MyServerSocket.write(0,str)</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">Program the <b class="uiTerm">callback method</b> which the <em>ServerSocket</em> calls when it receives data. We named our <b class="uiTerm">callback method</b>
+                  <em>MyCallbackMethod</em> and entered the following source code.
+               </p>
+               
+               <p class="para_item">The source code looks like this:</p>
+               <pre class="indent">param SocketChannelNo: integer, SocketMessage: string 
+-- writes the value to the global variable &rsquo;MessageReceived&rsquo;
+if strLen(SocketMessage) = 1 
+   MessageReceived := to_str(ascii(SocketMessage)) -- byte received
+else
+   MessageReceived := to_str(SocketMessage) -- string received
+end
+ -- writes the message to the Plant Simulation Console
+print &quot;--------------------------------------------------------------------&quot;;
+print self
+print &quot;Message: The number &quot;, MessageReceived, &quot; was received at &quot;, sysdate</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">The finished <em>Frame ServerSocket</em> looks like this: 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/socketServerSocketFrame.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Model the <em>Frame</em>
+                  <em>ClientSocket</em>:
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Insert the objects required for the <em>ClientSocket </em> communicating with the <em>ServerSocket</em>: The <em>Socket</em> object, a <b class="uiTerm">callback method</b> for the <em>ClientSocket</em>, a <em>Variable</em> each for recording the sent message and the received message, and a <em>Method</em> in which you program how to send messages.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">We named our <em>client</em>
+                        <em>Socket</em> object <em>MyClientSocket</em>. We used the default settings and selected our callback method, which we called <em>MyCallbackMethod</em>.
+                     </p>
+                     
+                     <p class="para_item">Make sure to select the check box <b class="uiTerm">On</b> and to clear <b class="uiTerm">Server Socket</b> in the object <em>MyClientSocket</em>!
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/socketMyClientSocket.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Insert the <em>Variables</em> for recording the sent message and the received message. 
+                     </p>
+                     
+                     <p class="para_item">We named our <em>Variables</em>
+                        <em>MessageReceived</em> and <em>MessageSent</em> and selected the same settings as above.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Program the method with the message which you would like to send. </p>
+                     
+                     <p class="para_item">We entered the following source code to create a random number between 0 and 100, write this value to the <em>Variable</em>, which we named <em>MessageSent</em>, and send the value. We named our <em>method</em><em>sendMessages</em>.
+                     </p>
+                     
+                     <p class="para_item">The source code looks like this:</p>
+                     <pre class="indent">var str: string
+-- generates a random number between 0 and 100
+str := to_str(round(z_uniform(1,0,100),1))
+-- writes the value of the random number to the variable &rsquo;MessageSent&rsquo;
+MessageSent := str
+-- sends the message using channel 0
+MyClientSocket.write(0,str)</pre>
+                     </li>
+                  <li>
+                     
+                     <p class="para_item">Program the <b class="uiTerm">callback method</b> which the <em>ClientSocket</em> calls when it receives data. We named our <b class="uiTerm">callback method</b>
+                        <em>MyCallbackMethod</em> and entered the following source code.
+                     </p>
+                     
+                     <p class="para_item">The source code looks like this:</p>
+                     <pre class="indent">param SocketChannelNo: integer, SocketMessage: string
+-- writes the value to the global variable &rsquo;MessageReceived&rsquo;
+if strLen(SocketMessage) = 1
+    MessageReceived := to_str(ascii(SocketMessage)); -- byte received
+else
+    MessageReceived := to_str(SocketMessage); -- string received
+end
+-- writes the message to the Plant Simulation Console
+print &quot;--------------------------------------------------------------------&quot;
+print self
+print &quot;Message: The number &quot;, MessageReceived, &quot; was received at &quot;, sysdate; )</pre>
+                     </li>
+                  <li>
+                     
+                     <p class="para_item">The finished <em>Frame</em>
+                        <em>ClientSocket</em> looks like this: 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/socketClientSocketFrame.gif"></p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">To transmit data, click the method <em>sendMessages</em> in the <em>Frame</em>
+                        <em>ServerSocket</em> with the right mouse button and select <b class="uiTerm">Run</b> on the context menu. Watch what the variables show. The variable <em>MessageSent</em> in the <em>Frame</em>
+                        <em>ServerSocket</em> show that the method calculated the number <b class="uiTerm">1.8</b> and sent it to the variable <em>MessageReceived</em> in the <em>Frame</em>
+                        <em>ClientSocket</em>, which naturally also shows the number <b class="uiTerm">1.8</b>. Also check what the <em>Console</em> shows.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Then, click the method <em>sendMessages</em> in the <em>Frame</em>
+                        <em>ClientSocket</em> with the right mouse button and select <b class="uiTerm">Run</b> on the context menu. Watch what the variables show. <em>MessageSent</em> in the <em>Frame</em>
+                        <em>ClientSocket</em> show that the method calculated the number <b class="uiTerm">72.878</b> and sent it to the variable <em>MessageReceived</em> in the <em>Frame</em>
+                        <em>ServerSocket</em>, which naturally also shows the number <b class="uiTerm">72.878</b>. Also check what the <em>Console</em> shows.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/ImportingDataforSimulation/SocketResults.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id96132.html">Importing Data for the Simulation</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id58343.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Open a List as a Dialog Window in the Foreground"></a><a class="link" href="id18086.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Setting Parameters in the Model"></a></span></div>
+   </body>
+</html>

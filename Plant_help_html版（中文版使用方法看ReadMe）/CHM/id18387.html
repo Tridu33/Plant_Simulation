@@ -1,0 +1,112 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Attributes of the Worker</title>
+      
+      <meta name="MS-HKWD" content="Attributes of the Worker">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Attributes of the Worker</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id23021.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:StatTraveledDistance"></a><a class="link" href="id40334.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:BrokerPath"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67192.html">Worker</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id18387.html">Attributes of the Worker</a></span> &gt; <span class="simpleHTMLminitoc">Attributes of the Worker</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8834"></span><p class="para_topic">The <em>Worker </em> provides: 
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The <em>attributes</em>
+                  <a class="links" href="id40334.html">BrokerPath</a>, <a class="links" href="id31724.html">Efficiency</a>, <a class="links" href="id77923.html">OrderCtrl</a>, <a class="links" href="id50320.html">Priority</a>, <a class="links" href="id82709.html">ReleaseCtrl</a>, <a class="links" href="id45479.html">Shift</a>, <a class="links" href="id47811.html">Speed</a>, <a class="links" href="id31512.html">WorkerPool</a>, <a class="links" href="xid1484921.html">XDim</a>, <a class="links" href="xid1484922.html">YDim</a>, and <a class="links" href="xid1484923.html">ZDim</a>. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">The <em>Worker</em> is an <a class="links" href="id93899.html">Exporter</a> with the capacity 1. For this reason it also provides the methods of the <em>Exporter</em>.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">When you do not use a <a class="links" href="id30049.html">FootPath</a>, <em>Plant Simulation</em> transports the <em>Worker</em> to the <em>Workplace</em>. 
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id16415.html">Attributes of All Objects</a>. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"> To view all of the <em>methods</em> and <em>attributes</em> of the <em>Worker</em>, open the window <a class="links" href="id14400.html">Show Attributes and Methods</a>. The figure below illustrates the information using the example of the object <em>Source</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/showAttrMeth1.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">Show Attributes and Methods</b> on the context menu of the <b class="uiTerm">Class Library</b> to show the <em>attributes</em> and <em>methods</em> of the selected <a class="links" href="id23901.html#id75750">Class</a>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Press the <b class="uiTerm">F8</b> key or click <b class="uiTerm">Show Attributes and Methods</b> on the <b class="uiTerm">Home</b> ribbon tab of the <em>Frame</em> into which you inserted an instance to show the <em>attributes</em> and <em>methods</em> of the selected Instance.
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">You can set the value of an attribute and you can get its value, either with the check boxes, the text boxes and drop-down lists in the dialog windows or by assigning values to the respective attributes. </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">set the value</b> of an attribute, you might, for example, type:
+               </p>
+               <pre class="indent">.Resources.MyWorker:2.Efficiency := 90</pre>
+               </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item">To <b class="uiTerm">get the value</b> of an attribute, you might, for example, type:
+               </p>
+               <pre class="indent">print .Resources.Worker.MyWorker:2.Efficiency
+posit := Station.Cont.XPos</pre>
+               </li>
+         </ul>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id23021.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:StatTraveledDistance"></a><a class="link" href="id40334.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:BrokerPath"></a></span></div>
+   </body>
+</html>

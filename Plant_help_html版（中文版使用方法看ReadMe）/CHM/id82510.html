@@ -1,0 +1,88 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configuring the Source Object and Creating the Sequence Table</title>
+      
+      <meta name="MS-HKWD" content="Configuring the Source Object and Creating the Sequence Table">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic8" id="xps10_pagetitle">Configuring the Source Object and Creating the Sequence Table</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id25024.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model the Source Creating the Tugger Trains"></a><a class="link" href="id36418.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Programming the Collision Control"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id93322.html">Model a Tugger Train</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id25024.html">Model the Source Creating the Tugger Trains</a></span> &gt; <span class="simpleHTMLminitoc">Configuring the Source Object and Creating the Sequence Table</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1074"></span><p class="para_topic">To configure the <em>Source</em> object, which creates the <em>tractors</em> and the <em>trailers</em>. which make up the <em>tugger train</em>, double-click its icon. 
+         </p>
+         <p class="para_topic">To produce the objects as a sequence according to the settings, which we enter into the sequence table:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Select <b class="uiTerm">MU selection</b> &gt; <a class="links" href="id88114.html">Sequence</a>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/tuggertSource1.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/buttonEllipses0.gif" border="0"> and select the <em>TableFile</em>
+                  <em>MySequenceTable</em>, which we inserted above. To create a <em>tractor</em> object using the <b class="uiTerm">MU class</b>
+                  <code>Tractor</code> and four <em>trailer</em> objects using the <b class="uiTerm">MU class</b>
+                  <code>Transporter</code>, we entered the values shown in the screenshot below. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/tuggertSource2.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The characters, which we enter into the column <b class="uiTerm">Attributes</b>, only serve as a placeholder for the sub-tables contained in these cells. Withon the sub-tables we set the attributes of the <b class="uiTerm">tractor</b> and of the <b class="uiTerm"> trailers</b>.
+               </p>
+               
+               <p class="para_item">To designate the <em>tractor</em>. we entered the attribute <code>IsTractor</code> and set it to <code>true</code>. To set its speed, we entered the attribute <code>Speed</code> and entered <code>1.0</code> m/s. 
+               </p>
+               
+               <div class="attention attention_note">
+                  <table border="0">
+                     <tr>
+                        <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                        <td valign="bottom" align="left" width="100%">
+                           
+                           <p class="para_note_body">We already defined the attributes of the <em>tractor</em> in the class <b class="uiTerm">Tractor</b>. We just entered them again to make sure that the settings in the <em>tractor</em> are the correct ones, in case the settings of the class get changed.
+                           </p>
+                           
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/tuggertSource3.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">To designate the <em>trailers</em>, we set the attribute <code>IsTractor</code> to <code>false</code>. As we want the <em>trailers</em> of drive faster than the <em>tractor</em> and to collide with the object in front of them, we entered <code>1.1</code> m/s as their <code>Speed</code>. To designate the <b class="uiTerm">collision control</b>(<code>CollisionCtrl</code>), we entered the name of the <em>Method</em>, which we inserted above, <code>hitchMethod</code> in our case. The collision control hitches the <em>trailers</em> to each other and the front <em>trailer</em> to the <em>tractor</em>. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/tuggertSource4.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id36418.html">Programming the Collision Control</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id25024.html">Model the Source Creating the Tugger Trains</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id25024.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Model the Source Creating the Tugger Trains"></a><a class="link" href="id36418.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Programming the Collision Control"></a></span></div>
+   </body>
+</html>

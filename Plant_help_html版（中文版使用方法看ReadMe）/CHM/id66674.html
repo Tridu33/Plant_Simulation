@@ -1,0 +1,137 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>sleep</title>
+      
+      <meta name="MS-HKWD" content="sleep">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">sleep</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id66210.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:shGetFolderPath"></a><a class="link" href="id15740.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:startExtProc"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id17964.html">General SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="Predefined_Functions_1.html">Predefined Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id67899.html">Operating System Functions</a></span> &gt; <span class="simpleHTMLminitoc">sleep</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_13904"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">sleep(Time:real[, SuspendProcess:boolean])</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The function <em>sleep</em> suspends a method for the designated time.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Parameters</b></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The parameter <em>Time</em> of data type <em>real</em> designates the amount of time in real-time. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The parameter <em>SuspendProcess</em> of data type <em>boolean</em> determines if the function <em>sleep</em> suspends the <em>Plant Simulation</em> process for the time in seconds designated by the parameter of data type <em>real</em> (<code>true</code> ). This is especially helpful when you are starting other processes from <em>Plant Simulation</em> and you do not want <em>Plant Simulation</em> to consume CPU time. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">When you enter <code>false</code> as the <em>boolean</em> parameter, <em>Plant Simulation</em> will not be blocked for the time span, which you entered, but only stops executing the <em>Method</em>. This way <em>sleep</em> works like a <a class="links" href="id54796.html">wait</a> instruction. The only difference is that the time during which <em>sleep</em> waits is real-time, while the time for <em>wait</em> is simulation time.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">sleep(3.5, false)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id66210.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:shGetFolderPath"></a><a class="link" href="id15740.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:startExtProc"></a></span></div>
+   </body>
+</html>

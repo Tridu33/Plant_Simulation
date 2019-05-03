@@ -1,0 +1,150 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Buttons to Open the Parts Table and the Callback Method</title>
+      
+      <meta name="MS-HKWD" content="Configure the Buttons to Open the Parts Table and the Callback Method">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Configure the Buttons to Open the Parts Table and the Callback Method</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id28420.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Check Box and the Drop-down List"></a><a class="link" href="id77425.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Working with Evaluation Tools"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42624.html">Animating the Simulation Model and Viewing the Results</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id68258.html">Toggling States and Executing</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id46712.html">Select One of Several Options from a Drop-down List</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Buttons to Open the Parts Table and the Callback Method</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1545"></span><p class="para_topic">We finally thought it to be helpful if we could open the parts table and the callback method with one click instead of having to navigate to them in the <em>Frame</em> and double-clicking their icon. 
+         </p>
+         <p class="para_topic">To do so, we configured two buttons:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">The <em>button</em>
+                  <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/userControlbutt1.gif" border="0"> opens the table according to which the Source Parts In produces the parts.
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Enter the <b class="uiTerm">width</b> and the <b class="uiTerm">height</b> with which the <em> button</em> will be shown in the <em>Frame</em>. We entered a <b class="uiTerm"> width</b> of <code>120</code> pixels and the <b class="uiTerm">height</b> of <code>20</code> pixels.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Enter the control, which will be called, when you click the <em>button</em>. We decided to use a control that is part of the object. So we right-clicked into the text box <b class="uiTerm">Control</b> and select <b class="uiTerm">Create Control</b>. 
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/usercontrolsbutt1Dialog.gif"></p>
+                     
+                     <p class="para_item">We then entered the following source code into the control that opened. It opens the parts table in the <em>Frame</em> with the name <em>TableFile</em> and the label .
+                     </p>
+                     
+                     <p class="para_item">The source code looks like this:</p>
+                     <pre class="indent">self.~.~.TableFile.openDialog </pre>
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="20%">
+                           
+                           <col span="1" width="80%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/usercontrolsOpenPartsClicked.gif"></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/usercontrolsSourceTable.gif"></p>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <em> button</em>
+                  <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/userControlButt2.gif" border="0"> opens the sensor control of the feeder line that sends the parts on to their destinations according to the settings of the check box <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/usercontrolDest.gif" border="0"> and of the <em> drop-down list</em>
+                  <img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/usercontrolDrop.gif" border="0"></p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Enter the <b class="uiTerm">width</b> and the <b class="uiTerm">height</b> with which the <em>button</em> will be shown in the <em>Frame</em>. We entered a <b class="uiTerm"> width</b> of <code>120</code> and the <b class="uiTerm"> height</b> of <code>20</code> pixels.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Enter the control, which will be called, when you click the <em>button</em>. We decided to use a control that is part of the object. So we right-clicked into the text box <b class="uiTerm">Control</b> and select <b class="uiTerm">Create Control</b>.
+                     </p>
+                     
+                     <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/usercontrolsCallBackDialog.gif"></p>
+                     
+                  </li>
+               </ul>
+               
+               <p class="para_item">We then entered the following source code into the control that opened. It opens the <em>callback method</em> of the <em>sensor control</em> in the <em>Frame</em> with the name <code>PartDestination</code> and the label <code>Callback</code>.
+               </p>
+               
+               <p class="para_item">As we want to open the window of the method, not to execute its source code, we have to enter the reference operator in front of the method <a class="links" href="id14816.html">openDialog</a>.
+               </p>
+               <pre class="indent">self.~.~.&amp;PartDestination.openDialog</pre>
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/AnimatingSimulationModel/openCallbackButton.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id83321.html">Configure the Source That Produces the Parts</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id67066.html">Configure the Feeder Conveyor with Sensor and Sensor Control</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id19873.html">Configure the Turnplate to Rotate the Part According to an Attribute</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id28420.html">Configure the Check Box and the Drop-down List</a>
+            
+         </p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id46712.html">Select One of Several Options from a Drop-down List</a>
+            
+         </p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id28420.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Check Box and the Drop-down List"></a><a class="link" href="id77425.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Working with Evaluation Tools"></a></span></div>
+   </body>
+</html>

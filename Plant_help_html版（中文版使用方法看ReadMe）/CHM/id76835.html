@@ -1,0 +1,201 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>RotateMUs</title>
+      
+      <meta name="MS-HKWD" content="RotateMUs">
+      <meta name="MS-HKWD" content="RotateMUs,Frame">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">RotateMUs</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id67003.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:RepresentationMode"></a><a class="link" href="id70494.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ScalingFactor"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42286.html">Material Flow Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id90254.html">Frame</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id87654.html">Attributes of the Frame</a></span> &gt; <span class="simpleHTMLminitoc">RotateMUs</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_6605"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.RotateMUs</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">A <b class="uiTerm">3D Only</b> model does not provide the attribute <em>RotateMUs</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">The attribute <em>RotateMUs </em> sets if <em>Plant Simulation</em> rotates the icons of the <em>MUs</em> to match the rotation of the <b class="uiTerm">point-oriented</b> material flow object, when the parts transfer onto a rotated object as they move across any of the material flow objects. When you type in <code>true</code> , the part is rotated to match the rotation of the material flow object. When you type in <code>false</code>, the part keeps its previous rotation/direction.
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">A rotation triggered by <b class="uiTerm">Same as the object</b> (<em>RotateMUs</em> ) on a <b class="uiTerm"> point-oriented object</b> only has an effect as long as the part is located on this object. When leaving the object the part again assumes the rotation it had before. When entering a new object, the part considers the rotation of this new object when Same as the Object is active.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/rotateMUsSameAs.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When <em>Plant Simulation</em> shows a <b class="uiTerm">length-oriented object</b> in curve mode, <em>Plant Simulation</em> evaluates the setting <a class="links" href="id55793.html">Rotate movables</a> (<a class="links" href="id28696.html">RotateMovables</a>). 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/curveCurve.gif"></p>
+         <p class="para_topic">When <em>Plant Simulation</em> shows the object as an icon<img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/03LineIcon.gif" border="0">, <em>Plant Simulation</em> evaluates the setting <a class="links" href="id24322.html">Same as the Object</a> (<em>RotateMUs</em> ). 
+         </p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">We advise to not deactivate <b class="uiTerm">Rotate movables</b> as this setting does not affect the behavior in <em>3D</em>. 
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">For <em>Transporter</em> and <em>Container</em> this applies: When <b class="uiTerm">Same as the object</b> is <code>true</code>, loaded parts are rotated in the same direction as <em>Transporter</em> or <em>Container</em>.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/MaterialFlowObjects1/DreheaufgeladeneBEs.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>boolean</em>. 
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">MyFrame.RotateMUs := true</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">SimTalk</b></p>
+         <p class="para_topic"><a class="links" href="id89053.html">RotateMUs</a> for point-oriented objects
+         </p>
+         <p class="para_topic"><a class="links" href="id28696.html">RotateMovables</a> for length-oriented objects
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id24322.html">Same as the Object</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id67003.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:RepresentationMode"></a><a class="link" href="id70494.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ScalingFactor"></a></span></div>
+   </body>
+</html>

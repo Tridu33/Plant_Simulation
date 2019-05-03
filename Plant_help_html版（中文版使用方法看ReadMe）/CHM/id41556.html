@@ -1,0 +1,109 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>LockoutZone</title>
+      
+      <meta name="MS-HKWD" content="LockoutZone ">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">LockoutZone</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id31345.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Width"></a><a class="link" href="id15428.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the LockoutZone"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id15676.html">Resource Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id41556.html">LockoutZone</a></span> &gt; <span class="simpleHTMLminitoc">LockoutZone</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_8523"></span><p class="para_topic"><img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/LockoutZoneIcon.gif" border="0"></p>
+         <p class="para_topic">The object <em>LockoutZone</em> combines a group of material flow objects. If one of these stations fails, all other stations within the lockout zone stop processing their parts as well. The <em>LockoutZone</em> then controls the failures of all assigned stations. As a result it returns the total availability of the assigned stations.
+         </p>
+         <p class="para_topic">You can insert more than one <em>LockoutZone</em> into a simulation model. The <em>LockoutZones</em> can overlap, meaning that a station can be assigned to more than one <em>LockoutZone</em>.
+         </p>
+         <p class="para_topic">You have to define <em>failure profiles</em> for at least one of the stations assigned to the <em>LockoutZone</em>. As soon as one of the stations fails, the <em>LockoutZone</em> stops all processing operations of all assigned stations, meaning it sets their attribute <a class="links" href="id49625.html">Stopped</a> to <code>true</code>. You can select if the <em>LockoutZone</em> stops the processing operations immediately or when the service arrives.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/ResourceObjects/lockoutStopMode.gif"></p>
+         <p class="para_topic">The stations only start processing parts again after all failures were removed. They then only use up the respective remaining processing time. </p>
+         <p class="para_topic">You can also determine what happens when the stations start processing parts again by programming a <a class="links" href="id49154.html">Resume control</a>.
+         </p>
+         <p class="para_topic">In case one of the stations is <b class="uiTerm">paused</b> when the <em>LockoutZone</em> intends to stop, this station does not start or restart processing after the pause is over. 
+         </p>
+         <p class="para_topic">You can assign any of the built-in <a class="links" href="id42286.html">Material Flow Objects</a> or <a class="links" href="id36050.html">Fluid Objects</a> to the <em>LockoutZone</em>. For stations you yourself modeled in a <em>Frame</em>, the <em>LockoutZone</em> sets the attribute <a class="links" href="id20695.html">Stopped</a> of that <em>Frame</em> to <code>true</code>. You then have to model an adequate reaction to the attribute. In addition, you can also add a <em> Worker</em> or the <em> Workerpool</em>.
+         </p>
+         <p class="para_topic">If the station that triggers the lockout zone is assigned to more than one <em>LockoutZone</em>, all stations of all <em>LockoutZones</em> will be stopped. If the station that triggers the lockout zone is assigned to only one <em>LockoutZone</em>, it only stops the station that you assigned to it. 
+         </p>
+         <p class="para_topic">To add the <em>LockoutZone</em> to your simulation model, click <img align="bottom" src="../graphics/nonLocalized/plant_sim_help/icons/icons/manageCLasslibButt.gif" border="0">
+            <a class="links" href="id95750.html">Manage Class Library</a> &gt;
+   <b class="uiTerm">Basic Objects &gt; Resources &gt; LockoutZone</b> on the <b class="uiTerm">Home</b> ribbon tab.
+         </p>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <table border="1" cellpadding="10" width="100%" align="center">
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id90688.html">Modeling a Lockout Zone</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="xid1388311.html">Read-Only Attributes of the LockoutZone</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id15428.html">Dialog Window of the LockoutZone</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id78085.html">Attributes of the LockoutZone</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id22166.html">Methods of the LockoutZone</a></p>
+                     
+                  </td>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <p class="para_td_last"><a class="links" href="id43953.html">Shared Properties of the Material Flow Objects</a></p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id31345.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Width"></a><a class="link" href="id15428.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Dialog Window of the LockoutZone"></a></span></div>
+   </body>
+</html>

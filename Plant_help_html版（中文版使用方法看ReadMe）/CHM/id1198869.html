@@ -1,0 +1,74 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Portioner Which Portions the Material</title>
+      
+      <meta name="MS-HKWD" content="Configure the Portioner Which Portions the Material">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Configure the Portioner Which Portions the Material</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="xid1198870.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Mixer Which Mixes the Materials"></a><a class="link" href="xid1198871.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the DePortioner"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id57204.html">Simulating Free-Flowing Materials and Fluids</a></span> &gt; <span class="simpleHTMLminitoc"><a href="xid1196947.html">Portion and Deportion Materials</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Portioner Which Portions the Material</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_751"></span><p class="para_topic">We now configure the <a class="links" href="id77602.html">Portioner</a>, which splits the material into portions and, for example, pours it into containers.
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item">We selected the MU, which the <em>Portioner</em> is to create from the products. We selected the MU <em>ForY</em>, which we created above.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">We entered the <b class="uiTerm">Amount per MU</b> of the product. In our example we fill <b class="uiTerm">2</b> liters into an MU respectively.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Fluid_Objects/PortionierPortionerE.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic">We also created the <b class="uiTerm">exit control</b>
+            <em>partsDone</em> with the settings below.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Fluid_Objects/PortionierPortionerControlE.gif"></p>
+         <p class="para_topic">We entered this source code:</p><pre class="indent">if @.Name =&quot;ForX&quot;
+   @.MaterialName := &quot;Product X&quot;
+else
+   @.MaterialName := &quot;Product Y&quot;
+end</pre><p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="xid1196948.html">Create the Required MUs</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id1198866.html">Configure the Recipe of the Material in the MaterialsTable</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="xid1198867.html">Configure the FluidSources That Produce the Materials</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="xid1198868.html">Configure the Tanks Which Buffer the Materials</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="xid1198870.html">Configure the Mixer Which Mixes the Materials</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="xid1198871.html">Configure the DePortioner</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="xid1200737.html">Configure the Tanks at the End of the Plant</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="xid1196947.html">Portioning and Deportioning Materials</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="xid1198870.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Mixer Which Mixes the Materials"></a><a class="link" href="xid1198871.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Configure the DePortioner"></a></span></div>
+   </body>
+</html>

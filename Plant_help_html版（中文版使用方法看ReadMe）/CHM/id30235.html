@@ -1,0 +1,167 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Stations Which Handle the Pallet</title>
+      
+      <meta name="MS-HKWD" content="Configure the Stations Which Handle the Pallet">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Configure the Stations Which Handle the Pallet</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id28083.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Conveyor Which Transfers the Parts"></a><a class="link" href="id47338.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Moving Parts On with the Turntable"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id60064.html">Aligning and Shrink-Wrapping Parts with the Turnplate</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id30769.html">Model a Shrink Wrapper</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Stations Which Handle the Pallet</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_953"></span><p class="para_topic">Finally, insert and configure the stations which create and handle the pallet onto which the parts will be loaded.</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">First, insert and configure the <em>Source</em> which produces the pallet. To produce a single pallet after 10 minutes, select <b class="uiTerm"> time of creation</b>
+    &gt;
+     <b class="uiTerm"> number adjustable</b> and enter an <b class="uiTerm">amount</b> of <code>1</code>. Enter <code>10:00</code> is the <b class="uiTerm">creation time</b>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/shrinWrapperSourcePallet.gif"></p>
+               
+               <p class="para_item">Then, select <em>MyPallet</em> is the <b class="uiTerm">MU</b> to be produced.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Next, insert the <em>parallel station</em> into which <em>Conveyor1</em> moves the parts. You do not have to change any of its settings. The <em>TransferStation</em> will enter the <b class="uiTerm">exit control</b> of the <em>parallel station</em> automatically once we configure the <em>TransferStation</em>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/shrinkWrapperParallel.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Finally, configure the <em>TransferStation</em>. 
+               </p>
+               
+               <ul>
+                  <li>
+                     
+                     <p class="para_item">Drag the station from which the <b class="uiTerm">parts</b> arrive, the <em>ParallelStation</em> in our case, onto the <em>TransferStation</em>. This enters the <b class="uiTerm">exit control</b> into the <em>ParallelStation</em>.
+                     </p>
+                     
+                  </li>
+                  <li>
+                     
+                     <p class="para_item">Drag the station on which the <b class="uiTerm">target</b> of the loading action (the pallet), the <em>ConveyorPallet</em> in our case, is located onto the <em>TransferStation</em>. Select the station type <b class="uiTerm">Load</b> and enter the position of the sensor on the <em>ConveyorPallet</em> and click <b class="uiTerm">Apply</b>. Adjust the position until it is located at the position where it needs to be and click <b class="uiTerm">OK</b>.
+                     </p>
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <colgroup span="1">
+                           
+                           <col span="1" width="50%">
+                           
+                           <col span="1" width="50%">
+                           
+                        </colgroup>
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/shrinkWrapperLinePalletSensor.gif" border="0"></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1">
+                                 
+                                 <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/shrinkWrapperTransfer2.gif" border="0"></p>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Start the simulation and watch how the <em>Turnplate</em> rotates the part. You will not be able to see anything with the default <b class="uiTerm">simulation speed</b> setting, as the simulation runs too fast.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To remedy this, you can reduce the simulation speed in a <em>reset method</em>.
+               </p>
+               <pre class="indent">EventController.Speed := 60;</pre>
+               </li>
+            <li>
+               
+               <p class="para_item">Start the simulation again and watch how the parts are first rotated to the right, moved to the <em>parallel station</em>, and moved on to the <em>transfer station</em>, which loads them onto the pallet. The loaded <em>pallet</em> is then fed back to the <em>Turnplate</em>, which rotates it four times around its center to the left and them moves it on to <em>shipping</em>.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/shrinkwrapperFertig1.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/shrinkwrapperFertig2.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id95301.html">Configure the Source and the Feeder Line</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id31794.html">Configure the Turnplate</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id28083.html">Configure the Conveyor Which Transfers the Parts</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id30769.html">Model a Shrink Wrapper</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id28083.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Configure the Conveyor Which Transfers the Parts"></a><a class="link" href="id47338.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Moving Parts On with the Turntable"></a></span></div>
+   </body>
+</html>

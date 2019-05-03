@@ -1,0 +1,128 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Configure the Stations</title>
+      
+      <meta name="MS-HKWD" content="Configure the Stations">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Configure the Stations</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id19450.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Placing Parts into Stock and Removing Parts from It"></a><a class="link" href="id82052.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Program the Method that Places Parts into Stock"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id61915.html">Modeling the Flow of Materials, Basics</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id19450.html">Placing Parts into Stock and Removing Parts from It</a></span> &gt; <span class="simpleHTMLminitoc">Configure the Stations</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_648"></span><p class="para_topic">To create our simple warehouse model, you first have to set the stations up:</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/warehouseFrame.gif"></p>
+         <ul>
+            <li>
+               
+               <p class="para_item">To make the <em>Source</em> produce a part every minute, enter <code>1:00</code> as the <b class="uiTerm">interval</b>. To stop producing parts after a day, enter <code>1:00:00:00</code>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/warehouseSource.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">As parts occasionally have to be reworked, we want to mix up the original order of parts to be placed into stock and we then want to re-establish the original order which is required for our production process when removing the parts from stock. </p>
+               
+               <p class="para_item">To set the size of the station <em>MixOrders</em>, which is a <em>ParallelStation</em>, according to the degree of change of the sequence of the arriving parts, enter an <b class="uiTerm">X dimension</b> of <code>200</code> and an <b class="uiTerm">Y dimension</b> of <code>20</code>. 
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/warehouseMix1.gif"></p>
+               
+               <p class="para_item">To mix up the order of the parts that the <em>Source</em> produces, we need a random processing time. We selected the <b class="uiTerm">uniform</b> distribution and entered the parameters <code>0, 30:00</code> in our example. The two values denote the bounds of the <b class="uiTerm">uniform</b> distribution.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To set the size of the <em>Store</em>, enter its <b class="uiTerm">dimensions</b> in the coordinate net of the storage places. We entered <code>4</code> and <code>8</code>.
+               </p>
+               
+               <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/warehouseMix2.gif" border="0"></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/warehousestore1.gif" border="0"></p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+               <p class="para_item">As the <em>Store</em> is passive material flow object, you have to program how it handles the parts.
+               </p>
+               
+               <p class="para_item">To specify the name of the <b class="uiTerm">entrance control</b>, which registers the parts contained in the <em>Store</em> in a table file, click the ellipsis button and select the name of the method in the dialog that opens. We named our <b class="uiTerm">entrance control</b>
+                  <em>PlaceInStock</em>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/warehousestore2.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">To configure the station that receives the parts that are removed from stock, enter and select the settings for the <b class="uiTerm">exit control</b>.
+               </p>
+               
+               <p class="para_item">First, select the name of the <b class="uiTerm">exit control</b>. It catches the event after a part has been successfully removed from the <em>Store</em>.
+               </p>
+               
+               <p class="para_item">Then select the check box <b class="uiTerm">rear</b>, so that the control is <b class="uiTerm">rear</b>-triggered, i.e., after the part has left the station <em>RetrieveFromStore</em>.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/warehouseRetrieve.gif"></p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id82052.html">Program the Method that Places Parts into Stock</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id99264.html">Program the Method that Removes Parts from Stock</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id23189.html">Program the Method that Manages the Inventory Table</a></p>
+         <p class="para_topic"><b class="uiTerm">Go to</b>
+            <a class="links" href="id58669.html">Visualize the Occupancy of the Store Over Time</a></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id19450.html">Placing Parts into Stock and Removing Parts from It</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id19450.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Placing Parts into Stock and Removing Parts from It"></a><a class="link" href="id82052.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Program the Method that Places Parts into Stock"></a></span></div>
+   </body>
+</html>

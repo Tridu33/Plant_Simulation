@@ -1,0 +1,123 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Distribute Parts with an Exit Control</title>
+      
+      <meta name="MS-HKWD" content="Distribute Parts with an Exit Control">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic7" id="xps10_pagetitle">Distribute Parts with an Exit Control</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id76040.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Change the Assembly List in the Entrance Control"></a><a class="link" href="id98419A.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Define Controls for Length-Oriented Objects"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id26257.html">Modeling the Flow of Materials, Advanced</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id91863.html">Create Entrance and Exit Controls</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id58530.html">Define Controls for Point-Oriented Objects</a></span> &gt; <span class="simpleHTMLminitoc">Distribute Parts with an Exit Control</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_687"></span><p class="para_topic">You can determine how a station moves the parts, which it has processed, on to its successors in the <a class="links" href="id86906.html">Exit control</a>.
+         </p>
+         <p class="para_topic">In our example the <em>Source</em> produces <code>1000</code> parts and moves these on to the <em>Station</em>. We are going to count the number of incoming parts in the <b class="uiTerm">exit control</b>, and then, after a certain number has been reached, move the following parts on to a different successor. 
+         </p>
+         <p class="para_topic">The finished simulation model looks like this:</p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/exitCtrlFinished.gif"></p>
+         <p class="para_topic">To create the model, proceed like this:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item">Insert and configure the <em>Source</em> which produces the parts. We selected and entered the settings below and did not change any other settings.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/exitCtrlSource.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Insert and configure the stations which process the parts. We inserted four <em>Stations</em>. We use them with their default settings, except for the <em>Station</em> that distributes the parts across its successors.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Select and program the <b class="uiTerm">exit control</b> for this station.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/exitCtrlSingleProc.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">We selected the Method <em>MyExitControl</em> and entered the source code below. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">We placed the cursor behind <code>do</code>, pressed <b class="uiTerm">Enter</b> and typed in <code>n := Station.statNumIn;</code>This reads the statistics value <em>statNumIn</em> of the <em>Station</em>. We then pressed <b class="uiTerm">Enter</b> again, changed to the <b class="uiTerm">Template</b> menu and selected <b class="uiTerm">if... elseif... end</b>. This inserted an <b class="uiTerm">if... elseif... end</b>-statement into the source code and saved us from typing it in. It also showed us, with the expressions highlighted in red, which parts of the source code we have to replace with our own instructions.
+               </p>
+               
+               <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/exitCtrlIfthenTempl.gif"></p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">First, we replaced the <b class="uiTerm">condition</b> with our condition, namely n less than or equal to 100, i.e., we typed in <code>n = 100</code>. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Next, we replaced the <b class="uiTerm">then_branch</b> with <code>@.move(Station1);</code>. This instruction tells <em>Plant Simulation</em> to move the first 100 parts to <em>Station1</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Then, we replaced the <b class="uiTerm">elseif condition</b> with our condition, n less than or equal to 300, i.e., we typed in <code>n = 300</code>. We replaced the remaining <b class="uiTerm">then_branch</b> with <code>@.move(Station2);</code>. This moves the next 200 parts to the station <em>Station2</em>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">We then pressed Enter, typed in <b class="uiTerm">else</b> and pressed Enter again. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">Finally, we typed in <code>@.move(Station3);</code>This moves the remaining 700 parts to the station <em>Station3</em>. The @ sign in our source code identifies the part, which is going to be moved. 
+               </p>
+               
+               <p class="para_item">The finished source code looks like this:</p>
+               <pre class="indent">var n: integer
+n := Station.statNumIn
+if n = 100 
+   @.move(Station1)
+elseif n = 300 
+   @.move(Station2)
+else
+   @.move(Station3)
+end</pre>
+               </li>
+         </ul>
+         <p class="para_topic">Run the simulation and check the <em>statistics report</em>. It shows that the parts are distributed as we programmed them to do: The first <b class="uiTerm">100</b> parts moved to <em>Station1</em>, the next <b class="uiTerm">200</b> to <em>Station2</em>, and the remaining <b class="uiTerm">700</b> to <em>Station3</em>.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/exitCtrlStatReport.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Compare the video Creating an Exit Control under the Window ribbon tab &gt; Start Page &gt; Getting Started &gt; Videos.</b></p>
+         <p class="para_topic"><b class="uiTerm">Back to</b>
+            <a class="links" href="id58530.html">Define Controls for Point-Oriented Objects</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id76040.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Change the Assembly List in the Entrance Control"></a><a class="link" href="id98419A.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Define Controls for Length-Oriented Objects"></a></span></div>
+   </body>
+</html>

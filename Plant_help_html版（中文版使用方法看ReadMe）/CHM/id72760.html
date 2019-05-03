@@ -1,0 +1,53 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Unload the Train</title>
+      
+      <meta name="MS-HKWD" content="Unload the Train">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic8" id="xps10_pagetitle">Unload the Train</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id35298.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Load the Train"></a><a class="link" href="id95454.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Feed Machines with an Overhead Crane"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13814.html">Step-by-Step Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id29319.html">Modeling in 2D</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id14255.html">Modeling Transport Systems</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id76730.html">Modeling a Transport System with Passive Objects of Type Track</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64826.html">Model a Facility Using a Storage Crane</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id64681.html">Load a Train with the Storage Crane</a></span> &gt; <span class="simpleHTMLminitoc">Unload the Train</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_1062"></span><p class="para_topic">At another location along the track we define another sensor and assign it the method <em>unload</em> is its control. This <em>Method</em> is only to be executed, when the <em>engine</em> triggers the sensor. First we stop the train. The first <em>boxcar</em> is located directly behind the <em>engine</em>. Starting from this <em>boxcar</em> we pass over the entire train. When the <em>boxcar</em> is loaded, we wait until the <em>Station</em> named <em>SP</em> is <a class="links" href="id43296.html">Empty</a> and then move the <em>Container</em> into this station. When all <em>boxcars</em> are unloaded, the <em>engine</em> can start pulling the train away again.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/Step-by-Step_Help/Modeling_in_TecnoPlantSim2D/portalcraneUnloadFrame.gif"></p>
+         <p class="para_topic">The source code of the method <em>unload</em> in <b class="uiTerm">SimTalk 2.0 notation</b> looks like this:
+         </p><pre class="indent">param sensorID: integer
+var engine: object, boxcar: object
+if @.isTractor
+   engine := @
+   engine.stop
+   boxcar := engine.rearMu
+   while boxcar /= void 
+      if boxcar.cont/= void 
+         waituntil MyStation.empty 
+         boxcar.cont.move( SP )
+      end
+      boxcar := boxcar.rearMu
+   end
+   engine.continue
+end</pre><p class="para_topic">
+            <b class="uiTerm">Back to</b>
+            <a class="links" href="id64680.html">Load a Train with the Storage Crane</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id35298.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Load the Train"></a><a class="link" href="id95454.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Feed Machines with an Overhead Crane"></a></span></div>
+   </body>
+</html>

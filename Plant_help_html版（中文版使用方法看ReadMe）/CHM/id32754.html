@@ -1,0 +1,151 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>OffspringSelection</title>
+      
+      <meta name="MS-HKWD" content="OffspringSelection">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">OffspringSelection</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id75219.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:NumGenerations"></a><a class="link" href="id17750.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ParentSelection"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id25448.html">Add-Ins Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id59068.html">Genetic Algorithms</a></span> &gt; <span class="simpleHTMLminitoc"><a href="idGaControl.html">GAOptimization</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id84515.html">Attributes of the GAOptimization</a></span> &gt; <span class="simpleHTMLminitoc">OffspringSelection</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_15496"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path.OffspringSelection</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>OffspringSelection</em> sets how the <em>GAOptimization</em> selects family members used in the next generation:
+         </p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><code>1of2</code> only uses the two child solutions and selects the solution with the better fitness value. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><code>1of4</code> uses parent and child solutions and selects the best solution. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><code>Prob</code> (probabilistic) uses parent and child solutions for selecting the new generation. It employs a stochastic selection. Selection probabilities are proportional to the quality of the solution. 
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><code>Random</code> selects the individual taken for the new generation regardless of the fitness value. 
+               </p>
+               
+            </li>
+         </ul>
+         <p class="para_topic"><b class="uiTerm">Data Type of the Value You Can Assign</b></p>
+         <p class="para_topic">You can assign a value of data type <em>string</em>.
+         </p>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">GAOptimization.OffspringSelection := &quot;1of4&quot;</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id99773.html">Offspring selection</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id75219.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:NumGenerations"></a><a class="link" href="id17750.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:ParentSelection"></a></span></div>
+   </body>
+</html>

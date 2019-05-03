@@ -1,0 +1,1332 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>_3D.ExtConfiguration</title>
+      
+      <meta name="MS-HKWD" content="_3D.ExtConfiguration">
+      <meta name="MS-HKWD" content="ExtConfiguration">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic4" id="xps10_pagetitle">_3D.ExtConfiguration</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id27851.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.BaseHeight"></a><a class="link" href="id96227.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.getExtSegments"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="xid1484029.html">SimTalk Reference</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id79788.html">3D-related SimTalk Functions</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id73483.html">Built-in Attributes and Methods for Defining Length-oriented Objects</a></span> &gt; <span class="simpleHTMLminitoc">_3D.ExtConfiguration</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_14912"></span><span id="ndxgenid_PlantSimulationENU_14913"></span><table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Syntax:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Path._3D.ExtConfiguration</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic">The attribute <em>_3D.ExtConfiguration</em> sets the extrusion configuration of the <em>length-oriented object</em> designated by Path. An example of an extrusion configuration might look like this:
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/SimTalk/extConfiguration.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Parameters of the Extrusion Configuration</b></p>
+         <p class="para_topic">The parameters of the extrusion configuration designate the following settings:</p>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Index Name</b>: Is the name of the extrusion group, it is only entered once for each group in the first column of the group, i.e., in column 0.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Extrusion Profile</b>: The sub-table [2 x number of points], which you can open by double-clicking in the cell Extrusion Profile , specifies the profile that will be extruded according to the settings below.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Configuration Type</b>: You can set the following values:
+               </p>
+               
+               <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1" align="center">
+                  
+                  <colgroup span="1">
+                     
+                     <col span="1" width="50%">
+                     
+                     <col span="1" width="50%">
+                     
+                  </colgroup>
+                  
+                  <thead>
+                     
+                     <tr>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">Column/Data Type of the Value You Can Assign in </p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">Meaning</p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                  </thead>
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Name</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Is the name of the profile. For new profiles this is the name you entered as the <b class="uiTerm">path name</b>.
+                           </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Type</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">Select the profile type of the selected profile.</p>
+                           
+                           <p class="para_td"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/The_Plant_Simulation_Program_Window/UserDefinedConveyorType.gif" border="0"></p>
+                           
+                           <p class="para_td_last">The profile types are described in the table below.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Profile</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Click <b class="uiTerm">Edit</b> to edit the selected profile.
+                           </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Material</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td">In the sub-table <b class="uiTerm">Material</b>, which you can open by double-clicking in the cell <b class="uiTerm">Material</b>, you can set the following:
+                           </p>
+                           
+                           <p class="para_td">The <a class="links" href="id53844.html">Diffuse color</a>, compare <a class="links" href="id37525.html">makeRGBValue</a>.
+                           </p>
+                           
+                           <p class="para_td">The <a class="links" href="id82444.html">Ambient color</a>.
+                           </p>
+                           
+                           <p class="para_td">The <a class="links" href="id39778.html">Specular color</a>.
+                           </p>
+                           
+                           <p class="para_td">The <a class="links" href="id13323.html">Emissive color</a>.
+                           </p>
+                           
+                           <p class="para_td">The <a class="links" href="id25509.html">Transparency</a>.
+                           </p>
+                           
+                           <p class="para_td_last">The <a class="links" href="id25839.html">Shininess</a>.
+                           </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Start Offset</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Is the offset of the start reference in the extrusion direction.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">End Offset</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Is the offset of the end reference in the extrusion direction.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Repetition Interval</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">For the configuration types 14, 15, 16, 17, 18, 19, 22, and 23 the value 0 means that the extrusion is being generated once at the start point of the object. A value greater than 0 means that the extrusion is generated every number of meters that you enter. If you enter <code>0.5</code>, the extrusion will be generated every 50 cm along the path. For the other values, this values is meaningless and the program only accepts 0.
+                           </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Graphic Group ID</b></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">By default this value is 0. A value between 0 and 10 generates additional graphic groups into which the program places these thus marked extrusions. The <em>Fluid object</em>
+                              <a class="links" href="id56699.html">Pipe</a> for example uses this feature.
+                           </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+               <table border="1" cellpadding="10" width="100%" align="center">
+                  
+                  <tbody>
+                     
+                     <tr>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">Name/Value for Assignment</p>
+                           
+                        </th>
+                        
+                        <th colspan="1" rowspan="1">
+                           
+                           <p class="para_th_last">Description</p>
+                           
+                        </th>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Path, z max, Move abs</b>/<code>0</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude once along the path with z as defined in the anchors, the distance from the edge remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Path, z max, Move rel</b>/<code>1</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude once along the path with z as defined in the anchors and pin the profile base point to its relative position on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Path, z max, Scale x</b>/<code>2</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude once along the path with z as defined in the anchors and scale in the x-direction when changing the width.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Path, z max, Scale xy</b>/<code>3</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude once along the path with z as defined in the anchors and scale in the x-direction and the y-direction when changing the width.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Path, Floor, Move abs</b>/<code>4</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude once along the path with z as defined in the anchors, the distance from the edge remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Path, Floor, Move rel</b><code>5</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude once along the path with z = 0.0 and pin to the borders on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Path, Floor, Scale x</b>/<code>6</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude once along the path with z = 0.0 and scale in the x-direction when changing the width.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Path, Floor, Scale xy</b>/<code>7</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude once along the path with z = 0.0 and scale in the x-direction and the y-direction when changing the width.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Anchors, z max, Move</b>/<code>8</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z as defined in the anchors for every anchor point and pin to the borders on width change. The graphic tilts according to the incline.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Anchors, z max, Scale</b>/<code>9</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z as defined in the anchors for every anchor point and pin to the center on width change. The graphic tilts according to the incline.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Anchors, z 1/5, Move</b>/<code>10</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z = 1/5 as defined in the anchors for every anchor point and pin to the borders on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Anchors, z 1/5, Scale</b>/<code>11</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z = 0.0 for every anchor point and pin to the borders on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Anchors, Floor, Move</b>/<code>12</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z = 0.0 for every anchor point and pin to the center on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Anchors, Floor, Scale</b>/<code>13</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z as defined in the anchors with a fixed interval and pin to the borders on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Interval, z max, Move</b>/<code>14</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z as defined in the anchors with a fixed interval and pin to the center on width change. The graphic tilts according to the incline.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Interval, z max, Scale</b>/<code>15</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z as defined in the anchors with a fixed interval and pin to the center on width change. The graphic tilts according to the incline.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Interval, z 1/5, Move</b>/<code>16</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z = 1/5 as defined in the anchors with a fixed interval and pin to the center on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Interval, z 1/5, Scale</b>/<code>17</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z = 1/5 as defined in the anchors with a fixed interval and pin to the center on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Interval, Floor, Move</b>/<code>18</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z = 0.0 with a fixed interval and pin to the borders on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Interval, Floor, Scale</b>/<code>19</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z = 0.0 with a fixed interval and pin to the center on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, Floor, Anchors, Move</b>/<code>20</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically from the path anchor to the floor for every anchor point and pin to the borders on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, Floor, Anchors, Fix</b>/<code>21</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically from the path anchor to the floor for every anchor point and pin to the center on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, Interval, Move</b>/<code>22</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically from the path anchor to the floor with a fixed interval and pin to the borders on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, Interval, Fix</b>/<code>23</code></p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically from the path anchor to the floor with a fixed interval and pin to the center on width change.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, z max, Anchors, Move abs</b>/<code>24</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction for each anchor point, the distance from the borders remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, z max, Anchors, Move rel</b>/<code>25</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction for each anchor point, and pin the base point of the profile to its relative position when changing the width.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, z max, Anchors, Fix</b>/<code>26</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction for each anchor point, the distance from the path remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, z max, Interval, Move abs</b>/<code>27</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction with a fixed distance, the distance from the borders remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, z max, Interval, Move rel</b>/<code>28</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction with a fixed distance, and pin the base point of the profile to its relative position when changing the width.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, z max, Interval, Fix</b>/<code>29</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction with a fixed distance, the distance from the path remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, z max, Anchors, Move</b>/<code>30</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically at the height of the path anchor point for each anchor point and pin to the borders when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, z max, Anchors, Fix</b>/<code>31</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically at the height of the path anchor point with a fixed distance and pin to the center when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, z max, Interval, Move</b>/<code>32</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically at the height of the path anchor point for each anchor point and pin to the borders when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, z max, Interval, Fix</b>/<code>33</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically at the height of the path anchor point with a fixed distance and pin to the center when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, Floor, Anchors, Move abs</b>/<code>34</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction with z = 0.0 for each anchor point, the distance from the borders remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, Floor, Anchors, Move rel</b>/<code>35</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction with z = 0.0 for each anchor point, and pin the base point of the profile to its relative position when changing the width.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, Floor, Anchors, Fix</b>/<code>36</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction with z = 0.0 for each anchor point, the distance from the path remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, Floor, Interval, Move abs</b>/<code>37</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction with z = 0.0 with a fixed distance, the distance from the borders remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, Floor, Interval, Move rel</b>/<code>38</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction with z = 0.0 with a fixed distance, and pin the base point of the profile to its relative position when changing the width.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Forward, Floor, Interval, Fix</b>/<code>39</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Repeatedly extrude a small segment in the path direction with z = 0.0 with a fixed distance, the distance from the path remains fixed when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, Ceiling, Anchors, Move</b>/<code>40</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically from the path anchor point to the ceiling for each anchor point and pin to the borders when changing the width of the conveyor. The end offset denotes the ceiling height.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, Ceiling, Anchors, Fix</b>/<code>41</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically from the path anchor point to the ceiling with a fixed distance and pin to the center when changing the width of the conveyor. The end offset denotes the ceiling height.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, Ceiling, Interval, Move</b>/<code>42</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically from the path anchor point to the ceiling for each anchor point and pin to the borders when changing the width of the conveyor. The end offset denotes the ceiling height.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Vertical, Ceiling, Interval, Fix</b>/<code>43</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude vertically from the path anchor point to the ceiling with a fixed distance and pin to the center when changing the width of the conveyor. The end offset denotes the ceiling height.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Anchors, z max Gr, Move</b>/<code>44</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z as designed in the anchor points for each anchor point and pin to the borders when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Anchors, z max Gr, Scale</b>/<code>45</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z as designed in the anchor points for each anchor point and pin to the center when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Interval, z max Gr, Move</b>/<code>46</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z, as defined in the anchor points with a fixed distance and pin to the borders when changing the width of the conveyor.</p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                     <tr>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last"><b class="uiTerm">Horizontal, Interval, z max Gr, Scale</b>/<code>47</code>
+                              
+                           </p>
+                           
+                        </td>
+                        
+                        <td colspan="1" rowspan="1">
+                           
+                           <p class="para_td_last">Extrude horizontally with z, as defined in the anchor points with a fixed distance and pin to the center when changing the width of the conveyor. </p>
+                           
+                        </td>
+                        
+                     </tr>
+                     
+                  </tbody>
+                  
+               </table>
+               
+            </li>
+         </ul>
+         <ul>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Start Offset</b>: Is the offset of the start reference in the extrusion direction.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">End Offset</b>: Is the offset of the end reference in the extrusion direction.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Repetition Interval</b>: For the configuration types 14, 15, 16, 17, 18, 19, 22, and 23 the value 0 means that the extrusion is being generated once at the start point of the object. A value greater than 0 means that the extrusion is generated every number of meters that you enter. If you enter <code>0.5</code>, the extrusion will be generated every 50 cm along the path. For the other values, this values is meaningless and the program only accepts 0.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">By default this value is 0. A value between 0 and 10 generates additional graphic groups into which the program places these thus marked extrusions. The <em>Fluid object</em>
+                  <a class="links" href="id56699.html">Pipe</a> for example uses this feature.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item"><b class="uiTerm">Material</b>: In the sub-table <b class="uiTerm">Material</b>, which you can open by double-clicking in the cell <b class="uiTerm">Material</b>, you can set the following:
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id53844.html">Diffuse color</a>, compare <a class="links" href="id37525.html">makeRGBValue</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id82444.html">Ambient color</a>, compare <a class="links" href="id37525.html">makeRGBValue</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id39778.html">Specular color</a>, compare <a class="links" href="id37525.html">makeRGBValue</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id13323.html">Emissive color</a>, compare <a class="links" href="id37525.html">makeRGBValue</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id25509.html">Transparency</a>.
+               </p>
+               
+            </li>
+            <li>
+               
+               <p class="para_item">The <a class="links" href="id25839.html">Shininess</a>.
+               </p>
+               
+               <p class="para_item"><b class="uiTerm">Parameter</b></p>
+               
+               <p class="para_item">The parameter of data type <em>table</em> contains the parameters defining the extrusion configuration.
+               </p>
+               
+            </li>
+         </ul>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">The 3D attributes of the data types <em>table</em> and <em>array</em> return a copy of the values. 
+                     </p>
+                     
+                     <p class="para_note_body">Compare these examples:</p>
+                     <pre class="indent">_3D.ExtConfiguration := myTable -- assigns a new value
+myTable :=_3D.ExtConfiguration -- reads a value</pre>
+                     <p class="para_note_body">This example seems to have the correct syntax, but does not have any effects:</p>
+                     <pre class="indent">_3D.ExtConfiguration[1,1] := 7 -- does not assign the sub-table to the first cell of the attribute</pre>
+                     </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">Conveyor._3D.ExtConfiguration := MyExtrusionConfigurationTable
+MyExtrusionConfigurationTable := Conveyor._3D.ExtConfiguration</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">If you would like to copy the attribute <em>_3D.ExtConfiguration</em> to a <em>TableFile</em> in a <em>Frame</em>, this does not work via a simple assignment with <code>:=</code> but by copying format and contents of the <em>TableFile</em>. Compare the example below:
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <table bgcolor="#FFFFFF" border="1" cellpadding="2" cellspacing="1">
+            
+            <colgroup span="1">
+               
+               <col span="1" width="100%">
+               
+            </colgroup>
+            
+            <tbody>
+               
+               <tr>
+                  
+                  <td colspan="1" rowspan="1">
+                     
+                     <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="1" align="center">
+                        
+                        <tbody>
+                           
+                           <tr valign="top">
+                              
+                              <td colspan="1" rowspan="1" width="85">
+                                 
+                                 <p class="para_td_last"><b class="uiTerm">Example:</b></p>
+                                 
+                              </td>
+                              
+                              <td colspan="1" rowspan="1" width="500">
+                                 <pre class="indent">var MyExtrusionConfigurationTable : table := Conveyor._3D.ExtConfiguration
+Table1.delete
+MyExtrusionConfigurationTable.copyFormatTo(Table1)
+MyExtrusionConfigurationTable.copyRangeTo({0,0}..{*,*}, Table1, 0, 0)</pre>
+                                 </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </tbody>
+            
+         </table>
+         <p class="para_topic"><b class="uiTerm">Related Topics</b></p>
+         <p class="para_topic"><a class="links" href="id75640.html">Tab Appearance of the Length-oriented Objects</a> in the dialog <b class="uiTerm">Edit 3D Properties</b></p>
+         <p class="para_topic"><a class="links" href="id52172.html">User-defined conveyor</a></p>
+         <p class="para_topic"><a class="links" href="id37525.html">makeRGBValue</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id27851.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:_3D.BaseHeight"></a><a class="link" href="id96227.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:_3D.getExtSegments"></a></span></div>
+   </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+This software and related documentation are proprietary to Siemens Product Lifecycle Management Software Inc.
+
+(c) 2013 Siemens Product Lifecycle Management Software Inc. All Rights Reserved. 
+
+All trademarks belong to their respective holders.
+-->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Hitching and Unhitching Transporters</title>
+      
+      <meta name="MS-HKWD" content="Hitching and Unhitching Transporters">
+      <meta name="MS-HKWD" content="Unhitch">
+      
+      <link type="text/css" href="css/base.css" rel="stylesheet">
+   </head>
+   <body class="bodydocs" bgcolor="#FFFFFF">
+      <div class="title_topic5" id="xps10_pagetitle">Hitching and Unhitching Transporters</div>
+      <hr noshade="true">
+      <div class="insideNavLinks"><span><a class="link" href="id10304.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tugger Trains"></a><a class="link" href="id67482.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Designating the Tractor"></a></span></div>
+      <table align="center" class="simpleHTMLminitoc" width="95%">
+         <tr>
+            <td class="simpleHTMLminitoc"><span class="simpleHTMLminitoc"><a href="id13813.html">2D Reference Help</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id27344.html">Mobile Objects</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id42793.html">Transporter</a></span> &gt; <span class="simpleHTMLminitoc"><a href="id10304.html">Tugger Trains</a></span> &gt; <span class="simpleHTMLminitoc">Hitching and Unhitching Transporters</span></td>
+         </tr>
+      </table>
+      <div class="contentType_"><span id="ndxgenid_PlantSimulationENU_9550"></span><span id="ndxgenid_PlantSimulationENU_9551"></span><p class="para_topic">To create a <em>tugger train</em>, you can hitch <em>Transporters</em> to other <em>Transporters</em> with the methods <a class="links" href="id76828.html">hitchFront</a> and <a class="links" href="id84719.html">hitchRear</a>. Instead, you can also right-click the first and the last <em>Transporter</em>, which you would like to hitch to each other, and select <b class="uiTerm">Create Tugger Train</b> on the context menu. 
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/ContCreateTuggerSm.gif"></p>
+         <div class="attention attention_note">
+            <table border="0">
+               <tr>
+                  <td valign="top" align="left"><img src="graphics/note.gif" alt="Note" title="Note"></td>
+                  <td valign="bottom" align="left" width="100%">
+                     
+                     <p class="para_note_body">When you hitch up two <em>tugger trains</em>, both of which have a <em>tractor</em>, <em>Plant Simulation</em> deactivates the attribute <a class="links" href="id15148.html">IsTractor</a> of the train that is hitching up.
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p class="para_topic">To unhitch a <em>Transporter</em> from the train, use the methods <a class="links" href="id33891.html">UnhitchFront</a> and <a class="links" href="id93145.html">UnhitchRear</a>. 
+         </p>
+         <p class="para_topic">The method <a class="links" href="id82887.html">GetFrontWagon</a> returns the <em>trailer</em> which is hitched to the front of the active <em>trailer</em> in the direction of the <em>Track/TwoLaneTrack</em> on which they move.
+         </p>
+         <p class="para_topic">The method <a class="links" href="id28041.html">GetRearWagon</a> returns the <em>trailer</em> which is hitched to the rear of the active <em>trailer</em> in the direction of the <em>Track/TwoLaneTrack</em> on which they move.
+         </p>
+         <p align="center"><img align="bottom" src="../graphics/graphicLibrary/ReferenceHelp/Mobile_Objects/tuggerTrainsDirection.gif"></p>
+         <p class="para_topic"><b class="uiTerm">Related Topic</b></p>
+         <p class="para_topic"><a class="links" href="id36418.html">Programming the Collision Control</a></p>
+      </div>
+      <div class="insideNavLinks"><span><a class="link" href="id10304.html"><img border="0" src="../../../../../../icons/previous.gif" title="Previous Page:Tugger Trains"></a><a class="link" href="id67482.html"><img border="0" src="../../../../../../icons/next.gif" title="Next Page:Designating the Tractor"></a></span></div>
+   </body>
+</html>
