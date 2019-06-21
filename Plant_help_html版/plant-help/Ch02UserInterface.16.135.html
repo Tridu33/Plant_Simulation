@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Console filter</title>
+    <link rel="StyleSheet" href="css/Ch02UserInterface.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/popup.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/page.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        function  WWNoOp() {}
+        function  WWNoValue() { return ""; }
+
+
+        var  WebWorksHTMLHelp;
+        var  WebWorksSeeAlso;
+        var  WebWorksDropDown;
+
+
+        if (typeof(HTMLHelp_Object) != "undefined")
+        {
+          WebWorksHTMLHelp = new HTMLHelp_Object();
+          WebWorksSeeAlso  = new WebWorksSeeAlso_Object();
+          WebWorksDropDown = new WebWorksDropDown_Object();
+        }
+        else
+        {
+          WebWorksHTMLHelp = new Object();
+          WebWorksHTMLHelp.fNotifyClicked = WWNoOp;
+          WebWorksHTMLHelp.fPopupDivTag   = WWNoValue;
+
+          WebWorksSeeAlso = new Object();
+
+          WebWorksDropDown = new Object();
+          WebWorksDropDown.fWriteArrow  = WWNoOp;
+          WebWorksDropDown.fWriteDIVOpen  = WWNoOp;
+          WebWorksDropDown.fWriteDIVClose = WWNoOp;
+        }
+      // -->
+    </script>
+  </head>
+  <body class="" style="border-bottom-width: 8px; border-right-width: 20px; margin-bottom: 6px; margin-left: 6px; margin-right: 6px; margin-top: 6px; padding-bottom: 6px; padding-left: 6px; padding-right: 0px; padding-top: 0px;" onclick="javascript:WebWorksHTMLHelp.fNotifyClicked();">
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.134.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.136.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2590450">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2590450">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2590450">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2590450">File Menu</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.088.html#2590450">Preferences </a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.134.html#2590450">User Interface</a> &gt; Console filter</div>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <blockquote>
+      <div class="Heading5"><a name="2590450">Console filter</a></div>
+      <div class="Body"><a name="2866078">Select if the </a><span class="DarkBlue"><a href="Ch02UserInterface1.17.250.html#1197153" title="Console">Console</a></span> records <span class="DialogElement">Debug</span> messages of not.</div>
+      <div class="Picture" style="color: #000000; text-transform: none; vertical-align: baseline;"><span class="DialogElement"><a name="2866872"><img class="Default" src="images/consoleFilter.gif" width="180" height="44" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></span></div>
+      <div class="WhatIsThis"><a name="2866276">To show additional information and internal program messages, such as potential problems, select this. When you start the program with the command-line parameter </a><span class="code">-NoWarning</span>, it does not write any of the above to the <span class="Feature">Console</span>. <span class="Feature">SimTalk</span>: <span class="DarkBlue"><a href="Ch08SimTalk.32.304.html#765353" title="setConsoleFilter">setConsoleFilter</a></span></div>
+      <div class="Body"><span class="Feature"><a name="2866287">Plant Simulation</a></span> also counts all of the built-in objects, which are contained in the entire model, i.e., in the <span class="Feature">Class Library</span> and in all <span class="Feature">Frames</span>. It does not count these objects: <span class="Feature">Lists</span> and <span class="Feature">Tables</span>, <span class="Feature">Methods</span>, <span class="Feature">Variables</span>, <span class="Feature">MUs</span>, and <span class="Feature">Connectors</span>.</div>
+      <div class="Body"><a name="2866095">You might want to know this number if you are working with a </a><span class="Feature">Plant Simulation</span> <span class="Feature">Standard License</span> which is limited to 4000 objects. <span class="Feature">SimTalk</span>: <span class="DarkBlue"><a href="Ch08SimTalk.32.284.html#958197" title="numOfLimitedObjects">numOfLimitedObjects</a></span></div>
+      <div class="Body"><a name="2866141">Note that these filters are always activated when you start </a><span class="Feature">Plant Simulation</span>. </div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><span class="DialogElement"><a name="2590459">Print Output</a></span> shows output from <span class="Keyword"><a href="Ch08SimTalk.32.340.html#839610" title="print">print</a></span> commands in <span class="Feature">Methods</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><span class="DialogElement"><a name="2590472">Info Output</a></span> shows text, which is displayed in info boxes, such as those shown during the <span class="Dialogname">reset</span> and <span class="Dialogname">init</span> phases of the model. In addition, it includes warnings, for example when you use a no-longer-supported attribute in a method. When you start the program with the command-line parameter <span class="code">-NoWarning</span>, it does not write any of the above to the <span class="Feature">Console</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><span class="DialogElement"><a name="2590483">Message Output</a></span> shows miscellaneous messages.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Note_outer" style="margin-left: -0.3464566929133994pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Note_inner" style="width: 28.3464566929134pt; white-space: nowrap;">
+                <img src="Pages/images/caution.gif" alt="*" border="0" width="26" height="26" />
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Note_inner"><a name="2590518">To show these actions in the context menu of the </a><span class="Feature">Console</span>, you can also click the right mouse button. Select <span class="DialogElement">Clear</span> to delete the contents of the <span class="Feature">Console</span> window.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Picture"><a name="2590522"><img class="Default" src="images/consoleFilterN.gif" width="408" height="230" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="SeeAlsoP"><a name="3030601">Related Topics</a></div>
+      <div class="Body"><span class="DarkGreen"><a href="EGS01Installation.05.30.html#436447" title="Entering Start Options" name="3030605">Entering Start Options</a></span>, <span class="code">-logfile &lt;file name&gt;</span> </div>
+      <div class="Body"><span class="DarkGreen"><a href="EGS01Installation.05.30.html#436447" title="Entering Start Options" name="3030609">Entering Start Options</a></span>, <span class="code">-NoWarning</span> </div>
+      <div class="WhatIsThisHeading"><a name="3030613">SimTalk:</a></div>
+      <div class="Body"><span class="DarkGreen"><a href="Ch08SimTalk.32.304.html#765353" title="setConsoleFilter" name="3030617">setConsoleFilter</a></span></div>
+    </blockquote>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2590450">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2590450">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2590450">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2590450">File Menu</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.088.html#2590450">Preferences </a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.134.html#2590450">User Interface</a> &gt; Console filter</div>
+    <br />
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.134.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.136.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+      document.write(WebWorksHTMLHelp.fPopupDivTag());
+     // -->
+    </script>
+  </body>
+</html>

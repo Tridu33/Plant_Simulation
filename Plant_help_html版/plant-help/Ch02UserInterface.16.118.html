@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Units</title>
+    <link rel="StyleSheet" href="css/Ch02UserInterface.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/popup.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/page.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        function  WWNoOp() {}
+        function  WWNoValue() { return ""; }
+
+
+        var  WebWorksHTMLHelp;
+        var  WebWorksSeeAlso;
+        var  WebWorksDropDown;
+
+
+        if (typeof(HTMLHelp_Object) != "undefined")
+        {
+          WebWorksHTMLHelp = new HTMLHelp_Object();
+          WebWorksSeeAlso  = new WebWorksSeeAlso_Object();
+          WebWorksDropDown = new WebWorksDropDown_Object();
+        }
+        else
+        {
+          WebWorksHTMLHelp = new Object();
+          WebWorksHTMLHelp.fNotifyClicked = WWNoOp;
+          WebWorksHTMLHelp.fPopupDivTag   = WWNoValue;
+
+          WebWorksSeeAlso = new Object();
+
+          WebWorksDropDown = new Object();
+          WebWorksDropDown.fWriteArrow  = WWNoOp;
+          WebWorksDropDown.fWriteDIVOpen  = WWNoOp;
+          WebWorksDropDown.fWriteDIVClose = WWNoOp;
+        }
+      // -->
+    </script>
+  </head>
+  <body class="" style="border-bottom-width: 8px; border-right-width: 20px; margin-bottom: 6px; margin-left: 6px; margin-right: 6px; margin-top: 6px; padding-bottom: 6px; padding-left: 6px; padding-right: 0px; padding-top: 0px;" onclick="javascript:WebWorksHTMLHelp.fNotifyClicked();">
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.117.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.119.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2589645">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2589645">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2589645">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2589645">File Menu</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.088.html#2589645">Preferences </a> &gt; Units</div>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <blockquote>
+      <div class="Heading4"><a name="2589645">Units</a></div>
+      <div class="Body"><a name="3010334">On the tab </a><span class="DialogElement">Units</span> you can select the units for <span class="DialogElement">mass</span>, <span class="DialogElement">currency</span>, <span class="DialogElement">speed</span>, <span class="DialogElement">acceleration</span>, and <span class="DialogElement">length</span>. These settings only affect how <span class="Feature">Plant Simulation</span> shows values in lists, tables, and global variables. Within methods <span class="Feature">Plant Simulation</span> uses SI (Standard International) units for all numeric values, regardless of what you selected on the <span class="DialogElement">Units</span> ribbon tab.</div>
+      <div class="Body"><a name="3010349">Internally </a><span class="Feature">Plant Simulation</span> uses SI (Standard International) units (<span class="DialogElement">kg</span>, <span class="DialogElement">m/s</span>, <span class="DialogElement">m/s2</span>, <span class="DialogElement">m</span>) for all physical values, regardless of what you selected on the <span class="DialogElement">Units</span> ribbon tab. This has two visible effects when writing source code:</div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><a name="3010353">When you assign a constant value to a </a><span class="Feature">variable</span> or an attribute of an object, <span class="Feature">Plant Simulation</span> interprets this value in the corresponding SI unit. For example, the statement <span class="code">Line.Length := 3.4</span> means that <span class="Feature">Plant Simulation</span> assigns 3.4 meters independent of the selected <span class="DialogElement">Length</span> unit.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><a name="3010357">When you assign a physical data type to a value of data type </a><span class="Type">real</span>, you will receive the value in SI units. This also applies when you use physical units in computations with a result of data type <span class="Type">real</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="ExampleIndent_outer" style="margin-left: 19px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="ExampleIndent_inner" style="width: 95px; white-space: nowrap;">
+                <span style="color: #000000; font-family: Arial, Sans-Serif; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;">Example:</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="ExampleIndent_inner"><a name="3010358">local r: real := Line.Length -- r always contains the length in meters</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="2589653">You can also enter values for the </a><span class="DialogElement">time scale</span> and <span class="DialogElement">daylight saving time</span>. </div>
+      <div class="Picture"><a name="2589657"><img class="Default" src="images/tabUnitsPref.gif" width="461" height="288" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="2589658">A </a><span class="DialogElement">length</span> of <span class="code">1.5</span> equals 1.5 meters.</div>
+      <div class="Body"><a name="2589659">A </a><span class="DialogElement">speed</span> of <span class="code">4.55</span> equals 4.55 m/s.</div>
+      <div class="Body"><a name="2589660">A </a><span class="DialogElement">mass</span> of <span class="code">0.3</span> equals 0.3 kg.</div>
+      <div class="Body"><a name="2589661">A </a><span class="DialogElement">time</span> of <span class="code">0.1</span> equals 0.1 s.</div>
+      <div class="Note_outer" style="margin-left: -0.3464566929133994pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Note_inner" style="width: 28.3464566929134pt; white-space: nowrap;">
+                <img src="Pages/images/caution.gif" alt="*" border="0" width="26" height="26" />
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Note_inner"><a name="2589665">If you change units while modeling, </a><span class="Feature">Plant Simulation</span> will convert all values you entered originally into the dialogs of objects to the new unit, except for monetary values. For these <span class="Feature">Plant Simulation</span> only changes to the new currency symbol, but does not convert the values you entered originally!</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Feature"><a name="2589675">Plant Simulation</a></span> stores units with 15 valid digits. If you enter more digits, <span class="Feature">Plant Simulation</span> keeps only the first 15 digits and rounds according to the remaining digits (down until the number 4, up from the number 5 on). </div>
+      <div class="Body"><a name="2589676">The computer stores the number 9876543210123456789.0 for example as 9.876543210123456*10E18.</a></div>
+      <div class="Note_outer" style="margin-left: -0.3464566929133994pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Note_inner" style="width: 28.3464566929134pt; white-space: nowrap;">
+                <img src="Pages/images/caution.gif" alt="*" border="0" width="26" height="26" />
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Note_inner"><a name="2589680">As </a><span class="Feature">Plant Simulation</span> stores numbers using a finite number of digits, most of these values are only approximations of the exact values. Therefore, be aware of rounding errors, especially in comparisons! </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Example_outer" style="margin-left: 9px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Example_inner" style="width: 87px; white-space: nowrap;">
+                <span style="color: #000000; font-family: Arial, Sans-Serif; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;">Example:</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Example_inner"><a name="2589681">-- SimTalk 2.0 notation<br />var a,b,c: length<br />a := 3.5; b := 4.7; c := 5.860034<br />if a*a+b*b-c*c = 0.0 then -- never reached: rounding error<br />elseif abs(a*a+b*b-c*c) &lt; 0.000001 -- compensates rounding error<br />end</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Example_outer" style="margin-left: 9px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Example_inner" style="width: 87px; white-space: nowrap;">
+                <span style="color: #000000; font-family: Arial, Sans-Serif; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;">Example:</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Example_inner"><a name="2997384">-- SimTalk 1.0 notation<br />is<br />&nbsp;&nbsp;&nbsp;a,b,c : length;<br />do<br />&nbsp;&nbsp;&nbsp;a := 3.5; b := 4.7; c := 5.860034;<br />&nbsp;&nbsp;&nbsp;if a*a+b*b-c*c = 0.0 then -- never reached: rounding error<br />&nbsp;&nbsp;&nbsp;elseif abs(a*a+b*b-c*c) &lt; 0.000001 then -- compensates rounding error<br />&nbsp;&nbsp;&nbsp;end;<br />end;</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="SeeAlsoP"><a name="3030379">Related Topics</a></div>
+      <div class="AnchorTable"><a name="3030418">&nbsp;</a></div>
+      <table class="Format_A" style="text-align: left;" border="1" cellpadding="9" cellspacing="0" summary="">
+        <caption style="caption-side: top"></caption>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.119.html#2589727" title="Mass" name="3030385">Mass</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.123.html#2590063" title="Length" name="3030390">Length</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.120.html#2589789" title="Currency" name="3030395">Currency</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.124.html#2590153" title="Time scale" name="3030400">Time scale</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.121.html#2589877" title="Speed" name="3030405">Speed</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.125.html#2590201" title="Daylight saving time" name="3030410">Daylight saving time</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.122.html#2589984" title="Acceleration" name="3030415">Acceleration</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="3030417">&nbsp;</a></div>
+          </td>
+        </tr>
+      </table>
+    </blockquote>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2589645">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2589645">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2589645">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2589645">File Menu</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.088.html#2589645">Preferences </a> &gt; Units</div>
+    <br />
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.117.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.119.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+      document.write(WebWorksHTMLHelp.fPopupDivTag());
+     // -->
+    </script>
+  </body>
+</html>

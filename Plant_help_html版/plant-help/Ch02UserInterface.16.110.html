@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Simulation</title>
+    <link rel="StyleSheet" href="css/Ch02UserInterface.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/popup.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/page.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        function  WWNoOp() {}
+        function  WWNoValue() { return ""; }
+
+
+        var  WebWorksHTMLHelp;
+        var  WebWorksSeeAlso;
+        var  WebWorksDropDown;
+
+
+        if (typeof(HTMLHelp_Object) != "undefined")
+        {
+          WebWorksHTMLHelp = new HTMLHelp_Object();
+          WebWorksSeeAlso  = new WebWorksSeeAlso_Object();
+          WebWorksDropDown = new WebWorksDropDown_Object();
+        }
+        else
+        {
+          WebWorksHTMLHelp = new Object();
+          WebWorksHTMLHelp.fNotifyClicked = WWNoOp;
+          WebWorksHTMLHelp.fPopupDivTag   = WWNoValue;
+
+          WebWorksSeeAlso = new Object();
+
+          WebWorksDropDown = new Object();
+          WebWorksDropDown.fWriteArrow  = WWNoOp;
+          WebWorksDropDown.fWriteDIVOpen  = WWNoOp;
+          WebWorksDropDown.fWriteDIVClose = WWNoOp;
+        }
+      // -->
+    </script>
+  </head>
+  <body class="" style="border-bottom-width: 8px; border-right-width: 20px; margin-bottom: 6px; margin-left: 6px; margin-right: 6px; margin-top: 6px; padding-bottom: 6px; padding-left: 6px; padding-right: 0px; padding-top: 0px;" onclick="javascript:WebWorksHTMLHelp.fNotifyClicked();">
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.109.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.111.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2589420">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2589420">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2589420">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2589420">File Menu</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.088.html#2589420">Preferences </a> &gt; Simulation</div>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <blockquote>
+      <div class="Heading4"><a name="2589420">Simulation</a></div>
+      <div class="Body"><a name="2589424">On the tab </a><span class="DialogElement">Simulation</span> you can select settings that apply to how <span class="Feature">Plant Simulation</span> executes the simulation runs. Complex simulation models will contain a large number of <span class="Feature">Method</span> objects, which themselves may call other methods. Incorrect modeling may cause a method to be called repeatedly by itself during the simulation run, either directly or indirectly through other methods. This is called an endless recursion. With each call, <span class="Feature">Plant Simulation</span> takes up more RAM, until it used up all available memory and terminates the simulation run.</div>
+      <div class="Picture"><a name="2589432"><img class="Default" src="images/simulationTab.gif" width="461" height="336" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><span class="Feature"><a name="2589436">Plant Simulation</a></span> provides several ways for detecting and preventing this and related problems.</div>
+      <div class="AnchorTable"><a name="3030289">&nbsp;</a></div>
+      <table class="Format_A" style="text-align: left;" border="1" cellpadding="9" cellspacing="0" summary="">
+        <caption style="caption-side: top"></caption>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.111.html#2589478" title="Maximum depth of calls" name="3030256">Maximum depth of calls</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.115.html#2589584" title="Tolerance for about equal (~=) comparison" name="3030261">Tolerance for about equal (~=) comparison</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.112.html#2589500" title="Maximum number of call chains" name="3030266">Maximum number of call chains</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.116.html#2589614" title="Frame rate" name="3030271">Frame rate</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.113.html#2589527" title="Maximum number of suspended methods" name="3030276">Maximum number of suspended methods</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.117.html#2589631" title="Display panel frame rate" name="3030281">Display panel frame rate</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="Ch02UserInterface.16.114.html#2589557" title="Maximum number of samples" name="3030286">Maximum number of samples</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="3030288">&nbsp;</a></div>
+          </td>
+        </tr>
+      </table>
+    </blockquote>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2589420">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2589420">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2589420">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2589420">File Menu</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.088.html#2589420">Preferences </a> &gt; Simulation</div>
+    <br />
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.109.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.111.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+      document.write(WebWorksHTMLHelp.fPopupDivTag());
+     // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Exit</title>
+    <link rel="StyleSheet" href="css/Ch02UserInterface.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/popup.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/page.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        function  WWNoOp() {}
+        function  WWNoValue() { return ""; }
+
+
+        var  WebWorksHTMLHelp;
+        var  WebWorksSeeAlso;
+        var  WebWorksDropDown;
+
+
+        if (typeof(HTMLHelp_Object) != "undefined")
+        {
+          WebWorksHTMLHelp = new HTMLHelp_Object();
+          WebWorksSeeAlso  = new WebWorksSeeAlso_Object();
+          WebWorksDropDown = new WebWorksDropDown_Object();
+        }
+        else
+        {
+          WebWorksHTMLHelp = new Object();
+          WebWorksHTMLHelp.fNotifyClicked = WWNoOp;
+          WebWorksHTMLHelp.fPopupDivTag   = WWNoValue;
+
+          WebWorksSeeAlso = new Object();
+
+          WebWorksDropDown = new Object();
+          WebWorksDropDown.fWriteArrow  = WWNoOp;
+          WebWorksDropDown.fWriteDIVOpen  = WWNoOp;
+          WebWorksDropDown.fWriteDIVClose = WWNoOp;
+        }
+      // -->
+    </script>
+  </head>
+  <body class="" style="border-bottom-width: 8px; border-right-width: 20px; margin-bottom: 6px; margin-left: 6px; margin-right: 6px; margin-top: 6px; padding-bottom: 6px; padding-left: 6px; padding-right: 0px; padding-top: 0px;" onclick="javascript:WebWorksHTMLHelp.fNotifyClicked();">
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.180.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.182.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2593828">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2593828">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2593828">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2593828">File Menu</a> &gt; Exit </div>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <blockquote>
+      <div class="Heading3"><a name="2593828">Exit </a><img class="Default" src="images/ExitButtonBig.gif" width="132" height="44" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></div>
+      <div class="Body"><a name="2593832">The command </a><span class="DialogElement">Exit</span> closes the open simulation model and exits <span class="Feature">Plant Simulation</span>. </div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><a name="2593833">Click </a><span class="DialogElement">Yes</span> to save the model. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><a name="2860957">Click </a><span class="DialogElement">No</span> to exit without saving your changes. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Note_outer" style="margin-left: -0.3464566929133994pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Note_inner" style="width: 28.3464566929134pt; white-space: nowrap;">
+                <img src="Pages/images/caution.gif" alt="*" border="0" width="26" height="26" />
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Note_inner"><a name="2860959">When you defined a </a><span class="Feature">Method</span> with the name <span class="Feature">onCloseModel</span> in the folder <span class="DialogElement">basis</span> of your model, then this method will be executed when you close the model instead of actually closing the model. This <span class="Feature">Method</span> has to declare a boolean parameter. When you exit <span class="Feature">Plant Simulation</span>, the parameter has the value true, when you close the model, the parameter has the value false. When you actually want to close the model, you have to explicitly program that in the <span class="Feature">onCloseModel </span>method by calling the function <span class="DarkBlue"><a href="Ch08SimTalk.32.247.html#849706" title="closeModel">closeModel</a></span>. Note that the <span class="Feature">onCloseModel</span> method located in the <span class="DialogElement">Basis</span> folder will not be called when you exit the application via information flow, i.e., with the method <span class="Feature">exitApplication</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="NoteCont"><a name="2860890">When </a><span class="Feature">Plant Simulation</span> is actually terminated (either because the <span class="Feature">onCloseModel</span> method in the <span class="DialogElement">Basis</span> folder called the method <span class="Feature">closeModel</span>, or because no <span class="Feature">onCloseModel</span> method exists in the <span class="DialogElement">Basis</span> folder), then all other existing <span class="Feature">onCloseModel</span> method classes in the <span class="Feature">Class Library</span> are called. Within these methods you can executed clean-up tasks, for example delete temporary files.</div>
+      <div class="SeeAlsoP"><a name="3030953">Related Topic</a></div>
+      <div class="Body" style="margin-bottom: 2.0pt;"><span class="DarkGreen"><a href="Ch02UserInterface.16.182.html#2593866" title="Exiting when Plant Simulation Locks Up" name="3030957">Exiting when Plant Simulation Locks Up</a></span></div>
+      <div class="Body"><span class="DarkGreen"><a href="Ch08SimTalk.32.258.html#718360" title="exitApplication" name="3030961">exitApplication</a></span></div>
+    </blockquote>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2593828">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2593828">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2593828">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2593828">File Menu</a> &gt; Exit </div>
+    <br />
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.180.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.182.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+      document.write(WebWorksHTMLHelp.fPopupDivTag());
+     // -->
+    </script>
+  </body>
+</html>

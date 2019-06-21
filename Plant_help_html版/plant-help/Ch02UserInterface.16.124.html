@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Time scale</title>
+    <link rel="StyleSheet" href="css/Ch02UserInterface.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/popup.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/page.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        function  WWNoOp() {}
+        function  WWNoValue() { return ""; }
+
+
+        var  WebWorksHTMLHelp;
+        var  WebWorksSeeAlso;
+        var  WebWorksDropDown;
+
+
+        if (typeof(HTMLHelp_Object) != "undefined")
+        {
+          WebWorksHTMLHelp = new HTMLHelp_Object();
+          WebWorksSeeAlso  = new WebWorksSeeAlso_Object();
+          WebWorksDropDown = new WebWorksDropDown_Object();
+        }
+        else
+        {
+          WebWorksHTMLHelp = new Object();
+          WebWorksHTMLHelp.fNotifyClicked = WWNoOp;
+          WebWorksHTMLHelp.fPopupDivTag   = WWNoValue;
+
+          WebWorksSeeAlso = new Object();
+
+          WebWorksDropDown = new Object();
+          WebWorksDropDown.fWriteArrow  = WWNoOp;
+          WebWorksDropDown.fWriteDIVOpen  = WWNoOp;
+          WebWorksDropDown.fWriteDIVClose = WWNoOp;
+        }
+      // -->
+    </script>
+  </head>
+  <body class="" style="border-bottom-width: 8px; border-right-width: 20px; margin-bottom: 6px; margin-left: 6px; margin-right: 6px; margin-top: 6px; padding-bottom: 6px; padding-left: 6px; padding-right: 0px; padding-top: 0px;" onclick="javascript:WebWorksHTMLHelp.fNotifyClicked();">
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.123.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.125.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2590153">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2590153">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2590153">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2590153">File Menu</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.088.html#2590153">Preferences </a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.118.html#2590153">Units</a> &gt; Time scale</div>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <blockquote>
+      <div class="Heading5"><a name="2590153">Time scale</a></div>
+      <div class="WhatIsThis"><a name="2590155">You can change the display of the </a><span class="DialogElement">time scale</span> to meet your specific modeling needs. </div>
+      <div class="WhatIsThis"><a name="2590156">You can enter a number between </a><span class="code">0</span> and <span class="code">86400</span> into the text box <span class="DialogElement">time scale 1/ (divided by)</span>.</div>
+      <div class="WhatIsThis"><a name="2590157">You can enter an integer greater than </a><span class="code">1</span> into the text boxes next to <span class="DialogElement">transfer if</span>. </div>
+      <div class="Picture"><a name="2590161"><img class="Default" src="images/timeScale.gif" width="441" height="65" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="2590162">You might, for example, divide a minute into 100 units, instead of in 60 seconds, or you might want to read 1:50 as 1.5 hours instead of 1 minute and 50 seconds. </a></div>
+      <div class="Note_outer" style="margin-left: -0.3464566929133994pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Note_inner" style="width: 28.3464566929134pt; white-space: nowrap;">
+                <img src="Pages/images/caution.gif" alt="*" border="0" width="26" height="26" />
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Note_inner"><a name="2590163">You can only change the </a><span class="Bold">display </span>of the time scale, not the time scale itself. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="2590164">A time specification consists of four numbers, separated by colons, normally in the format </a><span class="DialogElement">days:hours:minutes:seconds</span>. <span class="Feature">Plant Simulation</span> stores the value itself in seconds and converts it at output time for the <span class="Bold">display</span>. </div>
+      <div class="Body"><span class="Feature"><a name="2590171">Plant Simulation</a></span> converts times according to the values which you enter into the text boxes <span class="DialogElement">time scale </span>and <span class="DialogElement">transfer if</span>. The <span class="DialogElement">time scale</span> sets by which factor the time value will be divided. The result of this calculation will then be distributed across the four values <span class="DialogElement">days:hours:minutes:seconds</span>. The three text boxes after <span class="DialogElement">transfer if</span> set when the value is to be carried over to the next number. </div>
+      <div class="Body"><a name="2590172">The following examples illustrate what to enter to achieve different displays of the time.</a></div>
+      <div class="WhatIsThisItem_outer" style="margin-left: 0.7716535433070935px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="WhatIsThisItem_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="WhatIsThisItem_inner"><a name="2590174">If you want to use the standard time format, 24 hours to the day, 60 minutes to the hour, 60 seconds to the minute, you can use the default setting </a><span class="DialogElement">time scale 1/1.0 transfer if 24:60:60</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="ExampleIndent_outer" style="margin-left: 19px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="ExampleIndent_inner" style="width: 95px; white-space: nowrap;">
+                <span style="color: #000000; font-family: Arial, Sans-Serif; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;">Example:</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="ExampleIndent_inner"><a name="2590175">str_to_time("1:15:45.5")&nbsp;-- 1 hour, 15 minutes, 45.5 seconds</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><a name="2590176">If you want to use times based on minutes, you can enter </a><span class="DialogElement">time scale 1/</span><span class="code">60.0</span> <span class="DialogElement">transfer if </span><span class="code">30:24:60</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="ItemCont"><a name="2590177">The time value is first divided by 60, so that minutes instead of seconds are displayed as the smallest digit. The carry overs set that a month has 30 days, a day 24 hours, and an hour 60 minutes.</a></div>
+      <div class="ExampleIndent_outer" style="margin-left: 19px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="ExampleIndent_inner" style="width: 95px; white-space: nowrap;">
+                <span style="color: #000000; font-family: Arial, Sans-Serif; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;">Example:</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="ExampleIndent_inner"><a name="2590178">str_to_time("1:15:45.5")&nbsp;-- 1 day, 15 hours, 45,5 minutes</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="WhatIsThisItem_outer" style="margin-left: 0.7716535433070935px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="WhatIsThisItem_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="WhatIsThisItem_inner"><a name="2590180">If you want to simulate a longer period of time and want to display the time in the format </a><span class="DialogElement">years:months:days:hours</span>, enter <span class="DialogElement">time scale 1/</span><span class="code">3600</span><span class="DialogElement"> transfer if </span><span class="code">12</span><span class="DialogElement">:</span><span class="code">30</span><span class="DialogElement">:</span><span class="code">24</span>, as an hour has 3600 seconds, a year has 12 months, a month has 30 days, and a day has 24 hours. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="WhatIsThisItem_outer" style="margin-left: 0.7716535433070935px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="WhatIsThisItem_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="WhatIsThisItem_inner"><a name="2590182">If you want to divide a minute into 100 subunits instead of into 60 seconds, enter </a><span class="DialogElement">time scale 1/</span><span class="code">0.6</span><span class="DialogElement"> transfer if </span><span class="code">24</span><span class="DialogElement">:</span><span class="code">60</span><span class="DialogElement">:</span><span class="code">100</span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="WhatIsThisItemCont"><a name="2590183">The time value is first divided by 0.6 to take the division into 100 subunits into account and then subdivided. 100 subunits then result in 1 minute.</a></div>
+      <div class="ExampleIndent_outer" style="margin-left: 19px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="ExampleIndent_inner" style="width: 95px; white-space: nowrap;">
+                <span style="color: #000000; font-family: Arial, Sans-Serif; font-size: 11pt; font-style: normal; font-variant: normal; font-weight: bold; text-transform: none; vertical-align: baseline;">Example:</span>
+              </div>
+            </td>
+            <td width="100%">
+              <div class="ExampleIndent_inner"><a name="2590184">str_to_time("1:15:45.5")&nbsp;-- 1 hour, 15 minutes, 27.3 seconds</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Note_outer" style="margin-left: -0.3464566929133994pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Note_inner" style="width: 28.3464566929134pt; white-space: nowrap;">
+                <img src="Pages/images/caution.gif" alt="*" border="0" width="26" height="26" />
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Note_inner"><a name="2590188">Changing these settings not only affects how </a><span class="Feature">Plant Simulation</span> shows times, but also affects the conversion functions <span class="DarkBlue"><a href="Ch08SimTalk.32.376.html#661259" title="str_to_time">str_to_time</a></span> and <span class="DarkBlue"><a href="Ch08SimTalk.32.375.html#720942" title="str_to_dateTime">str_to_dateTime</a></span>. Therefore, be aware that changing the settings may affect the simulation results.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="2590198">The method </a><span class="DarkBlue"><a href="Ch08SimTalk.32.377.html#748693" title="timeRepresenation">timeRepresenation</a></span> returns the time system used, and writes it to a list in <span class="Type">real</span> format. The contents of the first cell shows the factor of (time) division, the second, third, and fourth represent the values you entered into the <span class="DialogElement">Transfer if</span> text boxes. Normally, they are <span class="DialogElement">24</span>, <span class="DialogElement">60</span>, <span class="DialogElement">60</span>.</div>
+    </blockquote>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#2590153">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.001.html#2590153">The Plant Simulation Program Window</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.002.html#2590153">Ribbon Bar</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.015.html#2590153">File Menu</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.088.html#2590153">Preferences </a> &gt; <a class="WebWorks_Breadcrumb_Link" href="Ch02UserInterface.16.118.html#2590153">Units</a> &gt; Time scale</div>
+    <br />
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="Ch02UserInterface.16.123.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Ch02UserInterface.16.125.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+      document.write(WebWorksHTMLHelp.fPopupDivTag());
+     // -->
+    </script>
+  </body>
+</html>

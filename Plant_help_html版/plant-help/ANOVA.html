@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Run an Analysis of Variance (ANOVA)</title>
+    <link rel="StyleSheet" href="css/DataFit.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/popup.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/page.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        function  WWNoOp() {}
+        function  WWNoValue() { return ""; }
+
+
+        var  WebWorksHTMLHelp;
+        var  WebWorksSeeAlso;
+        var  WebWorksDropDown;
+
+
+        if (typeof(HTMLHelp_Object) != "undefined")
+        {
+          WebWorksHTMLHelp = new HTMLHelp_Object();
+          WebWorksSeeAlso  = new WebWorksSeeAlso_Object();
+          WebWorksDropDown = new WebWorksDropDown_Object();
+        }
+        else
+        {
+          WebWorksHTMLHelp = new Object();
+          WebWorksHTMLHelp.fNotifyClicked = WWNoOp;
+          WebWorksHTMLHelp.fPopupDivTag   = WWNoValue;
+
+          WebWorksSeeAlso = new Object();
+
+          WebWorksDropDown = new Object();
+          WebWorksDropDown.fWriteArrow  = WWNoOp;
+          WebWorksDropDown.fWriteDIVOpen  = WWNoOp;
+          WebWorksDropDown.fWriteDIVClose = WWNoOp;
+        }
+      // -->
+    </script>
+  </head>
+  <body class="" style="border-bottom-width: 8px; border-right-width: 20px; margin-bottom: 6px; margin-left: 6px; margin-right: 6px; margin-top: 6px; padding-bottom: 6px; padding-left: 6px; padding-right: 0px; padding-top: 0px;" onclick="javascript:WebWorksHTMLHelp.fNotifyClicked();">
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="TruncDistribution.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Independence.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="EAddOnsTitle.html#1122258">Add-Ins Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="DataFit.45.01.html#1122258">Statistics Tools</a> &gt; Run an Analysis of Variance (ANOVA) </div>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <blockquote>
+      <div class="Heading1"><a name="1122258">Run an Analysis of Variance (ANOVA) <img class="Default" src="images/ANOVAIcon.gif" width="39" height="36" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="Body"><a name="1122259">The application object </a>ANOVA (<span style="text-decoration: underline;">AN</span>alysis <span style="text-decoration: underline;">O</span>f <span style="text-decoration: underline;">VA</span>riance) <img class="Default" src="images/ANOVASma.gif" width="33" height="24" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /> performs a one way analysis of variance.</div>
+      <div class="Body"><a name="1149067">Given are </a>k groups of data. We want to investigate the hypothesis whether the k mean values <img class="Default" src="images/dfvar1.gif" width="64" height="14" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /> are equal. The j-th group contains <img class="Default" src="images/dfvar2.gif" width="17" height="17" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /> items <img class="Default" src="images/dfvar3.gif" width="88" height="20" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" />. The j-th group must be contained in the j-th row of the table DataX. To insert the data, drag the table onto the object <span class="Feature">ANOVA</span> and drop it there.</div>
+      <div class="Picture"><a name="1122284"><img class="Default" src="images/ANOVA_Input.gif" width="406" height="368" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="PictureName"><a name="1122285">Input data</a></div>
+      <div class="Body"><a name="1122286">Our sample young men of different religious denominations are examined. The measured value is the age, at which a man leaves home. We are interested in the hypothesis that this age depends on the religious denomination, contained in: R.D. Mason, D.A. Lind, W.G. Marchal: Statistics An Introduction, 1988, p.355 ff. Harcourt Brace Jovanovich, Publishers</a></div>
+      <div class="Body"><a name="1149149">Let </a><img class="Default" src="images/dfvar4.gif" width="80" height="56" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" />. The grand mean (of all values) is µ. The total sum of mean squares is <img class="Default" src="images/dfvar5.gif" width="140" height="44" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" />.</div>
+      <div class="Body"><a name="1149162">This sum is partitioned into two addend </a><span class="DialogElement">TSS = SST + SSE</span>, where <img class="Default" src="images/dfvar6.gif" width="162" height="56" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /> is the sum of squares between the mean values of the groups (sum of squares of treatments; traditionally, a group develops by distinct treatments of individuals of a whole population) and <img class="Default" src="images/dfvar7.gif" width="180" height="59" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /> is the sum of squares in a group (error sum of squares). SSE measures the variability within the groups. SST measures the variability between the groups.</div>
+      <div class="Picture"><a name="1122311"><img class="Default" src="images/ANOVA_DLG.gif" width="306" height="353" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="PictureName"><a name="1122312">Dialog of the object ANOVA</a></div>
+      <div class="Body"><a name="1122322">The test determines at the given level of significance whether the hypothesis <img class="Default" src="images/DataFit.45.25.12.jpg" width="17" height="20" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /> = <img class="Default" src="images/DataFit.45.25.13.jpg" width="17" height="20" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /> =...= <img class="Default" src="images/DataFit.45.25.14.jpg" width="17" height="20" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /> holds true. The test executes these steps:</a></div>
+      <div class="Enum1_outer" style="margin-left: 2px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Enum1_inner" style="width: 18px; white-space: nowrap;">1.</div>
+            </td>
+            <td width="100%">
+              <div class="Enum1_inner"><a name="1122326">It determines the test statistic: </a>F statistic <img class="Default" src="images/DataFit.45.25.15.jpg" width="203" height="20" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /> </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Enum_outer" style="margin-left: 2px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Enum_inner" style="width: 18px; white-space: nowrap;">2.	</div>
+            </td>
+            <td width="100%">
+              <div class="Enum_inner"><a name="1122327">It computes the critical value </a>F value using the level of significance.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Enum_outer" style="margin-left: 2px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Enum_inner" style="width: 18px; white-space: nowrap;">3.	</div>
+            </td>
+            <td width="100%">
+              <div class="Enum_inner"><a name="1122328">It accepts the hypothesis if </a>F statistic &lt; F value.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="AnchorTable"><a name="1122368">&nbsp;</a></div>
+      <table class="Format_A" style="text-align: left;" border="1" cellpadding="9" cellspacing="0" summary="">
+        <caption style="caption-side: top"></caption>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="TableTitle"><a name="1122331">&#8212;</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="TableTitle"><a name="1122333">Degree of freedom</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="TableTitle"><a name="1122335">Sum of squares</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="TableTitle"><a name="1122337">Mean squares</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122339">between groups</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122341">k-1</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122343">SST</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122348"><img class="Default" src="images/DataFit.45.25.16.jpg" width="75" height="16" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122350">within groups</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122352">n-k</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122354">SSE</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122359"><img class="Default" src="images/DataFit.45.25.17.jpg" width="78" height="16" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122361">total</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122363">n-1</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122365">TSS</a></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: none; border-bottom-style: none; border-bottom-width: 0.0pt; border-left-color: none; border-left-style: none; border-left-width: 0.0pt; border-right-color: none; border-right-style: none; border-right-width: 0.0pt; border-top-color: none; border-top-style: none; border-top-width: 0.0pt; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><a name="1122367">&nbsp;</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="PictureName"><a name="1122369">Explanation of the results table of ANOVA</a></div>
+      <div class="Picture"><a name="1122373"><img class="Default" src="images/ANOVA_Results.gif" width="693" height="163" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="PictureName"><a name="1122374">The table file containing the results for the test data</a></div>
+      <div class="Body"><a name="1122375">You can compare the confidence intervals with the same level of significance of all groups in a diagram. An assumption about the decision of the test can be found. In the following diagram the red bars on top show the confidence intervals of the four groups. Since the intersection of these confidence intervals is empty, the hypothesis that the mean values are equal will certainly be rejected.</a></div>
+      <div class="Picture"><a name="1122379"><img class="Default" src="images/ANOVA_Compare.gif" width="573" height="364" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="PictureName"><a name="1122380">Comparison of the confidence intervals of the groups</a></div>
+      <div class="Body"><a name="1122381">The hypothesis is rejected. With a probability of 95 percent we must thus assume that a connection between the age, at which a man leaves home, and the religious denomination exists. Click </a><span class="DialogElement">Open</span> to open the <span class="DialogElement">input data table</span>. Delete the group of the catholic men. Now the hypothesis that the mean values are equal, is accepted with a probability of 95 percent (confidence level = 5 percent).</div>
+    </blockquote>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="EAddOnsTitle.html#1122258">Add-Ins Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="DataFit.45.01.html#1122258">Statistics Tools</a> &gt; Run an Analysis of Variance (ANOVA) </div>
+    <br />
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="TruncDistribution.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="Independence.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+      document.write(WebWorksHTMLHelp.fPopupDivTag());
+     // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>PlaceBuffer</title>
+    <link rel="StyleSheet" href="css/MaterialFlowObjects221.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/seealso.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/popup.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/page.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        function  WWNoOp() {}
+        function  WWNoValue() { return ""; }
+
+
+        var  WebWorksHTMLHelp;
+        var  WebWorksSeeAlso;
+        var  WebWorksDropDown;
+
+
+        if (typeof(HTMLHelp_Object) != "undefined")
+        {
+          WebWorksHTMLHelp = new HTMLHelp_Object();
+          WebWorksSeeAlso  = new WebWorksSeeAlso_Object();
+          WebWorksDropDown = new WebWorksDropDown_Object();
+        }
+        else
+        {
+          WebWorksHTMLHelp = new Object();
+          WebWorksHTMLHelp.fNotifyClicked = WWNoOp;
+          WebWorksHTMLHelp.fPopupDivTag   = WWNoValue;
+
+          WebWorksSeeAlso = new Object();
+
+          WebWorksDropDown = new Object();
+          WebWorksDropDown.fWriteArrow  = WWNoOp;
+          WebWorksDropDown.fWriteDIVOpen  = WWNoOp;
+          WebWorksDropDown.fWriteDIVClose = WWNoOp;
+        }
+      // -->
+    </script>
+  </head>
+  <body class="" style="border-bottom-width: 8px; border-right-width: 20px; margin-bottom: 6px; margin-left: 6px; margin-right: 6px; margin-top: 6px; padding-bottom: 6px; padding-left: 6px; padding-right: 0px; padding-top: 0px;" onclick="javascript:WebWorksHTMLHelp.fNotifyClicked();">
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="MaterialFlowObjects221.23.143.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="MaterialFlowObjects221.23.145.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#8034788">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="MaterialFlowObjects1.18.001.html#8034788">Material Flow Objects</a> &gt; PlaceBuffer </div>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <blockquote>
+      <div class="Heading1np"><a name="8034788">PlaceBuffer <img class="Default" src="images/03BufferIcon.gif" width="31" height="31" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" /></a></div>
+      <div class="Note_outer" style="margin-left: -0.3464566929133994pt;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Note_inner" style="width: 28.3464566929134pt; white-space: nowrap;">
+                <img src="Pages/images/caution.gif" alt="*" border="0" width="26" height="26" />
+              </div>
+            </td>
+            <td width="100%">
+              <div class="Note_inner"><a name="8034789">By default the </a><span class="Feature">PlaceBuffer </span>is not part of the built-in objects that the <span class="Feature">Toolbox</span> provides. You can add it at any time to your simulation model by clicking <span class="DialogElementLink"><a href="Ch02UserInterface1.17.101.html#2622780" title="Manage Class Library">Manage Class Library</a></span> on the <span class="DialogElement">Home</span> ribbon tab.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="16583007">The </a><span class="Feature">PlaceBuffer </span>has a number of stations, which are arranged in a row, one behind the other. The <span class="Feature">MUs</span> it processes have to advance from station to station and can only leave the <span class="Feature">PlaceBuffer</span> after they passed the last station. This way, you can call and access each and every station individually. </div>
+      <div class="Body"><a name="8034790">A </a><span class="Feature">part</span> can move directly to an idle station in the <span class="Feature">PlaceBuffer</span>. After the <span class="Feature">part</span> has passed this and all succeeding stations, it can exit the <span class="Feature">PlaceBuffer</span>. When you create a <span class="Feature">part</span> on an idle station, it does not have to pass this station, but may move on to the next station or the next object. </div>
+      <div class="Body"><a name="8034791">In case the first </a><span class="Feature">part</span> cannot leave the <span class="Feature">PlaceBuffer</span>, you can determine what happens next:</div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><a name="8034795">To make the </a><span class="Feature">MUs</span> accumulate on the <span class="Feature">PlaceBuffer</span>, select the check box <span class="DialogElementLink"><a href="MaterialFlowObjects221.23.148.html#8034934" title="Accumulating">Accumulating</a></span>. This allows the <span class="Feature">MUs</span> to move front to end to each other, when the exit of the <span class="Feature">PlaceBuffer</span> is <span class="DialogElementLink"><a href="MaterialFlowObjects11.19.014.html#811989" title="Blocked">Blocked</a></span>. </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Item_outer" style="margin-left: 6.771653543307093px;">
+        <table border="0" cellspacing="0" cellpadding="0" summary="">
+          <tr style="vertical-align: baseline;">
+            <td>
+              <div class="Item_inner" style="width: 9.92125984251968pt; white-space: nowrap;">&#8226;	</div>
+            </td>
+            <td width="100%">
+              <div class="Item_inner"><a name="8034796">To make the </a><span class="Feature">MUs</span> retain their distance to each other, i.e., make all succeeding <span class="Feature">MUs</span> stop moving when the preceding <span class="Feature">part</span> cannot exit, clear <span class="DialogElement">Accumulating</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="8034797">You can only define the </a><span class="DialogElementLink"><a href="MaterialFlowObjects221.23.150.html#8034974" title="Processing time">Processing time</a></span> for the <span class="Feature">PlaceBuffer</span> as whole, not for each individual station. It divides the processing time equally among its stations, i.e., when you set a processing time of 60 seconds for 3 stations, each station processes the <span class="Feature">part</span> for 20 seconds. </div>
+      <div class="Body"><a name="8034804">If you want to model a buffer with a large capacity that has to be fast, you can use the </a><span class="DarkBlue"><a href="NwIOBuffer.html#9692153" title="Buffer">Buffer</a></span> <img class="Default" src="images/PufferBeschnitten.gif" width="33" height="19" style="display: inline; float: none; left: 0.0; top: 0.0;" alt="" />. </div>
+      <div class="SeeAlsoP"><a name="16821472">Related Topics</a></div>
+      <div class="AnchorTable"><a name="16821494">&nbsp;</a></div>
+      <table class="Format_A" style="text-align: left;" border="1" cellpadding="9" cellspacing="0" summary="">
+        <caption style="caption-side: top"></caption>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="MaterialFlowObjects221.23.145.html#8034823" title="Dialog Window of the PlaceBuffer" name="16821478">Dialog Window of the PlaceBuffer</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="MaterialFlowObjects221.23.165.html#8035286" title="Attributes of the PlaceBuffer" name="16821483">Attributes of the PlaceBuffer</a></span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="MaterialFlowObjects221.23.163.html#8035246" title="Methods of the PlaceBuffer" name="16821488">Methods of the PlaceBuffer</a></span></div>
+          </td>
+          <td style="background-color: #FFFFFF; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-left-color: #000000; border-left-style: solid; border-left-width: 1px; border-right-color: #000000; border-right-style: solid; border-right-width: 1px; border-top-color: #000000; border-top-style: solid; border-top-width: 1px; padding-bottom: 9px; padding-left: 4px; padding-right: 4px; padding-top: 5px; vertical-align: top;">
+            <div class="Table"><span class="DarkGreen"><a href="MaterialFlowObjects1.18.002.html#1163510" title="Shared Properties of the Material Flow Objects" name="16821493">Shared Properties of the Material Flow Objects</a></span></div>
+          </td>
+        </tr>
+      </table>
+    </blockquote>
+    <div style="height: 1px; background-color: darkred; margin: 4px 0px 4px 0px;"></div>
+    <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+      <a class="WebWorks_Breadcrumb_Link" href="eMPlantTitlePage.html#8034788">Reference Help</a> &gt; <a class="WebWorks_Breadcrumb_Link" href="MaterialFlowObjects1.18.001.html#8034788">Material Flow Objects</a> &gt; PlaceBuffer </div>
+    <br />
+    <div style="text-align: right;">
+      <table cellspacing="0" summary="">
+        <tr>
+          <td>
+            <a href="MaterialFlowObjects221.23.143.html"><img src="images/prev.gif" alt="Previous" border="0" /></a>
+          </td>
+          <td>
+            <a href="MaterialFlowObjects221.23.145.html"><img src="images/next.gif" alt="Next" border="0" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+      document.write(WebWorksHTMLHelp.fPopupDivTag());
+     // -->
+    </script>
+  </body>
+</html>
